@@ -2,11 +2,45 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>YHL Architects</title>
-<meta http-equiv="refresh" content="0; url=https://yhlarchitects-com.l.ink/">
-<link rel="canonical" href="https://yhlarchitects-com.l.ink/">
-<script>location.replace("https://yhlarchitects-com.l.ink/");</script>
+<meta name="description" content="YHL Architects — hello@yhlarchitects.com">
+<script>try{var t=localStorage.getItem("yhl-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<style>
+:root{color-scheme:light;--paper:#f6f5f0;--ink:#12120f;--mute:#77766e;--hair:#d6d4cc;
+  --f:"Helvetica Neue",Helvetica,Arial,"Pretendard","Apple SD Gothic Neo","Noto Sans KR",sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--paper:#1d1d1b;--ink:#ecebe6;--mute:#93918a;--hair:#3a3a36}}
+:root[data-theme="dark"]{color-scheme:dark;--paper:#1d1d1b;--ink:#ecebe6;--mute:#93918a;--hair:#3a3a36}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--f);-webkit-font-smoothing:antialiased}
+main{min-height:100%;display:flex;flex-direction:column;justify-content:center;max-width:720px;margin:0 auto;padding-inline:24px;padding-block:64px}
+h1{font-weight:400;font-size:clamp(32px,7vw,56px);line-height:1.05;letter-spacing:-.02em}
+a{color:inherit}
+.mail{margin-top:20px;font-size:16px;line-height:24px;color:var(--mute)}
+.mail a{text-decoration:none;border-bottom:1px solid var(--hair)}
+.mail a:hover{border-bottom-color:var(--ink);color:var(--ink)}
+.tg{position:fixed;top:calc(env(safe-area-inset-top,0px) + 16px);right:16px;appearance:none;border:1px solid var(--ink);background:transparent;color:var(--ink);
+  border-radius:999px;padding:4px 8px;cursor:pointer;display:inline-flex}
+.tg svg{width:16px;height:16px;display:block}
+.tg:focus-visible,.mail a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+</style>
 </head>
-<body><p><a href="https://yhlarchitects-com.l.ink/">YHL Architects</a></p></body>
+<body>
+<button class="tg" type="button" id="tg" aria-label="Dark mode" title="Dark mode"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.75a6.25 6.25 0 0 1 0 12.5z" fill="currentColor"/></svg></button>
+<main>
+<h1>YHL Architects</h1>
+<p class="mail"><a href="mailto:hello@yhlarchitects.com">hello@yhlarchitects.com</a></p>
+</main>
+<script>
+(function(){
+  var K="yhl-theme",b=document.getElementById("tg");
+  function sys(){try{return window.matchMedia("(prefers-color-scheme: dark)").matches;}catch(e){return false;}}
+  function cur(){var a=document.documentElement.getAttribute("data-theme");return (a==="dark"||a==="light")?a:(sys()?"dark":"light");}
+  function paint(){var l=cur()==="dark"?"Light mode":"Dark mode";b.setAttribute("aria-label",l);b.title=l;}
+  b.addEventListener("click",function(){var n=cur()==="dark"?"light":"dark";document.documentElement.setAttribute("data-theme",n);try{localStorage.setItem(K,n);}catch(e){}paint();});
+  paint();
+})();
+</script>
+</body>
 </html>
