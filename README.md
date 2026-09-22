@@ -8,7 +8,7 @@ Upload JPG, PNG, WebP or AVIF photographs to [photos/](https://github.com/yhlarc
 
 The upload folder is public. Upload only images intended for the public website.
 
-The build resizes photographs to at most 1800 pixels and converts them to WebP. The five transparent petals and keys are kept separately in home/objects/ and are not part of the photograph pool.
+The build creates 1440px desktop, 800px mobile, and 480px distant-plane WebP assets. Only the chosen photographs and two chosen objects load on entry. Five transparent petals and keys live separately in home/objects/. Their published derivatives are at most 560px. The originals stay in the repository.
 
 ## Build
 
@@ -16,18 +16,30 @@ Install tools/requirements.txt, then run:
 
     python tools/build-site.py --output site-dist
 
-Output is site-dist/. The output directory must be new or empty. Only the home page, web assets, photo catalog, CNAME, robots.txt and existing thesis pages are published. Sources, originals and documentation are excluded from the Pages artifact.
+The output directory must be new or empty. Only the home page, web assets, photo catalog, CNAME, robots.txt and existing thesis pages are published. Sources, documentation and private paths are excluded from the Pages artifact.
 
 ## Home page
 
-Approved scanner collage: five focus depths, 2–3 sharp foreground photographs, stronger blur behind them, black scanner glass, a 120% canvas, five randomly assigned tones, and one sharp foreground petal or key, alternating on each shuffle and reload. Refresh, the shuffle icon or R generates another composition.
+The scanner collage has five focus depths, 2–3 sharp foreground photographs, increasing blur behind them, near-black glass, a canvas extending 10% past every edge, and five randomly assigned tones. Every composition contains exactly one sharp petal and one sharp key together. Refresh, the shuffle icon or R generates a new composition.
 
-Univers lettering remains SVG outlines. Font files are not included.
+Petals open https://www.instagram.com/yhlpic/ and keys open https://www.instagram.com/reyeonho/ in new tabs. Both links are at depth 1 above the photographs and remain inside the viewport, including at the maximum tilt.
 
-The preceding neon home is preserved in Git history at bde516e00dd7bd6e80d012eac8f8ddf46216c5c9.
+Univers lettering remains SVG outlines; font files are not included. The email uses two identical groups, each wider than the viewport, repeating at 32px per second. Groups adjust to resized and ultra-wide windows.
 
-## Social links and phone tilt
+## Phone interaction
 
-Petals open https://www.instagram.com/yhlpic/ and keys open https://www.instagram.com/reyeonho/ in a new tab. The object is always in focus at depth 1 and above the photographs. Tab-session storage remembers the last kind; resizing does not switch it.
+Supported touch devices listen to orientation automatically. iPhone Safari requires sensor permission from a user gesture: the first tap requests it without a separate tilt control. Browser or system permissions cannot be bypassed. Denied or unsupported sensors leave the scene static.
 
-On a touch device with orientation support, tap 기울여 보기 to enable the depth-based motion. iPhone Safari asks for motion permission. The first sensor reading establishes the neutral position. Rotation is adjusted for screen orientation and movement is capped at 32px (less on small screens). YHLA and the email's position stay fixed; the existing email ticker continues. The same button turns tilt off. Denied or unavailable sensors leave the collage static.
+The first sensor reading sets neutral. Motion follows screen orientation and is capped at 32px, less on small screens. YHLA and the email stay fixed relative to the first scene while the photographs move at different rates. Tilt pauses when the ending is visible.
+
+The viewport disables pinch and double-tap page zoom while retaining single-finger vertical scrolling. Browser accessibility overrides and real hardware behavior remain browser-controlled.
+
+## Paper ending
+
+Scrolling down moves the collage up and reveals the approved open-book scan, centered with empty black space below it. Mouse dragging upward also scrolls the page. The logo, shuffle and email leave with the first scene, keeping the ending clear.
+
+home/paper/book.webp is the restored scan with “© YHLA.” and “ALL RIGHTS RESERVED”. Responsive ending assets load only after scrolling starts, keeping the first page light. The 4096px delivery is an interpolated export of the restored image, not a native 4K scan.
+
+## History
+
+The preceding versions remain in Git: neon home bde516e; initial scanner home 6b25be6; single alternating social object and manual tilt 409e13a. Existing thesis pages and their robots rules are preserved.

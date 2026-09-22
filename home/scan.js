@@ -1,16 +1,10 @@
 (() => {
   'use strict';
   const assets = PHOTO-CATALOG;
-  const objectAssets = [
-    {id:'rose-petal',kind:'petal',src:'OBJECT-rose-petal',ratio:1},
-    {id:'white-petal',kind:'petal',src:'OBJECT-white-petal',ratio:1},
-    {id:'blue-tulip-petal',kind:'petal',src:'OBJECT-blue-tulip-petal',ratio:1},
-    {id:'silver-key',kind:'key',src:'OBJECT-silver-key',ratio:.8},
-    {id:'brass-key',kind:'key',src:'OBJECT-brass-key',ratio:.8}
-  ];
+  const objectAssets = OBJECT-CATALOG;
   const filters = ['neutral','cold','copper','mesh','silver'];
   const surface = document.getElementById('photographs');
-  let seed = 0, generation = 0, layoutTimer, objectKind;
+  let seed = 0, generation = 0, layoutTimer;
   const randomSeed = () => {
     const n = new Uint32Array(1);
     if (globalThis.crypto?.getRandomValues) crypto.getRandomValues(n);
@@ -24,15 +18,9 @@
     const a=[...list]; for(let i=a.length-1;i>0;i--){const j=Math.floor(rand()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a;
   }
   function clamp(n,lo,hi) {return Math.max(lo,Math.min(hi,n));}
-  function nextObjectKind(){
-    let previous=objectKind;
-    if(!previous){try{previous=sessionStorage.getItem('yhla-object-kind');}catch{}}
-    objectKind=previous==='petal'?'key':'petal';
-    try{sessionStorage.setItem('yhla-object-kind',objectKind);}catch{}
-  }
   function layout(newSeed = true) {
-    if(newSeed){const previous=seed; do{seed=randomSeed();}while(seed===previous);generation++;nextObjectKind();}
-    const rand=randomGenerator(seed), W=innerWidth, H=innerHeight, mobile=W<620;
+    if(newSeed){const previous=seed; do{seed=randomSeed();}while(seed===previous);generation++;}
+    const rand=randomGenerator(seed), W=document.getElementById('stage').clientWidth, H=document.getElementById('stage').clientHeight, mobile=W<620;
     const marginX=W*.1, marginY=H*.1;
     const frontCount=rand()>.5?3:2, count=8+frontCount;
     const fragment=document.createDocumentFragment(), sizeBase=mobile?W*.88:Math.min(W*.43,H*.83);
@@ -99,12 +87,18 @@
         figure.style.setProperty('--drift-x',((rand()-.5)*edge*1.3).toFixed(2)+'px');
         figure.style.setProperty('--drift-y',((rand()-.5)*edge*1.3).toFixed(2)+'px');
         figure.dataset.focus=String(focusAngle);
-        ['mist','defocus','focus','fringe'].forEach((kind,layer)=>{
-          const img=document.createElement('img');img.src=asset.src;img.alt=layer===2?asset.title:'';
+        // The rear planes need one small raster; the front retains lifted, soft edges.
+        const layers=depth<=2?['defocus','focus']:['focus'];
+        const source=depth>=3?asset.preview:(mobile?asset.mobile:asset.src);
+        for(const kind of layers){
+          const img=document.createElement('img');img.src=source;img.alt=kind==='focus'?asset.title:'';
           img.className='layer '+kind;img.draggable=false;img.decoding='async';
-          if(layer!==2)img.setAttribute('aria-hidden','true');figure.append(img);
-        });
-        const grid=document.createElement('div');grid.className='scan-grid';grid.setAttribute('aria-hidden','true');figure.append(grid);
+          img.fetchPriority=depth===1?'high':'low';
+          if(kind!=='focus')img.setAttribute('aria-hidden','true');figure.append(img);
+        }
+        if(effect==='mesh'&&depth<=2){
+          const grid=document.createElement('div');grid.className='scan-grid';grid.setAttribute('aria-hidden','true');figure.append(grid);
+        }
         fragment.append(figure);
       }
     }
@@ -117,45 +111,62 @@
   }
 
   function scatterObjects(rand,W,H,marginX,marginY,mobile){
-    const pool=objectAssets.filter(asset=>asset.kind===objectKind);
-    const asset=pool[Math.floor(rand()*pool.length)];
-    const movement=Math.min(32,Math.min(W,H)*.055), padding=16+movement;
-    let length=asset.kind==='petal'?
-      (mobile?W*(.25+rand()*.08):Math.min(W*(.11+rand()*.025),H*.28)):
-      (mobile?W*(.33+rand()*.09):Math.min(W*(.15+rand()*.025),H*.38));
-    let width=asset.ratio>=1?length:length*asset.ratio;
-    let height=asset.ratio>=1?length/asset.ratio:length;
-    const angle=rand()*360-180, radians=angle*Math.PI/180;
-    let boundW=Math.abs(width*Math.cos(radians))+Math.abs(height*Math.sin(radians));
-    let boundH=Math.abs(height*Math.cos(radians))+Math.abs(width*Math.sin(radians));
-    const fit=Math.min(1,(W-padding*2)/boundW,Math.max(44,H-80-72-padding*2)/boundH);
-    width*=fit;height*=fit;boundW*=fit;boundH*=fit;
-    const candidates=Array.from({length:36},()=>({
-      x:clamp((.09+rand()*.82)*W,boundW/2+padding,W-boundW/2-padding),
-      y:clamp((.14+rand()*.69)*H,boundH/2+80+padding,H-72-padding-boundH/2)
-    }));
-    function score(candidate){
-      let empty=0;
-      for(const [dx,dy] of [[0,0],[-.3,0],[.3,0],[0,-.3],[0,.3],[-.22,-.22],[.22,.22]]){
-        if(!document.elementsFromPoint(candidate.x+dx*boundW,candidate.y+dy*boundH).some(el=>el.classList.contains('print')))empty++;
+    const placed=[];
+    const vertical=H>=W, reverse=rand()>.5;
+    // A separate link for each account, in every composition, including reloads.
+    for(const kind of ['petal','key']){
+      const pool=objectAssets.filter(asset=>asset.kind===kind);
+      const asset=pool[Math.floor(rand()*pool.length)];
+      const movement=Math.min(32,Math.min(W,H)*.055), padding=14+movement;
+      let length=kind==='petal'?
+        (mobile?W*(.25+rand()*.06):Math.min(W*(.11+rand()*.02),H*.26)):
+        (mobile?W*(.31+rand()*.06):Math.min(W*(.14+rand()*.02),H*.33));
+      let width=asset.ratio>=1?length:length*asset.ratio;
+      let height=asset.ratio>=1?length/asset.ratio:length;
+      const angle=rand()*360-180, radians=angle*Math.PI/180;
+      let boundW=Math.abs(width*Math.cos(radians))+Math.abs(height*Math.sin(radians));
+      let boundH=Math.abs(height*Math.cos(radians))+Math.abs(width*Math.sin(radians));
+      const slotSpace=vertical?(H-75-68-padding*2)/2-12:(W-padding*2)/2-12;
+      const fit=Math.min(1,(W-padding*2)/boundW,Math.max(44,H-75-68-padding*2)/boundH,Math.max(30,slotSpace)/(vertical?boundH:boundW));
+      width*=fit;height*=fit;boundW*=fit;boundH*=fit;
+      const half=(placed.length===0)!==reverse?0:1;
+      const midY=(H+75-68)/2;
+      const minX=vertical||half===0?padding:W/2+6;
+      const maxX=vertical||half===1?W-padding:W/2-6;
+      const minY=!vertical||half===0?75+padding:midY+6;
+      const maxY=!vertical||half===1?H-68-padding:midY-6;
+      const candidates=Array.from({length:48},()=>({
+        x:clamp((.06+rand()*.88)*W,minX+boundW/2,maxX-boundW/2),
+        y:clamp((.12+rand()*.76)*H,minY+boundH/2,maxY-boundH/2)
+      }));
+      function score(candidate){
+        let score=0;
+        // Prefer scanner glass, but never cover the other account's link.
+        for(const other of placed){
+          const dx=Math.abs(candidate.x-other.x),dy=Math.abs(candidate.y-other.y);
+          const overlapX=(boundW+other.w)/2+20-dx,overlapY=(boundH+other.h)/2+20-dy;
+          if(overlapX>0&&overlapY>0)score-=1000+overlapX*overlapY;
+          score+=Math.hypot(dx/W,dy/H)*2;
+        }
+        const scroll=document.getElementById('viewport').scrollTop;
+        for(const [dx,dy] of [[0,0],[-.3,0],[.3,0],[0,-.3],[0,.3]]){
+          if(!document.elementsFromPoint(candidate.x+dx*boundW,candidate.y+dy*boundH-scroll).some(el=>el.classList.contains('print')))score++;
+        }
+        return score;
       }
-      return empty;
+      const best=candidates.map(c=>({...c,score:score(c)})).sort((a,b)=>b.score-a.score)[0];
+      placed.push({...best,w:boundW,h:boundH});
+      const handle=kind==='petal'?'yhlpic':'reyeonho';
+      const object=document.createElement('a');object.className='scanned-object';
+      object.href='https://www.instagram.com/'+handle+'/';object.target='_blank';object.rel='noopener noreferrer';
+      object.setAttribute('aria-label',(kind==='petal'?'꽃잎':'열쇠')+' — Instagram @'+handle);object.title='@'+handle;
+      object.dataset.depth='1';object.dataset.kind=kind;object.dataset.object=asset.id;object.dataset.visible='1';
+      Object.assign(object.style,{left:(best.x-width/2+marginX)+'px',top:(best.y-height/2+marginY)+'px',width:width+'px',height:height+'px',zIndex:'56'});
+      object.style.setProperty('--rotation',angle+'deg');object.style.setProperty('--parallax','1');
+      const img=document.createElement('img');img.src=asset.src;img.alt='';img.draggable=false;img.decoding='async';img.fetchPriority='high';
+      object.append(img);surface.append(object);
     }
-    const best=candidates.map(c=>({...c,score:score(c)})).sort((a,b)=>b.score-a.score)[0];
-    const handle=asset.kind==='petal'?'yhlpic':'reyeonho';
-    const object=document.createElement('a');object.className='scanned-object';
-    object.href='https://www.instagram.com/'+handle+'/';object.target='_blank';object.rel='noopener noreferrer';
-    object.setAttribute('aria-label',(asset.kind==='petal'?'꽃잎':'열쇠')+' — Instagram @'+handle);
-    object.title='@'+handle;
-    object.dataset.depth='1';object.dataset.kind=asset.kind;object.dataset.object=asset.id;object.dataset.visible='1';
-    Object.assign(object.style,{
-      left:(best.x-width/2+marginX)+'px',top:(best.y-height/2+marginY)+'px',
-      width:width+'px',height:height+'px',zIndex:'56'
-    });
-    object.style.setProperty('--rotation',angle+'deg');object.style.setProperty('--parallax','1');
-    const img=document.createElement('img');img.src=asset.src;img.alt='';img.draggable=false;img.decoding='async';
-    object.append(img);surface.append(object);
-    return 1;
+    return placed.length;
   }
 
   function scannerGrain(){
@@ -168,16 +179,10 @@
     ctx.putImageData(pixels,0,0);
     document.querySelector('.grain').style.backgroundImage='url('+canvas.toDataURL()+')';
   }
-  async function init(){
-    await Promise.all([...assets,...objectAssets].map(asset=>new Promise(resolve=>{
-      const img=new Image();img.onload=()=>{asset.ratio=img.naturalWidth/img.naturalHeight;resolve();};img.onerror=resolve;img.src=asset.src;
-    })));
-    layout();
-  }
   document.getElementById('rescan').addEventListener('click',()=>layout());
   window.addEventListener('keydown',event=>{if(!event.ctrlKey&&!event.metaKey&&!event.altKey&&event.key.toLowerCase()==='r')layout();});
   window.addEventListener('resize',()=>{clearTimeout(layoutTimer);layoutTimer=setTimeout(()=>layout(false),100);});
   window.scanGallery={reshuffle:()=>layout(), getState:()=>({seed,generation,assets:assets.map(a=>({...a})),filters:[...filters],objects:objectAssets.map(a=>({...a}))})};
   scannerGrain();
-  init();
+  layout();
 })();

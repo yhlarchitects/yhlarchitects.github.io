@@ -1,4 +1,4 @@
-"""Build the public site and the shuffled photo catalog from photos/."""
+"""Build the public site and responsive assets from photos/."""
 from pathlib import Path
 from hashlib import sha256
 from io import BytesIO
@@ -17,6 +17,13 @@ def writeAsset(data, stem, suffix, output):
     target.write_bytes(data)
     return 'assets/' + name
 
+def webImage(image, edge, quality, stem, output):
+    image = image.copy()
+    image.thumbnail((edge, edge), Image.Resampling.LANCZOS)
+    encoded = BytesIO()
+    image.save(encoded, 'WEBP', quality=quality, method=6, exif=b'', xmp=b'')
+    return writeAsset(encoded.getvalue(), stem, '.webp', output)
+
 def build(source, output):
     source, output = Path(source).resolve(), Path(output).resolve()
     if output == source or source in output.parents and output.name != 'site-dist':
@@ -33,31 +40,35 @@ def build(source, output):
                 raise ValueError('Use a still photograph: ' + path.name)
             original.load()
             photo = ImageOps.exif_transpose(original)
-            photo.thumbnail((1800, 1800), Image.Resampling.LANCZOS)
             if photo.mode not in ('RGB', 'RGBA'):
                 photo = photo.convert('RGBA' if 'transparency' in photo.info else 'RGB')
-            if path.suffix.lower() == '.webp' and original.size == photo.size and not original.info.get('exif'):
-                data = path.read_bytes()
-            else:
-                encoded = BytesIO()
-                photo.save(encoded, 'WEBP', quality=88, method=6, exif=b'', xmp=b'')
-                data = encoded.getvalue()
-            src = writeAsset(data, 'photo', '.webp', output)
-            catalog.append({'src': src, 'title': path.stem.replace('-', ' '), 'ratio': photo.width / photo.height})
+            catalog.append({
+                'src': webImage(photo, 1440, 82, 'photo', output),
+                'mobile': webImage(photo, 800, 78, 'photo-mobile', output),
+                'preview': webImage(photo, 480, 68, 'photo-rear', output),
+                'title': path.stem.replace('-', ' '), 'ratio': photo.width / photo.height
+            })
     if not catalog:
         raise ValueError('Add at least one photograph to photos/.')
-    script = (source / 'home' / 'motion.js').read_text(encoding='utf-8') + '\n' + (source / 'home' / 'scan.js').read_text(encoding='utf-8')
-    script = script.replace('PHOTO-CATALOG', json.dumps(catalog, ensure_ascii=False))
+    objects = []
     for name in OBJECTS:
-        path = source / 'home' / 'objects' / (name + '.webp')
-        with Image.open(path) as im:
+        with Image.open(source / 'home' / 'objects' / (name + '.webp')) as im:
             if im.mode != 'RGBA' or im.getchannel('A').getextrema() != (0, 255):
                 raise ValueError('Object must retain transparency: ' + name)
-        script = script.replace('OBJECT-' + name, writeAsset(path.read_bytes(), name, '.webp', output))
+            objects.append({'id': name, 'kind': 'key' if name.endswith('key') else 'petal',
+                            'src': webImage(im, 560, 85, name, output),
+                            'ratio': im.width / im.height})
+    script = '\n'.join((source / 'home' / name).read_text(encoding='utf-8') for name in ('motion.js', 'scan.js', 'page.js'))
+    script = script.replace('PHOTO-CATALOG', json.dumps(catalog, ensure_ascii=False))
+    script = script.replace('OBJECT-CATALOG', json.dumps(objects, ensure_ascii=False))
     scriptUrl = writeAsset(script.encode('utf-8'), 'scan', '.js', output)
     styleUrl = writeAsset((source / 'home' / 'scan.css').read_bytes(), 'scan', '.css', output)
     html = (source / 'index.html').read_text(encoding='utf-8')
     html = html.replace('SCAN-STYLESHEET', styleUrl).replace('SCAN-SCRIPT', scriptUrl)
+    with Image.open(source / 'home' / 'paper' / 'book.webp') as paper:
+        for key, edge, quality in [('SMALL', 960, 86), ('MEDIUM', 1920, 88), ('LARGE', 4096, 90)]:
+            html = html.replace('PAPER-' + key, webImage(paper, edge, quality, 'paper-' + key.lower(), output))
+        html = html.replace('PAPER-WIDTH', str(paper.width)).replace('PAPER-HEIGHT', str(paper.height))
     (output / 'index.html').write_text(html, encoding='utf-8', newline='\n')
     (output / 'photos.json').write_text(json.dumps(catalog, ensure_ascii=False, indent=2), encoding='utf-8', newline='\n')
     for name in ('CNAME', 'robots.txt', '.nojekyll'):
