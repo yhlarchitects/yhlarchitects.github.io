@@ -20,7 +20,7 @@ Use a new or empty output directory. Only the home page, public web assets, phot
 
 ## Home page
 
-One fixed viewport contains the scanner collage: five focus depths, 2–3 sharp front photographs, stronger blur behind, near-black glass, a canvas extending 10% beyond each edge, and five shuffled tones. There is no second page or vertical scrolling.
+One fixed viewport contains the scanner collage: five focus depths, 2–3 sharp front photographs, stronger blur behind, near-black glass, a canvas extending 10% beyond each edge, and five optical scan profiles (contact, lifted edge, soft focus, fine mesh, diffuse edge). Photographs retain their original colors, without grayscale, sepia, saturation, hue, contrast or brightness filters. There is no second page or vertical scrolling.
 
 Every composition has one sharp petal and one sharp key together. Both remain visible above the photos and link to https://www.instagram.com/yhlpic/ and https://www.instagram.com/reyeonho/. Refresh, the shuffle icon or R reshuffles.
 
@@ -43,3 +43,9 @@ The first sensor reading establishes neutral. Parallax follows screen orientatio
 ## History
 
 Previous designs remain in Git: 409e13a (manual tilt), 38cbbf5 (paper ending). The archived book asset is retained in source history but excluded from the built and published site. Existing thesis pages and robots rules are preserved.
+
+## Stable object URLs and cached tabs
+
+Object images use stable paths such as assets/rose-petal.webp with a content-version query. Resizing or re-encoding an object does not remove its old path.
+
+home/compat-assets/ retains the already-published scanner assets used by old HTML and running tabs. Copy the current public scanner assets there before changing build formats or URLs. The builder includes these compatibility files in every deployment; they are not preloaded by the current page. Deleted paper-ending images are excluded.

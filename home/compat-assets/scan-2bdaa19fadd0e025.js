@@ -1,8 +1,66 @@
 (() => {
   'use strict';
-  const assets = PHOTO-CATALOG;
-  const objectAssets = OBJECT-CATALOG;
-  const filters = ['contact','lift','soft','mesh','diffuse'];
+  const surface=document.getElementById('photographs');
+  const Orientation=window.DeviceOrientationEvent;
+  const touch=navigator.maxTouchPoints>0||matchMedia('(pointer:coarse)').matches;
+  let enabled=false,baseline=null,frame=0;
+  let targetX=0,targetY=0,currentX=0,currentY=0;
+  const clamp=(n,lo,hi)=>Math.max(lo,Math.min(hi,n));
+  const state=value=>{document.documentElement.dataset.motion=value;};
+  const angle=()=>Number(screen.orientation?.angle??window.orientation??0);
+  const delta=(value,origin)=>((value-origin+540)%360)-180;
+  function paint(){
+    surface.style.setProperty('--tilt-x',currentX.toFixed(3)+'px');
+    surface.style.setProperty('--tilt-y',currentY.toFixed(3)+'px');
+  }
+  function animate(){
+    frame=0;currentX+=(targetX-currentX)*.13;currentY+=(targetY-currentY)*.13;
+    if(Math.abs(targetX-currentX)<.02&&Math.abs(targetY-currentY)<.02){currentX=targetX;currentY=targetY;paint();return;}
+    paint();frame=requestAnimationFrame(animate);
+  }
+  function reset(){
+    baseline=null;targetX=targetY=currentX=currentY=0;
+    if(frame)cancelAnimationFrame(frame);frame=0;paint();
+  }
+  function onOrientation(event){
+    if(!enabled||document.hidden||!Number.isFinite(event.beta)||!Number.isFinite(event.gamma))return;
+    const rotation=angle();
+    if(!baseline||baseline.angle!==rotation){baseline={beta:event.beta,gamma:event.gamma,angle:rotation};targetX=targetY=0;surface.classList.add('motion-active');state('active');return;}
+    const radians=rotation*Math.PI/180;
+    const horizontal=delta(event.gamma,baseline.gamma),vertical=delta(event.beta,baseline.beta);
+    const limit=Math.min(32,Math.min(innerWidth,innerHeight)*.055);
+    targetX=clamp((horizontal*Math.cos(radians)+vertical*Math.sin(radians))/22,-1,1)*limit;
+    targetY=clamp((vertical*Math.cos(radians)-horizontal*Math.sin(radians))/22,-1,1)*limit;
+    if(!frame)frame=requestAnimationFrame(animate);
+  }
+  function listen(){
+    reset();enabled=true;state('waiting');
+    window.addEventListener('deviceorientation',onOrientation,{passive:true});
+  }
+  state('idle');
+  if(touch&&Orientation&&window.isSecureContext){
+    if(typeof Orientation.requestPermission!=='function')listen();
+    else if(!navigator.userActivation?.isActive){
+      // One load-time check, never from a click/touch or while a gesture is active.
+      // Already-granted permission resolves; a prompt state rejects without showing UI.
+      try{
+        Promise.resolve(Orientation.requestPermission()).then(permission=>{
+          if(permission==='granted')listen();
+        }).catch(()=>{});
+      }catch{}
+    }
+  }
+  window.addEventListener('orientationchange',reset,{passive:true});
+  screen.orientation?.addEventListener?.('change',reset);
+  document.addEventListener('visibilitychange',reset);
+  window.addEventListener('pageshow',reset);
+})();
+
+(() => {
+  'use strict';
+  const assets = [{"src": "assets/photo-e8657368511e6b05.webp", "mobile": "assets/photo-mobile-e0d4594aeeb12dd6.webp", "preview": "assets/photo-rear-156ad546e106a7f2.webp", "title": "chamber aerial", "ratio": 0.670625}, {"src": "assets/photo-641ee67503bbae26.webp", "mobile": "assets/photo-mobile-9e04af738e6b9dcb.webp", "preview": "assets/photo-rear-ec72d395b1b423ae.webp", "title": "chamber court", "ratio": 0.670625}, {"src": "assets/photo-2edb87bd41714fed.webp", "mobile": "assets/photo-mobile-257c8b2cb0ae2c45.webp", "preview": "assets/photo-rear-12c8e613a289a275.webp", "title": "chamber facade", "ratio": 0.670625}, {"src": "assets/photo-beef53aff2236486.webp", "mobile": "assets/photo-mobile-581bd4d0b3ca8bb2.webp", "preview": "assets/photo-rear-75fc6d6d68163eac.webp", "title": "crown detail", "ratio": 1.4911463187325256}, {"src": "assets/photo-9790b9fc404d5716.webp", "mobile": "assets/photo-mobile-e34be5b08d42ad29.webp", "preview": "assets/photo-rear-3f9ec5dbd944c466.webp", "title": "garden seats", "ratio": 1.490566037735849}, {"src": "assets/photo-24baf8f1e24cd7f9.webp", "mobile": "assets/photo-mobile-e70c53b294f1cba3.webp", "preview": "assets/photo-rear-b7e8b81749d12186.webp", "title": "garden walk", "ratio": 1.4911463187325256}, {"src": "assets/photo-c5c853ba9cbacaf2.webp", "mobile": "assets/photo-mobile-469ef5e56987b2af.webp", "preview": "assets/photo-rear-57bceac6d371b854.webp", "title": "project 1004", "ratio": 0.6525}];
+  const objectAssets = [{"id": "rose-petal", "kind": "petal", "src": "assets/rose-petal-6c56dcd673107ade.webp", "ratio": 1.0}, {"id": "white-petal", "kind": "petal", "src": "assets/white-petal-854d7e6ecc1dadde.webp", "ratio": 0.962}, {"id": "blue-tulip-petal", "kind": "petal", "src": "assets/blue-tulip-petal-aaabac9b04d96cb2.webp", "ratio": 0.75}, {"id": "silver-key", "kind": "key", "src": "assets/silver-key-71f798818d1b7298.webp", "ratio": 0.772}, {"id": "brass-key", "kind": "key", "src": "assets/brass-key-cc6b3cec4031f5ac.webp", "ratio": 0.847}];
+  const filters = ['neutral','cold','copper','mesh','silver'];
   const surface = document.getElementById('photographs');
   let seed = 0, generation = 0, layoutTimer;
   const randomSeed = () => {
@@ -68,8 +126,8 @@
         const figure=document.createElement('figure');figure.className='print '+effect;
         figure.dataset.asset=String(assetIndex);figure.dataset.filter=effect;
         figure.dataset.depth=String(depth);figure.dataset.rotation=rotation.toFixed(2);
-        const focusBlur=blurByDepth[depth]*lensScale*(effect==='soft'?1.12:effect==='diffuse'?1.22:1);
-        const edge=(depth===1?1.25:(5+depth*3.1))*lensScale*({contact:.85,lift:1.25,soft:1,mesh:.95,diffuse:1.55}[effect]);
+        const focusBlur=blurByDepth[depth]*lensScale;
+        const edge=(depth===1?1.25:(5+depth*3.1))*lensScale;
         figure.dataset.blur=focusBlur.toFixed(2);
         Object.assign(figure.style,{
           left:(cx-width/2+marginX)+'px',top:(cy-height/2+marginY)+'px',
@@ -174,7 +232,7 @@
     const ctx=canvas.getContext('2d'), pixels=ctx.createImageData(240,240), rand=randomGenerator(913742);
     for(let i=0;i<pixels.data.length;i+=4){
       const value=Math.round(40+rand()*176);
-      pixels.data[i]=value;pixels.data[i+1]=value;pixels.data[i+2]=value;pixels.data[i+3]=255;
+      pixels.data[i]=value;pixels.data[i+1]=value;pixels.data[i+2]=value+1;pixels.data[i+3]=255;
     }
     ctx.putImageData(pixels,0,0);
     document.querySelector('.grain').style.backgroundImage='url('+canvas.toDataURL()+')';
@@ -185,4 +243,48 @@
   window.scanGallery={reshuffle:()=>layout(), getState:()=>({seed,generation,assets:assets.map(a=>({...a})),filters:[...filters],objects:objectAssets.map(a=>({...a}))})};
   scannerGrain();
   layout();
+})();
+
+(() => {
+  'use strict';
+  const viewport=document.getElementById('viewport');
+  const track=document.getElementById('track');
+  const svgNS='http://www.w3.org/2000/svg';
+  let marqueeShape='';
+  function makeMarquee(){
+    const cell=parseFloat(getComputedStyle(track).getPropertyValue('--mail-cell'));
+    const copies=Math.ceil(Math.max(viewport.clientWidth,innerWidth)/cell)+2;
+    const shape=cell+':'+copies;
+    if(shape===marqueeShape)return;
+    marqueeShape=shape;
+    const oldDistance=parseFloat(track.style.getPropertyValue('--mail-distance'))||1;
+    const oldTransform=getComputedStyle(track).transform;
+    const offset=oldTransform==='none'?0:Math.abs(new DOMMatrix(oldTransform).m41)%oldDistance;
+    const group=document.createElement('span');group.className='mail-group';
+    // Both identical groups cover the widest possible visible interval.
+    for(let i=0;i<copies;i++){
+      const svg=document.createElementNS(svgNS,'svg');svg.setAttribute('viewBox','0 -741 11633 931');
+      const use=document.createElementNS(svgNS,'use');use.setAttribute('href','#unit');svg.append(use);group.append(svg);
+    }
+    track.style.animation='none';track.replaceChildren(group,group.cloneNode(true));
+    const distance=group.getBoundingClientRect().width,speed=32;
+    track.style.setProperty('--mail-distance',distance+'px');
+    track.style.setProperty('--mail-duration',distance/speed+'s');
+    track.style.animationDelay=-(offset%cell)/speed+'s';
+    void track.offsetWidth;track.style.removeProperty('animation');
+  }
+  makeMarquee();
+  window.addEventListener('resize',makeMarquee,{passive:true});
+  new ResizeObserver(makeMarquee).observe(viewport);
+  for(const type of ['gesturestart','gesturechange','gestureend']){
+    document.addEventListener(type,event=>event.preventDefault(),{passive:false});
+  }
+  document.addEventListener('touchmove',event=>{if(event.touches.length>1)event.preventDefault();},{passive:false});
+  let lastTouch=-1000;
+  document.addEventListener('touchend',event=>{
+    const now=performance.now();
+    if(event.changedTouches.length===1&&now-lastTouch<300)event.preventDefault();
+    lastTouch=now;
+  },{passive:false});
+  document.addEventListener('dblclick',event=>event.preventDefault(),{passive:false});
 })();

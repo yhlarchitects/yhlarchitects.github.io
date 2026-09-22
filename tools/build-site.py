@@ -4,6 +4,7 @@ from hashlib import sha256
 from io import BytesIO
 import argparse
 import json
+import re
 import shutil
 from PIL import Image, ImageOps
 
@@ -31,6 +32,13 @@ def build(source, output):
     if output.exists() and any(output.iterdir()):
         raise ValueError('Output must be empty; use a new directory.')
     output.mkdir(parents=True, exist_ok=True)
+    # Preserve immutable asset URLs referenced by previously cached HTML/JavaScript.
+    for asset in sorted((source / 'home' / 'compat-assets').iterdir()):
+        if not re.fullmatch(r'[a-z0-9-]+-[0-9a-f]{16}\.(webp|js|css)', asset.name):
+            raise ValueError('Unexpected compatibility asset: ' + asset.name)
+        target = output / 'assets' / asset.name
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(asset, target)
     catalog = []
     for path in sorted((source / 'photos').rglob('*')):
         if path.suffix.lower() not in SUPPORTED or not path.is_file():
@@ -55,8 +63,12 @@ def build(source, output):
         with Image.open(source / 'home' / 'objects' / (name + '.webp')) as im:
             if im.mode != 'RGBA' or im.getchannel('A').getextrema() != (0, 255):
                 raise ValueError('Object must retain transparency: ' + name)
+            hashed = webImage(im, 560, 85, name, output)
+            stable = 'assets/' + name + '.webp'
+            shutil.copy2(output / hashed, output / stable)
+            version = Path(hashed).stem.rsplit('-', 1)[-1]
             objects.append({'id': name, 'kind': 'key' if name.endswith('key') else 'petal',
-                            'src': webImage(im, 560, 85, name, output),
+                            'src': stable + '?v=' + version,
                             'ratio': im.width / im.height})
     script = '\n'.join((source / 'home' / name).read_text(encoding='utf-8') for name in ('motion.js', 'scan.js', 'page.js'))
     script = script.replace('PHOTO-CATALOG', json.dumps(catalog, ensure_ascii=False))
