@@ -26,10 +26,10 @@ body{font-family:"YHLA Univers","Univers 55","Univers LT Pro","Univers LT Std","
 .mail{position:absolute;left:0;right:0;bottom:calc(var(--f) * -.276);height:1em;line-height:1;white-space:nowrap;
   color:#000;text-decoration:none;cursor:pointer;transition:color .5s linear}
 .track{display:block;white-space:nowrap;will-change:transform}
-/* colour button: the small ring at the top right, sized and placed in em like the reference mark */
+/* colour button: the half-filled circle at the top right, sized and placed in em like the reference mark */
 .dot{position:absolute;top:0;right:0;font:inherit;width:max(48px,.16em);height:max(48px,.16em);border:0;border-radius:0;background:none;color:#000;
   cursor:pointer;-webkit-appearance:none;appearance:none;touch-action:manipulation;transition:color .5s linear}
-.dot svg{position:absolute;top:.0125em;right:.0225em;width:max(12px,.085em);height:max(12px,.085em);display:block;overflow:visible}
+.dot svg{position:absolute;top:.0065em;right:.0165em;width:max(14px,.097em);height:max(14px,.097em);display:block;overflow:visible}
 .mail:focus-visible{outline:3px solid currentColor;outline-offset:-6px}
 .dot:focus-visible{outline:2px solid currentColor;outline-offset:-4px}
 @media (prefers-reduced-motion:reduce){.word,.mail,.dot{transition:none!important}}
@@ -40,7 +40,7 @@ body{font-family:"YHLA Univers","Univers 55","Univers LT Pro","Univers LT Std","
   <div class="paint" id="paint" aria-hidden="true"></div>
   <h1 class="word" id="word" aria-label="YHL Architects">YHLA</h1>
   <a class="mail" id="mail" href="mailto:hello@yhlarchitects.com" aria-label="hello@yhlarchitects.com"><span class="track" id="track" aria-hidden="true"><span>hello@yhlarchitects.com</span><span>hello@yhlarchitects.com</span><span>hello@yhlarchitects.com</span></span></a>
-  <button class="dot" id="dot" type="button" aria-label="Change to the complementary color" title="Complementary color"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8.9" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="10" r="3.4" fill="currentColor"/></svg></button>
+  <button class="dot" id="dot" type="button" aria-label="Change to the complementary color" title="Complementary color"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.75a6.25 6.25 0 0 1 0 12.5z" fill="currentColor"/></svg></button>
 </main>
 <script>
 (function(){
