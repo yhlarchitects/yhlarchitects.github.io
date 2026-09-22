@@ -32,7 +32,6 @@ body{font-family:"YHLA Univers","Univers 55","Univers LT Pro","Univers LT Std","
 .dot svg{position:absolute;top:.0065em;right:.0165em;width:max(14px,.097em);height:max(14px,.097em);display:block;overflow:visible}
 .mail:focus-visible{outline:3px solid currentColor;outline-offset:-6px}
 .dot:focus-visible{outline:2px solid currentColor;outline-offset:-4px}
-@media (prefers-reduced-motion:reduce){.word,.mail,.dot{transition:none!important}}
 </style>
 </head>
 <body>
@@ -48,10 +47,9 @@ body{font-family:"YHLA Univers","Univers 55","Univers LT Pro","Univers LT Std","
   var root=document.documentElement,stage=document.getElementById("stage"),paint=document.getElementById("paint"),
       word=document.getElementById("word"),mail=document.getElementById("mail"),track=document.getElementById("track"),
       dot=document.getElementById("dot"),meta=document.getElementById("themeColor");
-  var mq=window.matchMedia?window.matchMedia("(prefers-reduced-motion: reduce)"):{matches:false};
   var SPEED=.4,PERIOD=5000,SWEEP=2000,FLIP=800,GAP=.77;
-  var F=0,unit=0,x=0,v=0,target=SPEED,last=null,running=false,timer=null,settle=null;
-  var cur=[246,245,240];
+  var F=0,unit=0,x=0,v=0,last=null,timer=null,settle=null;
+  var cur=[246,245,240],curInk="#000";
 
   /* layout: the colour field is the whole window */
   function fill(n){var s="";for(var i=0;i<n;i++)s+="<span>"+U+"</span>";track.innerHTML=s;}
@@ -82,22 +80,18 @@ body{font-family:"YHLA Univers","Univers 55","Univers LT Pro","Univers LT Std","
   }
   function put(){track.style.transform="translate3d("+x.toFixed(2)+"px,0,0)";}
 
-  /* the mail flows slowly through the window */
+  /* the mail flows slowly to the left, without end */
   function frame(t){
     if(last!==null){
       var dt=Math.min(.05,(t-last)/1000);
-      v+=(target-v)*Math.min(1,dt*2);
+      v+=(SPEED-v)*Math.min(1,dt*2);
       x-=v*F*dt;
       if(unit>0)while(x<=-unit)x+=unit;
       put();
     }
     last=t;
-    if(running)requestAnimationFrame(frame);
+    requestAnimationFrame(frame);
   }
-  function start(){if(running||mq.matches)return;running=true;last=null;requestAnimationFrame(frame);}
-  function stop(){running=false;}
-  mail.addEventListener("focus",function(){target=0;});
-  mail.addEventListener("blur",function(){target=SPEED;});
 
   /* colour */
   function hsl(h,s,l){
@@ -125,8 +119,9 @@ body{font-family:"YHLA Univers","Univers 55","Univers LT Pro","Univers LT Std","
   function grad(a,b,oklch){return "linear-gradient("+(oklch?"in oklch ":"")+"to bottom,"+a+" 33.34%,"+b+" 66.66%)";}
   function delay(el,ms){el.style.transitionDelay=ms+"ms";}
   /* the new colour pours in from the top with a gradient edge */
-  function sweep(next,dur){
-    var a=hex(next),b=hex(cur),ink=inkOf(next);
+  function sweep(next,dur,ink){
+    var a=hex(next),b=hex(cur);
+    ink=ink||inkOf(next);
     clearTimeout(settle);
     paint.style.transition="none";
     paint.style.backgroundImage=grad(a,b,false);
@@ -140,28 +135,22 @@ body{font-family:"YHLA Univers","Univers 55","Univers LT Pro","Univers LT Std","
     paint.style.transform="translate3d(0,0,0)";
     word.style.color=mail.style.color=dot.style.color=ink;
     settle=setTimeout(function(){root.style.backgroundColor=document.body.style.backgroundColor=a;meta.setAttribute("content",a);},dur);
-    cur=next;
+    cur=next;curInk=ink;
   }
   function later(ms){clearTimeout(timer);timer=setTimeout(step,ms);}
-  function step(){if(!mq.matches){sweep(neon(),SWEEP);later(PERIOD);}}
-  /* colour button: the complement of the colour on screen now */
+  function step(){sweep(neon(),SWEEP);later(PERIOD);}
+  /* colour button: the complement of the colour on screen, and the letters turn over with it */
   dot.addEventListener("click",function(){
-    sweep(flip(cur),mq.matches?0:FLIP);
-    if(!mq.matches)later(PERIOD+2000);
+    sweep(flip(cur),FLIP,curInk==="#000"?"#fff":"#000");
+    later(PERIOD+2000);
   });
-
-  function motion(){
-    if(mq.matches){stop();clearTimeout(timer);x=0;put();}
-    else{target=SPEED;start();later(1000);}
-  }
-  if(mq.addEventListener)mq.addEventListener("change",motion);else if(mq.addListener)mq.addListener(motion);
 
   var pending=false;
   window.addEventListener("resize",function(){if(pending)return;pending=true;requestAnimationFrame(function(){pending=false;layout();});});
   layout();
   if(document.fonts&&document.fonts.ready)document.fonts.ready.then(layout);
-  if(mq.matches)sweep(neon(),0);
-  motion();
+  requestAnimationFrame(frame);
+  later(1000);
 })();
 </script>
 </body>
