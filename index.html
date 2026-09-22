@@ -49,7 +49,7 @@ body{font-family:"YHLA Univers","Univers 55","Univers LT Pro","Univers LT Std","
       dot=document.getElementById("dot"),meta=document.getElementById("themeColor");
   var SPEED=.4,PERIOD=5000,SWEEP=2000,FLIP=800,GAP=.77;
   var F=0,unit=0,x=0,v=0,last=null,timer=null,settle=null;
-  var cur=[246,245,240],curInk="#000";
+  var cur=[246,245,240],curInk="#000",prev=cur,prevInk=curInk,autoT0=-1e9;
 
   /* layout: the colour field is the whole window */
   function fill(n){var s="";for(var i=0;i<n;i++)s+="<span>"+U+"</span>";track.innerHTML=s;}
@@ -135,12 +135,15 @@ body{font-family:"YHLA Univers","Univers 55","Univers LT Pro","Univers LT Std","
     paint.style.transform="translate3d(0,0,0)";
     word.style.color=mail.style.color=dot.style.color=ink;
     settle=setTimeout(function(){root.style.backgroundColor=document.body.style.backgroundColor=a;meta.setAttribute("content",a);},dur);
-    cur=next;curInk=ink;
+    prev=cur;prevInk=curInk;cur=next;curInk=ink;
   }
   function later(ms){clearTimeout(timer);timer=setTimeout(step,ms);}
-  function step(){sweep(neon(),SWEEP);later(PERIOD);}
-  /* colour button: the complement of the colour on screen, and the letters turn over with it */
+  function step(){sweep(neon(),SWEEP);autoT0=performance.now();later(PERIOD);}
+  /* colour button: the complement of the colour on screen, and the letters turn over with it.
+     In the first half of a pour the old colour still holds most of the window, so that one counts. */
   dot.addEventListener("click",function(){
+    if(performance.now()-autoT0<SWEEP*.5){cur=prev;curInk=prevInk;}
+    autoT0=-1e9;
     sweep(flip(cur),FLIP,curInk==="#000"?"#fff":"#000");
     later(PERIOD+2000);
   });
