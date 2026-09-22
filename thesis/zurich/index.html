@@ -9,7 +9,7 @@
 <meta property="og:title" content="Open House Zürich Notebook · 취리히 오픈하우스 수첩">
 <meta property="og:description" content="Four routes · timetables · questions · things to sense — Saturday 26 September 2026">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%226%22 fill=%22%2312120f%22/%3E%3Cpath d=%22M9 9h14L9 23h14%22 fill=%22none%22 stroke=%22%23f2f06a%22 stroke-width=%223%22/%3E%3C/svg%3E">
-<script>try{var t=localStorage.getItem("yhl-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<script>try{var t=localStorage.getItem("yhl-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-look",t)}catch(e){}</script>
 <style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
 <body>
@@ -31,6 +31,17 @@
   }
 }
 :root[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#1d1d1b; --card:#262624; --ink:#ecebe6; --mute:#93918a; --hair:#3a3a36; --rule:#ecebe6;
+  --gy:#31312d; --must:#e8846c; --blh:#2d4a56;
+}
+/* 밝기 버튼: 페이지를 감싼 화면이 data-theme을 다시 찍어도 버튼 선택(data-look)이 이긴다 */
+:root[data-look="light"][data-look]{
+  color-scheme:light;
+  --paper:#f6f5f0; --card:#fffefa; --ink:#12120f; --mute:#77766e; --hair:#d6d4cc; --rule:#12120f;
+  --gy:#e7e6e0; --must:#a8341c; --blh:#c9e6f2;
+}
+:root[data-look="dark"][data-look]{
   color-scheme:dark;
   --paper:#1d1d1b; --card:#262624; --ink:#ecebe6; --mute:#93918a; --hair:#3a3a36; --rule:#ecebe6;
   --gy:#31312d; --must:#e8846c; --blh:#2d4a56;
@@ -248,8 +259,8 @@ function U(k){return t(U0[k]);}
 /* ── 밝게 · 어둡게 ── */
 var THEMEKEY="yhl-theme";
 function sysDark(){try{return window.matchMedia("(prefers-color-scheme: dark)").matches;}catch(e){return false;}}
-function curTheme(){var a=document.documentElement.getAttribute("data-theme");return (a==="dark"||a==="light")?a:(sysDark()?"dark":"light");}
-function applyTheme(th){if(th==="dark"||th==="light")document.documentElement.setAttribute("data-theme",th);}
+function curTheme(){var r=document.documentElement,a=r.getAttribute("data-look")||r.getAttribute("data-theme");return (a==="dark"||a==="light")?a:(sysDark()?"dark":"light");}
+function applyTheme(th){if(th==="dark"||th==="light")document.documentElement.setAttribute("data-look",th);}
 try{var st0=localStorage.getItem(THEMEKEY);if(st0==="dark"||st0==="light")applyTheme(st0);}catch(e){}
 function paintThemeBtn(){var b=document.getElementById("themeBtn");if(!b)return;var l=curTheme()==="dark"?U("toLight"):U("toDark");b.setAttribute("aria-label",l);b.title=l;}
 window.addEventListener("error",function(e){
