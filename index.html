@@ -2,44 +2,166 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>YHL Architects</title>
 <meta name="description" content="YHL Architects — hello@yhlarchitects.com">
-<script>try{var t=localStorage.getItem("yhl-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<meta name="theme-color" content="#f6f5f0" id="themeColor">
 <style>
-:root{color-scheme:light;--paper:#f6f5f0;--ink:#12120f;--mute:#77766e;--hair:#d6d4cc;
-  --f:"Helvetica Neue",Helvetica,Arial,"Pretendard","Apple SD Gothic Neo","Noto Sans KR",sans-serif}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--paper:#1d1d1b;--ink:#ecebe6;--mute:#93918a;--hair:#3a3a36}}
-:root[data-theme="dark"]{color-scheme:dark;--paper:#1d1d1b;--ink:#ecebe6;--mute:#93918a;--hair:#3a3a36}
+@font-face{
+  font-family:"YHLA Univers";
+  src:local("Univers 55"),local("UniversLTPro-55Roman"),local("Univers LT Pro 55 Roman"),
+      local("UniversLTStd"),local("Univers LT Std 55 Roman"),local("Univers 55 Roman"),
+      local("UniversNextPro-Regular"),local("Univers Next Pro Regular"),local("Univers-Roman");
+  font-weight:400;font-style:normal;
+}
+/* one size for both lines: YHLA spans the width, the mail's baseline sits on the bottom edge */
+:root{--f:min(37.5vw,67vh);color-scheme:light}
 *{margin:0;padding:0;box-sizing:border-box}
-html,body{height:100%}
-body{background:var(--paper);color:var(--ink);font-family:var(--f);-webkit-font-smoothing:antialiased}
-main{min-height:100%;display:flex;flex-direction:column;justify-content:center;max-width:720px;margin:0 auto;padding-inline:24px;padding-block:64px}
-h1{font-weight:400;font-size:clamp(32px,7vw,56px);line-height:1.05;letter-spacing:-.02em}
-a{color:inherit}
-.mail{margin-top:20px;font-size:16px;line-height:24px;color:var(--mute)}
-.mail a{text-decoration:none;border-bottom:1px solid var(--hair)}
-.mail a:hover{border-bottom-color:var(--ink);color:var(--ink)}
-.tg{position:fixed;top:calc(env(safe-area-inset-top,0px) + 16px);right:16px;appearance:none;border:1px solid var(--ink);background:transparent;color:var(--ink);
-  border-radius:999px;padding:4px 8px;cursor:pointer;display:inline-flex}
-.tg svg{width:16px;height:16px;display:block}
-.tg:focus-visible,.mail a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+html,body{height:100%;overflow:hidden;background:#f6f5f0;color:#000}
+body{font-family:"YHLA Univers","Univers 55","Univers LT Pro","Univers LT Std","Univers","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight:400;font-kerning:normal;-webkit-tap-highlight-color:transparent}
+.stage{position:fixed;inset:0;overflow:hidden;font-size:var(--f);line-height:1}
+.paint{position:absolute;left:0;top:0;width:100%;height:300%;background:#f6f5f0;will-change:transform}
+.word{position:absolute;left:0;top:0;font:inherit;font-weight:400;line-height:1;white-space:nowrap;color:#000;transition:color .5s linear}
+.mail{position:absolute;left:0;right:0;bottom:calc(var(--f) * -.276);height:1em;line-height:1;white-space:nowrap;
+  color:#000;text-decoration:none;cursor:pointer;transition:color .5s linear}
+.track{display:block;white-space:nowrap;will-change:transform}
+/* colour button: the small ring at the top right, sized and placed in em like the reference mark */
+.dot{position:absolute;top:0;right:0;font:inherit;width:max(48px,.16em);height:max(48px,.16em);border:0;border-radius:0;background:none;color:#000;
+  cursor:pointer;-webkit-appearance:none;appearance:none;touch-action:manipulation;transition:color .5s linear}
+.dot svg{position:absolute;top:.0125em;right:.0225em;width:max(12px,.085em);height:max(12px,.085em);display:block;overflow:visible}
+.mail:focus-visible{outline:3px solid currentColor;outline-offset:-6px}
+.dot:focus-visible{outline:2px solid currentColor;outline-offset:-4px}
+@media (prefers-reduced-motion:reduce){.word,.mail,.dot{transition:none!important}}
 </style>
 </head>
 <body>
-<button class="tg" type="button" id="tg" aria-label="Dark mode" title="Dark mode"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.75a6.25 6.25 0 0 1 0 12.5z" fill="currentColor"/></svg></button>
-<main>
-<h1>YHL Architects</h1>
-<p class="mail"><a href="mailto:hello@yhlarchitects.com">hello@yhlarchitects.com</a></p>
+<main class="stage" id="stage">
+  <div class="paint" id="paint" aria-hidden="true"></div>
+  <h1 class="word" id="word" aria-label="YHL Architects">YHLA</h1>
+  <a class="mail" id="mail" href="mailto:hello@yhlarchitects.com" aria-label="hello@yhlarchitects.com"><span class="track" id="track" aria-hidden="true"><span>hello@yhlarchitects.com</span><span>hello@yhlarchitects.com</span><span>hello@yhlarchitects.com</span></span></a>
+  <button class="dot" id="dot" type="button" aria-label="Change to the complementary color" title="Complementary color"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8.9" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="10" r="3.4" fill="currentColor"/></svg></button>
 </main>
 <script>
 (function(){
-  var K="yhl-theme",b=document.getElementById("tg");
-  function sys(){try{return window.matchMedia("(prefers-color-scheme: dark)").matches;}catch(e){return false;}}
-  function cur(){var a=document.documentElement.getAttribute("data-theme");return (a==="dark"||a==="light")?a:(sys()?"dark":"light");}
-  function paint(){var l=cur()==="dark"?"Light mode":"Dark mode";b.setAttribute("aria-label",l);b.title=l;}
-  b.addEventListener("click",function(){var n=cur()==="dark"?"light":"dark";document.documentElement.setAttribute("data-theme",n);try{localStorage.setItem(K,n);}catch(e){}paint();});
-  paint();
+  var U="hello@yhlarchitects.com";
+  var root=document.documentElement,stage=document.getElementById("stage"),paint=document.getElementById("paint"),
+      word=document.getElementById("word"),mail=document.getElementById("mail"),track=document.getElementById("track"),
+      dot=document.getElementById("dot"),meta=document.getElementById("themeColor");
+  var mq=window.matchMedia?window.matchMedia("(prefers-reduced-motion: reduce)"):{matches:false};
+  var SPEED=.4,PERIOD=5000,SWEEP=2000,FLIP=800,GAP=.77;
+  var F=0,unit=0,x=0,v=0,target=SPEED,last=null,running=false,timer=null,settle=null;
+  var cur=[246,245,240];
+
+  /* layout: the colour field is the whole window */
+  function fill(n){var s="";for(var i=0;i<n;i++)s+="<span>"+U+"</span>";track.innerHTML=s;}
+  function layout(){
+    var W=stage.clientWidth,H=stage.clientHeight,fam=getComputedStyle(stage).fontFamily;
+    var wr=2.667,A=.724,D=.276,cap=.722;
+    try{
+      var c=document.createElement("canvas").getContext("2d");c.font="400 100px "+fam;
+      var w=c.measureText("YHLA").width/100,m=c.measureText("H");
+      if(w>0)wr=w;
+      if(m.fontBoundingBoxAscent>0){A=m.fontBoundingBoxAscent/100;D=m.fontBoundingBoxDescent/100;}
+      if(m.actualBoundingBoxAscent>0)cap=m.actualBoundingBoxAscent/100;
+    }catch(e){}
+    F=Math.min(W/wr,H/(cap+GAP));
+    var base=((1-(A+D))/2+A)*F;
+    stage.style.fontSize=F+"px";
+    word.style.top=(cap*F-base)+"px";
+    mail.style.bottom="auto";mail.style.top=(H-base)+"px";
+    var s=track.children,old=unit;
+    unit=s.length>1?s[1].getBoundingClientRect().left-s[0].getBoundingClientRect().left:0;
+    if(unit>0){
+      var n=Math.ceil(W/unit)+2;
+      if(s.length!==n)fill(n);
+      if(old>0)x=x/old*unit;
+      while(x<=-unit)x+=unit;
+      put();
+    }
+  }
+  function put(){track.style.transform="translate3d("+x.toFixed(2)+"px,0,0)";}
+
+  /* the mail flows slowly through the window */
+  function frame(t){
+    if(last!==null){
+      var dt=Math.min(.05,(t-last)/1000);
+      v+=(target-v)*Math.min(1,dt*2);
+      x-=v*F*dt;
+      if(unit>0)while(x<=-unit)x+=unit;
+      put();
+    }
+    last=t;
+    if(running)requestAnimationFrame(frame);
+  }
+  function start(){if(running||mq.matches)return;running=true;last=null;requestAnimationFrame(frame);}
+  function stop(){running=false;}
+  mail.addEventListener("focus",function(){target=0;});
+  mail.addEventListener("blur",function(){target=SPEED;});
+
+  /* colour */
+  function hsl(h,s,l){
+    s/=100;l/=100;var a=s*Math.min(l,1-l);
+    function f(n){var k=(n+h/30)%12;return l-a*Math.max(-1,Math.min(k-3,9-k,1));}
+    return [Math.round(255*f(0)),Math.round(255*f(8)),Math.round(255*f(4))];
+  }
+  function hueOf(c){
+    var r=c[0]/255,g=c[1]/255,b=c[2]/255,mx=Math.max(r,g,b),mn=Math.min(r,g,b),d=mx-mn,h;
+    if(d<.02)return null;
+    if(mx===r)h=((g-b)/d)%6;else if(mx===g)h=(b-r)/d+2;else h=(r-g)/d+4;
+    h*=60;return h<0?h+360:h;
+  }
+  function lin(u){u/=255;return u<=.04045?u/12.92:Math.pow((u+.055)/1.055,2.4);}
+  /* white or all-black, whichever reads better on the colour */
+  function inkOf(c){var L=.2126*lin(c[0])+.7152*lin(c[1])+.0722*lin(c[2]);return (L+.05)/.05>=1.05/(L+.05)?"#000":"#fff";}
+  function hex(c){return "#"+c.map(function(u){return ("0"+u.toString(16)).slice(-2);}).join("");}
+  function flip(c){return c.map(function(u){return 255-u;});}
+  function apart(a,b){var d=Math.abs(a-b)%360;return d>180?360-d:d;}
+  function neon(){
+    var h0=hueOf(cur),h,i=0;
+    do{h=Math.random()*360;i++;}while(h0!==null&&apart(h,h0)<70&&i<24);
+    return hsl(h,85+Math.random()*15,54+Math.random()*12);
+  }
+  function grad(a,b,oklch){return "linear-gradient("+(oklch?"in oklch ":"")+"to bottom,"+a+" 33.34%,"+b+" 66.66%)";}
+  function delay(el,ms){el.style.transitionDelay=ms+"ms";}
+  /* the new colour pours in from the top with a gradient edge */
+  function sweep(next,dur){
+    var a=hex(next),b=hex(cur),ink=inkOf(next);
+    clearTimeout(settle);
+    paint.style.transition="none";
+    paint.style.backgroundImage=grad(a,b,false);
+    paint.style.backgroundImage=grad(a,b,true);
+    paint.style.transform="translate3d(0,-66.666%,0)";
+    void paint.offsetWidth;
+    if(dur>0){
+      paint.style.transition="transform "+dur+"ms cubic-bezier(.45,0,.25,1)";
+      delay(dot,Math.round(dur*.25));delay(word,Math.round(dur*.4));delay(mail,Math.round(dur*.62));
+    }else{delay(dot,0);delay(word,0);delay(mail,0);}
+    paint.style.transform="translate3d(0,0,0)";
+    word.style.color=mail.style.color=dot.style.color=ink;
+    settle=setTimeout(function(){root.style.backgroundColor=document.body.style.backgroundColor=a;meta.setAttribute("content",a);},dur);
+    cur=next;
+  }
+  function later(ms){clearTimeout(timer);timer=setTimeout(step,ms);}
+  function step(){if(!mq.matches){sweep(neon(),SWEEP);later(PERIOD);}}
+  /* colour button: the complement of the colour on screen now */
+  dot.addEventListener("click",function(){
+    sweep(flip(cur),mq.matches?0:FLIP);
+    if(!mq.matches)later(PERIOD+2000);
+  });
+
+  function motion(){
+    if(mq.matches){stop();clearTimeout(timer);x=0;put();}
+    else{target=SPEED;start();later(1000);}
+  }
+  if(mq.addEventListener)mq.addEventListener("change",motion);else if(mq.addListener)mq.addListener(motion);
+
+  var pending=false;
+  window.addEventListener("resize",function(){if(pending)return;pending=true;requestAnimationFrame(function(){pending=false;layout();});});
+  layout();
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(layout);
+  if(mq.matches)sweep(neon(),0);
+  motion();
 })();
 </script>
 </body>
