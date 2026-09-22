@@ -10,7 +10,7 @@
   ];
   const filters = ['neutral','cold','copper','mesh','silver'];
   const surface = document.getElementById('photographs');
-  let seed = 0, generation = 0, layoutTimer;
+  let seed = 0, generation = 0, layoutTimer, objectKind;
   const randomSeed = () => {
     const n = new Uint32Array(1);
     if (globalThis.crypto?.getRandomValues) crypto.getRandomValues(n);
@@ -24,8 +24,14 @@
     const a=[...list]; for(let i=a.length-1;i>0;i--){const j=Math.floor(rand()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a;
   }
   function clamp(n,lo,hi) {return Math.max(lo,Math.min(hi,n));}
+  function nextObjectKind(){
+    let previous=objectKind;
+    if(!previous){try{previous=sessionStorage.getItem('yhla-object-kind');}catch{}}
+    objectKind=previous==='petal'?'key':'petal';
+    try{sessionStorage.setItem('yhla-object-kind',objectKind);}catch{}
+  }
   function layout(newSeed = true) {
-    if(newSeed){const previous=seed; do{seed=randomSeed();}while(seed===previous);generation++;}
+    if(newSeed){const previous=seed; do{seed=randomSeed();}while(seed===previous);generation++;nextObjectKind();}
     const rand=randomGenerator(seed), W=innerWidth, H=innerHeight, mobile=W<620;
     const marginX=W*.1, marginY=H*.1;
     const frontCount=rand()>.5?3:2, count=8+frontCount;
@@ -79,9 +85,11 @@
         figure.dataset.blur=focusBlur.toFixed(2);
         Object.assign(figure.style,{
           left:(cx-width/2+marginX)+'px',top:(cy-height/2+marginY)+'px',
-          width:width+'px',height:height+'px',transform:`rotate(${rotation}deg)`,
+          width:width+'px',height:height+'px',
           zIndex:String((6-depth)*10+local)
         });
+        figure.style.setProperty('--rotation',rotation+'deg');
+        figure.style.setProperty('--parallax',String([0,1,.78,.56,.36,.18][depth]));
         const focusAngle=Math.round(rand()*360);
         figure.style.setProperty('--focus-angle',focusAngle+'deg');
         figure.style.setProperty('--focus-blur',focusBlur.toFixed(2)+'px');
@@ -109,53 +117,45 @@
   }
 
   function scatterObjects(rand,W,H,marginX,marginY,mobile){
-    const amount=generation===1?2:(rand()<.45?1:2);
-    const petals=objectAssets.filter(a=>a.kind==='petal'), keys=objectAssets.filter(a=>a.kind==='key');
-    const pick=list=>list[Math.floor(rand()*list.length)];
-    const chosen=amount===2?shuffle([pick(petals),pick(keys)],rand):[pick(objectAssets)];
-    const placed=[];
-    chosen.forEach((asset,index)=>{
-      let depth=amount===2?index+1:(rand()<.5?1:2);
-      const length=asset.kind==='petal'?
-        (mobile?W*(.25+rand()*.08):Math.min(W*(.11+rand()*.025),H*.28)):
-        (mobile?W*(.33+rand()*.09):Math.min(W*(.15+rand()*.025),H*.38));
-      const width=asset.ratio>=1?length:length*asset.ratio;
-      const height=asset.ratio>=1?length/asset.ratio:length;
-      const angle=rand()*360-180, radians=angle*Math.PI/180;
-      const boundW=Math.abs(width*Math.cos(radians))+Math.abs(height*Math.sin(radians));
-      const boundH=Math.abs(height*Math.cos(radians))+Math.abs(width*Math.sin(radians));
-      const candidates=Array.from({length:36},()=>({
-        x:clamp((.09+rand()*.82)*W,boundW/2+12,W-boundW/2-12),
-        y:clamp((.14+rand()*.69)*H,boundH/2+84,H-85-boundH/2)
-      }));
-      function evaluate(candidate,z){
-        let visible=0,empty=0;
-        for(const [dx,dy] of [[0,0],[-.3,0],[.3,0],[0,-.3],[0,.3],[-.22,-.22],[.22,.22]]){
-          const top=document.elementsFromPoint(candidate.x+dx*boundW,candidate.y+dy*boundH).find(el=>el.classList.contains('print'));
-          if(!top||+top.style.zIndex<z)visible++;
-          if(!top)empty++;
-        }
-        const crowd=placed.some(p=>Math.hypot(p.x-candidate.x,p.y-candidate.y)<(p.size+Math.max(boundW,boundH))*.6);
-        const logo=candidate.x-boundW/2<(mobile?185:295)&&candidate.y-boundH/2<100;
-        return {visible:visible/7,score:visible*10+empty*.4-(crowd?55:0)-(logo?70:0)};
+    const pool=objectAssets.filter(asset=>asset.kind===objectKind);
+    const asset=pool[Math.floor(rand()*pool.length)];
+    const movement=Math.min(32,Math.min(W,H)*.055), padding=16+movement;
+    let length=asset.kind==='petal'?
+      (mobile?W*(.25+rand()*.08):Math.min(W*(.11+rand()*.025),H*.28)):
+      (mobile?W*(.33+rand()*.09):Math.min(W*(.15+rand()*.025),H*.38));
+    let width=asset.ratio>=1?length:length*asset.ratio;
+    let height=asset.ratio>=1?length/asset.ratio:length;
+    const angle=rand()*360-180, radians=angle*Math.PI/180;
+    let boundW=Math.abs(width*Math.cos(radians))+Math.abs(height*Math.sin(radians));
+    let boundH=Math.abs(height*Math.cos(radians))+Math.abs(width*Math.sin(radians));
+    const fit=Math.min(1,(W-padding*2)/boundW,Math.max(44,H-80-72-padding*2)/boundH);
+    width*=fit;height*=fit;boundW*=fit;boundH*=fit;
+    const candidates=Array.from({length:36},()=>({
+      x:clamp((.09+rand()*.82)*W,boundW/2+padding,W-boundW/2-padding),
+      y:clamp((.14+rand()*.69)*H,boundH/2+80+padding,H-72-padding-boundH/2)
+    }));
+    function score(candidate){
+      let empty=0;
+      for(const [dx,dy] of [[0,0],[-.3,0],[.3,0],[0,-.3],[0,.3],[-.22,-.22],[.22,.22]]){
+        if(!document.elementsFromPoint(candidate.x+dx*boundW,candidate.y+dy*boundH).some(el=>el.classList.contains('print')))empty++;
       }
-      let z=depth===1?56+index:46+index;
-      let best=candidates.map(c=>({...c,...evaluate(c,z)})).sort((a,b)=>b.score-a.score)[0];
-      // A decoration must remain perceptible; lift it to the front if photographs hide it.
-      if(best.visible<.7){depth=1;z=56+index;best=candidates.map(c=>({...c,...evaluate(c,z)})).sort((a,b)=>b.score-a.score)[0];}
-      const object=document.createElement('div');object.className='scanned-object';
-      object.dataset.depth=String(depth);object.dataset.kind=asset.kind;object.dataset.object=asset.id;
-      object.dataset.visible=best.visible.toFixed(2);object.setAttribute('aria-hidden','true');
-      Object.assign(object.style,{
-        left:(best.x-width/2+marginX)+'px',top:(best.y-height/2+marginY)+'px',
-        width:width+'px',height:height+'px',transform:`rotate(${angle}deg)`,zIndex:String(z)
-      });
-      object.style.setProperty('--object-blur',depth===1?'.12px':(mobile?'1.25px':'2.4px'));
-      const img=document.createElement('img');img.src=asset.src;img.alt='';img.draggable=false;img.decoding='async';
-      object.append(img);surface.append(object);
-      placed.push({...best,size:Math.max(boundW,boundH)});
+      return empty;
+    }
+    const best=candidates.map(c=>({...c,score:score(c)})).sort((a,b)=>b.score-a.score)[0];
+    const handle=asset.kind==='petal'?'yhlpic':'reyeonho';
+    const object=document.createElement('a');object.className='scanned-object';
+    object.href='https://www.instagram.com/'+handle+'/';object.target='_blank';object.rel='noopener noreferrer';
+    object.setAttribute('aria-label',(asset.kind==='petal'?'꽃잎':'열쇠')+' — Instagram @'+handle);
+    object.title='@'+handle;
+    object.dataset.depth='1';object.dataset.kind=asset.kind;object.dataset.object=asset.id;object.dataset.visible='1';
+    Object.assign(object.style,{
+      left:(best.x-width/2+marginX)+'px',top:(best.y-height/2+marginY)+'px',
+      width:width+'px',height:height+'px',zIndex:'56'
     });
-    return amount;
+    object.style.setProperty('--rotation',angle+'deg');object.style.setProperty('--parallax','1');
+    const img=document.createElement('img');img.src=asset.src;img.alt='';img.draggable=false;img.decoding='async';
+    object.append(img);surface.append(object);
+    return 1;
   }
 
   function scannerGrain(){

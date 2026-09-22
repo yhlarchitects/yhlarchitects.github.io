@@ -20,8 +20,14 @@ Output is site-dist/. The output directory must be new or empty. Only the home p
 
 ## Home page
 
-Approved scanner collage: five focus depths, 2–3 sharp foreground photographs, stronger blur behind them, black scanner glass, a 120% canvas, five randomly assigned tones, and 1–2 separate petals or keys at depths 1–2. Refresh, the shuffle icon or R generates another composition.
+Approved scanner collage: five focus depths, 2–3 sharp foreground photographs, stronger blur behind them, black scanner glass, a 120% canvas, five randomly assigned tones, and one sharp foreground petal or key, alternating on each shuffle and reload. Refresh, the shuffle icon or R generates another composition.
 
 Univers lettering remains SVG outlines. Font files are not included.
 
 The preceding neon home is preserved in Git history at bde516e00dd7bd6e80d012eac8f8ddf46216c5c9.
+
+## Social links and phone tilt
+
+Petals open https://www.instagram.com/yhlpic/ and keys open https://www.instagram.com/reyeonho/ in a new tab. The object is always in focus at depth 1 and above the photographs. Tab-session storage remembers the last kind; resizing does not switch it.
+
+On a touch device with orientation support, tap 기울여 보기 to enable the depth-based motion. iPhone Safari asks for motion permission. The first sensor reading establishes the neutral position. Rotation is adjusted for screen orientation and movement is capped at 32px (less on small screens). YHLA and the email's position stay fixed; the existing email ticker continues. The same button turns tilt off. Denied or unavailable sensors leave the collage static.

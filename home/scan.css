@@ -1,4 +1,4 @@
-:root{--paper:#111315;--ink:#e6e9e6;color-scheme:dark}
+:root{--paper:#050606;--ink:#e6e9e6;color-scheme:dark}
 *{box-sizing:border-box}
 html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--paper);color:var(--ink)}
 body{font-family:Arial,Helvetica,sans-serif;-webkit-tap-highlight-color:transparent}
@@ -7,9 +7,9 @@ button:focus-visible,a:focus-visible{outline:2px solid #eef5ed;outline-offset:5p
 .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .svg-definitions{position:absolute;width:0;height:0;overflow:hidden}
 #stage,#photographs,.glass,.grain{position:fixed;inset:0;overflow:hidden}
-#stage{isolation:isolate;background:radial-gradient(ellipse at 66% 54%,#77766d12,transparent 71%),radial-gradient(ellipse at 9% 38%,#486c7610,transparent 52%),linear-gradient(92deg,#090b0d66,transparent 30%,#36393c0d 76%,#02040666)}
-.glass{pointer-events:none;z-index:60;background:linear-gradient(92deg,#d8eaf302,transparent 34%,#d5e9f603 69%,transparent),radial-gradient(ellipse at 110% 60%,#c1d9e015,transparent 38%);mix-blend-mode:screen}
-.grain{pointer-events:none;z-index:61;opacity:.17;mix-blend-mode:soft-light;background-repeat:repeat;background-size:240px 240px}
+#stage{isolation:isolate;background:radial-gradient(ellipse at 66% 54%,#77766d06,transparent 71%),radial-gradient(ellipse at 9% 38%,#486c7604,transparent 52%),linear-gradient(92deg,#090b0d66,transparent 30%,#36393c05 76%,#02040666)}
+.glass{pointer-events:none;z-index:60;background:linear-gradient(92deg,#d8eaf302,transparent 34%,#d5e9f603 69%,transparent),radial-gradient(ellipse at 110% 60%,#c1d9e008,transparent 38%);mix-blend-mode:screen}
+.grain{pointer-events:none;z-index:61;opacity:.10;mix-blend-mode:soft-light;background-repeat:repeat;background-size:240px 240px}
 .print{position:absolute;margin:0;isolation:isolate;transform-origin:center;user-select:none;--tone:saturate(.72) contrast(1.04) brightness(.97);--focus-angle:35deg;--edge:5px;--bloom:16px;--lift:9px}
 .print .layer{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;pointer-events:none;user-select:none}
 .print .mist{z-index:0;opacity:.28;filter:var(--tone) blur(var(--bloom)) brightness(1.4);transform:translate(var(--drift-x),var(--drift-y));mix-blend-mode:screen;mask-image:linear-gradient(var(--focus-angle),#000 0%,#0009 42%,transparent 70%)}
@@ -35,12 +35,12 @@ h1 svg{display:block;width:100%;height:auto;fill:currentColor}
 #rescan{width:46px;height:46px;display:grid;place-items:center;border:0;border-radius:0;color:inherit;background:transparent;cursor:pointer}
 #rescan svg{width:34px;height:28px}
 #rescan:hover svg{opacity:.75}
-footer{position:fixed;left:0;right:0;bottom:0;height:72px;z-index:100;overflow:hidden;background:linear-gradient(transparent,#111315a6 43%,#111315eb 94%)}
+footer{position:fixed;left:0;right:0;bottom:0;height:72px;z-index:100;overflow:hidden;background:linear-gradient(transparent,#050606a6 43%,#050606eb 94%)}
 #mail{position:absolute;inset:10px 0 0;color:var(--ink);text-decoration:none;white-space:nowrap;display:block}
 #track{display:flex;width:max-content;align-items:center;gap:0;will-change:transform;animation:mail-flow 50s linear infinite}
 #track svg{display:block;flex:none;width:850px;height:68px;fill:currentColor;overflow:visible;padding-right:44px}
 @keyframes mail-flow{to{transform:translateX(-25%)}}
-@media(max-width:600px){header{top:18px;left:16px;right:10px}h1{width:154px}.scan-controls{gap:0}#rescan{width:44px;height:44px}footer{height:61px}#mail{top:13px}#track svg{width:570px;height:45px;padding-right:30px}.grain{opacity:.14}}
+@media(max-width:600px){header{top:18px;left:16px;right:10px}h1{width:154px}.scan-controls{gap:0}#rescan{width:44px;height:44px}footer{height:61px}#mail{top:13px}#track svg{width:570px;height:45px;padding-right:30px}.grain{opacity:.09}}
 @media(prefers-reduced-motion:reduce){#rescan svg{transition:none}}
 
 /* Five focal planes, counted from the viewer. The scanner bed is 120% in both axes. */
@@ -58,7 +58,15 @@ footer{position:fixed;left:0;right:0;bottom:0;height:72px;z-index:100;overflow:h
 .print[data-depth="4"] .fringe,.print[data-depth="5"] .fringe{opacity:.12}
 .print[data-depth="4"] .scan-grid,.print[data-depth="5"] .scan-grid{display:none}
 
-/* Scanned petals and keys remain separate, transparent objects in planes 1 and 2. */
-.scanned-object{position:absolute;pointer-events:none;isolation:isolate;transform-origin:center;filter:blur(var(--object-blur,.12px));user-select:none}
+/* One sharp, clickable petal or key, alternating on every shuffle. */
+.scanned-object{position:absolute;display:block;pointer-events:auto;isolation:isolate;transform-origin:center;filter:none;opacity:1;user-select:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
 .scanned-object img{display:block;width:100%;height:100%;object-fit:contain;pointer-events:none;filter:drop-shadow(0 1px 2px #0005)}
-.scanned-object[data-depth="2"]{opacity:.95}
+
+
+.print,.scanned-object{transform:translate3d(calc(var(--tilt-x,0px)*var(--parallax,1)),calc(var(--tilt-y,0px)*var(--parallax,1)),0) rotate(var(--rotation,0deg))}
+.motion-active .print,.motion-active .scanned-object{will-change:transform}
+.scanned-object:focus-visible{outline:2px solid var(--ink);outline-offset:5px;border-radius:4px}
+#motion-toggle{border:0;padding:0 8px;min-height:44px;background:transparent;color:inherit;font:11px/1.3 Arial,Helvetica,sans-serif;letter-spacing:.02em;cursor:pointer;white-space:nowrap}
+#motion-toggle[hidden],#motion-message[hidden]{display:none}
+#motion-toggle[aria-pressed="true"]{opacity:.65}
+#motion-message{position:fixed;right:18px;top:75px;max-width:240px;margin:0;color:var(--ink);font:12px/1.5 Arial,Helvetica,sans-serif;pointer-events:none;text-shadow:0 1px 5px #000;z-index:101}

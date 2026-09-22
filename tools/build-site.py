@@ -46,7 +46,7 @@ def build(source, output):
             catalog.append({'src': src, 'title': path.stem.replace('-', ' '), 'ratio': photo.width / photo.height})
     if not catalog:
         raise ValueError('Add at least one photograph to photos/.')
-    script = (source / 'home' / 'scan.js').read_text(encoding='utf-8')
+    script = (source / 'home' / 'motion.js').read_text(encoding='utf-8') + '\n' + (source / 'home' / 'scan.js').read_text(encoding='utf-8')
     script = script.replace('PHOTO-CATALOG', json.dumps(catalog, ensure_ascii=False))
     for name in OBJECTS:
         path = source / 'home' / 'objects' / (name + '.webp')
