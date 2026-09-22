@@ -7,25 +7,19 @@
 <meta name="description" content="YHL Architects — hello@yhlarchitects.com">
 <meta name="theme-color" content="#f6f5f0" id="themeColor">
 <style>
-@font-face{
-  font-family:"YHLA Univers";
-  src:local("Univers 55"),local("UniversLTPro-55Roman"),local("Univers LT Pro 55 Roman"),
-      local("UniversLTStd"),local("Univers LT Std 55 Roman"),local("Univers 55 Roman"),
-      local("UniversNextPro-Regular"),local("Univers Next Pro Regular"),local("Univers-Roman");
-  font-weight:400;font-style:normal;
-}
-/* one size for both lines: YHLA spans the width, the mail's baseline sits on the bottom edge */
+/* Letters are Univers 55 outlines. One size for both lines: YHLA spans the width, the mail's baseline sits on the bottom edge */
 :root{--f:min(37.5vw,67vh);color-scheme:light}
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{height:100%;overflow:hidden;background:#f6f5f0;color:#000}
-body{font-family:"YHLA Univers","Univers 55","Univers LT Pro","Univers LT Std","Univers","Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-weight:400;font-kerning:normal;-webkit-tap-highlight-color:transparent}
+body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-tap-highlight-color:transparent}
 .stage{position:fixed;inset:0;overflow:hidden;font-size:var(--f);line-height:1}
 .paint{position:absolute;left:0;top:0;width:100%;height:300%;background:#f6f5f0;will-change:transform}
-.word{position:absolute;left:0;top:0;font:inherit;font-weight:400;line-height:1;white-space:nowrap;color:#000;transition:color .5s linear}
-.mail{position:absolute;left:0;right:0;bottom:calc(var(--f) * -.276);height:1em;line-height:1;white-space:nowrap;
-  color:#000;text-decoration:none;cursor:pointer;transition:color .5s linear}
-.track{display:block;white-space:nowrap;will-change:transform}
+.word{position:absolute;left:0;top:0;font-size:1em;color:#000;transition:color .5s linear}
+.word svg{display:block;width:2.6670em;height:0.7220em;fill:currentColor;overflow:visible}
+.mail{position:absolute;left:0;right:0;top:calc(100% - 0.7410em);height:0.9310em;display:block;color:#000;cursor:pointer;transition:color .5s linear}
+.track{display:flex;width:max-content;will-change:transform}
+.track svg{display:block;flex:none;width:11.6330em;height:0.9310em;fill:currentColor;overflow:visible}
+.hide{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 /* colour button: the half-filled circle at the top right, sized and placed in em like the reference mark */
 .dot{position:absolute;top:0;right:0;font:inherit;width:max(48px,.16em);height:max(48px,.16em);border:0;border-radius:0;background:none;color:#000;
   cursor:pointer;-webkit-appearance:none;appearance:none;touch-action:manipulation;transition:color .5s linear}
@@ -35,15 +29,16 @@ body{font-family:"YHLA Univers","Univers 55","Univers LT Pro","Univers LT Std","
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><path id="unit" d="M88 0H183V-266C183 -297 183 -344 199 -372C212 -396 247 -439 317 -439C425 -439 425 -342 425 -297V0H521V-314C521 -387 514 -411 504 -431C475 -492 399 -511 346 -511C276 -511 214 -481 183 -428V-721H88ZM1117 -234C1119 -316 1124 -515 899 -515C870 -515 810 -512 762 -478C683 -423 663 -341 663 -242C663 -83 738 15 896 15C997 15 1047 -27 1069 -52C1105 -91 1109 -132 1112 -157H1018C1010 -85 961 -53 900 -53C797 -53 754 -130 756 -234ZM760 -300C762 -411 836 -448 897 -448C1013 -448 1022 -348 1021 -300ZM1257 0H1351V-721H1257ZM1535 0H1629V-721H1535ZM1774 -245C1774 -98 1855 17 2021 17C2192 17 2275 -105 2275 -252C2275 -357 2230 -515 2029 -515C1832 -515 1774 -369 1774 -245ZM1872 -251C1872 -408 1969 -446 2029 -446C2117 -446 2175 -380 2175 -255C2175 -104 2094 -53 2023 -53C1916 -53 1872 -148 1872 -251ZM2987 -549 2969 -485C2965 -498 2960 -515 2943 -531C2919 -556 2883 -564 2853 -564C2734 -564 2655 -435 2655 -327C2655 -233 2711 -176 2789 -176C2880 -176 2917 -250 2929 -274C2927 -267 2925 -258 2925 -246C2925 -199 2964 -176 3005 -176C3100 -176 3209 -278 3209 -440C3209 -643 3046 -741 2875 -741C2675 -741 2475 -606 2475 -352C2475 -130 2635 17 2859 17C2985 17 3074 -25 3162 -89L3137 -122C3062 -69 2980 -27 2862 -27C2665 -27 2521 -151 2521 -349C2521 -571 2687 -697 2875 -697C3025 -697 3162 -616 3162 -445C3162 -315 3086 -226 3023 -226C3010 -226 2979 -230 2979 -267C2979 -288 2988 -318 2995 -343L3056 -549ZM2941 -436C2941 -394 2904 -226 2809 -226C2759 -226 2736 -269 2736 -322C2736 -398 2789 -515 2869 -515C2897 -515 2941 -498 2941 -436ZM3886 -502H3784L3624 -106L3467 -502H3361L3570 -2L3494 190H3591L3663 3ZM3993 0H4088V-266C4088 -297 4088 -344 4104 -372C4117 -396 4152 -439 4222 -439C4330 -439 4330 -342 4330 -297V0H4426V-314C4426 -387 4419 -411 4409 -431C4380 -492 4304 -511 4251 -511C4181 -511 4119 -481 4088 -428V-721H3993ZM4606 0H4700V-721H4606ZM5273 0C5266 -51 5265 -118 5265 -126L5269 -366C5269 -389 5268 -413 5252 -443C5225 -494 5147 -517 5074 -517C5021 -517 4950 -505 4912 -463C4883 -429 4880 -394 4877 -368H4971C4972 -388 4977 -453 5072 -453C5099 -453 5140 -445 5159 -420C5177 -398 5177 -371 5177 -309C5148 -311 5133 -312 5109 -312C5069 -312 4989 -309 4935 -279C4861 -236 4847 -172 4847 -132C4847 -49 4909 16 5024 16C5066 16 5134 8 5179 -75C5179 -49 5181 -25 5188 0ZM5177 -244C5175 -174 5174 -146 5153 -112C5130 -77 5094 -58 5046 -58C4962 -58 4942 -113 4942 -145C4942 -247 5085 -247 5123 -247C5146 -247 5160 -246 5177 -244ZM5443 0H5538V-267C5538 -353 5564 -419 5675 -419C5686 -419 5695 -419 5702 -418C5709 -417 5715 -416 5720 -414V-506C5704 -507 5683 -508 5655 -504C5613 -498 5553 -475 5535 -405L5533 -502H5438C5441 -469 5443 -434 5443 -400ZM6208 -341C6206 -369 6203 -410 6166 -453C6120 -508 6045 -515 6012 -515C5912 -515 5784 -453 5784 -244C5784 -140 5814 -87 5844 -52C5897 6 5975 13 6009 13C6133 13 6206 -69 6212 -167H6117C6115 -118 6088 -58 6008 -58C5908 -58 5883 -154 5883 -257C5883 -295 5883 -446 6013 -446C6104 -446 6111 -364 6113 -341ZM6277 0H6372V-266C6372 -297 6372 -344 6388 -372C6401 -396 6436 -439 6506 -439C6614 -439 6614 -342 6614 -297V0H6710V-314C6710 -387 6703 -411 6693 -431C6664 -492 6588 -511 6535 -511C6465 -511 6403 -481 6372 -428V-721H6277ZM6879 -617H6992V-720H6879ZM6889 0H6983V-502H6889ZM7089 -435H7178V-100C7178 -18 7219 7 7305 7C7339 7 7366 4 7383 1V-72C7375 -70 7357 -67 7338 -67C7271 -67 7271 -109 7271 -134V-435H7383V-504H7271V-639L7178 -609V-504H7089ZM7917 -234C7919 -316 7924 -515 7699 -515C7670 -515 7610 -512 7562 -478C7483 -423 7463 -341 7463 -242C7463 -83 7538 15 7696 15C7797 15 7847 -27 7869 -52C7905 -91 7909 -132 7912 -157H7818C7810 -85 7761 -53 7700 -53C7597 -53 7554 -130 7556 -234ZM7560 -300C7562 -411 7636 -448 7697 -448C7813 -448 7822 -348 7821 -300ZM8436 -341C8434 -369 8431 -410 8394 -453C8348 -508 8273 -515 8240 -515C8140 -515 8012 -453 8012 -244C8012 -140 8042 -87 8072 -52C8125 6 8203 13 8237 13C8361 13 8434 -69 8440 -167H8345C8343 -118 8316 -58 8236 -58C8136 -58 8111 -154 8111 -257C8111 -295 8111 -446 8241 -446C8332 -446 8339 -364 8341 -341ZM8478 -435H8567V-100C8567 -18 8608 7 8694 7C8728 7 8755 4 8772 1V-72C8764 -70 8746 -67 8727 -67C8660 -67 8660 -109 8660 -134V-435H8772V-504H8660V-639L8567 -609V-504H8478ZM8843 -149C8842 -28 8937 14 9039 14C9091 14 9144 7 9188 -20C9225 -43 9256 -91 9256 -147C9256 -179 9246 -214 9218 -240C9188 -268 9158 -276 9019 -309C8993 -316 8948 -327 8948 -373C8948 -445 9036 -445 9050 -445C9084 -445 9150 -439 9147 -363H9243C9243 -384 9243 -408 9230 -436C9200 -496 9112 -514 9049 -514C8933 -514 8853 -454 8853 -362C8853 -257 8941 -236 9046 -212C9121 -195 9156 -186 9156 -137C9156 -120 9150 -103 9140 -90C9120 -65 9091 -58 9052 -58C8961 -58 8941 -111 8942 -149ZM9381 0H9492V-120H9381ZM10047 -341C10045 -369 10042 -410 10005 -453C9959 -508 9884 -515 9851 -515C9751 -515 9623 -453 9623 -244C9623 -140 9653 -87 9683 -52C9736 6 9814 13 9848 13C9972 13 10045 -69 10051 -167H9956C9954 -118 9927 -58 9847 -58C9747 -58 9722 -154 9722 -257C9722 -295 9722 -446 9852 -446C9943 -446 9950 -364 9952 -341ZM10129 -245C10129 -98 10210 17 10376 17C10547 17 10630 -105 10630 -252C10630 -357 10585 -515 10384 -515C10187 -515 10129 -369 10129 -245ZM10227 -251C10227 -408 10324 -446 10384 -446C10472 -446 10530 -380 10530 -255C10530 -104 10449 -53 10378 -53C10271 -53 10227 -148 10227 -251ZM10776 0H10871V-285C10871 -317 10872 -358 10893 -387C10904 -402 10939 -442 11003 -442C11077 -442 11113 -394 11113 -332V0H11208V-281C11208 -303 11208 -358 11230 -389C11243 -407 11276 -442 11337 -442C11385 -442 11417 -421 11433 -398C11442 -385 11450 -366 11450 -322V0H11545V-337C11545 -485 11433 -515 11361 -515C11250 -515 11209 -449 11192 -421C11174 -458 11139 -515 11028 -515C10985 -515 10917 -508 10869 -429V-502H10774L10776 -435Z"/></defs></svg>
 <main class="stage" id="stage">
   <div class="paint" id="paint" aria-hidden="true"></div>
-  <h1 class="word" id="word" aria-label="YHL Architects">YHLA</h1>
-  <a class="mail" id="mail" href="mailto:hello@yhlarchitects.com" aria-label="hello@yhlarchitects.com"><span class="track" id="track" aria-hidden="true"><span>hello@yhlarchitects.com</span><span>hello@yhlarchitects.com</span><span>hello@yhlarchitects.com</span></span></a>
+  <h1 class="word" id="word"><span class="hide">YHL Architects</span><svg viewBox="0 -722 2667 722" aria-hidden="true" focusable="false"><path d="M289 0H390V-279L672 -722H560L344 -368L131 -722H7L289 -284ZM755 -722V0H855V-326H1198V0H1298V-722H1198V-412H855V-722ZM1482 0H1917V-89H1581V-722H1482ZM1954 0H2057L2135 -188H2470L2548 0H2657L2365 -722H2258ZM2307 -623 2440 -269H2167Z"/></svg></h1>
+  <a class="mail" id="mail" href="mailto:hello@yhlarchitects.com"><span class="hide">hello@yhlarchitects.com</span><span class="track" id="track" aria-hidden="true"><svg viewBox="0 -741 11633 931"><use href="#unit"/></svg><svg viewBox="0 -741 11633 931"><use href="#unit"/></svg><svg viewBox="0 -741 11633 931"><use href="#unit"/></svg></span></a>
   <button class="dot" id="dot" type="button" aria-label="Change to the complementary color" title="Complementary color"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.75a6.25 6.25 0 0 1 0 12.5z" fill="currentColor"/></svg></button>
 </main>
 <script>
 (function(){
-  var U="hello@yhlarchitects.com";
+  var WORDW=2.6670,CAP=0.7240,UNITW=11.6330,COPY='<svg viewBox="0 -741 11633 931"><use href="#unit"/></svg>';
   var root=document.documentElement,stage=document.getElementById("stage"),paint=document.getElementById("paint"),
       word=document.getElementById("word"),mail=document.getElementById("mail"),track=document.getElementById("track"),
       dot=document.getElementById("dot"),meta=document.getElementById("themeColor");
@@ -52,31 +47,16 @@ body{font-family:"YHLA Univers","Univers 55","Univers LT Pro","Univers LT Std","
   var cur=[246,245,240],curInk="#000",prev=cur,prevInk=curInk,autoT0=-1e9;
 
   /* layout: the colour field is the whole window */
-  function fill(n){var s="";for(var i=0;i<n;i++)s+="<span>"+U+"</span>";track.innerHTML=s;}
   function layout(){
-    var W=stage.clientWidth,H=stage.clientHeight,fam=getComputedStyle(stage).fontFamily;
-    var wr=2.667,A=.724,D=.276,cap=.722;
-    try{
-      var c=document.createElement("canvas").getContext("2d");c.font="400 100px "+fam;
-      var w=c.measureText("YHLA").width/100,m=c.measureText("H");
-      if(w>0)wr=w;
-      if(m.fontBoundingBoxAscent>0){A=m.fontBoundingBoxAscent/100;D=m.fontBoundingBoxDescent/100;}
-      if(m.actualBoundingBoxAscent>0)cap=m.actualBoundingBoxAscent/100;
-    }catch(e){}
-    F=Math.min(W/wr,H/(cap+GAP));
-    var base=((1-(A+D))/2+A)*F;
+    var W=stage.clientWidth,H=stage.clientHeight,old=unit;
+    F=Math.min(W/WORDW,H/(CAP+GAP));
     stage.style.fontSize=F+"px";
-    word.style.top=(cap*F-base)+"px";
-    mail.style.bottom="auto";mail.style.top=(H-base)+"px";
-    var s=track.children,old=unit;
-    unit=s.length>1?s[1].getBoundingClientRect().left-s[0].getBoundingClientRect().left:0;
-    if(unit>0){
-      var n=Math.ceil(W/unit)+2;
-      if(s.length!==n)fill(n);
-      if(old>0)x=x/old*unit;
-      while(x<=-unit)x+=unit;
-      put();
-    }
+    unit=UNITW*F;
+    var n=Math.ceil(W/unit)+2;
+    if(track.children.length!==n){var s="";for(var i=0;i<n;i++)s+=COPY;track.innerHTML=s;}
+    if(old>0)x=x/old*unit;
+    while(x<=-unit)x+=unit;
+    put();
   }
   function put(){track.style.transform="translate3d("+x.toFixed(2)+"px,0,0)";}
 
@@ -128,10 +108,8 @@ body{font-family:"YHLA Univers","Univers 55","Univers LT Pro","Univers LT Std","
     paint.style.backgroundImage=grad(a,b,true);
     paint.style.transform="translate3d(0,-66.666%,0)";
     void paint.offsetWidth;
-    if(dur>0){
-      paint.style.transition="transform "+dur+"ms cubic-bezier(.45,0,.25,1)";
-      delay(dot,Math.round(dur*.25));delay(word,Math.round(dur*.4));delay(mail,Math.round(dur*.62));
-    }else{delay(dot,0);delay(word,0);delay(mail,0);}
+    paint.style.transition="transform "+dur+"ms cubic-bezier(.45,0,.25,1)";
+    delay(dot,Math.round(dur*.25));delay(word,Math.round(dur*.4));delay(mail,Math.round(dur*.62));
     paint.style.transform="translate3d(0,0,0)";
     word.style.color=mail.style.color=dot.style.color=ink;
     settle=setTimeout(function(){root.style.backgroundColor=document.body.style.backgroundColor=a;meta.setAttribute("content",a);},dur);
@@ -151,7 +129,6 @@ body{font-family:"YHLA Univers","Univers 55","Univers LT Pro","Univers LT Std","
   var pending=false;
   window.addEventListener("resize",function(){if(pending)return;pending=true;requestAnimationFrame(function(){pending=false;layout();});});
   layout();
-  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(layout);
   requestAnimationFrame(frame);
   later(1000);
 })();
