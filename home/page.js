@@ -5,7 +5,7 @@
   const svgNS='http://www.w3.org/2000/svg';
   let marqueeShape='';
   function makeMarquee(){
-    const cell=innerWidth<=600?570:850;
+    const cell=parseFloat(getComputedStyle(track).getPropertyValue('--mail-cell'));
     const copies=Math.ceil(Math.max(viewport.clientWidth,innerWidth)/cell)+2;
     const shape=cell+':'+copies;
     if(shape===marqueeShape)return;
@@ -29,17 +29,6 @@
   makeMarquee();
   window.addEventListener('resize',makeMarquee,{passive:true});
   new ResizeObserver(makeMarquee).observe(viewport);
-  const paper=document.getElementById('paper-scan');
-  function loadPaper(){
-    if(paper.hasAttribute('src'))return;
-    paper.srcset=paper.dataset.srcset;paper.src=paper.dataset.src;
-  }
-  // Do not delay the collage with the large ending image.
-  viewport.addEventListener('scroll',()=>{
-    if(viewport.scrollTop>0)loadPaper();
-    viewport.classList.toggle('is-ending',viewport.scrollTop>=viewport.clientHeight);
-  },{passive:true});
-  window.addEventListener('pageshow',()=>{if(viewport.scrollTop>0)loadPaper();});
   for(const type of ['gesturestart','gesturechange','gestureend']){
     document.addEventListener(type,event=>event.preventDefault(),{passive:false});
   }
@@ -51,15 +40,4 @@
     lastTouch=now;
   },{passive:false});
   document.addEventListener('dblclick',event=>event.preventDefault(),{passive:false});
-  // Desktop visitors can grab the scan and drag upward to reach the paper.
-  let drag=null;
-  viewport.addEventListener('pointerdown',event=>{
-    if(event.pointerType!=='mouse'||event.button!==0||event.target.closest('a,button'))return;
-    drag={id:event.pointerId,y:event.clientY,scroll:viewport.scrollTop};
-  });
-  viewport.addEventListener('pointermove',event=>{
-    if(!drag||event.pointerId!==drag.id)return;
-    if(Math.abs(event.clientY-drag.y)>5){viewport.setPointerCapture(event.pointerId);viewport.scrollTop=drag.scroll+drag.y-event.clientY;}
-  });
-  for(const type of ['pointerup','pointercancel','lostpointercapture'])viewport.addEventListener(type,()=>{drag=null;});
 })();

@@ -65,10 +65,6 @@ def build(source, output):
     styleUrl = writeAsset((source / 'home' / 'scan.css').read_bytes(), 'scan', '.css', output)
     html = (source / 'index.html').read_text(encoding='utf-8')
     html = html.replace('SCAN-STYLESHEET', styleUrl).replace('SCAN-SCRIPT', scriptUrl)
-    with Image.open(source / 'home' / 'paper' / 'book.webp') as paper:
-        for key, edge, quality in [('SMALL', 960, 86), ('MEDIUM', 1920, 88), ('LARGE', 4096, 90)]:
-            html = html.replace('PAPER-' + key, webImage(paper, edge, quality, 'paper-' + key.lower(), output))
-        html = html.replace('PAPER-WIDTH', str(paper.width)).replace('PAPER-HEIGHT', str(paper.height))
     (output / 'index.html').write_text(html, encoding='utf-8', newline='\n')
     (output / 'photos.json').write_text(json.dumps(catalog, ensure_ascii=False, indent=2), encoding='utf-8', newline='\n')
     for name in ('CNAME', 'robots.txt', '.nojekyll'):

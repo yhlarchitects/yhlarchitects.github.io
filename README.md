@@ -4,42 +4,42 @@ https://yhlarchitects.com/
 
 ## Add or remove photographs
 
-Upload JPG, PNG, WebP or AVIF photographs to [photos/](https://github.com/yhlarchitects/yhlarchitects.github.io/upload/main/photos) and commit the upload to main. GitHub Actions rebuilds and publishes the site automatically. Removing a photograph from that folder removes it from future arrangements.
+Upload JPG, PNG, WebP or AVIF photographs to [photos/](https://github.com/yhlarchitects/yhlarchitects.github.io/upload/main/photos) and commit to main. GitHub Actions rebuilds and publishes automatically. Removing a photograph removes it from future arrangements.
 
-The upload folder is public. Upload only images intended for the public website.
+The folder is public. Upload only images intended for this website.
 
-The build creates 1440px desktop, 800px mobile, and 480px distant-plane WebP assets. Only the chosen photographs and two chosen objects load on entry. Five transparent petals and keys live separately in home/objects/. Their published derivatives are at most 560px. The originals stay in the repository.
+The build creates 1440px desktop, 800px mobile, and 480px distant-plane WebP assets. Only selected photographs and the two selected objects load on entry. Five transparent originals remain in home/objects/; published derivatives are at most 560px.
 
 ## Build
 
-Install tools/requirements.txt, then run:
+Install tools/requirements.txt and run:
 
     python tools/build-site.py --output site-dist
 
-The output directory must be new or empty. Only the home page, web assets, photo catalog, CNAME, robots.txt and existing thesis pages are published. Sources, documentation and private paths are excluded from the Pages artifact.
+Use a new or empty output directory. Only the home page, public web assets, photo catalog, CNAME, robots.txt and existing thesis pages are published.
 
 ## Home page
 
-The scanner collage has five focus depths, 2–3 sharp foreground photographs, increasing blur behind them, near-black glass, a canvas extending 10% past every edge, and five randomly assigned tones. Every composition contains exactly one sharp petal and one sharp key together. Refresh, the shuffle icon or R generates a new composition.
+One fixed viewport contains the scanner collage: five focus depths, 2–3 sharp front photographs, stronger blur behind, near-black glass, a canvas extending 10% beyond each edge, and five shuffled tones. There is no second page or vertical scrolling.
 
-Petals open https://www.instagram.com/yhlpic/ and keys open https://www.instagram.com/reyeonho/ in new tabs. Both links are at depth 1 above the photographs and remain inside the viewport, including at the maximum tilt.
+Every composition has one sharp petal and one sharp key together. Both remain visible above the photos and link to https://www.instagram.com/yhlpic/ and https://www.instagram.com/reyeonho/. Refresh, the shuffle icon or R reshuffles.
 
-Univers lettering remains SVG outlines; font files are not included. The email uses two identical groups, each wider than the viewport, repeating at 32px per second. Groups adjust to resized and ultra-wide windows.
+The YHLA mark is transparent SVG outline lettering without a filter, shadow, box or font download. Email loops with two identical groups wider than the viewport.
 
-## Phone interaction
+## Mobile layout
 
-Supported touch devices listen to orientation automatically. iPhone Safari requires sensor permission from a user gesture: the first tap requests it without a separate tilt control. Browser or system permissions cannot be bypassed. Denied or unsupported sensors leave the scene static.
+On narrow screens, and touch devices up to 1000px wide, YHLA and the email are 61.8% of their preceding mobile dimensions: YHLA 95.172px; email cell 352.26px by 27.81px. The visible shuffle icon is 16px wide instead of 34px (52.9% smaller), retaining a transparent 44px touch area. Desktop logo, email and shuffle dimensions remain unchanged.
 
-The first sensor reading sets neutral. Motion follows screen orientation and is capped at 32px, less on small screens. YHLA and the email stay fixed relative to the first scene while the photographs move at different rates. Tilt pauses when the ending is visible.
+Pinch, double-tap zoom and page panning remain disabled.
 
-The viewport disables pinch and double-tap page zoom while retaining single-finger vertical scrolling. Browser accessibility overrides and real hardware behavior remain browser-controlled.
+## Motion without prompts
 
-## Paper ending
+There are no permission buttons or gesture-triggered permission requests. Permissionless supported devices subscribe immediately.
 
-Scrolling down moves the collage up and reveals the approved open-book scan, centered with empty black space below it. Mouse dragging upward also scrolls the page. The logo, shuffle and email leave with the first scene, keeping the ending clear.
+For an API that requires permission, a single startup check runs only without transient user activation. An existing grant enables motion; a prompt/denied state rejects or resolves denied without prompting and leaves the collage still. A check is never retried on click or touch. Unsupported APIs, exceptions and missing sensor data leave the scene static.
 
-home/paper/book.webp is the restored scan with “© YHLA.” and “ALL RIGHTS RESERVED”. Responsive ending assets load only after scrolling starts, keeping the first page light. The 4096px delivery is an interpolated export of the restored image, not a native 4K scan.
+The first sensor reading establishes neutral. Parallax follows screen orientation and is capped at 32px, less on small screens. YHLA and the email stay fixed.
 
 ## History
 
-The preceding versions remain in Git: neon home bde516e; initial scanner home 6b25be6; single alternating social object and manual tilt 409e13a. Existing thesis pages and their robots rules are preserved.
+Previous designs remain in Git: 409e13a (manual tilt), 38cbbf5 (paper ending). The archived book asset is retained in source history but excluded from the built and published site. Existing thesis pages and robots rules are preserved.

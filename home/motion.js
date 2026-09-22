@@ -1,10 +1,9 @@
 (() => {
   'use strict';
   const surface=document.getElementById('photographs');
-  const viewport=document.getElementById('viewport');
   const Orientation=window.DeviceOrientationEvent;
   const touch=navigator.maxTouchPoints>0||matchMedia('(pointer:coarse)').matches;
-  let enabled=false,requesting=false,baseline=null,frame=0;
+  let enabled=false,baseline=null,frame=0;
   let targetX=0,targetY=0,currentX=0,currentY=0;
   const clamp=(n,lo,hi)=>Math.max(lo,Math.min(hi,n));
   const state=value=>{document.documentElement.dataset.motion=value;};
@@ -24,9 +23,9 @@
     if(frame)cancelAnimationFrame(frame);frame=0;paint();
   }
   function onOrientation(event){
-    if(!enabled||document.hidden||viewport.scrollTop>=viewport.clientHeight||!Number.isFinite(event.beta)||!Number.isFinite(event.gamma))return;
+    if(!enabled||document.hidden||!Number.isFinite(event.beta)||!Number.isFinite(event.gamma))return;
     const rotation=angle();
-    if(!baseline||baseline.angle!==rotation){baseline={beta:event.beta,gamma:event.gamma,angle:rotation};targetX=targetY=0;state('active');return;}
+    if(!baseline||baseline.angle!==rotation){baseline={beta:event.beta,gamma:event.gamma,angle:rotation};targetX=targetY=0;surface.classList.add('motion-active');state('active');return;}
     const radians=rotation*Math.PI/180;
     const horizontal=delta(event.gamma,baseline.gamma),vertical=delta(event.beta,baseline.beta);
     const limit=Math.min(32,Math.min(innerWidth,innerHeight)*.055);
@@ -35,27 +34,22 @@
     if(!frame)frame=requestAnimationFrame(animate);
   }
   function listen(){
-    reset();enabled=true;state('waiting');surface.classList.add('motion-active');
+    reset();enabled=true;state('waiting');
     window.addEventListener('deviceorientation',onOrientation,{passive:true});
   }
-  async function requestFromGesture(){
-    if(requesting||enabled)return;
-    requesting=true;
-    try{
-      // iOS requires a real user gesture. There is no separate page control.
-      const permission=await Orientation.requestPermission();
-      if(permission==='granted')listen();else state('denied');
-      document.removeEventListener('click',requestFromGesture,true);
-      document.removeEventListener('touchend',requestFromGesture,true);
-    }catch{state('denied');}
-    finally{requesting=false;}
-  }
+  state('idle');
   if(touch&&Orientation&&window.isSecureContext){
-    if(typeof Orientation.requestPermission==='function'){
-      state('gesture');document.addEventListener('click',requestFromGesture,true);
-      document.addEventListener('touchend',requestFromGesture,{capture:true,passive:true});
-    }else listen();
-  }else state('unavailable');
+    if(typeof Orientation.requestPermission!=='function')listen();
+    else if(!navigator.userActivation?.isActive){
+      // One load-time check, never from a click/touch or while a gesture is active.
+      // Already-granted permission resolves; a prompt state rejects without showing UI.
+      try{
+        Promise.resolve(Orientation.requestPermission()).then(permission=>{
+          if(permission==='granted')listen();
+        }).catch(()=>{});
+      }catch{}
+    }
+  }
   window.addEventListener('orientationchange',reset,{passive:true});
   screen.orientation?.addEventListener?.('change',reset);
   document.addEventListener('visibilitychange',reset);
