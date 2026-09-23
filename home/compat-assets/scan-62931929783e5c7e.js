@@ -1,7 +1,65 @@
 (() => {
   'use strict';
-  const assets = PHOTO-CATALOG;
-  const objectAssets = OBJECT-CATALOG;
+  const surface=document.getElementById('photographs');
+  const Orientation=window.DeviceOrientationEvent;
+  const touch=navigator.maxTouchPoints>0||matchMedia('(pointer:coarse)').matches;
+  let enabled=false,baseline=null,frame=0;
+  let targetX=0,targetY=0,currentX=0,currentY=0;
+  const clamp=(n,lo,hi)=>Math.max(lo,Math.min(hi,n));
+  const state=value=>{document.documentElement.dataset.motion=value;};
+  const angle=()=>Number(screen.orientation?.angle??window.orientation??0);
+  const delta=(value,origin)=>((value-origin+540)%360)-180;
+  function paint(){
+    surface.style.setProperty('--tilt-x',currentX.toFixed(3)+'px');
+    surface.style.setProperty('--tilt-y',currentY.toFixed(3)+'px');
+  }
+  function animate(){
+    frame=0;currentX+=(targetX-currentX)*.13;currentY+=(targetY-currentY)*.13;
+    if(Math.abs(targetX-currentX)<.02&&Math.abs(targetY-currentY)<.02){currentX=targetX;currentY=targetY;paint();return;}
+    paint();frame=requestAnimationFrame(animate);
+  }
+  function reset(){
+    baseline=null;targetX=targetY=currentX=currentY=0;
+    if(frame)cancelAnimationFrame(frame);frame=0;paint();
+  }
+  function onOrientation(event){
+    if(!enabled||document.hidden||!Number.isFinite(event.beta)||!Number.isFinite(event.gamma))return;
+    const rotation=angle();
+    if(!baseline||baseline.angle!==rotation){baseline={beta:event.beta,gamma:event.gamma,angle:rotation};targetX=targetY=0;surface.classList.add('motion-active');state('active');return;}
+    const radians=rotation*Math.PI/180;
+    const horizontal=delta(event.gamma,baseline.gamma),vertical=delta(event.beta,baseline.beta);
+    const limit=Math.min(32,Math.min(innerWidth,innerHeight)*.055);
+    targetX=clamp((horizontal*Math.cos(radians)+vertical*Math.sin(radians))/22,-1,1)*limit;
+    targetY=clamp((vertical*Math.cos(radians)-horizontal*Math.sin(radians))/22,-1,1)*limit;
+    if(!frame)frame=requestAnimationFrame(animate);
+  }
+  function listen(){
+    reset();enabled=true;state('waiting');
+    window.addEventListener('deviceorientation',onOrientation,{passive:true});
+  }
+  state('idle');
+  if(touch&&Orientation&&window.isSecureContext){
+    if(typeof Orientation.requestPermission!=='function')listen();
+    else if(!navigator.userActivation?.isActive){
+      // One load-time check, never from a click/touch or while a gesture is active.
+      // Already-granted permission resolves; a prompt state rejects without showing UI.
+      try{
+        Promise.resolve(Orientation.requestPermission()).then(permission=>{
+          if(permission==='granted')listen();
+        }).catch(()=>{});
+      }catch{}
+    }
+  }
+  window.addEventListener('orientationchange',reset,{passive:true});
+  screen.orientation?.addEventListener?.('change',reset);
+  document.addEventListener('visibilitychange',reset);
+  window.addEventListener('pageshow',reset);
+})();
+
+(() => {
+  'use strict';
+  const assets = [{"src": "assets/photo-cc482b40449c68d9.webp", "mobile": "assets/photo-mobile-c69c629b1e0932dd.webp", "preview": "assets/photo-rear-98f3284ee47ad854.webp", "title": "00_Main", "ratio": 0.6708860759493671}, {"src": "assets/photo-008931c152dd855d.webp", "mobile": "assets/photo-mobile-2df6244b53c3462c.webp", "preview": "assets/photo-rear-49b985350f198440.webp", "title": "1004_V001.2", "ratio": 0.6708860759493671}, {"src": "assets/photo-af1ea0a8ffb44b58.webp", "mobile": "assets/photo-mobile-449e228849fe3fb0.webp", "preview": "assets/photo-rear-6430317bb11b7240.webp", "title": "1004_V004", "ratio": 0.6700949367088608}, {"src": "assets/photo-28bcd99449057540.webp", "mobile": "assets/photo-mobile-c433d5ac1bbf6294.webp", "preview": "assets/photo-rear-892d7ee9a0d6ac69.webp", "title": "1004_V005", "ratio": 0.6700949367088608}, {"src": "assets/photo-f3766fdf1c4a9127.webp", "mobile": "assets/photo-mobile-ffeb1ad9d3863ed0.webp", "preview": "assets/photo-rear-13146c5febe1709f.webp", "title": "Harvard GSD Studio Works   Maquina de Aqua", "ratio": 0.77455919395466}, {"src": "assets/photo-8df8b90b2f280251.webp", "mobile": "assets/photo-mobile-05d4555db0cd0bb5.webp", "preview": "assets/photo-rear-593303dbf0a6cb4c.webp", "title": "Scene 17", "ratio": 1.0}, {"src": "assets/photo-78415e9e069a5b65.webp", "mobile": "assets/photo-mobile-28930ce3749154ec.webp", "preview": "assets/photo-rear-dc4dde1733d30ad4.webp", "title": "Yeonho_L_MArch II_FDA Portfolio", "ratio": 0.7071045576407506}, {"src": "assets/photo-e8657368511e6b05.webp", "mobile": "assets/photo-mobile-e0d4594aeeb12dd6.webp", "preview": "assets/photo-rear-156ad546e106a7f2.webp", "title": "chamber aerial", "ratio": 0.670625}, {"src": "assets/photo-641ee67503bbae26.webp", "mobile": "assets/photo-mobile-9e04af738e6b9dcb.webp", "preview": "assets/photo-rear-ec72d395b1b423ae.webp", "title": "chamber court", "ratio": 0.670625}, {"src": "assets/photo-2edb87bd41714fed.webp", "mobile": "assets/photo-mobile-257c8b2cb0ae2c45.webp", "preview": "assets/photo-rear-12c8e613a289a275.webp", "title": "chamber facade", "ratio": 0.670625}, {"src": "assets/photo-beef53aff2236486.webp", "mobile": "assets/photo-mobile-581bd4d0b3ca8bb2.webp", "preview": "assets/photo-rear-75fc6d6d68163eac.webp", "title": "crown detail", "ratio": 1.4911463187325256}, {"src": "assets/photo-9790b9fc404d5716.webp", "mobile": "assets/photo-mobile-e34be5b08d42ad29.webp", "preview": "assets/photo-rear-3f9ec5dbd944c466.webp", "title": "garden seats", "ratio": 1.490566037735849}, {"src": "assets/photo-24baf8f1e24cd7f9.webp", "mobile": "assets/photo-mobile-e70c53b294f1cba3.webp", "preview": "assets/photo-rear-b7e8b81749d12186.webp", "title": "garden walk", "ratio": 1.4911463187325256}, {"src": "assets/photo-8b4981281a98ddfa.webp", "mobile": "assets/photo-mobile-5e0c8202178cbd12.webp", "preview": "assets/photo-rear-0a83a1a85caeab69.webp", "title": "hf_20260430_123409_5bc3a416 6708 43d7 bbc9 3611ccdff898", "ratio": 0.6708860759493671}, {"src": "assets/photo-c5c853ba9cbacaf2.webp", "mobile": "assets/photo-mobile-469ef5e56987b2af.webp", "preview": "assets/photo-rear-57bceac6d371b854.webp", "title": "project 1004", "ratio": 0.6525}, {"src": "assets/photo-1bfc7626359e1d42.webp", "mobile": "assets/photo-mobile-8745bba6d2a58c10.webp", "preview": "assets/photo-rear-48fffe2e6a361998.webp", "title": "공연장3", "ratio": 1.392898052691867}];
+  const objectAssets = [{"id": "rose-petal", "kind": "petal", "src": "assets/rose-petal.webp?v=6c56dcd673107ade", "ratio": 1.0}, {"id": "white-petal", "kind": "petal", "src": "assets/white-petal.webp?v=854d7e6ecc1dadde", "ratio": 0.962}, {"id": "blue-tulip-petal", "kind": "petal", "src": "assets/blue-tulip-petal.webp?v=aaabac9b04d96cb2", "ratio": 0.75}, {"id": "silver-key", "kind": "key", "src": "assets/silver-key.webp?v=71f798818d1b7298", "ratio": 0.772}, {"id": "brass-key", "kind": "key", "src": "assets/brass-key.webp?v=cc6b3cec4031f5ac", "ratio": 0.847}];
   const filters = ['contact','lift','soft','mesh','diffuse'];
   const surface = document.getElementById('photographs');
   let seed = 0, generation = 0, layoutTimer;
@@ -20,10 +78,6 @@
   function clamp(n,lo,hi) {return Math.max(lo,Math.min(hi,n));}
   function layout(newSeed = true) {
     if(newSeed){const previous=seed; do{seed=randomSeed();}while(seed===previous);generation++;}
-    // Use one seed bit so resizing keeps the theme and photo randomness is unchanged.
-    const theme=(seed&1)?'light':'dark';
-    document.documentElement.dataset.theme=theme;
-    document.querySelector('meta[name="theme-color"]').content=theme==='light'?'#f7ffff':'#010202';
     const rand=randomGenerator(seed), W=document.getElementById('stage').clientWidth, H=document.getElementById('stage').clientHeight, mobile=W<620;
     const marginX=W*.1, marginY=H*.1;
     const frontCount=rand()>.5?3:2, count=8+frontCount;
@@ -109,7 +163,7 @@
     surface.replaceChildren(fragment);
     const objectCount=scatterObjects(rand,W,H,marginX,marginY,mobile);
     surface.dataset.canvasWidth=String(W*1.2);surface.dataset.canvasHeight=String(H*1.2);
-    document.getElementById('status').textContent=`${theme==='light'?'흰색':'검정'} 배경에 앞쪽 선명한 사진 ${frontCount}장과 뒤쪽 사진 8장, 스캔 오브제 ${objectCount}개를 펼쳤습니다.`;
+    document.getElementById('status').textContent=`앞쪽 선명한 사진 ${frontCount}장과 뒤쪽 사진 8장, 스캔 오브제 ${objectCount}개를 펼쳤습니다.`;
     document.documentElement.dataset.seed=String(seed);
     document.documentElement.dataset.ready='true';
   }
@@ -186,7 +240,51 @@
   document.getElementById('rescan').addEventListener('click',()=>layout());
   window.addEventListener('keydown',event=>{if(!event.ctrlKey&&!event.metaKey&&!event.altKey&&event.key.toLowerCase()==='r')layout();});
   window.addEventListener('resize',()=>{clearTimeout(layoutTimer);layoutTimer=setTimeout(()=>layout(false),100);});
-  window.scanGallery={reshuffle:()=>layout(), getState:()=>({seed,generation,theme:document.documentElement.dataset.theme,assets:assets.map(a=>({...a})),filters:[...filters],objects:objectAssets.map(a=>({...a}))})};
+  window.scanGallery={reshuffle:()=>layout(), getState:()=>({seed,generation,assets:assets.map(a=>({...a})),filters:[...filters],objects:objectAssets.map(a=>({...a}))})};
   scannerGrain();
   layout();
+})();
+
+(() => {
+  'use strict';
+  const viewport=document.getElementById('viewport');
+  const track=document.getElementById('track');
+  const svgNS='http://www.w3.org/2000/svg';
+  let marqueeShape='';
+  function makeMarquee(){
+    const cell=parseFloat(getComputedStyle(track).getPropertyValue('--mail-cell'));
+    const copies=Math.ceil(Math.max(viewport.clientWidth,innerWidth)/cell)+2;
+    const shape=cell+':'+copies;
+    if(shape===marqueeShape)return;
+    marqueeShape=shape;
+    const oldDistance=parseFloat(track.style.getPropertyValue('--mail-distance'))||1;
+    const oldTransform=getComputedStyle(track).transform;
+    const offset=oldTransform==='none'?0:Math.abs(new DOMMatrix(oldTransform).m41)%oldDistance;
+    const group=document.createElement('span');group.className='mail-group';
+    // Both identical groups cover the widest possible visible interval.
+    for(let i=0;i<copies;i++){
+      const svg=document.createElementNS(svgNS,'svg');svg.setAttribute('viewBox','0 -741 11633 931');
+      const use=document.createElementNS(svgNS,'use');use.setAttribute('href','#unit');svg.append(use);group.append(svg);
+    }
+    track.style.animation='none';track.replaceChildren(group,group.cloneNode(true));
+    const distance=group.getBoundingClientRect().width,speed=32;
+    track.style.setProperty('--mail-distance',distance+'px');
+    track.style.setProperty('--mail-duration',distance/speed+'s');
+    track.style.animationDelay=-(offset%cell)/speed+'s';
+    void track.offsetWidth;track.style.removeProperty('animation');
+  }
+  makeMarquee();
+  window.addEventListener('resize',makeMarquee,{passive:true});
+  new ResizeObserver(makeMarquee).observe(viewport);
+  for(const type of ['gesturestart','gesturechange','gestureend']){
+    document.addEventListener(type,event=>event.preventDefault(),{passive:false});
+  }
+  document.addEventListener('touchmove',event=>{if(event.touches.length>1)event.preventDefault();},{passive:false});
+  let lastTouch=-1000;
+  document.addEventListener('touchend',event=>{
+    const now=performance.now();
+    if(event.changedTouches.length===1&&now-lastTouch<300)event.preventDefault();
+    lastTouch=now;
+  },{passive:false});
+  document.addEventListener('dblclick',event=>event.preventDefault(),{passive:false});
 })();

@@ -20,9 +20,9 @@ Use a new or empty output directory. Only the home page, public web assets, phot
 
 ## Home page
 
-One fixed viewport contains the scanner collage: five focus depths, 2–3 sharp front photographs, stronger blur behind, near-black glass, a canvas extending 10% beyond each edge, and five optical scan profiles (contact, lifted edge, soft focus, fine mesh, diffuse edge). Photographs retain their original colors, without grayscale, sepia, saturation, hue, contrast or brightness filters. There is no second page or vertical scrolling.
+One fixed viewport contains the scanner collage: five focus depths, 2–3 sharp front photographs, stronger blur behind, near-black or cool-white glass, a canvas extending 10% beyond each edge, and five optical scan profiles (contact, lifted edge, soft focus, fine mesh, diffuse edge). Photographs retain their original colors, without grayscale, sepia, saturation, hue, contrast or brightness filters. There is no second page or vertical scrolling.
 
-Every composition has one sharp petal and one sharp key together. Both remain visible above the photos and link to https://www.instagram.com/yhlpic/ and https://www.instagram.com/reyeonho/. Refresh, the shuffle icon or R reshuffles.
+Every composition has one sharp petal and one sharp key together. Both remain visible above the photos and link to https://www.instagram.com/yhlpic/ and https://www.instagram.com/reyeonho/. Refresh, the shuffle icon or R reshuffles photographs and randomly chooses near-black (#010202) or cool-white (#f7ffff) glass with equal probability. The logo, controls, email and footer adapt to the background. Resizing preserves the chosen theme.
 
 The YHLA mark is transparent SVG outline lettering without a filter, shadow, box or font download. Email loops with two identical groups wider than the viewport.
 
