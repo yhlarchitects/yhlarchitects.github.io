@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Open House Zürich Notebook</title>
+<meta name="description" content="The Ledger route for Open House Zürich, Saturday 26 September 2026 · 취리히 오픈하우스 장부 동선">
+<meta property="og:title" content="Open House Zürich Notebook · 취리히 오픈하우스 수첩">
+<meta property="og:description" content="The Ledger route · timetable · questions · things to sense — Saturday 26 September 2026">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%226%22 fill=%22%2312120f%22/%3E%3Cpath d=%22M9 9h14L9 23h14%22 fill=%22none%22 stroke=%22%23f2f06a%22 stroke-width=%223%22/%3E%3C/svg%3E">
+<script>try{var t=localStorage.getItem("yhl-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-look",t)}catch(e){}</script>
+<style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<style>
+:root{
+  color-scheme:light;
+  --paper:#f6f5f0; --card:#fffefa; --ink:#12120f; --mute:#77766e; --hair:#d6d4cc; --rule:#12120f;
+  --y:#f2f06a; --bl:#c9e6f2; --blh:#c9e6f2; --g:#a8efc6; --gy:#e7e6e0; --must:#a8341c; --chip:#12120f;
+  --r:"YDIYGO320","-윤고딕320","Pretendard","Apple SD Gothic Neo","Noto Sans KR","맑은 고딕",sans-serif;
+  --b:"YDIYGO330","-윤고딕330",var(--r);
+  --h:"YDIYGO350","-윤고딕350",var(--r);
+  --n:"Helvetica Neue",Helvetica,Arial,var(--r);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --paper:#1d1d1b; --card:#262624; --ink:#ecebe6; --mute:#93918a; --hair:#3a3a36; --rule:#ecebe6;
+    --gy:#31312d; --must:#e8846c; --blh:#2d4a56;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#1d1d1b; --card:#262624; --ink:#ecebe6; --mute:#93918a; --hair:#3a3a36; --rule:#ecebe6;
+  --gy:#31312d; --must:#e8846c; --blh:#2d4a56;
+}
+/* 밝기 버튼: 페이지를 감싼 화면이 data-theme을 다시 찍어도 버튼 선택(data-look)이 이긴다 */
+:root[data-look="light"][data-look]{
+  color-scheme:light;
+  --paper:#f6f5f0; --card:#fffefa; --ink:#12120f; --mute:#77766e; --hair:#d6d4cc; --rule:#12120f;
+  --gy:#e7e6e0; --must:#a8341c; --blh:#c9e6f2;
+}
+:root[data-look="dark"][data-look]{
+  color-scheme:dark;
+  --paper:#1d1d1b; --card:#262624; --ink:#ecebe6; --mute:#93918a; --hair:#3a3a36; --rule:#ecebe6;
+  --gy:#31312d; --must:#e8846c; --blh:#2d4a56;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--r);font-size:15px;line-height:23px;-webkit-text-size-adjust:100%}
+b,strong{font-family:var(--b);font-weight:400}
+button{font:inherit;color:inherit}
+a{color:inherit}
+.wrap{max-width:720px;margin:0 auto;padding:0 16px 96px}
+.n{font-family:var(--n);font-variant-numeric:tabular-nums}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--paper);border-bottom:1px solid var(--rule);
+  margin:0 -16px;padding:0 16px;height:48px;display:flex;align-items:center;gap:10px}
+.top .t{font-family:var(--h);font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.top .s{font-family:var(--n);font-size:12px;color:var(--mute);white-space:nowrap}
+.stat{margin-left:auto;font-size:11px;line-height:17px;padding:2px 10px;border-radius:999px;background:var(--gy);color:var(--ink);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:40vw}
+.stat.ok{background:var(--g);color:var(--chip)}
+.stat.err{background:var(--y);color:var(--chip)}
+.lang{flex:0 0 auto;appearance:none;border:1px solid var(--ink);background:transparent;color:var(--ink);border-radius:999px;padding:2px 10px;
+  font-size:12px;line-height:17px;cursor:pointer}
+.lang.ic{padding:2px 7px;display:inline-flex;align-items:center}
+.lang.ic svg{width:15px;height:15px;display:block}
+.tabs{position:sticky;top:calc(env(safe-area-inset-top,0px) + 48px);z-index:29;background:var(--paper);border-bottom:1px solid var(--hair);
+  margin:0 -16px;padding:8px 16px;display:flex;gap:6px;overflow-x:auto}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;appearance:none;border:1px solid var(--hair);background:transparent;color:var(--mute);border-radius:999px;
+  padding:4px 13px;font-size:13px;line-height:19px;cursor:pointer;white-space:nowrap}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.tab .pk{font-family:var(--n);font-size:10px;margin-left:5px;padding:0 5px;border-radius:999px;background:var(--y);color:var(--chip)}
+.tab:focus-visible,.row:focus-visible,li:focus-visible,.pill:focus-visible,.sc:focus-visible,.cx:focus-visible,.lang:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.mast{padding:24px 0 4px}
+.eyb{font-family:var(--n);font-size:12px;line-height:18px;color:var(--mute);letter-spacing:.02em}
+.mast h1{font-family:var(--h);font-size:28px;line-height:35px;letter-spacing:-.01em;text-wrap:balance;margin-top:4px}
+.mast p{color:var(--mute);font-size:14px;line-height:22px;margin-top:8px;max-width:56ch}
+.mast p.hy{color:var(--ink);font-size:15px;line-height:24px}
+.now{font-family:var(--n);font-size:12px;line-height:18px;color:var(--mute);margin-top:12px;display:flex;gap:8px;flex-wrap:wrap;align-items:baseline}
+.now b{font-family:var(--b);color:var(--ink);font-size:13px}
+.k{font-family:var(--h);font-size:12px;line-height:18px;letter-spacing:.06em;color:var(--mute);border-top:1px solid var(--rule);
+  padding-top:6px;margin:28px 0 2px;display:flex;justify-content:space-between;gap:10px}
+.k .c{font-family:var(--n);letter-spacing:0}
+.box{background:var(--card);border:1px solid var(--hair);border-radius:10px;padding:12px 14px;margin-top:12px}
+.box .lb{font-size:11px;line-height:17px;color:var(--mute)}
+.box ul{margin-top:4px}
+.box li{display:block;padding:5px 0;border-bottom:1px solid var(--hair);font-size:14px;line-height:22px}
+.box li:last-child{border-bottom:0}
+.src{font-family:var(--n);font-size:11px;color:var(--mute);margin-left:4px}
+.box.fal{border-color:var(--must)}
+.box.fal .lb{color:var(--must)}
+.stats{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.chip{font-family:var(--n);font-size:11px;line-height:17px;padding:1px 9px;border-radius:999px;background:var(--gy);color:var(--ink);white-space:nowrap}
+.chip.part{background:var(--y);color:var(--chip)}
+.chip.full{background:var(--g);color:var(--chip)}
+.chip.no{background:transparent;border:1px solid var(--must);color:var(--must)}
+.chip.ink{background:var(--ink);color:var(--paper)}
+.row{width:100%;display:grid;grid-template-columns:52px minmax(0,1fr) auto;gap:10px;align-items:baseline;padding:11px 0;border:0;
+  border-bottom:1px solid var(--hair);background:transparent;text-align:left}
+button.row{cursor:pointer}
+button.row:hover .nm{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.row .t{font-family:var(--n);font-size:12px;color:var(--ink);font-variant-numeric:tabular-nums}
+.row .t i{display:block;font-style:normal;color:var(--mute);font-size:11px}
+.row .nm{font-family:var(--b);font-size:15px;line-height:22px}
+.row .nm .cd{font-family:var(--n);font-size:11px;color:var(--mute);margin-right:6px}
+.row .nm i{display:block;font-style:normal;font-family:var(--r);font-size:12px;line-height:18px;color:var(--mute);margin-top:1px}
+.row .fl{display:flex;flex-direction:column;gap:4px;align-items:flex-end}
+.mv{display:grid;grid-template-columns:52px minmax(0,1fr);gap:10px;padding:7px 0;border-bottom:1px solid var(--hair);font-size:12px;line-height:19px;color:var(--mute)}
+.mv .t{font-family:var(--n)}
+.mv.meal{color:var(--ink)}
+.mv .alt{display:block;margin-top:2px}
+.out{font-size:13px;line-height:21px;margin-top:14px;padding-top:8px;border-top:1px solid var(--hair)}
+.out b{font-family:var(--b)}
+.pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.pill{appearance:none;border:1px solid var(--ink);background:transparent;color:var(--ink);border-radius:999px;padding:6px 14px;font-size:13px;
+  line-height:19px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.pill.dark{background:var(--ink);color:var(--paper)}
+.pill.sm{padding:3px 11px;font-size:12px}
+.sc{width:100%;display:grid;grid-template-columns:30px minmax(0,1fr);gap:10px;padding:14px 0;border:0;border-bottom:1px solid var(--hair);
+  background:transparent;text-align:left;cursor:pointer}
+.sc .L{font-family:var(--n);font-size:13px;line-height:24px;width:26px;height:26px;border:1px solid var(--ink);border-radius:999px;
+  display:inline-flex;align-items:center;justify-content:center}
+.sc.on .L{background:var(--ink);color:var(--paper)}
+.sc .h3{display:block;font-family:var(--h);font-size:18px;line-height:25px;text-wrap:balance}
+.sc .p{display:block;font-size:13px;line-height:21px;color:var(--mute);margin-top:3px}
+.sc .stats{display:flex;margin-top:8px}
+.rec{font-size:14px;line-height:23px;margin-top:14px}
+.rec b{font-family:var(--b)}
+.tw{overflow-x:auto;margin-top:10px;border-top:1px solid var(--rule)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:12.5px;line-height:19px}
+th,td{text-align:left;vertical-align:top;padding:8px 8px 8px 0;border-bottom:1px solid var(--hair)}
+thead th{font-family:var(--h);font-size:13px;line-height:19px;padding-top:10px}
+thead th.on{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
+tbody th{font-family:var(--b);color:var(--mute);font-size:12px;width:92px;white-space:nowrap}
+td.dot{text-align:center;font-family:var(--n)}
+.mx td,.mx th{padding:6px 8px 6px 0}
+.mx td.dot{width:44px}
+.cx{appearance:none;border:0;background:transparent;text-align:left;cursor:pointer;padding:0;font:inherit;color:inherit;text-decoration:underline;
+  text-decoration-color:var(--hair);text-underline-offset:3px}
+.sheetbox{position:fixed;inset:0;z-index:60;background:var(--paper);display:flex;flex-direction:column}
+.sheetbox .hd{display:flex;align-items:center;gap:10px;padding:calc(env(safe-area-inset-top,0px) + 10px) 16px 10px;border-bottom:1px solid var(--rule)}
+.sheetbox .hd b{font-family:var(--h);font-size:16px;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sheetbox .bd{flex:1;overflow:auto;padding:0 16px calc(env(safe-area-inset-bottom,0px) + 40px)}
+.sheetbox .in{max-width:680px;margin:0 auto}
+.code{display:inline-block;font-family:var(--n);font-size:11px;line-height:16px;border:1px solid var(--ink);border-radius:999px;padding:1px 8px}
+.pg h2{font-family:var(--h);font-size:24px;line-height:31px;letter-spacing:-.01em;margin-top:14px;text-wrap:balance}
+.pg .de{font-family:var(--n);font-size:12px;line-height:19px;color:var(--mute);margin-top:2px}
+.dl{margin-top:14px;border-top:1px solid var(--hair)}
+.dl div{display:grid;grid-template-columns:84px minmax(0,1fr);gap:10px;padding:7px 0;border-bottom:1px solid var(--hair);font-size:13px;line-height:20px}
+.dl dt{color:var(--mute);font-size:12px}
+.dl dd{overflow-wrap:anywhere}
+.dl dd .no{color:var(--must)}
+.links{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+.facts{margin-top:18px}
+.facts h4,.qs h4,.ctx h4{font-family:var(--h);font-size:12px;line-height:18px;letter-spacing:.06em;color:var(--mute);border-top:1px solid var(--rule);padding-top:6px}
+.facts li{display:block;padding:6px 0;border-bottom:1px solid var(--hair);font-size:14px;line-height:22px}
+.facts li:last-child{border-bottom:0}
+.ctx{margin-top:22px}
+.scsel{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.role{font-size:15px;line-height:24px;margin-top:10px}
+.role b{font-family:var(--b)}
+.qs{margin-top:16px}
+ul{list-style:none}
+.qs li{display:grid;grid-template-columns:18px minmax(0,1fr);gap:9px;padding:8px 0;border-bottom:1px solid var(--hair);cursor:pointer}
+.qs li:last-child{border-bottom:0}
+.qs li .mk{font-family:var(--n);font-size:11px;line-height:22px;color:var(--mute)}
+.qs li .tx{font-size:14px;line-height:22px}
+.qs li .ty{font-family:var(--n);font-size:10px;line-height:16px;padding:0 6px;border-radius:999px;border:1px solid var(--hair);color:var(--mute);margin-right:6px;vertical-align:1px}
+.qs li.must .mk{color:var(--must)}
+.qs.sense li .mk{color:var(--ink)}
+.qs.sense li .tx{background:linear-gradient(transparent 58%,var(--blh) 58%);background-repeat:no-repeat}
+.qs li.hit .tx{color:var(--mute);text-decoration:line-through;text-decoration-thickness:1px;background:none}
+.qs li.hit .mk{color:var(--hair)}
+.say{background:var(--card);border:1px solid var(--hair);border-radius:10px;padding:10px 12px;margin-top:12px}
+.say .l{font-family:var(--n);font-size:14px;line-height:21px}
+.say .kk{font-size:13px;line-height:20px;margin-top:4px}
+.say .u{font-size:12px;line-height:18px;color:var(--mute);margin-top:3px}
+.fl2{margin-top:16px}
+.fl2 label{display:flex;gap:8px;align-items:baseline;font-family:var(--b);font-size:14px;line-height:21px}
+.fl2 .ask{display:block;font-size:12px;line-height:18px;color:var(--mute);margin:1px 0 6px}
+textarea{width:100%;display:block;background:var(--card);color:var(--ink);border:1px solid var(--hair);border-radius:10px;font-family:var(--r);
+  font-size:15px;line-height:23px;padding:9px 11px;min-height:64px;resize:vertical;overflow:hidden}
+textarea:focus{outline:0;border-color:var(--ink)}
+.fl2.hand textarea{background:var(--y);color:var(--chip);border-color:var(--chip)}
+.fl2.body textarea{background:var(--bl);color:var(--chip);border-color:var(--chip)}
+.cnt{font-family:var(--n);font-size:11px;line-height:17px;color:var(--mute);margin-top:10px}
+.else{margin-top:22px}
+.else li{display:block;padding:8px 0;border-bottom:1px solid var(--hair);font-size:13px;line-height:21px}
+.note{font-size:14px;line-height:23px;margin-top:10px}
+.note b{font-family:var(--b)}
+.gl{margin-top:10px;border-top:1px solid var(--hair)}
+.gl div{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:10px;padding:6px 0;border-bottom:1px solid var(--hair);font-size:13px;line-height:20px}
+.gl .dw{font-family:var(--n)}
+.ck li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:8px;padding:9px 0;border-bottom:1px solid var(--hair);align-items:start}
+.ck input{width:17px;height:17px;margin-top:3px;accent-color:var(--ink)}
+.ck label{font-size:14px;line-height:22px;cursor:pointer}
+.ck label span{display:block;font-size:12px;line-height:18px;color:var(--mute)}
+.ck li.on label{color:var(--mute);text-decoration:line-through;text-decoration-thickness:1px}
+.ck li.on label span{text-decoration:none}
+.rq{padding:16px 0 4px;border-top:1px solid var(--hair)}
+.rq h3{font-family:var(--h);font-size:17px;line-height:25px;text-wrap:balance}
+.rq p{font-size:13px;line-height:21px;color:var(--mute);margin:4px 0 8px}
+.rq.hand textarea{background:var(--y);color:var(--chip);border-color:var(--chip);min-height:48px}
+.big textarea{min-height:60vh;font-family:var(--n);font-size:12px;line-height:19px;overflow:auto}
+.errbar{position:fixed;left:12px;right:12px;bottom:calc(env(safe-area-inset-bottom,0px) + 12px);z-index:70;background:var(--must);color:#fff;border-radius:10px;
+  padding:10px 14px;font-size:13px;line-height:20px}
+footer{border-top:1px solid var(--rule);margin-top:34px;padding-top:10px;font-size:11px;line-height:18px;color:var(--mute)}
+@media (max-width:400px){
+  .wrap{padding:0 14px 96px}.top,.tabs{margin:0 -14px;padding-left:14px;padding-right:14px}
+  .mast h1{font-size:24px;line-height:31px}.top .s{display:none}
+  .row{grid-template-columns:46px minmax(0,1fr) auto;gap:8px}.mv{grid-template-columns:46px minmax(0,1fr);gap:8px}
+}
+@media (prefers-reduced-motion:no-preference){.sheetbox{animation:fi .14s ease-out}@keyframes fi{from{opacity:.5}to{opacity:1}}}
+</style>
+
+<div class="wrap">
+  <div class="top">
+    <span class="t" id="topT">취리히 오픈하우스 수첩</span><span class="s" id="topS">9.26</span>
+    <span class="stat" id="stat" role="status">…</span>
+    <button class="lang ic" type="button" id="themeBtn" aria-label="theme"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.75a6.25 6.25 0 0 1 0 12.5z" fill="currentColor"/></svg></button>
+    <button class="lang" type="button" id="langBtn">EN</button>
+  </div>
+  <nav class="tabs" id="tabs" role="tablist" aria-label="tabs"></nav>
+  <main id="main"><noscript><p class="note">이 수첩은 스크립트가 켜져 있어야 보인다 · This notebook needs JavaScript.</p></noscript></main>
+  <footer id="foot"></footer>
+</div>
+
+<div class="sheetbox" id="placeBox" hidden>
+  <div class="hd"><span class="code" id="pbCode">Z</span><b id="pbTitle"></b><button class="pill dark sm" type="button" id="pbClose">×</button></div>
+  <div class="bd"><div class="in" id="pbBody"></div></div>
+</div>
+<div class="sheetbox" id="exportBox" hidden>
+  <div class="hd"><b id="exTitle"></b><button class="pill sm" type="button" id="copyBtn"></button><button class="pill dark sm" type="button" id="closeBtn">×</button></div>
+  <div class="bd"><div class="in big fl2"><textarea id="exportText" readonly aria-label="text"></textarea></div></div>
+</div>
+<div class="errbar" id="errbar" hidden></div>
+
+<script>
+(function(){
+"use strict";
+var ED="public";
+var DATA={"P": {"Z01": {"nm": {"k": "칼 데어 그로세", "e": "Karl der Grosse"}, "de": "Debattierhaus Karl der Grosse", "addr": "Kirchgasse 14, 8001", "ll": "47.3697889,8.5445878", "url": "https://openhouse-zuerich.org/orte/debattierhaus_karl_der_grosse-2026/", "built": {"k": "8세기 「Karli」로 첫 기록 · 13세기 쌍둥이 아치창 · 1919 · 1933 개조", "e": "First recorded as ‘Karli’ in the 8th century · 13th-century paired arched windows · altered 1919 and 1933"}, "own": {"k": "취리히 시 — 식당 · 코워킹 · 전시 (토론의 집)", "e": "City of Zürich — café, coworking, exhibitions (the ‘debating house’)"}, "hrs": {"k": "토 투어로만 10:00 · 12:00 · 선착순 인원 제한 · 입구 Kirchgasse 14, 집합 안쪽 로비", "e": "Sat by tour only, 10:00 and 12:00 · first come, limited group · enter at Kirchgasse 14, meet in the foyer"}, "tour": {"k": "기술·운영 책임자 크리스티안 플루키노 — 17~18세기 가구가 남은 회의실 · 안뜰 · 지붕 테라스 · 집의 역사와 개조와 지금의 쓰임", "e": "Christian Pluchino, head of technical services — 17th–18th-century meeting rooms with original furnishings, courtyard, roof terrace; the building’s history, alterations and use today"}, "photo": {"k": "허용 · 계단 많음", "e": "Allowed · many stairs"}, "noPhoto": false, "stop": {"k": "트램 4 · 15 헬름하우스", "e": "Tram 4 · 15 to Helmhaus"}, "facts": [{"k": "1200년부터 종교개혁 사이에 주인이 아홉 번 바뀌었다", "e": "Between 1200 and the Reformation the house changed owners nine times"}, {"k": "그 뒤 구빈청(Almosenamt) 등이 가졌고, 이어 취리히 여성협회가 가졌다", "e": "Afterwards it belonged, among others, to the Almosenamt (the city’s poor-relief office), then to the Zürich Women’s Association"}, {"k": "1974년 시가 사서 동네 노인센터를 열었고, 뒤에 「모두의 센터」로 바꿨다", "e": "In 1974 the city bought it and opened a neighbourhood senior centre, later restructured as a ‘centre for all’"}, {"k": "지금은 세 채에 걸친 「토론의 집」 — 의견을 나누는 자리이자 동네 모임터", "e": "Today a ‘debating house’ across three buildings — a place to exchange views and a neighbourhood meeting point"}, {"k": "벽지 그림과 문화재 프레스코가 남아 있다", "e": "Painted wallpapers and listed frescoes survive"}]}, "Z02": {"nm": {"k": "헬페라이 · 그로스뮌스터 회랑", "e": "Helferei · Grossmünster cloister"}, "de": "Kulturhaus Helferei · Grossmünster Kreuzgang", "addr": "Kirchgasse 13, 8001", "ll": "47.370348,8.5450087", "url": "https://openhouse-zuerich.org/orte/kulturhaus-helferei-2026/", "built": {"k": "1270 사제의 집으로 첫 기록 · 1861 신고딕 예배당 · 1974 개조 · 2012~14 수리(요스 & 마티스)", "e": "First recorded 1270 as a priest’s house · 1861 neo-Gothic chapel · altered 1974 · renovated 2012–14 (Joos & Mathis)"}, "own": {"k": "문화의 집 — 2014년 재개관", "e": "Culture house — reopened 2014"}, "hrs": {"k": "헬페라이 토 10~18 자유 관람 · 투어 13:30 · 옆 그로스뮌스터 회랑 10~17:30 무료 · 교회 10~17 무료", "e": "Helferei Sat 10–18, visit freely · tour 13:30 · Grossmünster cloister next door 10–17:30, free · church 10–17, free"}, "tour": {"k": "관장 마르틴 비거 — 이 오래된 집의 문화적·사회적 쓰임 · 투어 뒤 커피", "e": "Martin Wigger, director — the cultural and social use of this old house · coffee afterwards"}, "photo": {"k": "허용 · 츠빙글리 방만 계단", "e": "Allowed · stairs only to the Zwingli room"}, "noPhoto": false, "stop": {"k": "트램 4 · 15 헬름하우스", "e": "Tram 4 · 15 to Helmhaus"}, "facts": [{"k": "문화의 집이면서, 역사 때문에 스스로 「돕는 곳」이라고 말한다 — 예술과 「돕는 일」을 함께 붙든다", "e": "A culture house that, because of its history, calls itself a place of ‘helping’ — art and helping held together"}, {"k": "츠빙글리가 살던 집 — 「츠빙글리 방」은 그의 거처였음이 입증된 방이다", "e": "Zwingli’s former home — the ‘Zwinglistube’ is documented as part of his apartment", "src": {"k": "reformiert-info.de", "e": "reformiert-info.de"}}, {"k": "「헬페라이」라는 이름은 1855년부터 부목사(헬퍼)의 거처로 쓰인 데서 왔다", "e": "The name ‘Helferei’ comes from its use from 1855 as the home of the assistant pastor, the ‘Helfer’", "src": {"k": "reformiert-info.de", "e": "reformiert-info.de"}}, {"k": "옆 회랑 건물은 옛 그로스뮌스터 참사회 수도원 — 츠빙글리가 연 신학교(카롤리눔)가 있던 자리. 교수 봉급은 폐지된 참사회원들의 녹봉에서 나왔고, 참사회는 1832년에 없어졌다", "e": "The cloister building next door belonged to the Grossmünster chapter — home of the theological school Zwingli founded, the Carolinum. Professors were paid from the benefices of the secularised canons; the chapter was abolished only in 1832", "src": {"k": "영문 위키", "e": "Wikipedia (en)"}}, {"k": "그로스뮌스터 교회 토 10~17 무료 · 카를탑 10~17 성인 5프랑", "e": "Grossmünster church Sat 10–17, free · Karlsturm tower 10–17, CHF 5 for adults", "src": {"k": "reformiert-zuerich.ch", "e": "reformiert-zuerich.ch"}}]}, "Z03": {"nm": {"k": "카펠 수도원", "e": "Kappel Abbey"}, "de": "Kappel am Albis · Klosterdomäne", "addr": "Kappelerhof 5, 8926 Kappel am Albis", "ll": "47.2270396,8.5251766", "url": "https://openhouse-zuerich.org/orte/kappel-am-albis-klosterdomaene-mit-studios-im-amtshaus/", "built": {"k": "1185년께 시토회 창건 · 2026 수리(아틀리에 켐페 틸 · bbz 조경) · 암츠하우스 새 스튜디오(팔렌더야크) · 스피허 주택 2025(켐페 틸)", "e": "Founded c. 1185 by the Cistercians · 2026 renovation (Atelier Kempe Thill · bbz landscape) · new studios in the Amtshaus (FahrländerJack) · Spicher flats 2025 (Kempe Thill)"}, "own": {"k": "카펠 수도원 협회 — 세미나 · 교육관", "e": "Verein Kloster Kappel — seminar and education centre"}, "hrs": {"k": "토 7:30~21 영지 자유 · 수도원 투어 11:00 · 13:00 · 16:30 (암츠하우스 새 스튜디오 포함, 1시간 조금 넘게) · 정원 투어 10:00 · 12:00 · 14:30 · 집합 암츠하우스 광장", "e": "Sat 7:30–21 grounds open · abbey tours 11:00 · 13:00 · 16:30 (incl. the new Amtshaus studios, a little over an hour) · garden tours 10:00 · 12:00 · 14:30 · meet at Amtshausplatz"}, "tour": {"k": "신학 책임자 안드레아스 누퍼 · 건축가 미리암 야크(팔렌더야크)와 팀 — 수도원 건물과 정원의 되살림", "e": "Andreas Nufer, theological director · architect Miriam Jack (FahrländerJack) and team — reviving the abbey buildings and gardens"}, "photo": {"k": "허용 · 수도원 카페와 지하 식당", "e": "Allowed · abbey café and cellar restaurant"}, "noPhoto": false, "stop": {"k": "버스 280 「Kappel a.A., Kloster」 — 바르역 또는 탈빌역에서", "e": "Bus 280 ‘Kappel a.A., Kloster’ — from Baar or Thalwil station"}, "facts": [{"k": "종교개혁 때 해산 → 빈민 수용소 → 지금 세미나 호텔·교육관. 쓰임의 주인: 시토회 → 취리히 시 → 크노나우 지방 → 주 개혁교회", "e": "Dissolved in the Reformation → poorhouse → today a seminar hotel and education centre. Users over time: Cistercians → City of Zürich → Knonau district → the canton’s Reformed Church"}, {"k": "1527년 수도회가 스스로 수도원을 취리히 시에 넘겼다. 요너·불링거 등 여섯이 남아 소년 기숙학교로 이어 갔다", "e": "In 1527 the convent handed the abbey to the City of Zürich itself; Joner, Bullinger and four others stayed and ran the school on as a boys’ boarding school", "src": {"k": "독일어 위키", "e": "Wikipedia (de)"}}, {"k": "종교개혁 뒤 취리히 국유지로 남았고, 1834년부터 사회 목적, 1983년부터 주 개혁교회의 세미나·교육관", "e": "After the Reformation it remained a Zürich state domain; used for social purposes from 1834; since 1983 the cantonal Reformed Church’s seminar and education centre", "src": {"k": "독일어 위키", "e": "Wikipedia (de)"}}, {"k": "1531년 10월 11일 2차 카펠 전투에서 츠빙글리가 전사했다", "e": "Zwingli fell at the Second Battle of Kappel on 11 October 1531", "src": {"k": "독일어 위키", "e": "Wikipedia (de)"}}, {"k": "지금 공사는 영지를 다시 짜고 시선 축을 정리하며, 바로크 수도원 담을 요소로 새로 보완한다", "e": "The current works reorganise the domain, clear the sight lines and complete the Baroque abbey wall as a new element"}, {"k": "스피허 주택: 개조에 맞지 않는 옛 창고를 헐고, 호텔이 기간제로 빌려줄 작은 집 여덟 채를 지었다 — 마을 규정상 뾰족 지붕", "e": "Spicher flats: an old storehouse unsuited to conversion was pulled down for eight small flats the hotel lets for fixed periods — pitched roofs by village rule"}]}, "Z04": {"nm": {"k": "비프킹엔 교회", "e": "Wipkingen Church"}, "de": "Kirche Wipkingen", "addr": "Wibichstrasse 43, 8037", "ll": "47.3969032,8.5276977", "url": "https://openhouse-zuerich.org/orte/kirche-wipkingen/", "built": {"k": "1909 (자크 케러 · 샤를 콘라트) · 2026 전용 (베치 슈미트)", "e": "1909 (Jacques Kehrer · Charles Conrad) · 2026 conversion (Vécsey*Schmidt)"}, "own": {"k": "소유 개혁교회 교구 · 발주 취리히 시 — 학교 · 돌봄", "e": "Owned by the Reformed parish · commissioned by the City of Zürich — school and day care"}, "hrs": {"k": "토 13~17 · 상시 해설 30분 · 집합 정문 앞", "e": "Sat 13–17 · continuous 30-min explanations · meet at the main portal"}, "tour": {"k": "시 건축청 사업 책임 헬가 쇼츠아이헬", "e": "Helga Schützeichel, project lead, City of Zürich building office"}, "photo": {"k": "허용 · 무장애", "e": "Allowed · step-free"}, "noPhoto": false, "stop": {"k": "버스 46 로젠가르텐슈트라세 · 트램 17 부흐엑플라츠", "e": "Bus 46 to Rosengartenstrasse · tram 17 to Bucheggplatz"}, "facts": [{"k": "「포기마다 얻음이 있다」는 생각으로 공사를 1층에 한정했다 — 난방하는 부피를 최소로", "e": "Built on the belief that every renunciation holds a gain, the conversion stays on the ground floor — the heated volume kept minimal"}, {"k": "학교 도서관과 열람실, 점심 급식실, 모둠방이 겹쳐 쓰인다", "e": "School library and reading room, lunch room and group rooms overlap where sharing makes sense"}, {"k": "한가운데 넣은 나무 다목적실의 천장을 걸어 다니는 바닥으로 만들어, 궁륭 아래 큰 방이 하나 더 생겼다 — 과업에 없던 쓰임이 열린다", "e": "The ceiling of the timber hall set in the middle is a walkable floor — one more large room under the vaults, for uses the brief never asked for"}]}, "Z05": {"nm": {"k": "ZAZ 벨르리브 — 「OUT OF SERVICE?」", "e": "ZAZ Bellerive — ‘Out of Service?’"}, "de": "ZAZ Bellerive · Ausstellung Out of Service?", "addr": "Höschgasse 3, 8008", "ll": "47.3564766,8.5499706", "url": "https://openhouse-zuerich.org/orte/zaz-bellerive-zentrum-architektur-zuerich-2026/", "built": {"k": "1931 (알프레트 브레슬라우어, 베를린) · 2017 수리 · 전용", "e": "1931 (Alfred Breslauer, Berlin) · 2017 restoration and conversion"}, "own": {"k": "취리히 시 — 건축 센터", "e": "City of Zürich — architecture centre"}, "hrs": {"k": "토 14~18 자유 관람 — 집과 전시", "e": "Sat 14–18, visit house and exhibition freely"}, "tour": {"k": "해설 없음", "e": "No guide"}, "photo": {"k": "허용", "e": "Allowed"}, "noPhoto": false, "stop": {"k": "트램 11 · 15 회슈가세", "e": "Tram 11 · 15 to Höschgasse"}, "facts": [{"k": "전시 「OUT OF SERVICE? — 스위스 교회 건축의 변화」", "e": "Exhibition ‘Out of Service? — Swiss sacred architecture in transition’"}, {"k": "신앙과 교회가 의미를 잃고 비어 가는 교회가 늘며, 교회세가 줄어 유지가 어렵다 — 교구들이 새 전략을 찾는다", "e": "Faith and church lose weight, churches stand empty and falling church tax makes upkeep hard — parishes look for new strategies"}, {"k": "스위스의 옛 사례와 오늘 사례로 전용에서 철거까지 여러 길을 보여 준다", "e": "Historic and current Swiss cases show the range from conversion to demolition"}]}}, "SC": {"A": {"tab": {"k": "장부", "e": "Ledger"}, "title": {"k": "장부 — 신앙은 해산했고, 장부는 살아남았나", "e": "The Ledger — faith was dissolved; did the ledger survive?"}, "eyb": {"k": "바젤과 종교 · 취리히 대조", "e": "Basel and religion · a Zürich comparison"}, "hy": {"k": "바젤은 종교개혁 때 수도원을 없애면서도 그 수입을 교회·학교 기금으로 남겼다. 바젤이 물려받은 것은 건물이 아니라 장부였다는 가설이다. 취리히에서 묻는다 — 수입에 붙은 꼬리표(학교 · 빈민 구제)가 건물의 다음 쓰임을 정했나.", "e": "When Basel dissolved its monasteries in the Reformation, it kept their income in a church-and-school fund. The hypothesis: what Basel inherited was not the buildings but the ledger. In Zürich the question is — did the label on the income (school, poor relief) decide what the buildings became next?"}, "known": [{"k": "그로스뮌스터 참사회원 녹봉이 신학교(카롤리눔, 1525 수업 시작) 교수 봉급이 됐고, 참사회는 1832년에야 폐지", "e": "The Grossmünster canons’ benefices paid the professors of the theological school (the Carolinum, teaching from 1525); the chapter was abolished only in 1832", "src": {"k": "영문 위키", "e": "Wikipedia (en)"}}, {"k": "카펠: 1527 수도회가 스스로 시에 넘김 → 소년 기숙학교 → 국유지 → 1834 사회 목적 → 1983 교회 교육관", "e": "Kappel: in 1527 the convent handed itself to the city → boys’ boarding school → state domain → social use from 1834 → church education centre from 1983", "src": {"k": "독일어 위키", "e": "Wikipedia (de)"}}, {"k": "칼 데어 그로세: 종교개혁 뒤 구빈청 등 → 여성협회 → 1974 노인센터 → 모두의 센터 → 토론의 집", "e": "Karl der Grosse: after the Reformation the poor-relief office among others → Women’s Association → 1974 senior centre → centre for all → debating house", "src": {"k": "공식 소개", "e": "official"}}, {"k": "헬페라이: 츠빙글리의 집 → 1855 부목사 거처 → 2014 문화의 집", "e": "Helferei: Zwingli’s home → assistant pastor’s house from 1855 → culture house 2014", "src": {"k": "reformiert-info.de", "e": "reformiert-info.de"}}, {"k": "2026 비프킹엔: 소유는 교구, 발주는 시, 쓰임은 학교·돌봄", "e": "Wipkingen 2026: owned by the parish, commissioned by the city, used as school and day care", "src": {"k": "공식 소개", "e": "official"}}, {"k": "ZAZ 전시: 교회세가 줄어 교구가 전용에서 철거까지 전략을 찾는다", "e": "ZAZ exhibition: with church tax falling, parishes look for strategies from conversion to demolition", "src": {"k": "공식 소개", "e": "official"}}], "fal": [{"k": "구빈 기금 · 학교 기금이 가진 건물이 꼬리표와 상관없는 쓰임(병영 · 창고 · 민간 매각)으로 흩어졌다 → 「꼬리표」 가설 기각", "e": "Buildings held by poor-relief or school funds scattered into uses unrelated to the label (barracks, stores, private sale) → the ‘label’ hypothesis fails"}, {"k": "전시의 오늘 사례에서 교구가 소유를 지킨 교회와 판 교회의 운명(전용 · 철거)에 차이가 없다 → 장부 가설 자체가 약해진다", "e": "In today’s cases in the exhibition, churches the parish kept and churches it sold fared no differently (conversion or demolition) → the ledger hypothesis itself weakens"}, {"k": "취리히도 바젤과 같은 구조다 → 「바젤만의 이야기」는 버리고 가설을 개혁 도시 일반으로 넓힌다 — 이것도 전진", "e": "Zürich shows the same structure as Basel → drop ‘a story only Basel tells’ and widen the hypothesis to Reformed cities in general — also progress"}], "read": {"k": "읽는 순서: 1525 그로스뮌스터·헬페라이(학교를 먹인 녹봉) → 1527 카펠(국유지·학교) → 종교개혁 뒤 칼 데어 그로세(구빈청) → 1834 카펠(사회 목적) → 2014 헬페라이(문화의 집) → 2026 비프킹엔(교회 속 학교) → 전시(지금 진행 중인 해산). 걷는 순서는 아래 시각표를 따른다.", "e": "Reading order: 1525 Grossmünster and Helferei (benefices feeding a school) → 1527 Kappel (state domain, school) → post-Reformation Karl der Grosse (poor-relief office) → 1834 Kappel (social use) → 2014 Helferei (culture house) → 2026 Wipkingen (a school inside a church) → the exhibition (a dissolution still under way). The walking order follows the timetable below."}, "dep": "08:06", "arr": "19:52", "arr2": {"k": "19:58 (18:59 IC)", "e": "19:58 (18:59 IC)"}, "tours": "10:00 · 13:00", "bk": false, "res": {"k": "없음", "e": "none"}, "ban": null, "load": {"k": "중상 — 카펠 왕복 기차+버스 두 번 · 투어 둘", "e": "Fairly high — train and bus to Kappel and back · two tours"}, "risk": {"k": "칼 데어 그로세 투어 길이 미공개 — 11:35 카펠행을 놓치면 11:47 S2 대체(13시 투어는 됨) · 벨르리브는 18시 마감 6분 전까지", "e": "Karl der Grosse tour length unpublished — miss the 11:35 to Kappel and the 11:47 S2 still makes the 13:00 tour · Bellerive closes at 18:00, six minutes after the plan ends"}, "rows": [{"x": "08:06", "tx": {"k": "바젤 SBB — IC3 → 09:02 취리히 중앙역 · 09:12 트램 15 → 09:17 헬름하우스", "e": "Basel SBB — IC3 → 09:02 Zürich HB · 09:12 tram 15 → 09:17 Helmhaus"}}, {"p": "Z01", "t": "10:00", "e": "10:50", "k": {"k": "투어 10:00", "e": "Tour 10:00"}, "tour": true, "arr": {"k": "09:20 도착 · 선착순이라 09:45 전에 입구로", "e": "Arrive 09:20 · first come, so be at the door before 09:45"}, "role": {"k": "종교개혁 뒤 <b>구빈청이 가졌던 집</b> — 장부의 둘째 꼬리표(구빈)가 실제 건물에 붙은 자리.", "e": "After the Reformation <b>the poor-relief office owned this house</b> — where the ledger’s second label, poor relief, attached to a real building."}, "qs": [{"k": "!?구빈청(Almosenamt)은 언제부터 언제까지 이 집을 가졌나 — 그 돈은 해산한 수도원 재산에서 왔나.", "e": "!?From when to when did the poor-relief office (Almosenamt) own the house — did that money come from dissolved monastic property?"}, {"k": "?1200년부터 종교개혁 사이 아홉 주인 가운데 교회나 수도원이 있었나.", "e": "?Among the nine owners between 1200 and the Reformation, was there a church or monastery?"}, {"k": "17~18세기 회의실은 누구의 방이었나 — 구빈청의 방인가, 그 뒤 주인의 방인가 (안내판·문양).", "e": "Whose rooms were the 17th–18th-century meeting rooms — the poor-relief office’s, or a later owner’s? (signs, emblems)"}, {"k": "?1974년 시가 산 이유 — 노인센터가 먼저였나, 건물이 먼저였나.", "e": "?Why did the city buy it in 1974 — the senior centre first, or the building first?"}, {"k": "지붕 테라스에서 그로스뮌스터까지 — 이 집이 옛 참사회 구역 안이었는지 눈으로 가늠.", "e": "From the roof terrace towards the Grossmünster — judge by eye whether the house stood inside the old chapter precinct."}], "ss": [{"k": "1층에서 지붕 테라스까지 계단 수", "e": "Stair count from ground floor to roof terrace"}, {"k": "회의실 벽지 그림 — 빛이 어느 창에서 오나, 그림이 빛에 바랬나", "e": "Painted wallpaper — which window does the light come from; has it faded?"}, {"k": "13세기 쌍둥이 아치창 — 손바닥으로 창틀 돌의 두께", "e": "The 13th-century paired arched window — the stone frame’s thickness, by palm"}, {"k": "안뜰 — 거리 소리가 몇 걸음 안에서 사라지나", "e": "Courtyard — within how many steps does the street noise disappear?"}], "de": {"q": "Seit wann und bis wann gehörte das Haus dem Almosenamt?", "k": "이 집은 언제부터 언제까지 구빈청 소유였나요?", "e": "From when until when did the house belong to the poor-relief office?", "r": "자이트 반 운트 비스 반 게회르테 다스 하우스 뎀 알모젠암트?"}}, {"p": "Z02", "t": "10:52", "e": "11:17", "k": {"k": "자유 관람", "e": "Free visit"}, "tour": false, "arr": {"k": "길 건너 13번지 · 회랑은 교회 북쪽", "e": "Across the street at No. 13 · the cloister is north of the church"}, "role": {"k": "츠빙글리가 살던 집과, 녹봉이 학교를 먹인 옛 참사회 회랑 — <b>1525년 장부의 출발점</b>.", "e": "Zwingli’s home and the old chapter cloister whose benefices fed a school — <b>where the 1525 ledger starts</b>."}, "qs": [{"k": "!?츠빙글리 방은 자유 관람으로 들어갈 수 있나 — 안 되면 문 앞까지 (투어는 13:30이라 이 안에선 못 간다).", "e": "!?Can you enter the Zwingli room on a free visit? If not, get as far as the door (the tour is at 13:30 — not possible on this route)."}, {"k": "?부목사(헬퍼)의 봉급은 어느 기금에서 나왔나 — 참사회 녹봉인가.", "e": "?Which fund paid the assistant pastor (the Helfer) — the chapter’s benefices?"}, {"k": "회랑 안내판 — 참사회가 1832년에 없어진 뒤 이 건물을 칸톤이 샀다는 기록이 보이나.", "e": "Cloister signs — any record that the canton bought the building after the chapter was abolished in 1832?"}, {"k": "문화의 집이 「돕는 곳」을 잇는다고 말한다 — 무엇으로 잇는지 프로그램 게시판에서 한 줄.", "e": "The culture house says it continues a ‘place of helping’ — copy one line from the programme board showing how."}], "ss": [{"k": "츠빙글리 방 — 들어갈 수 있으면 방 폭을 걸음으로", "e": "The Zwingli room — if you can enter, its width in steps"}, {"k": "회랑 기둥 사이 한 칸 — 걸음 수", "e": "One bay of the cloister — steps between columns"}, {"k": "헬페라이 복도 — 오래된 바닥과 2012~14 공사 바닥이 발로 구분되나", "e": "Helferei corridor — can your feet tell the old floor from the 2012–14 work?"}], "de": {"q": "Darf ich die Zwinglistube kurz sehen?", "k": "츠빙글리 방을 잠깐 볼 수 있을까요?", "e": "May I have a quick look at the Zwingli room?", "r": "다르프 이히 디 츠빙리슈투베 쿠르츠 제엔?"}}, {"x": "11:21", "tx": {"k": "트램 15 → 11:27 중앙역 · 11:35 IR75 → 11:58 바르 · 12:05 버스 280 → 12:14 카펠 수도원", "e": "Tram 15 → 11:27 Zürich HB · 11:35 IR75 → 11:58 Baar · 12:05 bus 280 → 12:14 Kappel Abbey"}, "alt": {"k": "놓치면 11:47 S2 → 탈빌 → 버스 240 → 12:43 — 13시 투어는 여전히 된다", "e": "If missed: 11:47 S2 → Thalwil → bus 240 → 12:43 — still in time for the 13:00 tour"}}, {"m": "12:15", "tx": {"k": "수도원 카페 점심 · 영지 걸어 보기 — 교회는 7:30~21 열려 있다", "e": "Lunch at the abbey café · walk the grounds — the church is open 7:30–21"}}, {"p": "Z03", "t": "13:00", "e": "14:20", "k": {"k": "투어 13:00", "e": "Tour 13:00"}, "tour": true, "arr": {"k": "집합 암츠하우스 광장 · 1시간 조금 넘게", "e": "Meet at Amtshausplatz · a little over an hour"}, "role": {"k": "1527년 수도회가 스스로 시에 넘긴 수도원 — 학교 → 국유지 → 1834 사회 목적 → 1983 교회 교육관. <b>장부의 이동이 한 장소에 층으로 남은 곳</b>.", "e": "The abbey the convent handed to the city in 1527 — school → state domain → social use 1834 → church education centre 1983. <b>The ledger’s movements left as layers on one site</b>."}, "qs": [{"k": "!?1527년 뒤 수입은 누가 관리했나 — 시가 보낸 관리인이 암츠하우스에서 장부를 봤나. 지금 스튜디오로 바뀌는 그 암츠하우스가 그 사무소였나.", "e": "!?Who managed the income after 1527 — did a steward sent by the city keep the accounts in the Amtshaus? Was the Amtshaus now being turned into studios that very office?"}, {"k": "?1834년 「사회 목적」의 기관 이름과 수용 인원 — 빈민 수용소인가, 요양소인가.", "e": "?The institution behind ‘social purposes’ in 1834, and how many it housed — a poorhouse or a care home?"}, {"k": "?수도원 교회는 해산 뒤에도 예배당이었나 — 누구의 예배당이었나.", "e": "?Did the abbey church stay a place of worship after the dissolution — whose?"}, {"k": "바로크 담을 「요소로 새로 보완」 — 옛 담과 새 담이 어디서 갈리나.", "e": "The Baroque wall ‘completed as a new element’ — where do old wall and new wall meet?"}, {"k": "?스피허 주택 자리의 옛 창고를 헌 이유 — 「개조에 맞지 않음」이 구조 때문인가 비용 때문인가.", "e": "?Why was the old storehouse on the Spicher site pulled down — was ‘unsuited to conversion’ about structure or cost?"}, {"k": "?영지 전체를 협회가 언제, 누구에게서 넘겨받았나.", "e": "?When, and from whom, did the Verein take over the whole domain?"}], "ss": [{"k": "교회 신랑 길이 — 걸음 수", "e": "Length of the church nave in steps"}, {"k": "스테인드글라스 빛이 바닥에 떨어지는 자리 — 오후 1시의 해", "e": "Where the stained-glass light falls on the floor — the 1 pm sun"}, {"k": "암츠하우스 문턱 돌 — 손으로 닳음", "e": "The Amtshaus threshold stone — its wear under your hand"}, {"k": "수도원 담 — 손을 뻗으면 위에 닿나", "e": "The abbey wall — can you reach the top?"}, {"k": "정원 그늘과 볕의 온도 차 — 오후 25도 예보", "e": "Shade versus sun in the garden — 25 °C forecast"}], "de": {"q": "Wer hat nach der Reformation die Einnahmen des Klosters verwaltet – im Amtshaus?", "k": "종교개혁 뒤 수도원 수입은 누가 관리했나요 — 암츠하우스에서요?", "e": "Who managed the abbey’s income after the Reformation — in the Amtshaus?", "r": "베어 하트 나흐 데어 레포르마치온 디 아인나멘 데스 클로스터스 페어발테트 — 임 암츠하우스?"}}, {"x": "14:43", "tx": {"k": "버스 280 → 14:54 바르 · 15:01 IR75 → 15:25 중앙역 · 15:35 트램 17 → 15:45 부흐엑플라츠 → 걸어서", "e": "Bus 280 → 14:54 Baar · 15:01 IR75 → 15:25 Zürich HB · 15:35 tram 17 → 15:45 Bucheggplatz → walk"}, "alt": {"k": "투어가 14:15 전에 끝나면 14:15 버스 280 → 하우젠 → 버스 236 → 비데콘 → 버스 72, 15:36 도착", "e": "If the tour ends before 14:15: 14:15 bus 280 → Hausen → bus 236 → Wiedikon → bus 72, arrive 15:36"}}, {"p": "Z04", "t": "15:53", "e": "16:28", "k": {"k": "상시 해설", "e": "Continuous"}, "tour": false, "arr": {"k": "17시에 닫는다", "e": "Closes 17:00"}, "role": {"k": "2026년 — 교구는 소유를 지키고 시가 학교·돌봄을 넣었다. <b>장부가 살아 있는 채 쓰임만 바뀐 오늘의 표본</b>.", "e": "2026 — the parish keeps ownership and the city puts in a school and day care. <b>Today’s case of a ledger still alive while the use changes</b>."}, "qs": [{"k": "!?교구와 시의 계약 — 임대인가 사용권인가, 기간은. (장부가 교구에 남았는지의 직접 증거)", "e": "!?The contract between parish and city — lease or right of use, and for how long? (direct evidence of whether the ledger stays with the parish)"}, {"k": "?예배는 이제 어디서 드리나 — 교회로서의 쓰임은 끝났나, 겹치나.", "e": "?Where is worship held now — has use as a church ended, or does it overlap?"}, {"k": "?교회세 감소가 이 결정의 이유였나 — 교구가 직접 한 말이 있나.", "e": "?Was falling church tax the reason — has the parish said so itself?"}, {"k": "난방은 1층만 — 궁륭 아래 위층 공간은 겨울에 어떻게 쓰나 (게시·안내).", "e": "Only the ground floor is heated — how is the space under the vaults used in winter? (signs, guide)"}, {"k": "?나무 상자 천장을 바닥으로 — 이 바닥에서 무엇을 해도 되게 허가받았나 (인원 · 용도).", "e": "?The box’s ceiling as a floor — what is it permitted for (numbers, uses)?"}], "ss": [{"k": "나무 상자 위 바닥에서 궁륭 꼭대기까지 — 올려다본 높이와 계단 수", "e": "From the floor on top of the timber box to the crown of the vault — the height looking up, and the stair count"}, {"k": "난방 구역과 아닌 구역 — 피부로 온도 차", "e": "Heated and unheated zones — the difference on your skin"}, {"k": "신랑 폭 — 걸음 수", "e": "Width of the nave in steps"}, {"k": "아이들 소리가 궁륭에서 어떻게 울리나", "e": "How children’s voices ring under the vaults"}], "de": {"q": "Bleibt die Kirche im Eigentum der Kirchgemeinde – und wie lange läuft der Vertrag mit der Stadt?", "k": "교회 소유는 교구에 남나요 — 시와의 계약은 언제까지인가요?", "e": "Does the church stay the parish’s property — and how long does the contract with the city run?", "r": "블라입트 디 키르헤 임 아이겐툼 데어 키르히게마인데 — 운트 비 랑에 로이프트 데어 페어트락 미트 데어 슈타트?"}}, {"x": "16:36", "tx": {"k": "버스 33 → 16:58 회슈가세 → 걸어서 6분", "e": "Bus 33 → 16:58 Höschgasse → 6-min walk"}}, {"p": "Z05", "t": "17:04", "e": "17:54", "k": {"k": "자유 관람", "e": "Free visit"}, "tour": false, "arr": {"k": "18시에 닫는다", "e": "Closes 18:00"}, "role": {"k": "지금 진행 중인 둘째 해산 — 교회세가 줄자 교구가 교회를 전용하거나 헌다. <b>반증 조건 ②의 데이터가 여기 있다</b>.", "e": "A second dissolution under way now — as church tax falls, parishes convert or demolish churches. <b>The data for failure test ② is here</b>."}, "qs": [{"k": "!사례 패널을 전부 찍는다 — 사례마다 「소유(교구 유지 · 매각 · 시)」와 「결과(전용 · 철거 · 그대로)」를 돌아와서 표로.", "e": "!Photograph every case panel — for each case, ‘ownership (kept by parish · sold · city)’ and ‘outcome (converted · demolished · unchanged)’, to tabulate later."}, {"k": "철거된 사례는 헐기 전에 기록(도면 · 사진 · 모사)을 남겼나 — 「헐릴 때는 먼저 베껴졌다」의 오늘판.", "e": "Were demolished cases recorded first (drawings, photos, copies)? — today’s version of ‘copied before it came down’."}, {"k": "교구가 판 교회 가운데 살아남은 것 — 누가 샀나.", "e": "Churches the parish sold that survived — who bought them?"}, {"k": "취리히 교회 가운데 전시에 나온 곳은 몇 곳인가.", "e": "How many Zürich churches appear in the exhibition?"}, {"k": "전시가 말하는 「지켜야 할 의례적 질」 — 건물의 무엇을 가리키나.", "e": "The ‘ritual qualities worth keeping’ the exhibition names — what in the building do they point to?"}], "ss": [{"k": "1931년 빌라 계단 난간 — 손에 닿는 재료", "e": "The 1931 villa’s stair handrail — the material under your hand"}, {"k": "전시실 빛 — 창인가 조명인가", "e": "Light in the exhibition rooms — windows or lamps?"}, {"k": "호숫가 쪽 창 — 빌라가 물을 어떻게 보나", "e": "The lakeside windows — how the villa looks at the water"}], "de": {"q": "Gibt es eine Liste aller gezeigten Beispiele?", "k": "전시된 사례 전체 목록이 있나요?", "e": "Is there a list of all the cases shown?", "r": "깁트 에스 아이네 리스테 알러 게차이크텐 바이슈필레?"}}, {"x": "18:14", "tx": {"k": "트램 15 → 18:27 중앙역 · 18:36 IR36 → 19:52 바젤", "e": "Tram 15 → 18:27 Zürich HB · 18:36 IR36 → 19:52 Basel"}, "alt": {"k": "저녁 먹고 18:59 IC → 19:58 · 빠른 막차 22:59 → 23:58", "e": "After dinner: 18:59 IC → 19:58 · last fast train 22:59 → 23:58"}}], "chk": {"k": "9월 26일 새벽에 다시 확인했다: 다섯 곳의 토요일 여는 시각과 투어 시각이 공식 페이지와 모두 같고, 기차 · 트램 · 버스 시각도 그대로다. 날씨는 맑음, 아침 14도에서 오후 25도, 비 0퍼센트.", "e": "Checked again early on 26 September: opening hours and tour times at all five places match the official pages, and the train, tram and bus times are unchanged. Weather: clear, 14 °C in the morning to 25 °C in the afternoon, 0 % rain."}}}, "U": {"title": {"k": "취리히 오픈하우스 수첩", "e": "Open House Zürich Notebook"}, "sub": {"k": "9.26 토 · 장부", "e": "Sat 26 Sep · the Ledger"}, "loading": {"k": "불러오는 중", "e": "Loading"}, "toDark": {"k": "어둡게 보기", "e": "Dark mode"}, "toLight": {"k": "밝게 보기", "e": "Light mode"}, "tabCmp": {"k": "비교", "e": "Compare"}, "tabPrep": {"k": "예약 · 말 · 준비", "e": "Booking · phrases · prep"}, "tabAfter": {"k": "판정", "e": "Verdict"}, "picked": {"k": "고름", "e": "picked"}, "cmpEyb": {"k": "Open House Zürich 2026 · 9월 26일 토요일 · 바젤에서 당일", "e": "Open House Zürich 2026 · Saturday 26 September · a day trip from Basel"}, "cmpH1": {"k": "네 갈래, 하나를 고른다", "e": "Four routes — pick one"}, "cmpP": {"k": "갈래마다 가설 하나를 취리히에 걸고, 그 가설이 서는지 무너지는지를 걷는 순서로 짰다. 시각은 전부 토요일 날짜로 조회한 실제 시각표다. 이름을 누르면 그 갈래의 시각표로, 표의 장소를 누르면 그곳 화면으로 간다.", "e": "Each route puts one hypothesis to the city and walks the stops in the order that tests it. Every time comes from the real timetable for that Saturday. Tap a route for its timetable; tap a place in the table to open its page."}, "today": {"k": "오늘", "e": "Today"}, "past": {"k": "지난 토요일", "e": "Saturday has passed"}, "pickedLbl": {"k": "고른 안", "e": "Picked"}, "none": {"k": "아직 없음", "e": "none yet"}, "weather": {"k": "날씨 예보: 맑음 · 14→25도 · 비 0퍼센트", "e": "Forecast: clear · 14→25 °C · 0 % rain"}, "fourK": {"k": "네 갈래", "e": "Four routes"}, "fourC": {"k": "바젤 SBB 출발 → 바젤 도착", "e": "Basel SBB out → back"}, "basel": {"k": "바젤 ", "e": "Basel "}, "toursP": {"k": "투어 ", "e": "tours "}, "bookNone": {"k": "예약 없음", "e": "no booking"}, "bookOpt": {"k": "예약 선택", "e": "booking optional"}, "noPhoto": {"k": "촬영 금지 ", "e": "no photos: "}, "sideK": {"k": "나란히 보기", "e": "Side by side"}, "sideC": {"k": "표는 옆으로 밀린다", "e": "the table scrolls sideways"}, "rTest": {"k": "무엇을 시험하나", "e": "What it tests"}, "rFail": {"k": "이게 보이면 틀린 것", "e": "It fails if"}, "rTime": {"k": "바젤 출발 → 도착", "e": "Basel out → back"}, "or": {"k": "또는 ", "e": "or "}, "rStops": {"k": "곳", "e": "Stops"}, "rTours": {"k": "정해진 투어", "e": "Fixed tours"}, "rBook": {"k": "예약", "e": "Booking"}, "rPhoto": {"k": "촬영 금지", "e": "No photos"}, "rLoad": {"k": "몸", "e": "Effort"}, "rRisk": {"k": "깨질 수 있는 곳", "e": "Weak points"}, "shareK": {"k": "겹치는 곳", "e": "Shared stops"}, "shareC": {"k": "같은 곳, 다른 질문", "e": "same place, different questions"}, "place": {"k": "곳", "e": "Place"}, "pick": {"k": "이 안으로", "e": "Pick this route"}, "pickedBtn": {"k": "고른 안", "e": "Picked"}, "knownLb": {"k": "이미 확인한 것 · 짚을 것", "e": "Already known · to check"}, "failLb": {"k": "이게 보이면 틀린 것", "e": "It fails if"}, "satK": {"k": "토요일 9월 26일", "e": "Saturday 26 September"}, "nowL": {"k": "지금 ", "e": "Now "}, "nextL": {"k": "다음 ", "e": "Next "}, "doneToday": {"k": "오늘 일정 끝 — 판정 탭으로", "e": "Done for today — see Verdict"}, "close": {"k": "닫기", "e": "Close"}, "dBuilt": {"k": "지은 해", "e": "Built"}, "dOwn": {"k": "주인 · 쓰임", "e": "Owner · use"}, "dSat": {"k": "토요일", "e": "Saturday"}, "dGuide": {"k": "해설", "e": "Guide"}, "dPhoto": {"k": "촬영", "e": "Photos"}, "dGo": {"k": "가는 곳", "e": "Getting there"}, "map": {"k": "지도", "e": "Map"}, "official": {"k": "공식 소개(독일어)", "e": "Official page (German)"}, "factsH": {"k": "공식 소개에서 — 한국어로 줄임", "e": "From the official description — condensed"}, "onRoute": {"k": "이 갈래에서 — ", "e": "On this route — "}, "qsH": {"k": "질문과 확인할 것", "e": "Questions and checks"}, "askW": {"k": "묻기", "e": "ask"}, "lookW": {"k": "확인", "e": "look"}, "sayLb": {"k": "안내인에게 보여 줄 한 줄 (● 질문)", "e": "A line to show the guide (the ● question)"}, "readAs": {"k": "읽는 법 — ", "e": ""}, "ssH": {"k": "몸으로 감각할 것", "e": "Sense with your body"}, "doneW": {"k": " 닫음", "e": " done"}, "handL": {"k": "손으로 잰 것", "e": "Measured by hand"}, "handA": {"k": "걸음 · 손뼘 · 계단 수. 하나면 된다 — 사진은 주장을 확인해 줄 뿐이고 이 숫자만 주장을 배신할 수 있다", "e": "Steps, hand spans, stair counts — one is enough. Photos only confirm a claim; only this number can betray it"}, "bodyL": {"k": "몸 · 사람 · 기분", "e": "Body · people · mood"}, "bodyA": {"k": "몸이 먼저 알아챈 것 — 분석 문장과 섞지 않는다", "e": "What the body noticed first — keep it apart from the analysis"}, "onePlace": {"k": " · 이 칸은 갈래와 상관없이 이곳에 하나", "e": " · one note per place, whichever route"}, "elseK": {"k": "다른 갈래에서 이곳", "e": "This place on other routes"}, "prepH1": {"k": "예약 · 말 · 준비", "e": "Booking · phrases · prep"}, "prepP": {"k": "예약할 것은 없다. 투어는 모두 선착순이다 — 칼 데어 그로세 10:00 투어는 09:45 전에 입구로 간다.", "e": "Nothing to book. Every tour is first come, first served — for the 10:00 tour at Karl der Grosse, be at the door before 09:45."}, "wedK": {"k": "수요일 9월 23일 12~22시", "e": "Wednesday 23 September, 12:00–22:00"}, "wedNote1": {"k": "공식 공지(한국어로): 예약이 필요한 건물의 <b>마지막 자리</b>는 수요일 12시부터 22시 사이에 잡을 수 있다. 자리는 그 사이 <b>여러 번, 불규칙하게</b> 풀린다. 이미 마감이어도 나중에 다시 볼 만하다 — 취소된 자리는 바로 다시 나온다. 원문 한 구절: <span class=\"n\">«am Mittwoch, 23. September, von 12 bis 22 Uhr»</span> = 9월 23일 수요일 12시부터 22시까지.", "e": "The official notice, paraphrased: the <b>last places</b> for buildings that need booking can be taken on Wednesday between 12:00 and 22:00. They are released <b>several times, at irregular intervals</b>. Even if a building shows as full, look again later — cancelled bookings reappear at once. The original phrase: <span class=\"n\">«am Mittwoch, 23. September, von 12 bis 22 Uhr»</span> = on Wednesday 23 September, from 12 to 22."}, "wedNote2": {"k": "예약하려면 오픈하우스 계정(아이디 · 이름 · 이메일)으로 가입하고 로그인해야 한다 — 직접 한다. 노릴 자리: <b>칼크브라이테</b> 토 09:30 · 11:00, <b>촐하우스</b> 토 09:30 · 11:00 (9/22 조회 때 모두 0석). 둘 다 잡히면 D의 아침을 칼크브라이테 09:30 → 촐하우스 11:00으로 바꾸고 암츠하우스와 칼 데어 그로세를 뺀다.", "e": "Booking needs an Open House account (username, name, email) — sign up and log in yourself. Places to aim for: <b>Kalkbreite</b> Sat 09:30 · 11:00 and <b>Zollhaus</b> Sat 09:30 · 11:00 (all full when checked on 22 Sep). If both come through, start D with Kalkbreite 09:30 → Zollhaus 11:00 and drop the Amtshaus and Karl der Grosse."}, "openList": {"k": "오픈하우스 목록 열기", "e": "Open the Open House list"}, "wordsK": {"k": "화면에 나오는 말", "e": "Words on the booking screen"}, "sayK": {"k": "말 — 독일어 해설 앞에서", "e": "Phrases — in front of a German-speaking guide"}, "sayC": {"k": "위를 보여 주고, 아래로 뜻을 확인", "e": "show the top line; the line below is the meaning"}, "sayNote": {"k": "안내인 대부분은 영어도 한다. 첫 줄로 묻고, 영어가 되면 영어로 간다. 곳마다 「안내인에게 보여 줄 한 줄」은 장소 화면에 있다.", "e": "Most guides also speak English. Ask with the first line and switch to English if you can. Each place page has a line to show the guide."}, "prepK": {"k": "출발 전 확인", "e": "Before you go"}, "afterH1": {"k": "판정", "e": "Verdict"}, "afterP": {"k": "다녀온 날 밤에 쓴다. 다 쓰면 「전부 텍스트로」에서 복사해 둔다 — 이 칸들은 이 기기에만 저장된다.", "e": "Write it the night after. When done, copy it from ‘Everything as text’ — these notes are stored on this device only."}, "exportBtn": {"k": "전부 텍스트로", "e": "Everything as text"}, "copy": {"k": "복사", "e": "Copy"}, "copied": {"k": "복사됨", "e": "Copied"}, "longpress": {"k": "길게 눌러 직접 복사", "e": "Long-press to copy"}, "expTitle": {"k": "취리히 오픈하우스 수첩 — 2026-09-26 토", "e": "Open House Zürich Notebook — Sat 26 Sep 2026"}, "expPicked": {"k": "고른 안: ", "e": "Picked: "}, "expNone": {"k": "없음", "e": "none"}, "expPlaces": {"k": "== 곳마다 적은 것 ==", "e": "== Notes by place =="}, "expHand": {"k": "  손으로 잰 것: ", "e": "  Measured by hand: "}, "expBody": {"k": "  몸 · 사람 · 기분: ", "e": "  Body · people · mood: "}, "expVerdict": {"k": "== 판정 ==", "e": "== Verdict =="}, "sLocalWait": {"k": "이 기기에 저장 · 서버 연결 중", "e": "Saved on this device · connecting"}, "sLocal": {"k": "이 기기에만 저장", "e": "Saved on this device only"}, "sDevice": {"k": "이 기기에 저장", "e": "Saved on this device"}, "sSaved": {"k": "서버에 저장 ", "e": "Saved to server "}, "sFail": {"k": "서버 저장 실패 — 이 기기에는 남음", "e": "Server save failed — kept on this device"}, "sSaving": {"k": "저장 중…", "e": "Saving…"}, "sConn": {"k": "서버에 연결됨", "e": "Connected"}, "err": {"k": "페이지 오류: ", "e": "Page error: "}, "errTail": {"k": " — 칸이 저장되지 않을 수 있다", "e": " — notes may not be saved"}, "footer": {"k": "시각은 9월 26일 새벽에 그날 날짜로 다시 조회한 SBB 시각표와 오픈하우스 취리히 공식 페이지에서 옮겼다. 건물 설명은 공식 소개를 줄인 것이고, 다른 출처는 따로 적었다. 질문 · 감각 줄은 누르면 줄이 그어지고, 적은 내용은 이 기기에만 저장된다.<br>— 이연호, 2026년 9월", "e": "Times come from the SBB timetable for the day and the official Open House Zürich pages, both checked again early on 26 September. Place descriptions condense the official texts; other sources are marked. Tap a question or sense line to strike it through; anything you write stays on this device only.<br>— Yeonho Lee, September 2026"}, "tabRoute": {"k": "토요일 동선", "e": "Saturday route"}}, "rec": {"k": "", "e": ""}, "WORDS": [["Reservieren", {"k": "예약하기", "e": "book"}], ["freie Plätze", {"k": "남은 자리", "e": "places left"}], ["Anmelden", {"k": "로그인", "e": "log in"}], ["Registrieren", {"k": "가입", "e": "sign up"}], ["ausgebucht", {"k": "마감", "e": "fully booked"}], ["Reservation erforderlich", {"k": "예약 필수", "e": "booking required"}], ["first come, first served", {"k": "선착순", "e": "no booking — first come"}], ["Treffpunkt", {"k": "모이는 곳", "e": "meeting point"}]], "SAY": [{"q": "Entschuldigung, ich spreche kein Deutsch. Sprechen Sie Englisch?", "k": "죄송해요, 독일어를 못합니다. 영어 하시나요?", "e": "Excuse me, I don’t speak German. Do you speak English?", "r": "엔트슐디궁, 이히 슈프레헤 카인 도이치. 슈프레헨 지 앵글리슈?"}, {"q": "Darf ich die Führung für meine eigenen Notizen aufnehmen?", "k": "제 개인 메모용으로 해설을 녹음해도 될까요? — 안 된다고 하면 하지 않는다.", "e": "May I record the tour for my own notes? — if they say no, don’t.", "r": "다르프 이히 디 퓌룽 퓌어 마이네 아이게넨 노티첸 아우프네멘?"}, {"q": "Wo ist der Treffpunkt für die Führung?", "k": "투어 모이는 곳이 어디인가요?", "e": "Where is the meeting point for the tour?", "r": "보 이스트 데어 트레프풍크트 퓌어 디 퓌룽?"}, {"q": "Wann beginnt die nächste Führung?", "k": "다음 해설은 언제 시작하나요?", "e": "When does the next tour start?", "r": "반 베긴트 디 넥스테 퓌룽?"}, {"q": "Darf ich hier fotografieren?", "k": "여기서 사진 찍어도 되나요?", "e": "May I take photos here?", "r": "다르프 이히 히어 포토그라피렌?"}, {"q": "Wem gehört das Gebäude heute?", "k": "이 건물은 지금 누구 소유인가요?", "e": "Who owns the building today?", "r": "벰 게회르트 다스 게보이데 호이테?"}, {"q": "Vielen Dank, das war sehr interessant.", "k": "정말 감사합니다, 아주 흥미로웠어요.", "e": "Thank you very much, that was very interesting.", "r": "필렌 당크, 다스 바르 제어 인테레산트."}], "PREP": [{"id": "c9", "t": {"k": "칼 데어 그로세 — 09:45 전에 입구로", "e": "Karl der Grosse — at the door before 09:45"}, "s": {"k": "10:00 투어는 선착순 인원 제한 · 입구 Kirchgasse 14", "e": "The 10:00 tour is first come with a limited group · entrance Kirchgasse 14"}}, {"id": "c3", "t": {"k": "아침 — 기차 시각만 한 번 더 (SBB 앱)", "e": "Morning — one more look at the train times (SBB app)"}, "s": {"k": "이 화면의 시각은 9/26 새벽 조회", "e": "Times here were looked up early on 26 Sep"}}, {"id": "c4", "t": {"k": "SBB 표 — 바젤 ↔ 취리히 왕복", "e": "SBB ticket — Basel ↔ Zürich return"}, "s": {"k": "A는 카펠 구간(바르 · 탈빌 경유)이 더 붙는다", "e": "A adds the Kappel leg (via Baar or Thalwil)"}}, {"id": "c5", "t": {"k": "폰 충전 · 보조배터리", "e": "Charge the phone · power bank"}, "s": {"k": "독일어 해설을 녹음하면 배터리를 먹는다 — 녹음은 허락을 받고", "e": "Recording German tours drains the battery — record only with permission"}}, {"id": "c6", "t": {"k": "종이 노트 한 권", "e": "A paper notebook"}, "s": {"k": "촬영 금지 곳은 손으로 잰 숫자가 유일한 기록", "e": "Where photos are not allowed, the hand-measured number is the only record"}}, {"id": "c7", "t": {"k": "물 · 모자", "e": "Water · hat"}, "s": {"k": "토요일 예보: 맑음, 아침 14도 → 오후 25도, 비 확률 0퍼센트 (open-meteo, 9/26 새벽 조회)", "e": "Saturday forecast: clear, 14 °C in the morning → 25 °C in the afternoon, 0 % rain (open-meteo, checked early on 26 Sep)"}}], "VQ": [{"id": "A", "q": {"k": "A 장부 — 가설은 섰나, 무너졌나, 바뀌었나", "e": "A Ledger — did the hypothesis stand, fall or shift?"}, "sub": {"k": "수입의 꼬리표가 다음 쓰임을 정했나. 취리히의 장부 주인은 누구였나. 「바젤만의 이야기」는 남았나.", "e": "Did the label on the income decide the next use? Who held Zürich’s ledger? Is ‘a story only Basel tells’ still standing?"}}, {"id": "x1", "q": {"k": "가장 크게 어긋난 것 하나", "e": "The single biggest contradiction"}, "sub": {"k": "하루 전체에서.", "e": "Across the whole day."}}, {"id": "x2", "q": {"k": "다음에 꼭 볼 곳", "e": "Places to see next time"}, "sub": {"k": "이번에 못 간 곳 — 일요일에 더 볼 수 있던 곳(디티콘 십일조 창고 · 옛 질펠트 화장장)도 여기.", "e": "Those you missed — including places you could have added on Sunday (the Dietikon tithe barn · the former Sihlfeld crematorium)."}}, {"id": "hand", "hand": true, "q": {"k": "내 손뼘 · cm", "e": "My hand span · cm"}, "sub": {"k": "이날 잰 모든 것의 자.", "e": "The ruler for everything measured that day."}}], "only": "A"};
+var P=DATA.P,SC=DATA.SC,U0=DATA.U,WORDS=DATA.WORDS,SAY=DATA.SAY,PREP=DATA.PREP,VQ=DATA.VQ,ORD=DATA.only?[DATA.only]:["A","B","C","D"],PORD=Object.keys(P),DEF=DATA.only||"cmp";
+var KEY="zurich-openhouse-v1",TABKEY="zurich-openhouse-tab"+(DATA.only?"-"+DATA.only:""),LANGKEY="zurich-openhouse-lang",DAY="2026-09-26";
+
+/* ── 언어 ── */
+var LANG="ko";
+try{var ls=localStorage.getItem(LANGKEY);if(ls==="en"||ls==="ko")LANG=ls;else if(!/^ko/i.test(navigator.language||""))LANG="en";}catch(e){}
+try{var qp=(location.search.match(/[?&]lang=(en|ko)/)||[])[1];if(qp)LANG=qp;}catch(e){}
+function t(x){
+  if(x==null)return "";if(typeof x==="string")return x;
+  if(ED==="private"&&(x.pk!=null||x.pe!=null))return LANG==="en"?(x.pe!=null?x.pe:x.e):(x.pk!=null?x.pk:x.k);
+  return LANG==="en"?x.e:x.k;
+}
+function U(k){return t(U0[k]);}
+
+/* ── 밝게 · 어둡게 ── */
+var THEMEKEY="yhl-theme";
+function sysDark(){try{return window.matchMedia("(prefers-color-scheme: dark)").matches;}catch(e){return false;}}
+function curTheme(){var r=document.documentElement,a=r.getAttribute("data-look")||r.getAttribute("data-theme");return (a==="dark"||a==="light")?a:(sysDark()?"dark":"light");}
+function applyTheme(th){if(th==="dark"||th==="light")document.documentElement.setAttribute("data-look",th);}
+try{var st0=localStorage.getItem(THEMEKEY);if(st0==="dark"||st0==="light")applyTheme(st0);}catch(e){}
+function paintThemeBtn(){var b=document.getElementById("themeBtn");if(!b)return;var l=curTheme()==="dark"?U("toLight"):U("toDark");b.setAttribute("aria-label",l);b.title=l;}
+window.addEventListener("error",function(e){
+  var b=document.getElementById("errbar");
+  if(b){b.hidden=false;b.textContent=U("err")+(e.message||"?")+U("errTail");}
+});
+
+/* ── 상태 ── */
+function clone(o){return JSON.parse(JSON.stringify(o||{}));}
+function stamp(o){return +((o&&o.updatedAt)||0);}
+var S={choice:{pick:"",updatedAt:0},prep:{updatedAt:0},verdict:{updatedAt:0},checks:{},places:{}};
+ORD.forEach(function(s){S.checks[s]={map:{},updatedAt:0};});
+PORD.forEach(function(z){S.places[z]={hand:"",body:"",updatedAt:0};});
+var PATHS={
+ "zh/choice":{get:function(){return S.choice;},put:function(d){S.choice=d;},blank:function(){return {pick:"",updatedAt:0};}},
+ "zh/prep":{get:function(){return S.prep;},put:function(d){S.prep=d;},blank:function(){return {updatedAt:0};}},
+ "zh/verdict":{get:function(){return S.verdict;},put:function(d){S.verdict=d;},blank:function(){return {updatedAt:0};}}
+};
+ORD.forEach(function(s){PATHS["zh/checks-"+s]={get:function(){return S.checks[s];},put:function(d){S.checks[s]=d;},blank:function(){return {map:{},updatedAt:0};}};});
+PORD.forEach(function(z){PATHS["zh/place-"+z]={get:function(){return S.places[z];},put:function(d){S.places[z]=d;},blank:function(){return {hand:"",body:"",updatedAt:0};}};});
+try{
+  var raw=localStorage.getItem(KEY);
+  if(raw){var L=JSON.parse(raw);Object.keys(PATHS).forEach(function(p){var d=L&&L[p];if(d&&stamp(d)>stamp(PATHS[p].get())){PATHS[p].put(Object.assign(PATHS[p].blank(),clone(d)));}});}
+}catch(e){}
+function persistLocal(){try{var o={};Object.keys(PATHS).forEach(function(p){o[p]=PATHS[p].get();});localStorage.setItem(KEY,JSON.stringify(o));}catch(e){}}
+
+/* ── 저장 ── */
+var db=null,dbMode=(ED==="private"?"wait":"off"),timers={},lastStat=["",""];
+var statEl=document.getElementById("stat");
+function hhmm(d){d=d||new Date();return ("0"+d.getHours()).slice(-2)+":"+("0"+d.getMinutes()).slice(-2);}
+function setStatus(key,cls,extra){lastStat=[key,cls||"",extra||""];statEl.textContent=U(key)+(extra||"");statEl.className="stat"+(cls?" "+cls:"");}
+function idleStatus(){if(dbMode==="off")setStatus(ED==="private"?"sLocal":"sDevice");else setStatus("sLocalWait");}
+function push(path,retried){
+  if(!db){idleStatus();return;}
+  db.doc(path).set(clone(PATHS[path].get())).then(function(){setStatus("sSaved","ok",hhmm());})
+   .catch(function(e){
+     if(e&&e.code==="unavailable"&&!retried){setTimeout(function(){push(path,true);},1500+Math.random()*1500);}
+     else{setStatus("sFail","err");}
+   });
+}
+function touch(path){
+  PATHS[path].get().updatedAt=Date.now();persistLocal();
+  if(!db){idleStatus();return;}
+  setStatus("sSaving");clearTimeout(timers[path]);timers[path]=setTimeout(function(){push(path);},900);
+}
+function pullAll(){
+  if(!db)return;
+  var jobs=Object.keys(PATHS).map(function(p){
+    return db.doc(p).get().then(function(snap){
+      var cur=PATHS[p].get();
+      if(snap.exists){var d=clone(snap.data());if(stamp(d)>=stamp(cur)){PATHS[p].put(Object.assign(PATHS[p].blank(),d));}else{push(p);}}
+      else if(stamp(cur)>0){push(p);}
+    }).catch(function(){});
+  });
+  Promise.all(jobs).then(function(){persistLocal();rerender();if(statEl.className==="stat")setStatus("sConn","ok");});
+}
+
+/* ── 도구 ── */
+function el(tag,cls,html){var x=document.createElement(tag);if(cls)x.className=cls;if(html!=null)x.innerHTML=html;return x;}
+function fit(ta){if(!ta.offsetParent)return;ta.style.height="auto";ta.style.height=(ta.scrollHeight+2)+"px";}
+function parseQ(q){var must=false,ask=false;if(q.charAt(0)==="!"){must=true;q=q.slice(1);}if(q.charAt(0)==="?"){ask=true;q=q.slice(1);}return {must:must,ask:ask,t:q};}
+function stopsOf(s){return SC[s].rows.filter(function(r){return r.p;});}
+function stopOf(s,z){var a=stopsOf(s);for(var i=0;i<a.length;i++){if(a[i].p===z)return a[i];}return null;}
+function scensOf(z){return ORD.filter(function(s){return !!stopOf(s,z);});}
+function marks(s,z){var m=S.checks[s].map;if(!m[z])m[z]={q:[],s:[]};return m[z];}
+function nq(s,z){var m=S.checks[s].map[z]||{q:[],s:[]};return [(m.q||[]).length,(m.s||[]).length];}
+function prog(s,z){var st=stopOf(s,z);if(!st)return "";var c=nq(s,z);return LANG==="en"?("questions "+c[0]+"/"+st.qs.length+" · senses "+c[1]+"/"+st.ss.length):("질문 "+c[0]+"/"+st.qs.length+" · 감각 "+c[1]+"/"+st.ss.length);}
+function mapUrl(z){return "https://www.google.com/maps/search/?api=1&query="+P[z].ll;}
+function nStops(n){return LANG==="en"?(n+" stops"):(n+"곳");}
+function srcTxt(x){return x?'<span class="src">'+t(x)+"</span>":"";}
+var main=document.getElementById("main"),tabsEl=document.getElementById("tabs");
+var sections={},chipRefs=[],fieldEls=[];
+
+/* ── 탭 ── */
+function tabsList(){return (DATA.only?[]:[{id:"cmp",n:U("tabCmp")}]).concat(ORD.map(function(s){return {id:s,n:DATA.only?U("tabRoute"):s+" "+t(SC[s].tab)};})).concat([{id:"prep",n:U("tabPrep")},{id:"after",n:U("tabAfter")}]);}
+function buildTabs(){
+  tabsEl.innerHTML="";
+  tabsList().forEach(function(tb){
+    var b=el("button","tab",tb.n+(!DATA.only&&S.choice.pick===tb.id?'<span class="pk">'+U("picked")+"</span>":""));b.type="button";b.setAttribute("role","tab");b.dataset.tab=tb.id;
+    b.addEventListener("click",function(){showTab(tb.id);});tabsEl.appendChild(b);
+  });
+}
+
+/* ── 비교 ── */
+function daysLeft(){var d0=new Date(),d=new Date(2026,8,26);d0.setHours(0,0,0,0);return Math.round((d-d0)/864e5);}
+function dayLine(){var dl=daysLeft();if(dl>0)return LANG==="en"?(dl+(dl===1?" day":" days")+" to Saturday"):("토요일까지 "+dl+"일");return dl===0?U("today"):U("past");}
+function chipsFor(s){
+  var c=SC[s];
+  return '<span class="chip ink">'+U("basel")+c.dep+" → "+c.arr+'</span><span class="chip">'+nStops(stopsOf(s).length)+'</span><span class="chip">'+U("toursP")+c.tours+"</span>"+
+   '<span class="chip'+(c.bk?" part":"")+'">'+(c.bk?U("bookOpt"):U("bookNone"))+"</span>"+(c.ban?'<span class="chip no">'+U("noPhoto")+t(c.ban)+"</span>":"");
+}
+function buildCmp(){
+  var sec=el("section");sec.id="t-cmp";
+  var m=el("div","mast");
+  m.appendChild(el("div","eyb",U("cmpEyb")));
+  m.appendChild(el("h1",null,U("cmpH1")));
+  m.appendChild(el("p",null,U("cmpP")));
+  var nw=el("div","now");
+  nw.innerHTML="<b>"+dayLine()+"</b><span>"+U("pickedLbl")+": "+(S.choice.pick?S.choice.pick+" "+t(SC[S.choice.pick].tab):U("none"))+"</span><span>"+U("weather")+"</span>";
+  m.appendChild(nw);sec.appendChild(m);
+  sec.appendChild(el("div","k",U("fourK")+'<span class="c">'+U("fourC")+"</span>"));
+  ORD.forEach(function(s){
+    var c=SC[s],b=el("button","sc"+(S.choice.pick===s?" on":""));b.type="button";
+    b.innerHTML='<span class="L">'+s+'</span><span><span class="h3">'+t(c.title)+'</span><span class="p">'+t(c.eyb)+'</span><span class="stats">'+chipsFor(s)+"</span></span>";
+    b.addEventListener("click",function(){showTab(s);});sec.appendChild(b);
+  });
+  sec.appendChild(el("p","rec",t(DATA.rec)));
+  sec.appendChild(el("div","k",U("sideK")+'<span class="c">'+U("sideC")+"</span>"));
+  var tw=el("div","tw"),tb=el("table");
+  var h='<thead><tr><th></th>'+ORD.map(function(s){return '<th class="'+(S.choice.pick===s?"on":"")+'"><button type="button" class="cx" data-go="'+s+'">'+s+" "+t(SC[s].tab)+"</button></th>";}).join("")+"</tr></thead><tbody>";
+  var ROWS=[["rTest",function(c){return t(c.hy);}],["rFail",function(c){return c.fal.map(t).join("<br>· ");}]];
+  if(SC.A.out)ROWS.push(["rFeed",function(c){return t(c.out);}]);
+  ROWS=ROWS.concat([["rTime",function(c){return '<span class="n">'+c.dep+" → "+c.arr+"</span>"+(c.arr2?"<br>"+U("or")+t(c.arr2):"");}],
+   ["rStops",function(c,s){return stopsOf(s).map(function(r){return '<button type="button" class="cx" data-pl="'+r.p+'" data-sc="'+s+'">'+t(P[r.p].nm)+"</button>";}).join(" · ");}],
+   ["rTours",function(c){return c.tours;}],["rBook",function(c){return t(c.res);}],["rPhoto",function(c){return c.ban?t(c.ban):"—";}],
+   ["rLoad",function(c){return t(c.load);}],["rRisk",function(c){return t(c.risk);}]]);
+  if(SC.A.rey)ROWS.push(["rRey",function(c){return t(c.rey);}]);
+  ROWS.forEach(function(r){h+="<tr><th>"+U(r[0])+"</th>"+ORD.map(function(s){return "<td>"+r[1](SC[s],s)+"</td>";}).join("")+"</tr>";});
+  h+="</tbody>";tb.innerHTML=h;tw.appendChild(tb);sec.appendChild(tw);
+  sec.appendChild(el("div","k",U("shareK")+'<span class="c">'+U("shareC")+"</span>"));
+  var tw2=el("div","tw"),mx=el("table","mx");
+  var h2="<thead><tr><th>"+U("place")+"</th>"+ORD.map(function(s){return "<th>"+s+"</th>";}).join("")+"</tr></thead><tbody>";
+  PORD.forEach(function(z){
+    h2+='<tr><th><button type="button" class="cx" data-pl="'+z+'">'+z+" "+t(P[z].nm)+"</button></th>"+ORD.map(function(s){var st=stopOf(s,z);return '<td class="dot">'+(st?st.t:"")+"</td>";}).join("")+"</tr>";
+  });
+  h2+="</tbody>";mx.innerHTML=h2;mx.style.minWidth="480px";tw2.appendChild(mx);sec.appendChild(tw2);
+  sec.addEventListener("click",function(e){
+    var x=e.target.closest("[data-go],[data-pl]");if(!x)return;
+    if(x.dataset.go)showTab(x.dataset.go);else openPlace(x.dataset.pl,x.dataset.sc||null);
+  });
+  main.appendChild(sec);sections.cmp=sec;
+}
+
+/* ── 갈래 ── */
+function nextFor(s){
+  var now=new Date(),rows=SC[s].rows,mins=now.getHours()*60+now.getMinutes();
+  var today=now.getFullYear()+"-"+("0"+(now.getMonth()+1)).slice(-2)+"-"+("0"+now.getDate()).slice(-2);
+  if(today!==DAY)return null;
+  for(var i=0;i<rows.length;i++){var r=rows[i],tm=r.t||r.x||r.m;var hm=tm.split(":");var v=(+hm[0])*60+(+hm[1]);if(v>=mins-10)return r;}
+  return null;
+}
+function buildScen(s){
+  var c=SC[s],sec=el("section");sec.id="t-"+s;
+  var m=el("div","mast");
+  m.appendChild(el("div","eyb",s+" · "+t(c.eyb)));
+  m.appendChild(el("h1",null,t(c.title)));
+  m.appendChild(el("p","hy",t(c.hy)));if(c.chk)m.appendChild(el("p",null,t(c.chk)));
+  var nw=el("div","now");nw.id="now-"+s;m.appendChild(nw);
+  var st=el("div","stats");st.innerHTML=chipsFor(s);m.appendChild(st);
+  var pp=el("div","pills");var pick=el("button","pill"+(S.choice.pick===s?" dark":""),S.choice.pick===s?U("pickedBtn"):U("pick"));pick.type="button";pick.id="pick-"+s;
+  pick.addEventListener("click",function(){S.choice.pick=(S.choice.pick===s?"":s);touch("zh/choice");rerender();});
+  pp.appendChild(pick);if(!DATA.only)m.appendChild(pp);
+  sec.appendChild(m);
+  var kb=el("div","box");kb.appendChild(el("div","lb",U("knownLb")));
+  var ul=el("ul");c.known.forEach(function(k){ul.appendChild(el("li",null,t(k)+srcTxt(k.src)));});kb.appendChild(ul);sec.appendChild(kb);
+  var fb=el("div","box fal");fb.appendChild(el("div","lb",U("failLb")));
+  var ul2=el("ul");c.fal.forEach(function(f){ul2.appendChild(el("li",null,t(f)));});fb.appendChild(ul2);sec.appendChild(fb);
+  if(c.read)sec.appendChild(el("p","note",t(c.read)));
+  sec.appendChild(el("div","k",U("satK")+'<span class="c">'+nStops(stopsOf(s).length)+"</span>"));
+  c.rows.forEach(function(r){
+    if(r.p){
+      var b=el("button","row");b.type="button";
+      b.appendChild(el("span","t",r.t+"<i>"+r.e+"</i>"));
+      b.appendChild(el("span","nm",'<span class="cd">'+r.p+"</span>"+t(P[r.p].nm)+"<i>"+t(r.arr)+"</i>"));
+      var fl=el("span","fl");fl.appendChild(el("span","chip"+(r.tour?" ink":""),t(r.k)));
+      var ch=el("span","chip","");chipRefs.push({el:ch,s:s,z:r.p});fl.appendChild(ch);
+      b.appendChild(fl);
+      b.addEventListener("click",function(){openPlace(r.p,s);});sec.appendChild(b);
+    }else if(r.m){
+      sec.appendChild(el("div","mv meal",'<span class="t">'+r.m+"</span><span>"+t(r.tx)+"</span>"));
+    }else{
+      sec.appendChild(el("div","mv",'<span class="t">'+r.x+"</span><span>"+t(r.tx)+(r.alt?'<span class="alt">'+t(r.alt)+"</span>":"")+"</span>"));
+    }
+  });
+  if(c.out)sec.appendChild(el("p","out","<b>"+U("after")+"</b> "+t(c.out)));
+  if(c.rey)sec.appendChild(el("p","out","<b>"+U("reyLb")+"</b> "+t(c.rey)+U("reyTail")));
+  main.appendChild(sec);sections[s]=sec;
+}
+function paintNow(){
+  ORD.forEach(function(s){
+    var nw=document.getElementById("now-"+s);if(!nw)return;
+    var nx=nextFor(s),dl=daysLeft();
+    if(nx){var nm=nx.p?t(P[nx.p].nm):t(nx.tx);nw.innerHTML="<b>"+U("nowL")+hhmm()+"</b><span>"+U("nextL")+(nx.t||nx.x||nx.m)+" — "+nm.replace(/<[^>]+>/g,"")+"</span>";}
+    else nw.innerHTML="<b>"+(dl>0?dayLine():(dl===0?U("doneToday"):U("past")))+"</b><span>"+(S.choice.pick===s?U("pickedBtn"):"")+"</span>";
+  });
+}
+
+/* ── 장소 화면 ── */
+var PB=document.getElementById("placeBox"),PBB=document.getElementById("pbBody"),curPlace=null,curScen=null;
+document.getElementById("pbClose").addEventListener("click",closePlace);
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!PB.hidden)closePlace();});
+function closePlace(){PB.hidden=true;curPlace=null;updateChips();}
+function bindTA(ta,path,get,setv){
+  ta.value=get()||"";
+  ta.addEventListener("input",function(){setv(ta.value);fit(ta);touch(path);});
+  fieldEls.push({t:ta,get:get});
+}
+function openPlace(z,s){
+  var q=P[z],sc=scensOf(z);
+  if(!s||sc.indexOf(s)<0){s=(sc.indexOf(S.choice.pick)>=0?S.choice.pick:sc[0]);}
+  curPlace=z;curScen=s;
+  document.getElementById("pbCode").textContent=z;
+  document.getElementById("pbTitle").textContent=t(q.nm);
+  document.getElementById("pbClose").textContent=U("close");
+  PBB.innerHTML="";fieldEls=fieldEls.filter(function(o){return document.body.contains(o.t);});
+  var pg=el("div","pg");
+  pg.appendChild(el("h2",null,t(q.nm)));
+  pg.appendChild(el("div","de",q.de));
+  var dl=el("dl","dl");
+  [["dBuilt",t(q.built)],["dOwn",t(q.own)],["dSat",t(q.hrs)],["dGuide",t(q.tour)],["dPhoto",(q.noPhoto?'<span class="no">'+t(q.photo)+"</span>":t(q.photo))],["dGo",q.addr+"<br>"+t(q.stop)]].forEach(function(a){
+    var d=el("div");d.appendChild(el("dt",null,U(a[0])));d.appendChild(el("dd",null,a[1]));dl.appendChild(d);});
+  pg.appendChild(dl);
+  var lk=el("div","links");
+  var a1=el("a","pill sm",U("map"));a1.href=mapUrl(z);a1.target="_blank";a1.rel="noopener";lk.appendChild(a1);
+  var a2=el("a","pill sm",U("official"));a2.href=q.url;a2.target="_blank";a2.rel="noopener";lk.appendChild(a2);
+  pg.appendChild(lk);
+  var fc=el("div","facts");fc.appendChild(el("h4",null,U("factsH")));
+  var ul=el("ul");q.facts.forEach(function(f){ul.appendChild(el("li",null,t(f)+srcTxt(f.src)));});fc.appendChild(ul);pg.appendChild(fc);
+  var cx=el("div","ctx");
+  cx.appendChild(el("h4",null,U("onRoute")+s+" "+t(SC[s].tab)));
+  if(sc.length>1){
+    var sel=el("div","scsel");
+    sc.forEach(function(x){var b=el("button","pill sm"+(x===s?" dark":""),x+" "+t(SC[x].tab)+" · "+stopOf(x,z).t);b.type="button";b.addEventListener("click",function(){openPlace(z,x);});sel.appendChild(b);});
+    cx.appendChild(sel);
+  }
+  var st=stopOf(s,z);
+  cx.appendChild(el("p","role",t(st.role)));
+  cx.appendChild(el("p","note",'<span class="n">'+st.t+"–"+st.e+"</span> · "+t(st.k)+" · "+t(st.arr)));
+  var mk=marks(s,z);
+  var cn=el("div","cnt","");
+  function cnt(){cn.textContent=prog(s,z)+U("doneW");}
+  var qs=el("div","qs");qs.appendChild(el("h4",null,U("qsH")));
+  var qul=el("ul"),num=0;
+  st.qs.forEach(function(rawq,i){
+    var o=parseQ(t(rawq));if(!o.must)num++;
+    var li=el("li",(o.must?"must":"")+((mk.q||[]).indexOf(i)>=0?" hit":""));li.tabIndex=0;li.setAttribute("role","button");
+    li.appendChild(el("span","mk",o.must?"●":String(num)));
+    li.appendChild(el("span","tx",'<span class="ty">'+(o.ask?U("askW"):U("lookW"))+"</span>"+o.t));
+    function tog(){var h=(mk.q||[]).slice(),k=h.indexOf(i);if(k>=0)h.splice(k,1);else h.push(i);mk.q=h;li.classList.toggle("hit",k<0);touch("zh/checks-"+s);cnt();}
+    li.addEventListener("click",tog);li.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();tog();}});
+    qul.appendChild(li);
+  });
+  qs.appendChild(qul);cx.appendChild(qs);
+  if(st.de){
+    var sy=el("div","say");sy.appendChild(el("div","l",st.de.q));sy.appendChild(el("div","kk",t(st.de)));
+    if(LANG==="ko"&&st.de.r)sy.appendChild(el("div","u",U("readAs")+st.de.r));
+    cx.appendChild(el("div","cnt",U("sayLb")));cx.appendChild(sy);
+  }
+  var ss=el("div","qs sense");ss.appendChild(el("h4",null,U("ssH")));
+  var sul=el("ul");
+  st.ss.forEach(function(x,i){
+    var li=el("li",((mk.s||[]).indexOf(i)>=0?"hit":""));li.tabIndex=0;li.setAttribute("role","button");
+    li.appendChild(el("span","mk","○"));li.appendChild(el("span","tx",t(x)));
+    function tog(){var h=(mk.s||[]).slice(),k=h.indexOf(i);if(k>=0)h.splice(k,1);else h.push(i);mk.s=h;li.classList.toggle("hit",k<0);touch("zh/checks-"+s);cnt();}
+    li.addEventListener("click",tog);li.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();tog();}});
+    sul.appendChild(li);
+  });
+  ss.appendChild(sul);cx.appendChild(ss);cx.appendChild(cn);cnt();
+  [["hand","handL","handA","hand"],["body","bodyL","bodyA","body"]].forEach(function(f){
+    var w=el("div","fl2 "+f[3]);var id="fld-"+z+"-"+f[0];
+    var lb=el("label",null,U(f[1]));lb.setAttribute("for",id);w.appendChild(lb);w.appendChild(el("span","ask",U(f[2])+U("onePlace")));
+    var ta=el("textarea");ta.id=id;ta.rows=2;
+    bindTA(ta,"zh/place-"+z,function(){return S.places[z][f[0]];},function(v){S.places[z][f[0]]=v;});
+    w.appendChild(ta);cx.appendChild(w);
+  });
+  pg.appendChild(cx);
+  var others=sc.filter(function(x){return x!==s;});
+  if(others.length){
+    var ot=el("div","else");ot.appendChild(el("div","k",U("elseK")));
+    var oul=el("ul");others.forEach(function(x){var so=stopOf(x,z);oul.appendChild(el("li",null,"<b>"+x+" "+t(SC[x].tab)+" · "+so.t+"</b> — "+t(so.role)));});
+    ot.appendChild(oul);pg.appendChild(ot);
+  }
+  PBB.appendChild(pg);PB.hidden=false;PBB.parentNode.scrollTop=0;
+  PBB.querySelectorAll("textarea").forEach(fit);
+}
+
+/* ── 예약 · 말 · 준비 ── */
+function buildPrep(){
+  var sec=el("section");sec.id="t-prep";
+  var m=el("div","mast");m.appendChild(el("h1",null,U("prepH1")));m.appendChild(el("p",null,U("prepP")));sec.appendChild(m);
+  if(!DATA.only){
+  sec.appendChild(el("div","k",U("wedK")));
+  sec.appendChild(el("p","note",U("wedNote1")));
+  sec.appendChild(el("p","note",U("wedNote2")));
+  var pl=el("div","pills");var a=el("a","pill dark",U("openList"));a.href="https://openhouse-zuerich.org/liste/";a.target="_blank";a.rel="noopener";pl.appendChild(a);sec.appendChild(pl);
+  }
+  sec.appendChild(el("div","k",U("wordsK")));
+  var gl=el("div","gl");WORDS.forEach(function(w){var d=el("div");d.appendChild(el("span","dw",w[0]));d.appendChild(el("span",null,t(w[1])));gl.appendChild(d);});sec.appendChild(gl);
+  sec.appendChild(el("div","k",U("sayK")+'<span class="c">'+U("sayC")+"</span>"));
+  SAY.forEach(function(x){var sy=el("div","say");sy.appendChild(el("div","l",x.q));sy.appendChild(el("div","kk",t(x)));if(LANG==="ko"&&x.r)sy.appendChild(el("div","u",U("readAs")+x.r));sec.appendChild(sy);});
+  sec.appendChild(el("p","note",U("sayNote")));
+  sec.appendChild(el("div","k",U("prepK")+'<span class="c">'+PREP.length+"</span>"));
+  var ul=el("ul","ck");
+  PREP.forEach(function(c){
+    var li=el("li",S.prep[c.id]?"on":"");var id="prep-"+c.id;
+    li.innerHTML='<input type="checkbox" id="'+id+'"'+(S.prep[c.id]?" checked":"")+'><label for="'+id+'">'+t(c.t)+"<span>"+t(c.s)+"</span></label>";
+    li.querySelector("input").addEventListener("change",function(e){S.prep[c.id]=e.target.checked;li.className=e.target.checked?"on":"";touch("zh/prep");});
+    ul.appendChild(li);
+  });
+  sec.appendChild(ul);
+  main.appendChild(sec);sections.prep=sec;
+}
+
+/* ── 판정 ── */
+function buildAfter(){
+  var sec=el("section");sec.id="t-after";
+  var m=el("div","mast");m.appendChild(el("h1",null,U("afterH1")));m.appendChild(el("p",null,U("afterP")));sec.appendChild(m);
+  VQ.forEach(function(r){
+    var w=el("div","rq"+(r.hand?" hand":""));w.appendChild(el("h3",null,t(r.q)));w.appendChild(el("p",null,t(r.sub)));
+    var ta=el("textarea");ta.id="fld-v-"+r.id;ta.rows=r.hand?1:3;ta.setAttribute("aria-label",t(r.q));
+    bindTA(ta,"zh/verdict",function(){return S.verdict[r.id];},function(v){S.verdict[r.id]=v;});
+    w.appendChild(ta);sec.appendChild(w);
+  });
+  var p=el("div","pills");var ex=el("button","pill dark",U("exportBtn"));ex.type="button";ex.addEventListener("click",openExport);p.appendChild(ex);sec.appendChild(p);
+  main.appendChild(sec);sections.after=sec;
+}
+
+/* ── 전부 텍스트로 ── */
+function openExport(){
+  var out=[U("expTitle"),U("expPicked")+((DATA.only||S.choice.pick)?(DATA.only||S.choice.pick)+" "+t(SC[DATA.only||S.choice.pick].tab):U("expNone")),""];
+  ORD.forEach(function(s){
+    var lines=[];
+    stopsOf(s).forEach(function(r){
+      var mk=S.checks[s].map[r.p]||{q:[],s:[]};
+      if((mk.q||[]).length||(mk.s||[]).length){
+        lines.push("["+r.p+"] "+t(P[r.p].nm)+" "+r.t+" — "+prog(s,r.p));
+        (mk.q||[]).slice().sort(function(a,b){return a-b;}).forEach(function(i){lines.push("  ✓ "+parseQ(t(r.qs[i])).t.replace(/<[^>]+>/g,""));});
+        (mk.s||[]).slice().sort(function(a,b){return a-b;}).forEach(function(i){lines.push("  ○ "+t(r.ss[i]));});
+      }
+    });
+    if(lines.length){out.push("== "+s+" "+t(SC[s].title)+" ==");out=out.concat(lines);out.push("");}
+  });
+  var pl=[];PORD.forEach(function(z){var p=S.places[z];if((p.hand||"").trim()||(p.body||"").trim()){pl.push("["+z+"] "+t(P[z].nm));if((p.hand||"").trim())pl.push(U("expHand")+p.hand.trim());if((p.body||"").trim())pl.push(U("expBody")+p.body.trim());}});
+  if(pl.length){out.push(U("expPlaces"));out=out.concat(pl);out.push("");}
+  out.push(U("expVerdict"));VQ.forEach(function(r){out.push(t(r.q)+": "+((S.verdict[r.id]||"").trim()||"—"));});
+  document.getElementById("exTitle").textContent=U("exportBtn");
+  document.getElementById("copyBtn").textContent=U("copy");
+  document.getElementById("closeBtn").textContent=U("close");
+  document.getElementById("exportText").value=out.join("\n");
+  document.getElementById("exportBox").hidden=false;
+}
+document.getElementById("closeBtn").addEventListener("click",function(){document.getElementById("exportBox").hidden=true;});
+document.getElementById("copyBtn").addEventListener("click",function(){
+  var ta=document.getElementById("exportText");ta.focus();ta.select();var ok=false;try{ok=document.execCommand("copy");}catch(e){}
+  if(!ok&&navigator.clipboard){navigator.clipboard.writeText(ta.value).then(function(){setStatus("copied","ok");},function(){setStatus("longpress");});}
+  else setStatus(ok?"copied":"longpress",ok?"ok":"");
+});
+
+/* ── 갱신 ── */
+function updateChips(){
+  chipRefs.forEach(function(c){
+    var st=stopOf(c.s,c.z),n=nq(c.s,c.z),tot=st.qs.length+st.ss.length,sum=n[0]+n[1];
+    c.el.textContent=sum+"/"+tot;c.el.className="chip"+(sum===tot?" full":(sum>0?" part":""));
+  });
+}
+var curTab=DEF;
+function paintChrome(){
+  document.documentElement.lang=LANG;
+  document.title=U("title");
+  document.getElementById("topT").textContent=U("title");
+  document.getElementById("topS").textContent=U("sub");
+  document.getElementById("langBtn").textContent=LANG==="en"?"한국어":"EN";
+  document.getElementById("foot").innerHTML=U("footer");
+  statEl.textContent=U(lastStat[0]||"loading")+(lastStat[2]||"");
+  paintThemeBtn();
+}
+function rerender(){
+  var y=window.scrollY;main.innerHTML="";sections={};chipRefs=[];
+  fieldEls=fieldEls.filter(function(o){return PBB.contains(o.t);});
+  paintChrome();buildTabs();if(!DATA.only)buildCmp();ORD.forEach(buildScen);buildPrep();buildAfter();
+  showTab(curTab,true);window.scrollTo(0,y);
+  if(!PB.hidden&&curPlace){var ae=document.activeElement;if(!(ae&&PBB.contains(ae)&&ae.tagName==="TEXTAREA"))openPlace(curPlace,curScen);}
+  fieldEls.forEach(function(o){if(o.t!==document.activeElement){var v=o.get()||"";if(o.t.value!==v)o.t.value=v;}fit(o.t);});
+  updateChips();paintNow();
+}
+function showTab(id,keep){
+  if(!sections[id])id=DEF;curTab=id;
+  Object.keys(sections).forEach(function(k){sections[k].hidden=(k!==id);});
+  [].forEach.call(tabsEl.children,function(b){b.setAttribute("aria-selected",b.dataset.tab===id?"true":"false");});
+  try{localStorage.setItem(TABKEY,id);}catch(e){}
+  fieldEls.forEach(function(o){fit(o.t);});
+  if(!keep)window.scrollTo(0,0);
+}
+document.getElementById("langBtn").addEventListener("click",function(){
+  LANG=(LANG==="en"?"ko":"en");try{localStorage.setItem(LANGKEY,LANG);}catch(e){}rerender();
+});
+document.getElementById("themeBtn").addEventListener("click",function(){
+  var nx=curTheme()==="dark"?"light":"dark";applyTheme(nx);try{localStorage.setItem(THEMEKEY,nx);}catch(e){}paintThemeBtn();
+});
+
+/* ── 시작 ── */
+try{curTab=localStorage.getItem(TABKEY)||DEF;}catch(e){}
+lastStat=["loading","",""];
+rerender();
+idleStatus();
+setInterval(paintNow,30000);
+if(ED==="private"){
+
+}
+})();
+</script>
+
+</body>
+</html>
