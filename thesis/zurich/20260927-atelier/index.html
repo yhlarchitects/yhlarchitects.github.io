@@ -231,10 +231,10 @@ footer{border-top:1px solid var(--rule);margin-top:34px;padding-top:10px;font-si
 .rn .it{padding:18px 0 8px;border-top:1px solid var(--rule);margin-top:18px}
 .rn .it h2{font-family:var(--h);font-size:21px;line-height:28px;text-wrap:balance}
 .rn .it .who{font-family:var(--n);font-size:12px;line-height:18px;color:var(--mute);margin-top:2px}
-.rn .sc{margin-top:12px}
-.rn .sc .lb{font-size:11px;line-height:17px;letter-spacing:.04em;color:var(--mute)}
-.rn .sc p{font-size:15px;line-height:24px;margin-top:4px;max-width:62ch}
-.rn .sc p a{font-family:var(--n);font-size:11px;color:var(--mute);margin-left:4px;overflow-wrap:anywhere}
+.rn .rs{margin-top:14px;display:block}
+.rn .rs .lb{font-size:11px;line-height:17px;letter-spacing:.04em;color:var(--mute)}
+.rn .rs p{font-size:15px;line-height:24px;margin-top:4px;max-width:62ch}
+.rn .rs p a{font-family:var(--n);font-size:11px;color:var(--mute);margin-left:4px;overflow-wrap:anywhere}
 .rn .refs li{display:block;font-size:13px;line-height:20px;padding:6px 0;border-bottom:1px solid var(--hair)}
 .rn .refs a{color:var(--ink);overflow-wrap:anywhere}
 @media (max-width:400px){
@@ -531,7 +531,7 @@ function buildRN(){
   R.items.forEach(function(it){
     var d=el("div","it");d.appendChild(el("h2",null,t(it.h)));if(it.who)d.appendChild(el("div","who",t(it.who)));
     it.secs.forEach(function(sc){
-      var b=el("div","sc");b.appendChild(el("div","lb",t(sc.lb)));
+      var b=el("div","rs");b.appendChild(el("div","lb",t(sc.lb)));
       sc.ps.forEach(function(pp){
         var html=t(pp.k);(pp.src||[]).forEach(function(x){html+=' <a href="'+x.u+'" target="_blank" rel="noopener">'+x.t+"</a>";});
         b.appendChild(el("p",null,html));
