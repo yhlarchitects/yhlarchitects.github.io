@@ -81,7 +81,8 @@ def build(source, output):
     (output / 'photos.json').write_text(json.dumps(catalog, ensure_ascii=False, indent=2), encoding='utf-8', newline='\n')
     for name in ('CNAME', 'robots.txt', '.nojekyll'):
         shutil.copy2(source / name, output / name)
-    shutil.copytree(source / 'thesis', output / 'thesis')
+    for folder in ('thesis', 'bangyeol'):
+        shutil.copytree(source / folder, output / folder)
     print(json.dumps({'photos': len(catalog), 'objects': len(OBJECTS), 'output': str(output)}, ensure_ascii=False))
     return catalog
 
