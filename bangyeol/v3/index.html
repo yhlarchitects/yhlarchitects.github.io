@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>방결 | 내 방에도 나의 결이 있다</title>
+<meta name="description" content="생년월일로 내 방의 결을 읽어요. 바꿀 건 하나예요.">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="./" aria-label="방결 처음으로"><img src="icon.svg" alt="" width="22" height="22"><span>방결</span></a>
+  <button class="link" id="restart" type="button" hidden>처음부터</button>
+</header>
+<main id="app" class="app" aria-live="polite"></main>
+<footer class="foot">
+  <p>생년월일은 이 기기 안에서만 계산해요. 어디로도 보내지 않아요. 상대의 생년월일은 저장하지 않아요.</p>
+</footer>
+<script type="module" src="app.mjs"></script>
+</body>
+</html>
