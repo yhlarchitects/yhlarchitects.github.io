@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#192a43"><meta name="description" content="방결의 첫 체험판. 오행의 이야기와 방의 조건을 조합해 오늘 해볼 작은 공간 변화를 찾습니다. 생년월일로 타고난 기운을 계산합니다. 결제는 없습니다.">
+<title>방결 | 내 방에도 나의 결이 있다</title><link rel="icon" href="./icon.svg" type="image/svg+xml"><link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="mast"><a href="./" aria-label="방결 처음으로" class="brand">방결<span>BANGYEOL</span></a><span class="edition">ROOM NOTES · 001</span><button class="textbutton" id="about">체험판 안내</button></header>
+<main>
+<section class="intro"><div><p class="eyebrow">사주 연동 전 체험판 · 무료</p><h1>내 방에도<br>나의 <em>결</em>이 있다.</h1><p class="lead">지금의 방에서, 지금 가진 것으로.<br>오늘 바꿔볼 세 가지를 찾아보세요.</p></div><figure><img src="./room.png" alt="나무 책상과 푸른 침구가 놓인 작은 방의 분위기 예시" width="1536" height="1024"><figcaption>방결의 분위기 예시 · AI로 만든 이미지</figcaption></figure></section>
+<div class="workspace">
+<section class="inputs" aria-labelledby="inputTitle"><div class="sectionhead"><span>01 / 나의 방</span><h2 id="inputTitle">어떤 방에 살고 계세요?</h2></div>
+<form id="roomForm">
+<fieldset><legend>지금 가장 바꾸고 싶은 것</legend><div class="choices three">
+<label><input type="radio" name="concern" value="rest" checked><span>편히 쉬고 싶어요</span></label>
+<label><input type="radio" name="concern" value="focus"><span>집중하고 싶어요</span></label>
+<label><input type="radio" name="concern" value="clutter"><span>덜 어수선했으면</span></label></div></fieldset>
+<div class="fieldrow"><div><label for="light">낮의 빛</label><select id="light" name="light"><option value="low">조금 어두워요</option><option value="bright">빛이 잘 들어요</option></select></div><div><label for="scope">바꿀 수 있는 범위</label><select id="scope" name="scope"><option value="rental">임차 공간 · 타공 없이</option><option value="flexible">가구 이동 가능</option></select></div></div>
+<fieldset><legend>이번 변화의 예산</legend><div class="choices three"><label><input type="radio" name="budget" value="zero" checked><span>0원</span></label><label><input type="radio" name="budget" value="small"><span>3만 원 이내</span></label><label><input type="radio" name="budget" value="medium"><span>10만 원 이내</span></label></div></fieldset>
+<fieldset><legend>생년월일로 내 기운 찾기</legend><div class="fieldrow"><div><label for="birthDate">생년월일(양력)</label><input type="date" id="birthDate" min="1900-01-01" max="2050-12-31"></div><div><label for="birthTime">태어난 시각(한국 시각, 몰라도 됩니다)</label><input type="time" id="birthTime"></div></div><button class="textbutton" type="button" id="birthCalc">사주 계산해서 테마 고르기</button><p class="hint" id="birthOut" aria-live="polite"></p></fieldset><fieldset><legend>끌리는 오행 이야기를 골라보세요</legend><p class="hint">위에서 생년월일로 계산하면 타고난 기운(일간)의 테마가 골라집니다. 직접 골라도 됩니다.</p><div class="choices elements">
+<label><input type="radio" name="element" value="wood" checked><span><b>木</b>목 · 자람</span></label><label><input type="radio" name="element" value="fire"><span><b>火</b>화 · 온기</span></label><label><input type="radio" name="element" value="earth"><span><b>土</b>토 · 안정</span></label><label><input type="radio" name="element" value="metal"><span><b>金</b>금 · 여백</span></label><label><input type="radio" name="element" value="water"><span><b>水</b>수 · 고요</span></label></div></fieldset>
+<button class="primary" type="submit">내 방의 세 가지 변화 보기</button><p class="hint quiet">입력 내용은 이 기기에서만 처리합니다. 결제는 없습니다.</p><p id="formError" role="alert"></p>
+</form></section>
+<section class="result" id="result" aria-labelledby="resultTitle" tabindex="-1"><div class="sectionhead"><span id="resultState">02 / 결과 예시</span><span id="resultElement" class="elementstamp">木</span></div><p class="eyebrow">나의 ROOM NOTE</p><h2 id="resultTitle">자라는 방</h2><p class="resultline" id="resultLine">조금씩 바뀌어도 편안한 공간</p><div id="swatches" class="swatches" aria-label="색상 제안"></div><p class="material" id="material"></p><div class="divider"></div><p id="before" class="before">왼쪽에서 방의 조건을 고르면<br>오늘 해볼 세 가지를 보여드려요.</p><div id="reportBody" hidden><ol id="actions"></ol><p class="constraint" id="constraint"></p><div class="resulttools"><button id="saveCard" type="button">카드 저장</button><button id="copy" type="button">글 복사</button><button id="keep" type="button">이 기기에 보관</button></div><p class="saved" id="status" role="status"></p></div><p class="resultnote">오행 이야기는 자기 탐색을 위한 표현입니다.<br>운·건강·재산의 변화를 보장하지 않습니다.</p></section>
+</div>
+<section class="bottom"><p><b>읽고 끝내지 않는 공간 이야기.</b><br>마음에 드는 제안 하나만 골라, 오늘 저녁 바꿔보세요.</p><div><button class="textbutton" id="reset">처음부터</button><button class="textbutton" id="privacy">개인정보 안내</button></div></section>
+</main><footer><span>방결 · 가칭 / 체험판 v1</span><span>사주 계산 · 결제 · 앱스토어 출시 준비 중</span></footer>
+<dialog id="info"><button id="closeInfo" aria-label="안내 닫기" class="close">닫기</button><h2 id="infoTitle"></h2><div id="infoBody"></div></dialog>
+<script type="module" src="./app.mjs"></script>
+<script type="module">{
+// 네 기둥(년·월·일·시) 계산. 외부 라이브러리 없이 율리우스일과 태양 황경에서 직접 구한다.
+// 지원 범위: 한국 표준시가 UTC+9인 출생(1961-08-10 이후). 그 이전은 attention으로 표시만 한다.
+
+const STEMS = '甲乙丙丁戊己庚辛壬癸';
+const BRANCHES = '子丑寅卯辰巳午未申酉戌亥';
+const gz = (i) => STEMS[((i % 10) + 10) % 10] + BRANCHES[((i % 12) + 12) % 12];
+
+// 그레고리력 날짜 -> 율리우스일 번호
+function jdn(y, m, d) {
+  const a = Math.floor((14 - m) / 12), yy = y + 4800 - a, mm = m + 12 * a - 3;
+  return d + Math.floor((153 * mm + 2) / 5) + 365 * yy + Math.floor(yy / 4)
+    - Math.floor(yy / 100) + Math.floor(yy / 400) - 32045;
+}
+
+// UTC ms -> 태양 겉보기 황경(도). Meeus 25장 저정밀식. 오차 약 0.01도 = 절기 시각으로 15분 안팎.
+function sunLongitude(utcMs) {
+  const rad = Math.PI / 180;
+  const T = (utcMs / 86400000 + 2440587.5 - 2451545) / 36525;
+  const L0 = 280.46646 + 36000.76983 * T + 0.0003032 * T * T;
+  const M = (357.52911 + 35999.05029 * T - 0.0001537 * T * T) * rad;
+  const C = (1.914602 - 0.004817 * T - 0.000014 * T * T) * Math.sin(M)
+    + (0.019993 - 0.000101 * T) * Math.sin(2 * M) + 0.000289 * Math.sin(3 * M);
+  const omega = (125.04 - 1934.136 * T) * rad;
+  const lam = L0 + C - 0.00569 - 0.00478 * Math.sin(omega);
+  return ((lam % 360) + 360) % 360;
+}
+
+const fmt = new Intl.DateTimeFormat('en-US', {
+  timeZone: 'Asia/Seoul', hourCycle: 'h23', year: 'numeric', month: 'numeric',
+  day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric',
+});
+function seoulOffsetMin(utcMs) {
+  const p = Object.fromEntries(fmt.formatToParts(new Date(utcMs)).map((x) => [x.type, +x.value]));
+  return (Date.UTC(p.year, p.month - 1, p.day, p.hour, p.minute, p.second) - Math.floor(utcMs / 1000) * 1000) / 60000;
+}
+// 서울 벽시계 시각 -> UTC ms (서머타임·옛 표준시는 시간대 자료가 처리)
+function seoulToUtc(y, m, d, hh, mi) {
+  const wall = Date.UTC(y, m - 1, d, hh, mi);
+  let utc = wall - 9 * 3600000;
+  utc = wall - seoulOffsetMin(utc) * 60000;
+  utc = wall - seoulOffsetMin(utc) * 60000;
+  return utc;
+}
+
+// UTC 순간에서 네 기둥.
+// hourShiftMin: 30이면 시 경계를 30분 늦춘다(辰시 = 07:30~09:30). 0이면 정시 경계.
+// dayRollover: 'ziStart' = 子시가 시작될 때 날이 바뀐다. 'midnight' = 자정에 바뀐다(야자시·조자시 구분).
+function pillarsFromUtc(utcMs, { hourShiftMin = 30, dayRollover = 'ziStart' } = {}) {
+  // 년·월: 태양 황경. 입춘(315도)에서 해가 바뀌고 30도마다 달이 바뀐다.
+  const lam = sunLongitude(utcMs);
+  const k = Math.floor((((lam - 315) % 360) + 360) % 360 / 30); // 0 = 寅월
+  const g = new Date(utcMs + 9 * 3600000);
+  let sy = g.getUTCFullYear();
+  if (k >= 10 && g.getUTCMonth() + 1 <= 2) sy -= 1;
+  const yearIdx = (((sy - 4) % 60) + 60) % 60;
+  const monthIdx = ((yearIdx % 10) * 2 + 2 + k) % 10; // 천간
+  const month = STEMS[monthIdx] + BRANCHES[(k + 2) % 12];
+
+  // 일·시: 표준시 시계(UTC+9, 서머타임 제거)에서 경계 보정만큼 뺀 시계
+  const adj = new Date(utcMs + 9 * 3600000 - hourShiftMin * 60000);
+  const mins = adj.getUTCHours() * 60 + adj.getUTCMinutes();
+  const baseDay = (jdn(adj.getUTCFullYear(), adj.getUTCMonth() + 1, adj.getUTCDate()) + 49) % 60;
+  const lateZi = mins >= 23 * 60;
+  const hourDay = lateZi ? baseDay + 1 : baseDay;
+  const dayIdx = lateZi && dayRollover === 'ziStart' ? baseDay + 1 : baseDay;
+  const hb = Math.floor(((mins + 60) % 1440) / 120);
+  const hour = STEMS[((hourDay % 10) * 2 + hb) % 10] + BRANCHES[hb];
+
+  return { year: gz(yearIdx), month, day: gz(dayIdx), hour, sunLongitude: lam };
+}
+
+function pillars(y, m, d, hh, mi, opts) {
+  const utc = seoulToUtc(y, m, d, hh, mi);
+  const out = pillarsFromUtc(utc, opts);
+  out.attention = utc < Date.UTC(1961, 7, 9, 15, 0) ? '1961-08-10 이전 출생: 표준시가 달라 미검증' : null;
+  return out;
+}
+
+// 황경이 target도를 지나는 UTC ms를 [lo, hi] 안에서 이분법으로 찾는다.
+function crossing(target, lo, hi) {
+  const f = (t) => ((((sunLongitude(t) - target) % 360) + 540) % 360) - 180;
+  for (let i = 0; i < 50; i++) {
+    const mid = (lo + hi) / 2;
+    if (f(mid) < 0) lo = mid; else hi = mid;
+  }
+  return (lo + hi) / 2;
+}
+
+// 생년월일시 -> 네 기둥 -> 일간의 오행으로 테마 선택. saju.mjs의 함수와 같은 블록 안에 붙여 쓴다.
+const EL = { 甲: ['wood', '목'], 乙: ['wood', '목'], 丙: ['fire', '화'], 丁: ['fire', '화'], 戊: ['earth', '토'], 己: ['earth', '토'], 庚: ['metal', '금'], 辛: ['metal', '금'], 壬: ['water', '수'], 癸: ['water', '수'] };
+const $ = (id) => document.getElementById(id);
+$('birthCalc').addEventListener('click', () => {
+  const out = $('birthOut');
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec($('birthDate').value);
+  if (!m || +m[1] < 1900 || +m[1] > 2050) { out.textContent = '생년월일을 1900~2050년 사이로 넣어주세요.'; return; }
+  const t = /^(\d{2}):(\d{2})/.exec($('birthTime').value);
+  const p = pillars(+m[1], +m[2], +m[3], t ? +t[1] : 12, t ? +t[2] : 0);
+  const [value, name] = EL[p.day[0]];
+  const notes = [];
+  const x = (((p.sunLongitude - 15) % 30) + 30) % 30; // 절기는 황경 15도, 45도, ... 에서 바뀐다
+  const edge = Math.min(x, 30 - x);
+  if (edge < (t ? 0.011 : 0.5)) notes.push('절기가 바뀌는 때와 가까워 달 기둥이 한 칸 다를 수 있어요.');
+  if (!t) notes.push('태어난 시각이 없어 시 기둥은 뺐어요. 밤 11시 반 이후 출생이면 날 기둥이 달라질 수 있어요.');
+  else { const mins = +t[1] * 60 + +t[2]; if (mins >= 1410 || mins < 30) notes.push('밤 11시 반~0시 반 출생은 보는 방식에 따라 날 기둥이 달라져요.'); }
+  if (p.attention) notes.push('1961년 8월 이전 출생은 시각 기준이 달라 참고용이에요.');
+  out.textContent = `${p.year}년 ${p.month}월 ${p.day}일${t ? ` ${p.hour}시` : ''} · 타고난 기운(일간) ${p.day[0]} = ${name}. 아래 테마를 ${name}(으)로 골라뒀어요. 바꿔도 됩니다.${notes.length ? ' ' + notes.join(' ') : ''}`;
+  const r = document.querySelector(`input[name="element"][value="${value}"]`);
+  if (r) { r.checked = true; r.dispatchEvent(new Event('change', { bubbles: true })); }
+});
+$('roomForm').addEventListener('reset', () => { $('birthOut').textContent = ''; });
+
+}</script></body></html>
