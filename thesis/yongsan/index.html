@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Yongsan Parking - Team Board</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<!-- team board v2: schedule, lecture notes, KO/EN, light/dark -->
+<style>
+:root{
+  --chip-ink:#12120f;
+  --act-bg:#0a0a0a;
+  --act-fg:#ffffff;
+  --r:"YDIYGO320","-윤고딕320","Pretendard","맑은 고딕",sans-serif;
+  --b:"YDIYGO330","-윤고딕330",var(--r);
+  --h:"YDIYGO350","-윤고딕350",var(--r);
+  --n:"Helvetica Neue",Helvetica,Arial,var(--r);
+  --paper:#f6f5f0; --card:#fffefa; --ink:#12120f; --mute:#7d7c74; --hair:#d5d3cb; --rule:#12120f;
+  --y:#f2f06a; --bl:#c2e4f2; --g:#a8efc6; --gy:#e6e5df;
+  --bar:52px;
+}
+[data-mode="dark"]{
+  --paper:#21211f; --card:#292927; --ink:#edece7; --mute:#918f88; --hair:#3a3a37; --rule:#edece7;
+  --gy:#33332f;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{height:100%;}
+body{background:var(--paper);color:var(--ink);font-family:var(--r);
+     font-size:15px;line-height:23px;-webkit-text-size-adjust:100%;overflow:hidden;}
+b,strong,.b{font-family:var(--b);font-weight:400;}
+
+.bar{height:var(--bar);border-bottom:1px solid var(--rule);display:flex;align-items:center;
+     gap:16px;padding:0 20px;background:var(--paper);}
+.bar .mk{font-family:var(--h);font-size:19px;letter-spacing:0;white-space:nowrap;}
+.bar .mk span{font-family:var(--r);color:var(--mute);}
+.bar .sub{font-size:13px;line-height:20px;color:var(--mute);white-space:nowrap;
+          overflow:hidden;text-overflow:ellipsis;min-width:0;}
+.bar .pills{display:flex;gap:6px;margin-left:auto;white-space:nowrap;align-items:center;}
+.bar button,.btn{appearance:none;border:1px solid var(--ink);background:transparent;color:var(--ink);
+  font-family:var(--b);font-size:12px;line-height:18px;padding:3px 12px;border-radius:999px;cursor:pointer;text-decoration:none;display:inline-block;}
+.btn.off{border-color:var(--hair);color:var(--mute);cursor:default;}
+@media(max-width:900px){.bar .sub{display:none;}}
+@media(max-width:560px){.bar{gap:10px;padding:0 14px;} .bar .pills .chip.bl{display:none;} .bar .mk{font-size:17px;}}
+@media(max-width:420px){.bar .pills .chip.y{display:none;}}
+
+.panes{height:calc(100% - var(--bar));display:grid;
+       grid-template-columns:var(--w1,340px) 5px minmax(240px,1fr) 5px var(--w3,380px);}
+.panes.dragging{cursor:col-resize;user-select:none;}
+.panes.dragging .pane{pointer-events:none;}
+.gut{position:relative;cursor:col-resize;background:transparent;touch-action:none;}
+.gut::before{content:"";position:absolute;inset:0 2px;background:var(--hair);}
+.gut::after{content:"";position:absolute;left:-3px;right:-3px;top:0;bottom:0;}
+.gut:hover::before,.gut.on::before{background:var(--ink);}
+.pane{height:100%;overflow-y:auto;overscroll-behavior:contain;padding:0 20px 60px;}
+.pane::-webkit-scrollbar{width:9px;}
+.pane::-webkit-scrollbar-thumb{background:var(--hair);border-radius:9px;}
+.pane::-webkit-scrollbar-track{background:transparent;}
+.pane .top{position:sticky;top:0;z-index:5;background:var(--paper);
+  padding:11px 0 7px;border-bottom:1px solid var(--rule);margin-bottom:14px;}
+.pane .top .lb{font-family:var(--h);font-size:13px;line-height:19px;letter-spacing:.06em;text-transform:uppercase;}
+.pane .top .lb i{font-style:normal;color:var(--mute);font-family:var(--r);letter-spacing:0;
+  text-transform:none;margin-left:8px;font-size:12px;}
+.pane .jump{display:flex;gap:5px;flex-wrap:wrap;margin-top:8px;}
+.pane .jump button{appearance:none;cursor:pointer;font-family:var(--b);
+  font-size:12px;line-height:18px;letter-spacing:0;padding:2px 10px;border-radius:999px;
+  border:1px solid var(--hair);background:transparent;color:var(--mute);white-space:nowrap;}
+.pane .jump button:hover{border-color:var(--ink);color:var(--ink);}
+.pane .jump button.on{background:var(--act-bg);color:var(--act-fg);border-color:var(--act-bg);}
+h3.k{scroll-margin-top:0;}
+
+@media(max-width:1180px){
+  body{overflow:auto;} .panes{height:auto;grid-template-columns:1fr;}
+  .pane{height:auto;overflow:visible;border-top:1px solid var(--rule);}
+  .pane .top{top:52px;}
+  .gut{display:none;}
+  .bar{position:sticky;top:0;z-index:10;}
+}
+
+h3.k{font-family:var(--h);font-size:12px;line-height:18px;letter-spacing:.08em;text-transform:uppercase;
+     border-top:1px solid var(--rule);padding-top:6px;margin:24px 0 9px;}
+h3.k:first-of-type{margin-top:4px;}
+h3.k .c{float:right;color:var(--mute);font-family:var(--r);letter-spacing:0;text-transform:none;font-size:12px;}
+
+.dday{font-family:var(--n);font-size:58px;line-height:56px;letter-spacing:-.035em;margin:2px 0 0;}
+.dday small{font-family:var(--b);font-size:13px;line-height:20px;letter-spacing:0;color:var(--mute);display:block;margin-top:6px;}
+
+.tl{position:relative;padding-left:18px;}
+.tl::before{content:"";position:absolute;left:5px;top:8px;bottom:8px;width:1px;background:var(--hair);}
+.tl .p{position:relative;padding:4px 0;font-size:14px;line-height:21px;
+       display:grid;grid-template-columns:50px minmax(0,1fr);gap:8px;}
+.tl .p::before{content:"";position:absolute;left:-16px;top:11px;width:9px;height:9px;border-radius:50%;
+  background:var(--paper);border:1px solid var(--mute);}
+.tl .p.done::before{background:var(--mute);border-color:var(--mute);}
+.tl .p.now::before{background:var(--y);border-color:var(--ink);width:11px;height:11px;left:-17px;top:10px;}
+.tl .p.key::before{background:var(--g);border-color:var(--ink);}
+.tl .p.judge::before{background:var(--bl);border-color:var(--ink);}
+.tl .d{font-family:var(--n);color:var(--mute);font-size:13px;}
+.tl .t{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.tl .p.now .t,.tl .p.key .t{font-family:var(--b);}
+.tl .p.done .d,.tl .p.done .t{color:var(--mute);}
+.tl.wrap .p{grid-template-columns:76px minmax(0,1fr);}
+.tl.wrap .t{white-space:normal;}
+.tl.wrap .t small{display:block;color:var(--mute);font-size:13px;line-height:20px;}
+
+.kv{display:grid;grid-template-columns:auto minmax(0,1fr);gap:2px 10px;font-size:14px;line-height:21px;}
+.kv .k{color:var(--mute);white-space:nowrap;}
+.kv .v{text-align:right;font-family:var(--n);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.kv .v.kr{font-family:var(--r);}
+.kv .v b{font-family:var(--b);}
+
+.card{background:var(--card);border:1px solid var(--hair);padding:13px 15px;margin-bottom:9px;}
+.card .h{display:flex;gap:9px;align-items:baseline;margin-bottom:5px;}
+.card .h .dt{font-family:var(--n);font-size:13px;color:var(--mute);}
+.card .h .ti{font-family:var(--b);font-size:15px;line-height:22px;letter-spacing:0;}
+.card ul{list-style:none;}
+.card li{font-size:14px;line-height:21px;padding:2px 0 2px 13px;position:relative;}
+.card li::before{content:"-";position:absolute;left:0;color:var(--mute);}
+.card .lk{margin-top:8px;padding-top:7px;border-top:1px solid var(--hair);font-size:14px;line-height:21px;}
+.card .lk .chip{margin-right:6px;}
+.card .src{margin-top:6px;font-size:12px;line-height:18px;color:var(--mute);}
+
+.defs{border-top:1px solid var(--rule);}
+.def{display:grid;grid-template-columns:150px minmax(0,1fr) auto;gap:14px;padding:6px 0;
+     border-bottom:1px solid var(--hair);align-items:baseline;}
+.def .k{font-size:13px;line-height:20px;color:var(--mute);white-space:nowrap;}
+.def .v{font-size:14px;line-height:21px;min-width:0;}
+.def .r{font-family:var(--n);font-size:13px;color:var(--mute);white-space:nowrap;}
+.def.two{grid-template-columns:minmax(0,1fr) auto;}
+.def.two .r{text-align:right;line-height:19px;}
+@media(max-width:640px){.def{grid-template-columns:110px 1fr;} .def .r{grid-column:2;} .def.two{grid-template-columns:minmax(0,1fr) auto;} .def.two .r{grid-column:auto;}}
+
+.acts{border-top:1px solid var(--rule);}
+.act{display:grid;grid-template-columns:22px minmax(0,1fr);gap:9px;padding:8px 0;
+     border-bottom:1px solid var(--hair);align-items:start;cursor:default;}
+.act:hover{background:var(--card);}
+.act .n{font-family:var(--n);font-size:13px;color:var(--mute);padding-top:2px;}
+.act .t{font-size:14px;line-height:21px;}
+.act .t .who{font-size:13px;line-height:20px;color:var(--mute);display:block;margin-top:1px;}
+
+.chip{display:inline-block;font-family:var(--b);font-size:12px;line-height:18px;letter-spacing:0;
+      border:1px solid var(--ink);border-radius:999px;padding:1px 9px;white-space:nowrap;}
+.chip.y{background:var(--y);border-color:transparent;color:var(--chip-ink);}
+.chip.bl{background:var(--bl);border-color:transparent;color:var(--chip-ink);}
+.chip.g{background:var(--g);border-color:transparent;color:var(--chip-ink);}
+.chip.gy{background:var(--gy);border-color:transparent;color:var(--mute);}
+.chips{display:flex;gap:4px;flex-wrap:wrap;margin-top:4px;}
+
+.lede{font-size:18px;line-height:26px;letter-spacing:0;margin:12px 0 6px;}
+.note{font-size:14px;line-height:21px;color:var(--mute);}
+.end{font-size:13px;line-height:20px;color:var(--mute);margin-top:22px;padding-top:8px;border-top:1px solid var(--hair);}
+.row{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px;}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <span class="mk" id="mk"></span>
+  <span class="sub" id="sub"></span>
+  <span class="pills" id="pills"><button type="button" id="lang">한국어</button><button type="button" id="mode">Dark</button></span>
+</div>
+
+<div class="panes">
+  <div class="pane" id="pane1"><div class="top"><div class="lb" id="lb1"></div><div class="jump"></div></div><div id="body1"></div></div>
+  <div class="gut" data-g="1"></div>
+  <div class="pane" id="pane2"><div class="top"><div class="lb" id="lb2"></div><div class="jump"></div></div><div id="body2"></div></div>
+  <div class="gut" data-g="3"></div>
+  <div class="pane" id="pane3"><div class="top"><div class="lb" id="lb3"></div><div class="jump"></div></div><div id="body3"></div></div>
+</div>
+
+<script>
+/* === 데이터: 여기만 고친다 === */
+var KICKOFF = null;   /* 킥오프 시각, 예 '2026-10-06T17:00:00+02:00' (바젤) */
+var MIRO_URL = null;  /* 미로 보드 주소 */
+var UPDATED = '2026-10-03';
+
+var T = {
+  mk:{ko:'용산 주차장', en:'Yongsan Parking'},
+  sub:{ko:'용산전자상가지구 특별계획구역8 공영주차장 설계공모 · 서울 용산구 한강로2가 12-12 · 팀 공유 보드',
+       en:'Seoul design competition, public parking building, Yongsan Electronics Market · Hangang-ro 2-ga 12-12 · team board'},
+  lb1:{ko:'일정 <i>서울 · 바젤</i>', en:'Schedule <i>Seoul · Basel</i>'},
+  lb2:{ko:'강의 노트 <i>대상지의 도시 맥락 · 지형 변천</i>', en:'Lecture notes <i>urban context · changing ground</i>'},
+  lb3:{ko:'팀 <i>역할 · 지금 할 일 · 규칙</i>', en:'Team <i>roles · now · rules</i>'},
+  dSubmit:{ko:'작품접수', en:'submission'},
+  dSubmitLabel:{ko:'작품접수 마감 11-20(금) 17:00 서울 = 바젤 09:00', en:'Submission closes Fri 20 Nov 17:00 Seoul = 09:00 Basel'},
+  dQa:{ko:'질의', en:'Q&A'},
+  dReg:{ko:'등록', en:'registration'},
+  passed:{ko:'경과', en:'passed'},
+  hClock:{ko:'지금', en:'Now'},
+  seoul:{ko:'서울', en:'Seoul'}, basel:{ko:'바젤', en:'Basel'},
+  hTl:{ko:'타임라인', en:'Timeline'}, hTlSub:{ko:'날짜는 서울', en:'dates in Seoul'},
+  hDates:{ko:'정확한 시각', en:'Exact times'}, hDatesSub:{ko:'서울 · 바젤', en:'Seoul · Basel'},
+  dst:{ko:'바젤은 10-25까지 서울보다 7시간, 그 뒤 8시간 늦다. 표는 자동 환산.', en:'Basel is 7 hours behind Seoul until 25 Oct, then 8 hours. Converted automatically.'},
+  ics:{ko:'전체 일정을 내 달력에 (.ics)', en:'Add all dates to my calendar (.ics)'},
+  miro:{ko:'미로 보드', en:'Miro board'}, miroOff:{ko:'미로 보드 (주소 준비 중)', en:'Miro board (link coming)'},
+  hSpec:{ko:'건물', en:'The building'}, hSpecSub:{ko:'지침서', en:'from the guidelines'},
+  updated:{ko:'갱신', en:'Updated'},
+  foot:{ko:'비공개 팀 페이지. 링크를 다른 사람에게 보내지 말 것.', en:'Private team page. Please do not share the link.'},
+  hRoles:{ko:'누가 무엇을', en:'Who does what'},
+  hNow:{ko:'지금 할 일', en:'What we need now'},
+  hRules:{ko:'규칙', en:'Rules'}, hRulesSub:{ko:'어기면 탈락·수상 취소', en:'breaking these can disqualify us'},
+  hScore:{ko:'심사 배점', en:'How it is judged'}, hScoreSub:{ko:'100점', en:'100 points'},
+  hIntro:{ko:'이 노트에 대해', en:'About these notes'},
+  hHist:{ko:'연표', en:'Timeline of the ground'}, hHistSub:{ko:'오래된 것부터', en:'oldest first'},
+  hCh:{ko:'강의', en:'Lectures'},
+  hGloss:{ko:'용어', en:'Glossary'},
+  link:{ko:'대상지와의 관계', en:'Link to our site'},
+  src:{ko:'출처', en:'Source'},
+  pending:{ko:'강의 노트를 정리하는 중이다.', en:'Lecture notes are being prepared.'}
+};
+
+/* 일정. at = 정확한 시각(오프셋 포함), day = 하루 종일. kind: hard 마감 · key 팀 · judge 심사 · off 공모 */
+var EVENTS = [
+  {day:'2026-10-01', kind:'off', ko:'본공고 · 지침서 공개 · 등록 시작', en:'Guidelines out, registration opens'},
+  {at:'2026-10-07T10:00:00+09:00', kind:'off', ko:'현장설명회 (참석 의무 없음) · 질의 시작', en:'Site briefing (optional) · Q&A opens'},
+  {at:'2026-10-09T18:00:00+02:00', kind:'key', ko:'팀 질문을 연호에게', en:'Your questions to Yeonho'},
+  {at:'2026-10-12T18:00:00+09:00', kind:'hard', ko:'질의 마감', en:'Q&A closes'},
+  {day:'2026-10-16', kind:'off', ko:'질의 답변 공개', en:'Answers published'},
+  {at:'2026-10-23T18:00:00+09:00', kind:'hard', ko:'참가 등록 마감', en:'Registration closes'},
+  {day:'2026-10-24', kind:'key', ko:'컨셉 확정 (제안)', en:'Concept fixed (proposed)'},
+  {day:'2026-11-07', kind:'key', ko:'설계 동결 (제안)', en:'Design freeze (proposed)'},
+  {day:'2026-11-13', kind:'key', ko:'패널 초안 (제안)', en:'Panel draft (proposed)'},
+  {day:'2026-11-16', kind:'off', ko:'접수 시작', en:'Submission window opens'},
+  {day:'2026-11-18', kind:'key', ko:'우리 최종 업로드 (제안)', en:'Our final upload (proposed)'},
+  {at:'2026-11-20T17:00:00+09:00', kind:'hard', ko:'작품접수 마감', en:'SUBMISSION DEADLINE'},
+  {day:'2026-11-26', kind:'judge', ko:'기술분야검토', en:'Technical review'},
+  {at:'2026-12-08T09:00:00+09:00', kind:'judge', ko:'1차 심사 · 5작품 선정', en:'Round 1 · jury picks 5'},
+  {at:'2026-12-15T09:00:00+09:00', kind:'judge', ko:'2차 발표 심사 (유튜브 생중계)', en:'Round 2 · presentations, live on YouTube'},
+  {at:'2026-12-18T17:00:00+09:00', kind:'judge', ko:'결과 발표', en:'Result'}
+];
+
+var SPEC = [
+  [{ko:'대지',en:'Site'}, '2,216 m²'],
+  [{ko:'연면적',en:'Max GFA'}, '<b>20,847.64 m²</b>'],
+  [{ko:'건폐율 · 용적률',en:'Coverage · FAR'}, '90% · 669%'],
+  [{ko:'높이',en:'Height'}, '45 m'],
+  [{ko:'층수',en:'Floors'}, {ko:'지하 4 · 지상 10 내외',en:'about B4 + 10'}],
+  [{ko:'주차',en:'Parking'}, '<b>390+</b>'],
+  [{ko:'공사비',en:'Construction'}, {ko:'504억 원',en:'KRW 50.4 bn'}],
+  [{ko:'패널',en:'Panels'}, '2 × 14,400 × 8,100 px']
+];
+
+var SCORE = [
+  [{ko:'계획 방향 · 공공성',en:'Planning direction, public value'}, '15'],
+  [{ko:'주차 · 교통 · 동선',en:'Parking, traffic, circulation'}, '<b>25</b>'],
+  [{ko:'공간 계획 · 운영',en:'Space planning, operations'}, '20'],
+  [{ko:'배치 · 입면 · 안전 · 지속가능',en:'Massing, facade, safety, sustainability'}, '<b>30</b>'],
+  [{ko:'공사비 · 시공성',en:'Cost, buildability'}, '10']
+];
+
+var ROLES = [
+  [{ko:'연호',en:'Yeonho'}, {ko:'설계 총괄. 컨셉 · 매스 · 모든 설계 결정 · 패널',en:'Design lead. Concept, massing, all design decisions, panels'}],
+  [{ko:'Pawel',en:'Pawel'}, {ko:'설계 · 시각물',en:'Design and visuals'}],
+  [{ko:'Ruben',en:'Ruben'}, {ko:'설계 · 시각물',en:'Design and visuals'}],
+  [{ko:'진호',en:'Jinho'}, {ko:'대표 응모자(국내 건축사). 등록 · 서식 · 2차 발표',en:'Lead applicant (licensed in Korea). Registration, forms, round 2 presentation'}]
+];
+
+var RULES = [
+  {ko:'결과 발표(12-18) 전까지 출품안의 전체·일부를 SNS·웹·포트폴리오에 올리지 않는다.', en:'Nothing about our entry on social media, websites or portfolios before the result on 18 Dec.'},
+  {ko:'이미지는 직접 만든 것만. 참고·선례 사진 금지.', en:'Only self-made images. No reference or precedent photos.'},
+  {ko:'제출물에 우리를 알아볼 이름·로고·표식을 넣지 않는다.', en:'No names, logos or marks that identify us in anything we submit.'},
+  {ko:'패널은 영어로 써도 된다.', en:'English is allowed on the panels.'}
+];
+
+/* 강의 노트 - 출처: 용산역사박물관 『용산전파관』, 대상지에 걸리는 장만 */
+var LECTURE = {
+  lede:{ko:'우리 땅은 원래 물이 고이던 저지대였다. 하천은 곧게 펴진 뒤 덮였고, 홍수를 막던 둑 위에 상가가 섰고, 빗물을 담던 웅덩이는 주차장이 됐다. 이 노트는 그 순서를 따라간다.',
+        en:'Our site was once low, wet ground. The stream was straightened and then covered, the shops were built on the old flood dikes, and the stormwater basin became the parking lots. These notes follow that sequence.'},
+  note:{ko:'8강, 읽는 데 약 20분. 각 강 끝의 초록 칩은 우리 설계에 던지는 질문이다. 숫자는 보고서에 실린 그대로 옮겼고, 보고서 안에서 서로 엇갈리는 수치는 뺐다.',
+        en:'Eight short lectures, about 20 minutes. The green chip at the end of each one is a question for our design. Figures are taken from the report as printed; figures the report itself contradicts are left out.'},
+  timeline:[
+    {y:'1789', e:{ko:'용산방 약 1만 5천 명. 홍수 때문에 집은 나루에 모이고 지금의 용산역 일대는 빈 물가 저지대.',en:'About 15,000 people in Yongsan-bang. Flood risk kept houses at the landings; today’s station area was empty wet lowland.'}, site:true},
+    {y:'1884', e:{ko:'용산이 개시장(開市場)이 된다.',en:'Yongsan opens as a trading market.'}},
+    {y:'1899-1914', e:{ko:'경인·경부·경의·경원선 차례로 개통. 한강철교 1900.',en:'Gyeongin, Gyeongbu, Gyeongui and Gyeongwon railway lines open; Han River rail bridge 1900.'}, why:{ko:'대상지 가까이의 철도가 이때 놓인다.',en:'The railway next to our site is laid.'}},
+    {y:'1904-1922', e:{ko:'군용지 수용(최종 117만 평), 용산역·철도공장·관사. 한강로·후암로 1908 완성.',en:'Military land taken (1.17 million pyeong in the end); station, rail works, rail housing. Hangang-ro and Huam-ro done by 1908.'}},
+    {y:'1920', e:{ko:'홍수로 신용산 1.5㎢ 이상 침수, 용산역 0.6-0.9m 잠김.',en:'Flood: over 1.5 km² of Sin-Yongsan under water, the station under 0.6-0.9 m.'}},
+    {y:'1925', e:{ko:'을축대홍수. 제방이 모두 무너지고 만초천이 넘친다. 서울 사망 222명, 이재민 94,726명, 용산 피해 최대.',en:'The Great Flood. All dikes fail and the Manchocheon overflows. Seoul: 222 dead, 94,726 displaced; Yongsan worst hit.'}, site:true, why:{ko:'뒤의 제방·직강화·유수지가 모두 여기서 나온다.',en:'Everything that follows (dikes, straightening, basin) comes from this.'}},
+    {y:'1926-1936', e:{ko:'수방공사. 1925년 수위 + 1.5m, 둑마루 폭 5.5m, 제방 34개 32km.',en:'Flood works: 1925 level plus 1.5 m, 5.5 m crest, 34 dikes, 32 km.'}, site:true, why:{ko:'지금 상가 건물이 그 둑 위에 서 있다.',en:'Today’s shop buildings stand on these dikes.'}},
+    {y:'1927-1933', e:{ko:'만초천 하류를 곧게 편다. 하류에 펌프 3대의 유수지.',en:'Lower Manchocheon straightened; retention basin with three pumps downstream.'}, site:true, why:{ko:'그 유수지 자리가 지금의 주차장이다.',en:'That basin is today’s parking area.'}},
+    {y:'1962-1972', e:{ko:'만초천 복개. 전자상가 구간은 1968-1972. 덮은 위가 청파로.',en:'The stream is covered; the market stretch in 1968-1972. Cheongpa-ro is built on top.'}, site:true},
+    {y:'1968', e:{ko:'나진 청과물시장 개장. 하루 10톤 트럭 약 100대, 서울 청과물 80% 이상 경유.',en:'Najin produce market opens: about 100 ten-tonne trucks a day, over 80% of Seoul’s produce.'}, why:{ko:'이 땅의 첫 대규모 용도는 대형 차량 물류였다.',en:'The first large use of this land was heavy-vehicle logistics.'}},
+    {y:'1975', e:{ko:'복개 구조물 1,100m 붕괴.',en:'1,100 m of the stream cover collapses.'}},
+    {y:'1978', e:{ko:'욱천고가도로·원효대교. 청파로가 제대로 된 도로가 된다.',en:'Ukcheon overpass and Wonhyo Bridge; Cheongpa-ro becomes a through road.'}},
+    {y:'1981-1983', e:{ko:'유수지를 고르고(1981) 덮고(1982) 계획 확정(1983).',en:'Basin regraded (1981), covered (1982), plan fixed (1983).'}, site:true},
+    {y:'1985-1989', e:{ko:'청과물시장이 가락으로 떠나고 전자상가 18개 동 완공(1988). 세운상가 상인 917명 이전.',en:'Produce trade leaves for Garak; 18 market buildings completed (1988); 917 Sewoon merchants move in.'}},
+    {y:'2014-2017', e:{ko:'터미널전자상가 철거, 드래곤시티 준공. 역에서 상가로 오던 관문이 사라진다.',en:'Terminal market demolished, Dragon City hotel built; the gateway from the station disappears.'}},
+    {y:'2025-2030', e:{ko:'특별계획구역8 계획(2025-08), 건축심의(2026-07). 착공 2027, 준공 2030 예정.',en:'Special Plan Area 8 plan (Aug 2025), building review (Jul 2026). Start 2027, completion 2030 planned.'}, site:true, why:{ko:'우리 공모가 놓이는 틀이다.',en:'The frame our competition sits in.'}}
+  ],
+  chapters:[
+    {t:{ko:'조선의 강 나루',en:'The Joseon river port'},
+     p:[{ko:'용산이라는 이름은 안산에서 한강까지 이어지는 용 모양의 산줄기에서 왔다. 만초천이 용산방과 둔지방을 갈랐다.',en:'The name comes from a dragon-shaped ridge running from Ansan to the Han River. The Manchocheon stream divided two old districts.'},
+        {ko:'물살이 느린 만이 자연 나루가 됐고, 강변에 곡식 창고가 섰다.',en:'A slow-water cove became a natural landing, and grain warehouses lined the bank.'},
+        {ko:'낮은 강변에서 도성까지 길이 평탄하고 짧아, 궁궐용 목재와 석재를 이 나루에 내려 만초천 옆 평지길로 실어 날랐다.',en:'Because the road to the capital was short and flat, palace timber and stone were landed here and hauled along the flat road beside the stream.'},
+        {ko:'만초천을 따라 운하를 내자는 논의는 산에서 쓸려 오는 흙 때문에 접었다.',en:'A plan for a canal along the stream was dropped because of silt washing down from the hills.'},
+        {ko:'1789년 집은 홍수를 피해 나루 주변에 모였고, 지금의 용산역 일대는 빈 땅이었다.',en:'In 1789 houses clustered at the landings to avoid floods; the area of today’s station was empty.'}],
+     link:{ko:'대상지는 사람이 살지 않던 물가 저지대에 속한다. 무거운 짐을 평지로 나르던 길의 성격이 지금의 주차·물류와 어떻게 이어지는가?',en:'The site lies in lowland where nobody lived. How does this old route for heavy loads relate to today’s parking and logistics?'}},
+    {t:{ko:'철도와 군사 기지, 신용산',en:'Railway and army base: Sin-Yongsan'},
+     p:[{ko:'1884년 개시장이 된 뒤 1899-1914년 네 철도 노선이 차례로 열렸다. 전차는 1901·1912년, 한강인도교는 1917년.',en:'After 1884 four railway lines opened between 1899 and 1914; trams in 1901 and 1912, the Han River footbridge in 1917.'},
+        {ko:'1904년 군용지로 300만 평을 수용했고 최종 117만 평이 됐다. 일부는 철도 용지가 됐다.',en:'In 1904, 3 million pyeong was taken for the army, settling at 1.17 million; part became railway land.'},
+        {ko:'용산역(1904), 철도공장(1905), 철도관사(1908). 신용산의 두 간선 한강로·후암로는 1908년에 완성됐다.',en:'Station (1904), rail works (1905), rail housing (1908). The two trunk roads, Hangang-ro and Huam-ro, were done by 1908.'},
+        {ko:'보고서는 역과 광장에서 뻗는 방사형 도로와 격자를 군대 이동과 의례를 위한 구조로 읽는다.',en:'The report reads the radial roads from the station plaza, and the grid, as a layout for troop movement and ceremony.'}],
+     link:{ko:'대상지 가까이를 지나는 철도는 이때 놓였다. 철도가 지금 보행과 차량 접근을 어느 쪽에서 끊고 있는가?',en:'The railway beside our site dates from this era. On which side does it cut pedestrian and car access today?'}},
+    {t:{ko:'홍수와 제방',en:'Floods and dikes'},
+     p:[{ko:'홍수는 두 가지다. 한강 물이 넘쳐 드는 외수 범람, 빗물이 빠지지 못해 고이는 내수 범람.',en:'There are two kinds of flood: outer water, when the Han spills in, and inner water, when rain cannot drain.'},
+        {ko:'1912년 홍수 뒤 1914년 원효로 쪽에만 제방 1.11km를 쌓았다. 신용산 쪽에는 제방이 없었다.',en:'After 1912 a 1.11 km dike was built in 1914 on the Wonhyo-ro side only; Sin-Yongsan had none.'},
+        {ko:'1920년 홍수로 신용산 1.5㎢ 이상이 잠기고 용산역이 0.6-0.9m 물에 잠겨 열차가 멈췄다.',en:'In 1920 over 1.5 km² of Sin-Yongsan flooded; the station stood in 0.6-0.9 m of water and trains stopped.'},
+        {ko:'1925년 을축대홍수 때 7월 18일 구용산 수위 12.74m. 양쪽 제방이 무너지고 만초천이 안에서부터 넘쳤다.',en:'In the 1925 flood the Old Yongsan gauge read 12.74 m on 18 July; both dikes failed and the stream overflowed from inside.'},
+        {ko:'서울 사망 222명, 이재민 94,726명. 용산 피해가 가장 컸다.',en:'Seoul counted 222 dead and 94,726 displaced; Yongsan was hit hardest.'}],
+     link:{ko:'대상지는 1925년에 가장 깊이 잠긴 하류 저지대에 있다. 지금 이 낮은 땅의 빗물은 어디로 빠지는가? 지하 4층 주차장과 침수 안전 조건을 함께 본다.',en:'The site is in the lowland that flooded worst in 1925. Where does rain drain today? Read this together with four basement levels and the flood-safety requirement.'}},
+    {t:{ko:'곧게 편 하천과 유수지',en:'The straightened stream and the basin'},
+     p:[{ko:'1926-1936년 수방공사로 1925년 홍수위보다 1.5m 높게, 둑마루 폭 5.5m의 제방 34개 32km를 쌓았다. 이 제방이 1960년대까지 용산을 지켰다.',en:'Flood works in 1926-1936 built 34 dikes, 32 km in total, 1.5 m above the 1925 flood with a 5.5 m crest. They protected Yongsan into the 1960s.'},
+        {ko:'1927년과 1933년 지도를 비교하면 만초천 하류가 곧게 펴진 것이 보인다.',en:'Comparing the 1927 and 1933 maps shows the lower stream straightened.'},
+        {ko:'하류에 180마력 펌프 3대를 갖춘 유수지(빗물을 잠시 담는 웅덩이)가 생겼다.',en:'A retention basin, a pond that holds stormwater for a while, was built downstream with three 180 hp pumps.'},
+        {ko:'곧게 펴고 남은 옛 물굽이가 작은 호수처럼 유수지 일부가 됐다.',en:'A leftover bend of the old channel became part of the basin, like a small oxbow lake.'}],
+     link:{ko:'보고서는 1946년 지도를 겹쳐 전자상가 주차장이 옛 유수지와 정확히 겹친다고 쓴다. 우리 필지가 그 안에 드는지는 아직 겹쳐 보지 않았다. 지반과 지하수 판단이 달라진다.',en:'The report overlays the 1946 map and finds the market’s parking lots match the old basin exactly. We have not yet checked whether our lots fall inside it; ground and groundwater assumptions depend on it.'}},
+    {t:{ko:'하천을 덮다, 청과물시장',en:'Covering the stream: the produce market'},
+     p:[{ko:'해방 뒤 제방과 유수지에 무허가 주택이 들어찼고, 1962년 복개(하천을 덮는 공사)가 시작됐다.',en:'After 1945 squatter housing filled the dikes and the basin; covering the stream began in 1962.'},
+        {ko:'전자상가 아래 하류는 1968-1972년에 덮였다. 시공한 민간 회사는 대가로 10년 시장 운영권을 받았다.',en:'The stretch under today’s market was covered in 1968-1972; the private builders were paid with 10 years of market rights.'},
+        {ko:'1968년 청과물시장이 열려 하루 10톤 트럭 약 100대가 드나들고, 서울 청과물의 80% 이상이 거쳐 갔다. 트럭은 새벽 4-5시에 몰렸다.',en:'The produce market opened in 1968: about 100 ten-tonne trucks a day, over 80% of Seoul’s produce, arrivals peaking at 4-5 a.m.'},
+        {ko:'민간은 하천과 제방만 덮었기 때문에 유수지는 열린 채 남아 시장의 마당과 주차장이 됐다.',en:'Only the stream and dikes were covered, so the basin stayed open and became the market’s yard and parking.'},
+        {ko:'1975년 덮은 구조물 1,100m가 무너졌다.',en:'In 1975, 1,100 m of the cover collapsed.'}],
+     link:{ko:'청파로는 덮인 만초천 위에 있다. 대상지 경계 가까이 옛 하천 구조물이 어디에 어떤 상태로 있는지 자료가 있는가? 공식 질의 후보.',en:'Cheongpa-ro runs on top of the covered stream. Is there data on where the old channel structure lies near our boundary and in what state? A candidate for the official Q&A.'}},
+    {t:{ko:'둑 위의 상가, 웅덩이 위의 주차장',en:'Shops on the dikes, parking in the basin'},
+     p:[{ko:'청파로 양쪽 상가 건물은 1932년 제방 위에 서 있다. 하천을 덮을 때 제방을 그대로 썼다.',en:'The buildings on both sides of Cheongpa-ro stand on the 1932 dikes, reused as they were when the stream was covered.'},
+        {ko:'단면으로 보면 청파로가 높고 양옆 땅이 급하게 떨어진다. 그 낮은 땅을 주차장이 차지한다.',en:'In section, Cheongpa-ro is high and the ground drops steeply on both sides; parking fills the low ground.'},
+        {ko:'주차장은 청파로보다 약 3m 낮다. 상가 건물이 옹벽(흙을 받치는 벽) 역할을 하고, 옛 둑 비탈에 경사로와 계단이 붙어 있다.',en:'The lots are about 3 m below Cheongpa-ro. The buildings act as retaining walls, and ramps and stairs sit on the old dike slopes.'},
+        {ko:'굴다리를 지나 계단으로 청파로에 오른다.',en:'People pass through underpasses and climb stairs up to Cheongpa-ro.'},
+        {ko:'17-20동은 욱천고가에서 내려오며 처음 보이는 건물이고, 17동과 19동은 3층 다리로 이어져 있다.',en:'Buildings 17-20 are the first you see coming off the Ukcheon overpass; 17 and 19 are linked by a 3rd-floor bridge.'}],
+     link:{ko:'대상지는 나진 17동 바로 북쪽, 새창로49길 끝에 있다. 약 3m 높이차가 실제로 얼마인지, 17·18동 옹벽이 우리 경계에 걸리는지는 측량으로 확인해야 한다. 높이차는 진입로와 지상층 계획을 바꾼다.',en:'The site sits just north of Najin Building 17, at the end of Saechang-ro 49-gil. The real level difference (about 3 m in the report) and whether the 17-18 retaining wall runs along our boundary need a survey. The level change shapes the entries and the ground floor.'}},
+    {t:{ko:'전자상가의 탄생과 고립',en:'The electronics market and its isolation'},
+     p:[{ko:'1970년대 이 일대는 고립돼 있었다. 차는 이촌동이나 삼각지로 돌아야 했고 보행자는 좁은 굴다리 하나에 기댔다.',en:'In the 1970s the area was cut off: cars detoured via Ichon-dong or Samgakji, and pedestrians relied on one narrow underpass.'},
+        {ko:'1978년 욱천고가도로와 원효대교가 생기며 청파로가 실제 도로가 됐다.',en:'The Ukcheon overpass and Wonhyo Bridge (1978) made Cheongpa-ro a real road.'},
+        {ko:'청과물시장이 가락시장으로 떠난 자리에 전자상가가 1985년 승인, 1988년 18개 동으로 완공됐다. 세운상가 상인 917명이 옮겨 왔다.',en:'When the produce trade moved to Garak, the electronics market was approved (1985) and 18 buildings completed (1988); 917 merchants moved from Sewoon Arcade.'},
+        {ko:'1992년 버스터미널은 400대 규모로 지었지만 하루 2-3대만 들어왔다.',en:'The 1992 bus terminal was built for 400 buses but saw only 2-3 a day.'}],
+     link:{ko:'이 일대에는 수요를 만나지 못한 큰 교통시설의 선례가 있다. 390대 이상 주차장이 비지 않으려면 누가, 언제 쓰는가?',en:'This area already has a large transport building that never met demand. Who will use 390+ parking spaces, and when, so the building does not stand empty?'}},
+    {t:{ko:'물류로 바뀐 상가, 그리고 재개발',en:'From shops to logistics, and redevelopment'},
+     p:[{ko:'17·18동은 1980년대 후반 가장 붐비던 건물이었다. 지금은 1층 상당수가 온라인 판매 물류창고이고, 두 동 사이 아케이드에 출고 대기 상품이 쌓인다.',en:'Buildings 17 and 18 were the busiest in the late 1980s. Now many ground floors are online-sales warehouses, and parcels wait in the arcade between them.'},
+        {ko:'주차장은 손님보다 상인의 물류 동선으로 쓰인다. 물건은 오전 9-10시와 오후 2시에 움직인다.',en:'The parking serves merchants’ logistics more than shoppers; goods move at 9-10 a.m. and 2 p.m.'},
+        {ko:'1996년 상인들은 임대료 인하, 주차 문제 해결, 쉴 곳을 요구했다. 서울시에 물류센터를 요청한 기록도 있지만 받아들여지지 않았다.',en:'In 1996 merchants asked for lower rents, a parking fix and places to rest; a request to the city for a logistics centre was refused.'},
+        {ko:'한 회사가 갖고 있던 나진상가는 창업주 사후 지분이 나뉘어 여러 동이 따로 팔렸다.',en:'The Najin buildings, once owned by one company, were split and sold off building by building after the founder died.'},
+        {ko:'17·18동과 지금의 주차빌딩을 묶은 특별계획구역8이 재개발을 거쳐 2030년 준공 예정이다. 공영주차장은 그 공공기여(개발 허가 대가로 내놓는 공공시설)다.',en:'Special Plan Area 8, combining Buildings 17-18 and the current parking building, is set for completion in 2030. The public car park is its public contribution, the facility a developer gives back in return for permission.'}],
+     link:{ko:'남쪽 이웃은 이미 물류 건물이다. 새 주차장은 손님 차를 위한 것인가, 상인 화물차를 위한 것인가? 출입을 따로 두는 기관 4곳, 공공자전거 정비소, 1톤 트럭이 하역하는 창고가 한 건물에 든다는 조건과 함께 읽는다.',en:'Our southern neighbours already work as logistics buildings. Is the new car park for shoppers’ cars or merchants’ trucks? Read this with the brief: four offices with their own entrances, a public-bike depot and a store with 1-tonne truck loading, all in one building.'}}
+  ],
+  glossary:[
+    {ko:'만초천', en:'Manchocheon', d:{ko:'용산강으로 흘러들던 하천. 지금 청파로 아래에 덮여 있다.',en:'Stream that ran into the Han at Yongsan; now buried under Cheongpa-ro.'}},
+    {ko:'욱천', en:'Ukcheon', d:{ko:'일제강점기부터 1995년까지 쓰인 만초천의 다른 이름. 욱천고가에 남아 있다.',en:'Another name of the stream, used until 1995; survives in the Ukcheon overpass.'}},
+    {ko:'복개', en:'Stream covering', d:{ko:'하천 위를 덮어 도로나 땅으로 쓰는 공사.',en:'Covering a stream to make a road or land above it.'}},
+    {ko:'직강화', en:'Straightening', d:{ko:'굽은 하천을 곧게 펴는 공사.',en:'Engineering a winding stream into a straight channel.'}},
+    {ko:'유수지', en:'Retention basin', d:{ko:'비 올 때 물을 잠시 담아 두는 웅덩이. 이 일대에선 주차장이 됐다.',en:'A pond that holds stormwater for a while; here it became parking.'}},
+    {ko:'외수 · 내수 범람', en:'Outer · inner flooding', d:{ko:'강물이 넘쳐 드는 홍수와, 빗물이 못 빠져 고이는 홍수.',en:'River water spilling in, versus rain that cannot drain.'}},
+    {ko:'제방 · 둑마루', en:'Dike · crest', d:{ko:'둑과 그 윗면.',en:'An embankment and its top surface.'}},
+    {ko:'을축대홍수', en:'Great Flood of 1925', d:{ko:'1925년 서울 대홍수. 용산 피해가 가장 컸다.',en:'Seoul’s great flood of 1925; Yongsan was hit hardest.'}},
+    {ko:'구용산 · 신용산', en:'Old · New Yongsan', d:{ko:'만초천 북쪽 옛 마을과, 철도·군사기지와 함께 생긴 새 시가지.',en:'The old village north of the stream, and the new town built with the railway and base.'}},
+    {ko:'나진상가', en:'Najin buildings', d:{ko:'전자상가 건물군. 17·18동이 대상지 남쪽 이웃.',en:'The electronics market buildings; 17 and 18 are our southern neighbours.'}},
+    {ko:'공공기여', en:'Public contribution', d:{ko:'개발 허가 대가로 사업자가 내놓는 공공시설.',en:'A public facility a developer provides in return for permission.'}},
+    {ko:'옹벽', en:'Retaining wall', d:{ko:'높이차가 있는 흙을 받치는 벽.',en:'A wall holding back earth at a level change.'}},
+    {ko:'굴다리', en:'Underpass', d:{ko:'도로나 철로 밑을 지나는 낮은 통로.',en:'A low passage under a road or railway.'}}
+  ],
+  cite:{ko:'출처: 용산역사박물관, 『용산전파관』(용산 역사문화 자료조사, 용산전자상가 편, 2023-11~2024-05 조사). 대상지 위치와 구역 계획은 공개된 계획 자료.',
+        en:'Source: Yongsan History Museum, Yongsan Jeonpagwan (Yongsan History and Culture Research: the electronics market, fieldwork Nov 2023 to May 2024, in Korean). Site location and area plan from public planning documents.'}
+};
+</script>
+<script>
+(function(){
+  var LANG='en', KL='yongsan-board-lang';
+  try{ var s=localStorage.getItem(KL); if(s==='ko'||s==='en') LANG=s; else if((navigator.language||'').indexOf('ko')===0) LANG='ko'; }catch(e){}
+  function L(o){ if(o==null) return ''; if(typeof o==='string') return o; return o[LANG]!=null?o[LANG]:(o.en||''); }
+  function E(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
+  var Z={seoul:'Asia/Seoul', basel:'Europe/Zurich'};
+  function f(d,tz,o){ return new Intl.DateTimeFormat(LANG==='ko'?'ko-KR':'en-GB', Object.assign({timeZone:tz},o)).format(d); }
+  var DAY={month:'numeric',day:'numeric',weekday:'short'}, HM={hour:'2-digit',minute:'2-digit',hour12:false};
+  function inst(e){ return e.at ? new Date(e.at) : new Date(e.day+'T23:59:00+01:00'); }
+  function evs(){ var l=EVENTS.slice(); if(KICKOFF) l.push({at:KICKOFF,kind:'key',ko:'킥오프 통화',en:'Kickoff call'});
+    return l.sort(function(a,b){return inst(a)-inst(b);}); }
+  function dd(iso){ return Math.ceil((new Date(iso)-new Date())/86400000); }
+  function h3(t,c){ return '<h3 class="k">'+L(t)+(c?'<span class="c">'+L(c)+'</span>':'')+'</h3>'; }
+  function cellDay(e){ var d=e.at?new Date(e.at):new Date(e.day+'T12:00:00+09:00'); return f(d,Z.seoul,{month:'2-digit',day:'2-digit'}).replace(/\s/g,'').replace(/\.$/,''); }
+  function cellFull(e,tz){ if(!e.at) return f(new Date(e.day+'T12:00:00Z'),'UTC',DAY); var d=new Date(e.at); return f(d,tz,DAY)+' '+f(d,tz,HM); }
+
+  function render(){
+    document.documentElement.lang=LANG;
+    document.getElementById('mk').innerHTML=L(T.mk);
+    document.getElementById('sub').textContent=L(T.sub);
+    document.getElementById('lang').textContent = LANG==='ko'?'EN':'한국어';
+    ['lb1','lb2','lb3'].forEach(function(k){ document.getElementById(k).innerHTML=L(T[k]); });
+
+    var pills=document.getElementById('pills'), lb=document.getElementById('lang');
+    pills.querySelectorAll('.chip').forEach(function(c){c.remove();});
+    function pill(cls,txt){ var s=document.createElement('span'); s.className='chip '+cls; s.textContent=txt; pills.insertBefore(s,lb); }
+    var d1=dd('2026-11-20T17:00:00+09:00');
+    pill('y', d1<0? L(T.dSubmit)+' '+L(T.passed) : 'D-'+d1+' '+L(T.dSubmit));
+    var nx=evs().filter(function(e){return e.kind==='hard'&&inst(e)>new Date()&&e.at!=='2026-11-20T17:00:00+09:00';})[0];
+    if(nx) pill('bl','D-'+dd(nx.at)+' '+L(nx.at==='2026-10-12T18:00:00+09:00'?T.dQa:T.dReg));
+
+    /* 1 일정 */
+    var now=new Date(), list=evs(), nextI=-1;
+    list.forEach(function(e,i){ if(nextI<0&&inst(e)>now) nextI=i; });
+    var h='<div class="dday">'+(d1<0?L(T.passed):'D-'+d1)+'<small>'+L(T.dSubmitLabel)+'</small></div>';
+    h+=h3(T.hClock)+'<div class="kv" id="clk"></div>';
+    h+=h3(T.hTl,T.hTlSub)+'<div class="tl">'+list.map(function(e,i){
+      var c = inst(e)<now ? 'done' : (i===nextI?'now':(e.kind==='hard'||e.kind==='key'?'key':(e.kind==='judge'?'judge':'')));
+      return '<div class="p '+c+'"><span class="d">'+cellDay(e)+'</span><span class="t">'+E(L(e))+'</span></div>'; }).join('')+'</div>';
+    h+=h3(T.hDates,T.hDatesSub)+'<div class="defs">'+list.filter(function(e){return e.at;}).map(function(e){
+      return '<div class="def two"><span class="v">'+E(L(e))+'</span><span class="r">'+L(T.seoul)+' '+cellFull(e,Z.seoul)+'<br>'+L(T.basel)+' '+cellFull(e,Z.basel)+'</span></div>'; }).join('')+'</div>';
+    h+='<p class="note" style="margin-top:8px">'+L(T.dst)+'</p>';
+    h+='<div class="row"><button type="button" class="btn" id="ics">'+L(T.ics)+'</button>'+
+       (MIRO_URL?'<a class="btn" target="_blank" rel="noopener" href="'+E(MIRO_URL)+'">'+L(T.miro)+'</a>':'<span class="btn off">'+L(T.miroOff)+'</span>')+'</div>';
+    h+=h3(T.hSpec,T.hSpecSub)+'<div class="kv">'+SPEC.map(function(r){ return '<span class="k">'+L(r[0])+'</span><span class="v'+(typeof r[1]==='object'&&LANG==='ko'?' kr':'')+'">'+L(r[1])+'</span>'; }).join('')+'</div>';
+    h+='<div class="end">'+L(T.updated)+' '+UPDATED+' · '+L(T.foot)+'</div>';
+    document.getElementById('body1').innerHTML=h;
+    document.getElementById('ics').onclick=ics;
+    clocks();
+
+    /* 2 강의 노트 */
+    h='';
+    if(!LECTURE){ h='<p class="note">'+L(T.pending)+'</p>'; }
+    else{
+      h+=h3(T.hIntro)+'<div class="lede">'+L(LECTURE.lede)+'</div>'+(LECTURE.note?'<p class="note">'+L(LECTURE.note)+'</p>':'');
+      h+=h3(T.hHist,T.hHistSub)+'<div class="tl wrap">'+LECTURE.timeline.map(function(r){
+        return '<div class="p'+(r.site?' key':'')+'"><span class="d">'+E(r.y)+'</span><span class="t">'+E(L(r.e))+(r.why?'<small>'+E(L(r.why))+'</small>':'')+'</span></div>'; }).join('')+'</div>';
+      h+=h3(T.hCh, {ko:LECTURE.chapters.length+'강', en:LECTURE.chapters.length+' lectures'});
+      h+=LECTURE.chapters.map(function(c,i){
+        return '<div class="card"><div class="h"><span class="dt">'+(i<9?'0':'')+(i+1)+'</span><span class="ti">'+E(L(c.t))+'</span></div><ul>'+
+          c.p.map(function(p){return '<li>'+E(L(p))+'</li>';}).join('')+'</ul>'+
+          (c.link?'<div class="lk"><span class="chip g">'+L(T.link)+'</span>'+E(L(c.link))+'</div>':'')+
+          (c.src?'<div class="src">'+L(T.src)+': '+E(L(c.src))+'</div>':'')+'</div>'; }).join('');
+      if(LECTURE.glossary&&LECTURE.glossary.length)
+        h+=h3(T.hGloss)+'<div class="defs">'+LECTURE.glossary.map(function(g){
+          return '<div class="def"><span class="k">'+E(LANG==='ko'?g.ko:g.en)+'</span><span class="v">'+E(L(g.d))+'</span><span class="r">'+E(LANG==='ko'?g.en:g.ko)+'</span></div>'; }).join('')+'</div>';
+      h+='<div class="end">'+L(LECTURE.cite)+'</div>';
+    }
+    document.getElementById('body2').innerHTML=h;
+
+    /* 3 팀 */
+    h=h3(T.hRoles)+'<div class="defs">'+ROLES.map(function(r){ return '<div class="def"><span class="k">'+L(r[0])+'</span><span class="v">'+L(r[1])+'</span><span class="r"></span></div>'; }).join('')+'</div>';
+    var NOW=[
+      [{ko:'팀 브리프를 읽고 질문을 <b>10-09(금)</b>까지 연호에게. 공식 질의(10-12 마감)에 넣는다.',en:'Read the team brief and send questions to Yeonho by <b>Fri 9 Oct</b>. They go into the official Q&A (closes 12 Oct).'},{ko:'Pawel · Ruben',en:'Pawel · Ruben'},'y'],
+      [KICKOFF?{ko:'킥오프 통화: 바젤 '+cellFull({at:KICKOFF},Z.basel),en:'Kickoff call: Basel '+cellFull({at:KICKOFF},Z.basel)}:{ko:'킥오프 통화 시각은 연호가 제안한다. 정해지면 여기 뜬다.',en:'Kickoff call: Yeonho proposes a time. It will show here.'},{ko:'모두',en:'All'},'bl'],
+      [{ko:'미로 보드에 질문 · 스케치 · 자료를 모은다.',en:'Collect questions, sketches and material on the Miro board.'},{ko:'모두',en:'All'},'gy'],
+      [{ko:'킥오프 전에 강의 노트로 대상지의 역사를 읽어 둔다.',en:'Read the lecture notes on the site history before the kickoff.'},{ko:'모두',en:'All'},'g']
+    ];
+    h+=h3(T.hNow)+'<div class="acts">'+NOW.map(function(r,i){ return '<div class="act"><span class="n">0'+(i+1)+'</span><span class="t">'+L(r[0])+'<span class="chips"><span class="chip '+r[2]+'">'+L(r[1])+'</span></span></span></div>'; }).join('')+'</div>';
+    h+=h3(T.hScore,T.hScoreSub)+'<div class="kv">'+SCORE.map(function(r){ return '<span class="k">'+L(r[0])+'</span><span class="v">'+r[1]+'</span>'; }).join('')+'</div>';
+    h+=h3(T.hRules,T.hRulesSub)+'<div class="acts">'+RULES.map(function(r,i){ return '<div class="act"><span class="n">0'+(i+1)+'</span><span class="t">'+L(r)+'</span></div>'; }).join('')+'</div>';
+    document.getElementById('body3').innerHTML=h;
+
+    buildJump();
+  }
+
+  function clocks(){ var el=document.getElementById('clk'); if(!el) return; var n=new Date();
+    el.innerHTML='<span class="k">'+L(T.seoul)+'</span><span class="v">'+f(n,Z.seoul,DAY)+' '+f(n,Z.seoul,HM)+'</span>'+
+                 '<span class="k">'+L(T.basel)+'</span><span class="v">'+f(n,Z.basel,DAY)+' '+f(n,Z.basel,HM)+'</span>'; }
+
+  function ics(){
+    function u(d){ return d.toISOString().replace(/[-:]/g,'').replace(/\.\d+/,''); }
+    var st=u(new Date()), out=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//yhlarchitects//yongsan//EN','CALSCALE:GREGORIAN','X-WR-CALNAME:Yongsan Parking'];
+    evs().forEach(function(e,i){
+      out.push('BEGIN:VEVENT','UID:yongsan-'+i+'-'+(e.at||e.day).replace(/\W/g,'')+'@yhlarchitects.com','DTSTAMP:'+st);
+      if(e.at){ var a=new Date(e.at); out.push('DTSTART:'+u(a),'DTEND:'+u(new Date(a.getTime()+1800000))); }
+      else { var n=new Date(e.day+'T12:00:00Z'); n.setUTCDate(n.getUTCDate()+1);
+             out.push('DTSTART;VALUE=DATE:'+e.day.replace(/-/g,''),'DTEND;VALUE=DATE:'+n.toISOString().slice(0,10).replace(/-/g,'')); }
+      out.push('SUMMARY:Yongsan - '+L(e),'END:VEVENT'); });
+    out.push('END:VCALENDAR');
+    var a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([out.join('\r\n')+'\r\n'],{type:'text/calendar'}));
+    a.download='yongsan-schedule.ics'; document.body.appendChild(a); a.click(); a.remove();
+  }
+
+  /* 패널 서브내비 - 템플릿과 같은 동작, 언어 전환 때 다시 만든다 */
+  var spies=[];
+  function buildJump(){
+    spies.forEach(function(s){ s.t.removeEventListener('scroll',s.f); window.removeEventListener('resize',s.f); }); spies=[];
+    document.querySelectorAll('.pane').forEach(function(pane,pi){
+      var jump=pane.querySelector('.jump'), top=pane.querySelector('.top'); jump.innerHTML='';
+      var heads=Array.prototype.slice.call(pane.querySelectorAll('h3.k')); if(!heads.length) return;
+      heads.forEach(function(hd,i){ hd.id='p'+pi+'s'+i; var label='';
+        hd.childNodes.forEach(function(n){ if(n.nodeType===3) label+=n.textContent; });
+        var b=document.createElement('button'); b.type='button'; b.textContent=label.trim(); b.dataset.target=hd.id; jump.appendChild(b); });
+      var btns=Array.prototype.slice.call(jump.querySelectorAll('button'));
+      function mark(id){ btns.forEach(function(b){ b.classList.toggle('on', b.dataset.target===id); }); }
+      btns.forEach(function(b){ b.addEventListener('click',function(){
+        var hd=document.getElementById(b.dataset.target), stacked=getComputedStyle(pane).overflowY!=='auto', pad=top.getBoundingClientRect().height+8;
+        if(stacked) window.scrollTo({top:hd.getBoundingClientRect().top+window.pageYOffset-pad-52,behavior:'smooth'});
+        else pane.scrollTo({top:hd.offsetTop-pane.offsetTop-pad,behavior:'smooth'});
+        mark(b.dataset.target); }); });
+      var tick=false;
+      function spy(){ tick=false; var line=top.getBoundingClientRect().bottom+10, cur=heads[0].id;
+        heads.forEach(function(hd){ if(hd.getBoundingClientRect().top<=line) cur=hd.id; }); mark(cur); }
+      function on(){ if(!tick){ tick=true; requestAnimationFrame(spy); } }
+      var tgt=getComputedStyle(pane).overflowY==='auto'?pane:window;
+      tgt.addEventListener('scroll',on,{passive:true}); window.addEventListener('resize',on,{passive:true});
+      spies.push({t:tgt,f:on}); spy();
+    });
+  }
+
+  document.getElementById('lang').onclick=function(){ LANG=LANG==='ko'?'en':'ko'; try{localStorage.setItem(KL,LANG);}catch(e){} render(); };
+  render();
+  setInterval(clocks,30000);
+})();
+
+/* 컬럼 폭 드래그 - 템플릿 그대로 */
+(function(){
+  var panes=document.querySelector('.panes'); if(!panes) return;
+  var KEY='board-yongsan-team-cols', DEF={w1:340,w3:380}, MIN1=220, MAX1=680, MIN3=240, MAX3=720, MINC=240;
+  function apply(w1,w3){ panes.style.setProperty('--w1',w1+'px'); panes.style.setProperty('--w3',w3+'px'); }
+  function load(){ var v=null; try{v=JSON.parse(localStorage.getItem(KEY));}catch(e){} var w=(v&&v.w1&&v.w3)?v:DEF; apply(w.w1,w.w3); return w; }
+  function save(w1,w3){ try{localStorage.setItem(KEY,JSON.stringify({w1:w1,w3:w3}));}catch(e){} }
+  var cur=load();
+  function clamp(v,lo,hi){ return Math.max(lo,Math.min(hi,v)); }
+  panes.querySelectorAll('.gut').forEach(function(g){
+    var which=g.dataset.g;
+    g.addEventListener('pointerdown',function(e){
+      if(getComputedStyle(g).display==='none') return;
+      e.preventDefault(); g.setPointerCapture(e.pointerId); g.classList.add('on'); panes.classList.add('dragging');
+      var x0=e.clientX, s1=cur.w1, s3=cur.w3, total=panes.getBoundingClientRect().width;
+      function move(ev){ var dx=ev.clientX-x0, w1=s1, w3=s3;
+        if(which==='1') w1=clamp(s1+dx,MIN1,Math.min(MAX1,total-s3-MINC-10)); else w3=clamp(s3-dx,MIN3,Math.min(MAX3,total-s1-MINC-10));
+        cur={w1:w1,w3:w3}; apply(w1,w3); }
+      function up(){ g.releasePointerCapture(e.pointerId); g.classList.remove('on'); panes.classList.remove('dragging');
+        g.removeEventListener('pointermove',move); g.removeEventListener('pointerup',up); g.removeEventListener('pointercancel',up);
+        save(cur.w1,cur.w3); window.dispatchEvent(new Event('resize')); }
+      g.addEventListener('pointermove',move); g.addEventListener('pointerup',up); g.addEventListener('pointercancel',up);
+    });
+    g.addEventListener('dblclick',function(){ cur={w1:DEF.w1,w3:DEF.w3}; apply(cur.w1,cur.w3); save(cur.w1,cur.w3); window.dispatchEvent(new Event('resize')); });
+  });
+})();
+
+/* 모드 - 템플릿 그대로: 라이트 기본, 다크는 저장된 선택일 때만 */
+(function(){
+  var K='board-mode-yongsan-team', b=document.getElementById('mode');
+  function set(m){ if(m==='dark'){document.documentElement.setAttribute('data-mode','dark');b.textContent='Light';}
+                   else{document.documentElement.removeAttribute('data-mode');b.textContent='Dark';} }
+  var s=null; try{s=localStorage.getItem(K);}catch(e){}
+  set(s==='dark'?'dark':'light');
+  b.onclick=function(){ var d=document.documentElement.getAttribute('data-mode')==='dark';
+    set(d?'light':'dark'); try{localStorage.setItem(K,d?'light':'dark');}catch(e){} };
+})();
+</script>
+</body>
+</html>
