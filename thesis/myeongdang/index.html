@@ -1,0 +1,1209 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>명당</title>
+<meta name="description" content="한 뼘씩 그리는 흉지 - 1~15회 대본">
+<meta name="theme-color" content="#e8e6e1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#171716" media="(prefers-color-scheme: dark)">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" href="data:,">
+<script>try{var t=localStorage.getItem("yhl-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-look",t)}catch(e){}</script>
+<style>
+:root{
+  color-scheme:light;
+  --desk:#e8e6e1; --paper:#fbfaf7; --ink:#262523; --mute:#7d7870; --hair:rgba(0,0,0,.07);
+  --cover:#dfdcd5; --coverInk:#34322e; --coverMute:#77736b;
+  --gut:rgba(40,36,30,.11); --shade:rgba(40,36,30,.22); --drop:rgba(40,36,30,.30);
+  --sans:"Pretendard","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic","맑은 고딕",sans-serif;
+  --pw:560px; --ph:792px; --pt:62px; --pb:58px; --px:52px; --fs:15px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-look="light"]){
+    color-scheme:dark;
+    --desk:#171716; --paper:#262523; --ink:#e3dfd7; --mute:#9b968d; --hair:rgba(255,255,255,.08);
+    --cover:#4d4a45; --coverInk:#ece8e0; --coverMute:#b9b4ab;
+    --gut:rgba(0,0,0,.34); --shade:rgba(0,0,0,.5); --drop:rgba(0,0,0,.6);
+  }
+}
+:root[data-look="dark"]{
+  color-scheme:dark;
+  --desk:#171716; --paper:#262523; --ink:#e3dfd7; --mute:#9b968d; --hair:rgba(255,255,255,.08);
+  --cover:#4d4a45; --coverInk:#ece8e0; --coverMute:#b9b4ab;
+  --gut:rgba(0,0,0,.34); --shade:rgba(0,0,0,.5); --drop:rgba(0,0,0,.6);
+}
+html,body{margin:0;height:100%;overflow:hidden;background:var(--desk);color:var(--ink);font-family:var(--sans);
+  -webkit-text-size-adjust:100%;text-size-adjust:100%}
+button{font:inherit;color:inherit}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+
+/* desk, stage, slots */
+#desk{position:fixed;inset:0;touch-action:none;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+#stage{position:absolute;left:0;top:0;transform-origin:0 0}
+#shift{position:absolute;inset:0;transition:transform .45s cubic-bezier(.3,.7,.2,1)}
+.slot{position:absolute;top:0;width:var(--pw);height:var(--ph);z-index:1}
+.slot[hidden]{display:none}
+.slot>.pg{box-shadow:0 1px 2px var(--hair),0 14px 30px -14px var(--drop)}
+
+/* page */
+.pg{position:absolute;left:0;top:0;width:var(--pw);height:var(--ph);box-sizing:border-box;overflow:hidden;
+  background:var(--paper);color:var(--ink);font-size:var(--fs);line-height:1.68;font-family:var(--sans)}
+.pg.paper.l::after,.pg.paper.r::after,.pg.inner.l::after,.pg.inner.r::after{content:"";position:absolute;top:0;bottom:0;width:42px;pointer-events:none}
+.pg.l::after{right:0;background:linear-gradient(to left,var(--gut),rgba(0,0,0,0))}
+.pg.r::after{left:0;background:linear-gradient(to right,var(--gut),rgba(0,0,0,0))}
+.pg.solo::after{display:none}
+.hd,.ft{position:absolute;left:var(--px);right:var(--px);display:flex;align-items:center;font-size:.7em;color:var(--mute);letter-spacing:.02em}
+.hd{top:0;height:var(--pt);justify-content:space-between;gap:1em}
+.ft{bottom:0;height:var(--pb);justify-content:center;font-variant-numeric:tabular-nums}
+.pg.l .ft{justify-content:flex-start}
+.pg.r .ft{justify-content:flex-end}
+.pg.solo .ft{justify-content:center}
+.bd{position:absolute;left:var(--px);right:var(--px);top:var(--pt);bottom:var(--pb);overflow:hidden;
+  word-break:keep-all;overflow-wrap:anywhere;line-break:strict}
+
+/* screenplay */
+.bd>*{margin:.6em 0 0}
+.bd .ep{font-weight:700;margin:0}
+.ep .en{display:block;font-size:.78em;font-weight:500;color:var(--mute);letter-spacing:.08em}
+.ep .et{display:block;font-size:1.42em;line-height:1.35;margin-top:.12em}
+.bd .sc{font-size:1em;font-weight:700;margin-top:1.5em;line-height:1.5}
+.bd .ep+.sc{margin-top:2.2em}
+.bd .ac.li{padding-left:1em;text-indent:-1em}
+.bd .ac.li.cn{text-indent:0}
+.bd .no{font-size:.82em;line-height:1.62;color:var(--mute)}
+.bd .dl{display:grid;grid-template-columns:5em minmax(0,1fr);column-gap:.5em}
+.dl .nm{font-weight:700;overflow-wrap:anywhere}
+.dl .nm .ct{display:block;font-weight:400;font-size:.8em;color:var(--mute)}
+.dl .tx p{margin:0}
+.dl .pa,.dl .pi{color:var(--mute)}
+.bd>:first-child{margin-top:0}
+
+/* covers and front matter */
+.pg.cover{background:var(--cover);color:var(--coverInk)}
+.pg.cover.r{border-radius:0 3px 3px 0}
+.pg.cover.l{border-radius:3px 0 0 3px}
+.pg.cover.solo{border-radius:3px}
+.cover .ct{position:absolute;left:13%;right:13%;top:22%}
+.cover h1{margin:0;font-size:3.4em;line-height:1.15;font-weight:700;letter-spacing:.04em}
+.cover .sub{margin:.7em 0 0;font-size:1.12em}
+.cover .meta{margin:2.6em 0 0;font-size:.8em;color:var(--coverMute);letter-spacing:.02em}
+.cover .au{position:absolute;left:13%;bottom:11%;margin:0;font-size:1em;letter-spacing:.14em}
+.cover .bk{position:absolute;left:0;right:0;bottom:9%;margin:0;text-align:center;font-size:.72em;letter-spacing:.2em;color:var(--coverMute)}
+.front .fm{position:absolute;left:var(--px);right:var(--px);top:30%}
+.front .t{margin:0;font-size:1.7em;font-weight:700;letter-spacing:.04em}
+.front .s{margin:.4em 0 0;color:var(--mute)}
+.front .n{margin:3.2em 0 0;font-size:.86em;color:var(--mute);line-height:1.7}
+
+/* turning */
+.fx{position:absolute;top:0;width:var(--pw);height:var(--ph);z-index:5;pointer-events:none;transform-origin:50% 50%}
+.fx-sh{position:absolute;left:0;top:0;width:100%;height:100%;overflow:hidden}
+.fx-band{position:absolute;left:0;top:0;width:100px;height:100px;transform-origin:0 0;opacity:0;
+  background:linear-gradient(90deg,var(--shade) 0,rgba(0,0,0,0) 100%),linear-gradient(90deg,var(--shade) 0,rgba(0,0,0,0) 40%),
+  linear-gradient(90deg,rgba(0,0,0,.08) 0,rgba(0,0,0,0) 22%)}
+.fx-leaf{position:absolute;left:0;top:0;width:100%;height:100%;will-change:transform}
+.fx-flap{position:absolute;left:0;top:0;width:100%;height:100%;overflow:hidden;transform-origin:0 0;background:var(--paper);will-change:transform}
+.fx-fs{position:absolute;left:0;top:0;width:100px;height:100px;transform-origin:0 0;
+  background:linear-gradient(90deg,rgba(0,0,0,.2) 0,rgba(0,0,0,.09) 7%,rgba(0,0,0,.035) 30%,rgba(0,0,0,0) 62%,rgba(0,0,0,.03) 100%)}
+.fx.dk .fx-fs{background:linear-gradient(90deg,rgba(0,0,0,.32) 0,rgba(0,0,0,.11) 7%,rgba(255,255,255,.02) 40%,rgba(255,255,255,.045) 100%)}
+.fx-bshade{position:absolute;left:0;top:0;width:100%;height:100%;opacity:0;pointer-events:none;
+  background:linear-gradient(90deg,rgba(0,0,0,.04),rgba(0,0,0,.32))}
+.pg.thru{opacity:.07}
+
+/* bars */
+.bar{position:fixed;left:0;right:0;z-index:20;display:flex;align-items:center;gap:10px;padding:0 max(12px,env(safe-area-inset-left)) 0 max(12px,env(safe-area-inset-right));box-sizing:border-box}
+#top{top:0;height:44px;justify-content:space-between}
+#bot{bottom:0;height:52px;justify-content:center;padding-bottom:env(safe-area-inset-bottom)}
+.bar button{background:none;border:0;border-radius:6px;padding:6px 10px;font-size:14px;color:var(--mute);cursor:pointer;line-height:1.2}
+.bar button:hover{background:var(--hair);color:var(--ink)}
+.bar button:disabled{opacity:.35;cursor:default;background:none}
+button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.ttl{font-size:13px;color:var(--mute);letter-spacing:.12em}
+#bPrev,#bNext{font-size:20px;padding:2px 12px}
+#rng{width:min(38vw,300px);accent-color:var(--mute);margin:0}
+#pn{min-width:7.5em;text-align:center;font-size:13px;color:var(--mute);font-variant-numeric:tabular-nums}
+
+/* contents */
+#toc{position:fixed;inset:0;z-index:40;display:flex;align-items:center;justify-content:center;padding:16px;box-sizing:border-box;background:rgba(20,18,15,.32)}
+#toc[hidden]{display:none}
+.tin{background:var(--paper);color:var(--ink);width:min(440px,100%);max-height:100%;overflow:auto;border-radius:8px;
+  padding:18px 18px 10px;box-sizing:border-box;box-shadow:0 20px 50px -20px rgba(0,0,0,.45)}
+.thd{display:flex;align-items:center;justify-content:space-between}
+.thd h2{margin:0;font-size:15px;letter-spacing:.1em}
+.thd button{background:none;border:0;border-radius:6px;padding:6px 10px;color:var(--mute);font-size:14px;cursor:pointer}
+#tocList{list-style:none;margin:10px 0 0;padding:0}
+#tocList button{display:grid;grid-template-columns:3.4em minmax(0,1fr) auto;gap:.4em;align-items:baseline;width:100%;text-align:left;
+  background:none;border:0;border-top:1px solid var(--hair);padding:9px 6px;font-size:15px;color:var(--ink);cursor:pointer}
+#tocList button:hover{background:var(--hair)}
+#tocList .tn{color:var(--mute);font-size:13px}
+#tocList .tp{color:var(--mute);font-size:13px;font-variant-numeric:tabular-nums}
+
+#meas{position:absolute;left:-12000px;top:0;visibility:hidden;width:var(--pw);height:var(--ph);overflow:hidden}
+</style>
+</head>
+<body>
+<header id="top" class="bar">
+  <button id="bToc" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="toc">차례</button>
+  <span class="ttl" aria-hidden="true">명당</span>
+  <button id="bTheme" type="button" aria-label="밝기 바꾸기" aria-pressed="false">◐</button>
+</header>
+<main id="desk" role="region" aria-roledescription="책" aria-label="명당 대본">
+  <div id="stage"><div id="shift"><div id="slotL" class="slot"></div><div id="slotR" class="slot"></div></div></div>
+</main>
+<footer id="bot" class="bar">
+  <button id="bPrev" type="button" aria-label="이전 쪽">‹</button>
+  <input id="rng" type="range" min="0" max="0" value="0" step="1" aria-label="쪽 이동">
+  <span id="pn" aria-hidden="true"></span>
+  <button id="bNext" type="button" aria-label="다음 쪽">›</button>
+</footer>
+<div id="live" class="sr" aria-live="polite" aria-atomic="true"></div>
+<div id="toc" role="dialog" aria-modal="true" aria-labelledby="tocH" hidden>
+  <div class="tin">
+    <div class="thd"><h2 id="tocH">차례</h2><button id="tClose" type="button" aria-label="차례 닫기">닫기</button></div>
+    <ol id="tocList"></ol>
+  </div>
+</div>
+<div id="meas" aria-hidden="true"></div>
+<template id="src">
+<h2 class="ep" data-n="1"><span class="en">제1회</span> <span class="et">「이 자리에 세우면」</span></h2>
+<h3 class="sc">S#0. 미리보기 (2초)</h3>
+<p class="ac">흙바닥에 놓인 패철. 바늘이 멈추지 않고 돈다. 주름진 손이 패철을 덮는다.</p>
+<div class="dl" data-name="윤석규"><div class="nm">윤석규</div><div class="tx"><p class="pa">(V.O.)</p><p class="ln">이 자리에 세우면 사람이 죽습니다.</p></div></div>
+<p class="no">〔컷 - 바늘 소리가 끊기며 S#1으로〕</p>
+<h3 class="sc">S#1. 공터 / 2006년, 낮</h3>
+<p class="ac">자막: 2006년</p>
+<p class="ac">측량 말뚝이 줄지어 박힌 공터. <b>윤석규</b>(74, 낡은 점퍼)가 무릎을 꿇고 패철을 땅에 내려놓았다. 뒤에 <b>강도형</b>(48, 강산그룹 부회장), 우산을 든 젊은 <b>현묵</b>(43).</p>
+<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">날은 받았고 땅값도 치렀습니다. 선생님은 좌향만 잡아 주시면 됩니다.</p></div></div>
+<div class="dl" data-name="윤석규"><div class="nm">윤석규</div><div class="tx"><p class="pa">(패철에서 눈을 떼지 않고)</p><p class="ln">이 자리에 세우면 사람이 죽습니다.</p></div></div>
+<p class="ac">강도형, 대답 대신 현묵에게서 우산을 받아 든다.</p>
+<p class="no">〔VFX: 윤석규의 시선 - 흙 속으로 검은 물줄기 두 갈래가 들어와 X자로 엇갈린다. 이후 「수맥」 표현의 원형〕</p>
+<h3 class="sc">S#2. 휴대전화 화면 (INSERT) / 2026년, 아침</h3>
+<p class="ac">뉴스 속보. 유리 커튼월 고층 건물, 외벽 한 칸이 비어 있다. 바닥에 폴리스 라인.</p>
+<div class="dl" data-name="앵커"><div class="nm">앵커</div><div class="tx"><p class="pa">(V.O.)</p><p class="ln">강산그룹 본사 외벽 유리가 떨어져 행인이 숨졌습니다. 2007년 상량식 사고 이후 두 번째입니다. 당시 그룹은 지관의 과실이라 밝혔고, 처벌받은 임직원은 없었습니다.</p></div></div>
+<p class="ac">엄지가 「지관의 과실」 자막 위에서 멈췄다가 화면을 끈다.</p>
+<h3 class="sc">S#3. 온담건축 설계2팀 / 아침</h3>
+<p class="ac"><b>윤세리</b>(28)가 새 사원증을 목에 건다. 팀장 <b>민재경</b>(41)이 모니터를 돌린다.</p>
+<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">강산 신사옥 지명공모. 초청 세 군데, 우리가 들어갔어요. 윤 대리는 배치.</p></div></div>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">부지는요.</p></div></div>
+<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">옥녀봉 아래. 산 등지고 강 보는 자리.</p></div></div>
+<p class="ac">세리, 지침서 첫 장의 위성사진을 확대한다. 강 굽이, 봉우리 하나.</p>
+<h3 class="sc">S#4. 옥녀봉 부지 / 낮</h3>
+<p class="ac">풀이 무릎까지 자란 비탈. 세리가 주머니에서 낡은 패철을 꺼낸다. 바늘이 떨다가 멈춘다.</p>
+<p class="no">〔VFX: 세리의 시선 - 봉우리와 좌우 능선이 비늘 덮인 등뼈로 잠깐 겹쳤다가, 빛의 줄기 하나로 접혀 비탈을 내려온다. 줄기는 세리의 발밑 한 점에서 고인다〕</p>
+<p class="ac">세리, 그 자리에 쪼그려 앉아 흙을 한 줌 쥔다.</p>
+<h3 class="sc">S#5. 회상 - 윤석규의 마당 / 2006년, 저녁</h3>
+<p class="ac">마루 끝. 여덟 살 세리의 손바닥을 윤석규가 펴서 엄지로 금 하나를 따라간다.</p>
+<div class="dl" data-name="윤석규"><div class="nm">윤석규</div><div class="tx"><p class="ln">땅은 그은 대로 사람을 앉힌다. 남을 해치는 배치를 그리면 네 명줄이 준다.</p></div></div>
+<div class="dl" data-name="어린 세리"><div class="nm">어린 세리</div><div class="tx"><p class="ln">얼마나요?</p></div></div>
+<div class="dl" data-name="윤석규"><div class="nm">윤석규</div><div class="tx"><p class="ln">한 줄에 한 마디.</p></div></div>
+<h3 class="sc">S#6. 온담건축 설계2팀 / 밤</h3>
+<p class="ac">빈 사무실. 트레이싱지 위 배치도. 세리가 패철을 도면 북쪽에 맞추고 삼각자를 댄다. 건물 축을 정남에서 조금 비튼다.</p>
+<p class="ac">모니터 구석: 회전각 7.5°</p>
+<p class="ac">연필이 선을 끝까지 긋는다.</p>
+<p class="no">〔엔드컷: 연필을 쥔 손바닥 클로즈업. 생명선 끝 한 마디가 잉크 번지듯 옅어지다 사라진다. 컷 아웃.〕</p>
+<h2 class="ep" data-n="2"><span class="en">제2회</span> <span class="et">「현장설명회」</span></h2>
+<h3 class="sc">S#0. 미리보기 (2초)</h3>
+<p class="ac">붉은 깃발이 흙에 꽂힌다. 깃대 밑으로 검은 물이 X자로 번진다.</p>
+<p class="no">〔컷 - S#1으로〕</p>
+<h3 class="sc">S#1. 옥녀봉 부지, 천막 / 낮</h3>
+<p class="ac">접이식 의자에 세 설계사무소 팀. 마이크 앞에 강산그룹 신사옥 TF장 <b>강이현</b>(34).</p>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">질의는 서면으로만 받습니다. 부지 선정 근거는 부록 3에 있습니다.</p></div></div>
+<p class="ac">세리, 지침서 부록 3을 넘긴다. 2006년 부지 감정서 사본. 맨 끝 감정인란에 손글씨 서명 - 윤석규.</p>
+<p class="ac">손가락이 그 이름 위에서 멈춘다.</p>
+<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="pa">(작게)</p><p class="ln">윤석규. 구사옥 사고 때 그 지관이잖아. 이 산도 그 사람이 권했대.</p></div></div>
+<div class="dl" data-name="사원"><div class="nm">사원</div><div class="tx"><p class="ln">회장님 지시래요.</p></div></div>
+<h3 class="sc">S#2. 비탈 중턱 / 낮</h3>
+<p class="ac">회장 강도형(68)이 지팡이를 짚고 올라온다. 옆에 회장의 지관 현묵(63, 회색 양복, 손에 새 패철).</p>
+<p class="ac">현묵, 비탈 중턱에서 멈춰 구두 끝으로 땅을 두 번 짚는다.</p>
+<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="ln">회장님 자리는 여깁니다.</p></div></div>
+<p class="ac">수행원이 그 자리에 붉은 깃발을 꽂는다.</p>
+<p class="no">〔VFX: 세리의 시선 - 깃발 아래로 검은 물줄기 두 갈래가 X자로 엇갈린다. 1회 S#1 공터와 같은 모양〕</p>
+<p class="ac">세리, 주머니 속 패철을 쥔다. 손 안에서 바늘이 떤다.</p>
+<h3 class="sc">S#3. 깃발에서 열 걸음 위 / 낮</h3>
+<p class="ac">사람들이 깃발 주위에 모여 있다. 세리 혼자 비탈 위쪽, 빛이 고이던 그 자리에 서 있다. 이현이 올라온다.</p>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">다들 깃발 쪽에 있는데.</p></div></div>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">여기서 강이 더 잘 보여서요.</p></div></div>
+<p class="ac">이현, 세리 옆에 서서 강을 본다. 잠깐.</p>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">그러네요.</p></div></div>
+<p class="ac">이현, 세리의 신발 앞 흙을 내려다본다. 손으로 판 자국이 있다.</p>
+<h3 class="sc">S#4. 천막 앞 / 낮</h3>
+<p class="ac">설명회가 끝나고 팀들이 흩어진다. 현묵이 회장 차 쪽으로 걸어가다 세리 옆을 지난다. 걸음을 늦추지 않는다.</p>
+<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="pa">(앞을 본 채로)</p><p class="ln">주머니 속 그 패철. 윤 선생 것이지.</p></div></div>
+<p class="ac">세리, 주머니에서 손을 빼지 못한다. 현묵은 차에 오른다.</p>
+<p class="no">〔엔드컷: 세리의 주머니 속. 천 너머로 패철 바늘이, 떠나는 현묵의 차를 따라 천천히 돈다. 컷 아웃.〕</p>
+<h2 class="ep" data-n="3"><span class="en">제3회</span> <span class="et">「수맥 위의 의자」</span></h2>
+<h3 class="sc">S#0. 미리보기 (2초)</h3>
+<p class="ac">빈 의자. 의자 밑 바닥이 숨 쉬듯 부푼다.</p>
+<p class="no">〔컷 - S#1으로〕</p>
+<h3 class="sc">S#1. 온담건축 설계2팀 / 낮</h3>
+<p class="ac">벽에 배치도. 민재경이 붉은 깃발 사진을 그 위에 붙인다.</p>
+<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">발주처 추가 지침. 회장실은 이 좌표 위. 지관이 짚은 자리래요. 코어랑 부딪칠 텐데.</p></div></div>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">맞추겠습니다.</p></div></div>
+<p class="ac">민재경, 세리를 잠깐 본다.</p>
+<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">이유 안 물어요? 다들 한 번은 묻는데.</p></div></div>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">지관이 짚은 자리라면서요.</p></div></div>
+<h3 class="sc">S#2. 세리의 모니터 / 밤</h3>
+<p class="ac">3D 모델. 꼭대기 층 회장실, 넓은 책상과 의자 하나. 세리가 단면을 자른다.</p>
+<p class="no">〔VFX: 단면 아래 지층으로 검은 물줄기 두 갈래가 들어와 의자 바로 밑에서 엇갈린다. 엇갈린 자리가 숨 쉬듯 느리게 부푼다〕</p>
+<p class="ac">세리, 의자를 한 칸도 옮기지 않고 저장한다.</p>
+<p class="ac">손바닥을 편다. 생명선이 또 한 마디 짧다.</p>
+<h3 class="sc">S#3. 강산그룹 구사옥 회장실 / 밤</h3>
+<p class="ac">창밖으로 폴리스 라인이 아직 남아 있다. 강도형이 세 설계사무소의 참가 서류를 넘긴다. 현묵은 창가에 서 있다.</p>
+<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">세 팀 중에 땅 볼 줄 아는 사람 있던가.</p></div></div>
+<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="ln">없습니다. 다들 깃발만 보더군요.</p></div></div>
+<p class="ac">강도형, 온담건축 서류철을 덮어 맨 위에 올린다.</p>
+<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">그래도 이 집 도면이 제일 조용해.</p></div></div>
+<h3 class="sc">S#4. 세리의 집, 부엌 / 밤</h3>
+<p class="ac">작은 식탁. 아버지 <b>윤병철</b>(56, 택시 회사 조끼)이 혀 밑에 알약 하나를 넣는다. 세리가 들어와 가방을 내려놓는다. 도면 출력물이 식탁 위로 미끄러져 나온다.</p>
+<div class="dl" data-name="병철"><div class="nm">병철</div><div class="tx"><p class="ln">밥은.</p></div></div>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">먹었어요.</p></div></div>
+<p class="ac">병철, 출력물을 보지 않고 뒤집어 놓는다. 그 위에 물컵을 올린다.</p>
+<h3 class="sc">S#5. 세리의 집, 부엌 / 밤 (늦게)</h3>
+<p class="ac">불 꺼진 식탁. 병철의 방문은 닫혀 있다. 세리 혼자 앉아 있다. 휴대전화가 울린다. 모르는 번호.</p>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">여보세요.</p></div></div>
+<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="pa">(F)</p><p class="ln">깃발 자리. 물이 두 줄 엇갈리지.</p></div></div>
+<p class="ac">세리, 대답하지 않는다.</p>
+<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="pa">(F)</p><p class="ln">일부러 틀리게 짚었다. 네가 알아볼 줄 알고.</p></div></div>
+<p class="no">〔엔드컷: 통화가 끊긴다. 어둠 속에서 세리의 휴대전화 화면만 켜져 있다 - 통화 기록, 「발신번호 표시 제한」. 컷 아웃.〕</p>
+<h2 class="ep" data-n="4"><span class="en">제4회</span> <span class="et">「청룡」</span></h2>
+<h3 class="sc">S#1. 한강 둔치 벤치 / 이른 아침</h3>
+<p class="ac">현묵과 세리가 한 사람 몫을 띄우고 앉아 있다. 서로 보지 않는다.</p>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">왜 저를 돕습니까.</p></div></div>
+<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="ln">돕는 건 없다. 받을 게 있어서 왔지.</p></div></div>
+<p class="ac">현묵, 지침서 배치도를 펼쳐 동쪽 능선을 손톱으로 긋는다.</p>
+<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="ln">이 능선을 깎아라.</p></div></div>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">청룡입니다.</p></div></div>
+<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="ln">소방차가 못 도는 길이다. 소방서가 먼저 깎으라 할 거다.</p></div></div>
+<p class="ac">현묵이 일어나 바지의 흙을 턴다.</p>
+<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="ln">안 깎으면 네가 누구 손녀인지 회장 귀에 들어간다.</p></div></div>
+<p class="ac">현묵이 둑길로 올라간다. 세리, 휴대전화로 검색한다. 기사 한 줄 - 「강산 장남 강이현 상무, 신사옥 TF장 맡아」. 사진 속 이현은 웃지 않는다.</p>
+<p class="ac">세리, 화면을 끈다.</p>
+<h3 class="sc">S#2. 온담건축 설계2팀 / 낮</h3>
+<p class="ac">발주처 중간 점검. 이현과 TF 직원 둘. 민재경이 화면을 넘긴다.</p>
+<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">배치 축은 한강 조망을 따라 정남에서 7.5도 틀었습니다.</p></div></div>
+<p class="ac">이현, 수첩에 숫자를 적어 계산한다. 볼펜이 멈춘다.</p>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">대교 교각 사이로 조망을 열면 12도가 나오는데. 왜 7.5죠.</p></div></div>
+<p class="ac">민재경이 세리를 본다.</p>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">저층부 일조 때문입니다.</p></div></div>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">일조면 반대로 돌려야 하고요.</p></div></div>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">그쪽으로 돌리면 뒤 능선을 3미터 더 깎습니다. 토공 물량은 12쪽입니다.</p></div></div>
+<p class="ac">이현, 12쪽을 넘긴다. 말이 없다. 다음 장, 단면도. 꼭대기 층 회장실.</p>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">회장실은 지침대로네요.</p></div></div>
+<p class="ac">이현, 세리를 한 번 본다.</p>
+<h3 class="sc">S#3. 복도, 엘리베이터 앞 / 낮</h3>
+<p class="ac">점검이 끝나고 TF 직원들은 계단으로 먼저 내려간다. 엘리베이터를 기다리던 이현이 돌아선다. 세리와 둘.</p>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">7.5도. 두 방위 사이 경계선이죠. 옛날 사람들은 거기를 공망이라고 불렀다던데.</p></div></div>
+<p class="ac">세리, 표정이 없다.</p>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">누구한테 배웠어요, 이 각도.</p></div></div>
+<p class="no">〔엔드컷: 엘리베이터가 도착해 문이 열린 채 기다린다. 이현은 타지 않는다. 문이 혼자 닫힌다. 컷 아웃.〕</p>
+<h2 class="ep" data-n="5"><span class="en">제5회</span> <span class="et">「裨補」</span></h2>
+<h3 class="sc">S#1. 복도 / 낮 (이어서)</h3>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">할아버지요. 지관이셨어요.</p></div></div>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">지금도 하세요?</p></div></div>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">돌아가셨습니다.</p></div></div>
+<p class="ac">이현, 엘리베이터 버튼을 다시 누른다.</p>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">내일 구사옥 지하 안전진단이에요. 같이 가죠. 눈이 하나 더 필요해서.</p></div></div>
+<h3 class="sc">S#2. 온담건축 설계2팀 / 밤</h3>
+<p class="ac">세리가 진입 동선을 그린다. 큰길에서 정문까지 한 줄로 곧게.</p>
+<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="pa">(지나가다 화면을 보고)</p><p class="ln">의전 동선 시원하네. 회장님들 이런 거 좋아해.</p></div></div>
+<p class="no">〔VFX: 세리의 시선 - 도면 위 곧은 진입로가 활시위를 떠난 화살의 궤적으로 겹쳐 정문 한가운데에 꽂힌다〕</p>
+<p class="ac">세리, 오른손을 책상 아래로 내려 쥔다.</p>
+<h3 class="sc">S#3. 이현의 차 안 / 낮</h3>
+<p class="ac">다음 날. 이현이 운전한다. 조수석의 세리는 무릎 위에 구사옥 도면철을 올려놓았다. 라디오는 꺼져 있다.</p>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">할아버지 감정, 틀린 적 있어요?</p></div></div>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">한 번도 없다고 하셨어요.</p></div></div>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">본인이?</p></div></div>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">네.</p></div></div>
+<p class="ac">이현, 웃음 비슷한 숨을 내쉰다. 앞유리 너머로 유리 한 칸이 비어 있는 강산 본사가 다가온다.</p>
+<h3 class="sc">S#4. 구사옥 지하 2층, 진입 램프 / 낮</h3>
+<p class="ac">빈 주차장. 기둥마다 균열 조사 번호 스프레이. 지하 2층은 사고 뒤 폐쇄됐다. 이현이 손전등을 들고 앞서 걷는다.</p>
+<p class="ac">램프 중간 기둥 하나에 마른 국화 한 다발이 끈으로 묶여 있다. 이현, 그 기둥을 보지 않고 지나간다.</p>
+<p class="ac">세리의 주머니 속 패철 바늘이 떨다가 램프 옹벽 한쪽을 가리켜 멈춘다.</p>
+<p class="ac">세리, 옹벽에 손을 댄다. 콘크리트 이음매가 갈라져 있다. 휴대전화 불빛을 틈에 들이댄다.</p>
+<p class="no">〔엔드컷: 갈라진 콘크리트 안쪽, 돌에 새긴 두 글자 「裨補」. 그 아래 붉은 낙관 「石圭」. 컷 아웃.〕</p>
+<h2 class="ep" data-n="6"><span class="en">제6회</span> <span class="et">「소방차 회전반경」</span></h2>
+<h3 class="sc">S#1. 구사옥 램프 / 낮 (이어서)</h3>
+<p class="ac">이현이 돌아온다. 세리가 손바닥으로 틈을 가린다.</p>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">뭐 있어요?</p></div></div>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">철근이 나왔네요. 피복이 얕아요.</p></div></div>
+<p class="ac">이현, 손전등을 국화 묶인 기둥 쪽으로 잠깐 돌렸다가 내린다.</p>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">2007년 상량식 날 여기가 내려앉았어요. 세 명. 그중 한 사람이 우리 어머니.</p></div></div>
+<p class="ac">세리, 틈을 가린 손을 내리지 않는다.</p>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">아버지는 다음 날 지관 탓을 했어요. 나는 열다섯이었고, 그 말을 믿었어요.</p></div></div>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">지금은요.</p></div></div>
+<p class="ac">이현, 대답 대신 기둥의 끈을 고쳐 묶는다. 국화 잎이 바스러져 바닥에 떨어진다.</p>
+<h3 class="sc">S#2. 온담건축 설계2팀 / 밤</h3>
+<p class="ac">민재경의 화면에 소방 협의 회신. 「동측 진입로 소방차 회전반경 미달」.</p>
+<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">능선을 깎든지 진입을 서쪽으로 돌리든지.</p></div></div>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">서쪽은 경사 18퍼센트라 소방차가 못 올라갑니다. 동쪽을 깎죠.</p></div></div>
+<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">깎자. 물량은 오늘 안에. 견적팀이 나만 보면 한숨이야.</p></div></div>
+<p class="ac">세리, 능선 시작점에 커서를 대고 멈춘다. 휴대전화에 문자. 강이현: 「오늘 고마웠어요. 철근은 보고서에 넣을게요.」</p>
+<p class="ac">세리, 휴대전화를 엎어 놓는다. 동쪽 능선을 따라 절토선을 긋는다.</p>
+<p class="no">〔VFX: 세리의 시선 - 동쪽 능선에 길게 누운 푸른 용의 옆구리가 절토선을 따라 소리 없이 갈라진다. 용이 고개를 돌려 세리 쪽을 본다〕</p>
+<p class="ac">세리, 손을 편다. 생명선이 두 마디 짧아져 있다.</p>
+<h3 class="sc">S#3. 세리의 집, 부엌 / 새벽</h3>
+<p class="ac">식탁 위에 반쯤 남은 밥그릇. 병철의 의자가 뒤로 밀려 있다. 세리의 휴대전화가 진동한다.</p>
+<div class="dl" data-name="간호사"><div class="nm">간호사</div><div class="tx"><p class="pa">(F)</p><p class="ln">윤병철 씨 보호자 되시죠. 강산의료원 응급실입니다.</p></div></div>
+<p class="no">〔엔드컷: 식탁 위 병철의 약병. 뚜껑이 열려 있고 비어 있다. 컷 아웃.〕</p>
+<h2 class="ep" data-n="7"><span class="en">제7회</span> <span class="et">「입수」</span></h2>
+<h3 class="sc">S#1. 강산의료원 복도 / 낮</h3>
+<p class="ac">휴대전화 화면. 발신번호 표시 제한, 문자 한 줄.</p>
+<p class="ac">「청룡, 잘 깎았다.」</p>
+<p class="ac">화면을 쥔 세리. 자판기 앞, 동전을 넣다 만 손. 자판기에서 캔이 떨어진다. 세리는 꺼내지 않는다.</p>
+<h3 class="sc">S#2. 강산의료원 병실 / 낮</h3>
+<p class="ac">병철이 코에 산소줄을 꽂고 누워 있다. 흉부외과 <b>의사</b>가 차트를 넘긴다.</p>
+<div class="dl" data-name="의사"><div class="nm">의사</div><div class="tx"><p class="ln">관상동맥 세 줄이 좁아졌습니다. 우회술 해야 합니다.</p></div></div>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">언제요.</p></div></div>
+<div class="dl" data-name="의사"><div class="nm">의사</div><div class="tx"><p class="ln">심장 기능이 너무 떨어져 있어요. 약으로 먼저 올리고 날 잡죠. 두 달쯤요.</p></div></div>
+<p class="ac">의사가 나간다. 병철이 입원 약정서에 서명한다. 「철」의 마지막 획이 칸 밖으로 길게 내려간다.</p>
+<p class="ac">병실 창밖으로 한강, 그 너머 옥녀봉이 작게 보인다.</p>
+<h3 class="sc">S#3. 병실 / 밤</h3>
+<p class="ac">병철이 잠들어 있다. 보호자 의자의 세리, 무릎 위 노트북. 코어 블록을 끌어 언덕마루로 옮긴다. 빛이 고이는 혈 바로 뒤, 맥이 들어오는 목.</p>
+<p class="ac">휴대전화에 민재경의 메시지: 「코어 위치 좋다. 암반 2.4미터. 기초비 줄겠네.」</p>
+<p class="no">〔VFX: 코어 기둥이 언덕마루에 박히는 순간, 비탈을 내려오던 빛의 줄기가 코어 앞에서 끊겨 사방으로 흩어진다〕</p>
+<p class="ac">세리, 노트북을 받친 손을 편다. 또 한 마디.</p>
+<h3 class="sc">S#4. 병실 / 밤</h3>
+<p class="ac">병철이 눈을 뜬다. 고개를 돌려 화면을 본다. 위성사진, 강 굽이, 봉우리 하나.</p>
+<div class="dl" data-name="병철"><div class="nm">병철</div><div class="tx"><p class="ln">옥녀봉이네.</p></div></div>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">아세요?</p></div></div>
+<p class="ac">병철, 손을 뻗어 노트북을 덮는다.</p>
+<div class="dl" data-name="병철"><div class="nm">병철</div><div class="tx"><p class="ln">그 땅 그리지 마라.</p></div></div>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">일이에요.</p></div></div>
+<div class="dl" data-name="병철"><div class="nm">병철</div><div class="tx"><p class="ln">다른 일 해.</p></div></div>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">아빠는 택시 하면서 강산 근처는 손님 있어도 안 갔잖아요. 왜요?</p></div></div>
+<p class="ac">병철, 오래 숨을 쉰다. 산소줄이 흔들린다.</p>
+<div class="dl" data-name="병철"><div class="nm">병철</div><div class="tx"><p class="ln">나 강산에서 일했다. 니 할아버지 감정 받을 때.</p></div></div>
+<p class="no">〔엔드컷: 덮인 노트북 틈으로 화면 빛이 샌다. 병철은 천장을 본다. 컷 아웃.〕</p>
+<h2 class="ep" data-n="8"><span class="en">제8회</span> <span class="et">「옥녀탄금」</span></h2>
+<h3 class="sc">S#0. 미리보기 (2초)</h3>
+<p class="ac">노을 속, 산 위에 길고 낮은 상자의 윤곽.</p>
+<p class="no">〔컷 - S#1으로〕</p>
+<h3 class="sc">S#1. 온담건축 설계2팀 / 낮</h3>
+<p class="ac">모형 테이블. 사원이 매스 모형에 지붕을 붙인다. 길고 낮은 몸통, 한쪽 끝으로 내려가는 지붕.</p>
+<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">매스 설명 한 줄.</p></div></div>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">옥녀봉은 옥녀가 거문고를 타는 형국입니다. 건물이 거문고고, 입면 루버가 줄입니다.</p></div></div>
+<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="pa">(모형을 한 바퀴 돌며)</p><p class="ln">지관이 좋아하겠네.</p></div></div>
+<h3 class="sc">S#2. 강산그룹 대회의실 / 낮</h3>
+<p class="ac">1차 심사. 테이블 위 세 안의 모형. 강도형이 지팡이에 두 손을 얹고 있다. 현묵이 거문고 매스를 위에서 내려다본다.</p>
+<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="ln">옥녀탄금. 길합니다.</p></div></div>
+<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">거문고면 소리가 나야지.</p></div></div>
+<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="ln">나게 될 겁니다.</p></div></div>
+<p class="ac">문가에서 <b>강이서</b>(31, 강산건설 사장)가 태블릿을 들고 들어온다.</p>
+<div class="dl" data-name="강이서"><div class="nm">강이서</div><div class="tx"><p class="ln">제일 싼 안이 9퍼센트 싸요. 지붕이 기울면 방수비도 오르고요.</p></div></div>
+<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">사옥은 한 번 짓는다.</p></div></div>
+<div class="dl" data-name="강이서"><div class="nm">강이서</div><div class="tx"><p class="ln">구사옥도 한 번 지었죠.</p></div></div>
+<p class="ac">강도형이 이서를 본다. 이서는 시선을 피하지 않는다. 강도형이 고개를 끄덕이고, 비서가 서류에 도장을 찍는다. 「2차 진출: 온담건축」.</p>
+<h3 class="sc">S#3. 한강 건너편 둔치 / 해질녘</h3>
+<p class="ac">이현이 혼자 서서 태블릿을 들고 있다. 경관 시뮬레이션 - 화면 속 신사옥을 실제 옥녀봉에 겹쳐 띄운다.</p>
+<p class="ac">해가 넘어간다. 루버의 그림자가 지워지고 매스의 윤곽만 남는다.</p>
+<p class="no">〔VFX: 거문고 매스가 노을 역광 속에서 길고 낮은 상자와 비스듬한 뚜껑으로만 읽힌다. 관. 그 뒤로 산 능선이 어깨처럼 늘어선다〕</p>
+<p class="ac">이현, 태블릿을 내려 실제 산을 본다. 다시 화면을 본다. 전화를 건다.</p>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">윤 대리. 지금 강 건너 둔치에 있는데요.</p></div></div>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="pa">(F)</p><p class="ln">……네.</p></div></div>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">이거, 관이네요.</p></div></div>
+<p class="no">〔엔드컷: 태블릿 속 관 모양 매스가 실제 옥녀봉 능선 위에 놓인 채 정지. 노을이 꺼진다. 컷 아웃.〕</p>
+<h2 class="ep" data-n="9"><span class="en">제9회</span> <span class="et">「문서고」</span></h2>
+<h3 class="sc">S#1. 한강 둔치 / 밤 (이어서)</h3>
+<p class="ac">세리가 숨을 고르며 도착한다. 이현은 벤치에 앉아 있다. 태블릿은 꺼져 있다.</p>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">보는 자리 문제입니다. 해질녘, 강 건너, 이 높이에서만.</p></div></div>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">알아요. 여기서만 보이게 그렸죠.</p></div></div>
+<p class="ac">세리, 말이 없다.</p>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">경관심의 위원들은 낮에 와요. 대교 위에서 보고.</p></div></div>
+<p class="ac">이현이 강 건너 구사옥 불빛 쪽으로 고개를 돌린다.</p>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">신고할 거면 전화 안 했어요.</p></div></div>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">왜요.</p></div></div>
+<p class="ac">이현, 구사옥 불빛을 본 채로.</p>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">아버지가 고른 안이잖아요. 끝까지 아버지가 고르게 두려고요.</p></div></div>
+<h3 class="sc">S#2. 같은 벤치 / 밤</h3>
+<p class="ac">이현이 출입증 하나를 벤치 위, 둘 사이에 놓는다.</p>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">강산 문서고. 2006년 철은 지하 3층.</p></div></div>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">제가 뭘 찾는지 아세요?</p></div></div>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">램프에서 손으로 뭘 가렸는지는 알아요.</p></div></div>
+<p class="ac">이현이 일어나 간다. 세리, 출입증을 집는다.</p>
+<h3 class="sc">S#3. 강산그룹 문서고 / 밤</h3>
+<p class="ac">이동식 서가 사이. 세리가 손잡이를 돌려 통로를 연다. 「2006 본사 부지 감정 원본 - 대외비」 상자.</p>
+<p class="ac">서가 끝에서 손전등 불빛이 흔들린다. 경비의 순찰. 세리가 손잡이를 반대로 돌려 통로를 닫는다. 서가 사이 어둠 속에 선다.</p>
+<p class="ac">발소리가 통로 앞을 지나간다. 서가 틈으로 불빛이 세리의 신발 끝을 스치고 멀어진다. 철문 닫히는 소리.</p>
+<p class="ac">세리, 다시 통로를 연다. 상자를 연다. 부록 3과 같은 감정서, 그 아래 또 한 부. 구사옥 부지 감정서 원본. 두께가 부록의 두 배다.</p>
+<p class="ac">마지막 장이 접혀 있다.</p>
+<p class="no">〔엔드컷: 접힌 장의 뒷면으로 붉은 펜 자국이 비친다 - 큰 X 하나. 세리의 손가락이 접힌 모서리에 닿는다. 컷 아웃.〕</p>
+<h2 class="ep" data-n="10"><span class="en">제10회</span> <span class="et">「비보하면 삽니다」</span></h2>
+<h3 class="sc">S#1. 문서고 / 밤 (이어서)</h3>
+<p class="ac">세리가 접힌 장을 편다. 손으로 그린 구사옥 배치도. 지금 램프가 있는 자리에 연못. 연못 둘레에 나무 동그라미들. 연못 가장자리에 작은 네모 하나 - 「표석」.</p>
+<p class="ac">연못 위로 붉은 펜 X.</p>
+<p class="ac">여백에 할아버지 글씨가 두 줄이다. 세리가 손전등으로 첫 줄을 비춘다.</p>
+<h3 class="sc">S#2. 회상 - 공터 / 2006년, 낮</h3>
+<p class="ac">1회 S#1과 같은 앵글. 윤석규가 패철을 덮는다.</p>
+<div class="dl" data-name="윤석규"><div class="nm">윤석규</div><div class="tx"><p class="ln">이 자리에 세우면 사람이 죽습니다.</p></div></div>
+<p class="ac">이번에는 장면이 끊기지 않는다. 윤석규가 패철을 접어 주머니에 넣는다.</p>
+<div class="dl" data-name="윤석규"><div class="nm">윤석규</div><div class="tx"><p class="ln">물을 가두고 나무를 세우면 삽니다.</p></div></div>
+<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">얼마 듭니까.</p></div></div>
+<div class="dl" data-name="윤석규"><div class="nm">윤석규</div><div class="tx"><p class="ln">땅을 사십억 더 사신 셈 치십시오.</p></div></div>
+<p class="ac">강도형이 뒤를 돌아본다. 측량 말뚝 옆에 도면 통을 멘 젊은 직원이 서 있다. 강산건설 점퍼. 얼굴은 모자 그늘에 가려 있다.</p>
+<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">공무과장. 연못 없이 되는 안 하나 뽑아 와.</p></div></div>
+<p class="ac">젊은 직원이 고개를 숙인다.</p>
+<h3 class="sc">S#3. 문서고 / 밤</h3>
+<p class="ac">손전등이 둘째 줄로 내려간다. 「비보하면 삽니다.」</p>
+<p class="ac">세리, 다음 장을 넘긴다. 공사비 절감 품의서. 「연못 및 비보림 삭제, 지하주차장 진입 램프로 대체. 절감액 40억 원.」</p>
+<p class="ac">결재란 세 칸. 맨 오른쪽 칸에 강도형의 서명. 가운데 칸, 현장소장. 맨 왼쪽 기안자 칸에 손전등이 닿는다.</p>
+<p class="no">〔엔드컷: 기안자 서명 「윤병철」. 마지막 획이 칸 밖으로 길게 내려가 있다. 컷 아웃.〕</p>
+<h2 class="ep" data-n="11"><span class="en">제11회</span> <span class="et">「대신 지는 사람」</span></h2>
+<h3 class="sc">S#1. 강산의료원 병실 / 새벽</h3>
+<p class="ac">세리가 품의서 복사본을 병철의 식판 위에 놓는다. 병철이 안경을 쓴다. 오래 본다.</p>
+<div class="dl" data-name="병철"><div class="nm">병철</div><div class="tx"><p class="ln">연못 하나 빼면 다음 현장은 소장으로 보내 준다고 했다.</p></div></div>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">소장 하셨어요?</p></div></div>
+<div class="dl" data-name="병철"><div class="nm">병철</div><div class="tx"><p class="ln">못 했다. 사고로 현장이 다 섰어. 회사는 기자들한테 지관 이름을 줬고.</p></div></div>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">왜 저한테는 한 번도.</p></div></div>
+<div class="dl" data-name="병철"><div class="nm">병철</div><div class="tx"><p class="ln">니가 여덟 살에 패철 읽는 걸 봤다. 그날부터 못 했다.</p></div></div>
+<p class="ac">병철, 안경을 벗어 식판 위에 내려놓는다.</p>
+<div class="dl" data-name="병철"><div class="nm">병철</div><div class="tx"><p class="ln">구사옥 기공식 날 쓰러지셨어. 첫 삽 뜨던 그 시각에. 그 뒤로 못 일어나셨고.</p></div></div>
+<h3 class="sc">S#2. 회상 - 윤석규의 마당 / 2006년, 밤</h3>
+<p class="ac">마루. 윤석규가 젊은 <b>병철</b>(36)의 손을 잡아 손바닥을 편다. 엄지로 생명선을 따라가다 끝에서 멈춘다.</p>
+<p class="ac">병철은 고개를 숙이고 있다.</p>
+<p class="ac">윤석규, 자기 손바닥을 병철의 손바닥에 포갠다.</p>
+<p class="no">〔VFX: 병철의 손바닥에서 옅어지던 금 한 마디가 다시 진해지고, 같은 순간 윤석규의 손바닥에서 한 마디가 지워진다〕</p>
+<h3 class="sc">S#3. 병실 / 새벽</h3>
+<p class="ac">병철이 세리의 손목을 잡는다. 세리, 빼려다 그만둔다. 병철이 세리의 손가락을 하나씩 편다.</p>
+<div class="dl" data-name="병철"><div class="nm">병철</div><div class="tx"><p class="ln">너 뭘 그렸냐.</p></div></div>
+<p class="no">〔엔드컷: 세리의 손바닥. 생명선이 손목에서 시작해 손바닥 한가운데에서 끝나 있다. 병철의 엄지가 그 끝에서 멈춘다. 컷 아웃.〕</p>
+<h2 class="ep" data-n="12"><span class="en">제12회</span> <span class="et">「지워지지 않는 선」</span></h2>
+<h3 class="sc">S#0. 미리보기 (2초)</h3>
+<p class="ac">지우개가 종이를 문지른다. 종이가 일어난다.</p>
+<p class="no">〔컷 - S#1으로〕</p>
+<h3 class="sc">S#1. 온담건축 설계2팀 / 낮</h3>
+<p class="ac">벽에 2차 심사 패널 시안. 화이트보드에 「D-3」.</p>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">배치 축, 정남으로 돌리겠습니다.</p></div></div>
+<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">지금? 구조, 입면, 조경이 다 그 축에 물려 있어.</p></div></div>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">제가 밤새 하겠습니다.</p></div></div>
+<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">TF장이 직접 물어본 숫자야. 돌리면 우리가 틀렸다는 거고.</p></div></div>
+<p class="ac">민재경이 펜 뚜껑을 닫는다.</p>
+<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">이유를 말해. 그럼 돌려 줄게.</p></div></div>
+<p class="ac">세리의 눈이 민재경 모니터 옆 팀 회식 사진에 머문다.</p>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">……제가 틀렸습니다. 그대로 가겠습니다.</p></div></div>
+<h3 class="sc">S#2. 설계2팀 복도 / 낮</h3>
+<p class="ac">세리 혼자. 휴대전화에 문자 한 통, 발신번호 표시 제한.</p>
+<p class="ac">「선 하나라도 돌리면 네 할아버지 이름이 회장 책상에 오른다.」</p>
+<p class="ac">복도 끝 회의실 문이 열리고 이현이 나온다. 발주처 일정 협의를 마친 차림. 세리를 보고 멈춘다.</p>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">2차 준비는요.</p></div></div>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">축을 돌리고 싶습니다.</p></div></div>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">돌리면 이 안은 떨어져요. 남은 한 안은 축이 정남이니까.</p></div></div>
+<p class="ac">이현이 세리의 손을 본다. 주먹이 쥐어져 있다.</p>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">떨어질 걸 알고 돌리겠다는 사람은 처음 봐요. 누가 다쳤어요?</p></div></div>
+<p class="ac">세리, 주먹을 주머니에 넣는다.</p>
+<h3 class="sc">S#3. 온담건축 설계2팀 / 밤</h3>
+<p class="ac">빈 사무실. 세리가 배치 축 선을 선택해 지운다. 선이 사라진다. 저장.</p>
+<p class="ac">청룡 절토선을 지운다. 사라진다. 저장.</p>
+<p class="ac">세리, 마우스에서 손을 뗀다.</p>
+<p class="no">〔VFX: 모니터의 빈자리에서 선이 끝에서부터 한 픽셀씩 다시 그어진다. 커서는 움직이지 않는다〕</p>
+<p class="ac">세리, 출력해 둔 트레이싱지를 꺼내 지우개로 축선을 문지른다. 종이가 일어날 만큼.</p>
+<p class="no">〔엔드컷: 지우개 가루를 털어 낸 자리에서 연필선이 종이 안쪽부터 배어 나오듯 다시 진해진다. 컷 아웃.〕</p>
+<h2 class="ep" data-n="13"><span class="en">제13회</span> <span class="et">「2차 심사」</span></h2>
+<h3 class="sc">S#0. 미리보기 (2초)</h3>
+<p class="ac">모형 지붕 위에 패철이 놓인다. 바늘이 돈다.</p>
+<p class="no">〔컷 - S#1으로〕</p>
+<h3 class="sc">S#1. 강산그룹 대회의실 / 낮</h3>
+<p class="ac">긴 테이블. 강도형, 이현, 강산건설 사장 <b>강이서</b>(31), 외부 심사위원 셋. 현묵은 벽 쪽 의자에 앉아 있다. 테이블 가운데 거문고 매스 모형. 세리가 리모컨을 쥔다.</p>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">옥녀봉의 맥은 북에서 내려와 언덕마루에서 멈춥니다. 건물은 그 맥을 등지고 강을 봅니다.</p></div></div>
+<div class="dl" data-name="외부 심사위원"><div class="nm">외부 심사위원</div><div class="tx"><p class="ln">코어를 언덕마루에 박았네요. 기초는 싸겠고.</p></div></div>
+<div class="dl" data-name="강이서"><div class="nm">강이서</div><div class="tx"><p class="ln">그런데 총공사비는 상대 안보다 6퍼센트 높아요.</p></div></div>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">진입로 절토는 중간 점검 때 제가 승인했습니다. 소방 협의라 못 줄입니다.</p></div></div>
+<p class="ac">강도형이 지팡이로 바닥을 한 번 짚는다. 모두 입을 다문다.</p>
+<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">윤 대리라고 했나. 자네는 풍수를 믿나.</p></div></div>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">땅은 그은 대로 사람을 앉힌다고 배웠습니다.</p></div></div>
+<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">누구한테.</p></div></div>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">제 도면을 처음 본 사람한테요.</p></div></div>
+<p class="ac">강도형, 모형의 꼭대기 층을 손가락으로 쓸어 본다. 회장실 자리.</p>
+<h3 class="sc">S#2. 대회의실 / 낮</h3>
+<p class="ac">강도형이 현묵을 본다.</p>
+<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">지관 의견.</p></div></div>
+<p class="ac">현묵이 일어나 모형 앞으로 온다. 패철을 모형 지붕 위에 올려놓는다. 바늘이 멈출 때까지 기다린다.</p>
+<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="ln">좌향 좋고, 회장님 자리 좋습니다.</p></div></div>
+<p class="ac">현묵이 손가락으로 모형의 동쪽 절토면을 짚는다.</p>
+<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="ln">한 군데. 청룡이 잘렸습니다. 장자를 치는 배치입니다.</p></div></div>
+<p class="ac">회의실이 조용해진다. 강이서가 펜을 내려놓는다.</p>
+<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="ln">이 절토선은 TF장께서 승인하셨지요.</p></div></div>
+<p class="no">〔엔드컷: 강도형이 천천히 고개를 돌려 이현을 본다. 이현은 세리 쪽을 보지 않는다. 컷 아웃.〕</p>
+<h2 class="ep" data-n="14"><span class="en">제14회</span> <span class="et">「표석」</span></h2>
+<h3 class="sc">S#1. 대회의실 앞 복도 / 낮</h3>
+<p class="ac">TF 직원이 이현에게서 출입증을 받아 간다.</p>
+<div class="dl" data-name="TF 직원"><div class="nm">TF 직원</div><div class="tx"><p class="ln">회장님 지시로 TF는 강이서 사장님이 맡으십니다.</p></div></div>
+<p class="ac">직원이 간다. 세리가 이현 앞에 선다.</p>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">제 선입니다.</p></div></div>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">알아요.</p></div></div>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">그 자리에서 말씀하셨어야죠.</p></div></div>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">그럼 대리님이 빠지잖아요. 그 안, 끝까지 가요.</p></div></div>
+<p class="ac">이현이 엘리베이터에 탄다. 문이 닫힌다.</p>
+<p class="ac">복도 끝 유리문 너머. 현묵이 회장 차를 지나쳐 뒤에 선 검은 차에 오른다. 창이 짙어 안이 보이지 않는다.</p>
+<p class="ac">세리, 그 차가 떠날 때까지 본다.</p>
+<h3 class="sc">S#2. 구사옥 지하 진입로 폐쇄 가림막 / 밤</h3>
+<p class="ac">세리가 공구 가방을 메고 가림막 앞에 선다. 손바닥을 편다. 생명선이 손바닥 가운데에서 멈춰 있다. 주먹을 쥐고, 가림막 틈으로 들어간다.</p>
+<h3 class="sc">S#3. 구사옥 지하 램프 / 밤</h3>
+<p class="ac">세리가 정과 망치로 옹벽 틈을 넓힌다. 콘크리트 조각이 떨어지고 표석 윗면이 드러난다. 「裨補」. 그 아래로 작은 글씨가 몇 줄 더 있다.</p>
+<p class="ac">세리가 휴대전화 불빛을 비추려는 순간, 램프 위쪽에서 지팡이 소리가 내려온다. 한 걸음씩.</p>
+<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">그 돌, 내가 덮으라고 했다.</p></div></div>
+<p class="ac">세리, 정을 쥔 채 돌아선다. 강도형이 국화 묶인 기둥 앞에서 멈춘다. 기울어진 꽃다발을 손끝으로 바로 세운다.</p>
+<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="pa">(꽃을 보며)</p><p class="ln">윤석규 손녀.</p></div></div>
+<p class="no">〔엔드컷: 세리의 손에서 정이 미끄러져 바닥에 떨어진다. 쇳소리가 램프를 따라 길게 울린다. 컷 아웃.〕</p>
+<h2 class="ep" data-n="15"><span class="en">제15회</span> <span class="et">「길일」</span></h2>
+<h3 class="sc">S#1. 구사옥 지하 램프 / 밤 (이어서)</h3>
+<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">명단 첫날 봤다. 윤세리. 윤 선생이 마당에서 부르던 이름이지.</p></div></div>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">그런데 왜 두셨습니까.</p></div></div>
+<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">흉지를 그릴 줄 아는 손은 명당도 그려.</p></div></div>
+<p class="ac">강도형, 지팡이 끝으로 표석을 두 번 두드린다.</p>
+<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">자네 할아버지는 끝까지 안 그려 줬지.</p></div></div>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">그려 드렸습니다. 회장님이 지우셨죠.</p></div></div>
+<p class="ac">강도형, 잠깐 말이 없다.</p>
+<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">그래서 이번엔 안 지울 거야. 자네가 그은 선은 하나도.</p></div></div>
+<div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">청룡이 잘린 안입니다.</p></div></div>
+<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">그래서 아들을 뺐지. 없는 놈은 안 맞아.</p></div></div>
+<p class="ac">강도형이 램프를 올라간다. 지팡이 소리가 멀어진다.</p>
+<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="pa">(돌아보지 않고)</p><p class="ln">결과는 내일 나가.</p></div></div>
+<h3 class="sc">S#2. 온담건축 설계2팀 / 낮</h3>
+<p class="ac">팀원들이 한 모니터 앞에 모여 있다. 메일 제목: 「강산그룹 신사옥 지명설계공모 심사 결과 안내」. 본문 첫 줄 - 당선: 온담건축사사무소.</p>
+<p class="ac">박수. 민재경이 세리의 어깨를 잡는다.</p>
+<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">윤 대리 배치가 이겼어.</p></div></div>
+<p class="ac">세리, 고개만 숙인다. 책상 아래에서 손바닥을 편다. 생명선은 손바닥 가운데에서 멈춰 있다.</p>
+<p class="ac">휴대전화에 메시지 한 줄. 강이현: 「축하해요. 아버지가 대리님 이름을 두 번 불렀어요.」</p>
+<p class="ac">세리, 답장을 쓰다가 지운다.</p>
+<h3 class="sc">S#3. 온담건축 비상계단 / 낮</h3>
+<p class="ac">세리가 혼자 계단참에 앉는다. 휴대전화가 연달아 두 번 진동한다.</p>
+<p class="ac">첫 번째. 강산의료원: 「윤병철 님 관상동맥우회술 일정이 확정되었습니다. 11월 3일 오전 9시.」</p>
+<p class="ac">두 번째. 강산그룹: 「신사옥 부지 개토제에 모십니다. 첫 삽. 택일 현묵. 11월 3일 오전 11시.」</p>
+<div class="dl" data-name="병철"><div class="nm">병철</div><div class="tx"><p class="pa">(V.O.)</p><p class="ln">첫 삽 뜨던 그 시각에.</p></div></div>
+<p class="no">〔엔드컷: 두 알림이 화면에 위아래로 겹쳐 있다. 같은 날짜 두 줄. 세리의 엄지가 그 사이에서 멈춘다. 컷 아웃.〕</p>
+</template>
+<template id="tCover"><div class="ct"><h1>명당</h1><p class="sub">한 뼘씩 그리는 흉지</p><p class="meta">1~15회 대본 · 회당 2분 내외 · 세로형</p></div><p class="au">공정현</p></template>
+<template id="tFront"><div class="fm"><p class="t">명당</p><p class="s">한 뼘씩 그리는 흉지</p><p class="n">지문은 현재형. 〔 〕 안은 AI 영상 제작 노트.</p></div></template>
+<template id="tBack"><p class="bk">명당</p></template>
+<script type="application/json" id="tocdata">[{"n": 1, "t": "이 자리에 세우면"}, {"n": 2, "t": "현장설명회"}, {"n": 3, "t": "수맥 위의 의자"}, {"n": 4, "t": "청룡"}, {"n": 5, "t": "裨補"}, {"n": 6, "t": "소방차 회전반경"}, {"n": 7, "t": "입수"}, {"n": 8, "t": "옥녀탄금"}, {"n": 9, "t": "문서고"}, {"n": 10, "t": "비보하면 삽니다"}, {"n": 11, "t": "대신 지는 사람"}, {"n": 12, "t": "지워지지 않는 선"}, {"n": 13, "t": "2차 심사"}, {"n": 14, "t": "표석"}, {"n": 15, "t": "길일"}]</script>
+<script>
+(function () {
+  "use strict";
+  var D = document, R = D.documentElement, WIN = window;
+  var UNITS = Array.prototype.slice.call(D.getElementById("src").content.children);
+  UNITS.forEach(function (u, i) { u.setAttribute("data-u", String(i)); });
+  var TOC = JSON.parse(D.getElementById("tocdata").textContent);
+  var TPL = { cover: D.getElementById("tCover").innerHTML, front: D.getElementById("tFront").innerHTML, back: D.getElementById("tBack").innerHTML };
+  /* fixed design pages; the whole stage is scaled to the window */
+  var DES = {
+    book: { w: 560, h: 792, pt: 62, pb: 58, px: 52, fs: 15 },
+    compact: { w: 400, h: 566, pt: 44, pb: 42, px: 26, fs: 14.5 }
+  };
+  var POSKEY = "yhl-myeongdang-pos", THEMEKEY = "yhl-theme";
+  var CP = "clipPath" in R.style ? "clipPath" : "webkitClipPath", NONE = "polygon(0px 0px,0px 0px,0px 0px)";
+  var LIFT = 0.1, MARGIN = 40, PERSP = 1800, FLICK = 0.45, BAR_T = 44, BAR_B = 52, GAP = 16;
+  var reduced = false;
+  try { reduced = WIN.matchMedia("(prefers-reduced-motion: reduce)").matches; } catch (e) {}
+  function $(id) { return D.getElementById(id); }
+  var desk = $("desk"), stage = $("stage"), shift = $("shift"), slotL = $("slotL"), slotR = $("slotR"), meas = $("meas"),
+    pn = $("pn"), live = $("live"), rng = $("rng"), bPrev = $("bPrev"), bNext = $("bNext"), bToc = $("bToc"),
+    bTheme = $("bTheme"), toc = $("toc"), tocList = $("tocList"), tClose = $("tClose");
+  var books = {}, S = { mode: "", dk: "", sc: 1, W: 0, H: 0, book: null, views: [], v: 0 };
+  var drag = null, anim = 0, token = 0, pend = null, ready = false;
+
+  function div(c) { var e = D.createElement("div"); e.className = c; return e; }
+  function r1(v) { return Math.round(v * 10) / 10; }
+  function r4(v) { return Math.round(v * 10000) / 10000; }
+  function clamp(v, a, b) { return v < a ? a : v > b ? b : v; }
+  function setVars(el, d) {
+    var s = el.style;
+    s.setProperty("--pw", d.w + "px"); s.setProperty("--ph", d.h + "px"); s.setProperty("--pt", d.pt + "px");
+    s.setProperty("--pb", d.pb + "px"); s.setProperty("--px", d.px + "px"); s.setProperty("--fs", d.fs + "px");
+  }
+
+  /* ================= pagination ================= */
+  function lineStarts(p) {
+    var w = D.createTreeWalker(p, NodeFilter.SHOW_TEXT), n, off = 0, res = [], r = D.createRange();
+    while ((n = w.nextNode())) {
+      var s = n.data;
+      for (var i = 0; i < s.length; i++) {
+        var ch = s.charCodeAt(i);
+        if (ch === 32 || ch === 10 || ch === 9 || ch === 13 || ch === 160) continue;
+        r.setStart(n, i); r.setEnd(n, i + 1);
+        var rs = r.getClientRects();
+        if (!rs.length) continue;
+        var b = rs[0], last = res[res.length - 1];
+        if (!last || b.top > last.top + 2) res.push({ off: off + i, top: b.top, bottom: b.bottom });
+        else if (b.bottom > last.bottom) last.bottom = b.bottom;
+      }
+      off += s.length;
+    }
+    return res;
+  }
+  /* split element p at a text offset; inline markup that straddles the cut is cloned on both sides */
+  function cutAt(p, off) {
+    var w = D.createTreeWalker(p, NodeFilter.SHOW_TEXT), n, acc = 0, tn = null, ti = 0;
+    while ((n = w.nextNode())) {
+      if (acc + n.data.length > off) { tn = n; ti = off - acc; break; }
+      acc += n.data.length;
+    }
+    var r = D.createRange(), h = p.cloneNode(false), t = p.cloneNode(false);
+    r.setStart(p, 0); r.setEnd(tn, ti); h.appendChild(r.cloneContents());
+    r.setStart(tn, ti); r.setEnd(p, p.childNodes.length); t.appendChild(r.cloneContents());
+    t.classList.add("cn");
+    return [h, t];
+  }
+  function contName(dl) {
+    var nm = div("nm"), a = D.createElement("span"), b = D.createElement("span");
+    a.className = "x"; a.textContent = dl.getAttribute("data-name");
+    b.className = "x ct"; b.textContent = "(계속)";
+    nm.appendChild(a); nm.appendChild(b);
+    return nm;
+  }
+
+  function paginate(dk) {
+    var d = DES[dk];
+    setVars(meas, d);
+    meas.innerHTML = '<div class="pg paper r"><div class="hd"><span>명당</span><span>제1회</span></div><div class="bd"></div><div class="ft">1</div></div>';
+    var body = meas.querySelector(".bd"), limit = body.clientHeight, out = [], ep = 0, cur;
+    function top0() { return body.getBoundingClientRect().top; }
+    function limAbs() { return top0() + limit + 0.5; }
+    function fits() { var l = body.lastElementChild; return !l || l.getBoundingClientRect().bottom <= limAbs(); }
+    function fresh() { cur = { kind: "text", ep: ep }; }
+    function flush() {
+      var ns = [];
+      while (body.firstChild) ns.push(body.removeChild(body.firstChild));
+      cur.nodes = ns; cur.u = +ns[0].getAttribute("data-u"); out.push(cur); fresh();
+    }
+    function tryHead(h) { body.appendChild(h); var ok = fits(); body.removeChild(h); return ok; }
+    /* action and notes: at least two lines on each side, otherwise the paragraph moves whole */
+    function splitTop(node) {
+      body.appendChild(node);
+      var lines = lineStarts(node), L = lines.length, lim = limAbs(), m = 0;
+      for (var i = 0; i < L; i++) if (lines[i].bottom <= lim) m = i + 1;
+      body.removeChild(node);
+      if (L < 4) return null;
+      for (m = Math.min(m, L - 2); m >= 2; m--) {
+        var pr = cutAt(node, lines[m].off);
+        if (tryHead(pr[0])) return pr;
+      }
+      return null;
+    }
+    /* dialogue: the cue never leaves without its first spoken line; any part keeps one line or more */
+    function splitDl(node) {
+      body.appendChild(node);
+      var lim = limAbs(), kids = Array.prototype.slice.call(node.querySelector(".tx").children), first = !node.hasAttribute("data-c");
+      var all = kids.map(lineStarts), fl = 0, k0 = 0, m0 = 0, i;
+      for (i = 0; i < kids.length; i++) if (!kids[i].classList.contains("pa")) { fl = i; break; }
+      while (k0 < kids.length && kids[k0].getBoundingClientRect().bottom <= lim) k0++;
+      body.removeChild(node);
+      if (k0 >= kids.length) return null;
+      for (i = 0; i < all[k0].length; i++) if (all[k0][i].bottom <= lim) m0 = i + 1;
+      for (var k = k0; k >= 0; k--) {
+        var len = all[k].length, mStart = k === k0 ? Math.min(m0, len - 1) : len - 1;
+        for (var m = mStart; m >= (k === 0 ? 1 : 0); m--) {
+          if (first && (k < fl || (k === fl && m < 1))) continue;
+          if (m > 0 && kids[k].classList.contains("pa")) continue; /* a stage direction is never broken across pages */
+          var h = node.cloneNode(false), t = node.cloneNode(false), htx = div("tx"), ttx = div("tx"), j;
+          h.appendChild(node.querySelector(".nm").cloneNode(true));
+          for (j = 0; j < k; j++) htx.appendChild(kids[j].cloneNode(true));
+          if (m > 0) { var pr = cutAt(kids[k], all[k][m].off); htx.appendChild(pr[0]); ttx.appendChild(pr[1]); }
+          else ttx.appendChild(kids[k].cloneNode(true));
+          for (j = k + 1; j < kids.length; j++) ttx.appendChild(kids[j].cloneNode(true));
+          h.appendChild(htx);
+          t.setAttribute("data-c", "1"); t.appendChild(contName(node)); t.appendChild(ttx);
+          if (tryHead(h)) return [h, t];
+        }
+      }
+      return null;
+    }
+    function isHead(e) { return e && (e.classList.contains("sc") || e.classList.contains("ep")); }
+    function place(node) {
+      for (var guard = 0; guard < 60; guard++) {
+        body.appendChild(node);
+        if (fits()) return;
+        body.removeChild(node);
+        var c = node.classList, sp = c.contains("dl") ? splitDl(node) : (c.contains("ac") || c.contains("no")) ? splitTop(node) : null;
+        if (sp) { body.appendChild(sp[0]); flush(); node = sp[1]; continue; }
+        if (!body.firstChild) { body.appendChild(node); flush(); return; }
+        /* a heading never stays alone at the bottom: it goes over with what it introduces */
+        var carry = [];
+        while (isHead(body.lastElementChild)) carry.unshift(body.removeChild(body.lastElementChild));
+        if (!body.firstChild) { carry.forEach(function (e) { body.appendChild(e); }); carry = []; }
+        flush();
+        carry.forEach(function (e) { body.appendChild(e); });
+      }
+      body.appendChild(node);
+    }
+    fresh();
+    UNITS.forEach(function (u) {
+      var n = u.cloneNode(true);
+      if (u.classList.contains("ep")) {
+        if (body.firstChild) flush();
+        ep = +u.getAttribute("data-n"); cur.ep = ep;
+      }
+      place(n);
+    });
+    if (body.firstChild) flush();
+    meas.innerHTML = "";
+
+    var pages = [{ kind: "cover" }, { kind: "board" }, { kind: "front" }], epStart = {}, single = [];
+    out.forEach(function (p, i) {
+      p.folio = i + 1;
+      if (p.nodes[0].classList.contains("ep")) epStart[p.ep] = pages.length;
+      pages.push(p);
+    });
+    if (out.length % 2 === 0) pages.push({ kind: "blank" });
+    pages.push({ kind: "board" }); pages.push({ kind: "back" });
+    pages.forEach(function (p, i) { if (p.kind !== "board" && p.kind !== "blank") single.push(i); });
+    return { pages: pages, cc: out.length, epStart: epStart, single: single };
+  }
+  function getBook(dk) { return books[dk] || (books[dk] = paginate(dk)); }
+
+  function epTitle(n) { for (var i = 0; i < TOC.length; i++) if (TOC[i].n === n) return "제" + n + "회 「" + TOC[i].t + "」"; return ""; }
+  function renderPage(i) {
+    var p = S.book.pages[i], e = div("pg " + (i % 2 ? "l" : "r") + (S.mode === "single" ? " solo" : ""));
+    e.setAttribute("data-i", String(i));
+    if (p.kind === "cover") { e.classList.add("cover"); e.innerHTML = TPL.cover; }
+    else if (p.kind === "back") { e.classList.add("cover"); e.classList.add("back"); e.innerHTML = TPL.back; }
+    else if (p.kind === "board") { e.classList.add("cover"); e.classList.add("inner"); }
+    else if (p.kind === "front") { e.classList.add("paper"); e.classList.add("front"); e.innerHTML = TPL.front; }
+    else if (p.kind === "blank") { e.classList.add("paper"); e.classList.add("blank"); }
+    else {
+      e.classList.add("paper");
+      var hd = div("hd"), a = D.createElement("span"), b = D.createElement("span"), bd = div("bd"), ft = div("ft");
+      a.className = "lb"; a.textContent = "명당"; b.className = "eh"; b.textContent = epTitle(p.ep);
+      hd.appendChild(a); hd.appendChild(b);
+      p.nodes.forEach(function (n) { bd.appendChild(n.cloneNode(true)); });
+      ft.textContent = String(p.folio);
+      e.appendChild(hd); e.appendChild(bd); e.appendChild(ft);
+    }
+    return e;
+  }
+
+  /* ================= views ================= */
+  function buildViews() {
+    var N = S.book.pages.length, v = [], s;
+    if (S.mode === "spread") for (s = 0; s <= N / 2; s++) v.push([2 * s - 1, 2 * s]);
+    else S.book.single.forEach(function (i) { v.push([i]); });
+    S.views = v;
+  }
+  function viewOf(i) {
+    if (S.mode === "spread") return Math.floor((i + 1) / 2);
+    var L = S.book.single;
+    for (var k = 0; k < L.length; k++) if (L[k] >= i) return k;
+    return L.length - 1;
+  }
+  function setSlot(slot, i) {
+    slot.innerHTML = "";
+    if (i >= 0 && i < S.book.pages.length) { slot.appendChild(renderPage(i)); slot.hidden = false; }
+    else slot.hidden = true;
+  }
+  function showView(v) {
+    var vp = S.views[v];
+    if (S.mode === "spread") { setSlot(slotL, vp[0]); setSlot(slotR, vp[1]); }
+    else { setSlot(slotR, vp[0]); setSlot(slotL, -1); }
+    var off = 0;
+    if (S.mode === "spread") { if (v === 0) off = -S.W / 2; else if (v === S.views.length - 1) off = S.W / 2; }
+    shift.style.transform = off ? "translateX(" + off + "px)" : "";
+  }
+  var NAMES = { front: "속표지", cover: "표지", back: "뒤표지", blank: "빈 쪽", board: "면지" };
+  function label(v) {
+    var f = [], kinds = {};
+    S.views[v].forEach(function (i) { var p = S.book.pages[i]; if (!p) return; if (p.kind === "text") f.push(p.folio); else kinds[p.kind] = 1; });
+    if (f.length) return { s: f.join("-") + " / " + S.book.cc, live: f.join("-") + "쪽, 전체 " + S.book.cc + "쪽" };
+    var order = ["front", "cover", "back", "blank", "board"];
+    for (var k = 0; k < order.length; k++) if (kinds[order[k]]) return { s: NAMES[order[k]], live: NAMES[order[k]] };
+    return { s: "", live: "" };
+  }
+  function updateUI() {
+    var L = label(S.v);
+    pn.textContent = L.s;
+    if (live.textContent !== L.live) live.textContent = L.live;
+    rng.max = String(S.views.length - 1); rng.value = String(S.v); rng.setAttribute("aria-valuetext", L.live);
+    bPrev.disabled = S.v <= 0; bNext.disabled = S.v >= S.views.length - 1;
+    TOC.forEach(function (t) { if (t.tp) { var p = S.book.pages[S.book.epStart[t.n]]; t.tp.textContent = p ? String(p.folio) : ""; } });
+  }
+  function anchor() {
+    if (!S.book) return null;
+    var vp = S.views[S.v] || [], k = "";
+    for (var j = 0; j < vp.length; j++) { var p = S.book.pages[vp[j]]; if (!p) continue; if (p.kind === "text") return { u: p.u }; if (!k || p.kind === "front") k = p.kind; }
+    return { k: k };
+  }
+  function viewForAnchor(a) {
+    var P = S.book.pages;
+    if (!a) return 0;
+    if (typeof a.u === "number") {
+      var best = -1;
+      for (var i = 0; i < P.length; i++) if (P[i].kind === "text" && P[i].u <= a.u) best = i;
+      return best < 0 ? 0 : viewOf(best);
+    }
+    if (a.k === "back") return S.views.length - 1;
+    if (a.k === "front" || a.k === "board") return viewOf(2);
+    return 0;
+  }
+  function savePos() { try { localStorage.setItem(POSKEY, JSON.stringify(anchor())); } catch (e) {} }
+  function commit(v) { S.v = v; showView(v); updateUI(); savePos(); }
+
+  /* ================= peel engine (spread-aware) =================
+     Geometry works in a local frame per turning leaf: x = 0 at the spine, x = W at the outer edge.
+     A backward turn uses the same frame mirrored (scaleX(-1)), so both directions lift the outer corner.
+     The fold is the perpendicular bisector between the corner's rest point and where it is now; the leaf is
+     clipped to the spine side, and the flap (the reflected part) carries the back of the leaf. In a spread
+     that back is the next left page, pre-mirrored so the reflection reads correctly once it lies flat.
+     Covers and endpapers turn as rigid boards about the spine. */
+  function darkNow() {
+    try {
+      var c = getComputedStyle(R).getPropertyValue("--paper").trim(), m, r, g, b;
+      if ((m = /^#([0-9a-f]{6})$/i.exec(c))) { var n = parseInt(m[1], 16); r = n >> 16; g = (n >> 8) & 255; b = n & 255; }
+      else if ((m = /(\d+)\D+(\d+)\D+(\d+)/.exec(c))) { r = +m[1]; g = +m[2]; b = +m[3]; }
+      else return false;
+      return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255 < 0.4;
+    } catch (e) { return false; }
+  }
+  function rect(x0, y0, x1, y1) { return [[x0, y0], [x1, y0], [x1, y1], [x0, y1]]; }
+  function cut(pts, nx, ny, k) {
+    var out = [], n = pts.length;
+    for (var i = 0; i < n; i++) {
+      var A = pts[i], B = pts[(i + 1) % n], da = A[0] * nx + A[1] * ny - k, db = B[0] * nx + B[1] * ny - k;
+      if (da <= 0) out.push(A);
+      if ((da <= 0) !== (db <= 0)) { var t = da / (da - db); out.push([A[0] + (B[0] - A[0]) * t, A[1] + (B[1] - A[1]) * t]); }
+    }
+    return out;
+  }
+  function poly(pts) {
+    if (pts.length < 3) return NONE;
+    var s = [];
+    for (var i = 0; i < pts.length; i++) s.push(r1(pts[i][0]) + "px " + r1(pts[i][1]) + "px");
+    return "polygon(" + s.join(",") + ")";
+  }
+  function reach(px, py, ax, ay, r) {
+    var dx = px - ax, dy = py - ay, l = Math.sqrt(dx * dx + dy * dy);
+    return l > r ? [ax + dx * r / l, ay + dy * r / l] : [px, py];
+  }
+  function isHardLeaf(i) { var k = S.book.pages[i].kind; return k === "cover" || k === "back" || k === "board"; }
+  function canTurn(dir) { var t = S.v + dir; return t >= 0 && t < S.views.length; }
+
+  function build(d) {
+    var dark = darkNow(), wrap = div("fx" + (dark ? " dk" : "")), sh = div("fx-sh"), band = div("fx-band"), lb = div("fx-leaf");
+    wrap.setAttribute("aria-hidden", "true");
+    wrap.style.left = (d.spread && d.dir > 0 ? S.W : 0) + "px";
+    if (d.mirror) wrap.style.transform = "scaleX(-1)";
+    sh.appendChild(band); wrap.appendChild(sh); wrap.appendChild(lb);
+    var front = renderPage(d.leaf);
+    if (d.mirror) front.style.transform = "scaleX(-1)";
+    lb.appendChild(front);
+    d.fx = { wrap: wrap, band: band, lb: lb, dark: dark, mult: dark ? 0.55 : 1, fr: front };
+    if (d.hard) {
+      lb.style.transformOrigin = "0 50%";
+      if (d.spread) {
+        var bk = renderPage(d.back);
+        if (!d.mirror) bk.style.transform = "scaleX(-1)";
+        bk.style.visibility = "hidden"; lb.appendChild(bk); d.fx.bk = bk;
+      }
+      var bs = div("fx-bshade"); lb.appendChild(bs); d.fx.bs = bs;
+    } else {
+      var flap = div("fx-flap"), inner;
+      if (d.spread) { inner = renderPage(d.back); if (!d.mirror) inner.style.transform = "scaleX(-1)"; }
+      else { inner = renderPage(d.leaf); inner.classList.add("thru"); }
+      flap.appendChild(inner);
+      var fs = div("fx-fs"); flap.appendChild(fs);
+      flap.style[CP] = NONE;
+      wrap.appendChild(flap); d.fx.flap = flap; d.fx.fs = fs;
+    }
+    shift.appendChild(wrap);
+  }
+  function teardown(d) { if (d && d.fx && d.fx.wrap.parentNode) d.fx.wrap.parentNode.removeChild(d.fx.wrap); }
+
+  function peelFrame(d, w, h, p) {
+    var f = d.fx, s = d.spread ? 2 * p : (d.dir > 0 ? p + p * p : 2 - 2 * p);
+    var cy0 = d.mode === "top" ? 0 : d.mode === "bot" ? h : h / 2, px = w - s * w, py = cy0;
+    if (d.mode !== "edge") {
+      var lift = LIFT * h * Math.sin(Math.PI * clamp(s, 0, 2) / 2);
+      py = cy0 + (d.mode === "bot" ? -lift : lift) + d.dy;
+      var q = reach(px, py, 0, cy0, w);
+      q = reach(q[0], q[1], 0, h - cy0, Math.sqrt(w * w + h * h));
+      px = q[0]; py = q[1];
+    }
+    var vx = w - px, vy = cy0 - py, len = Math.sqrt(vx * vx + vy * vy), ls = f.lb.style, fs = f.flap.style;
+    if (len < 0.5) { ls[CP] = ""; fs[CP] = NONE; f.band.style.opacity = "0"; return; }
+    var nx = vx / len, ny = vy / len, mx = (w + px) / 2, my = (cy0 + py) / 2, k = mx * nx + my * ny;
+    ls[CP] = poly(cut(rect(0, -MARGIN, w + MARGIN, h + MARGIN), nx, ny, k));
+    var a = 1 - 2 * nx * nx, b = -2 * nx * ny, c = 1 - 2 * ny * ny, e = 2 * k * nx, ff = 2 * k * ny;
+    var lim = d.spread ? -w : 0;
+    var fl = cut(cut(rect(0, 0, w, h), -nx, -ny, -k), -a, -b, e - lim);
+    fs.transform = "matrix(" + r4(a) + "," + r4(b) + "," + r4(b) + "," + r4(c) + "," + r1(e) + "," + r1(ff) + ")";
+    fs[CP] = poly(fl);
+    var depth = 1;
+    for (var i = 0; i < fl.length; i++) depth = Math.max(depth, fl[i][0] * nx + fl[i][1] * ny - k);
+    var big = w + h, head = "translate(" + r1(mx) + "px," + r1(my) + "px) rotate(" + r4(Math.atan2(ny, nx) * 180 / Math.PI) +
+      "deg) translate(0px," + (-big) + "px) scale(";
+    f.fs.style.transform = head + r4(depth / 100) + "," + r4(big / 50) + ")";
+    f.band.style.transform = head + r4((10 + Math.min(56, len * 0.3)) / 100) + "," + r4(big / 50) + ")";
+    f.band.style.opacity = String(r4(Math.min(1, s * 3) * Math.min(1, (2 - s) * 3) * f.mult));
+  }
+  function boardFrame(d, w, h, p) {
+    var f = d.fx, c = d.spread ? 1 - 2 * p : 1 - (d.dir > 0 ? p : 1 - p);
+    var th = Math.acos(clamp(c, -1, 1)), deg = th * 180 / Math.PI;
+    f.lb.style.transform = "perspective(" + Math.max(PERSP, Math.round(4.5 * w)) + "px) rotateY(" + r4(-deg) + "deg)";
+    if (f.bk) { var past = deg > 90; f.fr.style.visibility = past ? "hidden" : ""; f.bk.style.visibility = past ? "" : "hidden"; }
+    f.bs.style.opacity = String(r4(Math.sin(th) * (f.dark ? 0.5 : 0.42)));
+    if (deg < 90) {
+      f.band.style.transform = "translate(" + r1(w * Math.cos(th)) + "px,0px) scale(" + r4((16 + 70 * Math.sin(th)) / 100) + "," + r4(h / 100) + ")";
+      f.band.style.opacity = String(r4(Math.min(1, deg / 12) * Math.max(0, 1 - deg / 90) * f.mult));
+    } else f.band.style.opacity = "0";
+  }
+  function frame(d, p) {
+    d.p = p;
+    if (d.hard) boardFrame(d, S.W, S.H, p); else peelFrame(d, S.W, S.H, p);
+  }
+  function begin(dir, x, y) {
+    if (!canTurn(dir)) return null;
+    var vp = S.views[S.v], W = S.W, H = S.H, d = { dir: dir, p: 0, dy: 0, y0: y, spread: S.mode === "spread", hist: [] };
+    if (d.spread) {
+      d.leaf = dir > 0 ? vp[1] : vp[0]; d.back = d.leaf + dir; d.under = d.leaf + 2 * dir; d.mirror = dir < 0;
+      d.x0 = dir > 0 ? x - W : W - x;
+      setSlot(dir > 0 ? slotR : slotL, d.under);
+    } else {
+      var nv = S.views[S.v + dir][0];
+      d.leaf = dir > 0 ? vp[0] : nv; d.under = dir > 0 ? nv : vp[0]; d.mirror = false; d.x0 = x;
+      setSlot(slotR, d.under);
+    }
+    d.hard = isHardLeaf(d.leaf);
+    d.mode = d.hard ? "hard" : y > H * 0.6 ? "bot" : y < H * 0.4 ? "top" : "edge";
+    build(d);
+    frame(d, 0);
+    return d;
+  }
+  function progress(d, x) {
+    var xl = d.spread ? (d.dir > 0 ? x - S.W : S.W - x) : x;
+    return d.spread || d.dir > 0 ? d.x0 - xl : xl - d.x0;
+  }
+  function dragMove(x, y, t) {
+    var d = drag;
+    if (!d || d.target !== undefined) return;
+    var pp = progress(d, x);
+    d.hist.push({ t: t, pp: pp });
+    if (d.hist.length > 12) d.hist.shift();
+    d.dy = y - d.y0;
+    frame(d, clamp(pp / (d.spread ? 2 * S.W : S.W), 0, 1));
+  }
+  function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
+  function easeInOut(t) { return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; }
+  function tween(from, to, ms, ease, step) {
+    var my = ++token;
+    return new Promise(function (res) {
+      var t0 = 0;
+      pend = res;
+      function f(ts) {
+        if (my !== token) return;
+        if (!t0) t0 = ts;
+        var t = Math.min(1, (ts - t0) / ms), e = ease(t);
+        step(from + (to - from) * e, e);
+        if (t < 1) anim = requestAnimationFrame(f); else { anim = 0; pend = null; res(true); }
+      }
+      anim = requestAnimationFrame(f);
+    });
+  }
+  function settle(d, go, full) {
+    var target = go ? 1 : 0, dist = Math.abs(target - d.p), dy0 = d.dy || 0;
+    var ms = full ? (d.spread ? 820 : 560) : Math.max(160, Math.min(560, dist * (d.spread ? 900 : 640)));
+    d.target = target;
+    return tween(d.p, target, ms, full ? easeInOut : easeOut, function (v, e) { d.dy = dy0 * (1 - e); frame(d, v); }).then(function (done) {
+      if (!done) return;
+      if (drag === d) drag = null;
+      teardown(d);
+      if (go) commit(S.v + d.dir); else showView(S.v);
+    });
+  }
+  /* a new command while a page is still moving: land the moving page at once, then go on */
+  function finishNow() {
+    if (!drag) return;
+    var d = drag, go = d.target === 1;
+    token++;
+    if (anim) cancelAnimationFrame(anim);
+    anim = 0;
+    var r = pend; pend = null; if (r) r(false);
+    teardown(d); drag = null;
+    if (go) commit(S.v + d.dir); else showView(S.v);
+  }
+  function fadeTo(v) {
+    commit(v);
+    try { shift.animate([{ opacity: 0.2 }, { opacity: 1 }], { duration: 200, easing: "ease-out" }); } catch (e) {}
+  }
+  function turn(dir) {
+    finishNow();
+    if (!canTurn(dir)) return Promise.resolve();
+    if (reduced) { fadeTo(S.v + dir); return Promise.resolve(); }
+    var W = S.W, x = S.mode === "spread" ? (dir > 0 ? 2 * W - 1 : 1) : (dir > 0 ? W - 1 : 1);
+    var d = begin(dir, x, S.H * 0.92);
+    if (!d) return Promise.resolve();
+    drag = d;
+    return settle(d, true, true);
+  }
+  function jump(v) {
+    finishNow();
+    v = clamp(v | 0, 0, S.views.length - 1);
+    if (v === S.v) return Promise.resolve();
+    if (Math.abs(v - S.v) === 1 && !reduced) return turn(v - S.v);
+    fadeTo(v);
+    return Promise.resolve();
+  }
+  function busy() { return !!drag || !!anim; }
+
+  /* ================= layout ================= */
+  function measureWindow() {
+    var vw = WIN.innerWidth, vh = WIN.innerHeight, aw = vw - 2 * GAP, ah = vh - BAR_T - BAR_B - 8;
+    var b = DES.book, c = DES.compact, s2 = Math.min(aw / (2 * b.w), ah / b.h), s1 = Math.min(aw / b.w, ah / b.h), L;
+    if (vw > vh * 1.05 && s2 >= 0.62) L = { mode: "spread", dk: "book", sc: s2 };
+    else if (s1 >= 0.85) L = { mode: "single", dk: "book", sc: s1 };
+    else L = { mode: "single", dk: "compact", sc: Math.min(aw / c.w, ah / c.h) };
+    L.sc = Math.min(L.sc, 1.7); L.vw = vw; L.ah = ah;
+    return L;
+  }
+  function relayout(L, a) {
+    var changed = L.mode !== S.mode || L.dk !== S.dk;
+    if (changed) {
+      if (a === undefined) a = anchor();
+      S.mode = L.mode; S.dk = L.dk; S.book = getBook(L.dk); buildViews();
+    }
+    var d = DES[L.dk], sw = (S.mode === "spread" ? 2 : 1) * d.w;
+    S.W = d.w; S.H = d.h; S.sc = L.sc;
+    setVars(stage, d);
+    stage.style.width = sw + "px"; stage.style.height = d.h + "px";
+    var left = Math.round((L.vw - sw * L.sc) / 2), top = Math.round(BAR_T + 4 + (L.ah - d.h * L.sc) / 2);
+    stage.style.transform = "translate(" + left + "px," + top + "px) scale(" + r4(L.sc) + ")";
+    slotL.style.left = "0px"; slotR.style.left = (S.mode === "spread" ? d.w : 0) + "px";
+    R.setAttribute("data-mode", S.mode);
+    if (changed) S.v = viewForAnchor(a);
+    S.v = clamp(S.v, 0, S.views.length - 1);
+    showView(S.v); updateUI();
+  }
+  var rsT = 0;
+  function onResize() {
+    clearTimeout(rsT);
+    rsT = setTimeout(function () {
+      if (busy()) { onResize(); return; }
+      relayout(measureWindow());
+    }, 150);
+  }
+
+  /* ================= input ================= */
+  function local(e) { var r = shift.getBoundingClientRect(); return { x: (e.clientX - r.left) / S.sc, y: (e.clientY - r.top) / S.sc }; }
+  var pd = null;
+  function tap(x) {
+    if (S.mode === "spread") turn(x >= S.W ? 1 : -1);
+    else turn(x < S.W * 0.35 ? -1 : 1);
+  }
+  desk.addEventListener("pointerdown", function (e) {
+    if (e.button !== 0 || !toc.hidden) return;
+    var pt = local(e);
+    pd = { id: e.pointerId, x0: pt.x, y0: pt.y, cx: e.clientX, cy: e.clientY, moved: false };
+    try { desk.setPointerCapture(e.pointerId); } catch (err) {}
+  });
+  desk.addEventListener("pointermove", function (e) {
+    if (!pd || e.pointerId !== pd.id) return;
+    var dx = e.clientX - pd.cx, dy = e.clientY - pd.cy;
+    if (!pd.moved) {
+      if (dx * dx + dy * dy < 64) return;
+      pd.moved = true;
+      var dir = S.mode === "spread" ? (pd.x0 >= S.W ? 1 : -1) : (dx < 0 ? 1 : -1);
+      finishNow();
+      if (!canTurn(dir)) return;
+      if (reduced) { pd.dir = dir; return; }
+      drag = begin(dir, pd.x0, pd.y0);
+    }
+    var pt = local(e);
+    if (drag) dragMove(pt.x, pt.y, e.timeStamp);
+    else if (pd.dir) pd.last = progressReduced(pd, pt.x);
+  });
+  function progressReduced(p, x) { return p.dir > 0 ? p.x0 - x : x - p.x0; }
+  function release(e) {
+    if (!pd || e.pointerId !== pd.id) return;
+    var p = pd; pd = null;
+    try { desk.releasePointerCapture(e.pointerId); } catch (err) {}
+    if (e.type === "pointercancel") { if (drag && drag.target === undefined) settle(drag, false, false); return; }
+    if (!p.moved) { tap(local(e).x); return; }
+    if (p.dir && !drag) { if ((p.last || 0) > 30) fadeTo(S.v + p.dir); return; }
+    var d = drag;
+    if (!d || d.target !== undefined) return;
+    var h = d.hist, v = 0;
+    /* a pointer that rested before letting go carries no flick */
+    if (h.length > 1 && e.timeStamp - h[h.length - 1].t < 100) {
+      var lastS = h[h.length - 1], j = h.length - 2;
+      while (j > 0 && lastS.t - h[j].t < 80) j--;
+      var dt = lastS.t - h[j].t;
+      if (dt > 0) v = (lastS.pp - h[j].pp) / dt;
+    }
+    var go = v > FLICK || (d.p > 0.5 && v > -FLICK);
+    settle(d, go, false);
+  }
+  desk.addEventListener("pointerup", release);
+  desk.addEventListener("pointercancel", release);
+
+  D.addEventListener("keydown", function (e) {
+    if (!toc.hidden) {
+      if (e.key === "Escape") { e.preventDefault(); closeToc(); }
+      else if (e.key === "Tab") trapTab(e);
+      return;
+    }
+    if (e.target && (e.target.tagName === "INPUT" || e.target.tagName === "BUTTON") && (e.key === " " || e.key === "Enter")) return;
+    if (e.target && e.target.tagName === "INPUT" && e.key.indexOf("Arrow") === 0) return;
+    if (e.altKey || e.ctrlKey || e.metaKey) return;
+    var k = e.key;
+    if (k === "ArrowRight" || k === "PageDown" || k === " ") { e.preventDefault(); turn(1); }
+    else if (k === "ArrowLeft" || k === "PageUp") { e.preventDefault(); turn(-1); }
+    else if (k === "Home") { e.preventDefault(); jump(0); }
+    else if (k === "End") { e.preventDefault(); jump(S.views.length - 1); }
+  });
+  bPrev.addEventListener("click", function () { turn(-1); });
+  bNext.addEventListener("click", function () { turn(1); });
+  rng.addEventListener("input", function () { jump(+rng.value); });
+
+  /* contents */
+  TOC.forEach(function (t) {
+    var li = D.createElement("li"), b = D.createElement("button"), a = D.createElement("span"), m = D.createElement("span"), c = D.createElement("span");
+    b.type = "button"; a.className = "tn"; m.className = "tt"; c.className = "tp";
+    a.textContent = "제" + t.n + "회"; m.textContent = "「" + t.t + "」";
+    b.appendChild(a); b.appendChild(m); b.appendChild(c);
+    b.addEventListener("click", function () { closeToc(); jump(viewOf(S.book.epStart[t.n])); });
+    li.appendChild(b); tocList.appendChild(li); t.tp = c;
+  });
+  function openToc() { toc.hidden = false; bToc.setAttribute("aria-expanded", "true"); var f = tocList.querySelector("button"); if (f) f.focus(); }
+  function closeToc() { toc.hidden = true; bToc.setAttribute("aria-expanded", "false"); bToc.focus(); }
+  function trapTab(e) {
+    var all = toc.querySelectorAll("button"), first = all[0], last = all[all.length - 1];
+    if (e.shiftKey && D.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && D.activeElement === last) { e.preventDefault(); first.focus(); }
+  }
+  bToc.addEventListener("click", function () { if (toc.hidden) openToc(); else closeToc(); });
+  tClose.addEventListener("click", closeToc);
+  toc.addEventListener("click", function (e) { if (e.target === toc) closeToc(); });
+
+  /* theme */
+  function effDark() {
+    var a = R.getAttribute("data-look");
+    if (a === "dark" || a === "light") return a === "dark";
+    try { return WIN.matchMedia("(prefers-color-scheme: dark)").matches; } catch (e) { return false; }
+  }
+  bTheme.setAttribute("aria-pressed", String(effDark()));
+  bTheme.addEventListener("click", function () {
+    var nd = !effDark();
+    R.setAttribute("data-look", nd ? "dark" : "light");
+    try { localStorage.setItem(THEMEKEY, nd ? "dark" : "light"); } catch (e) {}
+    bTheme.setAttribute("aria-pressed", String(nd));
+  });
+
+  /* start */
+  var saved = null;
+  try { saved = JSON.parse(localStorage.getItem(POSKEY) || "null"); } catch (e) {}
+  relayout(measureWindow(), saved);
+  WIN.addEventListener("resize", onResize);
+  ready = true;
+
+  /* test hook */
+  WIN.__royal = {
+    get ready() { return ready; }, get mode() { return S.mode; }, get design() { return S.dk; }, get scale() { return S.sc; },
+    get view() { return S.v; }, get viewCount() { return S.views.length; }, get pageCount() { return S.book.pages.length; },
+    get contentCount() { return S.book.cc; },
+    views: function () { return S.views.slice(); },
+    pages: function () { return S.book.pages.map(function (p, i) { return { i: i, kind: p.kind, ep: p.ep || 0, folio: p.folio || 0, u: p.u }; }); },
+    epStart: function () { return JSON.parse(JSON.stringify(S.book.epStart)); },
+    viewOf: viewOf, renderPage: renderPage, go: jump, turn: turn, busy: busy,
+    unitCount: UNITS.length
+  };
+})();
+</script>
+</body>
+</html>
