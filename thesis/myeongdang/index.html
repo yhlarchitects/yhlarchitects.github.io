@@ -73,6 +73,8 @@ button{font:inherit;color:inherit}
 .bd .ac.li{padding-left:1em;text-indent:-1em}
 .bd .ac.li.cn{text-indent:0}
 .bd .no{font-size:.82em;line-height:1.62;color:var(--mute)}
+.bd .ac.dg{white-space:pre;font-size:.86em;line-height:1.5;margin-top:0}
+.bd .ac.dg:empty{height:.8em}
 .bd .dl{display:grid;grid-template-columns:5em minmax(0,1fr);column-gap:.5em}
 .dl .nm{font-weight:700;overflow-wrap:anywhere}
 .dl .nm .ct{display:block;font-weight:400;font-size:.8em;color:var(--mute)}
@@ -166,16 +168,43 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 </div>
 <div id="meas" aria-hidden="true"></div>
 <template id="src">
+<h3 class="sc fm">등장인물</h3>
+<p class="ac li"><b>윤세리</b> (28) 온담건축 설계2팀 대리. 국풍 윤석규의 손녀. 서울 표준말. 명사 한 마디와 「~겠습니다」. 설명하지 않는다. 아버지 앞에서만 「아빠」</p>
+<p class="ac li"><b>강이현</b> (34) 강산그룹 상무, 신사옥 TF장. 회장의 장남. 끝까지 존댓말. 각도·거리·시각을 먼저 말하고 끝을 「~인데요」로 띄운다. 어머니 이야기만 문장이 짧아진다</p>
+<p class="ac li"><b>강도형</b> (68) 강산그룹 회장. 전원에게 하대. 숫자를 입에 안 올리고 사물과 비유로 명령한다. 「~나」「~지」「~게」</p>
+<p class="ac li"><b>현묵</b> (63) 회장의 지관. 윤석규의 제자였다. 회장 앞은 옛 격식 서울 말(「~올시다」「~더이다」). 세리와 단둘이면 전라 말이 샌다(「~제」「~것이여」)</p>
+<p class="ac li"><b>윤병철</b> (56) 세리의 아버지. 택시 기사. 2006년 강산건설 공무과장. 서울 30년에 반쯤 깎인 경북 말. 「니」「~캤다」「묵었나」「몬」. 밥·약·일 세 단어로 산다</p>
+<p class="ac li"><b>윤석규</b> (향년 76) 국풍. 회상으로만. 경북 북부 어른의 말. 「~습니더」「~마」「~기라」. 느리고, 한 번 말하면 다시 안 한다</p>
+<p class="ac li"><b>민재경</b> (41) 온담건축 설계2팀장. 서울 직장 입말. 반말·반존대 섞임, 수다, 「~잖아」「~거든」. 견적팀과 야근이 말끝마다 붙는다</p>
+<p class="ac li"><b>강이서</b> (31) 강산건설 사장. 회장의 차녀. 퍼센트와 비용으로만 말한다. 짧은 「~요」에 비아냥 한 토막</p>
+<h3 class="sc">관계도</h3>
+<p class="ac dg">윤씨 집</p>
+<p class="ac dg">윤석규 (국풍, 2007년 사망)</p>
+<p class="ac dg"> ├─ 아들: 윤병철 (택시 기사, 2006년 강산건설 공무과장)</p>
+<p class="ac dg"> │    └─ 딸: 윤세리 (온담건축 설계 대리)</p>
+<p class="ac dg"> └─ 제자: 현묵 (지금은 회장의 지관)</p>
+<p class="ac dg"></p>
+<p class="ac dg">강씨 집</p>
+<p class="ac dg">강도형 (강산그룹 회장)</p>
+<p class="ac dg"> ├─ 장남: 강이현 (신사옥 TF장, 2007년 램프 붕괴로 어머니를 잃음)</p>
+<p class="ac dg"> └─ 차녀: 강이서 (강산건설 사장) ─ 현묵의 실제 주인</p>
+<p class="ac dg"></p>
+<p class="ac dg">두 집 사이</p>
+<p class="ac dg">윤석규 ─ 2006년 부지 감정, 비보 요구 ─ 강도형 (비보를 지우고 이름을 기자에게 넘김)</p>
+<p class="ac dg">윤병철 ─ 2006년 비보 삭제 품의서 기안 ─ 강도형 (소장 자리를 약속하고 지키지 않음)</p>
+<p class="ac dg">윤세리 ─ 신사옥 설계 ─ 강도형 ─ 발주 ─ 민재경 (온담건축 설계2팀장, 세리의 상사)</p>
+<p class="ac dg">윤세리 ─ 7.5도를 알아본 사람 ─ 강이현</p>
+<p class="ac dg">현묵 ─ 시험과 협박 ─ 윤세리</p>
 <h2 class="ep" data-n="1"><span class="en">제1회</span> <span class="et">「이 자리에 세우면」</span></h2>
 <h3 class="sc">S#0. 미리보기 (2초)</h3>
 <p class="ac">흙바닥에 놓인 패철. 바늘이 멈추지 않고 돈다. 주름진 손이 패철을 덮는다.</p>
-<div class="dl" data-name="윤석규"><div class="nm">윤석규</div><div class="tx"><p class="pa">(V.O.)</p><p class="ln">이 자리에 세우면 사람이 죽습니다.</p></div></div>
+<div class="dl" data-name="윤석규"><div class="nm">윤석규</div><div class="tx"><p class="pa">(V.O.)</p><p class="ln">이 자리에 세우마 사람이 죽습니더.</p></div></div>
 <p class="no">〔컷 - 바늘 소리가 끊기며 S#1으로〕</p>
 <h3 class="sc">S#1. 공터 / 2006년, 낮</h3>
 <p class="ac">자막: 2006년</p>
 <p class="ac">측량 말뚝이 줄지어 박힌 공터. <b>윤석규</b>(74, 낡은 점퍼)가 무릎을 꿇고 패철을 땅에 내려놓았다. 뒤에 <b>강도형</b>(48, 강산그룹 부회장), 우산을 든 젊은 <b>현묵</b>(43).</p>
-<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">날은 받았고 땅값도 치렀습니다. 선생님은 좌향만 잡아 주시면 됩니다.</p></div></div>
-<div class="dl" data-name="윤석규"><div class="nm">윤석규</div><div class="tx"><p class="pa">(패철에서 눈을 떼지 않고)</p><p class="ln">이 자리에 세우면 사람이 죽습니다.</p></div></div>
+<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">날 받았고, 땅값 치렀습니다. 선생은 좌향만 잡아 주시오.</p></div></div>
+<div class="dl" data-name="윤석규"><div class="nm">윤석규</div><div class="tx"><p class="pa">(패철에서 눈을 떼지 않고)</p><p class="ln">이 자리에 세우마 사람이 죽습니더.</p></div></div>
 <p class="ac">강도형, 대답 대신 현묵에게서 우산을 받아 든다.</p>
 <p class="no">〔VFX: 윤석규의 시선 - 흙 속으로 검은 물줄기 두 갈래가 들어와 X자로 엇갈린다. 이후 「수맥」 표현의 원형〕</p>
 <h3 class="sc">S#2. 휴대전화 화면 (INSERT) / 2026년, 아침</h3>
@@ -185,9 +214,9 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 <p class="ac">엄지가 「국풍」 위에서 멈췄다가 화면을 끈다.</p>
 <h3 class="sc">S#3. 온담건축 설계2팀 / 아침</h3>
 <p class="ac"><b>윤세리</b>(28)가 새 사원증을 목에 건다. 팀장 <b>민재경</b>(41)이 모니터를 돌린다.</p>
-<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">강산 신사옥 지명공모. 초청 세 군데, 우리가 들어갔어요. 윤 대리는 배치.</p></div></div>
+<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">강산 신사옥 지명공모. 초청 세 군데에 우리가 꼈어. 첫날부터 미안한데, 윤 대리가 배치 맡아. 아무도 안 하려고 하거든.</p></div></div>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">부지는요.</p></div></div>
-<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">옥녀봉 아래. 산 등지고 강 보는 자리.</p></div></div>
+<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">옥녀봉 밑. 산 등지고 강 보는 자리. 말만 들으면 좋지?</p></div></div>
 <p class="ac">세리, 지침서 첫 장의 위성사진을 확대한다. 강 굽이, 봉우리 하나.</p>
 <h3 class="sc">S#4. 옥녀봉 부지 / 낮</h3>
 <p class="ac">풀이 무릎까지 자란 비탈. 세리가 주머니에서 낡은 패철을 꺼낸다. 바늘이 떨다가 멈춘다.</p>
@@ -195,9 +224,9 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 <p class="ac">세리, 그 자리에 쪼그려 앉아 흙을 한 줌 쥔다.</p>
 <h3 class="sc">S#5. 회상 - 윤석규의 마당 / 2006년, 저녁</h3>
 <p class="ac">마루 끝. 여덟 살 세리의 손바닥을 윤석규가 펴서 엄지로 금 하나를 따라간다.</p>
-<div class="dl" data-name="윤석규"><div class="nm">윤석규</div><div class="tx"><p class="ln">땅은 그은 대로 사람을 앉힌다. 남을 해치는 배치를 그리면 네 명줄이 준다.</p></div></div>
-<div class="dl" data-name="어린 세리"><div class="nm">어린 세리</div><div class="tx"><p class="ln">얼마나?</p></div></div>
-<div class="dl" data-name="윤석규"><div class="nm">윤석규</div><div class="tx"><p class="ln">선 하나에 손가락 한 마디.</p></div></div>
+<div class="dl" data-name="윤석규"><div class="nm">윤석규</div><div class="tx"><p class="ln">땅은 그은 대로 사람을 앉히는 기라. 남 해치는 배치를 그리마, 니 명줄이 준다.</p></div></div>
+<div class="dl" data-name="어린 세리"><div class="nm">어린 세리</div><div class="tx"><p class="ln">얼마큼?</p></div></div>
+<div class="dl" data-name="윤석규"><div class="nm">윤석규</div><div class="tx"><p class="ln">금 하나에 손가락 한 마디.</p></div></div>
 <h3 class="sc">S#6. 온담건축 설계2팀 / 밤</h3>
 <p class="ac">빈 사무실. 트레이싱지 위 배치도. 세리가 패철을 도면 북쪽에 맞추고 삼각자를 댄다. 건물 축을 정남에서 조금 비튼다.</p>
 <p class="ac">모니터 구석: 회전각 7.5°</p>
@@ -209,28 +238,28 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 <p class="no">〔컷 - S#1으로〕</p>
 <h3 class="sc">S#1. 옥녀봉 부지, 천막 / 낮</h3>
 <p class="ac">접이식 의자에 세 설계사무소 팀. 마이크 앞에 강산그룹 신사옥 TF장 <b>강이현</b>(34).</p>
-<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">질의는 서면으로만 받습니다. 부지 선정 근거는 부록 3에 있습니다.</p></div></div>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">질의는 서면으로만 받습니다. 부지 선정 근거는 부록 3, 14쪽부터예요.</p></div></div>
 <p class="ac">세리, 지침서 부록 3을 넘긴다. 2006년 부지 감정서 사본. 맨 끝 감정인란에 손글씨 서명 - 윤석규.</p>
 <p class="ac">손가락이 그 이름 위에서 멈춘다.</p>
-<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="pa">(작게)</p><p class="ln">윤석규. 구사옥 사고 때 그 지관이잖아. 이 산도 그 사람이 권했대.</p></div></div>
-<div class="dl" data-name="사원"><div class="nm">사원</div><div class="tx"><p class="ln">회장님 지시래요.</p></div></div>
+<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="pa">(작게)</p><p class="ln">윤석규…… 구사옥 사고 때 그 지관 아냐? 이 산도 그 양반이 권했다던데.</p></div></div>
+<div class="dl" data-name="사원"><div class="nm">사원</div><div class="tx"><p class="ln">회장님 지시래요. 저 위에 수행원들이 그러던데요.</p></div></div>
 <h3 class="sc">S#2. 비탈 중턱 / 낮</h3>
 <p class="ac">회장 강도형(68)이 지팡이를 짚고 올라온다. 옆에 회장의 지관 현묵(63, 회색 양복, 손에 새 패철).</p>
 <p class="ac">현묵, 비탈 중턱에서 멈춰 구두 끝으로 땅을 두 번 짚는다.</p>
-<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="ln">회장님 자리는 여깁니다.</p></div></div>
+<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="ln">회장님 자리는 여기올시다.</p></div></div>
 <p class="ac">수행원이 그 자리에 붉은 깃발을 꽂는다.</p>
 <p class="no">〔VFX: 세리의 시선 - 깃발 아래로 검은 물줄기 두 갈래가 X자로 엇갈린다. 1회 S#1 공터와 같은 모양〕</p>
 <p class="ac">세리, 주머니 속 패철을 쥔다. 손 안에서 바늘이 떤다.</p>
 <h3 class="sc">S#3. 깃발에서 열 걸음 위 / 낮</h3>
 <p class="ac">사람들이 깃발 주위에 모여 있다. 세리 혼자 비탈 위쪽, 빛이 고이던 그 자리에 서 있다. 이현이 올라온다.</p>
-<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">다들 깃발 쪽에 있는데.</p></div></div>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">다들 깃발 쪽에 있는데요. 여긴 깃발보다 12미터 높고.</p></div></div>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">여기서 강이 더 잘 보여서요.</p></div></div>
 <p class="ac">이현, 세리 옆에 서서 강을 본다. 잠깐.</p>
-<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">그러네요.</p></div></div>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">……그러네요.</p></div></div>
 <p class="ac">이현, 세리의 신발 앞 흙을 내려다본다. 손으로 판 자국이 있다.</p>
 <h3 class="sc">S#4. 천막 앞 / 낮</h3>
 <p class="ac">설명회가 끝나고 팀들이 흩어진다. 현묵이 회장 차 쪽으로 걸어가다 세리 옆을 지난다. 걸음을 늦추지 않는다.</p>
-<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="pa">(앞을 본 채로)</p><p class="ln">주머니에 든 그 패철, 윤 선생 거지?</p></div></div>
+<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="pa">(앞을 본 채로)</p><p class="ln">주머니에 든 거. 그거 윤 선생 패철이제?</p></div></div>
 <p class="ac">세리, 주머니에서 손을 빼지 못한다. 현묵은 차에 오른다.</p>
 <p class="no">〔엔드컷: 세리의 주머니 속. 천 너머로 패철 바늘이, 떠나는 현묵의 차를 따라 천천히 돈다. 컷 아웃.〕</p>
 <h2 class="ep" data-n="3"><span class="en">제3회</span> <span class="et">「수맥 위의 의자」</span></h2>
@@ -239,10 +268,10 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 <p class="no">〔컷 - S#1으로〕</p>
 <h3 class="sc">S#1. 온담건축 설계2팀 / 낮</h3>
 <p class="ac">벽에 배치도. 민재경이 붉은 깃발 사진을 그 위에 붙인다.</p>
-<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">발주처에서 지침 하나 더 왔어요. 회장실은 이 좌표 위로. 지관이 짚은 자리래요. 코어랑 부딪칠 텐데.</p></div></div>
+<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">발주처에서 지침 하나 더 내려왔다. 회장실은 이 좌표 위에 앉혀라. 지관이 짚은 자리란다. 코어랑 정면으로 부딪치는데, 이걸 어쩌라고.</p></div></div>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">맞추겠습니다.</p></div></div>
 <p class="ac">민재경, 세리를 잠깐 본다.</p>
-<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">이유 안 물어요? 다들 한 번은 묻는데.</p></div></div>
+<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">이유 안 물어? 다들 한 번은 묻는데. 나도 물었어, 그러다 혼났고.</p></div></div>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">지관이 짚은 자리라면서요.</p></div></div>
 <h3 class="sc">S#2. 세리의 모니터 / 밤</h3>
 <p class="ac">3D 모델. 꼭대기 층 회장실, 넓은 책상과 의자 하나. 세리가 단면을 자른다.</p>
@@ -251,50 +280,50 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 <p class="ac">손바닥을 편다. 생명선이 또 한 마디 짧다.</p>
 <h3 class="sc">S#3. 강산그룹 구사옥 회장실 / 밤</h3>
 <p class="ac">창밖으로 폴리스 라인이 아직 남아 있다. 강도형이 세 설계사무소의 참가 서류를 넘긴다. 현묵은 창가에 서 있다.</p>
-<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">세 팀 중에 땅 볼 줄 아는 사람 있던가.</p></div></div>
-<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="ln">없습니다. 다들 깃발만 보더군요.</p></div></div>
+<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">세 팀 중에 땅 볼 줄 아는 놈 있던가.</p></div></div>
+<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="ln">없습니다. 하나같이 깃발만 보더이다.</p></div></div>
 <p class="ac">강도형, 온담건축 서류철을 덮어 맨 위에 올린다.</p>
-<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">그래도 이 집 도면이 제일 조용해.</p></div></div>
+<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">그래도 이 집 도면이 제일 조용해. 시끄러운 집은 사옥 못 지어.</p></div></div>
 <h3 class="sc">S#4. 세리의 집, 부엌 / 밤</h3>
 <p class="ac">작은 식탁. 아버지 <b>윤병철</b>(56, 택시 회사 조끼)이 혀 밑에 알약 하나를 넣는다. 세리가 들어와 가방을 내려놓는다. 도면 출력물이 식탁 위로 미끄러져 나온다.</p>
-<div class="dl" data-name="병철"><div class="nm">병철</div><div class="tx"><p class="ln">밥은.</p></div></div>
+<div class="dl" data-name="병철"><div class="nm">병철</div><div class="tx"><p class="ln">밥은 묵었나.</p></div></div>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">먹었어요.</p></div></div>
 <p class="ac">병철, 출력물을 보지 않고 뒤집어 놓는다. 그 위에 물컵을 올린다.</p>
 <h3 class="sc">S#5. 세리의 집, 부엌 / 밤 (늦게)</h3>
 <p class="ac">불 꺼진 식탁. 병철의 방문은 닫혀 있다. 세리 혼자 앉아 있다. 휴대전화가 울린다. 모르는 번호.</p>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">여보세요.</p></div></div>
-<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="pa">(F)</p><p class="ln">깃발 꽂힌 자리, 물길이 두 줄 엇갈리지.</p></div></div>
+<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="pa">(F)</p><p class="ln">깃발 꽂힌 자리, 물길 두 줄이 엇갈리제.</p></div></div>
 <p class="ac">세리, 대답하지 않는다.</p>
-<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="pa">(F)</p><p class="ln">일부러 틀리게 짚었다. 네가 알아볼 줄 알고.</p></div></div>
+<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="pa">(F)</p><p class="ln">일부러 틀리게 짚은 것이여. 니가 알아볼 줄 알고.</p></div></div>
 <p class="no">〔엔드컷: 통화가 끊긴다. 어둠 속에서 세리의 휴대전화 화면만 켜져 있다 - 통화 기록, 「발신번호 표시 제한」. 컷 아웃.〕</p>
 <h2 class="ep" data-n="4"><span class="en">제4회</span> <span class="et">「청룡」</span></h2>
 <h3 class="sc">S#1. 한강 둔치 벤치 / 이른 아침</h3>
 <p class="ac">현묵과 세리가 한 사람 몫을 띄우고 앉아 있다. 서로 보지 않는다.</p>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">왜 저를 돕습니까.</p></div></div>
-<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="ln">돕긴. 받을 게 있어서 온 거다.</p></div></div>
+<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="ln">돕긴 누가 도와. 받을 게 있응께 온 거제.</p></div></div>
 <p class="ac">현묵, 지침서 배치도를 펼쳐 동쪽 능선을 손톱으로 긋는다.</p>
-<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="ln">이 능선을 깎아라.</p></div></div>
+<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="ln">요 능선, 깎아라.</p></div></div>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">청룡입니다.</p></div></div>
-<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="ln">소방차가 못 도는 길이다. 소방서가 먼저 깎으라 할 거다.</p></div></div>
+<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="ln">소방차 못 도는 길이여. 니가 안 깎아도 소방서가 먼저 깎으라 헐 것이다.</p></div></div>
 <p class="ac">현묵이 일어나 바지의 흙을 턴다.</p>
-<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="ln">안 깎으면 네가 누구 손녀인지 회장 귀에 들어간다.</p></div></div>
+<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="ln">안 깎으믄 니가 누구 손녀인지 회장 귀에 들어가. 그것도 내 입으로.</p></div></div>
 <p class="ac">현묵이 둑길로 올라간다. 세리, 휴대전화로 검색한다. 기사 한 줄 - 「강산 장남 강이현 상무, 신사옥 TF장 맡아」. 사진 속 이현은 웃지 않는다.</p>
 <p class="ac">세리, 화면을 끈다.</p>
 <h3 class="sc">S#2. 온담건축 설계2팀 / 낮</h3>
 <p class="ac">발주처 중간 점검. 이현과 TF 직원 둘. 민재경이 화면을 넘긴다.</p>
-<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">배치 축은 한강 조망을 따라 정남에서 7.5도 틀었습니다.</p></div></div>
+<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">배치 축은 한강 조망 따라 정남에서 7.5도 틀었고요. 여기까진 지난 보고 그대롭니다.</p></div></div>
 <p class="ac">이현, 수첩에 숫자를 적어 계산한다. 볼펜이 멈춘다.</p>
-<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">대교 교각 사이로 조망을 열면 12도가 나오는데. 왜 7.5죠.</p></div></div>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">교각 사이로 조망을 열면 12도가 나와요. 어제 제가 재 봤는데요. 7.5는 어디서 나온 숫자죠.</p></div></div>
 <p class="ac">민재경이 세리를 본다.</p>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">저층부 일조 때문입니다.</p></div></div>
-<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">일조면 반대로 돌려야 하고요.</p></div></div>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">일조면 반대로 돌려야죠. 북서로.</p></div></div>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">그쪽으로 돌리면 뒤 능선을 3미터 더 깎습니다. 토공 물량은 12쪽입니다.</p></div></div>
 <p class="ac">이현, 12쪽을 넘긴다. 말이 없다. 다음 장, 단면도. 꼭대기 층 회장실.</p>
 <div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">회장실은 지침대로네요.</p></div></div>
 <p class="ac">이현, 세리를 한 번 본다.</p>
 <h3 class="sc">S#3. 복도, 엘리베이터 앞 / 낮</h3>
 <p class="ac">점검이 끝나고 TF 직원들은 계단으로 먼저 내려간다. 엘리베이터를 기다리던 이현이 돌아선다. 세리와 둘.</p>
-<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">7.5도. 두 방위 사이 경계선이죠. 옛날 사람들은 거기를 공망이라고 불렀다던데.</p></div></div>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">7.5도. 24방위 한 칸이 15도니까, 딱 두 방위 사이 금이죠. 옛날 사람들은 거기를 공망이라고 불렀다던데요.</p></div></div>
 <p class="ac">세리, 표정이 없다.</p>
 <div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">누구한테 배웠어요, 이 각도.</p></div></div>
 <p class="no">〔엔드컷: 엘리베이터가 도착해 문이 열린 채 기다린다. 이현은 타지 않는다. 문이 혼자 닫힌다. 컷 아웃.〕</p>
@@ -304,17 +333,17 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 <div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">지금도 하세요?</p></div></div>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">돌아가셨습니다.</p></div></div>
 <p class="ac">이현, 엘리베이터 버튼을 다시 누른다.</p>
-<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">내일 구사옥 지하 안전진단이에요. 같이 가죠. 눈이 하나 더 필요해서.</p></div></div>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">내일 아홉 시에 구사옥 지하 안전진단이 있어요. 같이 가죠. 눈이 하나 더 필요해서요.</p></div></div>
 <h3 class="sc">S#2. 온담건축 설계2팀 / 밤</h3>
 <p class="ac">세리가 진입 동선을 그린다. 큰길에서 정문까지 한 줄로 곧게.</p>
-<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="pa">(지나가다 화면을 보고)</p><p class="ln">의전 동선 시원하네. 회장님들 이런 거 좋아해.</p></div></div>
+<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="pa">(지나가다 화면을 보고)</p><p class="ln">오, 의전 동선 시원하다. 회장님들 이런 거 환장해. 차에서 내려서 정문까지 한 번도 안 꺾이는 거.</p></div></div>
 <p class="no">〔VFX: 세리의 시선 - 도면 위 곧은 진입로가 활시위를 떠난 화살의 궤적으로 겹쳐 정문 한가운데에 꽂힌다〕</p>
 <p class="ac">세리, 오른손을 책상 아래로 내려 쥔다.</p>
 <h3 class="sc">S#3. 이현의 차 안 / 낮</h3>
 <p class="ac">다음 날. 이현이 운전한다. 조수석의 세리는 무릎 위에 구사옥 도면철을 올려놓았다. 라디오는 꺼져 있다.</p>
 <div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">할아버지 감정, 틀린 적 있어요?</p></div></div>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">한 번도 없다고 하셨어요.</p></div></div>
-<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">본인이?</p></div></div>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">본인 말씀으로요?</p></div></div>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">네.</p></div></div>
 <p class="ac">이현, 웃음 비슷한 숨을 내쉰다. 앞유리 너머로 유리 한 칸이 비어 있는 강산 본사가 다가온다.</p>
 <h3 class="sc">S#4. 구사옥 지하 2층, 진입 램프 / 낮</h3>
@@ -329,23 +358,23 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 <div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">뭐 있어요?</p></div></div>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">철근이 나왔네요. 피복이 얕아요.</p></div></div>
 <p class="ac">이현, 손전등을 국화 묶인 기둥 쪽으로 잠깐 돌렸다가 내린다.</p>
-<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">2007년 상량식 날 여기가 내려앉았어요. 세 사람이 죽었는데, 그중 하나가 우리 엄마예요.</p></div></div>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">2007년 상량식 날, 여기가 내려앉았어요. 셋이 죽었어요. 하나는 우리 엄마고.</p></div></div>
 <p class="ac">세리, 틈을 가린 손을 내리지 않는다.</p>
-<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">아버지는 다음 날 지관 탓을 했어요. 난 열다섯이었고, 그 말을 그대로 믿었고요.</p></div></div>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">아버지는 다음 날 지관 탓을 했어요. 난 열다섯이었고. 그 말 그대로 믿었죠, 한참.</p></div></div>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">지금은요.</p></div></div>
 <p class="ac">이현, 대답 대신 기둥의 끈을 고쳐 묶는다. 국화 잎이 바스러져 바닥에 떨어진다.</p>
 <h3 class="sc">S#2. 온담건축 설계2팀 / 밤</h3>
 <p class="ac">민재경의 화면에 소방 협의 회신. 「동측 진입로 소방차 회전반경 미달」.</p>
-<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">능선을 깎든지 진입을 서쪽으로 돌리든지.</p></div></div>
+<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">능선을 깎든가, 진입을 서쪽으로 돌리든가. 둘 중 하나 골라, 오늘 안에.</p></div></div>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">서쪽은 경사 18퍼센트라 소방차가 못 올라갑니다. 동쪽을 깎죠.</p></div></div>
-<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">깎자. 물량은 오늘 안에. 견적팀이 나만 보면 한숨이야.</p></div></div>
-<p class="ac">세리, 능선 시작점에 커서를 대고 멈춘다. 휴대전화에 문자. 강이현: 「오늘 고마웠어요. 철근은 보고서에 넣을게요.」</p>
+<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">그래, 깎자. 물량 오늘 안에 넘겨. 견적팀 김 차장이 나만 보면 한숨부터 쉬어.</p></div></div>
+<p class="ac">세리, 능선 시작점에 커서를 대고 멈춘다. 휴대전화에 문자. 강이현: 「오늘 고마웠어요. 철근 건은 보고서 7항에 넣을게요.」</p>
 <p class="ac">세리, 휴대전화를 엎어 놓는다. 동쪽 능선을 따라 절토선을 긋는다.</p>
 <p class="no">〔VFX: 세리의 시선 - 동쪽 능선에 길게 누운 푸른 용의 옆구리가 절토선을 따라 소리 없이 갈라진다. 용이 고개를 돌려 세리 쪽을 본다〕</p>
 <p class="ac">세리, 손을 편다. 생명선이 두 마디 짧아져 있다.</p>
 <h3 class="sc">S#3. 세리의 집, 부엌 / 새벽</h3>
 <p class="ac">식탁 위에 반쯤 남은 밥그릇. 병철의 의자가 뒤로 밀려 있다. 세리의 휴대전화가 진동한다.</p>
-<div class="dl" data-name="간호사"><div class="nm">간호사</div><div class="tx"><p class="pa">(F)</p><p class="ln">윤병철 씨 보호자 되시죠. 강산의료원 응급실입니다.</p></div></div>
+<div class="dl" data-name="간호사"><div class="nm">간호사</div><div class="tx"><p class="pa">(F)</p><p class="ln">윤병철 환자분 보호자 맞으세요? 강산의료원 응급실인데요. 지금 오실 수 있으세요?</p></div></div>
 <p class="no">〔엔드컷: 식탁 위 병철의 약병. 뚜껑이 열려 있고 비어 있다. 컷 아웃.〕</p>
 <h2 class="ep" data-n="7"><span class="en">제7회</span> <span class="et">「입수」</span></h2>
 <h3 class="sc">S#1. 강산의료원 복도 / 낮</h3>
@@ -354,27 +383,27 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 <p class="ac">화면을 쥔 세리. 자판기 앞, 동전을 넣다 만 손. 자판기에서 캔이 떨어진다. 세리는 꺼내지 않는다.</p>
 <h3 class="sc">S#2. 강산의료원 병실 / 낮</h3>
 <p class="ac">병철이 코에 산소줄을 꽂고 누워 있다. 흉부외과 <b>의사</b>가 차트를 넘긴다.</p>
-<div class="dl" data-name="의사"><div class="nm">의사</div><div class="tx"><p class="ln">관상동맥 세 줄이 좁아졌습니다. 우회술 해야 합니다.</p></div></div>
+<div class="dl" data-name="의사"><div class="nm">의사</div><div class="tx"><p class="ln">관상동맥 세 가지가 다 좁아요. 스텐트로는 안 되고, 우회술 가야 합니다.</p></div></div>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">언제요.</p></div></div>
-<div class="dl" data-name="의사"><div class="nm">의사</div><div class="tx"><p class="ln">심장 기능이 너무 떨어져 있어요. 약으로 먼저 올리고 날 잡죠. 두 달쯤요.</p></div></div>
+<div class="dl" data-name="의사"><div class="nm">의사</div><div class="tx"><p class="ln">지금은 심장이 수술을 못 버텨요. 약으로 두 달 올리고 날 잡읍시다.</p></div></div>
 <p class="ac">의사가 나간다. 병철이 입원 약정서에 서명한다. 「철」의 마지막 획이 칸 밖으로 길게 내려간다.</p>
 <p class="ac">병실 창밖으로 한강, 그 너머 옥녀봉이 작게 보인다.</p>
 <h3 class="sc">S#3. 병실 / 밤</h3>
 <p class="ac">병철이 잠들어 있다. 보호자 의자의 세리, 무릎 위 노트북. 코어 블록을 끌어 언덕마루로 옮긴다. 빛이 고이는 혈 바로 뒤, 맥이 들어오는 목.</p>
-<p class="ac">휴대전화에 민재경의 메시지: 「코어 위치 좋다. 암반 2.4미터. 기초비 줄겠네.」</p>
+<p class="ac">휴대전화에 민재경의 메시지: 「코어 위치 좋다!! 암반 2.4미터. 기초비 줄겠네. 견적팀한테 자랑 좀 하자.」</p>
 <p class="no">〔VFX: 코어 기둥이 언덕마루에 박히는 순간, 비탈을 내려오던 빛의 줄기가 코어 앞에서 끊겨 사방으로 흩어진다〕</p>
 <p class="ac">세리, 노트북을 받친 손을 편다. 또 한 마디.</p>
 <h3 class="sc">S#4. 병실 / 밤</h3>
 <p class="ac">병철이 눈을 뜬다. 고개를 돌려 화면을 본다. 위성사진, 강 굽이, 봉우리 하나.</p>
-<div class="dl" data-name="병철"><div class="nm">병철</div><div class="tx"><p class="ln">옥녀봉이네.</p></div></div>
+<div class="dl" data-name="병철"><div class="nm">병철</div><div class="tx"><p class="ln">옥녀봉이네, 저거.</p></div></div>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">아세요?</p></div></div>
 <p class="ac">병철, 손을 뻗어 노트북을 덮는다.</p>
-<div class="dl" data-name="병철"><div class="nm">병철</div><div class="tx"><p class="ln">그 땅 그리지 마라.</p></div></div>
+<div class="dl" data-name="병철"><div class="nm">병철</div><div class="tx"><p class="ln">그 땅은 그리지 마라.</p></div></div>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">일이에요.</p></div></div>
-<div class="dl" data-name="병철"><div class="nm">병철</div><div class="tx"><p class="ln">다른 일 해.</p></div></div>
+<div class="dl" data-name="병철"><div class="nm">병철</div><div class="tx"><p class="ln">딴 일 해라.</p></div></div>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">아빠는 택시 하면서 강산 근처는 손님 있어도 안 갔잖아요. 왜요?</p></div></div>
 <p class="ac">병철, 오래 숨을 쉰다. 산소줄이 흔들린다.</p>
-<div class="dl" data-name="병철"><div class="nm">병철</div><div class="tx"><p class="ln">나 강산에서 일했다. 니 할아버지 감정 받을 때.</p></div></div>
+<div class="dl" data-name="병철"><div class="nm">병철</div><div class="tx"><p class="ln">내 강산에서 일했다. 니 할배 감정 받을 때.</p></div></div>
 <p class="no">〔엔드컷: 덮인 노트북 틈으로 화면 빛이 샌다. 병철은 천장을 본다. 컷 아웃.〕</p>
 <h2 class="ep" data-n="8"><span class="en">제8회</span> <span class="et">「옥녀탄금」</span></h2>
 <h3 class="sc">S#0. 미리보기 (2초)</h3>
@@ -382,25 +411,25 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 <p class="no">〔컷 - S#1으로〕</p>
 <h3 class="sc">S#1. 온담건축 설계2팀 / 낮</h3>
 <p class="ac">모형 테이블. 사원이 매스 모형에 지붕을 붙인다. 길고 낮은 몸통, 한쪽 끝으로 내려가는 지붕.</p>
-<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">매스 설명, 한 줄로 해 봐.</p></div></div>
+<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">매스 설명, 한 줄로. 심사위원 집중력은 삼십 초야.</p></div></div>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">옥녀봉은 옥녀가 거문고를 타는 형국입니다. 건물이 거문고고, 입면 루버가 줄입니다.</p></div></div>
-<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="pa">(모형을 한 바퀴 돌며)</p><p class="ln">지관이 좋아하겠네.</p></div></div>
+<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="pa">(모형을 한 바퀴 돌며)</p><p class="ln">지관이 좋아하겠다. 난 모르겠고.</p></div></div>
 <h3 class="sc">S#2. 강산그룹 대회의실 / 낮</h3>
 <p class="ac">1차 심사. 테이블 위 세 안의 모형. 강도형이 지팡이에 두 손을 얹고 있다. 현묵이 거문고 매스를 위에서 내려다본다.</p>
-<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="ln">옥녀탄금. 길합니다.</p></div></div>
+<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="ln">옥녀탄금이올시다. 길합니다.</p></div></div>
 <div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">거문고면 소리가 나야지.</p></div></div>
-<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="ln">곧 나겠지요.</p></div></div>
+<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="ln">곧 울리겠지요.</p></div></div>
 <p class="ac">문가에서 <b>강이서</b>(31, 강산건설 사장)가 태블릿을 들고 들어온다.</p>
-<div class="dl" data-name="강이서"><div class="nm">강이서</div><div class="tx"><p class="ln">제일 싼 안이 9퍼센트 싸요. 지붕이 기울면 방수비도 오르고요.</p></div></div>
+<div class="dl" data-name="강이서"><div class="nm">강이서</div><div class="tx"><p class="ln">제일 싼 안이랑 9퍼센트 차이 나요. 지붕 기울면 방수비는 덤이고.</p></div></div>
 <div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">사옥은 한 번 짓는다.</p></div></div>
-<div class="dl" data-name="강이서"><div class="nm">강이서</div><div class="tx"><p class="ln">구사옥도 한 번 지었죠.</p></div></div>
+<div class="dl" data-name="강이서"><div class="nm">강이서</div><div class="tx"><p class="ln">구사옥도 한 번 지었죠. 유리는 두 번 갈았고.</p></div></div>
 <p class="ac">강도형이 이서를 본다. 이서는 시선을 피하지 않는다. 강도형이 고개를 끄덕이고, 비서가 서류에 도장을 찍는다. 「2차 진출: 온담건축」.</p>
 <h3 class="sc">S#3. 한강 건너편 둔치 / 해질녘</h3>
 <p class="ac">이현이 혼자 서서 태블릿을 들고 있다. 경관 시뮬레이션 - 화면 속 신사옥을 실제 옥녀봉에 겹쳐 띄운다.</p>
 <p class="ac">해가 넘어간다. 루버의 그림자가 지워지고 매스의 윤곽만 남는다.</p>
 <p class="no">〔VFX: 거문고 매스가 노을 역광 속에서 길고 낮은 상자와 비스듬한 뚜껑으로만 읽힌다. 관. 그 뒤로 산 능선이 어깨처럼 늘어선다〕</p>
 <p class="ac">이현, 태블릿을 내려 실제 산을 본다. 다시 화면을 본다. 전화를 건다.</p>
-<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">윤 대리. 지금 강 건너 둔치에 있는데요.</p></div></div>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">윤 대리님. 지금 강 건너 둔치예요. 해 넘어가기 삼 분 전이고.</p></div></div>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="pa">(F)</p><p class="ln">……네.</p></div></div>
 <div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">이거, 관이네요.</p></div></div>
 <p class="no">〔엔드컷: 태블릿 속 관 모양 매스가 실제 옥녀봉 능선 위에 놓인 채 정지. 노을이 꺼진다. 컷 아웃.〕</p>
@@ -408,9 +437,9 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 <h3 class="sc">S#1. 한강 둔치 / 밤 (이어서)</h3>
 <p class="ac">세리가 숨을 고르며 도착한다. 이현은 벤치에 앉아 있다. 태블릿은 꺼져 있다.</p>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">보는 자리 때문이에요. 해 질 녘에, 강 건너에서, 딱 이 높이에서만요.</p></div></div>
-<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">알아요. 여기서만 보이게 그렸죠.</p></div></div>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">알아요. 여기서만 보이게 그렸잖아요.</p></div></div>
 <p class="ac">세리, 말이 없다.</p>
-<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">경관심의 위원들은 낮에 와요. 대교 위에서 보고.</p></div></div>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">경관심의 위원들은 낮 두 시에 와요. 대교 위에서 보고 가고요.</p></div></div>
 <p class="ac">이현이 강 건너 구사옥 불빛 쪽으로 고개를 돌린다.</p>
 <div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">신고할 거면 전화 안 했어요.</p></div></div>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">왜요.</p></div></div>
@@ -418,9 +447,9 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 <div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">아버지가 고른 안이잖아요. 끝까지 아버지가 고르게 두려고요.</p></div></div>
 <h3 class="sc">S#2. 같은 벤치 / 밤</h3>
 <p class="ac">이현이 출입증 하나를 벤치 위, 둘 사이에 놓는다.</p>
-<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">강산 문서고 가 봐요. 2006년 서류철은 지하 3층에 있어요.</p></div></div>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">강산 문서고 가 봐요. 2006년 서류철은 지하 3층, 서가 F열이에요.</p></div></div>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">제가 뭘 찾는지 아세요?</p></div></div>
-<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">램프에서 손으로 뭘 가렸는지는 알아요.</p></div></div>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">램프에서 손으로 뭘 가렸는지는요.</p></div></div>
 <p class="ac">이현이 일어나 간다. 세리, 출입증을 집는다.</p>
 <h3 class="sc">S#3. 강산그룹 문서고 / 밤</h3>
 <p class="ac">이동식 서가 사이. 세리가 손잡이를 돌려 통로를 연다. 「2006 본사 부지 감정 원본 - 대외비」 상자.</p>
@@ -436,11 +465,11 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 <p class="ac">여백에 할아버지 글씨가 두 줄이다. 세리가 손전등으로 첫 줄을 비춘다.</p>
 <h3 class="sc">S#2. 회상 - 공터 / 2006년, 낮</h3>
 <p class="ac">1회 S#1과 같은 앵글. 윤석규가 패철을 덮는다.</p>
-<div class="dl" data-name="윤석규"><div class="nm">윤석규</div><div class="tx"><p class="ln">이 자리에 세우면 사람이 죽습니다.</p></div></div>
+<div class="dl" data-name="윤석규"><div class="nm">윤석규</div><div class="tx"><p class="ln">이 자리에 세우마 사람이 죽습니더.</p></div></div>
 <p class="ac">이번에는 장면이 끊기지 않는다. 윤석규가 패철을 접어 주머니에 넣는다.</p>
-<div class="dl" data-name="윤석규"><div class="nm">윤석규</div><div class="tx"><p class="ln">물을 가두고 나무를 세우면 삽니다.</p></div></div>
-<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">얼마 듭니까.</p></div></div>
-<div class="dl" data-name="윤석규"><div class="nm">윤석규</div><div class="tx"><p class="ln">땅을 사십억 더 사신 셈 치십시오.</p></div></div>
+<div class="dl" data-name="윤석규"><div class="nm">윤석규</div><div class="tx"><p class="ln">물 가두고 나무 세우마 삽니더.</p></div></div>
+<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">얼마요.</p></div></div>
+<div class="dl" data-name="윤석규"><div class="nm">윤석규</div><div class="tx"><p class="ln">땅 사십억어치 더 산 셈 치시소.</p></div></div>
 <p class="ac">강도형이 뒤를 돌아본다. 측량 말뚝 옆에 도면 통을 멘 젊은 직원이 서 있다. 강산건설 점퍼. 얼굴은 모자 그늘에 가려 있다.</p>
 <div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">공무과장. 연못 없이 되는 안 하나 뽑아 와.</p></div></div>
 <p class="ac">젊은 직원이 고개를 숙인다.</p>
@@ -452,13 +481,13 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 <h2 class="ep" data-n="11"><span class="en">제11회</span> <span class="et">「대신 지는 사람」</span></h2>
 <h3 class="sc">S#1. 강산의료원 병실 / 새벽</h3>
 <p class="ac">세리가 품의서 복사본을 병철의 식판 위에 놓는다. 병철이 안경을 쓴다. 오래 본다.</p>
-<div class="dl" data-name="병철"><div class="nm">병철</div><div class="tx"><p class="ln">연못 하나 빼면 다음 현장은 소장으로 보내 준다고 했다.</p></div></div>
+<div class="dl" data-name="병철"><div class="nm">병철</div><div class="tx"><p class="ln">연못 하나 빼마 다음 현장은 소장으로 보내 준다 캤다.</p></div></div>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">소장 하셨어요?</p></div></div>
-<div class="dl" data-name="병철"><div class="nm">병철</div><div class="tx"><p class="ln">못 했다. 사고로 현장이 다 섰어. 회사는 기자들한테 지관 이름을 줬고.</p></div></div>
+<div class="dl" data-name="병철"><div class="nm">병철</div><div class="tx"><p class="ln">못 했다. 사고 나고 현장이 다 섰다. 회사는 기자들한테 지관 이름 하나 던져 주고 끝냈고.</p></div></div>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">왜 저한테는 한 번도 말 안 했어요?</p></div></div>
-<div class="dl" data-name="병철"><div class="nm">병철</div><div class="tx"><p class="ln">니가 여덟 살에 패철 읽는 걸 봤다. 그날부터 못 했다.</p></div></div>
+<div class="dl" data-name="병철"><div class="nm">병철</div><div class="tx"><p class="ln">니 여덟 살에 패철 읽는 거 봤다. 그날부터 입이 안 떨어지더라.</p></div></div>
 <p class="ac">병철, 안경을 벗어 식판 위에 내려놓는다.</p>
-<div class="dl" data-name="병철"><div class="nm">병철</div><div class="tx"><p class="ln">구사옥 기공식 날 쓰러지셨어. 첫 삽 뜨던 그 시각에. 그 뒤로 못 일어나셨고.</p></div></div>
+<div class="dl" data-name="병철"><div class="nm">병철</div><div class="tx"><p class="ln">구사옥 기공식 날 쓰러지셨다. 첫 삽 뜨던 그 시각에. 그 뒤로 몬 일어나셨고.</p></div></div>
 <h3 class="sc">S#2. 회상 - 윤석규의 마당 / 2006년, 밤</h3>
 <p class="ac">마루. 윤석규가 젊은 <b>병철</b>(36)의 손을 잡아 손바닥을 편다. 엄지로 생명선을 따라가다 끝에서 멈춘다.</p>
 <p class="ac">병철은 고개를 숙이고 있다.</p>
@@ -466,7 +495,7 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 <p class="no">〔VFX: 병철의 손바닥에서 옅어지던 금 한 마디가 다시 진해지고, 같은 순간 윤석규의 손바닥에서 한 마디가 지워진다〕</p>
 <h3 class="sc">S#3. 병실 / 새벽</h3>
 <p class="ac">병철이 세리의 손목을 잡는다. 세리, 빼려다 그만둔다. 병철이 세리의 손가락을 하나씩 편다.</p>
-<div class="dl" data-name="병철"><div class="nm">병철</div><div class="tx"><p class="ln">너 뭘 그렸냐.</p></div></div>
+<div class="dl" data-name="병철"><div class="nm">병철</div><div class="tx"><p class="ln">니, 뭐 그맀노.</p></div></div>
 <p class="no">〔엔드컷: 세리의 손바닥. 생명선이 손목에서 시작해 손바닥 한가운데에서 끝나 있다. 병철의 엄지가 그 끝에서 멈춘다. 컷 아웃.〕</p>
 <h2 class="ep" data-n="12"><span class="en">제12회</span> <span class="et">「지워지지 않는 선」</span></h2>
 <h3 class="sc">S#0. 미리보기 (2초)</h3>
@@ -475,11 +504,11 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 <h3 class="sc">S#1. 온담건축 설계2팀 / 낮</h3>
 <p class="ac">벽에 2차 심사 패널 시안. 화이트보드에 「D-3」.</p>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">배치 축, 정남으로 돌리겠습니다.</p></div></div>
-<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">지금? 구조, 입면, 조경이 다 그 축에 물려 있어.</p></div></div>
+<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">지금? 디 마이너스 삼에? 구조, 입면, 조경, 전부 그 축에 물려 있어.</p></div></div>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">제가 밤새워서 하겠습니다.</p></div></div>
-<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">TF장이 직접 물어본 숫자야. 돌리면 우리가 틀렸다는 거고.</p></div></div>
+<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">TF장이 수첩에 적어 간 숫자야. 돌리면 우리가 틀렸다고 광고하는 거고.</p></div></div>
 <p class="ac">민재경이 펜 뚜껑을 닫는다.</p>
-<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">이유를 말해. 그럼 돌려 줄게.</p></div></div>
+<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">이유 말해. 그럼 내가 돌려 줄게. 밤도 내가 새고.</p></div></div>
 <p class="ac">세리의 눈이 민재경 모니터 옆 팀 회식 사진에 머문다.</p>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">……제가 틀렸습니다. 그대로 가겠습니다.</p></div></div>
 <h3 class="sc">S#2. 설계2팀 복도 / 낮</h3>
@@ -488,7 +517,7 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 <p class="ac">복도 끝 회의실 문이 열리고 이현이 나온다. 발주처 일정 협의를 마친 차림. 세리를 보고 멈춘다.</p>
 <div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">2차 준비는요.</p></div></div>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">축을 돌리고 싶습니다.</p></div></div>
-<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">돌리면 이 안은 떨어져요. 남은 한 안은 축이 정남이니까.</p></div></div>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">돌리면 이 안은 떨어져요. 남은 한 안이 정남이고, 그쪽이 6퍼센트 싸니까.</p></div></div>
 <p class="ac">이현이 세리의 손을 본다. 주먹이 쥐어져 있다.</p>
 <div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">떨어질 걸 알고 돌리겠다는 사람은 처음 봐요. 누가 다쳤어요?</p></div></div>
 <p class="ac">세리, 주먹을 주머니에 넣는다.</p>
@@ -506,9 +535,9 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 <h3 class="sc">S#1. 강산그룹 대회의실 / 낮</h3>
 <p class="ac">긴 테이블. 강도형, 이현, 강산건설 사장 <b>강이서</b>(31), 외부 심사위원 셋. 현묵은 벽 쪽 의자에 앉아 있다. 테이블 가운데 거문고 매스 모형. 세리가 리모컨을 쥔다.</p>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">옥녀봉의 맥은 북에서 내려와 언덕마루에서 멈춥니다. 건물은 그 맥을 등지고 강을 봅니다.</p></div></div>
-<div class="dl" data-name="외부 심사위원"><div class="nm">외부 심사위원</div><div class="tx"><p class="ln">코어를 언덕마루에 박았네요. 기초는 싸겠고.</p></div></div>
-<div class="dl" data-name="강이서"><div class="nm">강이서</div><div class="tx"><p class="ln">그런데 총공사비는 상대 안보다 6퍼센트 높아요.</p></div></div>
-<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">진입로 절토는 중간 점검 때 제가 승인했습니다. 소방 협의라 못 줄입니다.</p></div></div>
+<div class="dl" data-name="외부 심사위원"><div class="nm">외부 심사위원</div><div class="tx"><p class="ln">코어를 언덕마루에 박으셨네. 암반이 얕으니 기초는 싸게 먹히겠고.</p></div></div>
+<div class="dl" data-name="강이서"><div class="nm">강이서</div><div class="tx"><p class="ln">근데 총공사비는 상대 안보다 6퍼센트 높아요. 기초에서 아끼고 절토에서 다 까먹었어요.</p></div></div>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">진입로 절토는 중간 점검 때 제가 승인했습니다. 소방 협의 사항이라 못 줄여요.</p></div></div>
 <p class="ac">강도형이 지팡이로 바닥을 한 번 짚는다. 모두 입을 다문다.</p>
 <div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">윤 대리라고 했나. 자네는 풍수를 믿나.</p></div></div>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">땅은 그은 대로 사람을 앉힌다고 배웠습니다.</p></div></div>
@@ -519,21 +548,21 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 <p class="ac">강도형이 현묵을 본다.</p>
 <div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">지관 의견.</p></div></div>
 <p class="ac">현묵이 일어나 모형 앞으로 온다. 패철을 모형 지붕 위에 올려놓는다. 바늘이 멈출 때까지 기다린다.</p>
-<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="ln">좌향 좋고, 회장님 자리 좋습니다.</p></div></div>
+<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="ln">좌향 좋습니다. 회장님 자리, 더 좋고요.</p></div></div>
 <p class="ac">현묵이 손가락으로 모형의 동쪽 절토면을 짚는다.</p>
-<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="ln">한 군데. 청룡이 잘렸습니다. 장자를 치는 배치입니다.</p></div></div>
+<div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="ln">한 군데. 청룡이 잘렸습니다. 장자를 치는 배치올시다.</p></div></div>
 <p class="ac">회의실이 조용해진다. 강이서가 펜을 내려놓는다.</p>
 <div class="dl" data-name="현묵"><div class="nm">현묵</div><div class="tx"><p class="ln">이 절토선은 TF장께서 승인하셨지요.</p></div></div>
 <p class="no">〔엔드컷: 강도형이 천천히 고개를 돌려 이현을 본다. 이현은 세리 쪽을 보지 않는다. 컷 아웃.〕</p>
 <h2 class="ep" data-n="14"><span class="en">제14회</span> <span class="et">「표석」</span></h2>
 <h3 class="sc">S#1. 대회의실 앞 복도 / 낮</h3>
 <p class="ac">TF 직원이 이현에게서 출입증을 받아 간다.</p>
-<div class="dl" data-name="TF 직원"><div class="nm">TF 직원</div><div class="tx"><p class="ln">회장님 지시로 TF는 강이서 사장님이 맡으십니다.</p></div></div>
+<div class="dl" data-name="TF 직원"><div class="nm">TF 직원</div><div class="tx"><p class="ln">회장님 지시입니다. TF는 오늘부로 강이서 사장님이 맡으십니다. 출입증은 제가 회수하겠습니다.</p></div></div>
 <p class="ac">직원이 간다. 세리가 이현 앞에 선다.</p>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">제 선입니다.</p></div></div>
 <div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">알아요.</p></div></div>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">그 자리에서 말씀하셨어야죠.</p></div></div>
-<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">그럼 대리님이 빠지잖아요. 그 안, 끝까지 가요.</p></div></div>
+<div class="dl" data-name="이현"><div class="nm">이현</div><div class="tx"><p class="ln">그럼 대리님이 빠지잖아요. 그 안, 끝까지 가요. 삽 뜨는 날까지.</p></div></div>
 <p class="ac">이현이 엘리베이터에 탄다. 문이 닫힌다.</p>
 <p class="ac">복도 끝 유리문 너머. 현묵이 회장 차를 지나쳐 뒤에 선 검은 차에 오른다. 창이 짙어 안이 보이지 않는다.</p>
 <p class="ac">세리, 그 차가 떠날 때까지 본다.</p>
@@ -542,28 +571,28 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 <h3 class="sc">S#3. 구사옥 지하 램프 / 밤</h3>
 <p class="ac">세리가 정과 망치로 옹벽 틈을 넓힌다. 콘크리트 조각이 떨어지고 표석 윗면이 드러난다. 「裨補」. 그 아래로 작은 글씨가 몇 줄 더 있다.</p>
 <p class="ac">세리가 휴대전화 불빛을 비추려는 순간, 램프 위쪽에서 지팡이 소리가 내려온다. 한 걸음씩.</p>
-<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">그 돌, 내가 덮으라고 했다.</p></div></div>
+<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">그 돌, 내가 덮으라 했어.</p></div></div>
 <p class="ac">세리, 정을 쥔 채 돌아선다. 강도형이 국화 묶인 기둥 앞에서 멈춘다. 기울어진 꽃다발을 손끝으로 바로 세운다.</p>
-<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="pa">(꽃을 보며)</p><p class="ln">윤석규 손녀.</p></div></div>
+<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="pa">(꽃을 보며)</p><p class="ln">윤 선생 손녀.</p></div></div>
 <p class="no">〔엔드컷: 세리의 손에서 정이 미끄러져 바닥에 떨어진다. 쇳소리가 램프를 따라 길게 울린다. 컷 아웃.〕</p>
 <h2 class="ep" data-n="15"><span class="en">제15회</span> <span class="et">「길일」</span></h2>
 <h3 class="sc">S#1. 구사옥 지하 램프 / 밤 (이어서)</h3>
-<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">명단 첫날 봤다. 윤세리. 윤 선생이 마당에서 부르던 이름이지.</p></div></div>
+<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">명단 첫날 봤네. 윤세리. 윤 선생이 마당에서 부르던 이름이야.</p></div></div>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">그런데 왜 두셨습니까.</p></div></div>
-<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">흉지를 그릴 줄 아는 손은 명당도 그려.</p></div></div>
+<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">흉지 그릴 줄 아는 손이 명당도 그리는 법이야.</p></div></div>
 <p class="ac">강도형, 지팡이 끝으로 표석을 두 번 두드린다.</p>
 <div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">자네 할아버지는 끝까지 안 그려 줬지.</p></div></div>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">그려 드렸습니다. 회장님이 지우셨죠.</p></div></div>
 <p class="ac">강도형, 잠깐 말이 없다.</p>
-<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">그래서 이번엔 안 지울 거야. 자네가 그은 선은 하나도.</p></div></div>
+<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">그래서 이번엔 안 지워. 자네가 그은 선은 한 줄도.</p></div></div>
 <div class="dl" data-name="세리"><div class="nm">세리</div><div class="tx"><p class="ln">청룡이 잘린 안입니다.</p></div></div>
 <div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="ln">그래서 아들을 뺐지. 없는 놈은 안 맞아.</p></div></div>
 <p class="ac">강도형이 램프를 올라간다. 지팡이 소리가 멀어진다.</p>
-<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="pa">(돌아보지 않고)</p><p class="ln">결과는 내일 나가.</p></div></div>
+<div class="dl" data-name="강도형"><div class="nm">강도형</div><div class="tx"><p class="pa">(돌아보지 않고)</p><p class="ln">결과는 내일 나가네.</p></div></div>
 <h3 class="sc">S#2. 온담건축 설계2팀 / 낮</h3>
 <p class="ac">팀원들이 한 모니터 앞에 모여 있다. 메일 제목: 「강산그룹 신사옥 지명설계공모 심사 결과 안내」. 본문 첫 줄 - 당선: 온담건축사사무소.</p>
 <p class="ac">박수. 민재경이 세리의 어깨를 잡는다.</p>
-<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">윤 대리 배치가 이겼어.</p></div></div>
+<div class="dl" data-name="민재경"><div class="nm">민재경</div><div class="tx"><p class="ln">윤 대리! 네 배치가 이긴 거야, 이거. 야, 다들 들었지?</p></div></div>
 <p class="ac">세리, 고개만 숙인다. 책상 아래에서 손바닥을 편다. 생명선은 손바닥 가운데에서 멈춰 있다.</p>
 <p class="ac">휴대전화에 메시지 한 줄. 강이현: 「축하해요. 아버지가 대리님 이름을 두 번 불렀어요.」</p>
 <p class="ac">세리, 답장을 쓰다가 지운다.</p>
