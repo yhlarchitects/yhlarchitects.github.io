@@ -73,6 +73,8 @@ button{font:inherit;color:inherit}
 .bd .ac.li{padding-left:1em;text-indent:-1em}
 .bd .ac.li.cn{text-indent:0}
 .bd .no{font-size:.82em;line-height:1.62;color:var(--mute)}
+.bd .ac.dg{white-space:pre;font-size:.86em;line-height:1.5;margin-top:0}
+.bd .ac.dg:empty{height:.8em}
 .bd .dl{display:grid;grid-template-columns:5em minmax(0,1fr);column-gap:.5em}
 .dl .nm{font-weight:700;overflow-wrap:anywhere}
 .dl .nm .ct{display:block;font-weight:400;font-size:.8em;color:var(--mute)}
@@ -166,6 +168,37 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 </div>
 <div id="meas" aria-hidden="true"></div>
 <template id="src">
+<h3 class="sc fm">등장인물</h3>
+<p class="ac li"><b>김지오</b> (32) 혜성맨션 하자보수 기사. 302호 김지우의 오빠. 누구에게나 「~습니다」. 부재와 치수로 말한다(단면·실측·준공년). 반말은 동생 지우에게만</p>
+<p class="ac li"><b>김지우</b> (26) 302호에 살았다. 석 달 전 「전출」. 16층 2019.7.23의 방에 앉아 있다. 밝은 20대 동생 말. 「오빠, 봐」 「아 진짜」. 10회에서만 웃는 얼굴로 단정한다</p>
+<p class="ac li"><b>오여사(오정림)</b> (71) 관리사무소 실세. 입주자대표회의. 서울 격식 노부인. 명령을 청유로, 질문이 아닌 질문. 같은 말을 두 번 한다</p>
+<p class="ac li"><b>백경비</b> (60대) 경비. 30년째 매일 밤 16층 면회. 노트의 첫 칸이 처 윤순자. 충청 말. 「~여」 「~믄」 「말어」 「고만」. 짧고 느리다</p>
+<p class="ac li"><b>한수린</b> (29) 입주민. 어릴 때 살다가 다시 왔다. 1998년 「전출」 한정목의 딸. 가벼운 서울 20대. 「~죠?」 「~거든요」. 질문을 받으면 멈춘다</p>
+<p class="ac li"><b>관리소장</b> (60대) 관리소장. 겁이 많다. 전라 말. 「~혀」 「~니께」 「시방」. 올라가지 말라는 말만 한다</p>
+<p class="ac li"><b>501호 사내(박만수)</b> (50대) 501호. 30년째 같은 민원. 억센 서울 반말. 「~잖아」 「~라니까」. 문장이 짧다</p>
+<p class="ac li"><b>담당관</b> (30대) 경찰서 민원실. 관공서체. 「완료되어 있습니다」 「안내가 어렵습니다」</p>
+<p class="ac li"><b>위원1·2·3</b> (50~60대) 입주자대표회의 위원. 같은 억양, 같은 박자. 위원2만 숫자를 읽는다</p>
+<p class="ac li"><b>세입자</b> (40대) 지금의 302호. 수다스러운 아줌마 말. 「아이고」 「그쵸?」. 묻기 전에 말한다</p>
+<p class="ac li"><b>안내방송</b> (-) 로비 스피커. 표준 억양의 안내 음성. 15회에서 무너진다</p>
+<p class="ac li"><b>아버지(한정목)</b> (1998년의 40대) 수린의 아버지. 사원증을 목에 건 양복. 문틈 너머의 낮은 목소리. 「린아」</p>
+<h3 class="sc">관계도</h3>
+<p class="ac dg">302호</p>
+<p class="ac dg">김지오 (하자보수 기사, 32)</p>
+<p class="ac dg"> └─ 동생: 김지우 (26, 2026년 칸 「전출」, 16층 2019.7.23의 방)</p>
+<p class="ac dg"></p>
+<p class="ac dg">관리사무소</p>
+<p class="ac dg">오여사 오정림 (71, 입주자대표회의) ─ 서약서 보증인 ─ 김지오</p>
+<p class="ac dg"> ├─ 위원1·2·3 (같은 억양, 「통상 방식」)</p>
+<p class="ac dg"> ├─ 관리소장 (「접수만 혀」)</p>
+<p class="ac dg"> └─ 백경비 (노트, 1996년 첫 칸 윤순자 = 처) ─ 「고만 파」 ─ 김지오</p>
+<p class="ac dg"></p>
+<p class="ac dg">입주민</p>
+<p class="ac dg">한수린 (29) ─ 아버지 한정목 (1998년 칸 「전출」, 16층 문 앞의 양복)</p>
+<p class="ac dg">501호 박만수 ─ 601호 발소리 민원 30년 ─ 관리사무소</p>
+<p class="ac dg">302호 세입자 ─ 「동생분, 매주 와요」 ─ 김지오</p>
+<p class="ac dg"></p>
+<p class="ac dg">밖</p>
+<p class="ac dg">경찰서 담당관 ─ 「서류상 문제없습니다」 ─ 김지오</p>
 <h2 class="ep" data-n="1"><span class="en">제1회</span> <span class="et">「마침 자리가 비어서」</span></h2>
 <h3 class="sc">S#0. 미리보기 (2초)</h3>
 <p class="ac">멈춘 영상통화 화면. 지우의 얼굴이 픽셀째 아래로 흘러내리는 중이다.</p>
@@ -183,15 +216,15 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 <p class="no">〔VFX: 픽셀 붕괴가 아래로 「흘러내리는」 세로 글리치 - 이후 시리즈 전체에서 건물 개입의 시그니처로 반복〕</p>
 <h3 class="sc">S#2. 경찰서 민원실 / 낮</h3>
 <p class="ac">자막: 석 달 후</p>
-<div class="dl" data-name="담당관"><div class="nm">담당관</div><div class="tx"><p class="pa">(모니터를 지오 쪽으로 돌린다)</p><p class="ln">김지우씨, 5월 20일자로 전출 신고 완료. 전입지는 - 개인정보라 여기까지.</p></div></div>
-<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="pa">(32, 눈 밑이 어둡다)</p><p class="ln">동생은 저한테 이사 얘길 한 적이 없습니다.</p></div></div>
-<div class="dl" data-name="담당관"><div class="nm">담당관</div><div class="tx"><p class="ln">가족분이 모르실 수도 있죠, 요즘. <span class="pi">(파일을 덮는다)</span> 성인입니다. 서류가 깨끗해요.</p></div></div>
+<div class="dl" data-name="담당관"><div class="nm">담당관</div><div class="tx"><p class="pa">(모니터를 지오 쪽으로 돌린다)</p><p class="ln">김지우씨, 5월 20일자로 전출 신고 완료되어 있습니다. 전입지는 - 개인정보라 안내가 어렵습니다.</p></div></div>
+<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="pa">(32, 눈 밑이 어둡다)</p><p class="ln">동생은 저한테 이사 얘기를 한 적이 없습니다. 한 번도.</p></div></div>
+<div class="dl" data-name="담당관"><div class="nm">담당관</div><div class="tx"><p class="ln">가족분이 모르실 수도 있습니다, 요즘은. <span class="pi">(파일을 덮는다)</span> 성인이시고요. 서류상 문제없습니다.</p></div></div>
 <div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">서류가… 너무 깨끗한 게 이상하지 않습니까.</p></div></div>
 <p class="ac">담당관, 대답 대신 다음 번호표를 부른다.</p>
 <h3 class="sc">S#3. 혜성맨션 관리사무소 / 낮</h3>
 <p class="ac">낡은 사무소. 벽에 열쇠 보드, 30년 된 상장들. 책상 너머 <b>오여사</b>(71, 단정한 카디건, 서류를 넘긴다). 창밖으로 혜성맨션 외벽 - 갈라진 페인트.</p>
 <p class="no">〔VFX: 창밖 건물 외벽의 균열이 아주 느리게 - 알아챌 수 없는 속도로 - 숨 쉬듯 벌어졌다 닫힌다〕</p>
-<div class="dl" data-name="오여사"><div class="nm">오여사</div><div class="tx"><p class="ln">하자보수… 자격증은 됐고. <span class="pi">(서류에서 눈을 들지 않고)</span> 가족 중에 여기 산 사람 있어요?</p></div></div>
+<div class="dl" data-name="오여사"><div class="nm">오여사</div><div class="tx"><p class="ln">하자보수… 자격증은 됐고. <span class="pi">(서류에서 눈을 들지 않고)</span> 가족 중에 여기 산 사람, 있어요?</p></div></div>
 <div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln"><span class="pi">(반 박자 늦게)</span> …없습니다.</p></div></div>
 <div class="dl" data-name="오여사"><div class="nm">오여사</div><div class="tx"><p class="pa">(그제야 눈을 든다. 길게 본다)</p></div></div>
 <div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="pa">(시선을 받아낸다)</p></div></div>
@@ -204,20 +237,20 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 <h2 class="ep" data-n="2"><span class="en">제2회</span> <span class="et">「민원 대장」</span></h2>
 <h3 class="sc">S#1. 혜성맨션 501호 / 낮</h3>
 <p class="ac">작업복의 지오. <b>501호 사내</b>(50대, 러닝셔츠)가 밀대로 천장을 쿵쿵 찧고 있다.</p>
-<div class="dl" data-name="501호 사내"><div class="nm">501호 사내</div><div class="tx"><p class="ln">들리지? 지금.</p></div></div>
+<div class="dl" data-name="501호 사내"><div class="nm">501호 사내</div><div class="tx"><p class="ln">들리지? 어? 지금.</p></div></div>
 <p class="ac">천장에서 - 뚜벅. 뚜벅. 느리게 걷는 발소리.</p>
-<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">윗집에 애가 있나 보네요. 뛰는 것도 아니고 이 정도면-</p></div></div>
-<div class="dl" data-name="501호 사내"><div class="nm">501호 사내</div><div class="tx"><p class="ln"><span class="pi">(밀대를 내리고, 지친 얼굴)</span> 윗집에 아무도 없어.</p></div></div>
+<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">윗집에 아이가 있나 봅니다. 뛰는 소리도 아니고, 이 정도면-</p></div></div>
+<div class="dl" data-name="501호 사내"><div class="nm">501호 사내</div><div class="tx"><p class="ln"><span class="pi">(밀대를 내리고, 지친 얼굴)</span> 윗집에 아무도 없다니까.</p></div></div>
 <div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">…예?</p></div></div>
-<div class="dl" data-name="501호 사내"><div class="nm">501호 사내</div><div class="tx"><p class="ln">601호. 십 년째 빈집이야. 십 년을 참았어, 내가.</p></div></div>
+<div class="dl" data-name="501호 사내"><div class="nm">501호 사내</div><div class="tx"><p class="ln">601호. 십 년째 빈집이야. 십 년을 참았어, 내가. 십 년을.</p></div></div>
 <h3 class="sc">S#2. 6층 복도 - 601호 앞 / 낮</h3>
 <p class="ac">지오, 601호 문 앞에 선다. 초인종 - 고장. 문에 붙은 관리비 고지서가 누렇게 바랬다. 문에 귀를 댄다.</p>
 <p class="ac">문 너머 - 브라운관 TV 소리. 채널 돌아가는 소리. 아이 웃음.</p>
 <p class="ac">지오, 흠칫 물러선다. 다시 귀를 댄다. 정적.</p>
 <div class="dl" data-name="관리소장"><div class="nm">관리소장</div><div class="tx"><p class="pa">(E, 계단참에서)</p><p class="ln">지오씨!</p></div></div>
-<div class="dl" data-name="관리소장"><div class="nm">관리소장</div><div class="tx"><p class="pa">(60대, 올라와서 지오를 문에서 떼어낸다)</p><p class="ln">그 집 민원은 접수만 해. 올라가진 말고.</p></div></div>
-<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">안에 누가 있는데요. 방금-</p></div></div>
-<div class="dl" data-name="관리소장"><div class="nm">관리소장</div><div class="tx"><p class="ln"><span class="pi">(말을 자른다)</span> 접수만 하라니까. <span class="pi">(내려가다 돌아보며, 낮게)</span> …빈집이 다 그래. 오래 비면, 집이 심심해서 소릴 내.</p></div></div>
+<div class="dl" data-name="관리소장"><div class="nm">관리소장</div><div class="tx"><p class="pa">(60대, 올라와서 지오를 문에서 떼어낸다)</p><p class="ln">그 집 민원은 접수만 혀. 올라가진 말고.</p></div></div>
+<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">안에 누가 있습니다. 방금-</p></div></div>
+<div class="dl" data-name="관리소장"><div class="nm">관리소장</div><div class="tx"><p class="ln"><span class="pi">(말을 자른다)</span> 접수만 하라니께. <span class="pi">(내려가다 돌아보며, 낮게)</span> …빈집이 다 그래. 오래 비면, 집이 심심해서 소릴 내.</p></div></div>
 <h3 class="sc">S#3. 관리사무소 창고 / 밤</h3>
 <p class="ac">먼지 낀 철제 선반. 지오, 「민원 대장」 묶음을 내린다. 2026, 2019, 2011, 2003… 1996.</p>
 <p class="ac">빠르게 넘긴다. 601호 발소리 민원 - 매년 있다. 96년에도, 07년에도, 15년에도.</p>
@@ -243,14 +276,14 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 <h3 class="sc">S#3. 엘리베이터 안 / 낮</h3>
 <p class="ac">지오, 연장가방을 메고 탄다. 문이 닫히기 직전 <b>수린</b>(29, 장바구니)이 탄다.</p>
 <div class="dl" data-name="수린"><div class="nm">수린</div><div class="tx"><p class="ln"><span class="pi">(버튼 앞이라)</span> 몇 층 가세요?</p></div></div>
-<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">1층이요. 감사합니다.</p></div></div>
+<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">1층입니다. 고맙습니다.</p></div></div>
 <p class="ac">수린이 1을 누른다. 지오의 시선이 버튼 판에 머문다.</p>
 <p class="ac">1… 8… 15… 그리고 16.</p>
-<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">저기. <span class="pi">(버튼 판을 가리키며)</span> 이거 원래 있었어요?</p></div></div>
+<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">저기. <span class="pi">(버튼 판을 가리키며)</span> 이 버튼, 원래 있었습니까?</p></div></div>
 <div class="dl" data-name="수린"><div class="nm">수린</div><div class="tx"><p class="ln"><span class="pi">(보지도 않고)</span> 뭐가요?</p></div></div>
-<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">16이요. 여기 15층 건물인데.</p></div></div>
+<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">16. 여기 15층 건물입니다.</p></div></div>
 <div class="dl" data-name="수린"><div class="nm">수린</div><div class="tx"><p class="ln"><span class="pi">(그제야 버튼 판을 본다. 웃으며)</span> 원래 있었잖아요, 그거.</p></div></div>
-<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">…15층 건물에, 16층 버튼이, 왜요?</p></div></div>
+<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">…15층 건물에, 16층 버튼이, 왜 있습니까.</p></div></div>
 <p class="ac">수린의 웃음이 얼굴에 걸린 채 - 멈춘다.</p>
 <p class="no">〔VFX: 3초. 눈은 깜박이지 않고, 표정 근육만 미세하게 떨린다 - 질문을 「처리하지 못하는」 얼굴. 배경의 층수 표시등만 8… 7… 6… 내려간다〕</p>
 <div class="dl" data-name="수린"><div class="nm">수린</div><div class="tx"><p class="ln"><span class="pi">(툭, 재부팅되듯 원래 웃음으로)</span> …네? 뭐라고 하셨어요?</p></div></div>
@@ -269,7 +302,7 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 <p class="ac">어둑한 주차장. 지오가 기둥 앞에 서서 줄자를 당긴다. 팔을 한껏 벌려야 하는 폭.</p>
 <div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="pa">(도면과 실물을 번갈아 본다)</p></div></div>
 <p class="ac">도면 속 기둥 단면 옆에 연필로 재빨리 실측치를 적는다. 도면 수치보다 크다. 옆 기둥으로 - 또 크다.</p>
-<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln"><span class="pi">(낮게)</span> …도면보다 굵어.</p></div></div>
+<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln"><span class="pi">(낮게)</span> …도면보다 굵다. 단면 600에, 실측 780.</p></div></div>
 <p class="no">〔VFX: 지오의 시점 - 기둥 속이 엑스레이처럼 비치며 철근이 위로, 위로 뻗어 올라간다. 15층을 지나 - 프레임 위 어둠 속으로 한 층 더〕</p>
 <h3 class="sc">S#3. 경비실 / 밤</h3>
 <p class="ac">자정. 지오, CCTV 모니터 앞. 백경비는 순찰 중인지 자리가 비었다.</p>
@@ -282,35 +315,35 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 <h2 class="ep" data-n="5"><span class="en">제5회</span> <span class="et">「전출 명단」</span></h2>
 <h3 class="sc">S#1. 경비실 앞 / 밤</h3>
 <p class="ac">유리 밖의 실루엣 - <b>백경비</b>다. 문을 열고 들어와 말없이 모니터 전원을 뽑는다.</p>
-<div class="dl" data-name="백경비"><div class="nm">백경비</div><div class="tx"><p class="ln">밤에 그 화면, 보지 마.</p></div></div>
-<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">방금 16층에서 문이 열렸습니다. 여기 15층 건물이잖아요.</p></div></div>
-<div class="dl" data-name="백경비"><div class="nm">백경비</div><div class="tx"><p class="ln"><span class="pi">(커피를 따르며)</span> 302호 아가씨랑 눈이 같아.</p></div></div>
+<div class="dl" data-name="백경비"><div class="nm">백경비</div><div class="tx"><p class="ln">밤에 그 화면, 보지 말어.</p></div></div>
+<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">방금 16층에서 문이 열렸습니다. 이 건물은 15층입니다.</p></div></div>
+<div class="dl" data-name="백경비"><div class="nm">백경비</div><div class="tx"><p class="ln"><span class="pi">(커피를 따르며)</span> 302호 아가씨랑 눈이 같어.</p></div></div>
 <p class="ac">지오가 굳는다. 커피가 넘친다.</p>
 <h3 class="sc">S#2. 경비실 안 / 밤</h3>
 <p class="ac">백경비, 벽장 안쪽에서 낡은 대학노트를 꺼낸다. 표지에 아무것도 안 쓰여 있다.</p>
 <p class="ac">펼친다 - 연도별로 칸이 나뉘고, 칸마다 이름 하나. 이름마다 붉은 「전출」 도장.</p>
 <p class="ac">1996. 1998. 1999. 2003…… 한 해에 하나씩. 어떤 해는 둘.</p>
-<div class="dl" data-name="백경비"><div class="nm">백경비</div><div class="tx"><p class="ln"><span class="pi">(페이지를 넘기며)</span> 내가 적은 게 아니야. 내가 왔을 때부터 있던 거를… 이어 적었을 뿐이지.</p></div></div>
+<div class="dl" data-name="백경비"><div class="nm">백경비</div><div class="tx"><p class="ln"><span class="pi">(페이지를 넘기며)</span> 내가 적은 게 아니여. 내가 왔을 적부터 있던 거를… 이어 적었을 뿐이지.</p></div></div>
 <p class="ac">2026년 칸. 김지우.</p>
-<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln"><span class="pi">(노트를 낚아챈다)</span> 이게 뭡니까. 우리 지우 어디 있어요.</p></div></div>
-<div class="dl" data-name="백경비"><div class="nm">백경비</div><div class="tx"><p class="ln"><span class="pi">(조용히)</span> 그만 파. 파다 보면 다음 칸이 자네야.</p></div></div>
+<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln"><span class="pi">(노트를 낚아챈다)</span> 이게 뭡니까. 우리 지우, 어디 있습니까.</p></div></div>
+<div class="dl" data-name="백경비"><div class="nm">백경비</div><div class="tx"><p class="ln"><span class="pi">(조용히)</span> 고만 파. 파다 보믄 다음 칸이 자네여.</p></div></div>
 <h3 class="sc">S#3. 경비실 안 / 밤 (이어서)</h3>
-<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln"><span class="pi">(노트를 놓지 않는다)</span> 이 명단이 뭐냐고요.</p></div></div>
+<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln"><span class="pi">(노트를 놓지 않는다)</span> 이 명단, 뭡니까.</p></div></div>
 <p class="ac">백경비, 대답 대신 맨 앞장을 편다. 1996년, 첫 칸.</p>
 <p class="ac">윤순자. 색 바랜 볼펜 글씨 - 다른 이름들과 필적이 다르다. 떨리는 손으로 눌러 쓴 글씨.</p>
-<div class="dl" data-name="백경비"><div class="nm">백경비</div><div class="tx"><p class="ln">…내 처야.</p></div></div>
+<div class="dl" data-name="백경비"><div class="nm">백경비</div><div class="tx"><p class="ln">…내 처여.</p></div></div>
 <div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="pa">(백경비를 본다)</p></div></div>
-<div class="dl" data-name="백경비"><div class="nm">백경비</div><div class="tx"><p class="ln"><span class="pi">(커피를 한 모금. 아무렇지 않게)</span> 삼십 년 됐어.</p></div></div>
+<div class="dl" data-name="백경비"><div class="nm">백경비</div><div class="tx"><p class="ln"><span class="pi">(커피를 한 모금. 아무렇지 않게)</span> 삼십 년 됐지.</p></div></div>
 <p class="no">〔엔드컷: 지오의 시선이 다시 2026년 칸으로. 김지우 - 그리고 그 아래, 도장 없이 연필로 흐리게 적힌 이름 하나가 초점에 잡힌다. 흐릿해서 읽히지 않는다. 컷 아웃.〕</p>
 <h2 class="ep" data-n="6"><span class="en">제6회</span> <span class="et">「야반도주」</span></h2>
 <h3 class="sc">S#1. 분리수거장 / 저녁</h3>
 <p class="ac">박스를 접는 수린. 지오가 다가와 옆에서 캔 자루를 묶는다.</p>
-<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">저번에 엘리베이터에서… 인사가 늦었네요. 하자보수 새로 온 김지오입니다.</p></div></div>
+<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">저번에 엘리베이터에서… 인사가 늦었습니다. 하자보수 새로 온 김지오입니다.</p></div></div>
 <div class="dl" data-name="수린"><div class="nm">수린</div><div class="tx"><p class="ln"><span class="pi">(웃으며)</span> 아, 네. 한수린이요.</p></div></div>
 <p class="ac">지오의 눈이 멎는다. 인서트 - 노트 2026년 칸, 연필로 흐린 세 글자. 한수린.</p>
-<div class="dl" data-name="수린"><div class="nm">수린</div><div class="tx"><p class="ln">근데 뭐 물어보셨었나? 그날 내가 뭘 대답을 잘못한 것 같은 기억이…</p></div></div>
+<div class="dl" data-name="수린"><div class="nm">수린</div><div class="tx"><p class="ln">근데 그날 저한테 뭐 물어보셨죠? 내가 뭘 잘못 대답한 것 같은 느낌이 자꾸 들거든요…</p></div></div>
 <div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln"><span class="pi">(잠깐 보다가)</span> …아뇨. 아무것도.</p></div></div>
-<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">수린씨는 여기 오래 사셨어요?</p></div></div>
+<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">수린씨는 여기 오래 사셨습니까.</p></div></div>
 <div class="dl" data-name="수린"><div class="nm">수린</div><div class="tx"><p class="ln">어릴 때 살다가, 다시 왔어요. 이상하죠? 아빠가 없어진 집인데.</p></div></div>
 <h3 class="sc">S#2. 분리수거장 / 저녁 (이어서)</h3>
 <div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">없어지셨다니…</p></div></div>
@@ -329,7 +362,7 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 <h3 class="sc">S#1. 관리사무소 회의실 / 낮</h3>
 <p class="ac">입주자대표회의. 위원 여섯이 긴 테이블에. 지오는 구석에서 회의록 스캔 담당. 화이트보드: 「안건 3호 - 장기수선충당금 집행의 건」.</p>
 <div class="dl" data-name="위원1"><div class="nm">위원1</div><div class="tx"><p class="ln">올해 벌써 하나 갔잖아.</p></div></div>
-<div class="dl" data-name="오여사"><div class="nm">오여사</div><div class="tx"><p class="ln">재건축 얘기가 도니까. 하나 더 서두르자는 거지.</p></div></div>
+<div class="dl" data-name="오여사"><div class="nm">오여사</div><div class="tx"><p class="ln">재건축 얘기가 도니까. 하나 더, 서두르자는 거지.</p></div></div>
 <div class="dl" data-name="위원2"><div class="nm">위원2</div><div class="tx"><p class="ln"><span class="pi">(볼펜을 딸깍이며)</span> 후보는?</p></div></div>
 <div class="dl" data-name="오여사"><div class="nm">오여사</div><div class="tx"><p class="ln"><span class="pi">(지오 쪽을 한 번 보고)</span> …추리는 중이에요.</p></div></div>
 <p class="ac">서류 한 장이 위원들 손을 타고 돈다. 지오 앞을 지나는 순간 - 반쯤 보인다. 표 형식. 호수. 이름. 비고란에 「전세」 「전세」 「월세」.</p>
@@ -338,7 +371,7 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 <div class="dl" data-name="위원3"><div class="nm">위원3</div><div class="tx"><p class="ln">충당금은 이번에도 그… 통상 방식으로?</p></div></div>
 <div class="dl" data-name="오여사"><div class="nm">오여사</div><div class="tx"><p class="ln"><span class="pi">(말을 자르듯)</span> 통상 방식으로.</p></div></div>
 <div class="dl" data-name="위원1"><div class="nm">위원1</div><div class="tx"><p class="ln"><span class="pi">(한숨)</span> 삼십 년을 해도 이건 영… <span class="pi">(오여사와 눈이 마주치자 입을 다문다)</span></p></div></div>
-<div class="dl" data-name="오여사"><div class="nm">오여사</div><div class="tx"><p class="ln"><span class="pi">(부드럽게)</span> 김위원. 98년에 옆 단지 반 토막 날 때, 우리 몇 프로 빠졌죠?</p></div></div>
+<div class="dl" data-name="오여사"><div class="nm">오여사</div><div class="tx"><p class="ln"><span class="pi">(부드럽게)</span> 김위원. 98년에 옆 단지 반 토막 날 적에, 우리는 몇 프로 빠졌더라.</p></div></div>
 <p class="ac">침묵. 볼펜 딸깍이는 소리만.</p>
 <h3 class="sc">S#3. 회의실 / 낮 (이어서)</h3>
 <p class="ac">회의 종료. 위원들이 서류를 챙긴다. 오여사가 지오를 부른다.</p>
@@ -353,7 +386,7 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 <h3 class="sc">S#1. 601호 앞 / 낮</h3>
 <p class="ac">지오, 공구가방을 메고 601호 앞. 초인종 - 여전히 고장. 노크.</p>
 <p class="ac">문이 - 스르르, 혼자 열린다.</p>
-<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">…계세요?</p></div></div>
+<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">…계십니까.</p></div></div>
 <h3 class="sc">S#2. 601호 안 / 낮</h3>
 <p class="ac">들어선다. 그리고 멈춘다.</p>
 <p class="ac">브라운관 TV에서 흐르는 만화영화. 자개장. 벽걸이 달력 - 1996년 5월. 상 위에 김이 오르는 된장찌개. 반쯤 먹다 만 밥 두 공기.</p>
@@ -373,8 +406,8 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 <h2 class="ep" data-n="9"><span class="en">제9회</span> <span class="et">「어제도 왔었는데」</span></h2>
 <h3 class="sc">S#1. 302호 앞 / 낮</h3>
 <p class="ac">지우가 살던 집. 문패엔 새 이름. 지오, 초인종을 누른다.</p>
-<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">관리사무소입니다. 보일러 배관 정기점검이요.</p></div></div>
-<div class="dl" data-name="세입자"><div class="nm">세입자</div><div class="tx"><p class="pa">(40대 여자, 문을 연다)</p><p class="ln">아 네 - 들어오세요. 마침 잘됐네, 안방 쪽에서 밤마다 무슨 소리가 나요.</p></div></div>
+<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">관리사무소입니다. 보일러 배관 정기점검 나왔습니다.</p></div></div>
+<div class="dl" data-name="세입자"><div class="nm">세입자</div><div class="tx"><p class="pa">(40대 여자, 문을 연다)</p><p class="ln">아이고 네, 들어오세요. 잘 오셨어요, 안방 쪽에서 밤마다 무슨 소리가 나 가지고. 우리 애 아빠는 못 듣는다는데 나만 들려요.</p></div></div>
 <h3 class="sc">S#2. 302호 안방 / 낮</h3>
 <p class="ac">지오, 보일러 분배기를 여는 척하며 방을 훑는다. 동생이 살던 방. 새 가구, 새 커튼 - 그런데 벽지 한 귀퉁이가 들떠 있다.</p>
 <p class="ac">세입자가 부엌으로 간 사이 - 들뜬 벽지를 살짝 젖힌다.</p>
@@ -383,14 +416,14 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 <p class="ac">그 밑에 스케치 - 창문 없는 긴 복도. 문마다 명패 자리에 날짜. 마지막 문에 동그라미.</p>
 <div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="pa">(손끝이 떨린다)</p></div></div>
 <h3 class="sc">S#3. 302호 거실 / 낮</h3>
-<div class="dl" data-name="세입자"><div class="nm">세입자</div><div class="tx"><p class="ln"><span class="pi">(차를 내오며)</span> 근데 기사님, 어디서 많이 뵌 것 같네.</p></div></div>
-<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln"><span class="pi">(벽지를 원래대로 누르며)</span> …처음 뵙는 것 같은데요.</p></div></div>
-<div class="dl" data-name="세입자"><div class="nm">세입자</div><div class="tx"><p class="ln">아 - <span class="pi">(손뼉)</span> 동생분이시구나. 얼굴이 닮았다.</p></div></div>
+<div class="dl" data-name="세입자"><div class="nm">세입자</div><div class="tx"><p class="ln"><span class="pi">(차를 내오며)</span> 근데 기사님, 어디서 많이 뵌 것 같은데. 그쵸?</p></div></div>
+<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln"><span class="pi">(벽지를 원래대로 누르며)</span> …처음 뵙는 것 같습니다.</p></div></div>
+<div class="dl" data-name="세입자"><div class="nm">세입자</div><div class="tx"><p class="ln">아 - <span class="pi">(손뼉)</span> 동생분이시구나! 어쩐지. 얼굴이 아주 닮았네.</p></div></div>
 <div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln"><span class="pi">(굳는다)</span> …네?</p></div></div>
 <div class="dl" data-name="세입자"><div class="nm">세입자</div><div class="tx"><p class="ln">전에 여기 살던 아가씨. 어제도 왔었는데.</p></div></div>
 <div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln"><span class="pi">(찻잔을 내려놓는다)</span> 어제…요?</p></div></div>
 <div class="dl" data-name="세입자"><div class="nm">세입자</div><div class="tx"><p class="ln"><span class="pi">(태연하게)</span> 네, 매주 와요. 자기가 살던 집이라고, 잠깐 둘러보고 가요. 참한 아가씨야.</p></div></div>
-<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">…그 사람이, 어디서 온다던가요.</p></div></div>
+<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">…그 사람, 어디서 온다고 합니까.</p></div></div>
 <div class="dl" data-name="세입자"><div class="nm">세입자</div><div class="tx"><p class="ln"><span class="pi">(차를 홀짝, 아무렇지 않게)</span> 16층에서 내려온다던데.</p></div></div>
 <p class="no">〔엔드컷: 지오의 얼굴에서 초점이 빠지고 - 배경의 거실 벽시계 초침이 멎는다. 째깍 소리만 한 박자 늦게 따라온다. 컷 아웃.〕</p>
 <h2 class="ep" data-n="10"><span class="en">제10회</span> <span class="et">「2019년 7월 23일」</span></h2>
@@ -443,7 +476,7 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 <p class="ac">계단실 문이 열리며 백경비가 올라온다.</p>
 <div class="dl" data-name="백경비"><div class="nm">백경비</div><div class="tx"><p class="ln"><span class="pi">(가쁜 숨, 낮고 단호하게)</span> 놔두고 내려가.</p></div></div>
 <div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">아저씨-</p></div></div>
-<div class="dl" data-name="백경비"><div class="nm">백경비</div><div class="tx"><p class="ln"><span class="pi">(지우의 손목을 잡은 지오의 손을 하나씩 편다)</span> 이렇게는 못 데리고 나가. 한 시 전에 내려가. 문이 닫히기 전에.</p></div></div>
+<div class="dl" data-name="백경비"><div class="nm">백경비</div><div class="tx"><p class="ln"><span class="pi">(지우의 손목을 잡은 지오의 손을 하나씩 편다)</span> 이렇게는 못 데리고 나가. 한 시 전에 내려가. 문 닫히믄 못 내려가.</p></div></div>
 <p class="ac">지우가 뒷걸음질로 제 방에 돌아간다. 문이 닫히기 직전 -</p>
 <div class="dl" data-name="지우"><div class="nm">지우</div><div class="tx"><p class="ln"><span class="pi">(문틈으로, 속삭임)</span> 오빠. …오지 마. 부탁이야.</p></div></div>
 <h3 class="sc">S#3. 1층 로비 / 밤</h3>
@@ -458,24 +491,24 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 <h2 class="ep" data-n="12"><span class="en">제12회</span> <span class="et">「거래의 조건」</span></h2>
 <h3 class="sc">S#1. 로비 / 밤</h3>
 <div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln"><span class="pi">(서류를 밀어내며)</span> 동생을 데려가겠습니다.</p></div></div>
-<div class="dl" data-name="오여사"><div class="nm">오여사</div><div class="tx"><p class="ln"><span class="pi">(찻잔을 든 채)</span> 가족 중에 여기 산 사람, 없다더니. <span class="pi">(사이)</span> 데려가서, 뭐라고 설명할 건데? 서류상 이사 간 애가 안 늙은 얼굴로 나타나면.</p></div></div>
+<div class="dl" data-name="오여사"><div class="nm">오여사</div><div class="tx"><p class="ln"><span class="pi">(찻잔을 든 채)</span> 가족 중에 여기 산 사람, 없다더니. <span class="pi">(사이)</span> 데려가서, 뭐라고 설명하려고. 서류상 이사 간 애가 안 늙은 얼굴로 나타나면.</p></div></div>
 <div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">…….</p></div></div>
-<div class="dl" data-name="오여사"><div class="nm">오여사</div><div class="tx"><p class="ln"><span class="pi">(부드럽게)</span> 지오씨가 조용히 있어 주면 - 지우 순번을 연장해 줄 수 있어.</p></div></div>
-<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">연장이 아니라 빼요.</p></div></div>
-<div class="dl" data-name="오여사"><div class="nm">오여사</div><div class="tx"><p class="ln"><span class="pi">(처음으로 웃음기가 사라진다)</span> 빼는 건 없어. 삼십 년 동안 한 번도. 미루는 것만 있지.</p></div></div>
+<div class="dl" data-name="오여사"><div class="nm">오여사</div><div class="tx"><p class="ln"><span class="pi">(부드럽게)</span> 지오씨가 조용히만 있어 주면 - 지우 순번은 미뤄 줄 수 있어요. 내가.</p></div></div>
+<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">미루는 게 아니라, 빼 주십시오.</p></div></div>
+<div class="dl" data-name="오여사"><div class="nm">오여사</div><div class="tx"><p class="ln"><span class="pi">(처음으로 웃음기가 사라진다)</span> 빼는 건 없어요. 삼십 년 동안 한 번도. 미루는 것만 있지.</p></div></div>
 <h3 class="sc">S#2. 로비 / 밤 (이어서)</h3>
 <p class="ac">위원2가 파일을 편다. 그래프와 표.</p>
 <div class="dl" data-name="위원2"><div class="nm">위원2</div><div class="tx"><p class="ln">혜성맨션 30년. 암 사망 0. 사고사 0. 자살 0. IMF 때 옆 단지 시세 마이너스 30, 혜성맨션 마이너스 2.</p></div></div>
-<div class="dl" data-name="오여사"><div class="nm">오여사</div><div class="tx"><p class="ln">건물이 받기만 한 게 아니야. 지켜줬어. 그 대가가 - 일 년에 한 사람이야. 아흔 세대에, 한 사람.</p></div></div>
+<div class="dl" data-name="오여사"><div class="nm">오여사</div><div class="tx"><p class="ln">건물이 받기만 한 게 아니에요. 지켜 줬지. 그 값이 - 일 년에 한 사람이에요. 아흔 세대에, 한 사람.</p></div></div>
 <div class="dl" data-name="위원2"><div class="nm">위원2</div><div class="tx"><p class="ln"><span class="pi">(파일을 덮으며, 달래듯)</span> 걱정 마요. 2000년 이후엔 자가는 없었어.</p></div></div>
 <div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln"><span class="pi">(조용히, 오여사에게)</span> 그 한 사람이 당신 가족이어도 그렇게 말합니까.</p></div></div>
 <p class="ac">오여사의 찻잔이 아주 미세하게 흔들린다. 위원1이 테이블 위의 서약서를 집어, 도로 서류철에 넣는다.</p>
 <div class="dl" data-name="오여사"><div class="nm">오여사</div><div class="tx"><p class="ln"><span class="pi">(한 박자 늦게)</span> …그 얘긴 여기까지.</p></div></div>
 <h3 class="sc">S#3. 로비 / 밤 (이어서)</h3>
-<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln"><span class="pi">(일어선다)</span> 거절하겠습니다. 이 건물, 재건축 연한 찼어요.</p></div></div>
-<div class="dl" data-name="오여사"><div class="nm">오여사</div><div class="tx"><p class="ln"><span class="pi">(등 뒤에서, 다시 부드러워진 목소리)</span> 삼십 년간 이 건물을 고치자던 사람이 다섯이었어. 전부 무산됐지. 진단 신청서는 한 번도 못 냈어.</p></div></div>
+<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln"><span class="pi">(일어선다)</span> 거절하겠습니다. 이 건물, 재건축 연한 찼습니다. 준공 95년, 올해로 31년.</p></div></div>
+<div class="dl" data-name="오여사"><div class="nm">오여사</div><div class="tx"><p class="ln"><span class="pi">(등 뒤에서, 다시 부드러워진 목소리)</span> 이 건물 고치자던 사람이 삼십 년에 다섯이었어요. 전부 무산됐지. 진단 신청서는 한 장도 못 나갔고.</p></div></div>
 <div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln"><span class="pi">(돌아보지 않고)</span> 그 다섯 사람은요.</p></div></div>
-<div class="dl" data-name="오여사"><div class="nm">오여사</div><div class="tx"><p class="ln">이사 갔어. 급하게.</p></div></div>
+<div class="dl" data-name="오여사"><div class="nm">오여사</div><div class="tx"><p class="ln">이사 갔어요. 급하게.</p></div></div>
 <p class="ac">정적. 위원1이 서류철을 안고 먼저 일어나 나간다. 위원3이 뒤따른다. 오여사만 찻잔을 든 채 남는다.</p>
 <p class="no">〔엔드컷: 엘리베이터로 걸어가는 지오의 얼굴 - 백경비의 노트 페이지들이 플래시백으로 겹친다. 「전출」 「전출」 「전출」 「전출」 「전출」. 다섯 개의 붉은 도장이 세로로 쌓이며 - 컷 아웃.〕</p>
 <h2 class="ep" data-n="13"><span class="en">제13회</span> <span class="et">「D등급」</span></h2>
@@ -496,9 +529,9 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 <h3 class="sc">S#3. 복도 / 밤</h3>
 <p class="ac">지오가 방을 나선다. 복도의 모든 세대 문 옆 - 호출 표시등이 일제히 붉게 깜박인다. 층 전체가. 위층도. 아래층도.</p>
 <p class="ac">전화벨. 관리소장이다.</p>
-<div class="dl" data-name="관리소장"><div class="nm">관리소장</div><div class="tx"><p class="pa">(F, 갈라진 목소리)</p><p class="ln">지오씨, 지금 어디야. 사무실 전화가 다 - 다 자네만 찾아.</p></div></div>
+<div class="dl" data-name="관리소장"><div class="nm">관리소장</div><div class="tx"><p class="pa">(F, 갈라진 목소리)</p><p class="ln">지오씨, 시방 어디여. 사무실 전화가 다 - 다 자네만 찾어.</p></div></div>
 <div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">…네?</p></div></div>
-<div class="dl" data-name="관리소장"><div class="nm">관리소장</div><div class="tx"><p class="pa">(F)</p><p class="ln">아흔 세대가 전부. 하자보수 불러 달라고. 이름을 부르면서.</p></div></div>
+<div class="dl" data-name="관리소장"><div class="nm">관리소장</div><div class="tx"><p class="pa">(F)</p><p class="ln">아흔 세대가 전부. 하자보수 불러 달라고. 이름을 부름서.</p></div></div>
 <p class="no">〔엔드컷: 복도 저 끝, 가장 가까운 세대의 문이 - 안에서 노크된다. 쿵. 쿵. 쿵. 안쪽에서 밖으로. 컷 아웃.〕</p>
 <h2 class="ep" data-n="14"><span class="en">제14회</span> <span class="et">「벽이 귀야」</span></h2>
 <h3 class="sc">S#1. 10층 복도 / 밤</h3>
@@ -507,16 +540,16 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 <div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln"><span class="pi">(숨을 고르며)</span> …지쳐 떨어질 때까지 부를 생각이야.</p></div></div>
 <h3 class="sc">S#2. 전기실 / 밤</h3>
 <p class="ac">수린이 차단기 판넬 앞에서 도면을 비춰 보고 있다.</p>
-<div class="dl" data-name="수린"><div class="nm">수린</div><div class="tx"><p class="ln"><span class="pi">(레버를 내리며)</span> 호출 시스템 전원, 여기.</p></div></div>
+<div class="dl" data-name="수린"><div class="nm">수린</div><div class="tx"><p class="ln"><span class="pi">(레버를 내리며)</span> 호출 시스템 전원, 여기죠.</p></div></div>
 <p class="ac">철컥 - 복도의 붉은 표시등이 일제히 꺼진다. 정적.</p>
-<div class="dl" data-name="수린"><div class="nm">수린</div><div class="tx"><p class="ln"><span class="pi">(지오를 부축해 일으키며)</span> 일단 오늘은 끝.</p></div></div>
-<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln"><span class="pi">(수린을 본다)</span> …왜 도와줘요. 위험한 거 알면서.</p></div></div>
+<div class="dl" data-name="수린"><div class="nm">수린</div><div class="tx"><p class="ln"><span class="pi">(지오를 부축해 일으키며)</span> 일단 오늘은 끝. 끝이에요.</p></div></div>
+<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln"><span class="pi">(수린을 본다)</span> …왜 돕습니까. 위험한 거 알면서.</p></div></div>
 <div class="dl" data-name="수린"><div class="nm">수린</div><div class="tx"><p class="ln"><span class="pi">(레버에 손을 얹은 채)</span> 아빠 차요. 엄마가 십 년을 안 팔았어요. 돌아오면 타야 된다고. …그냥 자요?</p></div></div>
 <h3 class="sc">S#3. 전기실 / 밤 (이어서)</h3>
 <p class="ac">둘이 전기실 문턱에 앉아 있다. 수린이 주머니에서 캔커피 두 개를 꺼낸다.</p>
-<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">안전진단. 재건축 연한 찬 건물은 진단에서 D등급 이하가 나오면 재건축 길이 열려요. 건물이 삼십 년간 손대려는 걸 전부 막아 왔고.</p></div></div>
-<div class="dl" data-name="수린"><div class="nm">수린</div><div class="tx"><p class="ln">막을 수 있는 걸 왜 무서워해요?</p></div></div>
-<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln"><span class="pi">(커피를 내려다보며)</span> 막는 방법이 사람이니까. …이번엔 우리가 먼저 움직여요. 코어 뚫어서 샘플 뜨고, 진단업체에 보낼 증거를 만들어요. D등급. 철거로 끝내요.</p></div></div>
+<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">안전진단. 연한 찬 건물은 진단에서 D등급 이하가 나오면 재건축 길이 열립니다. 이 건물은 삼십 년간 손대려는 걸 전부 막아 왔고요.</p></div></div>
+<div class="dl" data-name="수린"><div class="nm">수린</div><div class="tx"><p class="ln">막는 거면 막으면 되죠. 뭐가 무서운데요?</p></div></div>
+<div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln"><span class="pi">(커피를 내려다보며)</span> 막는 방법이 사람이니까. …이번엔 우리가 먼저 움직입니다. 기둥 코어 세 군데, 샘플 떠서 진단업체에 보냅니다. D등급. 철거로 끝냅니다.</p></div></div>
 <p class="ac">수린, 끄덕이지 않는다.</p>
 <div class="dl" data-name="수린"><div class="nm">수린</div><div class="tx"><p class="ln">아빠 꺼내고요. 그 다음에요.</p></div></div>
 <p class="ac">둘의 머리 위 - 전기실 벽에 금 간 페인트가 소리 없이 벌어졌다, 닫힌다.</p>
@@ -531,21 +564,21 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-of
 <h2 class="ep" data-n="15"><span class="en">제15회</span> <span class="et">「건물이 말했다」</span></h2>
 <h3 class="sc">S#1. 경비실 / 밤</h3>
 <p class="ac">백경비가 둘을 불렀다. 테이블 위에 노트가 펼쳐져 있다. 보온병 커피 석 잔.</p>
-<div class="dl" data-name="백경비"><div class="nm">백경비</div><div class="tx"><p class="ln">철거 얘기, 벽 안에서 하지 마. <span class="pi">(사이)</span> …늦었겠지만.</p></div></div>
+<div class="dl" data-name="백경비"><div class="nm">백경비</div><div class="tx"><p class="ln">철거 얘기, 벽 안에서 하지 말어. <span class="pi">(사이)</span> …늦었겄지만.</p></div></div>
 <div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln">아저씨는 삼십 년을 알고도 왜-</p></div></div>
-<div class="dl" data-name="백경비"><div class="nm">백경비</div><div class="tx"><p class="ln"><span class="pi">(노트 첫 장을 쓸어 본다)</span> 1996년 봄. 처가 먼저 올라갔어. 나는… 남았지. 경비 일이면 매일 밤 순찰을 도니까. 매일 밤 면회를 가. 삼십 년째.</p></div></div>
+<div class="dl" data-name="백경비"><div class="nm">백경비</div><div class="tx"><p class="ln"><span class="pi">(노트 첫 장을 쓸어 본다)</span> 1996년 봄. 처가 먼저 올라갔어. 나는… 남았지. 경비 일이믄 매일 밤 순찰을 도니께. 매일 밤 면회를 가. 삼십 년째여.</p></div></div>
 <div class="dl" data-name="수린"><div class="nm">수린</div><div class="tx"><p class="ln"><span class="pi">(조용히)</span> …16층으로요.</p></div></div>
-<div class="dl" data-name="백경비"><div class="nm">백경비</div><div class="tx"><p class="ln"><span class="pi">(끄덕인다)</span> 그 방은 우리 신혼여행 첫날이야. 삼십 년을 매일 봐도, 처는 나를 그날의 나로 봐. <span class="pi">(커피를 한 모금)</span> 늙은 나는 못 알아봐도 - 매일 새로 반해 주니, 그것도 복이지.</p></div></div>
+<div class="dl" data-name="백경비"><div class="nm">백경비</div><div class="tx"><p class="ln"><span class="pi">(끄덕인다)</span> 그 방은 우리 신혼여행 첫날이여. 삼십 년을 매일 봐도, 처는 나를 그날의 나로 봐. <span class="pi">(커피를 한 모금)</span> 늙은 나는 못 알아봐도 - 매일 새로 반해 주니, 그것도 복이지.</p></div></div>
 <h3 class="sc">S#2. 경비실 / 밤 (이어서)</h3>
 <div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln"><span class="pi">(어렵게)</span> 아저씨. 저희는 이 건물을 끝낼 겁니다.</p></div></div>
 <div class="dl" data-name="백경비"><div class="nm">백경비</div><div class="tx"><p class="pa">(커피잔을 내려놓는다. 오래 침묵)</p></div></div>
-<div class="dl" data-name="백경비"><div class="nm">백경비</div><div class="tx"><p class="ln">…부수면, 16층 사람들은 어디로 가나.</p></div></div>
+<div class="dl" data-name="백경비"><div class="nm">백경비</div><div class="tx"><p class="ln">…부수믄, 16층 사람들은 어디로 가나.</p></div></div>
 <div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="pa">(입을 연다 - 닫는다)</p></div></div>
-<div class="dl" data-name="백경비"><div class="nm">백경비</div><div class="tx"><p class="ln">자네 동생은 아직 몸이 있어. 데리고 나오면 돼. 근데 우리 처는. 저 위의 서른 명 넘는 사람들은. 몸이 여기 없는 사람들은 - 건물이 무너지면, 어디로 가.</p></div></div>
+<div class="dl" data-name="백경비"><div class="nm">백경비</div><div class="tx"><p class="ln">자네 동생은 아직 몸이 있어. 데리고 나오믄 돼. 근데 우리 처는. 저 위에 서른 명 넘는 사람들은. 몸이 여기 없는 사람들은 - 건물이 무너지믄, 어디로 가.</p></div></div>
 <div class="dl" data-name="수린"><div class="nm">수린</div><div class="tx"><p class="ln">…우리 아빠도요?</p></div></div>
 <p class="ac">백경비, 대답 대신 커피를 따른다.</p>
 <div class="dl" data-name="지오"><div class="nm">지오</div><div class="tx"><p class="ln"><span class="pi">(한참 만에)</span> …모르겠습니다.</p></div></div>
-<div class="dl" data-name="백경비"><div class="nm">백경비</div><div class="tx"><p class="ln"><span class="pi">(끄덕이며, 원망 없이)</span> 그래. …커피 식어.</p></div></div>
+<div class="dl" data-name="백경비"><div class="nm">백경비</div><div class="tx"><p class="ln"><span class="pi">(끄덕이며, 원망 없이)</span> 그려. …커피 식어.</p></div></div>
 <h3 class="sc">S#3. 1층 로비 / 밤</h3>
 <p class="ac">경비실을 나서는 둘. 그때 - 로비 천장 스피커가 직, 켜진다.</p>
 <div class="dl" data-name="안내방송"><div class="nm">안내방송</div><div class="tx"><p class="pa">(여성 안내 음성, 표준 억양)</p><p class="ln">입주민 여러분께 알려드립니다. 오늘부로, 하자보수 기사 김지오씨는-</p></div></div>
