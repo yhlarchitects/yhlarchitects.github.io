@@ -1,0 +1,75 @@
+:root {
+  color-scheme: light;
+  --type-size: clamp(20px, 1.817vw, 50px);
+  --depth-four: clamp(10px, .78125vw, 22px);
+}
+* { box-sizing: border-box; }
+html, body { width: 100%; height: 100%; margin: 0; }
+body { overflow: hidden; background: #e5e5e7; color: #000; }
+.background, .lens { position: fixed; inset: 0; }
+.background { overflow: hidden; }
+.background video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.lens {
+  z-index: 1;
+  pointer-events: none;
+  -webkit-backdrop-filter: blur(0px);
+  backdrop-filter: blur(0px);
+  transition: backdrop-filter 550ms ease, -webkit-backdrop-filter 550ms ease;
+}
+body.is-open .lens {
+  -webkit-backdrop-filter: blur(var(--depth-four));
+  backdrop-filter: blur(var(--depth-four));
+}
+.identity {
+  position: fixed;
+  z-index: 2;
+  top: env(safe-area-inset-top, 0px);
+  left: env(safe-area-inset-left, 0px);
+  max-width: calc(100% - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px));
+  font: 400 var(--type-size)/1.05 'Univers 55', Arial, sans-serif;
+}
+.word {
+  display: block;
+  width: calc(var(--advance) * 1em);
+  height: 1em;
+  overflow: visible;
+  fill: currentColor;
+}
+.identity button, .identity a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.identity button { display: block; }
+.identity a { display: block; width: fit-content; }
+.identity button:focus-visible, .identity a:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 2px;
+}
+#contact { margin: 0; }
+[hidden] { display: none !important; }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+@media (max-width: 340px) { :root { --type-size: 6vw; } }
+@media (prefers-reduced-motion: reduce) { .lens { transition: none; } }
+@media print {
+  .background, .lens { display: none; }
+  #contact[hidden] { display: block !important; }
+  body { background: #fff; }
+}

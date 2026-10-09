@@ -25,6 +25,34 @@ def webImage(image, edge, quality, stem, output):
     image.save(encoded, 'WEBP', quality=quality, method=6, exif=b'', xmp=b'')
     return writeAsset(encoded.getvalue(), stem, '.webp', output)
 
+
+def buildCinema(source, output):
+    catalog = []
+    for clip in sorted((source / 'home' / 'videos').glob('*.mp4')):
+        if not re.fullmatch(r'[a-z0-9-]+', clip.stem):
+            raise ValueError('Use lowercase letters, numbers and hyphens for video filenames.')
+        poster = clip.with_suffix('.webp')
+        catalog.append({
+            'id': clip.stem,
+            'src': writeAsset(clip.read_bytes(), 'film-' + clip.stem, '.mp4', output),
+            'poster': writeAsset(poster.read_bytes(), 'poster-' + clip.stem, '.webp', output) if poster.exists() else ''
+        })
+    if not catalog:
+        raise ValueError('Add at least one MP4 to home/videos/.')
+    script = (source / 'home' / 'cinema.js').read_text(encoding='utf-8')
+    script = script.replace('VIDEO-CATALOG', json.dumps(catalog, ensure_ascii=False))
+    scriptUrl = writeAsset(script.encode('utf-8'), 'cinema', '.js', output)
+    styleUrl = writeAsset((source / 'home' / 'cinema.css').read_bytes(), 'cinema', '.css', output)
+    html = (source / 'index.html').read_text(encoding='utf-8')
+    html = html.replace('CINEMA-STYLESHEET', styleUrl).replace('CINEMA-SCRIPT', scriptUrl).replace('CINEMA-POSTER', catalog[0]['poster'])
+    (output / 'index.html').write_text(html, encoding='utf-8', newline='\n')
+    for name in ('CNAME', 'robots.txt', '.nojekyll'):
+        shutil.copy2(source / name, output / name)
+    for folder in ('thesis', 'bangyeol'):
+        shutil.copytree(source / folder, output / folder)
+    print(json.dumps({'films': len(catalog), 'output': str(output)}, ensure_ascii=False))
+    return catalog
+
 def build(source, output):
     source, output = Path(source).resolve(), Path(output).resolve()
     if output == source or source in output.parents and output.name != 'site-dist':
@@ -39,6 +67,8 @@ def build(source, output):
         target = output / 'assets' / asset.name
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(asset, target)
+    if 'CINEMA-SCRIPT' in (source / 'index.html').read_text(encoding='utf-8'):
+        return buildCinema(source, output)
     catalog = []
     for path in sorted((source / 'photos').rglob('*')):
         if path.suffix.lower() not in SUPPORTED or not path.is_file():
