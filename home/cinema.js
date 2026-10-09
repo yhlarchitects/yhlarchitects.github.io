@@ -10,6 +10,9 @@
   let opened = false;
   let selected;
   let playRequest = 0;
+  let needsGesture = true;
+  let lastTime = 0;
+  let loopRestartPending = false;
 
   const readPrevious = () => {
     try { return localStorage.getItem(storageKey); } catch { return null; }
@@ -19,29 +22,45 @@
   };
   const choose = candidates => candidates[Math.floor(Math.random() * candidates.length)];
 
-  function play() {
+  function playWithSound() {
     const request = ++playRequest;
-    video.muted = !opened;
+    video.muted = false;
+    // Keep play() synchronous with a real click or touch when audio needs unlocking.
     const result = video.play();
     if (!result) return;
-    result.catch(() => {
+    result.then(() => {
+      if (request === playRequest) needsGesture = video.muted;
+    }).catch(() => {
+      // An older autoplay rejection must not mute a newer gesture-driven attempt.
       if (request !== playRequest) return;
-      // A muted retry keeps the background usable under stricter browser policies.
+      needsGesture = true;
       video.muted = true;
       video.play().catch(() => {
-        if (request === playRequest) status.textContent = 'Select YHLA to play the background film.';
+        if (request === playRequest) status.textContent = 'Tap anywhere to play the background film.';
       });
     });
   }
 
+  function unlockAudio() {
+    if (needsGesture || video.muted || video.paused) playWithSound();
+  }
+  // Capture gestures before links or the contact toggle handle their own actions.
+  document.addEventListener('click', unlockAudio, true);
+  document.addEventListener('touchend', unlockAudio, { capture: true, passive: true });
+  document.addEventListener('keydown', event => {
+    if (!event.repeat && (event.key === 'Enter' || event.key === ' ')) unlockAudio();
+  }, true);
+
   function load(film) {
     selected = film;
+    lastTime = 0;
+    loopRestartPending = false;
     attempted.add(film.id);
     video.dataset.film = film.id;
     if (film.poster) video.poster = film.poster;
     else video.removeAttribute('poster');
     video.src = film.src;
-    play();
+    playWithSound();
   }
 
   function setOpened(value) {
@@ -49,8 +68,6 @@
     toggle.setAttribute('aria-expanded', String(value));
     contact.hidden = !value;
     document.body.classList.toggle('is-open', value);
-    // Run play directly inside the click handler so the gesture unlocks audio.
-    play();
   }
 
   toggle.addEventListener('click', () => setOpened(!opened));
@@ -67,12 +84,28 @@
     status.textContent = '';
     if (selected) remember(selected.id);
   });
+  function resumeLoop() {
+    if (!loopRestartPending || !video.paused || document.hidden) return;
+    loopRestartPending = false;
+    if (!video.muted) playWithSound();
+    else video.play().catch(() => { needsGesture = true; });
+  }
+  video.addEventListener('timeupdate', () => {
+    const wrapped = video.loop && lastTime > video.duration - 1 && video.currentTime < .25;
+    lastTime = video.currentTime;
+    // Some WebKit media backends pause at the start of a native loop.
+    // Resume only that boundary, preserving sound and ordinary user pauses.
+    if (wrapped) loopRestartPending = true;
+    else if (video.currentTime >= .25) loopRestartPending = false;
+    resumeLoop();
+  });
+  video.addEventListener('pause', resumeLoop);
   video.addEventListener('error', () => {
     const remaining = films.filter(film => !attempted.has(film.id));
     if (remaining.length) load(choose(remaining));
     else status.textContent = 'The background film could not be loaded.';
   });
-  window.addEventListener('pageshow', event => { if (event.persisted) play(); });
+  window.addEventListener('pageshow', event => { if (event.persisted) playWithSound(); });
 
   const previous = readPrevious();
   const candidates = films.filter(film => film.id !== previous);

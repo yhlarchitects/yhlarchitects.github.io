@@ -2,12 +2,12 @@
 
 https://yhlarchitects.com/
 
-The home page fills the viewport with a looping film. Playback begins muted. Selecting YHLA shows these two lines directly below the mark and enables the original audio:
+The home page fills the viewport with a looping film and attempts playback with the original audio immediately. If the browser blocks sound, the video continues muted until the first click or touch anywhere on the page. Selecting YHLA shows these two lines directly below the mark:
 
 Yeonho Lee Architects, CH, KR
 hello@yhlarchitects.com
 
-All three lines use the same size of outlined Univers LT Std 55 Roman lettering. The backdrop uses the existing depth-four blur: 15px at 1920px, with a 10px minimum. YHLA again, the background, or Escape closes the contact text and mutes the continuing film. The email opens a mail draft.
+All three lines use the same size of outlined Univers LT Std 55 Roman lettering. The backdrop uses the existing depth-four blur: 15px at 1920px, with a 10px minimum. YHLA again, the background, or Escape closes the contact text without changing playback or sound. The email opens a mail draft.
 
 ## Add films
 
