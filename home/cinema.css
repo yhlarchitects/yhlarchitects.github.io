@@ -9,6 +9,16 @@ body { overflow: hidden; background: #e5e5e7; color: #000; }
 .background, .lens { position: fixed; inset: 0; }
 .background { overflow: hidden; }
 .background video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.background video { pointer-events: none; }
+/* Never show the native play glyph, even when a browser holds autoplay. */
+.background video::-webkit-media-controls,
+.background video::-webkit-media-controls-panel,
+.background video::-webkit-media-controls-start-playback-button,
+.background video::-webkit-media-controls-overlay-play-button {
+  display: none !important;
+  -webkit-appearance: none;
+  opacity: 0;
+}
 .lens {
   z-index: 1;
   pointer-events: none;

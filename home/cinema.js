@@ -41,6 +41,42 @@
     });
   }
 
+  // Ask whether this browser lets the page start sound before any gesture.
+  function soundAllowed() {
+    try {
+      if (navigator.getAutoplayPolicy) return navigator.getAutoplayPolicy('mediaelement') === 'allowed';
+      const Context = window.AudioContext || window.webkitAudioContext;
+      if (!Context) return false;
+      const probe = new Context();
+      const allowed = probe.state === 'running';
+      probe.close();
+      return allowed;
+    } catch { return false; }
+  }
+
+  // Start muted so every browser, iOS included, autoplays without a play button.
+  // Sound joins at once where allowed, otherwise on the first click or touch.
+  function startPlayback() {
+    const request = ++playRequest;
+    needsGesture = true;
+    video.muted = true;
+    const result = video.play();
+    if (!result) return;
+    result.then(() => {
+      if (request !== playRequest || !soundAllowed()) return;
+      video.muted = false;
+      needsGesture = false;
+      setTimeout(() => {
+        if (request !== playRequest || !video.paused) return;
+        needsGesture = true;
+        video.muted = true;
+        video.play().catch(() => {});
+      }, 300);
+    }).catch(() => {
+      if (request === playRequest) needsGesture = true;
+    });
+  }
+
   function unlockAudio() {
     if (needsGesture || video.muted || video.paused) playWithSound();
   }
@@ -60,7 +96,7 @@
     if (film.poster) video.poster = film.poster;
     else video.removeAttribute('poster');
     video.src = film.src;
-    playWithSound();
+    startPlayback();
   }
 
   function setOpened(value) {
@@ -105,7 +141,7 @@
     if (remaining.length) load(choose(remaining));
     else status.textContent = 'The background film could not be loaded.';
   });
-  window.addEventListener('pageshow', event => { if (event.persisted) playWithSound(); });
+  window.addEventListener('pageshow', event => { if (event.persisted) startPlayback(); });
 
   const previous = readPrevious();
   const candidates = films.filter(film => film.id !== previous);
