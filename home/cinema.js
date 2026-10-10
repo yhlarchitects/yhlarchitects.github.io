@@ -83,6 +83,10 @@
   function unlockAudio() {
     if (needsGesture || video.muted || video.paused) playWithSound();
   }
+  // iOS ignores user-scalable=no, so stop pinch zoom here.
+  const noZoom = event => event.preventDefault();
+  ['gesturestart', 'gesturechange', 'gestureend'].forEach(type => document.addEventListener(type, noZoom, { passive: false }));
+  document.addEventListener('touchmove', event => { if (event.touches.length > 1) event.preventDefault(); }, { passive: false });
   // Capture gestures before links or the contact toggle handle their own actions.
   document.addEventListener('click', unlockAudio, true);
   document.addEventListener('touchend', unlockAudio, { capture: true, passive: true });
