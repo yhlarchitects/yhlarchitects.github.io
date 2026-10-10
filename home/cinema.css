@@ -4,7 +4,9 @@
   --contact-size: clamp(17px, 1.22969vw, 42px);
   --depth-four: clamp(10px, .78125vw, 22px);
   --reveal-time: 850ms;
-  --film-time: 1200ms;
+  --dismiss-time: 1800ms;
+  --ink-time: 1400ms;
+  --film-time: 2400ms;
 }
 * { box-sizing: border-box; }
 html, body { width: 100%; height: 100%; margin: 0; }
@@ -14,7 +16,7 @@ body { overflow: hidden; background: #e5e5e7; color: #000; }
 .background { overflow: hidden; }
 .film-layer { position: absolute; inset: 0; opacity: 0; }
 .film-layer.is-current { opacity: 1; }
-.film-layer.is-front { z-index: 1; transition: opacity var(--film-time) ease-in-out; }
+.film-layer.is-front { z-index: 1; }
 .passage { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
 .background.is-changing .passage { animation: passage var(--film-time) ease-in-out; }
 @keyframes passage {
@@ -49,13 +51,18 @@ body { overflow: hidden; background: #e5e5e7; color: #000; }
   pointer-events: none;
   -webkit-backdrop-filter: blur(0px);
   backdrop-filter: blur(0px);
-  transition: backdrop-filter var(--reveal-time) ease, -webkit-backdrop-filter var(--reveal-time) ease;
+  transition: backdrop-filter var(--dismiss-time) ease-in-out, -webkit-backdrop-filter var(--dismiss-time) ease-in-out;
 }
 body.is-open .lens {
+  transition-duration: var(--reveal-time);
   -webkit-backdrop-filter: blur(var(--depth-four));
   backdrop-filter: blur(var(--depth-four));
 }
-.identity { font: 400 var(--contact-size)/1 'Univers 55', Arial, sans-serif; }
+.identity {
+  font: 400 var(--contact-size)/1 'Univers 55', Arial, sans-serif;
+  color: var(--ink, #000);
+  transition: color var(--ink-time) ease-in-out;
+}
 .word {
   display: block;
   width: calc(var(--advance) * 1em);
@@ -83,7 +90,6 @@ body.is-open .lens {
   left: 50%;
   transform: translateX(-50%);
   font-size: var(--mark-size);
-  color: var(--mark-ink, #000);
 }
 /* A generous touch target without changing the guide's visible geometry. */
 #yhla::before { content: ''; position: absolute; inset: -10px -12px; }
@@ -102,13 +108,13 @@ body.is-open .lens {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  color: var(--contact-ink, #000);
-  transition: opacity var(--reveal-time) ease, visibility 0s linear var(--reveal-time);
+  transition: opacity var(--dismiss-time) ease-in-out, visibility 0s linear var(--dismiss-time);
 }
 body.is-open #contact {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+  transition-duration: var(--reveal-time), 0s;
   transition-delay: 0s;
 }
 #contact a { display: block; margin-top: .178571em; }
@@ -129,7 +135,7 @@ body.is-open #contact {
   border: 0;
 }
 @media (prefers-reduced-motion: reduce) {
-  :root { --reveal-time: 0ms; --film-time: 0ms; }
+  :root { --reveal-time: 0ms; --dismiss-time: 0ms; --ink-time: 0ms; --film-time: 0ms; }
   .background .cover { transition: none; }
 }
 @media print {

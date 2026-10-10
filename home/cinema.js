@@ -84,9 +84,6 @@
   }, { passive: false });
   document.addEventListener('click', unlockAudio, true);
   document.addEventListener('touchend', unlockAudio, { capture: true, passive: true });
-  document.addEventListener('keydown', event => {
-    if (!event.repeat && (event.key === 'Enter' || event.key === ' ')) unlockAudio();
-  }, true);
 
   function load(film) {
     selected = film;
@@ -143,10 +140,15 @@
     fading = true;
     outgoing.video.muted = true;
     layer.classList.add('is-current');
+    const duration = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--film-time')) || 0;
+    // Explicit keyframes also cover cached films that become ready within one paint.
+    // Keep the outgoing film until the rendered animation, not a timer, finishes.
+    const dissolve = layer.animate([{ opacity: 0 }, { opacity: 1 }], {
+      duration, easing: 'ease-in-out', fill: 'both'
+    });
     background.classList.add('is-changing');
     background.dataset.changing = 'fading';
-    const duration = matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 1200;
-    changeTimer = setTimeout(() => {
+    const finish = () => {
       outgoing.video.pause();
       outgoing.layer.classList.remove('is-current', 'is-playing');
       outgoing = null;
@@ -154,8 +156,10 @@
       fading = false;
       background.classList.remove('is-changing');
       background.dataset.changing = 'idle';
+      dissolve.cancel();
       updateInk(true);
-    }, duration);
+    };
+    dissolve.finished.then(finish, finish);
   }
 
   function setOpened(value) {
@@ -173,11 +177,26 @@
     if (opened) setOpened(false);
     else nextFilm();
   });
+  const navigationKeys = new Set(['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Enter', ' ', 'Spacebar']);
   document.addEventListener('keydown', event => {
+    if (event.altKey || event.ctrlKey || event.metaKey || event.isComposing) return;
     if (event.key === 'Escape' && opened) {
+      event.preventDefault();
       setOpened(false);
       toggle.focus({ preventScroll: true });
+      return;
     }
+    if (!navigationKeys.has(event.key)) return;
+    // Enter still opens a focused email link. Elsewhere it always advances,
+    // including when Escape has returned keyboard focus to the YHLA mark.
+    if (event.key === 'Enter' && event.target.closest?.('a[href]')) {
+      if (!event.repeat) unlockAudio();
+      return;
+    }
+    event.preventDefault();
+    if (event.repeat) return;
+    unlockAudio();
+    nextFilm();
   });
 
   function onCurrent(type, callback) {
@@ -223,8 +242,8 @@
   });
   window.addEventListener('pageshow', event => { if (event.persisted) startPlayback(); });
 
-  // Sample the actual object-fit cover crop behind each group, not the entire film.
-  // Each group stays solid black or solid white; small changes do not cause flicker.
+  // Sample the cover crop behind the visible lettering. One inherited color
+  // keeps the logo and contact identical throughout every color transition.
   const canvas = document.createElement('canvas');
   canvas.width = 48;
   canvas.height = 12;
@@ -234,8 +253,7 @@
     return channel <= .04045 ? channel / 12.92 : ((channel + .055) / 1.055) ** 2.4;
   });
   const inkGroups = [
-    { element: toggle, property: '--mark-ink', white: false, pending: null, count: 0 },
-    { element: contact, property: '--contact-ink', white: false, pending: null, count: 0 }
+    { element: document.querySelector('.identity'), property: '--ink', white: false, pending: null, count: 0 }
   ];
   function updateInk(force = false) {
     if (!context || document.hidden) return;
@@ -256,7 +274,8 @@
       return true;
     }
     for (const group of inkGroups) {
-      const words = group.element.querySelectorAll('.word');
+      const contactVisible = getComputedStyle(contact).visibility !== 'hidden';
+      const words = [...group.element.querySelectorAll('.word')].filter(word => contactVisible || !contact.contains(word));
       let total = 0;
       let samples = 0;
       try {
