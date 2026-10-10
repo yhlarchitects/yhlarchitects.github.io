@@ -5,6 +5,7 @@
   const toggle = document.getElementById('yhla');
   const contact = document.getElementById('contact');
   const status = document.getElementById('status');
+  const cover = document.getElementById('cover');
   const storageKey = 'yhla:last-film:v1';
   const attempted = new Set();
   let opened = false;
@@ -43,6 +44,8 @@
 
   // Ask whether this browser lets the page start sound before any gesture.
   function soundAllowed() {
+    // Phones only get sound from a touch; trying earlier can pause the film.
+    if (window.matchMedia && matchMedia('(pointer: coarse)').matches) return false;
     try {
       if (navigator.getAutoplayPolicy) return navigator.getAutoplayPolicy('mediaelement') === 'allowed';
       const Context = window.AudioContext || window.webkitAudioContext;
@@ -93,8 +96,14 @@
     loopRestartPending = false;
     attempted.add(film.id);
     video.dataset.film = film.id;
-    if (film.poster) video.poster = film.poster;
-    else video.removeAttribute('poster');
+    document.body.classList.remove('is-playing');
+    if (film.poster) {
+      video.poster = film.poster;
+      cover.src = film.poster;
+    } else {
+      video.removeAttribute('poster');
+      cover.removeAttribute('src');
+    }
     video.src = film.src;
     startPlayback();
   }
@@ -117,6 +126,7 @@
     if (opened) setOpened(false);
   });
   video.addEventListener('playing', () => {
+    document.body.classList.add('is-playing');
     status.textContent = '';
     if (selected) remember(selected.id);
   });
@@ -136,6 +146,12 @@
     resumeLoop();
   });
   video.addEventListener('pause', resumeLoop);
+  // Cover the film again whenever it stays paused, hiding any native play button.
+  video.addEventListener('pause', () => {
+    setTimeout(() => {
+      if (video.paused) document.body.classList.remove('is-playing');
+    }, 400);
+  });
   video.addEventListener('error', () => {
     const remaining = films.filter(film => !attempted.has(film.id));
     if (remaining.length) load(choose(remaining));
