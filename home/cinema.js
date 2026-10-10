@@ -163,6 +163,11 @@
   }
 
   function setOpened(value) {
+    if (value && contact.hidden) {
+      contact.hidden = false;
+      // Establish the closed style before starting the normal reveal transition.
+      void contact.offsetHeight;
+    }
     opened = value;
     toggle.setAttribute('aria-expanded', String(value));
     contact.setAttribute('aria-hidden', String(!value));
@@ -240,7 +245,26 @@
       status.textContent = 'The background film could not be loaded.';
     }
   });
-  window.addEventListener('pageshow', event => { if (event.persisted) startPlayback(); });
+  function resetIntroduction() {
+    opened = false;
+    toggle.setAttribute('aria-expanded', 'false');
+    contact.setAttribute('aria-hidden', 'true');
+    contact.inert = true;
+    contact.hidden = true;
+    document.body.classList.remove('is-open');
+    // Do not save or restore an open introduction in the browser's page cache.
+    const lens = document.querySelector('.lens');
+    void getComputedStyle(lens).backdropFilter;
+    lens.getAnimations().forEach(animation => animation.finish());
+    updateInk(true);
+  }
+  window.addEventListener('pagehide', resetIntroduction);
+  window.addEventListener('pageshow', event => {
+    if (event.persisted) {
+      resetIntroduction();
+      startPlayback();
+    }
+  });
 
   // Sample the cover crop behind the visible lettering. One inherited color
   // keeps the logo and contact identical throughout every color transition.
