@@ -1,7 +1,7 @@
 :root {
   color-scheme: light;
   --mark-size: clamp(27.6px, 1.81818vw, 62.1px);
-  --page-gutter: clamp(24px, 2.22222vw, 48px);
+  --page-gutter: clamp(16px, 1.48148vw, 32px);
   --contact-size: clamp(17px, 1.22969vw, 42px);
   --depth-four: clamp(10px, .78125vw, 22px);
   --reveal-time: 850ms;
@@ -178,7 +178,7 @@ body.is-open #contact {
   bottom: max(var(--page-gutter), env(safe-area-inset-bottom, 0px));
   left: max(var(--page-gutter), env(safe-area-inset-left, 0px));
   margin: 0;
-  font-size: 1em;
+  font-size: .85em;
 }
 .identity button:focus-visible, .identity a:focus-visible {
   outline: 1px solid currentColor;
