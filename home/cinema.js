@@ -3,6 +3,8 @@
   const films = VIDEO-CATALOG;
   const layers = [...document.querySelectorAll('.film-layer')];
   const background = document.querySelector('.background');
+  const browserEdge = document.querySelector('.browser-edge');
+  const touchScreen = matchMedia('(hover: none) and (pointer: coarse)');
   let layer = layers[0];
   let video = layer.querySelector('video');
   const toggle = document.getElementById('yhla');
@@ -296,6 +298,32 @@
         (box.top - frame.top + offsetY) / scale, box.width / scale, box.height / scale,
         0, 0, canvas.width, canvas.height);
       return true;
+    }
+    // Browser chrome is outside the document. Match its fallback colors to
+    // the actual composited film edges, including while films crossfade.
+    if (touchScreen.matches) {
+      const bottom = Math.min(innerHeight, browserEdge.getBoundingClientRect().bottom);
+      for (const [name, top] of [['top', 0], ['bottom', Math.max(0, bottom - 1)]]) {
+        try {
+          const box = { left: 0, top, width: innerWidth, height: 1 };
+          context.clearRect(0, 0, canvas.width, canvas.height);
+          const previousDrawn = outgoing && draw(outgoing, box, 1);
+          const drawn = draw({ layer, video, cover }, box, outgoing ? Number(getComputedStyle(layer).opacity) : 1);
+          if (!drawn && !previousDrawn) continue;
+          const pixels = context.getImageData(0, 0, canvas.width, canvas.height).data;
+          const sums = [0, 0, 0];
+          let count = 0;
+          for (let i = 0; i < pixels.length; i += 4) {
+            if (!pixels[i + 3]) continue;
+            sums.forEach((_, channel) => { sums[channel] += pixels[i + channel]; });
+            count++;
+          }
+          if (count) {
+            const color = `rgb(${sums.map(sum => Math.round(sum / count)).join(', ')})`;
+            document.documentElement.style.setProperty(`--edge-${name}`, color);
+          }
+        } catch { /* Keep the last sampled color if a frame is unavailable. */ }
+      }
     }
     for (const group of inkGroups) {
       const contactVisible = getComputedStyle(contact).visibility !== 'hidden';
