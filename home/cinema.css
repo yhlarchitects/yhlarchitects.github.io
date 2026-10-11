@@ -111,11 +111,9 @@ body.is-open .lens {
 }
 .identity {
   font: 400 var(--contact-size)/1 'Univers 55', Arial, sans-serif;
-  color: var(--ink, #000);
+  color: #000;
   transition: color var(--ink-time) ease-in-out;
 }
-/* Manhattan contact uses white as a group, with the same inherited fade. */
-body.is-open[data-film="manhattan"] .identity { color: #fff; }
 .word {
   display: block;
   width: calc(var(--advance) * 1em);
@@ -151,7 +149,7 @@ body.is-open[data-film="manhattan"] .identity { color: #fff; }
 #contact {
   position: fixed;
   z-index: 2;
-  top: calc(max(var(--page-gutter), env(safe-area-inset-top, 0px)) + var(--mark-size) + var(--contact-size));
+  top: calc(max(var(--page-gutter), env(safe-area-inset-top, 0px)) + var(--mark-size) + var(--contact-size) * .5);
   left: max(var(--page-gutter), env(safe-area-inset-left, 0px));
   display: flex;
   flex-direction: column;
@@ -175,7 +173,7 @@ body.is-open #contact {
 /* Copyright shares the introduction reveal, aligned to the lower left. */
 .rights {
   position: fixed;
-  bottom: max(var(--page-gutter), env(safe-area-inset-bottom, 0px));
+  bottom: max(calc(var(--page-gutter) * .5), env(safe-area-inset-bottom, 0px));
   left: max(var(--page-gutter), env(safe-area-inset-left, 0px));
   margin: 0;
   font-size: .85em;
