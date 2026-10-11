@@ -1,9 +1,13 @@
 (() => {
   'use strict';
   const films = VIDEO-CATALOG;
+  const filmOrder = ['yakushima', 'manhattan', 'nordhavn'];
+  const orderedFilms = [
+    ...filmOrder.map(id => films.find(film => film.id === id)).filter(Boolean),
+    ...films.filter(film => !filmOrder.includes(film.id))
+  ];
   const layers = [...document.querySelectorAll('.film-layer')];
   const background = document.querySelector('.background');
-  const browserEdge = document.querySelector('.browser-edge');
   const touchScreen = matchMedia('(hover: none) and (pointer: coarse)');
   let layer = layers[0];
   let video = layer.querySelector('video');
@@ -15,7 +19,6 @@
   let changing = false;
   let fading = false;
   let changeTimer;
-  const storageKey = 'yhla:last-film:v1';
   const failed = new Set();
   let opened = false;
   let selected;
@@ -25,12 +28,6 @@
   let lastTime = 0;
   let loopRestartPending = false;
 
-  const readPrevious = () => {
-    try { return localStorage.getItem(storageKey); } catch { return null; }
-  };
-  const remember = id => {
-    try { localStorage.setItem(storageKey, id); } catch { /* Storage is optional. */ }
-  };
   const choose = candidates => candidates[Math.floor(Math.random() * candidates.length)];
 
   function playWithSound() {
@@ -79,16 +76,76 @@
     if (needsGesture || video.muted || video.paused) playWithSound();
   }
 
+  // The first deliberate activation only unlocks sound, even if autoplay
+  // already had permission. Later activations can navigate or open contact.
+  function activateSound() {
+    const first = !hadGesture;
+    unlockAudio();
+    return first;
+  }
+
+  let touchStart = null;
+  let suppressTouchClickUntil = 0;
   const noZoom = event => event.preventDefault();
   ['gesturestart', 'gesturechange', 'gestureend'].forEach(type => document.addEventListener(type, noZoom, { passive: false }));
+  document.addEventListener('touchstart', event => {
+    suppressTouchClickUntil = 0;
+    const touch = event.touches.length === 1 ? event.touches[0] : null;
+    touchStart = touch ? { id: touch.identifier, x: touch.clientX, y: touch.clientY, time: performance.now() } : null;
+  }, { capture: true, passive: true });
   document.addEventListener('touchmove', event => {
-    if (event.touches.length > 1) event.preventDefault();
+    if (event.touches.length > 1) touchStart = null;
+    // The full-screen canvas owns directional swipes, rather than page scroll.
+    if (event.cancelable) event.preventDefault();
   }, { passive: false });
-  document.addEventListener('click', unlockAudio, true);
-  document.addEventListener('touchend', unlockAudio, { capture: true, passive: true });
+  document.addEventListener('touchcancel', () => { touchStart = null; }, { capture: true, passive: true });
+  document.addEventListener('touchend', event => {
+    const start = touchStart;
+    touchStart = null;
+    if (!start || event.touches.length) return;
+    const touch = [...event.changedTouches].find(item => item.identifier === start.id);
+    if (!touch) return;
+    const distance = Math.max(Math.abs(touch.clientX - start.x), Math.abs(touch.clientY - start.y));
+    const swiped = distance >= 48 && performance.now() - start.time <= 1500;
+    const tapped = distance < 12;
+    const email = event.target.closest?.('a[href]');
+    if (!hadGesture || swiped || (tapped && !email)) {
+      if (event.cancelable) event.preventDefault();
+      suppressTouchClickUntil = performance.now() + 750;
+      if (!activateSound()) {
+        if (swiped) nextFilm();
+        else if (tapped) activateTarget(event.target);
+      }
+    } else if (tapped && email) unlockAudio();
+    // Email keeps its native link activation. Other taps are handled here:
+    // mobile WebKit does not always synthesize a click on plain backgrounds.
+  }, { capture: true, passive: false });
+  document.addEventListener('click', event => {
+    const touchClick = event.pointerType === 'touch' || !event.pointerType;
+    if (event.detail > 0 && touchClick && performance.now() < suppressTouchClickUntil) {
+      suppressTouchClickUntil = 0;
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      return;
+    }
+    if (activateSound()) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+    }
+  }, true);
+
+  function followingFilm() {
+    const current = orderedFilms.findIndex(film => film.id === selected?.id);
+    for (let step = 1; step <= orderedFilms.length; step++) {
+      const candidate = orderedFilms[(current + step) % orderedFilms.length];
+      if (candidate.id !== selected?.id && candidate.id !== outgoing?.film.id && !failed.has(candidate.id)) return candidate;
+    }
+    return null;
+  }
 
   function load(film) {
     selected = film;
+    document.body.dataset.film = film.id;
     lastTime = 0;
     loopRestartPending = false;
     video.dataset.film = film.id;
@@ -106,8 +163,8 @@
 
   function nextFilm() {
     if (changing) return;
-    const candidates = films.filter(film => film.id !== selected?.id && !failed.has(film.id));
-    if (!candidates.length) return;
+    const next = followingFilm();
+    if (!next) return;
     changing = true;
     background.dataset.changing = 'loading';
     outgoing = { layer, video, cover, film: selected };
@@ -117,7 +174,7 @@
     video = layer.querySelector('video');
     cover = layer.querySelector('.cover');
     changeTimer = setTimeout(cancelChange, 15000);
-    load(choose(candidates));
+    load(next);
   }
 
   function cancelChange() {
@@ -127,6 +184,7 @@
     video.muted = true;
     layer.classList.remove('is-front', 'is-current', 'is-playing');
     ({ layer, video, cover, film: selected } = outgoing);
+    document.body.dataset.film = selected.id;
     layer.classList.add('is-front');
     outgoing = null;
     changing = false;
@@ -178,12 +236,13 @@
     updateInk(true);
   }
 
-  toggle.addEventListener('click', () => setOpened(!opened));
-  document.addEventListener('click', event => {
-    if (toggle.contains(event.target) || event.target.closest('a')) return;
-    if (opened) setOpened(false);
+  function activateTarget(target) {
+    if (target.closest?.('a[href]')) return;
+    if (toggle.contains(target)) setOpened(!opened);
+    else if (opened) setOpened(false);
     else nextFilm();
-  });
+  }
+  document.addEventListener('click', event => activateTarget(event.target));
   const navigationKeys = new Set(['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Enter', ' ', 'Spacebar']);
   document.addEventListener('keydown', event => {
     if (event.altKey || event.ctrlKey || event.metaKey || event.isComposing) return;
@@ -202,8 +261,7 @@
     }
     event.preventDefault();
     if (event.repeat) return;
-    unlockAudio();
-    nextFilm();
+    if (!activateSound()) nextFilm();
   });
 
   function onCurrent(type, callback) {
@@ -216,7 +274,6 @@
     layer.classList.add('is-playing');
     beginDissolve();
     status.textContent = '';
-    if (selected) remember(selected.id);
     updateInk(true);
   });
   function resumeLoop() {
@@ -239,8 +296,8 @@
   });
   onCurrent('error', () => {
     if (selected) failed.add(selected.id);
-    const remaining = films.filter(film => !failed.has(film.id) && film.id !== outgoing?.film.id);
-    if (remaining.length) load(choose(remaining));
+    const next = followingFilm();
+    if (next) load(next);
     else if (outgoing) cancelChange();
     else {
       layer.classList.remove('is-playing');
@@ -299,17 +356,16 @@
         0, 0, canvas.width, canvas.height);
       return true;
     }
-    // Browser chrome is outside the document. Match its fallback colors to
-    // the actual composited film edges, including while films crossfade.
+    // A top-edge fallback is retained for initial paint and overscroll.
+    // Do not place a solid fixed tint at the bottom: Safari should composite
+    // the extended document's moving film behind its translucent controls.
     if (touchScreen.matches) {
-      const bottom = Math.min(innerHeight, browserEdge.getBoundingClientRect().bottom);
-      for (const [name, top] of [['top', 0], ['bottom', Math.max(0, bottom - 1)]]) {
-        try {
-          const box = { left: 0, top, width: innerWidth, height: 1 };
-          context.clearRect(0, 0, canvas.width, canvas.height);
-          const previousDrawn = outgoing && draw(outgoing, box, 1);
-          const drawn = draw({ layer, video, cover }, box, outgoing ? Number(getComputedStyle(layer).opacity) : 1);
-          if (!drawn && !previousDrawn) continue;
+      try {
+        const box = { left: 0, top: 0, width: innerWidth, height: 1 };
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        const previousDrawn = outgoing && draw(outgoing, box, 1);
+        const drawn = draw({ layer, video, cover }, box, outgoing ? Number(getComputedStyle(layer).opacity) : 1);
+        if (drawn || previousDrawn) {
           const pixels = context.getImageData(0, 0, canvas.width, canvas.height).data;
           const sums = [0, 0, 0];
           let count = 0;
@@ -318,12 +374,10 @@
             sums.forEach((_, channel) => { sums[channel] += pixels[i + channel]; });
             count++;
           }
-          if (count) {
-            const color = `rgb(${sums.map(sum => Math.round(sum / count)).join(', ')})`;
-            document.documentElement.style.setProperty(`--edge-${name}`, color);
-          }
-        } catch { /* Keep the last sampled color if a frame is unavailable. */ }
-      }
+          if (count) document.documentElement.style.setProperty('--edge-top',
+            `rgb(${sums.map(sum => Math.round(sum / count)).join(', ')})`);
+        }
+      } catch { /* Keep the last sampled fallback while a frame loads. */ }
     }
     for (const group of inkGroups) {
       const contactVisible = getComputedStyle(contact).visibility !== 'hidden';
@@ -360,11 +414,19 @@
     }
   }
   layers.forEach(item => item.querySelector('.cover').addEventListener('load', () => updateInk(true)));
-  window.addEventListener('resize', () => updateInk(true));
+  function positionFilmPage() {
+    if (!touchScreen.matches) return;
+    const bleed = parseFloat(getComputedStyle(document.body).paddingTop) || 0;
+    // Keep the viewport inside a real document, with film on both sides.
+    // Swipe gestures navigate films without scrolling this small bleed area.
+    window.scrollTo({ left: 0, top: bleed, behavior: 'instant' });
+  }
+  window.addEventListener('resize', () => { positionFilmPage(); updateInk(true); });
+  window.addEventListener('pageshow', positionFilmPage);
+  positionFilmPage();
   document.addEventListener('visibilitychange', () => { if (!document.hidden) updateInk(true); });
   setInterval(updateInk, 250);
 
-  const previous = readPrevious();
-  const candidates = films.filter(film => film.id !== previous);
-  if (films.length) load(choose(candidates.length ? candidates : films));
+  // A fresh visit can start on any film; navigation then follows the fixed cycle.
+  if (films.length) load(choose(films));
 })();

@@ -16,26 +16,23 @@
   }
 }
 * { box-sizing: border-box; }
-html, body { width: 100%; height: 100%; margin: 0; }
-html, body { touch-action: pan-x pan-y; -webkit-text-size-adjust: 100%; }
-html { overflow: hidden; overscroll-behavior: none; background: var(--edge-top, #e5e5e7); }
-body { position: relative; overflow: hidden; min-height: 100lvh; background: var(--edge-top, #e5e5e7); color: #000; }
+html, body { width: 100%; margin: 0; }
+html { min-height: 100%; }
+html, body { touch-action: none; -webkit-text-size-adjust: 100%; }
+html { overflow: visible; overscroll-behavior: none; background: var(--edge-top, #e5e5e7); }
+body { position: relative; min-height: 100lvh; background: var(--edge-top, #e5e5e7); color: #000; }
+/* Safari needs document pixels beyond the viewport, not a clipped app shell. */
+@media (hover: none) and (pointer: coarse) {
+  body {
+    --film-bleed: max(1px, env(safe-area-inset-top, 0px), env(safe-area-inset-bottom, 0px));
+    min-height: calc(100lvh + 2 * var(--film-bleed));
+    padding-block: var(--film-bleed);
+  }
+}
 /* Media belongs to the full page, not Safari's shortened fixed-position area. */
 .background, .lens { position: absolute; inset: 0; min-height: 100lvh; }
 .background { overflow: hidden; }
-/* Safari samples a solid page color for its own chrome. This hidden element
-   supplies the lower edge independently; no colored strip covers the film. */
-.browser-edge {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 4px;
-  visibility: hidden;
-  pointer-events: none;
-  background: var(--edge-bottom, #e5e5e7);
-}
-html, body, .browser-edge { transition: background-color 250ms linear; }
+html, body { transition: background-color 250ms linear; }
 .film-layer { position: absolute; inset: 0; opacity: 0; }
 .film-layer.is-current { opacity: 1; }
 .film-layer.is-front { z-index: 1; }
@@ -85,6 +82,8 @@ body.is-open .lens {
   color: var(--ink, #000);
   transition: color var(--ink-time) ease-in-out;
 }
+/* Manhattan contact uses white as a group, with the same inherited fade. */
+body.is-open[data-film="manhattan"] .identity { color: #fff; }
 .word {
   display: block;
   width: calc(var(--advance) * 1em);
@@ -161,7 +160,7 @@ body.is-open #contact {
 }
 @media (prefers-reduced-motion: reduce) {
   :root { --reveal-time: 0ms; --dismiss-time: 0ms; --ink-time: 0ms; --film-time: 0ms; }
-  .background .cover, html, body, .browser-edge { transition: none; }
+  .background .cover, html, body { transition: none; }
 }
 @media print {
   .background, .lens { display: none; }
