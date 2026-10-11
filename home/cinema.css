@@ -151,7 +151,7 @@ body.is-open[data-film="manhattan"] .identity { color: #fff; }
 #contact {
   position: fixed;
   z-index: 2;
-  bottom: max(var(--page-gutter), env(safe-area-inset-bottom, 0px));
+  top: calc(max(var(--page-gutter), env(safe-area-inset-top, 0px)) + var(--mark-size) + var(--contact-size));
   left: max(var(--page-gutter), env(safe-area-inset-left, 0px));
   display: flex;
   flex-direction: column;
@@ -172,7 +172,8 @@ body.is-open #contact {
   transition-delay: 0s;
 }
 #contact a { display: block; margin-top: .178571em; }
-.rights { margin-top: 2.444444em; font-size: .642857em; }
+/* Keep the existing email-to-rights gap while matching the contact type size. */
+.rights { margin-top: 1.571428em; font-size: 1em; }
 .identity button:focus-visible, .identity a:focus-visible {
   outline: 1px solid currentColor;
   outline-offset: 5px;
