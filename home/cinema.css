@@ -7,7 +7,7 @@
   --reveal-time: 850ms;
   --dismiss-time: 1800ms;
   --ink-time: 1400ms;
-  --film-time: 1800ms;
+  --film-time: 1200ms;
 }
 /* Contact stays at the approved mobile 80%; only the mark grows by 15%. */
 @media (max-width: 767px), (hover: none) and (pointer: coarse) and (max-height: 500px) {
