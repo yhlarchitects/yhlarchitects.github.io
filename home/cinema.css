@@ -1,6 +1,7 @@
 :root {
   color-scheme: light;
-  --mark-size: clamp(24px, 1.58103vw, 54px);
+  --mark-size: clamp(27.6px, 1.81818vw, 62.1px);
+  --page-gutter: clamp(24px, 2.22222vw, 48px);
   --contact-size: clamp(17px, 1.22969vw, 42px);
   --depth-four: clamp(10px, .78125vw, 22px);
   --reveal-time: 850ms;
@@ -8,10 +9,10 @@
   --ink-time: 1400ms;
   --film-time: 1800ms;
 }
-/* The approved mobile option is 80% of the previous lettering. */
+/* Contact stays at the approved mobile 80%; only the mark grows by 15%. */
 @media (max-width: 767px), (hover: none) and (pointer: coarse) and (max-height: 500px) {
   :root {
-    --mark-size: 19.2px;
+    --mark-size: 22.08px;
     --contact-size: 13.6px;
   }
 }
@@ -138,9 +139,8 @@ body.is-open[data-film="manhattan"] .identity { color: #fff; }
 #yhla {
   position: fixed;
   z-index: 2;
-  top: max(24px, 6.31733svh, env(safe-area-inset-top, 0px));
-  left: 50%;
-  transform: translateX(-50%);
+  top: max(var(--page-gutter), env(safe-area-inset-top, 0px));
+  left: max(var(--page-gutter), env(safe-area-inset-left, 0px));
   font-size: var(--mark-size);
 }
 /* A generous touch target without changing the guide's visible geometry. */
@@ -151,14 +151,13 @@ body.is-open[data-film="manhattan"] .identity { color: #fff; }
 #contact {
   position: fixed;
   z-index: 2;
-  bottom: max(24px, 4.2svh, env(safe-area-inset-bottom, 0px));
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: max(var(--page-gutter), env(safe-area-inset-bottom, 0px));
+  left: max(var(--page-gutter), env(safe-area-inset-left, 0px));
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   width: max-content;
-  max-width: calc(100vw - 32px);
+  max-width: calc(100vw - 2 * max(var(--page-gutter), env(safe-area-inset-left, 0px), env(safe-area-inset-right, 0px)));
   margin: 0;
   opacity: 0;
   visibility: hidden;
