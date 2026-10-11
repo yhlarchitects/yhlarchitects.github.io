@@ -416,13 +416,29 @@
   layers.forEach(item => item.querySelector('.cover').addEventListener('load', () => updateInk(true)));
   function positionFilmPage() {
     if (!touchScreen.matches) return;
+    const viewportHeight = Math.max(innerHeight, window.visualViewport?.height || 0);
+    // The screen includes the area below the address bar. Only use its height
+    // when this window spans its width, so tablet split views stay window-sized.
+    const fullWidth = Math.abs(window.screen.width - innerWidth) <= 2;
+    const height = Math.ceil(fullWidth ? Math.max(viewportHeight, window.screen.height) : viewportHeight);
+    document.documentElement.style.setProperty('--film-height', `${height}px`);
     const bleed = parseFloat(getComputedStyle(document.body).paddingTop) || 0;
-    // Keep the viewport inside a real document, with film on both sides.
-    // Swipe gestures navigate films without scrolling this small bleed area.
+    // Retain the existing top alignment; all additional height extends below.
     window.scrollTo({ left: 0, top: bleed, behavior: 'instant' });
   }
-  window.addEventListener('resize', () => { positionFilmPage(); updateInk(true); });
-  window.addEventListener('pageshow', positionFilmPage);
+  let viewportFrame = 0;
+  function queueFilmLayout() {
+    if (viewportFrame) return;
+    viewportFrame = requestAnimationFrame(() => {
+      viewportFrame = 0;
+      positionFilmPage();
+      updateInk(true);
+    });
+  }
+  window.addEventListener('resize', queueFilmLayout);
+  window.addEventListener('orientationchange', queueFilmLayout);
+  window.visualViewport?.addEventListener('resize', queueFilmLayout);
+  window.addEventListener('pageshow', queueFilmLayout);
   positionFilmPage();
   document.addEventListener('visibilitychange', () => { if (!document.hidden) updateInk(true); });
   setInterval(updateInk, 250);

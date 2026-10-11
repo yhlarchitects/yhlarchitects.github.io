@@ -6,7 +6,7 @@
   --reveal-time: 850ms;
   --dismiss-time: 1800ms;
   --ink-time: 1400ms;
-  --film-time: 2400ms;
+  --film-time: 1800ms;
 }
 /* The approved mobile option is 80% of the previous lettering. */
 @media (max-width: 767px), (hover: none) and (pointer: coarse) and (max-height: 500px) {
@@ -25,7 +25,8 @@ body { position: relative; min-height: 100lvh; background: var(--edge-top, #e5e5
 @media (hover: none) and (pointer: coarse) {
   body {
     --film-bleed: max(1px, env(safe-area-inset-top, 0px), env(safe-area-inset-bottom, 0px));
-    min-height: calc(100lvh + 2 * var(--film-bleed));
+    /* Use the device-height floor when browser controls shorten CSS lvh. */
+    min-height: calc(var(--film-height, 100lvh) + 2 * var(--film-bleed));
     padding-block: var(--film-bleed);
   }
 }
