@@ -356,9 +356,8 @@
         0, 0, canvas.width, canvas.height);
       return true;
     }
-    // A top-edge fallback is retained for initial paint and overscroll.
-    // Do not place a solid fixed tint at the bottom: Safari should composite
-    // the extended document's moving film behind its translucent controls.
+    // Share the sampled page color with the lower fade so the softened film
+    // meets Safari's page-background fallback without a hard color boundary.
     if (touchScreen.matches) {
       try {
         const box = { left: 0, top: 0, width: innerWidth, height: 1 };
@@ -416,14 +415,8 @@
   layers.forEach(item => item.querySelector('.cover').addEventListener('load', () => updateInk(true)));
   function positionFilmPage() {
     if (!touchScreen.matches) return;
-    const viewportHeight = Math.max(innerHeight, window.visualViewport?.height || 0);
-    // The screen includes the area below the address bar. Only use its height
-    // when this window spans its width, so tablet split views stay window-sized.
-    const fullWidth = Math.abs(window.screen.width - innerWidth) <= 2;
-    const height = Math.ceil(fullWidth ? Math.max(viewportHeight, window.screen.height) : viewportHeight);
-    document.documentElement.style.setProperty('--film-height', `${height}px`);
     const bleed = parseFloat(getComputedStyle(document.body).paddingTop) || 0;
-    // Retain the existing top alignment; all additional height extends below.
+    // Preserve the earlier crop and top alignment; the lower edge fades out.
     window.scrollTo({ left: 0, top: bleed, behavior: 'instant' });
   }
   let viewportFrame = 0;
