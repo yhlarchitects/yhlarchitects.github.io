@@ -5,7 +5,8 @@
     "B": "반대와 제안",
     "C": "동사꼴",
     "D": "전치사 · 구조 · 관사",
-    "E": "말투"
+    "E": "말투",
+    "F": "메일 부탁"
   },
   "cards": {
     "a01": { "g": "A", "rule": "perm", "sit": "상사에게 내일 보내겠다고 알릴 때", "was": "I will send it tomorrow, is that ok?", "en": "I'll send it tomorrow. Let me know if you need it sooner." },
@@ -48,7 +49,22 @@
     "e01": { "g": "E", "rule": "abbr", "sit": "내일 보낸다고 할 때", "was": "I'll send sth tmr.", "en": "I'll send it tomorrow." },
     "e02": { "g": "E", "rule": "punct", "sit": "확인하고 알려 준다고 할 때", "was": "Ok... I'll check,, then update.", "en": "OK. I'll check and update you." },
     "e03": { "g": "E", "rule": "lines", "sit": "생각을 세 번에 나눠 보내던 때", "was": "Hi / Quick question / About the section", "en": "Hi, one question on the section: is the slab 250 or 300?" },
-    "e04": { "g": "E", "rule": null, "sit": "오늘은 못 한다고 할 때", "was": "Sorry sorry I can't today maybe tomorrow?", "en": "I can't today. You'll have it tomorrow morning." }
+    "e04": { "g": "E", "rule": null, "sit": "오늘은 못 한다고 할 때", "was": "Sorry sorry I can't today maybe tomorrow?", "en": "I can't today. You'll have it tomorrow morning." },
+    "e05": { "g": "E", "rule": "shout", "sit": "지원팀에 급하게 부탁할 때", "was": "YESS plzzzz ASAPPPPP ive been suffering for 3days!!", "en": "Yes please, as soon as you can. It's been three days." },
+    "e06": { "g": "E", "rule": "paren", "sit": "덧붙임을 괄호로 달 때", "was": "Could we grab a quick coffee this week(or today)?", "en": "Could we grab a quick coffee this week (or today)?" },
+    "e07": { "g": "E", "rule": null, "sit": "옆자리 인사 담당에게 메일을 쓸 때", "was": "To whom it may concern, sorry for the delay,", "en": "Hi Anna, sorry for the delay." },
+    "f01": { "g": "F", "rule": "ask", "sit": "휴가 신청서에 서명을 받을 때", "was": "I gently request your signature for my leave days application.", "en": "Could you sign my leave request for 3 to 22 April? I'm back on the 23rd." },
+    "f02": { "g": "F", "rule": "ask", "sit": "승인을 기다릴 때", "was": "Thank you for your approval in advance,,,!", "en": "Let me know once it's approved. Thanks!" },
+    "f03": { "g": "F", "rule": "perm", "sit": "늦게 낸 서류를 알릴 때", "was": "Sorry for the delay, I hope everything would be ok….", "en": "Sorry for the delay. It's filled in now." },
+    "f04": { "g": "F", "rule": "help_to", "sit": "문제를 풀어 달라고 할 때", "was": "Could you help me to solve it?", "en": "Could you help me solve it?" },
+    "f05": { "g": "F", "rule": "look_at", "sit": "PDF를 봐 달라고 할 때", "was": "Please take a look the pdf.", "en": "Please take a look at the PDF." },
+    "f06": { "g": "F", "rule": "asked_to", "sit": "인사팀에 물어본 것을 전할 때", "was": "I asked to HR about the copyright.", "en": "I asked HR about the copyright." },
+    "f07": { "g": "F", "rule": "informed_from", "sit": "방금 들은 소식을 전할 때", "was": "I just informed from HR about the questionnaire.", "en": "HR just told me about the questionnaire." },
+    "f08": { "g": "F", "rule": "meantime", "sit": "기다리는 동안 할 일을 말할 때", "was": "In a mean time, I'll share the survey result.", "en": "In the meantime, I'll share the survey result." },
+    "f09": { "g": "F", "rule": "how_about", "sit": "계약 조항 문구를 제안할 때", "was": "How about, we explicitly reaffirming the cap in Clause 4?", "en": "How about we restate the cap in Clause 4?" },
+    "f10": { "g": "F", "rule": null, "sit": "새 팀에 합류했다고 알릴 때", "was": "I joing the team from today.", "en": "I'm joining the team today." },
+    "f11": { "g": "F", "rule": null, "sit": "라이선스가 끊겼을 때", "was": "Seems like all my license got expired, I was in holliday.", "en": "It looks like my licences expired while I was on holiday." },
+    "f12": { "g": "F", "rule": null, "sit": "기한 연장을 제안할 때", "was": "I think we could a one or two weeks extension seems feasible.", "en": "A one- or two-week extension seems feasible." }
   },
   "prompts": [
     { "ko": "지금 하는 일을 처음 만난 사람에게 설명한다." },
