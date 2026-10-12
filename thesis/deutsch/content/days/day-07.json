@@ -1,0 +1,179 @@
+{
+ "id": "day-07",
+ "theme_ko": "바젤 거리의 글자",
+ "new_cards": [
+  "basel-strasse:das-haus",
+  "basel-strasse:die-fassade",
+  "basel-strasse:der-name",
+  "basel-strasse:die-schrift",
+  "basel-strasse:das-ornament",
+  "basel-strasse:das-schild",
+  "basel-strasse:glatt"
+ ],
+ "stair": {
+  "source": {
+   "author": "Adolf Loos",
+   "title": "Ornament und Verbrechen",
+   "year": 1908,
+   "license": "public-domain",
+   "url": "https://de.wikisource.org/wiki/Ornament%20und%20Verbrechen"
+  },
+  "layers": [
+   {
+    "level": "A1",
+    "text_de": "Ich gehe zu Fuß durch die Altstadt. Hier haben viele Häuser einen Namen. Der Name steht an der Fassade, zum Beispiel „Zum Sessel“. Die Schrift ist alt und schön. Manche Häuser sind aus rotem Sandstein, wie das Münster. Manche haben auch Ornamente: Blumen, Tiere, Gesichter. Andere Häuser sind ganz glatt. Kein Schild, kein Ornament, nur die Wand. Ich bin Architekt. Ich mag beide.",
+    "gloss": [
+     {
+      "de": "die Altstadt",
+      "ko": "구시가"
+     },
+     {
+      "de": "zum Beispiel",
+      "ko": "예를 들어"
+     },
+     {
+      "de": "manche",
+      "ko": "어떤 (것들)"
+     },
+     {
+      "de": "die Blume",
+      "ko": "꽃"
+     },
+     {
+      "de": "das Tier",
+      "ko": "동물"
+     },
+     {
+      "de": "das Gesicht",
+      "ko": "얼굴"
+     },
+     {
+      "de": "die Wand",
+      "ko": "벽"
+     },
+     {
+      "de": "beide",
+      "ko": "둘 다"
+     }
+    ],
+    "tasks": [
+     {
+      "type": "cloze",
+      "prompt_de": "Der Name steht an der ___.",
+      "answer": "Fassade",
+      "options": [
+       "Fähre",
+       "Fassade",
+       "Haltestelle"
+      ]
+     },
+     {
+      "type": "mc",
+      "prompt_ko": "‘glatt’한 집은 어떤 집인가?",
+      "options": [
+       "오래된 집",
+       "붉은 집",
+       "장식이 없는 집"
+      ],
+      "answer": 2
+     },
+     {
+      "type": "summary",
+      "prompt_ko": "한 줄로 요약 (독일어 또는 한국어)"
+     }
+    ]
+   },
+   {
+    "level": "A2",
+    "text_de": "Vor über hundert Jahren hat der Wiener Architekt Adolf Loos einen berühmten Vortrag gehalten. Der Titel war „Ornament und Verbrechen“. Loos meinte: Ornament kostet Arbeit, Zeit und Geld, und der moderne Mensch braucht es nicht mehr. Der Text hat damals viele Leute provoziert. Heute lesen Architekten ihn immer noch. Wer durch die Basler Altstadt geht, kann selbst prüfen: Welche Fassade gefällt mir besser, die mit Ornament oder die glatte?",
+    "gloss": [
+     {
+      "de": "berühmt",
+      "ko": "유명한"
+     },
+     {
+      "de": "einen Vortrag halten",
+      "ko": "강연을 하다"
+     },
+     {
+      "de": "das Verbrechen",
+      "ko": "범죄"
+     },
+     {
+      "de": "meinen",
+      "ko": "생각하다, 주장하다"
+     },
+     {
+      "de": "kosten",
+      "ko": "(비용이) 들다"
+     },
+     {
+      "de": "provozieren",
+      "ko": "도발하다"
+     },
+     {
+      "de": "immer noch",
+      "ko": "여전히"
+     },
+     {
+      "de": "prüfen",
+      "ko": "따져 보다"
+     },
+     {
+      "de": "gefallen",
+      "ko": "마음에 들다"
+     }
+    ],
+    "tasks": [
+     {
+      "type": "cloze",
+      "prompt_de": "Loos meinte: Ornament kostet Arbeit, Zeit und ___.",
+      "answer": "Geld",
+      "options": [
+       "Wasser",
+       "Geld",
+       "Stein"
+      ]
+     },
+     {
+      "type": "mc",
+      "prompt_ko": "로스의 강연 제목은?",
+      "options": [
+       "Ornament und Verbrechen",
+       "Die Stadt und die Mauer",
+       "Haus und Schrift"
+      ],
+      "answer": 0
+     },
+     {
+      "type": "summary",
+      "prompt_ko": "한 줄로 요약 (독일어 또는 한국어)"
+     }
+    ]
+   }
+  ],
+  "summit": {
+   "text_de": "Der menschliche embryo macht im mutterleibe alle entwicklungsphasen des tierreiches durch. Wenn der mensch geboren wird, sind seine sinneseindrücke gleich denen eines neugeborenen hundes. Seine kindheit durchläuft alle wandlungen, die der geschichte der menschheit entsprechen.",
+   "note_ko": "아돌프 로스, 「장식과 범죄」(1908 집필, 1910 강연) 첫머리 세 문장. 로스의 소문자 표기 그대로, 편자 주는 뺐다."
+  }
+ },
+ "ear": {
+  "text_de": "In der Altstadt haben viele Häuser einen Namen. Der Name steht an der Fassade. Die Schrift ist alt und schön. Manche Häuser haben Ornamente. Andere Häuser sind ganz glatt. Ich mag beide.",
+  "lang": "de-DE",
+  "rates": [
+   0.75,
+   0.9,
+   1.0
+  ]
+ },
+ "hand": {
+  "situation_ko": "토요일 구시가 산책. 마음에 드는 파사드 사진을 정현에게 보내며 한 줄 붙인다.",
+  "prompt_ko": "du체 한 문장, 끝에 짧은 되물음.",
+  "model_de": "Schau mal, dieses Haus heißt „Zum Sessel“. Die Schrift ist schön, oder?",
+  "chunks": [
+   "Schau mal, …",
+   "Dieses Haus heißt …",
+   "…, oder?"
+  ]
+ }
+}

@@ -1,0 +1,3407 @@
+{
+ "version": 1,
+ "note": "Start Deutsch 1 Wortliste, alphabetical part only. Taken from the third-party transcription github.com/ilkermeliksitki/goethe-institute-wordlist (a1/*.tsv), normalized by hand (plural and conjugation tails, sense numbers removed; feminine and masculine pairs split). Not yet cross-checked against the official PDF. Thematic Wortgruppen (numbers, days, months, times of day, colours, countries) are not in this file. Private study use only.",
+ "words": [
+  {
+   "lemma": "ab",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "aber",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "abfahren",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Abfahrt",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "abgeben",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "abholen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Absender",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "Achtung",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Adresse",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "all-",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "allein",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "also",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "alt",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "das Alter",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "an",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "anbieten",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "das Angebot",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "ander-",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "anfangen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Anfang",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "anklicken",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "ankommen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Ankunft",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "ankreuzen",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "anmachen",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "(sich) anmelden",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Anmeldung",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Anrede",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "anrufen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Anruf",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Anrufbeantworter",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Ansage",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Anschluss",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "an sein",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "antworten",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "die Antwort",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "die Anzeige",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "(sich) anziehen",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "das Apartment",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Apfel",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "der Appetit",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "arbeiten",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "die Arbeit",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "arbeitslos",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Arbeitsplatz",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Arm",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Arzt",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "auch",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "auf",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "auf sein",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "aufstehen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Aufzug",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "das Auge",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "aus",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "der Ausflug",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "ausfüllen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Ausgang",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Auskunft",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "das Ausland",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Ausländer",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "ausländisch",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "ausmachen",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Aussage",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "aussehen",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "aus sein",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "aussteigen",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "der Ausweis",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "(sich) ausziehen",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "das Auto",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Autobahn",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Automat",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "automatisch",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "das Baby",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Bäckerei",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "das Bad",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "baden",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Bahn",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "der Bahnhof",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "der Bahnsteig",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "bald",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Balkon",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Banane",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Bank",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "bar",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Bauch",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Baum",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Beamte",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "bedeuten",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "beginnen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "bei",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "beide",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "das Bein",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "das Beispiel",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "zum Beispiel",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "bekannt",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Bekannte",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Bekannte",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "bekommen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "benutzen",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Beruf",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "besetzt",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "besichtigen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "besser",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "best-",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "bestellen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "besuchen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "das Bett",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "bezahlen",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "das Bier",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "das Bild",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "billig",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Birne",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "bis",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "ein bisschen",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "bitte",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "die Bitte",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "bitten",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "bitter",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "bleiben",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Bleistift",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Blick",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Blume",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Bogen",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "böse",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "brauchen",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "breit",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Brief",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Briefmarke",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "bringen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "das Brot",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "das Brötchen",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "der Bruder",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "das Buch",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Buchstabe",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "buchstabieren",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "der Bus",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "die Butter",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "das Café",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die CD",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Chef",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "circa",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Computer",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "da",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Dame",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "daneben",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "danken",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "der Dank",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "danke",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "dann",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "das Datum",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "dauern",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "dein",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "denn",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der/die/das",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "dich",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "dies-",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "dir",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "die Disco",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Doktor",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "das Doppelzimmer",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "das Dorf",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "dort",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "draußen",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "drucken",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Drucker",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "drücken",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "durch",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Durchsage",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "dürfen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Durst",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "(sich) duschen",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Dusche",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Ecke",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Ehefrau",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Ehemann",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "das Ei",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "eilig",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "ein",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "einfach",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Eingang",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "einkaufen",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "einladen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Einladung",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "einmal",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "einsteigen",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "der Eintritt",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "das Einzelzimmer",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Eltern",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "die E-Mail",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "der Empfänger",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "empfehlen",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "enden",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "das Ende",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "entschuldigen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Entschuldigung",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "er",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "das Ergebnis",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "erklären",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "erlauben",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Erwachsene",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "erzählen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "es",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "essen",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "das Essen",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "euer",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "fahren",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "der Fahrer",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Fahrkarte",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "das Fahrrad",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "falsch",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "die Familie",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "der Familienname",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "der Familienstand",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "die Farbe",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "das Fax",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "feiern",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "fehlen",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Fehler",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "fernsehen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "fertig",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "das Feuer",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "das Fieber",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Film",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "finden",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Firma",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Fisch",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Flasche",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "das Fleisch",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "fliegen",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "abfliegen",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Abflug",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Flughafen",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "das Flugzeug",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "das Formular",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "das Foto",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "fragen",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "die Frage",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "die Frau",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "frei",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Freizeit",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "fremd",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "sich freuen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Freund",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "früher",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "frühstücken",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "das Frühstück",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Führung",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "für",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Fuß",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Fußball",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Garten",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Gast",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "geben",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "geboren",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "das Geburtsjahr",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "der Geburtsort",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "der Geburtstag",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "gefallen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "gegen",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "gehen",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "gehören",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "das Geld",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "das Gemüse",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "das Gepäck",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "gerade",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "gern",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "das Geschäft",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "das Geschenk",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Geschwister",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "das Gespräch",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "gestern",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "gestorben",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "das Getränk",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "das Gewicht",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "gewinnen",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "das Glas",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "glauben",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "gleich",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "das Gleis",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "das Glück",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "glücklich",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Glückwunsch",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Grad",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "gratulieren",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "grillen",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "groß",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Größe",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Großeltern",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Großmutter",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Großvater",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Gruppe",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Gruß",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "gültig",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "günstig",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "gut",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "das Haar",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "haben",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "das Hähnchen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Halbpension",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Halle",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "hallo",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "halten",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Haltestelle",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "die Hand",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "das Handy",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "das Haus",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "die Hausaufgabe",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Hausfrau",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Hausmann",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Heimat",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "heiraten",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "heißen",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "helfen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "hell",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Herd",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Herr",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "herzlich",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "heute",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "hier",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "die Hilfe",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "hinten",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "das Hobby",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "hoch",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Hochzeit",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "holen",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "hören",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "das Hotel",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Hund",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Hunger",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "ich",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "ihr",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "immer",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "in",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "die Information",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "international",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "das Internet",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "ja",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "die Jacke",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "jed-",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "jetzt",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "der Job",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Jugendliche",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "jung",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Junge",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Kaffee",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "kaputt",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Karte",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Kreditkarte",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Kartoffel",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Kasse",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "kaufen",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "kein",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "kennen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "kennenlernen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "das Kind",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "der Kindergarten",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "das Kino",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Kiosk",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "klar",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Klasse",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Kleidung",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "klein",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "kochen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Koffer",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Kollege",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "kommen",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "können",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "das Konto",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Kopf",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "kosten",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "krank",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "kriegen",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Küche",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Kuchen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Kugelschreiber",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Kühlschrank",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "kulturell",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "sich kümmern",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Kunde",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Kurs",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "kurz",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "lachen",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Laden",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "das Land",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "lang",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "lange",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "langsam",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "laufen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "laut",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "leben",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "das Leben",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Lebensmittel",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "ledig",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "legen",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Lehrer",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "leicht",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "leider",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "leise",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "lernen",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "lesen",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "letzt-",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Leute",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "das Licht",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "lieb-",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "lieben",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "lieber",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "Lieblings-",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "das Lied",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "liegen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "links",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "der Lkw",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "das Lokal",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Lösung",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "lustig",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "machen",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "das Mädchen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "man",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "der Mann",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "männlich",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "die Maschine",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "das Meer",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "mehr",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "mein",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "meist-",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Mensch",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "mieten",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Miete",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Milch",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "mit",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "mitbringen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "mitkommen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "mitmachen",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "mitnehmen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Mitte",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Möbel",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "möchten",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "mögen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "möglich",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Moment",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "morgen",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "müde",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Mund",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "müssen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Mutter",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "nach",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "nächst-",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Name",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "nehmen",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "nein",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "neu",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "nicht",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "nichts",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "nie",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "noch",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "normal",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Nummer",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "nur",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "oben",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "das Obst",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "oder",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "öffnen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "oft",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "ohne",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Oma",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Opa",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Ordnung",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Ort",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "das Papier",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Papiere",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Partner",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Partnerin",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Party",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Pass",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Pause",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Plan",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Platz",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "die Polizei",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Pommes frites",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Post",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Postleitzahl",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "das Praktikum",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Praxis",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Preis",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "das Problem",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Prospekt",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Prüfung",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "pünktlich",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "Rad fahren",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "rauchen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Raum",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Rechnung",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "rechts",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "regnen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Regen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Reis",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "reisen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Reise",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "das Reisebüro",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Reiseführer",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "reparieren",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Reparatur",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "das Restaurant",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Rezeption",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "richtig",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "riechen",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "ruhig",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Saft",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "sagen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Salat",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "das Salz",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Satz",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die S-Bahn",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Schalter",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "scheinen",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "schicken",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "das Schild",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Schinken",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "schlafen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "schlecht",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "schließen",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "geschlossen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Schluss",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Schlüssel",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "schmecken",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "schnell",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "schon",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "schön",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Schrank",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "schreiben",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "der Schuh",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Schule",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Schüler",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "schwer",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Schwester",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "schwimmen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "das Schwimmbad",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der See",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "sehen",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "die Sehenswürdigkeit",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "sehr",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "sein",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "weg sein",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "zu sein",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "seit",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "selbstständig",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "sich",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "sie",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "Sie",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "sitzen",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "so",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "das Sofa",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "sofort",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Sohn",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "sollen",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Sonne",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "spät",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "später",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Speisekarte",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "spielen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Sport",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Sprache",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "sprechen",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "die Stadt",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "stehen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Stelle",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "stellen",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Stock",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Straße",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "die Straßenbahn",
+   "level": "A1",
+   "month": "2026-11",
+   "region": "D,A"
+  },
+  {
+   "lemma": "studieren",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "das Studium",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Student",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Stunde",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "suchen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "tanzen",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Tasche",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "das Taxi",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Tee",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "der Teil",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "telefonieren",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "das Telefon",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "der Termin",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Test",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "teuer",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Text",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "das Thema",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "das Ticket",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Tisch",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Tochter",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "die Toilette",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Tomate",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "tot",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "(sich) treffen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Treppe",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "trinken",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "tschüss",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "tun",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "über",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "übernachten",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "überweisen",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Uhr",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "um",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "umziehen",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "und",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "unser",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "unten",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "unter",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Unterricht",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "unterschreiben",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Unterschrift",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Urlaub",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Vater",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "verboten",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "verdienen",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Verein",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "verheiratet",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "verkaufen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Verkäufer",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "vermieten",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Vermieter",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "verstehen",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "der Verwandte",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "viel",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "vielleicht",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "von",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "vor",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Vorname",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "die Vorsicht",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "(sich) vorstellen",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "die Vorwahl",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "wandern",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "wann",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "warten",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "warum",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "was",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "was für ein",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "(sich) waschen",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "das Wasser",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "wehtun",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "weiblich",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "der Wein",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "weit",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "weiter",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "welch-",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "die Welt",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "wenig",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "wer",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "werden",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "das Wetter",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "wichtig",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "wie",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "wiederholen",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "auf Wiederhören",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "auf Wiedersehen",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "wie viel",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "willkommen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Wind",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "wir",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "wissen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "wo",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "woher",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "wohin",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "wohnen",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "die Wohnung",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "wollen",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "das Wort",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "wunderbar",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "zahlen",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "die Zeit",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "zurzeit",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "die Zeitung",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "die Zigarette",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "das Zimmer",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "der Zoll",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "zu",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "zufrieden",
+   "level": "A1",
+   "month": "2026-12"
+  },
+  {
+   "lemma": "der Zug",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "zurück",
+   "level": "A1",
+   "month": "2026-11"
+  },
+  {
+   "lemma": "zusammen",
+   "level": "A1",
+   "month": "2026-10"
+  },
+  {
+   "lemma": "zwischen",
+   "level": "A1",
+   "month": "2026-12"
+  }
+ ]
+}

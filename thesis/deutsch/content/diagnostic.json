@@ -1,0 +1,395 @@
+{
+ "minutes": 12,
+ "items": [
+  {
+   "id": "d01",
+   "skill": "lesen",
+   "level": "A1",
+   "type": "mc",
+   "prompt_ko": "가게 문에 붙은 쪽지. 다시 여는 날은?",
+   "text_de": "Heute geschlossen. Ab Montag wieder geöffnet.",
+   "audio_text_de": "",
+   "options": [
+    "오늘 저녁",
+    "월요일",
+    "일요일"
+   ],
+   "answer": 1,
+   "hypothesis": "H2: 받아들이기가 만들기보다 높다. A1 표지 읽기"
+  },
+  {
+   "id": "d02",
+   "skill": "hoeren",
+   "level": "A1",
+   "type": "mc",
+   "prompt_ko": "트램 안내 방송. 다음 정류장은?",
+   "text_de": "",
+   "audio_text_de": "Nächste Haltestelle: Barfüsserplatz.",
+   "options": [
+    "Spalentor",
+    "Bahnhof SBB",
+    "Barfüsserplatz"
+   ],
+   "answer": 2,
+   "hypothesis": "H2: 받아들이기가 만들기보다 높다. A1 안내 방송 듣기"
+  },
+  {
+   "id": "d03",
+   "skill": "hoeren",
+   "level": "A1",
+   "type": "mc",
+   "swiss": true,
+   "prompt_ko": "스위스식 안내 방송. 타기 전에 할 일은?",
+   "text_de": "",
+   "audio_text_de": "Bitte lösen Sie das Billett vor der Fahrt. Velos sind im Tram nicht erlaubt.",
+   "options": [
+    "자전거를 맡긴다",
+    "표를 산다",
+    "기사에게 말한다"
+   ],
+   "answer": 1,
+   "hypothesis": "H5: 스위스 표기 듣기 (Billett, Velo, das Tram). d04 표준어 짝과 비교"
+  },
+  {
+   "id": "d04",
+   "skill": "hoeren",
+   "level": "A1",
+   "type": "mc",
+   "prompt_ko": "표준 독일어 안내 방송. 가지고 탈 수 없는 것은?",
+   "text_de": "",
+   "audio_text_de": "Bitte kaufen Sie die Fahrkarte vor der Fahrt. Fahrräder sind in der Straßenbahn nicht erlaubt.",
+   "options": [
+    "가방",
+    "개",
+    "자전거"
+   ],
+   "answer": 2,
+   "hypothesis": "H5: 표준 독일어 듣기. d03 스위스 짝과 비교"
+  },
+  {
+   "id": "d05",
+   "skill": "wortschatz",
+   "level": "A1",
+   "type": "mc",
+   "prompt_ko": "뜻은?",
+   "text_de": "die Küche",
+   "audio_text_de": "",
+   "options": [
+    "부엌",
+    "욕실",
+    "침실"
+   ],
+   "answer": 0,
+   "hypothesis": "H3: 건축 어휘 대조군. 일상 집 어휘"
+  },
+  {
+   "id": "d06",
+   "skill": "grammatik",
+   "level": "A1",
+   "type": "cloze",
+   "prompt_ko": "빈칸에 맞는 관사",
+   "text_de": "___ Haltestelle ist am Barfüsserplatz.",
+   "audio_text_de": "",
+   "options": [
+    "Der",
+    "Die",
+    "Das"
+   ],
+   "answer": 1,
+   "hypothesis": "H1: 만들기는 A1 아래. 관사 고르기"
+  },
+  {
+   "id": "d07",
+   "skill": "grammatik",
+   "level": "A1",
+   "type": "cloze",
+   "prompt_ko": "빈칸에 맞는 동사",
+   "text_de": "Wir ___ in Basel.",
+   "audio_text_de": "",
+   "options": [
+    "wohnt",
+    "wohne",
+    "wohnen"
+   ],
+   "answer": 2,
+   "hypothesis": "H1: 만들기는 A1 아래. 현재형 인칭 어미"
+  },
+  {
+   "id": "d08",
+   "skill": "schreiben",
+   "level": "A1",
+   "type": "free",
+   "prompt_ko": "자기소개 세 문장. 이름, 사는 도시, 하는 일.",
+   "text_de": "",
+   "audio_text_de": "",
+   "options": [],
+   "answer": null,
+   "hypothesis": "H1·H6: 쓰기 실제 수준. 쓰기를 건너뛰는지 (빈칸·시간 기록)"
+  },
+  {
+   "id": "d09",
+   "skill": "schreiben",
+   "level": "A1",
+   "type": "free",
+   "prompt_ko": "받아쓰기. 들리는 다섯 낱말을 관사와 함께 쓴다.",
+   "text_de": "",
+   "audio_text_de": "das Haus, die Tür, das Fenster, die Straße, die Brücke",
+   "options": [],
+   "answer": null,
+   "hypothesis": "H1: 철자와 관사 만들기"
+  },
+  {
+   "id": "d10",
+   "skill": "sprechen",
+   "level": "A1",
+   "type": "record",
+   "prompt_ko": "30초 동안 자기소개를 녹음한다.",
+   "text_de": "",
+   "audio_text_de": "",
+   "options": [],
+   "answer": null,
+   "hypothesis": "H13: 말하기 출발점"
+  },
+  {
+   "id": "d11",
+   "skill": "lesen",
+   "level": "A2",
+   "type": "mc",
+   "prompt_ko": "구인 광고. 이 사무소가 내세우는 것은?",
+   "text_de": "Internationales Architekturbüro in Basel sucht Architekt (m/w/d) mit Erfahrung im Projektmanagement. Wir bieten ein modernes Team, flexible Arbeitszeiten und interessante Projekte in ganz Europa.",
+   "audio_text_de": "",
+   "options": [
+    "유연한 근무 시간",
+    "회사 숙소",
+    "높은 연봉"
+   ],
+   "answer": 0,
+   "hypothesis": "H4: 영어 길. 영어 동족어가 많은 글 (d12와 짝)"
+  },
+  {
+   "id": "d12",
+   "skill": "lesen",
+   "level": "A2",
+   "type": "mc",
+   "prompt_ko": "구인 광고. 이 일에 들지 않는 것은?",
+   "text_de": "Wir suchen eine Fachkraft für die Bauleitung. Sie überwachen die Baustelle, prüfen Rechnungen und sprechen mit den Handwerkern. Eintritt nach Vereinbarung.",
+   "audio_text_de": "",
+   "options": [
+    "현장 감독",
+    "청구서 검토",
+    "설계 공모 제출"
+   ],
+   "answer": 2,
+   "hypothesis": "H4: 영어 길. 영어 동족어가 적은 글 (d11과 짝)"
+  },
+  {
+   "id": "d13",
+   "skill": "lesen",
+   "level": "A2",
+   "type": "mc",
+   "swiss": true,
+   "prompt_ko": "다음 세입자 구함 광고. 함께 보낼 서류는?",
+   "text_de": "Nachmieter gesucht: 3-Zimmer-Wohnung ab 1. Dezember. Bitte schicken Sie uns Ihre Unterlagen und einen aktuellen Betreibungsauszug.",
+   "audio_text_de": "",
+   "options": [
+    "여권 사본",
+    "은행 잔고 증명",
+    "채무 조회서"
+   ],
+   "answer": 2,
+   "hypothesis": "H2: 받아들이기가 만들기보다 높다. 집 구하기 실제 글"
+  },
+  {
+   "id": "d14",
+   "skill": "hoeren",
+   "level": "A2",
+   "type": "mc",
+   "prompt_ko": "관리사 전화 메시지. 새 집 보기 시간은?",
+   "text_de": "",
+   "audio_text_de": "Guten Tag, hier ist die Verwaltung. Die Besichtigung am Donnerstag fällt leider aus. Können Sie am Freitag um 17 Uhr kommen? Bitte rufen Sie uns zurück.",
+   "options": [
+    "목요일 17시",
+    "금요일 17시",
+    "금요일 7시"
+   ],
+   "answer": 1,
+   "hypothesis": "H2: 받아들이기가 만들기보다 높다. 전화 메시지 듣기"
+  },
+  {
+   "id": "d15",
+   "skill": "wortschatz",
+   "level": "A2",
+   "type": "mc",
+   "prompt_ko": "뜻은?",
+   "text_de": "der Grundriss",
+   "audio_text_de": "",
+   "options": [
+    "단면도",
+    "평면도",
+    "입면도"
+   ],
+   "answer": 1,
+   "hypothesis": "H3: 건축 어휘가 일상 어휘보다 앞선다"
+  },
+  {
+   "id": "d16",
+   "skill": "wortschatz",
+   "level": "A2",
+   "type": "mc",
+   "prompt_ko": "뜻은?",
+   "text_de": "das Treppenhaus",
+   "audio_text_de": "",
+   "options": [
+    "계단실",
+    "다락층",
+    "현관문"
+   ],
+   "answer": 0,
+   "hypothesis": "H3: 건축 어휘가 일상 어휘보다 앞선다"
+  },
+  {
+   "id": "d17",
+   "skill": "wortschatz",
+   "level": "A2",
+   "type": "mc",
+   "prompt_ko": "뜻은?",
+   "text_de": "der Briefkasten",
+   "audio_text_de": "",
+   "options": [
+    "열쇠",
+    "초인종",
+    "우편함"
+   ],
+   "answer": 2,
+   "hypothesis": "H3: 건축 어휘 대조군. 일상 집 어휘"
+  },
+  {
+   "id": "d18",
+   "skill": "grammatik",
+   "level": "A2",
+   "type": "cloze",
+   "prompt_ko": "빈칸에 맞는 조동사",
+   "text_de": "Gestern ___ ich die Wohnung besichtigt.",
+   "audio_text_de": "",
+   "options": [
+    "bin",
+    "habe",
+    "hat"
+   ],
+   "answer": 1,
+   "hypothesis": "H1: 만들기. 현재완료 haben"
+  },
+  {
+   "id": "d19",
+   "skill": "schreiben",
+   "level": "A2",
+   "type": "free",
+   "prompt_ko": "관리사에게 두 문장. 집을 보고 싶다는 말과 언제 되는지 묻는 말.",
+   "text_de": "",
+   "audio_text_de": "",
+   "options": [],
+   "answer": null,
+   "hypothesis": "H6·H7: 쓰기를 건너뛰는지, 고칠 것 하나 피드백이 먹히는지"
+  },
+  {
+   "id": "d20",
+   "skill": "sprechen",
+   "level": "A2",
+   "type": "record",
+   "prompt_ko": "40초 동안 사무실을 설명한다. 어디 있는지, 몇 명인지, 무엇을 하는지.",
+   "text_de": "",
+   "audio_text_de": "",
+   "options": [],
+   "answer": null,
+   "hypothesis": "H8·H13: 블록 길이 감각, 말하기 이어 가기"
+  },
+  {
+   "id": "d21",
+   "skill": "lesen",
+   "level": "B1",
+   "type": "mc",
+   "prompt_ko": "관리사 메일. 무슨 뜻인가?",
+   "text_de": "Vielen Dank für Ihr Interesse an der Wohnung. Leider müssen wir Ihnen mitteilen, dass die Wohnung bereits vergeben ist. Wir wünschen Ihnen viel Erfolg bei der weiteren Suche.",
+   "audio_text_de": "",
+   "options": [
+    "서류가 빠졌다",
+    "집 보기 초대",
+    "집이 이미 나갔다"
+   ],
+   "answer": 2,
+   "hypothesis": "H2: 받아들이기가 만들기보다 높다. B1 거절 메일"
+  },
+  {
+   "id": "d22",
+   "skill": "lesen",
+   "level": "B1",
+   "type": "mc",
+   "prompt_ko": "아돌프 로스 원문 (1910). 사람의 성장을 무엇에 견주나?",
+   "text_de": "Der menschliche embryo macht im mutterleibe alle entwicklungsphasen des tierreiches durch. Wenn der mensch geboren wird, sind seine sinneseindrücke gleich denen eines neugeborenen hundes.",
+   "audio_text_de": "",
+   "options": [
+    "동물계의 발달 단계",
+    "도시의 성장",
+    "건물의 층"
+   ],
+   "answer": 0,
+   "hypothesis": "H12: 원문 앞에 머무는 시간 (풀이 시간 기록)"
+  },
+  {
+   "id": "d23",
+   "skill": "hoeren",
+   "level": "B1",
+   "type": "mc",
+   "prompt_ko": "사무실 공지. 회의를 미루는 까닭은?",
+   "text_de": "",
+   "audio_text_de": "Kurze Info an alle: Die Besprechung mit dem Bauherrn verschieben wir auf nächsten Dienstag, weil die Pläne für die Fassade noch nicht fertig sind.",
+   "options": [
+    "건축주가 아파서",
+    "입면 도면이 끝나지 않아서",
+    "회의실이 없어서"
+   ],
+   "answer": 1,
+   "hypothesis": "H3: 건축 맥락 듣기는 B1까지 닿는다"
+  },
+  {
+   "id": "d24",
+   "skill": "grammatik",
+   "level": "B1",
+   "type": "cloze",
+   "prompt_ko": "빈칸에 맞는 접속사",
+   "text_de": "Ich lerne Deutsch, ___ ich in Basel arbeite.",
+   "audio_text_de": "",
+   "options": [
+    "denn",
+    "deshalb",
+    "weil"
+   ],
+   "answer": 2,
+   "hypothesis": "H1: 만들기. 부문장 어순"
+  },
+  {
+   "id": "d25",
+   "skill": "schreiben",
+   "level": "A1",
+   "type": "free",
+   "prompt_ko": "설문 두 줄. 설명은 한국어, 영어, 독일어 중 무엇이 편한가. 새 낱말은 그림과 글 중 무엇으로 더 남나.",
+   "text_de": "",
+   "audio_text_de": "",
+   "options": [],
+   "answer": null,
+   "hypothesis": "H4·H11: 설명 언어 선호, 그림 대 글"
+  },
+  {
+   "id": "d26",
+   "skill": "schreiben",
+   "level": "A1",
+   "type": "free",
+   "prompt_ko": "설문 두 줄 (정현). 독일어를 쓰는 곳, 시험을 보려는 까닭.",
+   "text_de": "",
+   "audio_text_de": "",
+   "options": [],
+   "answer": null,
+   "hypothesis": "H9·H10: 정현의 수준과 동기"
+  }
+ ]
+}

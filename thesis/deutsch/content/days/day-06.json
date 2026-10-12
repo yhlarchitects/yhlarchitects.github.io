@@ -1,0 +1,171 @@
+{
+ "id": "day-06",
+ "theme_ko": "바젤 거리의 글자",
+ "new_cards": [
+  "basel-strasse:das-tor",
+  "basel-strasse:die-mauer",
+  "basel-strasse:die-stadt",
+  "basel-strasse:alt",
+  "basel-strasse:zu-fuss",
+  "basel-strasse:das-jahr",
+  "eigene-saetze:im-anhang-finden-sie"
+ ],
+ "stair": {
+  "source": {
+   "author": "선생",
+   "title": "Das Spalentor",
+   "year": 2026,
+   "license": "own",
+   "url": ""
+  },
+  "layers": [
+   {
+    "level": "A1",
+    "text_de": "Das ist das Spalentor. Es ist ein Tor in der alten Stadtmauer. Das Tor ist über sechshundert Jahre alt. Früher hatte Basel eine Mauer um die ganze Stadt. Heute gibt es nur noch drei Tore. Das Spalentor hat einen hohen Turm in der Mitte. Am Tor sind Figuren aus Stein. Sie bewegen sich nicht. Die Tram fährt direkt am Tor vorbei. Ich gehe zu Fuß durch das Tor.",
+    "gloss": [
+     {
+      "de": "die Stadtmauer",
+      "ko": "성벽"
+     },
+     {
+      "de": "über",
+      "ko": "…넘게"
+     },
+     {
+      "de": "sechshundert",
+      "ko": "600"
+     },
+     {
+      "de": "früher",
+      "ko": "예전에"
+     },
+     {
+      "de": "hatte (haben)",
+      "ko": "가지고 있었다"
+     },
+     {
+      "de": "nur noch",
+      "ko": "이제 …만"
+     },
+     {
+      "de": "vorbeifahren",
+      "ko": "옆을 지나가다"
+     },
+     {
+      "de": "durch",
+      "ko": "…을 통과해"
+     }
+    ],
+    "tasks": [
+     {
+      "type": "cloze",
+      "prompt_de": "Das Tor ist über sechshundert ___ alt.",
+      "answer": "Jahre",
+      "options": [
+       "Meter",
+       "Jahre",
+       "Tage"
+      ]
+     },
+     {
+      "type": "mc",
+      "prompt_ko": "바젤에 남은 성문은 몇 개인가?",
+      "options": [
+       "셋",
+       "하나",
+       "다섯"
+      ],
+      "answer": 0
+     },
+     {
+      "type": "summary",
+      "prompt_ko": "한 줄로 요약 (독일어 또는 한국어)"
+     }
+    ]
+   },
+   {
+    "level": "A2",
+    "text_de": "Das Spalentor hat man um 1400 gebaut. Damals hatte Basel eine große Mauer um die ganze Stadt, und wer in die Stadt wollte, musste durch ein Tor. Im 19. Jahrhundert ist die Stadt schnell gewachsen. Deshalb hat man die Mauer fast überall abgerissen. Nur drei Tore sind geblieben. Am Spalentor sieht man Figuren aus Stein und ein Dach mit bunten Ziegeln. In der Nähe liegen der Botanische Garten und die Universität.",
+    "gloss": [
+     {
+      "de": "damals",
+      "ko": "그때"
+     },
+     {
+      "de": "musste (müssen)",
+      "ko": "…해야 했다"
+     },
+     {
+      "de": "wachsen",
+      "ko": "자라다, 커지다"
+     },
+     {
+      "de": "abreißen",
+      "ko": "허물다"
+     },
+     {
+      "de": "bleiben",
+      "ko": "남다"
+     },
+     {
+      "de": "der Botanische Garten",
+      "ko": "식물원"
+     },
+     {
+      "de": "in der Nähe",
+      "ko": "근처에"
+     }
+    ],
+    "tasks": [
+     {
+      "type": "cloze",
+      "prompt_de": "Im 19. Jahrhundert hat man die Mauer fast überall ___.",
+      "answer": "abgerissen",
+      "options": [
+       "gebaut",
+       "gesehen",
+       "abgerissen"
+      ]
+     },
+     {
+      "type": "mc",
+      "prompt_ko": "성벽을 허문 까닭은?",
+      "options": [
+       "전쟁으로 무너져서",
+       "도시가 빨리 커져서",
+       "트램 길을 내려고"
+      ],
+      "answer": 1
+     },
+     {
+      "type": "summary",
+      "prompt_ko": "한 줄로 요약 (독일어 또는 한국어)"
+     }
+    ]
+   }
+  ],
+  "summit": {
+   "text_de": "",
+   "note_ko": "오늘 꼭대기는 비워 둔다. 원문은 내일 아돌프 로스."
+  }
+ },
+ "ear": {
+  "text_de": "Das ist das Spalentor. Es ist ein Tor in der alten Stadtmauer. Das Tor ist über sechshundert Jahre alt. Heute gibt es nur noch drei Tore. Ich gehe zu Fuß durch das Tor.",
+  "lang": "de-DE",
+  "rates": [
+   0.75,
+   0.9,
+   1.0
+  ]
+ },
+ "hand": {
+  "situation_ko": "관리사가 9월 급여명세서를 더 달라고 했다. 파일을 첨부해 답한다.",
+  "prompt_ko": "Sie체 첨부 안내 한 문장.",
+  "model_de": "Guten Tag, im Anhang finden Sie meine Lohnabrechnung vom September.",
+  "chunks": [
+   "Im Anhang finden Sie …",
+   "meine Lohnabrechnung vom September",
+   "Freundliche Grüße"
+  ]
+ }
+}

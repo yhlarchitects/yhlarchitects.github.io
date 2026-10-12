@@ -1,0 +1,156 @@
+{
+ "id": "day-00",
+ "theme_ko": "바젤 거리의 글자 (예시)",
+ "new_cards": [
+  "basel-strasse:die-haltestelle",
+  "basel-strasse:die-gasse",
+  "basel-strasse:die-bruecke"
+ ],
+ "stair": {
+  "source": {
+   "author": "선생",
+   "title": "Meine Straße in Basel",
+   "year": 2026,
+   "license": "own",
+   "url": ""
+  },
+  "layers": [
+   {
+    "level": "A1",
+    "text_de": "Ich wohne in Basel. Meine Straße ist klein. Am Ende der Straße ist eine Haltestelle. Von dort fährt die Straßenbahn zum Rhein.",
+    "gloss": [
+     {
+      "de": "wohnen",
+      "ko": "살다"
+     },
+     {
+      "de": "die Straße",
+      "ko": "거리, 길"
+     },
+     {
+      "de": "klein",
+      "ko": "작은"
+     },
+     {
+      "de": "das Ende",
+      "ko": "끝"
+     },
+     {
+      "de": "die Haltestelle",
+      "ko": "정류장"
+     },
+     {
+      "de": "von dort",
+      "ko": "거기서부터"
+     },
+     {
+      "de": "fahren (fährt)",
+      "ko": "(타고) 가다"
+     },
+     {
+      "de": "die Straßenbahn",
+      "ko": "전차, 트램"
+     },
+     {
+      "de": "der Rhein",
+      "ko": "라인강"
+     }
+    ],
+    "tasks": [
+     {
+      "type": "cloze",
+      "prompt_de": "Am Ende der Straße ist eine ___.",
+      "answer": "Haltestelle",
+      "options": [
+       "Haltestelle",
+       "Brücke",
+       "Gasse"
+      ]
+     },
+     {
+      "type": "mc",
+      "prompt_ko": "전차는 어디로 가나?",
+      "options": [
+       "라인강",
+       "기차역",
+       "학교"
+      ],
+      "answer": 0
+     },
+     {
+      "type": "summary",
+      "prompt_ko": "한 줄로 요약 (독일어 또는 한국어)"
+     }
+    ]
+   },
+   {
+    "level": "A2",
+    "text_de": "Ich wohne seit einem Monat in Basel. Meine Straße ist schmal und ruhig, aber am Ende gibt es eine Haltestelle. Von dort fährt die Straßenbahn in zehn Minuten zum Rhein. Am Abend gehe ich oft über die Brücke und schaue auf das Wasser.",
+    "gloss": [
+     {
+      "de": "seit einem Monat",
+      "ko": "한 달 전부터"
+     },
+     {
+      "de": "schmal",
+      "ko": "좁은"
+     },
+     {
+      "de": "ruhig",
+      "ko": "조용한"
+     },
+     {
+      "de": "es gibt",
+      "ko": "~이 있다"
+     },
+     {
+      "de": "die Brücke",
+      "ko": "다리"
+     },
+     {
+      "de": "schauen",
+      "ko": "보다"
+     },
+     {
+      "de": "das Wasser",
+      "ko": "물"
+     }
+    ],
+    "tasks": [
+     {
+      "type": "cloze",
+      "prompt_de": "Am Abend gehe ich oft über die ___.",
+      "answer": "Brücke"
+     },
+     {
+      "type": "summary",
+      "prompt_ko": "한 줄로 요약 (독일어 또는 한국어)"
+     }
+    ]
+   }
+  ],
+  "summit": {
+   "text_de": "",
+   "note_ko": "연습용 예시 글이다. 원문 꼭대기는 콘텐츠가 들어오면 열린다."
+  }
+ },
+ "ear": {
+  "text_de": "Ich wohne in Basel. Meine Straße ist klein. Am Ende der Straße ist eine Haltestelle.",
+  "lang": "de-DE",
+  "rates": [
+   0.75,
+   0.9,
+   1.0
+  ]
+ },
+ "hand": {
+  "situation_ko": "이웃에게 가장 가까운 정류장을 묻는다.",
+  "prompt_ko": "정류장이 어디인지 묻는 한 문장",
+  "model_de": "Entschuldigung, wo ist die nächste Haltestelle?",
+  "chunks": [
+   "Entschuldigung, …",
+   "Wo ist …?",
+   "die nächste Haltestelle"
+  ]
+ }
+}

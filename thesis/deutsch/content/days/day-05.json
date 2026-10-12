@@ -1,0 +1,162 @@
+{
+ "id": "day-05",
+ "theme_ko": "바젤 거리의 글자",
+ "new_cards": [
+  "basel-strasse:der-brunnen",
+  "basel-strasse:die-figur",
+  "basel-strasse:die-maschine",
+  "basel-strasse:sich-bewegen",
+  "basel-strasse:der-kuenstler",
+  "basel-strasse:das-theater"
+ ],
+ "stair": {
+  "source": {
+   "author": "선생",
+   "title": "Der Tinguely-Brunnen",
+   "year": 2026,
+   "license": "own",
+   "url": ""
+  },
+  "layers": [
+   {
+    "level": "A1",
+    "text_de": "Am Theaterplatz ist ein Brunnen. Er ist von Jean Tinguely. Tinguely war ein Künstler aus der Schweiz. Im Brunnen stehen zehn Figuren. Die Figuren sind Maschinen aus Metall. Sie sind schwarz. Sie bewegen sich und spritzen Wasser. Ich esse mein Mittagessen oft hier, mit meiner Kollegin. Wir sitzen am Brunnen und sehen zu.",
+    "gloss": [
+     {
+      "de": "war (sein)",
+      "ko": "…였다"
+     },
+     {
+      "de": "das Metall",
+      "ko": "금속"
+     },
+     {
+      "de": "schwarz",
+      "ko": "검은"
+     },
+     {
+      "de": "spritzen",
+      "ko": "뿜다"
+     },
+     {
+      "de": "zusehen",
+      "ko": "구경하다"
+     }
+    ],
+    "tasks": [
+     {
+      "type": "cloze",
+      "prompt_de": "Im Brunnen stehen zehn ___.",
+      "answer": "Figuren",
+      "options": [
+       "Türme",
+       "Fähren",
+       "Figuren"
+      ]
+     },
+     {
+      "type": "mc",
+      "prompt_ko": "분수의 형상들은 무엇으로 되어 있나?",
+      "options": [
+       "돌",
+       "금속",
+       "나무"
+      ],
+      "answer": 1
+     },
+     {
+      "type": "summary",
+      "prompt_ko": "한 줄로 요약 (독일어 또는 한국어)"
+     }
+    ]
+   },
+   {
+    "level": "A2",
+    "text_de": "Der Tinguely-Brunnen heißt offiziell Fasnachtsbrunnen. Jean Tinguely hat ihn 1977 gebaut. Der Brunnen liegt dort, wo früher die Bühne des alten Stadttheaters war. Seine zehn Figuren sehen ein bisschen aus wie Schauspieler: Jede macht eine andere Bewegung, und alle spielen mit dem Wasser. Im Winter friert der Brunnen manchmal zu, dann hängt Eis an den Maschinen. Das Theater Basel steht gleich daneben. Das Museum Tinguely liegt nicht hier, sondern weiter östlich am Rhein.",
+    "gloss": [
+     {
+      "de": "offiziell",
+      "ko": "공식적으로"
+     },
+     {
+      "de": "die Fasnacht",
+      "ko": "바젤 카니발"
+     },
+     {
+      "de": "die Bühne",
+      "ko": "무대"
+     },
+     {
+      "de": "der Schauspieler",
+      "ko": "배우"
+     },
+     {
+      "de": "die Bewegung",
+      "ko": "움직임"
+     },
+     {
+      "de": "zufrieren",
+      "ko": "얼어붙다"
+     },
+     {
+      "de": "das Eis",
+      "ko": "얼음"
+     },
+     {
+      "de": "gleich daneben",
+      "ko": "바로 옆에"
+     }
+    ],
+    "tasks": [
+     {
+      "type": "cloze",
+      "prompt_de": "Der Brunnen liegt dort, wo früher die ___ des alten Stadttheaters war.",
+      "answer": "Bühne",
+      "options": [
+       "Bühne",
+       "Mauer",
+       "Kirche"
+      ]
+     },
+     {
+      "type": "mc",
+      "prompt_ko": "팅겔리가 분수를 만든 해는?",
+      "options": [
+       "1957",
+       "1997",
+       "1977"
+      ],
+      "answer": 2
+     },
+     {
+      "type": "summary",
+      "prompt_ko": "한 줄로 요약 (독일어 또는 한국어)"
+     }
+    ]
+   }
+  ],
+  "summit": {
+   "text_de": "",
+   "note_ko": "오늘 꼭대기는 비워 둔다. 원문은 7일째에 아돌프 로스."
+  }
+ },
+ "ear": {
+  "text_de": "Am Theaterplatz ist ein Brunnen. Er ist von Jean Tinguely. Im Brunnen stehen zehn Figuren. Die Figuren sind Maschinen. Sie bewegen sich und spritzen Wasser.",
+  "lang": "de-DE",
+  "rates": [
+   0.75,
+   0.9,
+   1.0
+  ]
+ },
+ "hand": {
+  "situation_ko": "퇴근 뒤 정현과 극장 광장에서 만난다. 시간과 장소를 정하는 메시지.",
+  "prompt_ko": "du체 질문 한 문장.",
+  "model_de": "Treffen wir uns um 18 Uhr am Tinguely-Brunnen?",
+  "chunks": [
+   "Treffen wir uns …?",
+   "um 18 Uhr",
+   "am Tinguely-Brunnen"
+  ]
+ }
+}

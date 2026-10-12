@@ -1,0 +1,246 @@
+{
+ "deck": "eigene-saetze",
+ "title_ko": "보낸 문장",
+ "cards": [
+  {
+   "id": "eigene-saetze:sich-interessieren-fuer",
+   "de": "sich interessieren für (wir interessieren uns für …)",
+   "plural": "",
+   "ko": "…에 관심이 있다",
+   "example_de": "Wir interessieren uns für die 2-Zimmer-Wohnung.",
+   "example_ko": "저희는 그 2룸 집에 관심이 있습니다.",
+   "tags": [
+    "A2",
+    "Verb"
+   ]
+  },
+  {
+   "id": "eigene-saetze:besichtigen",
+   "de": "besichtigen (wir besichtigen die Wohnung)",
+   "plural": "",
+   "ko": "(집을) 보러 가다, 둘러보다",
+   "example_de": "Wir würden die Wohnung gerne besichtigen.",
+   "example_ko": "그 집을 보러 가고 싶습니다.",
+   "tags": [
+    "A2",
+    "Verb"
+   ]
+  },
+  {
+   "id": "eigene-saetze:genau-was-wir-suchen",
+   "de": "Das ist genau, was wir suchen.",
+   "plural": "",
+   "ko": "저희가 찾던 바로 그것입니다.",
+   "example_de": "Balkon, Parkett und ein Bad mit Fenster: Das ist genau, was wir suchen.",
+   "example_ko": "발코니, 마루, 창 있는 욕실. 저희가 찾던 바로 그것입니다.",
+   "tags": [
+    "A2",
+    "Ausdruck"
+   ]
+  },
+  {
+   "id": "eigene-saetze:kurz-zu-mir",
+   "de": "Kurz zu mir: …",
+   "plural": "",
+   "ko": "짧게 제 소개를 하면 …",
+   "example_de": "Kurz zu mir: Ich heiße Yeon Ho und arbeite als Architekt.",
+   "example_ko": "짧게 제 소개를 하면, 저는 연호이고 건축가로 일합니다.",
+   "tags": [
+    "A2",
+    "Ausdruck"
+   ]
+  },
+  {
+   "id": "eigene-saetze:ich-arbeite-seit",
+   "de": "Ich arbeite seit … als …",
+   "plural": "",
+   "ko": "…부터 …로 일합니다",
+   "example_de": "Ich arbeite seit November 2024 als Architekt in Basel.",
+   "example_ko": "2024년 11월부터 바젤에서 건축가로 일합니다.",
+   "tags": [
+    "A1",
+    "Ausdruck"
+   ]
+  },
+  {
+   "id": "eigene-saetze:der-mietvertrag",
+   "de": "der Mietvertrag",
+   "plural": "die Mietverträge",
+   "ko": "임대 계약",
+   "example_de": "Der Mietvertrag würde auf mich laufen.",
+   "example_ko": "임대 계약은 제 이름으로 하게 됩니다.",
+   "tags": [
+    "A2",
+    "Nomen"
+   ]
+  },
+  {
+   "id": "eigene-saetze:wir-rauchen-nicht",
+   "de": "Wir rauchen nicht und haben keine Haustiere.",
+   "plural": "",
+   "ko": "담배를 피우지 않고 반려동물이 없습니다.",
+   "example_de": "Wir rauchen nicht, haben keine Haustiere und spielen kein Instrument.",
+   "example_ko": "담배를 피우지 않고, 반려동물이 없고, 악기를 연주하지 않습니다.",
+   "tags": [
+    "A1",
+    "Ausdruck"
+   ]
+  },
+  {
+   "id": "eigene-saetze:kein-problem-fuer-uns",
+   "de": "Das ist für uns kein Problem.",
+   "plural": "",
+   "ko": "저희에게는 문제가 되지 않습니다.",
+   "example_de": "Der vierte Stock ohne Lift ist für uns kein Problem.",
+   "example_ko": "엘리베이터 없는 4층은 저희에게 문제가 되지 않습니다.",
+   "tags": [
+    "A1",
+    "Ausdruck"
+   ]
+  },
+  {
+   "id": "eigene-saetze:liegen-bereit",
+   "de": "… liegen bereit.",
+   "plural": "",
+   "ko": "…이 준비돼 있습니다.",
+   "example_de": "Alle Unterlagen liegen bereit.",
+   "example_ko": "서류는 모두 준비돼 있습니다.",
+   "tags": [
+    "A2",
+    "Ausdruck"
+   ]
+  },
+  {
+   "id": "eigene-saetze:der-betreibungsauszug",
+   "de": "der Betreibungsauszug",
+   "plural": "die Betreibungsauszüge",
+   "ko": "채무 기록 조회서 (스위스 말)",
+   "example_de": "Den Betreibungsauszug bekommt man beim Betreibungsamt.",
+   "example_ko": "채무 기록 조회서는 채무 집행 사무소에서 받는다.",
+   "tags": [
+    "A2",
+    "Nomen"
+   ]
+  },
+  {
+   "id": "eigene-saetze:einzugstermin-abstimmen",
+   "de": "den Einzugstermin abstimmen",
+   "plural": "",
+   "ko": "입주일을 맞춰 정하다",
+   "example_de": "Den Einzugstermin stimmen wir gerne mit Ihnen ab.",
+   "example_ko": "입주일은 기꺼이 함께 맞춰 정하겠습니다.",
+   "tags": [
+    "A2",
+    "Ausdruck"
+   ]
+  },
+  {
+   "id": "eigene-saetze:gibt-gerne-auskunft",
+   "de": "… gibt gerne Auskunft.",
+   "plural": "",
+   "ko": "…가 기꺼이 알려 줄 것입니다.",
+   "example_de": "Mein jetziger Vermieter gibt gerne Auskunft.",
+   "example_ko": "지금 집주인이 기꺼이 알려 줄 것입니다.",
+   "tags": [
+    "A2",
+    "Ausdruck"
+   ]
+  },
+  {
+   "id": "eigene-saetze:wir-richten-uns-nach-ihnen",
+   "de": "Wir richten uns gerne nach Ihnen.",
+   "plural": "",
+   "ko": "그쪽 일정에 맞추겠습니다.",
+   "example_de": "Termine ab 18 Uhr passen uns gut. Sonst richten wir uns gerne nach Ihnen.",
+   "example_ko": "18시 이후가 좋습니다. 그 밖에는 그쪽에 맞추겠습니다.",
+   "tags": [
+    "A2",
+    "Ausdruck"
+   ]
+  },
+  {
+   "id": "eigene-saetze:danke-fuer-die-schnelle-antwort",
+   "de": "Danke für die schnelle Antwort.",
+   "plural": "",
+   "ko": "빠른 답 고맙습니다.",
+   "example_de": "Hallo, danke für die schnelle Antwort. Die Eckdaten passen.",
+   "example_ko": "안녕하세요, 빠른 답 고마워요. 조건은 다 맞아요.",
+   "tags": [
+    "A1",
+    "Ausdruck"
+   ]
+  },
+  {
+   "id": "eigene-saetze:passt-mir-gut",
+   "de": "… passt mir gut.",
+   "plural": "",
+   "ko": "…이 저한테 맞습니다(좋습니다).",
+   "example_de": "Freitag um 17 Uhr passt mir gut.",
+   "example_ko": "금요일 17시가 저한테 좋습니다.",
+   "tags": [
+    "A1",
+    "Ausdruck"
+   ]
+  },
+  {
+   "id": "eigene-saetze:falls-dir-lieber-ist",
+   "de": "Falls dir ein anderer Termin lieber ist, …",
+   "plural": "",
+   "ko": "다른 시간이 더 편하면 …",
+   "example_de": "Falls dir ein anderer Termin lieber ist, richten wir uns nach dir.",
+   "example_ko": "다른 시간이 더 편하면 거기에 맞출게요.",
+   "tags": [
+    "B1",
+    "Ausdruck"
+   ]
+  },
+  {
+   "id": "eigene-saetze:im-anhang-finden-sie",
+   "de": "Im Anhang finden Sie …",
+   "plural": "",
+   "ko": "첨부에 …이 있습니다.",
+   "example_de": "Im Anhang finden Sie das ausgefüllte Anmeldeformular.",
+   "example_ko": "첨부에 기입한 신청 양식이 있습니다.",
+   "tags": [
+    "A2",
+    "Ausdruck"
+   ]
+  },
+  {
+   "id": "eigene-saetze:falls-etwas-fehlt",
+   "de": "Falls etwas fehlt, schicke ich es umgehend nach.",
+   "plural": "",
+   "ko": "빠진 것이 있으면 바로 보내겠습니다.",
+   "example_de": "Falls noch etwas fehlt, schicke ich es umgehend nach.",
+   "example_ko": "혹시 더 빠진 것이 있으면 바로 보내겠습니다.",
+   "tags": [
+    "B1",
+    "Ausdruck"
+   ]
+  },
+  {
+   "id": "eigene-saetze:vielen-dank-fuer-heute-abend",
+   "de": "Vielen Dank für heute Abend.",
+   "plural": "",
+   "ko": "오늘 저녁 고마웠습니다.",
+   "example_de": "Vielen Dank für heute Abend. Wir haben uns gleich danach beworben.",
+   "example_ko": "오늘 저녁 고마웠어요. 보고 나서 바로 지원했어요.",
+   "tags": [
+    "A1",
+    "Ausdruck"
+   ]
+  },
+  {
+   "id": "eigene-saetze:freundliche-gruesse",
+   "de": "Freundliche Grüße",
+   "plural": "",
+   "ko": "(편지 끝) 인사 드립니다 (스위스 편지에서는 Grüsse)",
+   "example_de": "Besten Dank und freundliche Grüße",
+   "example_ko": "감사드리며 인사 드립니다",
+   "tags": [
+    "A1",
+    "Ausdruck"
+   ]
+  }
+ ]
+}

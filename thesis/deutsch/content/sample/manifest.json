@@ -1,0 +1,10 @@
+{
+ "version": 1,
+ "days": [
+  "day-00"
+ ],
+ "decks": [
+  "basel-strasse"
+ ],
+ "diagnostic": "diagnostic.json"
+}

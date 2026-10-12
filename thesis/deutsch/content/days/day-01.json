@@ -1,0 +1,166 @@
+{
+ "id": "day-01",
+ "theme_ko": "바젤 거리의 글자",
+ "new_cards": [
+  "basel-strasse:die-tram",
+  "basel-strasse:die-haltestelle",
+  "basel-strasse:die-linie",
+  "basel-strasse:fahren",
+  "basel-strasse:aussteigen",
+  "basel-strasse:die-fahrkarte"
+ ],
+ "stair": {
+  "source": {
+   "author": "선생",
+   "title": "Die Linie 8",
+   "year": 2026,
+   "license": "own",
+   "url": ""
+  },
+  "layers": [
+   {
+    "level": "A1",
+    "text_de": "Ich bin am Bahnhof SBB. Hier ist die Haltestelle. Ich kaufe eine Fahrkarte am Automaten. Dann kommt die Tram. Sie ist grün. Das ist die Linie 8. Die 8 fährt über den Rhein bis nach Weil am Rhein. Weil am Rhein ist schon in Deutschland. Ich fahre nicht so weit. Nach drei Haltestellen steige ich aus.",
+    "gloss": [
+     {
+      "de": "der Automat",
+      "ko": "자동판매기"
+     },
+     {
+      "de": "grün",
+      "ko": "초록색의"
+     },
+     {
+      "de": "über den Rhein",
+      "ko": "라인강을 건너"
+     },
+     {
+      "de": "bis nach …",
+      "ko": "…까지"
+     },
+     {
+      "de": "schon",
+      "ko": "벌써, 이미"
+     },
+     {
+      "de": "so weit",
+      "ko": "그렇게 멀리"
+     }
+    ],
+    "tasks": [
+     {
+      "type": "cloze",
+      "prompt_de": "Ich kaufe eine ___ am Automaten.",
+      "answer": "Fahrkarte",
+      "options": [
+       "Haltestelle",
+       "Fahrkarte",
+       "Linie"
+      ]
+     },
+     {
+      "type": "mc",
+      "prompt_ko": "8번 트램의 끝은 어느 나라에 있나?",
+      "options": [
+       "스위스",
+       "프랑스",
+       "독일"
+      ],
+      "answer": 2
+     },
+     {
+      "type": "summary",
+      "prompt_ko": "한 줄로 요약 (독일어 또는 한국어)"
+     }
+    ]
+   },
+   {
+    "level": "A2",
+    "text_de": "Jeden Morgen warte ich am Bahnhof SBB auf die Linie 8. Die grünen Trams kommen fast immer pünktlich. Die 8 fährt quer durch die Stadt, über den Rhein und am Ende sogar über die Grenze nach Weil am Rhein. Ich fahre nur drei Haltestellen weit. Wenn die Tram voll ist, stehe ich an der Tür und lese die Schilder an den Haltestellen. So lerne ich jeden Tag ein paar neue Wörter.",
+    "gloss": [
+     {
+      "de": "warten auf",
+      "ko": "…을 기다리다"
+     },
+     {
+      "de": "pünktlich",
+      "ko": "제시간에"
+     },
+     {
+      "de": "quer durch",
+      "ko": "가로질러"
+     },
+     {
+      "de": "sogar",
+      "ko": "심지어"
+     },
+     {
+      "de": "die Grenze",
+      "ko": "국경"
+     },
+     {
+      "de": "voll",
+      "ko": "꽉 찬"
+     },
+     {
+      "de": "das Schild",
+      "ko": "표지판"
+     },
+     {
+      "de": "ein paar",
+      "ko": "몇몇"
+     }
+    ],
+    "tasks": [
+     {
+      "type": "cloze",
+      "prompt_de": "Die 8 fährt am Ende sogar über die ___ nach Weil am Rhein.",
+      "answer": "Grenze",
+      "options": [
+       "Tür",
+       "Brücke",
+       "Grenze"
+      ]
+     },
+     {
+      "type": "mc",
+      "prompt_ko": "트램이 꽉 차면 나는 무엇을 하나?",
+      "options": [
+       "문 옆에 서서 정류장 표지판을 읽는다",
+       "다음 트램을 기다린다",
+       "걸어서 간다"
+      ],
+      "answer": 0
+     },
+     {
+      "type": "summary",
+      "prompt_ko": "한 줄로 요약 (독일어 또는 한국어)"
+     }
+    ]
+   }
+  ],
+  "summit": {
+   "text_de": "",
+   "note_ko": "오늘 꼭대기는 비워 둔다. 원문은 7일째에 아돌프 로스."
+  }
+ },
+ "ear": {
+  "text_de": "Ich bin am Bahnhof SBB. Hier ist die Haltestelle. Ich kaufe eine Fahrkarte am Automaten. Dann kommt die Tram. Das ist die Linie 8. Die 8 fährt über den Rhein bis nach Weil am Rhein. Nach drei Haltestellen steige ich aus.",
+  "lang": "de-DE",
+  "rates": [
+   0.75,
+   0.9,
+   1.0
+  ]
+ },
+ "hand": {
+  "situation_ko": "트램 안. 이 트램이 바르퓌서플라츠에 서는지 옆 사람에게 묻는다.",
+  "prompt_ko": "정중한 질문 한 문장.",
+  "model_de": "Entschuldigung, hält diese Tram am Barfüsserplatz?",
+  "chunks": [
+   "Entschuldigung, …",
+   "Hält diese Tram am …?",
+   "Wo muss ich aussteigen?"
+  ]
+ }
+}

@@ -1,0 +1,174 @@
+{
+ "id": "day-02",
+ "theme_ko": "바젤 거리의 글자",
+ "new_cards": [
+  "basel-strasse:die-faehre",
+  "basel-strasse:der-fluss",
+  "basel-strasse:das-ufer",
+  "basel-strasse:das-seil",
+  "basel-strasse:die-seite",
+  "basel-strasse:langsam"
+ ],
+ "stair": {
+  "source": {
+   "author": "선생",
+   "title": "Die Fähre",
+   "year": 2026,
+   "license": "own",
+   "url": ""
+  },
+  "layers": [
+   {
+    "level": "A1",
+    "text_de": "Ich steige an der Haltestelle Schifflände aus und gehe zum Rhein. Der Fluss ist breit und schnell. Es gibt eine Brücke, aber ich nehme die Fähre. Ich brauche keine Fahrkarte, ich bezahle direkt auf dem Boot. Die Fähre ist klein. Sie hat keinen Motor. Über dem Fluss hängt ein langes Seil. Das Seil hält die Fähre. Das Wasser schiebt sie langsam auf die andere Seite. Nach ein paar Minuten bin ich am anderen Ufer.",
+    "gloss": [
+     {
+      "de": "Schifflände",
+      "ko": "정류장 이름 (옛 선착장)"
+     },
+     {
+      "de": "bezahlen",
+      "ko": "돈을 내다"
+     },
+     {
+      "de": "breit",
+      "ko": "넓은"
+     },
+     {
+      "de": "schnell",
+      "ko": "빠른"
+     },
+     {
+      "de": "die Brücke",
+      "ko": "다리"
+     },
+     {
+      "de": "der Motor",
+      "ko": "엔진"
+     },
+     {
+      "de": "hängen",
+      "ko": "걸려 있다"
+     },
+     {
+      "de": "halten",
+      "ko": "붙잡다"
+     },
+     {
+      "de": "schieben",
+      "ko": "밀다"
+     }
+    ],
+    "tasks": [
+     {
+      "type": "cloze",
+      "prompt_de": "Das ___ hält die Fähre.",
+      "answer": "Seil",
+      "options": [
+       "Ufer",
+       "Wasser",
+       "Seil"
+      ]
+     },
+     {
+      "type": "mc",
+      "prompt_ko": "나룻배를 움직이는 것은?",
+      "options": [
+       "엔진",
+       "강물",
+       "바람"
+      ],
+      "answer": 1
+     },
+     {
+      "type": "summary",
+      "prompt_ko": "한 줄로 요약 (독일어 또는 한국어)"
+     }
+    ]
+   },
+   {
+    "level": "A2",
+    "text_de": "In Basel gibt es vier Fähren über den Rhein. Keine von ihnen hat einen Motor. Ein Stahlseil hängt hoch über dem Fluss, und die Fähre hängt mit einem zweiten Seil daran. Der Fährmann stellt das Boot schräg in die Strömung, und der Rhein schiebt es zum anderen Ufer. Im Sommer springen viele Leute ins Wasser und schwimmen mit dem Fluss. Von der Fähre aus sieht man das Münster auf dem Hügel.",
+    "gloss": [
+     {
+      "de": "das Stahlseil",
+      "ko": "강철 케이블"
+     },
+     {
+      "de": "daran",
+      "ko": "거기에"
+     },
+     {
+      "de": "der Fährmann",
+      "ko": "뱃사공"
+     },
+     {
+      "de": "schräg",
+      "ko": "비스듬히"
+     },
+     {
+      "de": "die Strömung",
+      "ko": "물살"
+     },
+     {
+      "de": "springen",
+      "ko": "뛰어들다"
+     },
+     {
+      "de": "der Hügel",
+      "ko": "언덕"
+     }
+    ],
+    "tasks": [
+     {
+      "type": "cloze",
+      "prompt_de": "Der Fährmann stellt das Boot schräg in die ___.",
+      "answer": "Strömung",
+      "options": [
+       "Brücke",
+       "Strömung",
+       "Kirche"
+      ]
+     },
+     {
+      "type": "mc",
+      "prompt_ko": "바젤 라인강의 나룻배는 몇 척인가?",
+      "options": [
+       "둘",
+       "여섯",
+       "넷"
+      ],
+      "answer": 2
+     },
+     {
+      "type": "summary",
+      "prompt_ko": "한 줄로 요약 (독일어 또는 한국어)"
+     }
+    ]
+   }
+  ],
+  "summit": {
+   "text_de": "",
+   "note_ko": "오늘 꼭대기는 비워 둔다. 원문은 7일째에 아돌프 로스."
+  }
+ },
+ "ear": {
+  "text_de": "Das ist der Rhein. Der Fluss ist breit und schnell. Hier gibt es eine Fähre. Sie hat keinen Motor. Ein Seil hält die Fähre. Das Wasser schiebt sie langsam auf die andere Seite.",
+  "lang": "de-DE",
+  "rates": [
+   0.75,
+   0.9,
+   1.0
+  ]
+ },
+ "hand": {
+  "situation_ko": "토요일 오후. 정현과 강가에서 만나기로 했다. 먼저 도착해 메시지를 보낸다.",
+  "prompt_ko": "어디서 기다리는지 한 문장, 이어서 짧은 질문.",
+  "model_de": "Ich bin schon am Ufer bei der Fähre. Wo bist du?",
+  "chunks": [
+   "Ich bin schon …",
+   "am Ufer bei der Fähre",
+   "Wo bist du?"
+  ]
+ }
+}

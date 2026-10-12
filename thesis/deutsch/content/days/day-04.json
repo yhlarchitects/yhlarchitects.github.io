@@ -1,0 +1,166 @@
+{
+ "id": "day-04",
+ "theme_ko": "바젤 거리의 글자",
+ "new_cards": [
+  "basel-strasse:der-platz",
+  "basel-strasse:das-museum",
+  "basel-strasse:sich-treffen",
+  "basel-strasse:das-mittagessen",
+  "basel-strasse:die-kollegin",
+  "basel-strasse:um-uhr"
+ ],
+ "stair": {
+  "source": {
+   "author": "선생",
+   "title": "Der Barfüsserplatz",
+   "year": 2026,
+   "license": "own",
+   "url": ""
+  },
+  "layers": [
+   {
+    "level": "A1",
+    "text_de": "Das ist der Barfüsserplatz. Viele Leute sagen einfach „Barfi“. Hier halten viele Trams, auch die Linie 8. Am Platz steht eine alte Kirche. Heute ist sie ein Museum, das Historische Museum. Um zwölf Uhr treffe ich hier meine Kollegin. Wir essen zusammen zu Mittag. Dann fahren wir mit der Tram zurück ins Büro.",
+    "gloss": [
+     {
+      "de": "einfach",
+      "ko": "그냥"
+     },
+     {
+      "de": "halten",
+      "ko": "(트램이) 서다"
+     },
+     {
+      "de": "historisch",
+      "ko": "역사의"
+     },
+     {
+      "de": "zusammen",
+      "ko": "함께"
+     },
+     {
+      "de": "zu Mittag essen",
+      "ko": "점심을 먹다"
+     },
+     {
+      "de": "zurück",
+      "ko": "되돌아"
+     },
+     {
+      "de": "das Büro",
+      "ko": "사무실"
+     }
+    ],
+    "tasks": [
+     {
+      "type": "cloze",
+      "prompt_de": "Hier ___ viele Trams.",
+      "answer": "halten",
+      "options": [
+       "wohnen",
+       "halten",
+       "sehen"
+      ]
+     },
+     {
+      "type": "mc",
+      "prompt_ko": "광장의 옛 교회는 지금 무엇인가?",
+      "options": [
+       "역사박물관",
+       "식당",
+       "트램 정류장"
+      ],
+      "answer": 0
+     },
+     {
+      "type": "summary",
+      "prompt_ko": "한 줄로 요약 (독일어 또는 한국어)"
+     }
+    ]
+   },
+   {
+    "level": "A2",
+    "text_de": "Der Barfüsserplatz ist einer der wichtigsten Treffpunkte in Basel. Seinen Namen hat er von den Franziskanern. Man nannte diese Mönche früher „Barfüßer“, weil sie nur Sandalen und keine festen Schuhe trugen. Ihre Kirche steht noch heute am Platz, und darin ist das Historische Museum. Mittags ist hier viel los: Die Leute steigen aus der Tram, kaufen schnell etwas zu essen und gehen weiter. Wer sich in Basel verabredet, sagt oft nur: „Treffen wir uns am Barfi?“",
+    "gloss": [
+     {
+      "de": "der Treffpunkt",
+      "ko": "만나는 곳"
+     },
+     {
+      "de": "der Mönch",
+      "ko": "수도사"
+     },
+     {
+      "de": "nannte (nennen)",
+      "ko": "불렀다"
+     },
+     {
+      "de": "trugen (tragen)",
+      "ko": "신었다, 입었다"
+     },
+     {
+      "de": "fest",
+      "ko": "단단한"
+     },
+     {
+      "de": "viel los",
+      "ko": "북적이는"
+     },
+     {
+      "de": "sich verabreden",
+      "ko": "약속을 잡다"
+     }
+    ],
+    "tasks": [
+     {
+      "type": "cloze",
+      "prompt_de": "Mittags ist hier viel ___.",
+      "answer": "los",
+      "options": [
+       "Zeit",
+       "los",
+       "Platz"
+      ]
+     },
+     {
+      "type": "mc",
+      "prompt_ko": "‘바르퓌서’라는 이름은 어디서 왔나?",
+      "options": [
+       "광장의 분수",
+       "옛 시장",
+       "샌들만 신은 수도사들"
+      ],
+      "answer": 2
+     },
+     {
+      "type": "summary",
+      "prompt_ko": "한 줄로 요약 (독일어 또는 한국어)"
+     }
+    ]
+   }
+  ],
+  "summit": {
+   "text_de": "",
+   "note_ko": "오늘 꼭대기는 비워 둔다. 원문은 7일째에 아돌프 로스."
+  }
+ },
+ "ear": {
+  "text_de": "Das ist der Barfüsserplatz. Viele Leute sagen einfach „Barfi“. Hier halten viele Trams. Um zwölf Uhr treffe ich hier meine Kollegin. Wir essen zusammen zu Mittag.",
+  "lang": "de-DE",
+  "rates": [
+   0.75,
+   0.9,
+   1.0
+  ]
+ },
+ "hand": {
+  "situation_ko": "회사. 동료에게 오늘 점심을 같이 하자고 메시지를 보낸다.",
+  "prompt_ko": "du체 질문 한 문장, 이어서 시간과 장소.",
+  "model_de": "Hast du heute Mittag Zeit? Wir könnten um zwölf Uhr am Barfi essen.",
+  "chunks": [
+   "Hast du heute Mittag Zeit?",
+   "Wir könnten …",
+   "um zwölf Uhr"
+  ]
+ }
+}
