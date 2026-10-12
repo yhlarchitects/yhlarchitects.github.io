@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="ko" data-page="torino-2026-10-v7">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>토리노 2박 3일 · 10.16~18</title>
+<style>
+
+
+:root {
+  --blue: #1E4C98; --blue-text: #1E4C98; --pill: #1E4C98;
+  --bg: #FFFFFF; --bg2: #F4F4F2; --box: #EFEFEC;
+  --text: #111111; --muted: #6B6B6B; --faint: #A3A3A3;
+  --line: #111111; --line-soft: #DCDCDA;
+  --c-red: #FFA9A6; --c-white: #F6F6F6; --c-yellow: #FFE35C; --c-green: #A8EA92; --c-purple: #C4ADFF; --c-grey: #8E8E8E; --c-text: #111111;
+  --hl: rgba(30,76,152,.18);
+  --font: "Univers 55", "Pretendard Variable", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  --mono: "SF Mono", Menlo, Consolas, "Noto Sans Mono CJK KR", monospace;
+  --r: 2px; --r-box: .94em; --r-pill: 999px;
+  --w: 64em;            /* 문서 기본 폭. .narrow 44em(수첩·모바일) · .wide 100em(보드·표) · .full 제한 없음 */
+  --gutter: 32px;
+  --top-h: 48px;
+}
+html[data-theme="dark"] {
+  --blue-text: #6E95DB; --pill: #2D63C8;
+  --bg: #0F0F0F; --bg2: #1A1A1A; --box: #1E1E1E;
+  --text: #F2F2F2; --muted: #9A9A9A; --faint: #5E5E5E;
+  --line: #F2F2F2; --line-soft: #2C2C2C;
+  --hl: rgba(45,99,200,.55);
+}
+
+/* ── 바탕 ── */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font); font-size: 16px; line-height: 1.55; }
+.wrap { max-width: var(--w); margin: 0 auto; padding: 48px var(--gutter) 96px; }
+.wrap.narrow { --w: 44em; }
+.wrap.wide { --w: 100em; }
+.wrap.full { --w: none; max-width: none; }
+@media (max-width: 720px) { :root { --gutter: 16px; } .wrap { padding-top: 32px; padding-bottom: 64px; } }
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+::selection { background: rgba(30,76,152,.28); }
+.num, td.num, .tabular { font-variant-numeric: tabular-nums; }
+.muted { color: var(--muted); } .faint { color: var(--faint); } .small { font-size: .85em; }
+.right { text-align: right; } .center { text-align: center; }
+
+/* ── 상단 바: 작은 대문자 이름 + 알약 버튼들. 밝기 버튼은 여기 둔다 ── */
+.top { position: sticky; top: 0; z-index: 9; display: flex; justify-content: space-between; align-items: center; gap: 1em; min-height: var(--top-h); padding: 0 var(--gutter); background: var(--bg); border-bottom: 1px solid var(--line-soft); }
+.top .name { font-size: .78em; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.top .name b { color: var(--text); font-weight: 500; }
+.top .tools { display: flex; gap: .4em; flex: none; }
+
+/* ── 버튼·탭·칩: 전부 알약. 기본은 외곽선, 선택·주 동작은 파랑 채움 ── */
+.btn, .tabs button, .toc a, .chip, .tag {
+  display: inline-flex; align-items: center; gap: .4em; width: fit-content; max-width: 100%;
+  background: transparent; color: var(--text); border: 1px solid var(--line); border-radius: var(--r-pill);
+  padding: .15em .8em; font: inherit; font-size: .78em; text-transform: uppercase; letter-spacing: .06em; line-height: 1.6;
+  text-decoration: none; white-space: nowrap; cursor: default;
+}
+.btn, .tabs button, .toc a { cursor: pointer; }
+.btn:hover, .tabs button:hover, .toc a:hover { background: var(--bg2); }
+.btn.primary, .btn.on, .btn[aria-pressed="true"], .tabs button[aria-selected="true"], .toc a.on { background: var(--pill); border-color: var(--pill); color: #FFF; }
+.btn:disabled { color: var(--faint); border-color: var(--line-soft); cursor: not-allowed; }
+.tabs, .toc, .chips { display: flex; flex-wrap: wrap; gap: .5em; }
+.tabs { margin: 0 0 1.4em; } .toc { margin: 0 0 3em; }
+/* 상태 6색 - 두 모드 같은 색, 글자 검정(회색만 흰 글자). 의미는 고정: 빨강 실패·위험·마감 임박 / 흰 확인 중·질문 / 노랑 주의·이번 주 핵심 / 초록 완료·확보 / 보라 정보·조사·결정 / 회색 막힘·보류 */
+.chip.red, .co.red, .dot.red { background: var(--c-red); border-color: transparent; color: var(--c-text); }
+.chip.white, .co.white, .dot.white { background: var(--c-white); border-color: transparent; color: #111; box-shadow: inset 0 0 0 1px var(--line-soft); }
+.chip.yellow, .co.yellow, .dot.yellow { background: var(--c-yellow); border-color: transparent; color: var(--c-text); }
+.chip.green, .co.green, .dot.green { background: var(--c-green); border-color: transparent; color: var(--c-text); }
+.chip.purple, .co.purple, .dot.purple { background: var(--c-purple); border-color: transparent; color: var(--c-text); }
+.chip.grey, .co.grey, .dot.grey { background: var(--c-grey); border-color: transparent; color: #FFF; }
+.chip.blue { background: var(--pill); border-color: transparent; color: #FFF; }
+/* 파랑 알약 = 옵시디언 H4. 소제목·판정 머리·강조 한 줄에만, 한 화면에 한두 개 */
+.pill { display: inline-flex; align-items: center; width: fit-content; max-width: 100%; background: var(--pill); color: #FFF; font-size: 1em; font-weight: 500; letter-spacing: .01em; line-height: 1; padding: .6em .9em .28em; border-radius: var(--r-pill); margin: 1.8em 0 .6em; }
+
+/* ── 글 ── */
+h1, .title { font-size: 1.9em; font-weight: 400; letter-spacing: -.035em; line-height: 1.1; margin: 0 0 .4em; text-wrap: balance; }
+.lead { color: var(--muted); margin: 0 0 2.5em; font-size: 1.05em; }
+.meta { font-size: .78em; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 0 0 1.2em; }
+.meta b { color: var(--text); font-weight: 500; }
+h2 { font-size: 1.3em; font-weight: 400; letter-spacing: -.02em; line-height: 1.15; border-top: 1px solid var(--line); padding-top: .45em; margin: 3.2em 0 .3em; }
+h2 small { font-size: .6em; color: var(--muted); letter-spacing: 0; margin-left: .6em; }
+h2 + .why, .sec > .why { color: var(--muted); font-size: .92em; margin: 0 0 1.4em; }
+h3 { font-size: 1.08em; font-weight: 500; letter-spacing: -.01em; margin: 1.8em 0 .5em; }
+h4 { font-size: 1em; font-weight: 500; margin: 1.6em 0 .4em; }
+h5, h6, .label { font-size: .75em; font-weight: 400; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 1.6em 0 .5em; }
+p { margin: 0 0 .8em; }
+a { color: var(--blue-text); text-decoration: underline; text-underline-offset: .18em; text-decoration-thickness: 1px; }
+strong, b { font-weight: 600; }
+mark { background: var(--hl); color: inherit; border-radius: var(--r); padding: 0 .12em; }
+code, kbd { background: var(--bg2); color: var(--text); font-family: var(--mono); font-size: .86em; padding: .05em .3em; border-radius: var(--r); }
+pre { background: var(--bg2); border: 0; padding: .9em 1.1em; border-radius: var(--r); margin: 0 0 1em; font-family: var(--mono); font-size: .86em; line-height: 1.6; overflow: auto; }
+pre code { background: transparent; padding: 0; }
+hr { border: 0; border-top: 1px solid var(--line); margin: 2em 0; }
+ul, ol { margin: 0 0 .8em; padding-left: 1.4em; } li { margin: .15em 0; }
+blockquote, .box { background: var(--box); border: 0; border-radius: var(--r-box); padding: .9em 1.3em; margin: 0 0 1.2em; }
+blockquote > :first-child, .box > :first-child, .co > :first-child { margin-top: 0; }
+blockquote > :last-child, .box > :last-child, .co > :last-child { margin-bottom: 0; }
+blockquote.q { text-align: center; }
+small, .fn { font-size: .85em; color: var(--muted); }
+.fn { border-top: 1px solid var(--line-soft); padding-top: .5em; margin-top: 1em; }
+
+/* ── 콜아웃·판정 상자: 모서리 .94em, 제목은 작게 ── */
+.co { background: var(--box); border-radius: var(--r-box); padding: .9em 1.3em; margin: 0 0 1em; color: var(--text); }
+.co .t { display: flex; align-items: center; gap: .5em; font-size: .85em; font-weight: 500; margin: 0 0 .45em; }
+.co .t svg { width: 1.05em; height: 1.05em; stroke: currentColor; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+.co code { background: rgba(0,0,0,.12); color: inherit; }
+.co a { color: inherit; }
+.verdict { background: var(--box); border-radius: var(--r-box); padding: 1.1em 1.3em 1em; margin: 1.6em 0; }
+.verdict .pill { margin: 0 0 .7em; }
+.verdict p:last-child { margin-bottom: 0; }
+
+/* ── 표: 위·아래 진한 선, 안쪽 옅은 선, 머리글은 작은 대문자 ── */
+table { border-collapse: collapse; width: 100%; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin: 0 0 1.2em; }
+th { color: var(--muted); font-weight: 400; font-size: .75em; text-transform: uppercase; letter-spacing: .08em; text-align: left; padding: .55em .6em; border-bottom: 1px solid var(--line-soft); vertical-align: bottom; }
+td { padding: .55em .6em; border-bottom: 1px solid var(--line-soft); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+th.num, td.num { text-align: right; }
+table.hover tbody tr:hover td { background: var(--bg2); }
+table.sticky thead th { position: sticky; top: var(--top-h); background: var(--bg); z-index: 2; }
+table.sticky-col th:first-child, table.sticky-col td:first-child { position: sticky; left: 0; background: var(--bg); z-index: 1; }
+.tblwrap { overflow-x: auto; margin: 0 0 1.2em; }
+.tblwrap table { margin: 0; }
+tr.pick td { background: var(--hl); }
+tr.dim td { color: var(--faint); }
+
+/* ── 정의 행 key-value ── */
+.kv { display: grid; grid-template-columns: minmax(7em, max-content) 1fr; gap: .35em 1.2em; margin: 0 0 1.2em; }
+.kv dt { font-size: .75em; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); padding-top: .25em; margin: 0; }
+.kv dd { margin: 0; }
+.kv.lined > * { border-bottom: 1px solid var(--line-soft); padding-bottom: .35em; }
+
+/* ── 카드·격자: 1px 옅은 선, 모서리 2px, 그림자 없음 ── */
+.grid { display: grid; gap: 1em; grid-template-columns: repeat(auto-fit, minmax(16em, 1fr)); margin: 0 0 1.4em; }
+.grid.c2 { grid-template-columns: repeat(2, 1fr); } .grid.c3 { grid-template-columns: repeat(3, 1fr); } .grid.c4 { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 720px) { .grid.c2, .grid.c3, .grid.c4 { grid-template-columns: 1fr; } }
+.card { border: 1px solid var(--line-soft); border-radius: var(--r); padding: 1em 1.1em; background: var(--bg); min-width: 0; }
+.card.pick { border-color: var(--line); }
+.card > :first-child { margin-top: 0; } .card > :last-child { margin-bottom: 0; }
+.card .label { margin-top: 0; }
+.card h3 { margin-top: 0; }
+
+/* ── 수치: 큰 숫자는 얇게, 자간 조임, 라벨은 대문자 ── */
+.stat { display: flex; flex-direction: column; gap: .15em; }
+.stat .n { font-size: 2.4em; font-weight: 400; letter-spacing: -.035em; line-height: 1; font-variant-numeric: tabular-nums; }
+.stat .n small { font-size: .45em; color: var(--muted); letter-spacing: 0; margin-left: .2em; }
+.stat .l { font-size: .75em; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.stats { display: grid; gap: 1.2em 2em; grid-template-columns: repeat(auto-fit, minmax(9em, 1fr)); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 1.1em 0; margin: 0 0 1.6em; }
+.dday .n { font-size: 3.6em; }
+.dday .n.soon { color: var(--blue-text); }
+/* 미터: 1px 궤도 위 파랑 채움. 글자형 미터(● ● ◐ ○)는 .dots */
+.meter { position: relative; height: 1px; background: var(--line-soft); margin: .6em 0; }
+.meter i { position: absolute; left: 0; top: -1px; height: 3px; background: var(--blue); }
+.dots { font-family: var(--mono); font-size: .8em; letter-spacing: .25em; color: var(--muted); white-space: nowrap; }
+.dots b { color: var(--text); font-weight: 400; }
+
+/* ── 체크리스트: 원형 체크, 되면 파랑 채움 + 취소선. data-ck 가 있으면 JS가 기억한다 ── */
+.ck { list-style: none; padding: 0; margin: 0 0 1.2em; }
+.ck li { display: flex; align-items: flex-start; gap: .6em; padding: .35em 0; border-bottom: 1px solid var(--line-soft); margin: 0; }
+.ck li:last-child { border-bottom: 0; }
+.ck input[type="checkbox"] { appearance: none; -webkit-appearance: none; flex: none; width: 1.05em; height: 1.05em; margin: .25em 0 0; border: 1px solid var(--line); border-radius: 50%; background: transparent; position: relative; cursor: pointer; }
+.ck input[type="checkbox"]:checked { background: var(--blue); border-color: var(--blue); }
+.ck input[type="checkbox"]:checked::after { content: ""; position: absolute; left: .3em; top: .1em; width: .25em; height: .5em; border: solid #FFF; border-width: 0 2px 2px 0; transform: rotate(45deg); }
+.ck input[type="checkbox"]:checked + label, .ck li.done > label { text-decoration: line-through; color: var(--muted); }
+.ck label { flex: 1; cursor: pointer; }
+.ck .who { font-size: .78em; color: var(--muted); white-space: nowrap; margin-left: auto; padding-left: .8em; }
+
+/* ── 타임라인: 왼쪽 1px 선 + 점. 점 색은 상태 6색 ── */
+.tl { list-style: none; margin: 0 0 1.4em; padding: 0 0 0 1.2em; border-left: 1px solid var(--line-soft); }
+.tl li { position: relative; padding: .3em 0 .3em .4em; margin: 0; }
+.tl li::before { content: ""; position: absolute; left: calc(-1.2em - 5px); top: .85em; width: 9px; height: 9px; border-radius: 50%; background: var(--bg); border: 1px solid var(--line); }
+.tl li.done::before { background: var(--text); }
+.tl li.now::before { background: var(--pill); border-color: var(--pill); width: 11px; height: 11px; left: calc(-1.2em - 6px); top: .75em; }
+.tl li.key::before { background: var(--c-yellow); border-color: transparent; }
+.tl li.judge::before { background: var(--c-purple); border-color: transparent; }
+.tl li.risk::before { background: var(--c-red); border-color: transparent; }
+.tl li.ok::before { background: var(--c-green); border-color: transparent; }
+.tl .d { font-variant-numeric: tabular-nums; color: var(--muted); font-size: .85em; margin-right: .6em; }
+.tl li.now .t { font-weight: 500; }
+.tl .s { display: block; color: var(--muted); font-size: .9em; }
+
+/* ── 시각표 행: 시간 열(tabular) + 장소 + 메모. 여행 일정·답사 동선 ── */
+.tt { margin: 0 0 1.4em; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.tt .row { display: grid; grid-template-columns: 5.5em 1fr auto; gap: .2em 1em; padding: .6em .2em; border-bottom: 1px solid var(--line-soft); align-items: baseline; }
+.tt .row:last-child { border-bottom: 0; }
+.tt .row.now { background: var(--bg2); }
+.tt .row.dim { color: var(--faint); }
+.tt .time { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tt .time small { display: block; color: var(--muted); font-size: .75em; }
+.tt .place b { font-weight: 500; }
+.tt .place .s { display: block; color: var(--muted); font-size: .9em; }
+.tt .side { justify-self: end; display: flex; gap: .4em; align-items: center; }
+@media (max-width: 520px) { .tt .row { grid-template-columns: 4.5em 1fr; } .tt .side { grid-column: 2; justify-self: start; } }
+/* 날짜 띠(일정의 하루 머리) */
+.day { display: flex; align-items: baseline; gap: .8em; border-top: 1px solid var(--line); padding-top: .45em; margin: 2.4em 0 .8em; }
+.day .n { font-size: 1.3em; font-weight: 400; letter-spacing: -.02em; }
+.day .w { font-size: .78em; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+
+/* ── 보드: 2·3단 패널, 1px 선으로만 나눔. 1180px 아래는 한 단 ── */
+.panes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--line); }
+.panes.c2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.pane { padding: 1.2em 1.4em 2em; border-right: 1px solid var(--line-soft); min-width: 0; }
+.pane:last-child { border-right: 0; }
+.pane > .label:first-child, .pane > h2:first-child { margin-top: 0; }
+.pane h2 { border-top: 0; padding-top: 0; margin-top: 2em; font-size: 1.08em; }
+.pane h2:first-of-type { margin-top: 0; }
+.panes.scroll { height: calc(100vh - var(--top-h)); }
+.panes.scroll .pane { overflow-y: auto; }
+@media (max-width: 1180px) { .panes, .panes.c2 { grid-template-columns: 1fr; } .pane { border-right: 0; border-bottom: 1px solid var(--line-soft); } .pane:last-child { border-bottom: 0; } .panes.scroll { height: auto; } .panes.scroll .pane { overflow: visible; } }
+/* 항목 행: 왼쪽 글 + 오른쪽 칩 */
+.row2 { display: flex; justify-content: space-between; align-items: flex-start; gap: 1em; padding: .5em 0; border-bottom: 1px solid var(--line-soft); }
+.row2:last-child { border-bottom: 0; }
+.row2 .s { display: block; color: var(--muted); font-size: .9em; }
+.list { margin: 0 0 1.4em; }
+
+/* ── 도표: 선은 글자색, 강조 하나는 파랑 ── */
+.fig { width: 100%; height: auto; display: block; margin: 0 0 1.4em; }
+.fig text { font-family: var(--font); fill: var(--text); }
+.fig .ax { stroke: var(--line-soft); } .fig .ln { stroke: var(--text); fill: none; stroke-width: 1.25; } .fig .ac { stroke: var(--blue); fill: var(--blue); } .fig .mu { fill: var(--muted); }
+.bars { display: grid; gap: .45em; margin: 0 0 1.4em; }
+.bars .b { display: grid; grid-template-columns: minmax(6em, max-content) 1fr auto; gap: .8em; align-items: center; font-size: .92em; }
+.bars .b .bar { height: 10px; background: var(--line-soft); position: relative; }
+.bars .b .bar i { position: absolute; left: 0; top: 0; bottom: 0; background: var(--text); }
+.bars .b.ac .bar i { background: var(--blue); }
+.bars .b .v { font-variant-numeric: tabular-nums; color: var(--muted); }
+
+/* ── 기입란·서명 ── */
+.blank { display: inline-block; min-width: 8em; border-bottom: 1px solid var(--line); vertical-align: baseline; }
+.wline { border-bottom: 1px solid var(--line-soft); height: 1.8em; }
+.sig { display: grid; grid-template-columns: 1fr 1fr; gap: 2em; margin: 2em 0 0; }
+.sig div { border-top: 1px solid var(--line); padding-top: .4em; font-size: .78em; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+
+/* ── 인쇄·A4 시트: .sheet 하나가 한 쪽. 화면에서는 회색 바탕 위 흰 종이 ── */
+.sheet { width: 210mm; min-height: 297mm; margin: 0 auto 12mm; padding: 18mm 16mm 20mm; background: #FFF; color: #111; position: relative; }
+.sheet .run { position: absolute; top: 8mm; left: 16mm; right: 16mm; display: flex; justify-content: space-between; font-size: .72em; text-transform: uppercase; letter-spacing: .08em; color: #6B6B6B; }
+.sheet .pg { position: absolute; bottom: 8mm; right: 16mm; font-size: .72em; color: #6B6B6B; font-variant-numeric: tabular-nums; }
+body.paper { background: var(--bg2); }
+html[data-theme="dark"] body.paper { background: #0F0F0F; }
+@page { size: A4; margin: 0; }
+@media print {
+  html, body { background: #FFF !important; color: #111 !important; }
+  .top, .tools, .noprint { display: none !important; }
+  .wrap { max-width: none; padding: 12mm 14mm; }
+  .sheet { margin: 0; width: auto; min-height: 0; page-break-after: always; }
+  .sheet:last-child { page-break-after: auto; }
+  .chip, .co, .dot, .pill, .verdict, .box, blockquote, .tl li::before { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  a { color: inherit; text-decoration: none; }
+  .panes { grid-template-columns: 1fr; } .pane { border-right: 0; }
+  h2, .day { page-break-after: avoid; } table, .card, .co { page-break-inside: avoid; }
+}
+
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="name"><b>토리노</b> · 2박 3일 계획 · 2026-10-12</div>
+  <div class="tools">
+    <button class="btn js-print noprint" type="button">Print</button>
+    <button class="btn js-theme" type="button" aria-pressed="false">Dark</button>
+  </div>
+</header>
+
+<main class="wrap wide">
+  <p class="meta">10.16 금 → 10.18 일 · 연호 + 정현 · 기차 · <b>정현 생일</b></p>
+  <h1>토리노 2박 3일 · 생일, 트러플, 콜레뇨</h1>
+  <p class="lead">금은 밀라노에서 점심 먹고 토리노로 와서 생일 저녁. 토는 알바 흰 트러플 시장, 돌아와 링고토 옥상. 일 오전은 콜레뇨 체르토사 공원에서 자로 재며 찍고 오후 기차로 바젤. 숙소 Ca bela는 지하철 M1 Spezia역 앞이라 사흘이 M1 한 줄로 이어진다.</p>
+
+  <div class="stats">
+    <div class="stat dday"><span class="n" data-dday="2026-10-16T05:02:00+02:00">D-4</span><span class="l">출발 · 바젤 SBB 05:02</span></div>
+    <div class="stat"><span class="n">€286<small>2박</small></span><span class="l">숙소 · Ca bela</span></div>
+    <div class="stat"><span class="n">16:03</span><span class="l">금 토리노 도착</span></div>
+    <div class="stat"><span class="n">21:09</span><span class="l">일 바젤 도착</span></div>
+    <div class="stat"><span class="n" data-ck-count="todo">0/10</span><span class="l">예약 · 표</span></div>
+  </div>
+
+  <div class="tabs" data-tabs="day">
+    <button type="button" data-tab="fri">10.16 금 · 밀라노 → 토리노</button>
+    <button type="button" data-tab="sat">10.17 토 · 알바 · 링고토</button>
+    <button type="button" data-tab="sun">10.18 일 · 콜레뇨 → 바젤</button>
+    <button type="button" data-tab="prep">숙소 · 예약 · 가방</button>
+  </div>
+
+  <!-- 금 -->
+  <section data-pane="fri">
+    <div class="panes c2">
+      <div class="pane">
+        <p class="label">시각표</p>
+        <div class="tt">
+          <div class="row"><div class="time">05:02<small>IC 659</small></div><div class="place"><b>바젤 SBB → 루가노</b><span class="s">04:00 기상. 스위스 구간은 데이패스</span></div><div class="side"><span class="chip green">확보</span></div></div>
+          <div class="row"><div class="time">08:02<small>RE80</small></div><div class="place"><b>루가노 → 밀라노 중앙 09:17</b><span class="s">데이패스는 키아소까지. 키아소 → 밀라노 1인 €6.30</span></div><div class="side"><span class="chip white">표</span></div></div>
+          <div class="row"><div class="time">09:30<small>M3</small></div><div class="place"><b>중앙역 → Missori · 밀라노 시내 둘이</b><span class="s">Ca' Granda 안뜰 → Torre Velasca → 두오모. 걸어서 다 10분 안</span></div><div class="side"><span class="chip">답사</span></div></div>
+          <div class="row now"><div class="time">12:00</div><div class="place"><b>impressione Chongqing 점심</b><span class="s">Via G.B. Sammartini 19 · 12:00 개점, 15:00 마감. 거하게</span></div><div class="side"><span class="chip yellow">핵심</span></div></div>
+          <div class="row"><div class="time">14:40</div><div class="place"><b>걸어서 중앙역 승강장</b><span class="s">10~12분 · 동쪽 출입구 Piazza Luigi di Savoia</span></div><div class="side"></div></div>
+          <div class="row"><div class="time">15:02<small>FR 9514</small></div><div class="place"><b>밀라노 중앙 → 토리노 포르타 누오바 16:03</b><span class="s">2인 €55.80 환불 불가 · €72.00 환불 가능</span></div><div class="side"><span class="chip white">표</span></div></div>
+          <div class="row"><div class="time">16:10<small>M1</small></div><div class="place"><b>포르타 누오바 → Spezia · 숙소 체크인</b><span class="s">다섯 정거장 약 10분. 체크인 16:00~20:00</span></div><div class="side"><span class="chip green">숙소</span></div></div>
+          <div class="row"><div class="time">17:05<small>M1</small></div><div class="place"><b>숙소 → 포르타 누오바 → 걸어서 몰레</b><span class="s">비아 로마 → 카스텔로 광장 → 비아 포 포르티코 아래로. 약 25분</span></div><div class="side"><span class="chip">답사</span></div></div>
+          <div class="row"><div class="time">18:00</div><div class="place"><b>몰레 안토넬리아나 엘리베이터</b><span class="s">온라인 예약 1인 9유로. 해 질 무렵</span></div><div class="side"><span class="chip red">미예약</span></div></div>
+          <div class="row now"><div class="time">20:00</div><div class="place"><b>정현 생일 저녁 · 흰 트러플 타야린</b><span class="s">식당 미정. 생일 저녁은 찍지 않는다</span></div><div class="side"><span class="chip red">미예약</span></div></div>
+        </div>
+      </div>
+      <div class="pane">
+        <p class="label">건축 답사 노트 · 금</p>
+
+        <h3>Ca' Granda · 옛 마조레 병원</h3>
+        <p class="meta">필라레테 · 1456 착공 · 지금 밀라노 대학</p>
+        <p>프란체스코 스포르차가 세운 시립 병원. 십자 모양 병동 두 벌이 각각 안뜰 넷을 끼고, 가운데 큰 안뜰이 둘을 잇는다. 르네상스가 「아픈 사람을 위한 건물」을 처음 유형으로 만든 자리다. 1943년 폭격으로 크게 부서졌고 전후 리리아나 그라시가 고쳐 대학으로 바꿨다.</p>
+        <dl class="kv lined"><dt>볼 것</dt><dd>큰 안뜰의 이층 아케이드, 폭격 뒤 새로 쌓은 벽과 옛 벽돌 장식의 경계</dd><dt>이어짐</dt><dd>일요일 콜레뇨 병원 터와 한 쌍. 15세기 병원 안뜰 → 19세기 정신병원 → 공원</dd></dl>
+
+        <h3>Torre Velasca</h3>
+        <p class="meta">BBPR · 1956~1958 · 106 m</p>
+        <p>아래는 사무실, 위 여섯 층은 집이라 바깥으로 튀어나오고 비스듬한 콘크리트 갈비가 그 무게를 받는다. 중세 성탑을 떠올리게 한다는 이유로 1959년 국제 근대건축 회의에서 「역사로의 후퇴」라고 비판받은 건물이다.</p>
+        <dl class="kv lined"><dt>볼 것</dt><dd>꺾이는 지점의 갈비, 두오모 지붕과 함께 한 화면</dd></dl>
+
+        <h3>토리노 포르타 누오바 역</h3>
+        <p class="meta">알레산드로 마추케티 · 1861~1868</p>
+        <p>통일 이탈리아의 첫 수도가 된 해에 짓기 시작한 종착역. 큰 아치 유리면이 비아 로마 축의 끝을 닫는다. 내려서 고개를 들면 역 정면이 도시 격자의 시작점이다.</p>
+
+        <h3>비아 포와 포르티코</h3>
+        <p class="meta">아메데오 디 카스텔라몬테 · 1673 착공</p>
+        <p>직교 격자를 비스듬히 가르는 길. 정사각 단면의 상점 주랑 위로 주층 두 개를 올린 같은 정면이 이어지고, 옆길 위로도 주랑이 이어진다. 토리노 포르티코는 모두 합쳐 12~18 km로 소개된다. 비를 피하는 편의가 곧 왕권의 질서였다는 이중성이 핵심.</p>
+        <dl class="kv lined"><dt>볼 것</dt><dd>교차로마다 주랑이 끊기는지 이어지는지, 한 칸 보폭</dd></dl>
+
+        <h3>몰레 안토넬리아나</h3>
+        <p class="meta">알레산드로 안토넬리 · 1863 착공 · 지금 국립영화박물관</p>
+        <p>회당으로 시작해 시가 사들인 건물. 니체는 1888년 편지 초안에서 「아마 지금까지 지어진 가장 천재적인 건물」이라 했다. 유리 엘리베이터가 돔 안쪽 빈 공간을 지나 85 m 테라스까지 오른다. 돔 곡면에는 마리오 메르츠의 붉은 네온 피보나치 수열이 영구 작품으로 남았다.</p>
+        <dl class="kv lined"><dt>볼 것</dt><dd>엘리베이터 안에서 돔 안쪽 벽돌, 테라스에서 도시 격자와 슈페르가</dd><dt>정현</dt><dd>박물관 포스터 갤러리.</dd></dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- 토 -->
+  <section data-pane="sat" hidden>
+    <div class="panes c2">
+      <div class="pane">
+        <p class="label">시각표</p>
+        <div class="tt">
+          <div class="row"><div class="time">08:00<small>M1</small></div><div class="place"><b>Spezia → Lingotto 한 정거장 · 링고토역</b><span class="s">알바행 지역열차(SFM4)는 링고토역에 선다. 포르타 누오바까지 갈 필요 없다</span></div><div class="side"></div></div>
+          <div class="row"><div class="time">08:30경</div><div class="place"><b>링고토 → 브라 갈아타기 → 알바 10:00경</b><span class="s">토요일은 직통이 없다. 정확한 편은 금요일 밤 트렌이탈리아 앱으로</span></div><div class="side"><span class="chip white">편 확인</span></div></div>
+          <div class="row now"><div class="time">10:00</div><div class="place"><b>세계 흰 트러플 시장 · 알바 구시가</b><span class="s">시장은 토·일 09:30~19:30. 저울 사진 한 장, 시장 소리 1분</span></div><div class="side"><span class="chip yellow">핵심</span></div></div>
+          <div class="row"><div class="time">13:00</div><div class="place"><b>알바 트러플 점심</b><span class="s">박람회 주말이라 예약 권장</span></div><div class="side"><span class="chip red">미예약</span></div></div>
+          <div class="row"><div class="time">16:00</div><div class="place"><b>알바 → 토리노 링고토 17:30경</b><span class="s">링고토역에서 바로 링고토 건물로</span></div><div class="side"><span class="chip white">편 확인</span></div></div>
+          <div class="row"><div class="time">17:40</div><div class="place"><b>링고토 옥상 트랙 · 피스타 500</b><span class="s">10-28까지 화~일 10:00~19:00, 통합권 12유로(피나코테카 아녤리 포함). 해 질 무렵 트랙</span></div><div class="side"><span class="chip">선택</span></div></div>
+          <div class="row"><div class="time">19:00</div><div class="place"><b>이탈리 링고토 · 아페리티보와 가벼운 저녁</b><span class="s">링고토 맞은편, 숙소까지 걸어서</span></div><div class="side"><span class="chip">후보</span></div></div>
+        </div>
+        <div class="co yellow"><div class="t">이 주말 링고토</div>10-17·18 라우라 파우시니 공연, 링고토 박람회가 겹쳐 숙소 동네가 붐빈다. 토 저녁은 일찍 들어가거나 예약.</div>
+      </div>
+      <div class="pane">
+        <p class="label">건축 답사 노트 · 토</p>
+
+        <h3>알바 구시가</h3>
+        <p class="meta">중세 탑 집 · 「백 개의 탑의 도시」</p>
+        <p>중세 귀족 집안이 경쟁하듯 올린 네모난 탑 집이 구시가에 몇 채 남아 있다. 트러플 시장은 이 구시가 안에서 열린다. 낮은 지붕선 위로 탑이 몇 개 솟는지 세어 보면 도시의 옛 밀도가 보인다.</p>
+        <dl class="kv lined"><dt>볼 것</dt><dd>탑 집의 좁은 정면과 높이, 시장의 트러플 저울</dd></dl>
+
+        <h3>링고토 · 옥상 시험 주행 트랙</h3>
+        <p class="meta">자코모 마테트루코 · 1916~1923 · 전환 렌초 피아노 1985~2003</p>
+        <p>길이 500 m, 5층 철근콘크리트 공장. 원료가 1층으로 들어가 층마다 조립되며 올라갔고, 완성차는 옥상의 경사진 트랙에서 시험 주행한 뒤 나선 램프로 내려왔다. 생산 공정이 곧 건물 단면이 된 건물이다. 르 코르뷔지에가 『건축을 향하여』에 실었고, 영화 「이탈리안 잡」의 미니 추격 무대다. 1982년 생산이 멈춘 뒤 피아노가 전시장·호텔·대학·미술관으로 바꿨다.</p>
+        <dl class="kv lined"><dt>볼 것</dt><dd>트랙 끝 곡선의 뱅크 경사, 나선 램프의 리브, 트랙 위 피아노의 강철 상자 「스크리뇨」와 유리 구체 회의실 「볼라」</dd><dt>정원</dt><dd>트랙 위 옥상 정원 피스타 500(베네데토 카메라나 마스터플랜)</dd></dl>
+
+        <h3>이탈리 링고토 · 옛 카르파노 공장</h3>
+        <p class="meta">옛 카르파노 베르무트 공장 · 2007년 첫 이탈리</p>
+        <p>링고토 맞은편 베르무트 공장이 첫 이탈리 매장이 됐다. 공장 안뜰을 실내 통로로 다시 읽어 건물 안에 거리를 만들었다. 위층 카르파노 박물관은 옛 약초 배합실을 쓴다(무료).</p>
+        <dl class="kv lined"><dt>볼 것</dt><dd>매장 동선 속 공장 안뜰의 윤곽, 카르파노 박물관의 퓐테메스 방</dd></dl>
+
+        <h3>숙소 건물 · Ca bela</h3>
+        <p class="meta">1930년대 · Nizza Millefonti</p>
+        <p>피에몬테 사투리로 「예쁜 집」. 그 시절 처음 엘리베이터를 단 건물 축이고 정면의 퇴창이 이름의 이유다.</p>
+        <dl class="kv lined"><dt>볼 것</dt><dd>정면 퇴창, 옛 엘리베이터, 4층 모서리 창에서 토리노 언덕</dd></dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- 일 -->
+  <section data-pane="sun" hidden>
+    <div class="panes c2">
+      <div class="pane">
+        <p class="label">시각표</p>
+        <div class="tt">
+          <div class="row"><div class="time">08:30<small>M1</small></div><div class="place"><b>체크아웃 · Spezia → 포르타 누오바</b><span class="s">체크아웃은 10:00 전. 짐 들고 나온다</span></div><div class="side"></div></div>
+          <div class="row"><div class="time">08:45</div><div class="place"><b>포르타 누오바에 짐 맡기기</b><span class="s">1번 승강장 옆 KiPoint, 매일 08:00~20:00, 4시간 1개 €6(안내 사이트 값). 역 3분 거리 무인 보관함도 07:00~23:00</span></div><div class="side"><span class="chip white">확인</span></div></div>
+          <div class="row"><div class="time">09:00<small>M1</small></div><div class="place"><b>포르타 누오바 → 페르미, 걸어서 7분</b><span class="s">M1 약 18분. 체르토사 공원 Corso Pastrengo 51</span></div><div class="side"></div></div>
+          <div class="row now"><div class="time">09:30</div><div class="place"><b>체르토사 공원 첫 촬영 · 2시간</b><span class="s">아래 순서</span></div><div class="side"><span class="chip yellow">핵심</span></div></div>
+          <div class="row"><div class="time">11:30<small>M1</small></div><div class="place"><b>페르미 → 포르타 누오바</b></div><div class="side"></div></div>
+          <div class="row"><div class="time">12:00</div><div class="place"><b>포르타 누오바 쪽 점심</b><span class="s">14:30 짐 찾기, 14:40까지 승강장</span></div><div class="side"></div></div>
+          <div class="row"><div class="time">15:10<small>FR</small></div><div class="place"><b>토리노 → 밀라노 가리발디 16:10</b><span class="s">몬차 16:53 지역열차 → 루가노 18:02 IC → 올텐 20:33</span></div><div class="side"><span class="chip white">표</span></div></div>
+          <div class="row"><div class="time">21:09</div><div class="place"><b>바젤 SBB 도착</b><span class="s">예약 의무 없음</span></div><div class="side"></div></div>
+        </div>
+
+        <p class="label">공원 두 시간</p>
+        <div class="tt">
+          <div class="row"><div class="time">09:30</div><div class="place"><b>입구 안내판 · 남은 담 · 담이 끊긴 자리</b><span class="s">안내판 사진으로 일요일 개방 시간 확인</span></div><div class="side"><span class="chip">연호</span></div></div>
+          <div class="row now"><div class="time">09:40</div><div class="place"><b>자를 땅에 대는 손</b><span class="s">2 m 접이자를 펴서 놓는 동작 30초 × 3. 얼굴 없이 낮은 앵글</span></div><div class="side"><span class="chip yellow">꼭</span></div></div>
+          <div class="row now"><div class="time">09:50</div><div class="place"><b>측량 걷기</b><span class="s">자를 놓고 끝에서 다시 놓기 열 번 = 20.12 m. 측면 5~8분 + 발 아래 손</span></div><div class="side"><span class="chip yellow">꼭</span></div></div>
+          <div class="row"><div class="time">10:05</div><div class="place"><b>1제곱체인 한 칸</b><span class="s">20.12 m 끈으로 정사각형. 약 405 m², 환자 열 명당 1에이커라는 1847년 기준의 한 사람 몫</span></div><div class="side"><span class="chip">둘</span></div></div>
+          <div class="row"><div class="time">10:20</div><div class="place"><b>큰 나무 수관 · 그늘과 햇빛 경계에 두 사람</b></div><div class="side"></div></div>
+          <div class="row"><div class="time">10:35</div><div class="place"><b>가로 사진 · 자를 든 연호 뒷모습, 공원 넓게</b><span class="s">인스타 첫 장</span></div><div class="side"><span class="chip">정현</span></div></div>
+          <div class="row"><div class="time">10:45</div><div class="place"><b>기록 사진 · 연호 얼굴, 지도나 자, 공원 배경</b></div><div class="side"><span class="chip">정현</span></div></div>
+          <div class="row"><div class="time">10:55</div><div class="place"><b>Orto che Cura 텃밭 · 울타리 밖에서만</b><span class="s">안에 들어가지 않고 사람은 찍지 않는다</span></div><div class="side"></div></div>
+          <div class="row"><div class="time">11:05</div><div class="place"><b>도서관 건물 외관 · 건물 안내문</b></div><div class="side"></div></div>
+          <div class="row"><div class="time">11:10</div><div class="place"><b>소리 3곳 × 3분 · 낙엽 5장</b><span class="s">흙은 사진만</span></div><div class="side"></div></div>
+          <div class="row now"><div class="time">11:20</div><div class="place"><b>자를 접는 컷</b><span class="s">2 m → 24 cm, 손만, 10초 × 2</span></div><div class="side"><span class="chip yellow">꼭</span></div></div>
+          <div class="row"><div class="time">11:25</div><div class="place"><b>A4 지도와 눈앞 풍경을 한 화면에</b></div><div class="side"></div></div>
+        </div>
+        <div class="co purple"><div class="t">공원에서</div>사람은 만나지 않는다. 말뚝·테이프를 땅에 박지 않고, 드론은 띄우지 않는다(콜레뇨 비행장 공역). 공사 펜스가 막으면 펜스 밖에서.</div>
+      </div>
+      <div class="pane">
+        <p class="label">건축 답사 노트 · 일</p>
+
+        <h3>체르토사 공원 · 콜레뇨 왕립 카르투지오 수도원</h3>
+        <p class="meta">1641 창건 · 1737 유바라 정문 · 1853 정신병원 · 1977 담 철거</p>
+        <p>사보이 섭정 크리스틴 드 프랑스가 세운 카르투지오회 수도원이 정신병원이 되고 시민 공원이 됐다. 은둔 → 격리 → 개방의 세 겹이 한 땅에 쌓였다. 시가 1977년 담 일부를 먼저 헐었고, 정신병원을 닫는 바살리아 법은 1년 뒤 1978년에 나왔다. 땅이 법보다 먼저 열렸다.</p>
+        <dl class="kv lined">
+          <dt>배치</dt><dd>선형 건물, 아케이드 안뜰, 축, 뚜렷한 위계. 대회랑 70 × 54 m에 돌기둥 112개, 수도사 독방 15개가 1855년 뒤 병동으로 바뀌었다. 19세기 후반 병동은 빗살 모양으로 늘어섰다</dd>
+          <dt>정문</dt><dd>필리포 유바라 설계. 콜레뇨 시는 「도시의 상징」이라 부른다</dd>
+          <dt>세탁장</dt><dd>증기 세탁소(루이지 페놀리오, 1870~1875)가 지금 현대무용 레지던시 「라반데리아 아 바포레」</dd>
+          <dt>사람</dt><dd>프랑코 바살리아, 1964년: 「환자 치료의 첫걸음은 자유로의 복귀」. 이 공원에서 「치유」를 말한다면 식재보다 출입과 자유가 먼저라는 요구로 읽힌다</dd>
+          <dt>볼 것</dt><dd>담이 남은 곳과 끊긴 곳, 대회랑 기둥 간격, 빗살 병동 사이의 빈 땅, 벽돌·철골 세부</dd>
+        </dl>
+        <p class="small muted">폐쇄 완료 연도는 자료마다 1980년대·1998년 등으로 다르다. 공원 개방 시간은 시 공식 공지가 없다.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 숙소 · 예약 · 가방 -->
+  <section data-pane="prep" hidden>
+    <div class="panes">
+      <div class="pane">
+        <p class="label">숙소</p>
+        <h2>Ca bela · a bow window on Turin</h2>
+        <dl class="kv lined">
+          <dt>건물</dt><dd>1930년대. 그 시절 처음 엘리베이터를 단 건물, 정면 퇴창에서 이름이 왔다</dd>
+          <dt>집</dt><dd>4층 모서리 집, 광장 너머 토리노 언덕. 새로 고침, 침실 1 · 더블 침대</dd>
+          <dt>동네</dt><dd>Nizza Millefonti. 링고토 · 이탈리 · 자동차 박물관 · 발렌티노 공원 쪽</dd>
+          <dt>역</dt><dd>M1 Spezia 바로 앞. 포르타 누오바 약 10분, 페르미(콜레뇨) 약 27분</dd>
+          <dt>시간</dt><dd>체크인 16:00~20:00 · 체크아웃 10:00 전</dd>
+          <dt>값</dt><dd class="num">2박 €286 (10-12 화면값)</dd>
+          <dt>취소</dt><dd>10-16 체크인 전 취소는 일부 환불, 그 뒤 환불 없음</dd>
+          <dt>평</dt><dd>5.0 · 후기 43 · 호스트 Alessandro(영어·이탈리아어)</dd>
+        </dl>
+        <p class="small"><a href="https://www.airbnb.com/rooms/1181029114461624482?check_in=2026-10-16&amp;check_out=2026-10-18&amp;adults=2">에어비앤비에서 열기</a></p>
+        <div class="co white"><div class="t">일요일 짐</div>체크아웃이 10:00 전이라 짐은 포르타 누오바에 맡기고 콜레뇨로 간다. 호스트에게 늦은 체크아웃이나 짐 보관을 물어볼 만하다.</div>
+      </div>
+
+      <div class="pane">
+        <p class="label">예약 · 표 <span data-ck-count="todo" class="num">0/10</span></p>
+        <ul class="ck" data-ck="todo">
+          <li><input type="checkbox" id="t1"><label for="t1">숙소 Ca bela 2박</label><span class="who">€286</span></li>
+          <li><input type="checkbox" id="t2"><label for="t2">생일 저녁 식당 · 금 20:00</label><span class="who">가장 급함</span></li>
+          <li><input type="checkbox" id="t3"><label for="t3">몰레 엘리베이터 · 금 18:00 · 2인</label><span class="who">온라인</span></li>
+          <li><input type="checkbox" id="t4"><label for="t4">알바 트러플 점심 · 토 13:00</label></li>
+          <li><input type="checkbox" id="t5"><label for="t5">밀라노 → 토리노 FR 9514 · 금 15:02 · 2인</label><span class="who">€55.80~72</span></li>
+          <li><input type="checkbox" id="t6"><label for="t6">키아소 → 밀라노 지역표 · 금 · 2인</label><span class="who">€12.60</span></li>
+          <li><input type="checkbox" id="t7"><label for="t7">토리노 → 키아소 표 · 일 15:10 · 2인</label></li>
+          <li><input type="checkbox" id="t8"><label for="t8">오는 날 스위스 데이패스 · 2인</label><span class="who">10-17까지</span></li>
+          <li><input type="checkbox" id="t9"><label for="t9">이미 산 데이패스가 10-16 날짜인지 확인</label></li>
+          <li><input type="checkbox" id="t10"><label for="t10">알바 왕복 편 고르기</label><span class="who">금 밤 앱</span></li>
+        </ul>
+      </div>
+
+      <div class="pane">
+        <p class="label">가방 <span data-ck-count="bag" class="num">0/6</span></p>
+        <ul class="ck" data-ck="bag">
+          <li><input type="checkbox" id="b1"><label for="b1">2 m 접이자 · 2.012 m 지점에 테이프 표시</label></li>
+          <li><input type="checkbox" id="b2"><label for="b2">면 끈 20.12 m · 2.012 m마다 매듭 열 개</label></li>
+          <li><input type="checkbox" id="b3"><label for="b3">줄자 5 m</label></li>
+          <li><input type="checkbox" id="b4"><label for="b4">A4 출력 2장 · 공원 경계 지도, 19.60 m 격자 지도</label></li>
+          <li><input type="checkbox" id="b5"><label for="b5">지퍼백 3 · 마스킹테이프 · 유성펜 · 장갑</label></li>
+          <li><input type="checkbox" id="b6"><label for="b6">폰 2대 · 보조배터리</label></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <p class="fn">열차 시각·값은 10-05·10-12 조회값, 숙소 정보와 값은 10-12 에어비앤비 화면. 알바행 지역열차 링고토 정차는 트렌이탈리아 SFM4 안내, 짐 보관 시간은 보관 중개 사이트 값. 건물 노트의 출처는 각 기관 공식 페이지(콜레뇨 시, 국립영화박물관, RPBW, 뮤제오토리노, 투리즈모 토리노)와 위키백과이며 연도 일부는 자료마다 다르다.</p>
+</main>
+
+<script>
+/* FORMA WEB v1 - 공통 동작. 밝기(한 방식만) · 체크리스트 기억 · D-day · 탭. 페이지마다 <html data-page="고유이름"> 을 준다. */
+(function () {
+  var html = document.documentElement;
+  var page = html.getAttribute("data-page") || location.pathname.split("/").pop() || "page";
+  function store(k, v) { try { if (v === null) localStorage.removeItem(k); else localStorage.setItem(k, v); } catch (e) {} }
+  function load(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+
+  /* 밝기: 저장값 > 기기 설정. 버튼 .js-theme 이 바꾸고 기억한다. 저장 키는 페이지별 */
+  var TK = "forma-theme:" + page;
+  function prefers() { return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; }
+  function apply(t) {
+    html.setAttribute("data-theme", t);
+    document.querySelectorAll(".js-theme").forEach(function (b) { b.textContent = t === "dark" ? "Light" : "Dark"; b.setAttribute("aria-pressed", t === "dark"); });
+  }
+  apply(load(TK) || prefers());
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest(".js-theme"); if (!b) return;
+    var t = html.getAttribute("data-theme") === "dark" ? "light" : "dark"; apply(t); store(TK, t);
+  });
+  if (window.matchMedia) { window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function () { if (!load(TK)) apply(prefers()); }); }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    /* 체크리스트: ul.ck[data-ck="이름"] 안의 체크 상태를 기억 */
+    document.querySelectorAll(".ck[data-ck]").forEach(function (ul) {
+      var key = "forma-ck:" + page + ":" + ul.getAttribute("data-ck");
+      var saved = {}; try { saved = JSON.parse(load(key) || "{}"); } catch (e) {}
+      var boxes = ul.querySelectorAll('input[type="checkbox"]');
+      boxes.forEach(function (b, i) { var id = b.id || String(i); if (saved[id]) b.checked = true; });
+      ul.addEventListener("change", function () {
+        var o = {}; boxes.forEach(function (b, i) { if (b.checked) o[b.id || String(i)] = 1; }); store(key, JSON.stringify(o));
+        var n = ul.querySelectorAll('input:checked').length, cnt = document.querySelector('[data-ck-count="' + ul.getAttribute("data-ck") + '"]');
+        if (cnt) cnt.textContent = n + "/" + boxes.length;
+      });
+      ul.dispatchEvent(new Event("change"));
+    });
+
+    /* D-day: <span data-dday="2026-11-20T18:00:00+09:00"> 를 열 때마다 계산. data-dday-unit="일" 로 꼬리말 */
+    document.querySelectorAll("[data-dday]").forEach(function (el) {
+      var t = new Date(el.getAttribute("data-dday")); if (isNaN(t)) return;
+      var d = Math.ceil((t - new Date()) / 86400000);
+      el.textContent = d > 0 ? "D-" + d : d === 0 ? "D-DAY" : "D+" + (-d);
+      if (d >= 0 && d <= 7) el.classList.add("soon");
+    });
+
+    /* 탭: .tabs button[data-tab="x"] ↔ [data-pane="x"]. 선택은 기억 */
+    document.querySelectorAll(".tabs[data-tabs]").forEach(function (tabs) {
+      var key = "forma-tab:" + page + ":" + tabs.getAttribute("data-tabs");
+      var btns = tabs.querySelectorAll("button[data-tab]");
+      function show(name) {
+        btns.forEach(function (b) { b.setAttribute("aria-selected", b.getAttribute("data-tab") === name); });
+        document.querySelectorAll("[data-pane]").forEach(function (p) { if (btns.length && [].some.call(btns, function (b) { return b.getAttribute("data-tab") === p.getAttribute("data-pane"); })) p.hidden = p.getAttribute("data-pane") !== name; });
+      }
+      tabs.addEventListener("click", function (e) { var b = e.target.closest("button[data-tab]"); if (!b) return; show(b.getAttribute("data-tab")); store(key, b.getAttribute("data-tab")); });
+      show(load(key) || (btns[0] && btns[0].getAttribute("data-tab")));
+    });
+
+    /* 인쇄 버튼 */
+    document.addEventListener("click", function (e) { if (e.target.closest(".js-print")) window.print(); });
+  });
+})();
+
+</script>
+</body>
+</html>
