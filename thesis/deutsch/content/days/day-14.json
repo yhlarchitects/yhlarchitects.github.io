@@ -1,0 +1,213 @@
+{
+  "id": "day-14",
+  "theme_ko": "복습 · 못 알아듣겠어요",
+  "focus_ko": "복습: Wie heißt …? · Das weiß ich nicht. · Ich verstehe nicht.",
+  "new_cards": [
+    "basel-strasse:das-dach",
+    "a1-alltag:das-fenster",
+    "a1-alltag:gross",
+    "a1-alltag:klein",
+    "a1-alltag:kurz",
+    "basel-strasse:der-platz",
+    "a1-alltag:gehen",
+    "a1-alltag:wissen"
+  ],
+  "stair": {
+    "source": {
+      "author": "Johann Peter Hebel",
+      "title": "Kannitverstan",
+      "year": 1811,
+      "license": "public-domain",
+      "url": "https://de.wikisource.org/wiki/Kannitverstan"
+    },
+    "layers": [
+      {
+        "level": "A1",
+        "text_de": "Ein Mann aus Deutschland ist in Amsterdam. Er sieht ein Haus. Das Haus ist sehr groß und schön. Die Fenster sind hoch. Das Dach hat sechs Kamine. Sein Haus daheim ist klein. Ein Mann kommt über den Platz. Er fragt: „Wie heißt der Herr hier?“ Der Mann sagt nur kurz: „Kannitverstan.“ Dann geht er weiter. Der Mann aus Deutschland weiß nicht: Kannitverstan ist kein Name. Es ist Holländisch und heißt: Ich verstehe Sie nicht.",
+        "gloss": [
+          {
+            "de": "hoch",
+            "ko": "높은"
+          },
+          {
+            "de": "der Kamin",
+            "ko": "굴뚝"
+          },
+          {
+            "de": "sein",
+            "ko": "그의"
+          },
+          {
+            "de": "daheim",
+            "ko": "고향 집에"
+          },
+          {
+            "de": "weiter",
+            "ko": "계속 (가던 길을)"
+          },
+          {
+            "de": "kein Name",
+            "ko": "이름이 아니다"
+          },
+          {
+            "de": "Holländisch",
+            "ko": "네덜란드어"
+          },
+          {
+            "de": "über den Platz",
+            "ko": "광장을 지나"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Das Dach hat sechs ___.",
+            "answer": "Kamine",
+            "options": [
+              "Kamine",
+              "Türme",
+              "Tore"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "Kannitverstan은 무엇인가?",
+            "options": [
+              "집주인 이름",
+              "'못 알아듣겠다'는 네덜란드 말",
+              "거리 이름"
+            ],
+            "answer": 1
+          }
+        ]
+      },
+      {
+        "level": "A2",
+        "text_de": "Johann Peter Hebel ist 1760 in Basel geboren. In seiner Geschichte „Kannitverstan“ kommt ein junger Handwerker aus Deutschland nach Amsterdam. Er versteht kein Holländisch. Er fragt nach dem Besitzer eines großen Hauses und hört nur „Kannitverstan“. Er glaubt, das ist ein Name. Später sieht er ein großes Schiff und einen Trauerzug und hört immer wieder dieselbe Antwort. Die Geschichte erschien zuerst in einem Kalender und 1811 in einem Buch. Man liest sie bis heute.",
+        "gloss": [
+          {
+            "de": "die Geschichte",
+            "ko": "이야기"
+          },
+          {
+            "de": "der Handwerker",
+            "ko": "수공업 기술자"
+          },
+          {
+            "de": "der Besitzer",
+            "ko": "주인"
+          },
+          {
+            "de": "glauben",
+            "ko": "믿다, 여기다"
+          },
+          {
+            "de": "das Schiff",
+            "ko": "배"
+          },
+          {
+            "de": "der Trauerzug",
+            "ko": "장례 행렬"
+          },
+          {
+            "de": "erscheinen",
+            "ko": "(책이) 나오다"
+          },
+          {
+            "de": "der Kalender",
+            "ko": "달력, (옛) 연감"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Hebel ist 1760 in ___ geboren.",
+            "answer": "Basel",
+            "options": [
+              "Basel",
+              "Amsterdam",
+              "Bern"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "젊은이는 Kannitverstan을 무엇으로 여기나?",
+            "options": [
+              "사람 이름",
+              "도시 이름",
+              "배 이름"
+            ],
+            "answer": 0
+          }
+        ]
+      }
+    ],
+    "summit": {
+      "text_de": "Lange betrachtete er mit Verwunderung dieß kostbare Gebäude, die 6 Camine auf dem Dach, die schönen Gesimse und die hohen Fenster, größer als an des Vaters Haus daheim die Thür. Endlich konnte er sich nicht entbrechen, einen Vorübergehenden anzureden. „Guter Freund, redete er ihn an, könnt ihr mir nicht sagen, wie der Herr heißt, dem dieses wunderschöne Haus gehört mit den Fenstern voll Tulipanen, Sternenblumen und Levkoien?“ – Der Mann aber, der vermuthlich etwas wichtigeres zu thun hatte, und zum Unglück gerade so viel von der deutschen Sprache verstand, als der Fragende von der holländischen, nemlich Nichts, sagte kurz und schnauzig: Kannitverstan; und schnurrte vorüber. Dieß war ein holländisches Wort, oder drey, wenn mans recht betrachtet, und heißt auf deutsch soviel, als: Ich kann euch nicht verstehn.",
+      "note_ko": "요한 페터 헤벨, 「Kannitverstan」(『라인 지방 가정의 벗 보물상자』, 튀빙겐 1811) 가운데 젊은이가 집주인을 묻는 대목. 1811년 철자(dieß, Thür, thun) 그대로. 다 알아듣지 않아도 된다."
+    }
+  },
+  "ear": {
+    "text_de": "Ein Mann sieht ein Haus. Das Haus ist sehr groß. Er fragt: Wie heißt der Herr hier? Der Mann sagt nur kurz: Kannitverstan.",
+    "lang": "de-DE",
+    "rates": [
+      0.75,
+      0.9,
+      1.0
+    ]
+  },
+  "hand": {
+    "situation_ko": "누가 스위스 독일어로 빠르게 말했다. 표준 독일어로 말해 달라고 부탁한다.",
+    "prompt_ko": "Sie체 두 문장.",
+    "model_de": "Entschuldigung, ich verstehe nicht. Können Sie bitte Hochdeutsch sprechen?",
+    "chunks": [
+      "Ich verstehe nicht.",
+      "Können Sie bitte Hochdeutsch sprechen?",
+      "Das weiß ich nicht."
+    ]
+  },
+  "illustration": {
+    "scene_ko": "1800년 무렵 암스테르담 운하 곁. 독일에서 온 젊은 수공업자가 굴뚝 여섯 개 달린 큰 집 앞에서 지나가는 사람에게 집주인을 묻고, 그 사람은 짧게 대답하고 광장을 지나간다.",
+    "prompt_en": "Around 1800 in Amsterdam, beside a canal. A young craftsman from Germany stands in front of a tall, grand house with high windows full of flowers and six chimneys on the roof. He asks a passing Dutchman who owns the house; the man answers curtly and walks on across the square."
+  },
+  "mix": {
+    "tasks": [
+      {
+        "type": "cloze",
+        "prompt_de": "Am Samstag ist ___ Familie hier.",
+        "answer": "meine",
+        "options": [
+          "mein",
+          "dein",
+          "meine"
+        ],
+        "from": "day-13",
+        "point_ko": "mein / meine"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "'형제자매가 있으세요?'를 독일어로?",
+        "options": [
+          "Haben Sie Geschwister?",
+          "Hast Sie Geschwister?",
+          "Hat Sie Geschwister?"
+        ],
+        "answer": 0,
+        "from": "day-11",
+        "point_ko": "haben 활용 (Sie haben)"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "Die Fassade ist glatt.에서 glatt의 뜻은?",
+        "options": [
+          "장식이 많은",
+          "매끈한",
+          "오래된"
+        ],
+        "answer": 1,
+        "from": "day-07",
+        "point_ko": "glatt (매끈한)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "id": "day-25",
+  "theme_ko": "날짜",
+  "focus_ko": "der zwölfte Oktober · am dritten März · vom … bis …",
+  "new_cards": [
+    "wortgruppen:ordinalzahlen",
+    "a1-alltag:das-datum",
+    "wortgruppen:monate-winter",
+    "wortgruppen:monate-fruehling",
+    "wortgruppen:monate-sommer",
+    "wortgruppen:monate-herbst",
+    "wortgruppen:jahreszeiten",
+    "wortgruppen:der-monat",
+    "a1-alltag:der-geburtstag",
+    "eigene-saetze:vom-bis-verreist"
+  ],
+  "stair": {
+    "source": {
+      "author": "2628 선생",
+      "title": "Welches Datum ist heute?",
+      "year": 2026,
+      "license": "own",
+      "url": ""
+    },
+    "layers": [
+      {
+        "level": "A1",
+        "text_de": "Auf dem Kalender steht: der zwölfte Oktober. Der Oktober ist ein Monat im Herbst. Vom sechzehnten bis zum achtzehnten Oktober sind wir nicht in Basel. Wir sind verreist. Laura hat im März Geburtstag, am dritten März. Dann ist es Frühling. Und wann ist dein Geburtstag?",
+        "gloss": [
+          {
+            "de": "der Kalender",
+            "ko": "달력"
+          },
+          {
+            "de": "auf dem Kalender",
+            "ko": "달력에"
+          },
+          {
+            "de": "steht",
+            "ko": "적혀 있다"
+          },
+          {
+            "de": "verreist",
+            "ko": "여행 가서 집에 없는"
+          },
+          {
+            "de": "am dritten März",
+            "ko": "3월 3일에"
+          },
+          {
+            "de": "vom … bis zum …",
+            "ko": "…부터 …까지"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Laura hat im ___ Geburtstag.",
+            "answer": "März",
+            "options": [
+              "März",
+              "Mai",
+              "Oktober"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "10월 16일부터 18일까지 우리는?",
+            "options": [
+              "바젤에 없다",
+              "일한다",
+              "이사한다"
+            ],
+            "answer": 0
+          }
+        ]
+      },
+      {
+        "level": "A2",
+        "text_de": "Ein Datum schreibt man auf Deutsch mit Punkten: 16.10.2026. Man sagt: „der sechzehnte Oktober zweitausendsechsundzwanzig“. Vor einem Datum steht oft „am“: am sechzehnten Oktober. Im Herbst gibt es in Basel die Herbstmesse. Sie dauert sechzehn Tage. Auf mehreren Plätzen der Stadt stehen dann Karussells und Stände. Wer in dieser Zeit einen Termin plant, sollte daran denken: Die Stadt ist voll.",
+        "gloss": [
+          {
+            "de": "der Punkt",
+            "ko": "점"
+          },
+          {
+            "de": "die Herbstmesse",
+            "ko": "가을 장터"
+          },
+          {
+            "de": "dauern",
+            "ko": "(시간이) 걸리다, 이어지다"
+          },
+          {
+            "de": "das Karussell",
+            "ko": "회전목마"
+          },
+          {
+            "de": "der Stand",
+            "ko": "가판대"
+          },
+          {
+            "de": "planen",
+            "ko": "계획하다"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Die Herbstmesse dauert ___ Tage.",
+            "answer": "sechzehn",
+            "options": [
+              "sechs",
+              "sechzehn",
+              "sechzig"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "16.10.2026을 소리 내어 읽으면?",
+            "options": [
+              "der sechzehnte Oktober zweitausendsechsundzwanzig",
+              "sechzehn zehn zwanzig sechsundzwanzig",
+              "der sechzehn Oktober zwei null zwei sechs"
+            ],
+            "answer": 0
+          }
+        ]
+      }
+    ],
+    "summit": {
+      "text_de": "",
+      "note_ko": "오늘 꼭대기는 비워 둔다. 원문은 28일째에 요한 페터 헤벨."
+    }
+  },
+  "ear": {
+    "text_de": "Auf dem Kalender steht: der zwölfte Oktober. Vom sechzehnten bis zum achtzehnten Oktober sind wir verreist. Wann ist dein Geburtstag?",
+    "lang": "de-DE",
+    "rates": [
+      0.75,
+      0.9,
+      1.0
+    ]
+  },
+  "hand": {
+    "situation_ko": "집 보기 연락에 집을 비우는 날짜를 알린다(보낸 문장).",
+    "prompt_ko": "wir로 한 문장, 날짜 둘.",
+    "model_de": "Vom 16. bis 18. Oktober sind wir verreist.",
+    "chunks": [
+      "Vom … bis … sind wir verreist.",
+      "am sechzehnten Oktober",
+      "Ab dem 19. Oktober passt es uns gut."
+    ]
+  },
+  "mix": {
+    "tasks": [
+      {
+        "type": "cloze",
+        "prompt_de": "Freitag um 17 Uhr ___ mir gut.",
+        "answer": "passt",
+        "options": [
+          "passe",
+          "passen",
+          "passt"
+        ],
+        "from": "day-24",
+        "point_ko": "… passt mir gut"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "„Wie spät ist es?“에 맞는 대답은?",
+        "options": [
+          "Ich bin Architekt.",
+          "Es ist Viertel nach acht.",
+          "Ich heiße Aaron."
+        ],
+        "answer": 1,
+        "from": "day-22",
+        "point_ko": "시각 묻고 답하기"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "___ du Geschwister?",
+        "answer": "Hast",
+        "options": [
+          "Hast",
+          "Hat",
+          "Habe"
+        ],
+        "from": "day-11",
+        "point_ko": "haben 활용"
+      }
+    ]
+  },
+  "illustration": {
+    "scene_ko": "10월 12일 아침, 바젤 집 벽의 달력. 16일부터 18일까지 여행 표시가 있고, 아래에 여행 가방이 서 있다. 창밖은 가을이다.",
+    "prompt_en": "A wall calendar in a Basel flat on the morning of 12 October, the twelfth circled and the sixteenth to eighteenth marked as travel days; a packed suitcase stands below it and autumn leaves are visible through the window."
+  }
+}

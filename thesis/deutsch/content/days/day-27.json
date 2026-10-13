@@ -1,0 +1,207 @@
+{
+  "id": "day-27",
+  "theme_ko": "표 사기",
+  "focus_ko": "Ich brauche ein Ticket · Gleis · Abfahrt · 스위스 말 Billett, Perron, Velo",
+  "new_cards": [
+    "basel-strasse:die-fahrkarte",
+    "a1-alltag:das-ticket",
+    "a1-alltag:der-bahnsteig",
+    "a1-alltag:das-gleis",
+    "a1-alltag:der-zug",
+    "a1-alltag:die-abfahrt",
+    "a1-alltag:das-fahrrad",
+    "a1-alltag:der-automat",
+    "a1-alltag:teuer",
+    "a1-alltag:billig"
+  ],
+  "stair": {
+    "source": {
+      "author": "2628 선생",
+      "title": "Ein Billett, bitte",
+      "year": 2026,
+      "license": "own",
+      "url": ""
+    },
+    "layers": [
+      {
+        "level": "A1",
+        "text_de": "Ich fahre mit dem Zug nach Zürich. Am Automaten kaufe ich ein Ticket. In der Schweiz sagt man auch: das Billett. Das Ticket ist nicht billig, aber der Zug ist schnell. Abfahrt: 10.07 Uhr, Gleis 7. Der Bahnsteig heißt in der Schweiz Perron. Mein Fahrrad bleibt zu Hause. In Basel sagt man: das Velo.",
+        "gloss": [
+          {
+            "de": "mit dem Zug",
+            "ko": "기차로"
+          },
+          {
+            "de": "am Automaten",
+            "ko": "자동판매기에서"
+          },
+          {
+            "de": "kaufen",
+            "ko": "사다"
+          },
+          {
+            "de": "schnell",
+            "ko": "빠른"
+          },
+          {
+            "de": "der Perron",
+            "ko": "승강장 (스위스)"
+          },
+          {
+            "de": "bleiben",
+            "ko": "머물다"
+          },
+          {
+            "de": "zu Hause",
+            "ko": "집에"
+          },
+          {
+            "de": "das Velo",
+            "ko": "자전거 (스위스)"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Abfahrt: 10.07 Uhr, ___ 7.",
+            "answer": "Gleis",
+            "options": [
+              "Gleis",
+              "Velo",
+              "Zimmer"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "스위스에서 승강장(Bahnsteig)을 부르는 말은?",
+            "options": [
+              "Perron",
+              "Velo",
+              "Billett"
+            ],
+            "answer": 0
+          }
+        ]
+      },
+      {
+        "level": "A2",
+        "text_de": "In Basel fährt man mit Tram und Bus der BVB. Wer oft fährt, kauft ein Abo: Das U-Abo gilt in der Region Nordwestschweiz. Für längere Fahrten mit der SBB gibt es das Halbtax: Man bezahlt einmal im Jahr und fährt dann auf vielen Strecken zum halben Preis. Billette kauft man heute meistens in der App. Am Automaten geht es auch.",
+        "gloss": [
+          {
+            "de": "das Abo",
+            "ko": "정기권"
+          },
+          {
+            "de": "gelten",
+            "ko": "유효하다"
+          },
+          {
+            "de": "die Region",
+            "ko": "지역"
+          },
+          {
+            "de": "die Strecke",
+            "ko": "구간"
+          },
+          {
+            "de": "zum halben Preis",
+            "ko": "반값으로"
+          },
+          {
+            "de": "meistens",
+            "ko": "대개"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Mit dem ___ fährt man auf vielen Strecken zum halben Preis.",
+            "answer": "Halbtax",
+            "options": [
+              "Halbtax",
+              "U-Abo",
+              "Velo"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "U-Abo가 통하는 곳은?",
+            "options": [
+              "북서 스위스 지역",
+              "스위스 전체",
+              "독일 전체"
+            ],
+            "answer": 0
+          }
+        ]
+      }
+    ],
+    "summit": {
+      "text_de": "",
+      "note_ko": "오늘 꼭대기는 비워 둔다. 원문은 내일 요한 페터 헤벨."
+    }
+  },
+  "ear": {
+    "text_de": "Ich fahre mit dem Zug nach Zürich. Abfahrt zehn Uhr sieben, Gleis sieben. Das Ticket ist nicht billig.",
+    "lang": "de-DE",
+    "rates": [
+      0.75,
+      0.9,
+      1.0
+    ]
+  },
+  "hand": {
+    "situation_ko": "역 창구에서 취리히행 표를 산다.",
+    "prompt_ko": "Sie체 한 문장.",
+    "model_de": "Ein Billett nach Zürich mit Halbtax, bitte.",
+    "chunks": [
+      "Ein Billett nach …, bitte.",
+      "einfach / retour",
+      "Welches Gleis?"
+    ]
+  },
+  "mix": {
+    "tasks": [
+      {
+        "type": "mc",
+        "prompt_ko": "1760년을 독일어로 읽으면?",
+        "options": [
+          "siebzehn und sechzig",
+          "sechzigsiebzehnhundert",
+          "siebzehnhundertsechzig"
+        ],
+        "answer": 2,
+        "from": "day-26",
+        "point_ko": "연도 읽기"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Hast du am Freitag ___?",
+        "answer": "Zeit",
+        "options": [
+          "Zeit",
+          "Uhr",
+          "Tag"
+        ],
+        "from": "day-24",
+        "point_ko": "Zeit haben (약속 잡기)"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "___ Kirche ist alt und groß.",
+        "answer": "Die",
+        "options": [
+          "Der",
+          "Die",
+          "Das"
+        ],
+        "from": "day-15",
+        "point_ko": "명사의 성 der · die · das"
+      }
+    ]
+  },
+  "illustration": {
+    "scene_ko": "아침, 연호와 정현이 바젤 SBB역 자동판매기에서 취리히행 표를 산다. 출발 안내판에 10.07, 7번 선로가 보인다.",
+    "prompt_en": "In the morning a Korean couple, Yeonho and Jeonghyeon, buy a train ticket to Zurich at a red SBB ticket machine in Basel SBB station; the departure board above them shows Zürich, 10:07, platform 7."
+  }
+}

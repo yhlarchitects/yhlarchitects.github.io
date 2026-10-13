@@ -1,4 +1,4 @@
-/* Deutsch 앱 부품. 토큰은 forma-web.css 의 것만 쓴다(새 색·새 글꼴·그림자·애니메이션 없음). */
+/* Deutsch 2628 앱 부품. 토큰은 forma-web.css 의 것만 쓴다(새 색·새 글꼴·그림자·애니메이션 없음). */
 
 html, body { overscroll-behavior-y: none; }
 body { padding-bottom: env(safe-area-inset-bottom); }
@@ -67,6 +67,13 @@ audio { width: 100%; margin: .4em 0; }
 .model { font-size: 1.2em; margin: 0 0 .4em; }
 .chunk { display: inline-flex; border: 1px solid var(--line-soft); border-radius: var(--r-pill); padding: .15em .8em; font-size: .95em; }
 .out { margin-top: .4em; }
+
+/* 주간 정리 */
+.phrases { list-style: none; padding: 0; margin: 0 0 1.6em; border-top: 1px solid var(--line-soft); }
+.phrases li { border-bottom: 1px solid var(--line-soft); padding: .55em 0; margin: 0; }
+.phrases .de { font-size: 1.08em; margin: 0 0 .1em; }
+.phrases .muted { margin: 0; font-size: .92em; }
+#sync-key { font-variant-numeric: tabular-nums; letter-spacing: .04em; }
 
 @media (min-width: 900px) { .wrap.narrow { padding-top: 56px; } }
 @media print { .bar, .closebar, .foot, .rates, .opts { display: none !important; } }

@@ -1,0 +1,195 @@
+{
+  "id": "day-21",
+  "theme_ko": "양식",
+  "focus_ko": "양식 읽기: Name, Vorname, PLZ, Geburtsort, Unterschrift",
+  "new_cards": [
+    "a1-alltag:das-formular",
+    "a1-alltag:der-familienstand",
+    "a1-alltag:die-postleitzahl",
+    "a1-alltag:der-geburtsort",
+    "a1-alltag:das-geburtsjahr",
+    "a1-alltag:maennlich",
+    "a1-alltag:weiblich",
+    "a1-alltag:die-unterschrift",
+    "a1-alltag:ausfuellen",
+    "eigene-saetze:im-anhang-finden-sie"
+  ],
+  "stair": {
+    "source": {
+      "author": "2628 선생",
+      "title": "Das Formular",
+      "year": 2026,
+      "license": "own",
+      "url": ""
+    },
+    "layers": [
+      {
+        "level": "A1",
+        "text_de": "Pawel füllt ein Formular aus. Vorname: Pawel. Geschlecht: männlich. Geburtsjahr: 1995. Geburtsort: Bern. Familienstand: ledig. Adresse: Feldbergstrasse 12, 4057 Basel. Pawel fragt: „Ist das so richtig?“ „Fast. Der Name fehlt noch. Datum und Unterschrift fehlen auch.“",
+        "gloss": [
+          {
+            "de": "das Geschlecht",
+            "ko": "성별"
+          },
+          {
+            "de": "ledig",
+            "ko": "미혼"
+          },
+          {
+            "de": "fehlen",
+            "ko": "빠져 있다"
+          },
+          {
+            "de": "noch",
+            "ko": "더, 여전히"
+          },
+          {
+            "de": "fast",
+            "ko": "거의"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Datum und ___ fehlen auch.",
+            "answer": "Unterschrift",
+            "options": [
+              "Unterschrift",
+              "Adresse",
+              "Vorname"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "파벨의 출생지는?",
+            "options": [
+              "바젤",
+              "베른",
+              "취리히"
+            ],
+            "answer": 1
+          }
+        ]
+      },
+      {
+        "level": "A2",
+        "text_de": "Für die Anmeldung in Basel, für eine Wohnung oder bei der Bank füllt man viele Formulare aus. Die Felder sind fast immer gleich: Name, Vorname, Geburtsdatum, Nationalität, Zivilstand, Adresse. In der Schweiz steht oft „Zivilstand“, in Deutschland „Familienstand“. Die Postleitzahlen in Basel beginnen mit 40, zum Beispiel 4051 oder 4057. Am Ende kommen Ort, Datum und Unterschrift.",
+        "gloss": [
+          {
+            "de": "die Anmeldung",
+            "ko": "(전입) 신고, 등록"
+          },
+          {
+            "de": "das Feld",
+            "ko": "칸"
+          },
+          {
+            "de": "gleich",
+            "ko": "같은"
+          },
+          {
+            "de": "das Geburtsdatum",
+            "ko": "생년월일"
+          },
+          {
+            "de": "die Nationalität",
+            "ko": "국적"
+          },
+          {
+            "de": "der Zivilstand",
+            "ko": "혼인 여부 (스위스)"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "In der Schweiz steht oft „Zivilstand“, in Deutschland „___“.",
+            "answer": "Familienstand",
+            "options": [
+              "Familienstand",
+              "Geburtsort",
+              "Wohnort"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "바젤 우편번호는 무엇으로 시작하나?",
+            "options": [
+              "40",
+              "80",
+              "30"
+            ],
+            "answer": 0
+          }
+        ]
+      }
+    ],
+    "summit": {
+      "text_de": "",
+      "note_ko": "오늘 꼭대기는 비워 둔다. 원문은 28일째에 요한 페터 헤벨."
+    }
+  },
+  "ear": {
+    "text_de": "Vorname: Pawel. Geburtsort: Bern. Familienstand: ledig. Postleitzahl: vier null fünf sieben.",
+    "lang": "de-DE",
+    "rates": [
+      0.75,
+      0.9,
+      1.0
+    ]
+  },
+  "hand": {
+    "situation_ko": "관리회사에 작성한 신청서를 첨부해 보낸다(보낸 메시지와 같은 틀).",
+    "prompt_ko": "Sie체 한 문장.",
+    "model_de": "Im Anhang finden Sie das ausgefüllte Formular.",
+    "chunks": [
+      "Im Anhang finden Sie …",
+      "das ausgefüllte Formular",
+      "Freundliche Grüße"
+    ]
+  },
+  "mix": {
+    "tasks": [
+      {
+        "type": "cloze",
+        "prompt_de": "Was ___ das Brot?",
+        "answer": "kostet",
+        "options": [
+          "kosten",
+          "kostet",
+          "kostest"
+        ],
+        "from": "day-20",
+        "point_ko": "kosten (es kostet)"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "das Ufer의 복수는?",
+        "options": [
+          "die Ufer",
+          "die Ufern",
+          "die Ufers"
+        ],
+        "answer": 0,
+        "from": "day-17",
+        "point_ko": "복수 (das Ufer → die Ufer)"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Wie ___ man das?",
+        "answer": "schreibt",
+        "options": [
+          "schreiben",
+          "schreibst",
+          "schreibt"
+        ],
+        "from": "day-03",
+        "point_ko": "Wie schreibt man das? (man + -t)"
+      }
+    ]
+  },
+  "illustration": {
+    "scene_ko": "평일 아침, 바젤 구청 창구 옆 서서 쓰는 책상에서 파벨이 종이 양식을 채운다. 이름 칸·날짜 칸·서명 칸이 비어 있다.",
+    "prompt_en": "A young Swiss man fills in a paper form with a pen at a standing desk next to a counter in a Basel town office on a weekday morning; the fields for first name, birthplace and address are filled in, while the boxes for surname, date and signature are still empty."
+  }
+}

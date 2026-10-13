@@ -1,0 +1,194 @@
+{
+  "id": "day-15",
+  "theme_ko": "der·die·das",
+  "focus_ko": "der · die · das: 낱말마다 성이 있다",
+  "new_cards": [
+    "a1-alltag:der-die-das",
+    "basel-strasse:die-kirche",
+    "basel-strasse:der-turm",
+    "basel-strasse:der-sandstein",
+    "basel-strasse:die-aussicht",
+    "wortgruppen:die-farbe",
+    "wortgruppen:farben-1",
+    "wortgruppen:farben-2"
+  ],
+  "stair": {
+    "source": {
+      "author": "2628 선생",
+      "title": "Das Münster",
+      "year": 2026,
+      "license": "own",
+      "url": ""
+    },
+    "layers": [
+      {
+        "level": "A1",
+        "text_de": "Das ist das Münster. Die Kirche ist alt und groß. Sie ist aus Sandstein. Welche Farbe hat der Sandstein? Er ist rot. Das Münster hat zwei Türme. Die Türme heißen Georgsturm und Martinsturm. Der Georgsturm ist hoch. Von oben sieht man die Stadt und den Fluss. Die Aussicht ist sehr schön.",
+        "gloss": [
+          {
+            "de": "das Münster",
+            "ko": "대성당"
+          },
+          {
+            "de": "aus",
+            "ko": "~으로 만든"
+          },
+          {
+            "de": "hoch",
+            "ko": "높은"
+          },
+          {
+            "de": "von oben",
+            "ko": "위에서"
+          },
+          {
+            "de": "den Fluss",
+            "ko": "강을 (der Fluss, 목적격은 11월)"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Die Kirche ist aus ___.",
+            "answer": "Sandstein",
+            "options": [
+              "Sandstein",
+              "Holz",
+              "Glas"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "대성당 탑은 몇 개인가?",
+            "options": [
+              "1",
+              "2",
+              "3"
+            ],
+            "answer": 1
+          }
+        ]
+      },
+      {
+        "level": "A2",
+        "text_de": "Das Basler Münster steht hoch über dem Rhein. Es ist aus rotem Sandstein gebaut. Die zwei Türme heißen Georgsturm und Martinsturm. Der Georgsturm ist etwa 67 Meter hoch. Man kann hinaufsteigen und hat dann eine weite Aussicht über die Stadt und den Rhein. Hinter dem Münster liegt die Pfalz, eine Terrasse über dem Fluss.",
+        "gloss": [
+          {
+            "de": "bauen",
+            "ko": "짓다"
+          },
+          {
+            "de": "etwa",
+            "ko": "약"
+          },
+          {
+            "de": "der Meter",
+            "ko": "미터"
+          },
+          {
+            "de": "hinaufsteigen",
+            "ko": "올라가다"
+          },
+          {
+            "de": "weit",
+            "ko": "넓은, 먼"
+          },
+          {
+            "de": "die Terrasse",
+            "ko": "테라스"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Der Georgsturm ist etwa ___ Meter hoch.",
+            "answer": "67",
+            "options": [
+              "47",
+              "67",
+              "97"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "대성당 뒤 강 위 테라스의 이름은?",
+            "options": [
+              "Pfalz",
+              "Fähre",
+              "Spalentor"
+            ],
+            "answer": 0
+          }
+        ]
+      }
+    ],
+    "summit": {
+      "text_de": "",
+      "note_ko": "오늘 꼭대기는 비워 둔다. 원문은 19일째에 그림 형제."
+    }
+  },
+  "ear": {
+    "text_de": "Das ist das Münster. Die Kirche ist alt und rot. Das Münster hat zwei Türme. Die Aussicht ist sehr schön.",
+    "lang": "de-DE",
+    "rates": [
+      0.75,
+      0.9,
+      1.0
+    ]
+  },
+  "hand": {
+    "situation_ko": "대성당 앞에서 지나가는 사람에게 탑 입구를 묻는다.",
+    "prompt_ko": "Sie체 질문 한 문장.",
+    "model_de": "Entschuldigung, wo ist der Eingang zum Turm?",
+    "chunks": [
+      "Wo ist …?",
+      "der Eingang zum Turm",
+      "der Turm / die Kirche / das Münster",
+      "Danke!"
+    ]
+  },
+  "mix": {
+    "tasks": [
+      {
+        "type": "cloze",
+        "prompt_de": "Entschuldigung, ich ___ Sie nicht.",
+        "answer": "verstehe",
+        "options": [
+          "weiß",
+          "heiße",
+          "verstehe"
+        ],
+        "from": "day-14",
+        "point_ko": "verstehen · wissen 구별"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "「너는 형제자매가 있니?」 바른 문장은?",
+        "options": [
+          "Habst du Geschwister?",
+          "Hast du Geschwister?",
+          "Hat du Geschwister?"
+        ],
+        "answer": 1,
+        "from": "day-11",
+        "point_ko": "haben 활용 (du hast)"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Ich ___ neu hier.",
+        "answer": "bin",
+        "options": [
+          "bin",
+          "bist",
+          "ist"
+        ],
+        "from": "day-01",
+        "point_ko": "sein 활용 (ich bin)"
+      }
+    ]
+  },
+  "illustration": {
+    "scene_ko": "10월 맑은 오후, 대성당 뒤 팔츠 테라스에서 연호와 정현이 붉은 사암 탑 둘을 올려다본다. 아래로 라인 강과 클라인바젤 지붕.",
+    "prompt_en": "A Korean man and woman in their thirties stand on the Pfalz terrace behind Basel Minster on a clear October afternoon and look up at the two red sandstone towers; below them flow the Rhine and the roofs of Kleinbasel."
+  }
+}

@@ -1,0 +1,341 @@
+{
+  "id": "day-22",
+  "theme_ko": "시각",
+  "focus_ko": "um acht Uhr · halb neun · Viertel nach acht",
+  "new_cards": [
+    "a1-alltag:die-uhr",
+    "basel-strasse:um-uhr",
+    "wortgruppen:wie-spaet",
+    "wortgruppen:halb",
+    "wortgruppen:viertel",
+    "wortgruppen:minute-stunde",
+    "a1-alltag:wann",
+    "a1-alltag:puenktlich",
+    "a1-alltag:der-termin"
+  ],
+  "stair": {
+    "source": {
+      "author": "2628 선생",
+      "title": "Wie spät ist es?",
+      "year": 2026,
+      "license": "own",
+      "url": ""
+    },
+    "layers": [
+      {
+        "level": "A1",
+        "text_de": "„Wie spät ist es?“ „Es ist Viertel nach acht.“ „Oh, ich habe um halb neun einen Termin mit Tabea! Wann kommt das Tram?“ „Um acht Uhr zwanzig.“ Das Tram ist pünktlich. Um acht Uhr achtundzwanzig bin ich im Büro. Das ist zwei Minuten vor halb neun. Gut!",
+        "gloss": [
+          {
+            "de": "Wie spät ist es?",
+            "ko": "몇 시예요?"
+          },
+          {
+            "de": "Viertel nach acht",
+            "ko": "8시 15분"
+          },
+          {
+            "de": "halb neun",
+            "ko": "8시 반"
+          },
+          {
+            "de": "vor",
+            "ko": "~전"
+          },
+          {
+            "de": "einen Termin haben",
+            "ko": "약속이 있다 (einen은 다음 달에 배운다)"
+          },
+          {
+            "de": "mit Tabea",
+            "ko": "Tabea와"
+          },
+          {
+            "de": "im Büro",
+            "ko": "사무실에"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Ich habe um ___ neun einen Termin.",
+            "answer": "halb",
+            "options": [
+              "halb",
+              "vor",
+              "Uhr"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "Viertel nach acht는 몇 시인가?",
+            "options": [
+              "7:45",
+              "8:15",
+              "8:30"
+            ],
+            "answer": 1
+          }
+        ]
+      },
+      {
+        "level": "A2",
+        "text_de": "Im Deutschen ist „halb neun“ eine halbe Stunde vor neun, also 8.30 Uhr. Im britischen Englisch heißt „half nine“ aber 9.30 Uhr. Hier passieren leicht Fehler bei Terminen. Offiziell, zum Beispiel am Bahnhof oder im Radio, sagt man die Uhrzeit mit Zahlen: „acht Uhr dreißig“. Wer unsicher ist, fragt einfach nach: „Meinen Sie 8.30 Uhr?“",
+        "gloss": [
+          {
+            "de": "eine halbe Stunde",
+            "ko": "30분"
+          },
+          {
+            "de": "britisch",
+            "ko": "영국의"
+          },
+          {
+            "de": "offiziell",
+            "ko": "공식적으로"
+          },
+          {
+            "de": "die Uhrzeit",
+            "ko": "시각"
+          },
+          {
+            "de": "nachfragen",
+            "ko": "되묻다"
+          },
+          {
+            "de": "meinen",
+            "ko": "뜻하다"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "„Halb neun“ ist ___ Uhr.",
+            "answer": "8.30",
+            "options": [
+              "8.30",
+              "9.30",
+              "9.00"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "영국 영어 half nine은 몇 시인가?",
+            "options": [
+              "8:30",
+              "9:30",
+              "9:00"
+            ],
+            "answer": 1
+          }
+        ]
+      }
+    ],
+    "summit": {
+      "text_de": "",
+      "note_ko": "오늘 꼭대기는 비워 둔다. 원문은 28일째에 요한 페터 헤벨."
+    }
+  },
+  "ear": {
+    "text_de": "Wie spät ist es? Es ist Viertel nach acht. Ich habe um halb neun einen Termin mit Tabea. Das Tram ist pünktlich.",
+    "lang": "de-DE",
+    "rates": [
+      0.75,
+      0.9,
+      1.0
+    ]
+  },
+  "hand": {
+    "situation_ko": "Tabea가 회의를 halb neun으로 잡았다. 숫자로 다시 확인한다.",
+    "prompt_ko": "du체 확인 질문 한 문장.",
+    "model_de": "Meinst du halb neun, also 8.30 Uhr?",
+    "chunks": [
+      "um … Uhr",
+      "halb neun",
+      "Meinst du …?"
+    ]
+  },
+  "mix": {
+    "tasks": [
+      {
+        "type": "mc",
+        "prompt_ko": "양식의 Geburtsort는 무엇인가?",
+        "options": [
+          "사는 곳",
+          "태어난 곳",
+          "태어난 해"
+        ],
+        "answer": 1,
+        "from": "day-21",
+        "point_ko": "양식 낱말"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Die Stadt ist ___ groß.",
+        "answer": "nicht",
+        "options": [
+          "kein",
+          "keine",
+          "nicht"
+        ],
+        "from": "day-18",
+        "point_ko": "nicht: 형용사 부정"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Woher ___ Sie?",
+        "answer": "kommen",
+        "options": [
+          "kommen",
+          "kommt",
+          "komme"
+        ],
+        "from": "day-02",
+        "point_ko": "Woher? + kommen 활용"
+      }
+    ]
+  },
+  "illustration": {
+    "scene_ko": "아침 8시 15분, 연호가 바젤 트램 정류장에서 시계를 보고, 초록 트램이 들어온다. 8시 반에 사무실에서 Tabea와 회의가 있다.",
+    "prompt_en": "Yeonho, a Korean architect, stands at a tram stop in Basel at a quarter past eight on a weekday morning, checking his watch as a green tram pulls in; the stop clock shows 8:15 and he carries a roll of drawings for an 8:30 meeting at the office."
+  },
+  "variants": {
+    "junghyun": {
+      "stair": {
+        "layers": [
+          {
+            "level": "A1",
+            "text_de": "„Wie spät ist es?“ „Es ist Viertel nach acht.“ „Oh, um halb neun beginnt der Workshop! Wann kommt das Tram?“ „Um acht Uhr zwanzig.“ Das Tram ist pünktlich. Um acht Uhr achtundzwanzig bin ich auf dem Dreispitz. Das ist zwei Minuten vor halb neun. Gut!",
+            "gloss": [
+              {
+                "de": "Wie spät ist es?",
+                "ko": "몇 시예요?"
+              },
+              {
+                "de": "Viertel nach acht",
+                "ko": "8시 15분"
+              },
+              {
+                "de": "halb neun",
+                "ko": "8시 반"
+              },
+              {
+                "de": "vor",
+                "ko": "~전"
+              },
+              {
+                "de": "beginnen",
+                "ko": "시작하다"
+              },
+              {
+                "de": "der Workshop",
+                "ko": "워크숍"
+              },
+              {
+                "de": "auf dem Dreispitz",
+                "ko": "드라이슈피츠(HGK 캠퍼스)에"
+              }
+            ],
+            "tasks": [
+              {
+                "type": "cloze",
+                "prompt_de": "Der Workshop beginnt um ___ neun.",
+                "answer": "halb",
+                "options": [
+                  "halb",
+                  "vor",
+                  "Uhr"
+                ]
+              },
+              {
+                "type": "mc",
+                "prompt_ko": "Viertel nach acht는 몇 시인가?",
+                "options": [
+                  "7:45",
+                  "8:15",
+                  "8:30"
+                ],
+                "answer": 1
+              }
+            ]
+          },
+          {
+            "level": "A2",
+            "text_de": "Im Deutschen ist „halb neun“ eine halbe Stunde vor neun, also 8.30 Uhr. Im britischen Englisch heißt „half nine“ aber 9.30 Uhr. Hier passieren leicht Fehler bei Terminen. Offiziell, zum Beispiel am Bahnhof oder im Radio, sagt man die Uhrzeit mit Zahlen: „acht Uhr dreißig“. Wer unsicher ist, fragt einfach nach: „Meinen Sie 8.30 Uhr?“",
+            "gloss": [
+              {
+                "de": "eine halbe Stunde",
+                "ko": "30분"
+              },
+              {
+                "de": "britisch",
+                "ko": "영국의"
+              },
+              {
+                "de": "offiziell",
+                "ko": "공식적으로"
+              },
+              {
+                "de": "die Uhrzeit",
+                "ko": "시각"
+              },
+              {
+                "de": "nachfragen",
+                "ko": "되묻다"
+              },
+              {
+                "de": "meinen",
+                "ko": "뜻하다"
+              }
+            ],
+            "tasks": [
+              {
+                "type": "cloze",
+                "prompt_de": "„Halb neun“ ist ___ Uhr.",
+                "answer": "8.30",
+                "options": [
+                  "8.30",
+                  "9.30",
+                  "9.00"
+                ]
+              },
+              {
+                "type": "mc",
+                "prompt_ko": "영국 영어 half nine은 몇 시인가?",
+                "options": [
+                  "8:30",
+                  "9:30",
+                  "9:00"
+                ],
+                "answer": 1
+              }
+            ]
+          }
+        ]
+      },
+      "ear": {
+        "text_de": "Wie spät ist es? Es ist Viertel nach acht. Um halb neun beginnt der Workshop. Das Tram ist pünktlich.",
+        "lang": "de-DE",
+        "rates": [
+          0.75,
+          0.9,
+          1.0
+        ]
+      },
+      "hand": {
+        "situation_ko": "교수가 면담(der Termin) 시간을 halb neun으로 말했다. 숫자로 다시 확인한다.",
+        "prompt_ko": "Sie체 확인 질문 한 문장.",
+        "model_de": "Meinen Sie halb neun, also 8.30 Uhr?",
+        "chunks": [
+          "um … Uhr",
+          "halb neun",
+          "Meinen Sie …?"
+        ]
+      },
+      "illustration": {
+        "scene_ko": "아침 8시 28분, 정현이 드라이슈피츠에서 트램을 내려 HGK 건물로 서둘러 간다. 8시 반에 워크숍이 시작한다.",
+        "prompt_en": "Jeonghyeon, a Korean graphic designer and master's student, steps off a green tram at the Dreispitz campus in Basel at 8:28 on a weekday morning and hurries toward the HGK building, a portfolio under her arm, two minutes before her workshop starts at half past eight."
+      }
+    }
+  }
+}

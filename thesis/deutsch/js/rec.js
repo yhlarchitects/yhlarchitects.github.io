@@ -1,6 +1,6 @@
 // 따라 말하기 녹음(MediaRecorder). 녹음은 이 기기의 IndexedDB 에만 둔다. 어디로도 보내지 않는다.
 
-const DB = "deutsch";
+const DB = "deutsch2628";
 const STORE = "rec";
 const MAX_MS = 30000;
 

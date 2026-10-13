@@ -1,4407 +1,5470 @@
 {
  "version": 1,
+ "source": "goethe-b1",
  "part": "l-z",
- "note": "Goethe-Zertifikat B1 Wortliste, alphabetical part, letters l to z, only entries that are NOT on the A1 or A2 list (B1 new). Taken from the third-party transcription github.com/ilkermeliksitki/goethe-institute-wordlist (b1/*.tsv), normalized by hand. The transcription itself has page gaps: m (Mann area and the mit- verbs) and s (between schließen and Schnee). Words in those gaps are missing here and must be filled from the official PDF. Pure affixes and fragments (runterwerfen, Tee ziehen lassen, die Zünder) were dropped, and der Pullover is left out here because it is already on A2. ziehen sits here because the A2 transcription does not list it. region is set only where the transcription marks the entry (CH = Swiss, A = Austrian, D = German). month is an editorial assignment for this course, not part of the list. Not yet cross-checked against the official PDF. Wortgruppen not included. Private study use only.",
+ "note": "Goethe-Zertifikat B1 Wortliste, alphabetical part, letters l to z, only entries that are NOT on the A1 or A2 list (B1 new). Taken from the third-party transcription github.com/ilkermeliksitki/goethe-institute-wordlist (b1/*.tsv), normalized by hand. The transcription itself has page gaps: m (Mann area and the mit- verbs) and s (between schließen and Schnee). Words in those gaps are missing here and must be filled from the official PDF. Pure affixes and fragments (runterwerfen, Tee ziehen lassen, die Zünder) were dropped, and der Pullover is left out here because it is already on A2. ziehen sits here because the A2 transcription does not list it. region is set only where the transcription marks the entry (CH = Swiss, A = Austrian, D = German). month is an editorial assignment for this course, not part of the list. Not yet cross-checked against the official PDF. Wortgruppen not included. Private study use only. | 2026-10-12 괴테 공식 PDF와 대조, 빠진 표제어를 더함(added 칸). 여성형(-in)은 남성형 카드로 함께 다룬다.",
  "words": [
   {
    "lemma": "lächeln",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Lage",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Lager",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Landwirtschaft",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "landen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Landung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Länge",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "längst",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "sich langweilen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Langeweile",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Lärm",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Laster",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "das Laufwerk",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "die Laune",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Lautsprecher",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "lecker",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Lebenslauf",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "das Leder",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "die Lehre",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Lehrstelle",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Lehrling",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "leiden",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "leisten",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Leistung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "leiten",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Leitung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Leiter",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "der Lerner",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Lernerin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "der Leser",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Lexikon",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "die Liebe",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Lieferung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Lift",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "die Limonade",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "die Linie",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "link-",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "die Lippe",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Liste",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "die Literatur",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "loben",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Loch",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "locker",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Lohn",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "sich lohnen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "los",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "losfahren",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "löschen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "lösen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Luft",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "das Magazin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "mager",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "die Mahlzeit",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Mahnung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Marmelade",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06",
    "region": "D,A"
   },
   {
    "lemma": "der Maler",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Material",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Matura",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03",
    "region": "A,CH"
   },
   {
    "lemma": "die Mauer",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "maximal",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Mangel",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Mechaniker",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Medien",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Medizin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "das Mehl",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "mehrere",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "die Mehrheit",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "markieren",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Mehrwertsteuer",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "meinetwegen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Meister",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "melden",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Meldung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Mensa",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "menschlich",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Menü",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "merkwürdig",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "messen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "das Metall",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Methode",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Metropole",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "der Metzger",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "der Mieter",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Migrant",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Migration",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "mild",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Minderheit",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "minimal",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "mischen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Mitarbeiterin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "miteinander",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "das Mitglied",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "mitteilen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "mitten",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "mittler-",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "mittlerweile",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "möbliert",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "mobil",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Mobilbox",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "die Mobilität",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Modell",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Möglichkeit",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "möglichst",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "die Möhre",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06",
    "region": "D"
   },
   {
    "lemma": "der Mond",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Monitor",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "das Motorrad",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Mühe",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Müllabfuhr",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Mülltonne",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "mündlich",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "die Münze",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "musikalisch",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Musiker",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Musikerin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "der Muskel",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "das Müesli",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03",
    "region": "CH"
   },
   {
    "lemma": "der Mut",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "mutig",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "nachdem",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "nachdenken",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Nachfrage",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "nachher",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "die Nachhilfe",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "nachschlagen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Nachspeise",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06",
    "region": "D,A"
   },
   {
    "lemma": "der Nachteil",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "der Nachwuchs",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "die Nadel",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "der Nagel",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "nah",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "nähen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "sich nähern",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "das Nahrungsmittel",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "nämlich",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "die Nase",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "national",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Nebel",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "nebenbei",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Neffe",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "negativ",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Nerv",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Netz",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Netzwerk",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Neuigkeit",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "neugierig",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "neulich",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "die Nichte",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Nichtraucher",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "niedrig",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "nirgendwo",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "noch mal",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "nochmals",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "normalerweise",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "der Notruf",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "nötig",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "nun",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "nutzen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "nützen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "ob",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "ober-",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Obers",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06",
    "region": "A"
   },
   {
    "lemma": "obwohl",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "der Ofen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03",
    "region": "D,CH"
   },
   {
    "lemma": "öffentlich",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Öffentlichkeit",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "veröffentlichen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Operation",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "das Opfer",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "optimistisch",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "offenbar",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "offiziell",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Onkel",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Oper",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "operieren",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "das Orchester",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "ordentlich",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Ordination",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06",
    "region": "A"
   },
   {
    "lemma": "ordnen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Ordner",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "das Original",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "original",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Ozean",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "die Panne",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Paradeiser",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06",
    "region": "A"
   },
   {
    "lemma": "parallel",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "parkieren",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03",
    "region": "CH"
   },
   {
    "lemma": "der Passagier",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Passagierin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "passiv",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Patient",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Patientin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "pauschal",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "das Pech",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Pfeffer",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "pflanzen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Pflaster",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Pflaume",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "peinlich",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Pension",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "pflegen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Pfleger",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Pflegerin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "die Pflicht",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "das Picknick",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Pille",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Pilz",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Pensionist",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06",
    "region": "A"
   },
   {
    "lemma": "die Pensionistin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06",
    "region": "A"
   },
   {
    "lemma": "per",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "perfekt",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Perron",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03",
    "region": "CH"
   },
   {
    "lemma": "persönlich",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "die Planung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Personalien",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Personenstand",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "das Personal",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Pfanne",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "das Plastik",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Politik",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Politiker",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Politikerin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "politisch",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Präsentation",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Polizist",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Polizistin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "populär",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Portemonnaie",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03",
    "region": "D,CH"
   },
   {
    "lemma": "positiv",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Pöstler",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03",
    "region": "CH"
   },
   {
    "lemma": "die Presse",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "prima",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "das Poulet",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03",
    "region": "CH"
   },
   {
    "lemma": "der Praktikant",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Praktikantin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "produzieren",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Produktion",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Professor",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Profi",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "präsentieren",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Profisportler",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "Prost",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "protestieren",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Protest",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Prozess",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Publikum",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Punkt",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "die Puppe",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "die Qualifikation",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "das Quartier",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03",
    "region": "CH"
   },
   {
    "lemma": "die Quittung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Rabatt",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Radfahrer",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Rahm",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03",
    "region": "CH"
   },
   {
    "lemma": "der Rand",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Rasen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "rasieren",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Rat",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Ratschlag",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Raucher",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "rauf",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "raus",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "reagieren",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Reaktion",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "realisieren",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Realität",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "realistisch",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Recherche",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Rechner",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "das Recht",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "rechtlich",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "recht",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "rechtzeitig",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "die Rede",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "reduzieren",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Referat",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "die Reform",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Regal",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Regel",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "regelmäßig",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "regeln",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Region",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "regional",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "reichen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "reif",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Reihenfolge",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "rein",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "reinigen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Reservierung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Respekt",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Reklame",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "der Rekord",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "relativ",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "die Religion",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "rennen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Rente",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "retten",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Richter",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Richtung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "in Rente gehen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "riesig",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Risiko",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "roh",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "das Rohr",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06",
    "region": "A"
   },
   {
    "lemma": "die Rolle",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Roman",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Rückfahrt",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Rückkehr",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "rückwärts",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Rücksicht",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Rüebli",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03",
    "region": "CH"
   },
   {
    "lemma": "die Rufnummer",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Runde",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Rundfahrt",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Saal",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Sack",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "die Sahne",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06",
    "region": "D"
   },
   {
    "lemma": "die Saison",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Salbe",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Salon",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "salzig",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "sämtliche",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Sand",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Sänger",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Sängerin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "satt",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Schachtel",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "schaden",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Schaden",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "schalten",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Schatten",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "schätzen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "schauen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "das Schaufenster",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Schauspieler",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Schauspielerin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "die Scheibe",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "sich scheiden lassen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Scheidung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Schein",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "schieben",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "schief",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "schießen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Schlaf",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "schlagen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Schnitzel",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Schnupfen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Schreck",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "aufschreiben",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "das Schreiben",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "schreien",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Schrift",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Schriftsteller",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Schritt",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Schuld",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Schulden",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "schuldig",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Schularbeit",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06",
    "region": "A"
   },
   {
    "lemma": "die Schulter",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Schüssel",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "schütteln",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "schützen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Schutz",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Schwammerl",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06",
    "region": "A"
   },
   {
    "lemma": "die Schwangerschaft",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "schweigen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Schwierigkeit",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "schwitzen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "seitdem",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "der Sekretär",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Sekretärin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "selb-",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "selbstverständlich",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "selten",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "seltsam",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Semester",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "das Seminar",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Semmel",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06",
    "region": "A"
   },
   {
    "lemma": "senden",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Sender",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Senioren",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "senkrecht",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "die Serie",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Serviceangestellte",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03",
    "region": "CH"
   },
   {
    "lemma": "die Serviceangestellte",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03",
    "region": "CH"
   },
   {
    "lemma": "sichtbar",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "siegen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Sieg",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Sieger",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Siegerin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "(sich) siezen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "sinken",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Sinn",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "sinnlos",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "sinnvoll",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Sitz",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Sessel",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Sicherheit",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "sichern",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "sobald",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "die Socke",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "sodass",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "sogenannt-",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "solange",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "solch-",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "das Sonderangebot",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "sondern",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "sorgen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Sorge",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Soße",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "das Souvenir",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "soviel",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "sowieso",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "sowohl … als auch",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "sozial",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Sozialarbeiter",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Sozialarbeiterin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "sparsam",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "spätestens",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "die Speise",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Speisewagen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "der Spezialist",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Spezialistin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "speziell",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Spiegel",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Spieler",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Spielerin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "der Spielplatz",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "das Spielzeug",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "spitz",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "die Sportart",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Sportler",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Sportlerin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "die Fremdsprache",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Muttersprache",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Zweitsprache",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "springen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Spritze",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "spülen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Spur",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "spüren",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Stadion",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "städtisch",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "stammen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "ständig",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "der Standpunkt",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "starten",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Start",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Station",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Statistik",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "statistisch",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "statt",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "der Stau",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Staub",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "staubsaugen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "stechen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "stecken",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Steckdose",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Stecker",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "steil",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Stein",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Stempel",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Stern",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Steuer",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Steward",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "die Stewardess",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "der Stil",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "stilistisch",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "still",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "stehen bleiben",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "stehlen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "steigen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Stiege",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06",
    "region": "A"
   },
   {
    "lemma": "das Stiegenhaus",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06",
    "region": "A"
   },
   {
    "lemma": "die Stimme",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "stimmen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "die Stimmung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "stinken",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Stoff",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "stolz",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "stoppen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Störung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "(sich) stoßen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Strafe",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "strafbar",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Strafzettel",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Strecke",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "das Streichholz",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "streiken",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Streik",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Streit",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Strom",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Strumpf",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "die Studie",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Studierende",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "die Studierende",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "das Studio",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Stufe",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "stumm",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "der Sturm",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "stürzen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Sucht",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "süchtig",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Suchtmittel",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "die Summe",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "das Symbol",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das System",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Szene",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Tabelle",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Tagesablauf",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "das Tal",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Talent",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "tanken",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Tankstelle",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Tante",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Tanz",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Taschentuch",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Tastatur",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Taste",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Tat",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Täter",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Täterin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "die Tätigkeit",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Tatsache",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "tatsächlich",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "taub",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "tauchen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Technik",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "technisch",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Technologie",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Teil",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Teilzeit",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Teilnahme",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Teilnehmer",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Teilnehmerin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "die Temperatur",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "das Tempo",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Teppich",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Terminkalender",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Terrasse",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "testen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "theoretisch",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Theorie",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Therapie",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "das Haustier",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Tierpark",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "tippen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Tradition",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "traditionell",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Trainer",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Trainerin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "der Tod",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "tödlich",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "tolerant",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Tram",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03",
    "region": "CH"
   },
   {
    "lemma": "die Träne",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "transportieren",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Transport",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Tor",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Tote",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Tote",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "der Tourismus",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Treffpunkt",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "treiben",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "sich trennen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Trennung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Treppenhaus",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "treten",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "treu",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Trinkgeld",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "trocknen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Tropfen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "das Trottoir",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03",
    "region": "CH"
   },
   {
    "lemma": "trotz",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "trotzdem",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "das Tuch",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "der Turm",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Tüte",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Typ",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Übung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "überfahren",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "überhaupt",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "überholen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "überlegen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "die Übernachtung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "übernehmen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "überprüfen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "überqueren",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "überraschen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Überraschung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "überreden",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Überschrift",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Übersetzer",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Übersetzerin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "die Überstunde",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "übertreiben",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Überweisung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "(sich) überzeugen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Überzeugung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "üblich",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "übrig",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "übrigens",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "das Ufer",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "umarmen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "um … zu",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "(sich) umdrehen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Umfrage",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Umgebung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "umgehen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "umgekehrt",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Umleitung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "umso",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "umsonst",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "umtauschen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Umtausch",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Umwelt",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Umweltschutz",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Uniform",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "unterbrechen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Umweltverschmutzung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Unterhaltung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Unterlagen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "unterlassen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "ungefähr",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "ungewöhnlich",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "unglaublich",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Unglück",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "unheimlich",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Unternehmer",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Unternehmerin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "unterrichten",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "untersagt",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "unterscheiden",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "unterschiedlich",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "unterstreichen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "unterstützen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Unterstützung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Untersuchung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Urkunde",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Ursache",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "verursachen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "ursprünglich",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Urteil",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Vase",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "vegetarisch",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "das Velo",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03",
    "region": "CH"
   },
   {
    "lemma": "verabreden",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "die Verabredung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "(sich) verabschieden",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "der Abschied",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "verändern",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "verantwortlich",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Verantwortung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "verbessern",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "das Verbot",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "verbinden",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Verbindung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "verbrauchen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Verbrecher",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Verbrecherin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "verbrennen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "verbringen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "der Verdacht",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "verdächtig",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Vergangenheit",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "vergeblich",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Vergnügen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "vergnügt",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "vergrößern",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "verhaften",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "sich verhalten",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Verhalten",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Verhältnis",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "verhindern",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Verlag",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "verlangen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "verlängern",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "verlassen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "(sich) verlaufen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Verletzung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Verlierer",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Verliererin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "der Verlust",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "vermeiden",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Vermieterin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "die Vermietung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "vermissen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Vermittlung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "vermuten",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "vernünftig",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "verpacken",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "verpflegen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "verpflichtet",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "verraten",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "verrückt",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Versammlung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "versäumen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "verschreiben",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "verschwinden",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "versichern",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Versichertenkarte",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Versicherung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "versprechen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "verständlich",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Verständnis",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "verstecken",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Versuch",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "verteilen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "verwenden",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "verzeihen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "Verzeihung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "verzichten",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Video",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "vertrauen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Vertrauen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "vertreten",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Vertreter",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Vertreterin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "die Vertretung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "verurteilen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Verwaltung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "verwandt",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Verwandte",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "verwechseln",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Viertel",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06",
    "region": "D,A"
   },
   {
    "lemma": "virtuell",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Virus",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Visitenkarte",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "das Visum",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "das Vitamin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Vollzeit",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "völlig",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "voneinander",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "vor allem",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "voraus",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "die Voraussetzung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "voraussichtlich",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Vorbereitung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "vorder-",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Vorfahrt",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "vorhaben",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "vorhin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "vorkommen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "vorläufig",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "vorlesen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Vorort",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "vorschlagen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "die Vorschrift",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Vorstellung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Vorstellungsgespräch",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Vorteil",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "der Vortrag",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Vorwurf",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "waagerecht",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "wachsen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Ware",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "wahnsinnig",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Wahl",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Wahrheit",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "während",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "die Wand",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Wanderung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Wärme",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "warnen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "das Waschmittel",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Wecker",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "weder … noch",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "sich weigern",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Weiterbildung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "weltweit",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "wenden",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Werbung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "werfen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Werk",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Werkzeug",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "wert",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Wert",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "wertlos",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "wertvoll",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "weshalb",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "wetten",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Wetterbericht",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Wettervorhersage",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "widersprechen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Wiederholung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "wiegen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "wild",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Wiese",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "wieso",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "winken",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "wirken",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Wirkung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Wirklichkeit",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Wirt",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Wirtin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "die Wirtschaft",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Wissen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Wissenschaft",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Wissenschaftler",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Wissenschaftlerin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "wohl",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "der Wohnort",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Wohnsitz",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Wolle",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "worüber",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "worum",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "das Wörterbuch",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "die Wunde",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "das Wunder",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "wunderschön",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "sich wundern",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "wütend",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Anzahl",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "zahlreich",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Zahlung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "zählen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "die Zahncreme",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Zange",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "das Zeichen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Verkehrszeichen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Zeichnung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Zeile",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "ziemlich",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "der Zeitpunkt",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "zelten",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "zentral",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "zerstören",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Zertifikat",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "das Zeug",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "ziehen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Zinsen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Zivilstand",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03",
    "region": "CH"
   },
   {
    "lemma": "die Zone",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Zeuge",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Zeugin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "zubereiten",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Zufall",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "zufällig",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Zündholz",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "zunehmen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "zurechtkommen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Zugang",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "zugänglich",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "zugehen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "das Zuhause",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Zuhörer",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Zuhörerin",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-06"
   },
   {
    "lemma": "die Zukunft",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "zukünftig",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "zumindest",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "zunächst",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "zusagen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "die Zusammenarbeit",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "zusammenfassen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Zusammenhang",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "zusätzlich",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "zuschauen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Zuschauer",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Zuschlag",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "der Zustand",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "zuständig",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "zustimmen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Zustimmung",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Zutaten",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "zuverlässig",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "das Zvieri",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03",
    "region": "CH"
   },
   {
    "lemma": "das Znüni",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03",
    "region": "CH"
   },
   {
    "lemma": "zwar",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-03"
   },
   {
    "lemma": "der Zweck",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "zweifeln",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "der Zweifel",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
   },
   {
    "lemma": "die Zwiebel",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-04"
   },
   {
    "lemma": "(sich) zwingen",
    "level": "B1",
+   "source": "goethe-b1",
    "month": "2027-05"
+  },
+  {
+   "lemma": "die Mappe",
+   "level": "B1",
+   "source": "goethe-b1",
+   "month": "2027-05",
+   "added": "공식 PDF 대조 2026-10-12"
+  },
+  {
+   "lemma": "das Märchen",
+   "level": "B1",
+   "source": "goethe-b1",
+   "month": "2027-05",
+   "added": "공식 PDF 대조 2026-10-12"
+  },
+  {
+   "lemma": "die Margarine",
+   "level": "B1",
+   "source": "goethe-b1",
+   "month": "2027-05",
+   "added": "공식 PDF 대조 2026-10-12"
+  },
+  {
+   "lemma": "die Marille",
+   "level": "B1",
+   "source": "goethe-b1",
+   "month": "2027-05",
+   "added": "공식 PDF 대조 2026-10-12"
+  },
+  {
+   "lemma": "die Marke",
+   "level": "B1",
+   "source": "goethe-b1",
+   "month": "2027-05",
+   "added": "공식 PDF 대조 2026-10-12"
+  },
+  {
+   "lemma": "die Notaufnahme",
+   "level": "B1",
+   "source": "goethe-b1",
+   "month": "2027-03",
+   "added": "공식 PDF 대조 2026-10-12"
+  },
+  {
+   "lemma": "der Notausgang",
+   "level": "B1",
+   "source": "goethe-b1",
+   "month": "2027-03",
+   "added": "공식 PDF 대조 2026-10-12"
+  },
+  {
+   "lemma": "der Notfall",
+   "level": "B1",
+   "source": "goethe-b1",
+   "month": "2027-03",
+   "added": "공식 PDF 대조 2026-10-12"
+  },
+  {
+   "lemma": "die Organisation",
+   "level": "B1",
+   "source": "goethe-b1",
+   "month": "2027-04",
+   "added": "공식 PDF 대조 2026-10-12"
+  },
+  {
+   "lemma": "quer",
+   "level": "B1",
+   "source": "goethe-b1",
+   "month": "2027-03",
+   "added": "공식 PDF 대조 2026-10-12"
+  },
+  {
+   "lemma": "die Reportage",
+   "level": "B1",
+   "source": "goethe-b1",
+   "month": "2027-04",
+   "added": "공식 PDF 대조 2026-10-12"
+  },
+  {
+   "lemma": "der Reporter",
+   "level": "B1",
+   "source": "goethe-b1",
+   "month": "2027-04",
+   "added": "공식 PDF 대조 2026-10-12"
+  },
+  {
+   "lemma": "die Schlange",
+   "level": "B1",
+   "source": "goethe-b1",
+   "month": "2027-05",
+   "added": "공식 PDF 대조 2026-10-12"
+  },
+  {
+   "lemma": "schlank",
+   "level": "B1",
+   "source": "goethe-b1",
+   "month": "2027-05",
+   "added": "공식 PDF 대조 2026-10-12"
+  },
+  {
+   "lemma": "schließlich",
+   "level": "B1",
+   "source": "goethe-b1",
+   "month": "2027-05",
+   "added": "공식 PDF 대조 2026-10-12"
+  },
+  {
+   "lemma": "schmal",
+   "level": "B1",
+   "source": "goethe-b1",
+   "month": "2027-05",
+   "added": "공식 PDF 대조 2026-10-12"
+  },
+  {
+   "lemma": "das Schmerzmittel",
+   "level": "B1",
+   "source": "goethe-b1",
+   "month": "2027-05",
+   "added": "공식 PDF 대조 2026-10-12"
+  },
+  {
+   "lemma": "schminken",
+   "level": "B1",
+   "source": "goethe-b1",
+   "month": "2027-05",
+   "added": "공식 PDF 대조 2026-10-12"
+  },
+  {
+   "lemma": "der Schmuck",
+   "level": "B1",
+   "source": "goethe-b1",
+   "month": "2027-05",
+   "added": "공식 PDF 대조 2026-10-12"
+  },
+  {
+   "lemma": "der Schmutz",
+   "level": "B1",
+   "source": "goethe-b1",
+   "month": "2027-05",
+   "added": "공식 PDF 대조 2026-10-12"
+  },
+  {
+   "lemma": "verschmutzen",
+   "level": "B1",
+   "source": "goethe-b1",
+   "month": "2027-05",
+   "added": "공식 PDF 대조 2026-10-12"
+  },
+  {
+   "lemma": "selber",
+   "level": "B1",
+   "source": "goethe-b1",
+   "month": "2027-05",
+   "added": "공식 PDF 대조 2026-10-12"
+  },
+  {
+   "lemma": "spazieren",
+   "level": "B1",
+   "source": "goethe-b1",
+   "month": "2027-03",
+   "added": "공식 PDF 대조 2026-10-12"
+  },
+  {
+   "lemma": "tauschen",
+   "level": "B1",
+   "source": "goethe-b1",
+   "month": "2027-05",
+   "added": "공식 PDF 대조 2026-10-12"
+  },
+  {
+   "lemma": "der Vergleich",
+   "level": "B1",
+   "source": "goethe-b1",
+   "month": "2027-05",
+   "added": "공식 PDF 대조 2026-10-12"
+  },
+  {
+   "lemma": "verliebt",
+   "level": "B1",
+   "source": "goethe-b1",
+   "month": "2027-04",
+   "added": "공식 PDF 대조 2026-10-12"
+  },
+  {
+   "lemma": "vermutlich",
+   "level": "B1",
+   "source": "goethe-b1",
+   "month": "2027-05",
+   "added": "공식 PDF 대조 2026-10-12"
   }
  ]
 }

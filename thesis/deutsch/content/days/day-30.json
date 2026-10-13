@@ -1,0 +1,194 @@
+{
+  "id": "day-30",
+  "theme_ko": "한 달 복습 · 집",
+  "focus_ko": "한 달 복습: sein · haben · nicht und kein · 숫자와 시각",
+  "new_cards": [
+    "a1-alltag:die-wohnung",
+    "a1-alltag:das-zimmer",
+    "a1-alltag:die-kueche",
+    "a1-alltag:das-bad",
+    "a1-alltag:der-balkon",
+    "a1-alltag:die-miete",
+    "a1-alltag:suchen",
+    "eigene-saetze:besichtigen",
+    "eigene-saetze:der-mietvertrag"
+  ],
+  "stair": {
+    "source": {
+      "author": "Adolf Loos",
+      "title": "Ornament und Verbrechen",
+      "year": 1908,
+      "license": "public-domain",
+      "url": "https://de.wikisource.org/wiki/Ornament_und_Verbrechen"
+    },
+    "layers": [
+      {
+        "level": "A1",
+        "text_de": "Wir suchen eine Wohnung in Basel. Die Wohnung hat drei Zimmer, eine Küche und ein Bad. Ein Balkon ist auch da. Die Küche ist neu. Das Bad hat ein Fenster. Die Miete ist nicht billig, aber die Wohnung ist hell und ruhig. Wir möchten die Wohnung besichtigen. Der Termin ist am Samstag um elf Uhr.",
+        "gloss": [
+          {
+            "de": "hell",
+            "ko": "밝은"
+          },
+          {
+            "de": "ruhig",
+            "ko": "조용한"
+          },
+          {
+            "de": "Wir möchten … besichtigen.",
+            "ko": "…을 보러 가고 싶다 (동사 둘 틀은 다음 달에 배운다)"
+          },
+          {
+            "de": "am Samstag",
+            "ko": "토요일에"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Die Wohnung hat drei ___.",
+            "answer": "Zimmer",
+            "options": [
+              "Zimmer",
+              "Küchen",
+              "Bäder"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "집 보기는 언제인가?",
+            "options": [
+              "토요일 11시",
+              "금요일 6시",
+              "일요일 11시"
+            ],
+            "answer": 0
+          }
+        ]
+      },
+      {
+        "level": "A2",
+        "text_de": "Vor drei Wochen haben wir Adolf Loos gelesen. Er schrieb 1908 sinngemäß: Der moderne Mensch braucht kein Ornament. Bei der Wohnungssuche in Basel sieht man beides: alte Häuser mit Stuck an der Decke und neue Wohnungen mit glatten, weißen Wänden. Was ist besser? Das ist eine Frage des Geschmacks, aber auch des Preises. Heute lesen wir den Anfang des Textes noch einmal. Vielleicht verstehen wir jetzt mehr Wörter.",
+        "gloss": [
+          {
+            "de": "sinngemäß",
+            "ko": "뜻으로 보아"
+          },
+          {
+            "de": "beides",
+            "ko": "둘 다"
+          },
+          {
+            "de": "der Stuck",
+            "ko": "회반죽 장식"
+          },
+          {
+            "de": "die Decke",
+            "ko": "천장"
+          },
+          {
+            "de": "die Wand",
+            "ko": "(실내) 벽"
+          },
+          {
+            "de": "der Geschmack",
+            "ko": "취향"
+          },
+          {
+            "de": "der Preis",
+            "ko": "값"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Loos schrieb ___: Der moderne Mensch braucht kein Ornament.",
+            "answer": "1908",
+            "options": [
+              "1808",
+              "1908",
+              "2008"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "글에서 집을 고르는 기준으로 나오지 않은 것은?",
+            "options": [
+              "취향",
+              "값",
+              "층수 규정"
+            ],
+            "answer": 2
+          }
+        ]
+      }
+    ],
+    "summit": {
+      "text_de": "Der menschliche embryo macht im mutterleibe alle entwicklungsphasen des tierreiches durch. Wenn der mensch geboren wird, sind seine sinneseindrücke gleich denen eines neugeborenen hundes. Seine kindheit durchläuft alle wandlungen, die der geschichte der menschheit entsprechen.",
+      "note_ko": "7일째와 같은 단락. 아돌프 로스, 「장식과 범죄」(1908) 첫머리 세 문장. 이번에는 der Mensch, geboren, alle처럼 한 달 동안 본 낱말에 표시하며 읽는다."
+    }
+  },
+  "ear": {
+    "text_de": "Wir suchen eine Wohnung. Die Wohnung hat drei Zimmer, eine Küche und ein Bad. Die Miete ist nicht billig.",
+    "lang": "de-DE",
+    "rates": [
+      0.75,
+      0.9,
+      1.0
+    ]
+  },
+  "hand": {
+    "situation_ko": "집 광고를 보고 관리회사 Herr Huber에게 집 보기를 청한다(보낸 메시지와 같은 틀).",
+    "prompt_ko": "Sie체 두 문장.",
+    "model_de": "Wir möchten die Wohnung gerne besichtigen. Termine ab 18 Uhr passen uns gut.",
+    "chunks": [
+      "Wir möchten die Wohnung besichtigen.",
+      "Wann passt es Ihnen?",
+      "Termine ab 18 Uhr passen uns gut."
+    ]
+  },
+  "illustration": {
+    "scene_ko": "토요일 오전 11시, 바젤 옛 건물의 빈 집. 연호와 정현이 관리회사 Herr Huber와 함께 밝고 조용한 방을 둘러본다. 열린 문 너머로 새 부엌, 창 쪽으로 작은 발코니가 보인다.",
+    "prompt_en": "Saturday, eleven in the morning, an empty three-room apartment in an older building in Basel. A Korean man and a Korean woman look around a bright, quiet room together with Herr Huber, a middle-aged Swiss property manager holding a folder with the floor plan. Through an open door a new kitchen is visible; a small balcony lies beyond the window."
+  },
+  "mix": {
+    "tasks": [
+      {
+        "type": "mc",
+        "prompt_ko": "also의 뜻은?",
+        "options": [
+          "또한",
+          "그러니까, 그럼",
+          "아마"
+        ],
+        "answer": 1,
+        "from": "day-29",
+        "point_ko": "also (헷갈리는 말)"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Dann ___ wir uns am Samstag.",
+        "answer": "treffen",
+        "options": [
+          "treffen",
+          "trefft",
+          "treffe"
+        ],
+        "from": "day-24",
+        "point_ko": "wir treffen uns"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Am Theaterplatz ist ___ Brunnen.",
+        "answer": "ein",
+        "options": [
+          "eine",
+          "das",
+          "ein"
+        ],
+        "from": "day-16",
+        "point_ko": "ein · eine"
+      }
+    ]
+  }
+}

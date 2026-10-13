@@ -1,0 +1,214 @@
+{
+  "id": "day-08",
+  "theme_ko": "er와 sie",
+  "focus_ko": "er/sie + -t · Was macht er? Was macht sie?",
+  "new_cards": [
+    "a1-alltag:er",
+    "a1-alltag:sie",
+    "a1-alltag:studieren",
+    "a1-alltag:der-student",
+    "a1-alltag:machen",
+    "a1-alltag:hoeren",
+    "a1-alltag:das-hobby",
+    "a1-alltag:gern",
+    "a1-alltag:heute",
+    "a1-alltag:jetzt",
+    "basel-strasse:das-museum"
+  ],
+  "stair": {
+    "source": {
+      "author": "2628 선생",
+      "title": "Jeonghyeon studiert",
+      "year": 2026,
+      "license": "own",
+      "url": ""
+    },
+    "layers": [
+      {
+        "level": "A1",
+        "text_de": "Das ist Jeonghyeon Kong. Sie wohnt in Basel und studiert hier. Und das ist Yeon Ho Lee. Er arbeitet als Architekt. Heute ist Sonntag. Was macht er heute? Er hört Musik. Und sie? Sie geht gern ins Museum. Das ist ihr Hobby. Jetzt sind sie zusammen im Kunstmuseum.",
+        "gloss": [
+          {
+            "de": "der Sonntag",
+            "ko": "일요일"
+          },
+          {
+            "de": "die Musik",
+            "ko": "음악"
+          },
+          {
+            "de": "ins Museum",
+            "ko": "박물관에"
+          },
+          {
+            "de": "ihr",
+            "ko": "그녀의"
+          },
+          {
+            "de": "zusammen",
+            "ko": "함께"
+          },
+          {
+            "de": "das Kunstmuseum",
+            "ko": "바젤 미술관"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Er ___ als Architekt.",
+            "answer": "arbeitet",
+            "options": [
+              "arbeitet",
+              "arbeite",
+              "arbeiten"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "일요일에 정현이 즐겨 하는 일은?",
+            "options": [
+              "박물관에 간다",
+              "음악을 듣는다",
+              "일한다"
+            ],
+            "answer": 0
+          }
+        ]
+      },
+      {
+        "level": "A2",
+        "text_de": "Für eine Stadt dieser Größe hat Basel sehr viele Museen. Das Kunstmuseum liegt mitten in der Stadt. Die Fondation Beyeler ist in Riehen, eine kurze Fahrt mit dem Tram. Das Vitra Design Museum steht schon in Deutschland, in Weil am Rhein. Für Architekten sind dort nicht nur die Ausstellungen interessant, sondern auch die Gebäude selbst.",
+        "gloss": [
+          {
+            "de": "die Größe",
+            "ko": "크기"
+          },
+          {
+            "de": "mitten in",
+            "ko": "한가운데"
+          },
+          {
+            "de": "die Fahrt",
+            "ko": "타고 가는 길"
+          },
+          {
+            "de": "die Ausstellung",
+            "ko": "전시"
+          },
+          {
+            "de": "das Gebäude",
+            "ko": "건물"
+          },
+          {
+            "de": "selbst",
+            "ko": "그 자체"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Die Fondation Beyeler ist in ___.",
+            "answer": "Riehen",
+            "options": [
+              "Riehen",
+              "Zürich",
+              "Bern"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "비트라 디자인 박물관은 어느 나라에 있나?",
+            "options": [
+              "스위스",
+              "독일",
+              "프랑스"
+            ],
+            "answer": 1
+          }
+        ]
+      }
+    ],
+    "summit": {
+      "text_de": "",
+      "note_ko": "오늘 꼭대기는 비워 둔다. 원문은 14일째에 요한 페터 헤벨."
+    }
+  },
+  "ear": {
+    "text_de": "Sie wohnt in Basel und studiert hier. Er arbeitet als Architekt. Was macht er heute? Er hört Musik.",
+    "lang": "de-DE",
+    "rates": [
+      0.75,
+      0.9,
+      1.0
+    ]
+  },
+  "hand": {
+    "situation_ko": "동료 Pawel이 같이 사는 사람은 무엇을 하느냐고 묻는다.",
+    "prompt_ko": "er 또는 sie로 한 문장.",
+    "model_de": "Sie studiert in Basel und geht gern ins Museum.",
+    "chunks": [
+      "Sie studiert …",
+      "Er arbeitet als …",
+      "… geht gern ins Museum."
+    ]
+  },
+  "illustration": {
+    "scene_ko": "일요일 오후, 바젤 미술관 전시실. 정현과 연호가 큰 그림 앞에 나란히 서 있다. 연호는 이어폰으로 음악을 듣고, 정현은 그림을 가리킨다.",
+    "prompt_en": "Sunday afternoon in a gallery room of the Kunstmuseum Basel. Jeonghyeon, a Korean woman, and Yeon Ho, a Korean man, stand side by side in front of a large painting. Yeon Ho wears earphones and listens to music; Jeonghyeon points at a detail of the painting."
+  },
+  "variants": {
+    "junghyun": {
+      "hand": {
+        "situation_ko": "실크스크린 공방에서 Nicole이 같이 사는 사람은 무엇을 하느냐고 묻는다.",
+        "prompt_ko": "er 또는 sie로 한 문장.",
+        "model_de": "Er arbeitet als Architekt und hört gern Musik.",
+        "chunks": [
+          "Er arbeitet als …",
+          "Er hört gern …",
+          "Er wohnt in …"
+        ]
+      }
+    }
+  },
+  "mix": {
+    "tasks": [
+      {
+        "type": "mc",
+        "prompt_ko": "어순이 맞는 문장은?",
+        "options": [
+          "Von hier man sieht das Münster.",
+          "Von hier sieht man das Münster.",
+          "Von hier das Münster sieht man."
+        ],
+        "answer": 1,
+        "from": "day-07",
+        "point_ko": "동사는 둘째 자리 (도치)"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Ich arbeite ___ Architekt.",
+        "answer": "als",
+        "options": [
+          "von",
+          "aus",
+          "als"
+        ],
+        "from": "day-04",
+        "point_ko": "als + 직업"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Guten Morgen! Ich ___ neu hier.",
+        "answer": "bin",
+        "options": [
+          "bin",
+          "ist",
+          "sind"
+        ],
+        "from": "day-01",
+        "point_ko": "sein 활용 (ich bin)"
+      }
+    ]
+  }
+}

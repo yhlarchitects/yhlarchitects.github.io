@@ -1,0 +1,196 @@
+{
+  "id": "day-24",
+  "theme_ko": "약속 잡기",
+  "focus_ko": "Hast du am Freitag Zeit? · … passt mir gut. · Wir treffen uns um …",
+  "new_cards": [
+    "eigene-saetze:passt-mir-gut",
+    "eigene-saetze:termine-ab-18-uhr",
+    "basel-strasse:sich-treffen",
+    "a1-alltag:das-kino",
+    "a1-alltag:vielleicht",
+    "a1-alltag:klar",
+    "a1-alltag:frei",
+    "a1-alltag:spaet",
+    "a1-alltag:besuchen",
+    "a1-alltag:das-restaurant",
+    "eigene-saetze:wir-richten-uns-nach-ihnen"
+  ],
+  "stair": {
+    "source": {
+      "author": "2628 선생",
+      "title": "Hast du am Freitag Zeit?",
+      "year": 2026,
+      "license": "own",
+      "url": ""
+    },
+    "layers": [
+      {
+        "level": "A1",
+        "text_de": "„Hallo Pawel, hast du am Freitag Zeit? Gehen wir ins Kino?“ „Am Freitag bin ich nicht frei. Vielleicht am Samstag?“ „Klar! Um acht?“ „Ist das nicht zu spät? Wir essen vorher im Restaurant. Um sechs passt mir gut.“ „Gut, dann treffen wir uns um sechs.“",
+        "gloss": [
+          {
+            "de": "Zeit haben",
+            "ko": "시간이 있다"
+          },
+          {
+            "de": "ins Kino",
+            "ko": "영화관에"
+          },
+          {
+            "de": "zu spät",
+            "ko": "너무 늦은"
+          },
+          {
+            "de": "vorher",
+            "ko": "그 전에"
+          },
+          {
+            "de": "im Restaurant",
+            "ko": "식당에서"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Um sechs ___ mir gut.",
+            "answer": "passt",
+            "options": [
+              "passt",
+              "passen",
+              "passe"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "두 사람은 언제 만나나?",
+            "options": [
+              "금요일 6시",
+              "토요일 6시",
+              "토요일 8시"
+            ],
+            "answer": 1
+          }
+        ]
+      },
+      {
+        "level": "A2",
+        "text_de": "Bei der Wohnungssuche muss man oft schnell einen Termin finden. In unserer Nachricht vom 8. Oktober stand: „Für eine Besichtigung passen uns werktags Termine ab 18 Uhr oder das Wochenende.“ Werktage sind alle Tage außer Sonntag und Feiertagen. Im Alltag meint man damit oft Montag bis Freitag. Mit „Wir richten uns gerne nach Ihnen“ zeigt man, dass man flexibel ist.",
+        "gloss": [
+          {
+            "de": "die Besichtigung",
+            "ko": "(집) 보기"
+          },
+          {
+            "de": "werktags",
+            "ko": "평일에"
+          },
+          {
+            "de": "der Werktag",
+            "ko": "평일 (일요일·공휴일 아닌 날)"
+          },
+          {
+            "de": "außer",
+            "ko": "~을 빼고"
+          },
+          {
+            "de": "der Feiertag",
+            "ko": "공휴일"
+          },
+          {
+            "de": "sich richten nach",
+            "ko": "~에 맞추다"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Für eine Besichtigung passen uns werktags Termine ab ___ Uhr.",
+            "answer": "18",
+            "options": [
+              "8",
+              "12",
+              "18"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "„Wir richten uns gerne nach Ihnen.“은 무슨 뜻인가?",
+            "options": [
+              "그쪽 일정에 맞추겠다",
+              "우리가 시간을 정하겠다",
+              "다시 연락하겠다"
+            ],
+            "answer": 0
+          }
+        ]
+      }
+    ],
+    "summit": {
+      "text_de": "",
+      "note_ko": "오늘 꼭대기는 비워 둔다. 원문은 28일째에 요한 페터 헤벨."
+    }
+  },
+  "ear": {
+    "text_de": "Hast du am Freitag Zeit? Am Freitag bin ich nicht frei. Vielleicht am Samstag? Um sechs passt mir gut.",
+    "lang": "de-DE",
+    "rates": [
+      0.75,
+      0.9,
+      1.0
+    ]
+  },
+  "hand": {
+    "situation_ko": "집 보기 일정을 묻는 연락에 답한다.",
+    "prompt_ko": "Sie체 두 문장.",
+    "model_de": "Termine ab 18 Uhr passen uns gut. Sonst richten wir uns gerne nach Ihnen.",
+    "chunks": [
+      "… passt mir gut.",
+      "Termine ab 18 Uhr",
+      "Wir richten uns gerne nach Ihnen."
+    ]
+  },
+  "mix": {
+    "tasks": [
+      {
+        "type": "cloze",
+        "prompt_de": "Morgen ist Freitag. Heute ist ___.",
+        "answer": "Donnerstag",
+        "options": [
+          "Samstag",
+          "Donnerstag",
+          "Mittwoch"
+        ],
+        "from": "day-23",
+        "point_ko": "요일"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "„Was kostet das?“의 뜻은?",
+        "options": [
+          "이건 뭐예요?",
+          "몇 시예요?",
+          "이건 얼마예요?"
+        ],
+        "answer": 2,
+        "from": "day-20",
+        "point_ko": "값 묻기"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "예·아니요 질문으로 맞는 것은?",
+        "options": [
+          "Sprechen Sie Deutsch?",
+          "Deutsch Sie sprechen?",
+          "Sie Deutsch sprechen?"
+        ],
+        "answer": 0,
+        "from": "day-10",
+        "point_ko": "예·아니요 질문 어순"
+      }
+    ]
+  },
+  "illustration": {
+    "scene_ko": "토요일 저녁 6시, 연호와 친구 Pawel이 바젤의 식당에서 저녁을 먹는다. 탁자 위에 영화표 두 장이 놓여 있다.",
+    "prompt_en": "Yeonho, a Korean architect, and his Swiss friend Pawel eat dinner at a small restaurant in Basel at six o'clock on a Saturday evening before going to the cinema; two cinema tickets lie on the table and a wall clock shows six."
+  }
+}

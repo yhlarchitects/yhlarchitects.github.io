@@ -1,0 +1,200 @@
+{
+  "id": "day-09",
+  "theme_ko": "wir와 ihr",
+  "focus_ko": "wir wohnen · ihr wohnt · sie wohnen",
+  "new_cards": [
+    "a1-alltag:wir",
+    "a1-alltag:ihr",
+    "a1-alltag:zusammen",
+    "eigene-saetze:wir-wohnen-beide-in-basel",
+    "a1-alltag:auch",
+    "a1-alltag:oder",
+    "a1-alltag:essen",
+    "a1-alltag:trinken",
+    "a1-alltag:der-kaffee",
+    "a1-alltag:der-tee",
+    "basel-strasse:das-mittagessen"
+  ],
+  "stair": {
+    "source": {
+      "author": "2628 선생",
+      "title": "Wir wohnen beide in Basel",
+      "year": 2026,
+      "license": "own",
+      "url": ""
+    },
+    "layers": [
+      {
+        "level": "A1",
+        "text_de": "Wir wohnen beide schon in Basel. Wir arbeiten und lernen hier. Am Mittag essen wir oft zusammen. Ich trinke Kaffee, sie trinkt Tee. „Und ihr? Wo wohnt ihr?“, fragt Laura. „Wir wohnen in Basel, aber wir suchen eine Wohnung. Und du?“ „Ich wohne auch in Basel.“",
+        "gloss": [
+          {
+            "de": "beide",
+            "ko": "둘 다"
+          },
+          {
+            "de": "schon",
+            "ko": "이미"
+          },
+          {
+            "de": "am Mittag",
+            "ko": "점심때"
+          },
+          {
+            "de": "oft",
+            "ko": "자주"
+          },
+          {
+            "de": "suchen",
+            "ko": "찾다"
+          },
+          {
+            "de": "die Wohnung",
+            "ko": "집"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "„Wo ___ ihr?“, fragt Laura.",
+            "answer": "wohnt",
+            "options": [
+              "wohnt",
+              "wohnen",
+              "wohnst"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "점심때 우리는 무엇을 하나?",
+            "options": [
+              "같이 먹는다",
+              "집을 본다",
+              "트램을 탄다"
+            ],
+            "answer": 0
+          }
+        ]
+      },
+      {
+        "level": "A2",
+        "text_de": "In der Schweiz gibt es am Vormittag eine kleine Pause: das Znüni. Der Name kommt von „um neun“. Viele essen dann ein Brötli oder einen Apfel und trinken einen Kaffee. Am Nachmittag gibt es das Zvieri, um vier Uhr. Das Mittagessen ist oft kurz, aber man isst es gern zusammen mit Kollegen.",
+        "gloss": [
+          {
+            "de": "der Vormittag",
+            "ko": "오전"
+          },
+          {
+            "de": "die Pause",
+            "ko": "쉬는 시간"
+          },
+          {
+            "de": "das Brötli",
+            "ko": "작은 빵 (스위스)"
+          },
+          {
+            "de": "der Apfel",
+            "ko": "사과"
+          },
+          {
+            "de": "der Nachmittag",
+            "ko": "오후"
+          },
+          {
+            "de": "der Kollege",
+            "ko": "동료"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Am Nachmittag gibt es das ___.",
+            "answer": "Zvieri",
+            "options": [
+              "Zvieri",
+              "Znüni",
+              "Frühstück"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "Znüni는 몇 시쯤 먹나?",
+            "options": [
+              "9시",
+              "12시",
+              "16시"
+            ],
+            "answer": 0
+          }
+        ]
+      }
+    ],
+    "summit": {
+      "text_de": "",
+      "note_ko": "오늘 꼭대기는 비워 둔다. 원문은 14일째에 요한 페터 헤벨."
+    }
+  },
+  "ear": {
+    "text_de": "Wir wohnen beide schon in Basel. Am Mittag essen wir zusammen. Ich trinke Kaffee. Und ihr? Wo wohnt ihr?",
+    "lang": "de-DE",
+    "rates": [
+      0.75,
+      0.9,
+      1.0
+    ]
+  },
+  "hand": {
+    "situation_ko": "집 문의 메시지에 두 사람 다 이미 바젤에 산다고 쓴다(10월 8일에 보낸 문장).",
+    "prompt_ko": "wir로 한 문장.",
+    "model_de": "Wir wohnen beide schon in Basel.",
+    "chunks": [
+      "Wir wohnen …",
+      "beide",
+      "schon"
+    ]
+  },
+  "illustration": {
+    "scene_ko": "점심때 바젤의 작은 카페. 연호는 커피, 정현은 차를 마시고, 맞은편에 앉은 친구 Laura가 어디 사느냐고 묻는다.",
+    "prompt_en": "Midday at a small café table in Basel. Yeon Ho drinks coffee and Jeonghyeon drinks tea; their Swiss friend Laura sits across from them and asks them a question. Plates with a light lunch on the table."
+  },
+  "mix": {
+    "tasks": [
+      {
+        "type": "cloze",
+        "prompt_de": "Sie ___ in Basel und studiert hier.",
+        "answer": "wohnt",
+        "options": [
+          "wohne",
+          "wohnt",
+          "wohnen"
+        ],
+        "from": "day-08",
+        "point_ko": "er/sie + -t"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "친구에게 du로 묻는 말은?",
+        "options": [
+          "Woher kommen Sie?",
+          "Woher kommt du?",
+          "Woher kommst du?"
+        ],
+        "answer": 2,
+        "from": "day-06",
+        "point_ko": "du + -st"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "___ kommen Sie? Aus Korea.",
+        "answer": "Woher",
+        "options": [
+          "Woher",
+          "Wo",
+          "Wie"
+        ],
+        "from": "day-02",
+        "point_ko": "Woher? / Wo?"
+      }
+    ]
+  }
+}

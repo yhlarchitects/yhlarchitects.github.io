@@ -1,0 +1,211 @@
+{
+  "id": "day-20",
+  "theme_ko": "값 묻고 사기",
+  "focus_ko": "Was kostet …? · 100 이상의 수 · Ich möchte …",
+  "new_cards": [
+    "wortgruppen:hundert-tausend",
+    "a1-alltag:kosten",
+    "a1-alltag:bezahlen",
+    "a1-alltag:zahlen",
+    "a1-alltag:das-broetchen",
+    "wortgruppen:euro-cent",
+    "a1-alltag:moechten",
+    "a1-alltag:der-apfel",
+    "a1-alltag:bekommen",
+    "a1-alltag:merci-vielmal"
+  ],
+  "stair": {
+    "source": {
+      "author": "2628 선생",
+      "title": "In der Bäckerei",
+      "year": 2026,
+      "license": "own",
+      "url": ""
+    },
+    "layers": [
+      {
+        "level": "A1",
+        "text_de": "„Grüezi! Was bekommen Sie?“ „Zwei Brötchen und ein Brot, bitte.“ „Gern. Sonst noch etwas?“ „Ja, ich möchte auch einen Apfel. Was kostet das zusammen?“ „Das macht acht Franken zwanzig.“ „Kann ich mit Karte bezahlen?“ „Ja, klar.“ „Merci vielmal!“ „Gern geschehen. Einen schönen Tag!“",
+        "gloss": [
+          {
+            "de": "Grüezi",
+            "ko": "안녕하세요 (스위스)"
+          },
+          {
+            "de": "Sonst noch etwas?",
+            "ko": "더 필요한 거 있으세요?"
+          },
+          {
+            "de": "einen Apfel",
+            "ko": "사과 하나를 (목적격은 11월)"
+          },
+          {
+            "de": "zusammen",
+            "ko": "합해서"
+          },
+          {
+            "de": "der Franken",
+            "ko": "프랑"
+          },
+          {
+            "de": "Kann ich …?",
+            "ko": "~해도 돼요? (화법조동사는 11월)"
+          },
+          {
+            "de": "die Karte",
+            "ko": "카드"
+          },
+          {
+            "de": "Gern geschehen.",
+            "ko": "천만에요."
+          },
+          {
+            "de": "Einen schönen Tag!",
+            "ko": "좋은 하루 보내세요!"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Kann ich mit Karte ___?",
+            "answer": "bezahlen",
+            "options": [
+              "bezahlen",
+              "bekommen",
+              "kosten"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "모두 얼마인가? (지어낸 값)",
+            "options": [
+              "8프랑 20",
+              "2프랑 80",
+              "18프랑"
+            ],
+            "answer": 0
+          }
+        ]
+      },
+      {
+        "level": "A2",
+        "text_de": "In der Schweiz zahlt man mit Franken und Rappen. Ein Franken hat hundert Rappen. Auf dem Preisschild steht zum Beispiel 4.50, mit Punkt, nicht mit Komma. Man sagt „vier Franken fünfzig“ oder kurz „vier fünfzig“. In Deutschland steht dort 4,50 €, mit Komma. Viele Bäckereien nehmen heute Karte oder Twint, aber etwas Bargeld ist immer gut.",
+        "gloss": [
+          {
+            "de": "der Rappen",
+            "ko": "라펜 (1/100프랑)"
+          },
+          {
+            "de": "das Preisschild",
+            "ko": "가격표"
+          },
+          {
+            "de": "der Punkt",
+            "ko": "점"
+          },
+          {
+            "de": "das Komma",
+            "ko": "쉼표"
+          },
+          {
+            "de": "Twint",
+            "ko": "스위스 휴대전화 결제"
+          },
+          {
+            "de": "das Bargeld",
+            "ko": "현금"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Ein Franken hat hundert ___.",
+            "answer": "Rappen",
+            "options": [
+              "Rappen",
+              "Cent",
+              "Euro"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "스위스 가격표의 소수점 표기는?",
+            "options": [
+              "점 4.50",
+              "쉼표 4,50",
+              "빗금 4/50"
+            ],
+            "answer": 0
+          }
+        ]
+      }
+    ],
+    "summit": {
+      "text_de": "",
+      "note_ko": "오늘 꼭대기는 비워 둔다. 원문은 28일째에 요한 페터 헤벨."
+    }
+  },
+  "ear": {
+    "text_de": "Was bekommen Sie? Zwei Brötchen und ein Brot, bitte. Das macht acht Franken zwanzig. Kann ich mit Karte bezahlen?",
+    "lang": "de-DE",
+    "rates": [
+      0.75,
+      0.9,
+      1.0
+    ]
+  },
+  "hand": {
+    "situation_ko": "이번 주 빵집이나 카페에서 주문하고 카드로 계산한다.",
+    "prompt_ko": "Sie체 두 문장.",
+    "model_de": "Zwei Brötchen, bitte. Kann ich mit Karte bezahlen?",
+    "chunks": [
+      "Ich möchte …",
+      "Was kostet …?",
+      "Kann ich mit Karte bezahlen?"
+    ]
+  },
+  "mix": {
+    "tasks": [
+      {
+        "type": "cloze",
+        "prompt_de": "Ich habe heute ___ Zeit.",
+        "answer": "keine",
+        "options": [
+          "kein",
+          "keine",
+          "nicht"
+        ],
+        "from": "day-19",
+        "point_ko": "kein · keine (여성 명사 앞)"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Das Haus ist alt. ___ ist schön.",
+        "answer": "Es",
+        "options": [
+          "Er",
+          "Sie",
+          "Es"
+        ],
+        "from": "day-16",
+        "point_ko": "es (das 명사를 받는 대명사)"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "「직업이 무엇입니까?」 바른 문장은?",
+        "options": [
+          "Was sind Sie von Beruf?",
+          "Wie sind Sie von Beruf?",
+          "Wo sind Sie von Beruf?"
+        ],
+        "answer": 0,
+        "from": "day-04",
+        "point_ko": "Was sind Sie von Beruf?"
+      }
+    ]
+  },
+  "illustration": {
+    "scene_ko": "토요일 아침, 연호와 정현이 바젤 작은 빵집 계산대에서 브뢰트헨 둘, 빵 하나, 사과 하나를 받고 카드로 계산한다. 계산대 가격표에 8.20.",
+    "prompt_en": "A Korean man and woman in their thirties stand at the counter of a small bakery in Basel on a Saturday morning; the baker hands over two bread rolls, a loaf of bread and an apple, one of them pays by card at the terminal, and a small display on the counter shows 8.20."
+  }
+}

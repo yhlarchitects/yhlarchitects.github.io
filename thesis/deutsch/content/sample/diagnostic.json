@@ -1,53 +1,41 @@
 {
- "minutes": 3,
- "items": [
-  {
-   "id": "d01",
-   "skill": "wortschatz",
-   "level": "A1",
-   "type": "mc",
-   "prompt_ko": "「die Haltestelle」의 뜻",
-   "text_de": "die Haltestelle",
-   "audio_text_de": "",
-   "options": [
-    "정류장",
-    "다리",
-    "골목"
-   ],
-   "answer": 0,
-   "hypothesis": "예시 문항"
-  },
-  {
-   "id": "d02",
-   "skill": "grammatik",
-   "level": "A1",
-   "type": "cloze",
-   "prompt_ko": "빈칸에 맞는 말",
-   "text_de": "Ich ___ in Basel.",
-   "audio_text_de": "",
-   "options": [
-    "wohne",
-    "wohnst",
-    "wohnt"
-   ],
-   "answer": 0,
-   "hypothesis": "예시 문항"
-  },
-  {
-   "id": "d03",
-   "skill": "lesen",
-   "level": "A2",
-   "type": "mc",
-   "prompt_ko": "일요일에는 몇 분마다 오나?",
-   "text_de": "Die Straßenbahn fährt alle zehn Minuten. Am Sonntag fährt sie nur alle zwanzig Minuten.",
-   "audio_text_de": "",
-   "options": [
-    "10분",
-    "20분",
-    "30분"
-   ],
-   "answer": 1,
-   "hypothesis": "예시 문항"
-  }
- ]
+  "minutes": 3,
+  "items": [
+    {
+      "id": "d01",
+      "skill": "wortschatz",
+      "level": "A1",
+      "type": "mc",
+      "prompt_ko": "「die Haltestelle」의 뜻",
+      "text_de": "die Haltestelle",
+      "audio_text_de": "",
+      "options": ["정류장", "다리", "골목"],
+      "answer": 0,
+      "hypothesis": "예시 문항"
+    },
+    {
+      "id": "d02",
+      "skill": "grammatik",
+      "level": "A1",
+      "type": "cloze",
+      "prompt_ko": "빈칸에 맞는 말",
+      "text_de": "Ich ___ in Basel.",
+      "audio_text_de": "",
+      "options": ["wohne", "wohnst", "wohnt"],
+      "answer": 0,
+      "hypothesis": "예시 문항"
+    },
+    {
+      "id": "d03",
+      "skill": "lesen",
+      "level": "A2",
+      "type": "mc",
+      "prompt_ko": "일요일에는 몇 분마다 오나?",
+      "text_de": "Die Straßenbahn fährt alle zehn Minuten. Am Sonntag fährt sie nur alle zwanzig Minuten.",
+      "audio_text_de": "",
+      "options": ["10분", "20분", "30분"],
+      "answer": 1,
+      "hypothesis": "예시 문항"
+    }
+  ]
 }

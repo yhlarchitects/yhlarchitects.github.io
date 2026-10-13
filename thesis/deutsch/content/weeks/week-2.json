@@ -1,0 +1,524 @@
+{
+  "id": "week-2",
+  "days": [
+    "day-08",
+    "day-09",
+    "day-10",
+    "day-11",
+    "day-12",
+    "day-13",
+    "day-14"
+  ],
+  "title_ko": "2주차 · er·sie·wir·ihr, 예·아니요 질문, haben과 가족, 21~100, 메일 첫 줄과 끝 줄",
+  "phrases": [
+    {
+      "de": "Was macht er heute?",
+      "ko": "그는 오늘 뭐 해?",
+      "from": "day-08"
+    },
+    {
+      "de": "Sie geht gern ins Museum.",
+      "ko": "그녀는 박물관에 즐겨 간다. (gern은 동사 뒤)",
+      "from": "day-08"
+    },
+    {
+      "de": "Das ist ihr Hobby.",
+      "ko": "그게 그녀의 취미다.",
+      "from": "day-08"
+    },
+    {
+      "de": "Wir wohnen beide schon in Basel.",
+      "ko": "우리 둘 다 이미 바젤에 산다.",
+      "from": "day-09"
+    },
+    {
+      "de": "Am Mittag essen wir oft zusammen.",
+      "ko": "점심때 우리는 자주 같이 먹는다.",
+      "from": "day-09"
+    },
+    {
+      "de": "Und ihr? Wo wohnt ihr?",
+      "ko": "너희는? 너희는 어디 사니?",
+      "from": "day-09"
+    },
+    {
+      "de": "Sprechen Sie Deutsch? Ja, ein bisschen.",
+      "ko": "독일어 하세요? 네, 조금요.",
+      "from": "day-10"
+    },
+    {
+      "de": "Nein, leider falsch.",
+      "ko": "아니요, 아쉽지만 틀렸어요.",
+      "from": "day-10"
+    },
+    {
+      "de": "Ich habe eine Frage.",
+      "ko": "질문이 하나 있어요.",
+      "from": "day-10"
+    },
+    {
+      "de": "Ist das die Verwaltung?",
+      "ko": "관리회사인가요? (전화 첫마디)",
+      "from": "day-10"
+    },
+    {
+      "de": "Wer ist das?",
+      "ko": "이 사람은 누구야?",
+      "from": "day-11"
+    },
+    {
+      "de": "Das ist meine Familie.",
+      "ko": "이게 우리 가족이야.",
+      "from": "day-11"
+    },
+    {
+      "de": "Hast du auch Geschwister?",
+      "ko": "너도 형제자매가 있어?",
+      "from": "day-11"
+    },
+    {
+      "de": "Ich habe keine Geschwister.",
+      "ko": "나는 형제자매가 없어.",
+      "from": "day-11"
+    },
+    {
+      "de": "Sie ist fünfundvierzig Jahre alt.",
+      "ko": "그녀는 마흔다섯 살이다. (일의 자리 먼저)",
+      "from": "day-12"
+    },
+    {
+      "de": "Wie alt sind Sie?",
+      "ko": "몇 살이세요?",
+      "from": "day-12"
+    },
+    {
+      "de": "Null sieben neun, und dann?",
+      "ko": "079, 그다음은요? (번호를 받아 적다 놓쳤을 때)",
+      "from": "day-12"
+    },
+    {
+      "de": "Wie geht es dir?",
+      "ko": "어떻게 지내? (du체)",
+      "from": "day-13"
+    },
+    {
+      "de": "Danke für die schnelle Antwort.",
+      "ko": "빠른 답장 고맙습니다.",
+      "from": "day-13"
+    },
+    {
+      "de": "Viele Grüße",
+      "ko": "(친한 사람에게 메일 끝) 안부를 전하며",
+      "from": "day-13"
+    },
+    {
+      "de": "Freundliche Grüße",
+      "ko": "(Sie체 메일 끝) 안부를 전하며",
+      "from": "day-13"
+    },
+    {
+      "de": "Das weiß ich nicht.",
+      "ko": "그건 모르겠어요.",
+      "from": "day-14"
+    },
+    {
+      "de": "Können Sie bitte Hochdeutsch sprechen?",
+      "ko": "표준 독일어로 말해 주시겠어요?",
+      "from": "day-14"
+    }
+  ],
+  "review": {
+    "tasks": [
+      {
+        "type": "cloze",
+        "prompt_de": "Was ___ sie heute? Sie geht ins Museum.",
+        "answer": "macht",
+        "options": [
+          "mache",
+          "macht",
+          "machst"
+        ],
+        "from": "day-08",
+        "point_ko": "er/sie + -t"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "「그는 음악을 즐겨 듣는다」 바른 문장은?",
+        "options": [
+          "Er hört gern Musik.",
+          "Er gern hört Musik.",
+          "Gern er hört Musik."
+        ],
+        "answer": 0,
+        "from": "day-08",
+        "point_ko": "gern은 동사 뒤"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Wir ___ beide schon in Basel.",
+        "answer": "wohnen",
+        "options": [
+          "wohnt",
+          "wohne",
+          "wohnen"
+        ],
+        "from": "day-09",
+        "point_ko": "wir + -en"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "친구 둘에게 「너희는 무엇을 마시니?」",
+        "options": [
+          "Was trinkt ihr?",
+          "Was trinken ihr?",
+          "Was trinkst ihr?"
+        ],
+        "answer": 0,
+        "from": "day-09",
+        "point_ko": "ihr + -t"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "예·아니요 질문은?",
+        "options": [
+          "Wo wohnen Sie?",
+          "Wohnen Sie in Basel?",
+          "Sie wohnen in Basel."
+        ],
+        "answer": 1,
+        "from": "day-10",
+        "point_ko": "예·아니요 질문: 동사가 맨 앞"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Ist die Hausnummer zwölf? Nein, ___ falsch.",
+        "answer": "leider",
+        "options": [
+          "leider",
+          "richtig",
+          "bitte"
+        ],
+        "from": "day-10",
+        "point_ko": "leider (아쉽지만)"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Er ___ zwei Brüder und eine Schwester.",
+        "answer": "hat",
+        "options": [
+          "habe",
+          "hast",
+          "hat"
+        ],
+        "from": "day-11",
+        "point_ko": "haben: er hat"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "die Eltern은?",
+        "options": [
+          "부모",
+          "형제자매",
+          "조부모"
+        ],
+        "answer": 0,
+        "from": "day-11",
+        "point_ko": "die Eltern"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "dreiundachtzig는 몇?",
+        "options": [
+          "38",
+          "83",
+          "33"
+        ],
+        "answer": 1,
+        "from": "day-12",
+        "point_ko": "21~99: 일의 자리 먼저"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Wie alt ___ Sie?",
+        "answer": "sind",
+        "options": [
+          "ist",
+          "bist",
+          "sind"
+        ],
+        "from": "day-12",
+        "point_ko": "Wie alt sind Sie?"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Hallo, wie geht es ___?",
+        "answer": "dir",
+        "options": [
+          "du",
+          "dir",
+          "dein"
+        ],
+        "from": "day-13",
+        "point_ko": "Wie geht es dir?"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "관리회사에 보내는 메일 끝 줄은?",
+        "options": [
+          "Hallo",
+          "Freundliche Grüße",
+          "Wie geht es dir?"
+        ],
+        "answer": 1,
+        "from": "day-13",
+        "point_ko": "Freundliche Grüße"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Danke für die schnelle ___.",
+        "answer": "Antwort",
+        "options": [
+          "Frage",
+          "Antwort",
+          "Familie"
+        ],
+        "from": "day-13",
+        "point_ko": "Danke für die schnelle Antwort."
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "Kannitverstan의 뜻은?",
+        "options": [
+          "Ich verstehe Sie nicht.",
+          "Wie heißt der Herr?",
+          "Das Haus ist groß."
+        ],
+        "answer": 0,
+        "from": "day-14",
+        "point_ko": "Ich verstehe nicht."
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Das ___ ich nicht.",
+        "answer": "weiß",
+        "options": [
+          "weißt",
+          "weiß",
+          "wissen"
+        ],
+        "from": "day-14",
+        "point_ko": "wissen: ich weiß"
+      }
+    ],
+    "write": {
+      "situation_ko": "계단실에서 이웃 Frau Bürgin이 같이 사는 사람은 누구냐고 묻는다.",
+      "prompt_ko": "세 문장. 그 사람(sie) 한 문장, 우리(wir) 한 문장, 내 가족 한 문장.",
+      "model_de": "Sie heißt Jeonghyeon und studiert hier in Basel. Wir wohnen hier zusammen. Meine Familie wohnt in Korea.",
+      "chunks": [
+        "Sie heißt … und studiert …",
+        "Wir wohnen hier zusammen.",
+        "Meine Familie wohnt in …",
+        "Ich habe …"
+      ]
+    }
+  },
+  "variants": {
+    "junghyun": {
+      "review": {
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Was ___ sie heute? Sie geht ins Museum.",
+            "answer": "macht",
+            "options": [
+              "mache",
+              "macht",
+              "machst"
+            ],
+            "from": "day-08",
+            "point_ko": "er/sie + -t"
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "「그는 음악을 즐겨 듣는다」 바른 문장은?",
+            "options": [
+              "Er hört gern Musik.",
+              "Er gern hört Musik.",
+              "Gern er hört Musik."
+            ],
+            "answer": 0,
+            "from": "day-08",
+            "point_ko": "gern은 동사 뒤"
+          },
+          {
+            "type": "cloze",
+            "prompt_de": "Wir ___ beide schon in Basel.",
+            "answer": "wohnen",
+            "options": [
+              "wohnt",
+              "wohne",
+              "wohnen"
+            ],
+            "from": "day-09",
+            "point_ko": "wir + -en"
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "친구 둘에게 「너희는 무엇을 마시니?」",
+            "options": [
+              "Was trinkt ihr?",
+              "Was trinken ihr?",
+              "Was trinkst ihr?"
+            ],
+            "answer": 0,
+            "from": "day-09",
+            "point_ko": "ihr + -t"
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "예·아니요 질문은?",
+            "options": [
+              "Wo wohnen Sie?",
+              "Wohnen Sie in Basel?",
+              "Sie wohnen in Basel."
+            ],
+            "answer": 1,
+            "from": "day-10",
+            "point_ko": "예·아니요 질문: 동사가 맨 앞"
+          },
+          {
+            "type": "cloze",
+            "prompt_de": "Ist die Hausnummer zwölf? Nein, ___ falsch.",
+            "answer": "leider",
+            "options": [
+              "leider",
+              "richtig",
+              "bitte"
+            ],
+            "from": "day-10",
+            "point_ko": "leider (아쉽지만)"
+          },
+          {
+            "type": "cloze",
+            "prompt_de": "Er ___ zwei Brüder und eine Schwester.",
+            "answer": "hat",
+            "options": [
+              "habe",
+              "hast",
+              "hat"
+            ],
+            "from": "day-11",
+            "point_ko": "haben: er hat"
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "die Eltern은?",
+            "options": [
+              "부모",
+              "형제자매",
+              "조부모"
+            ],
+            "answer": 0,
+            "from": "day-11",
+            "point_ko": "die Eltern"
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "dreiundachtzig는 몇?",
+            "options": [
+              "38",
+              "83",
+              "33"
+            ],
+            "answer": 1,
+            "from": "day-12",
+            "point_ko": "21~99: 일의 자리 먼저"
+          },
+          {
+            "type": "cloze",
+            "prompt_de": "Wie alt ___ Sie?",
+            "answer": "sind",
+            "options": [
+              "ist",
+              "bist",
+              "sind"
+            ],
+            "from": "day-12",
+            "point_ko": "Wie alt sind Sie?"
+          },
+          {
+            "type": "cloze",
+            "prompt_de": "Hallo, wie geht es ___?",
+            "answer": "dir",
+            "options": [
+              "du",
+              "dir",
+              "dein"
+            ],
+            "from": "day-13",
+            "point_ko": "Wie geht es dir?"
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "관리회사에 보내는 메일 끝 줄은?",
+            "options": [
+              "Hallo",
+              "Freundliche Grüße",
+              "Wie geht es dir?"
+            ],
+            "answer": 1,
+            "from": "day-13",
+            "point_ko": "Freundliche Grüße"
+          },
+          {
+            "type": "cloze",
+            "prompt_de": "Danke für die schnelle ___.",
+            "answer": "Antwort",
+            "options": [
+              "Frage",
+              "Antwort",
+              "Familie"
+            ],
+            "from": "day-13",
+            "point_ko": "Danke für die schnelle Antwort."
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "Kannitverstan의 뜻은?",
+            "options": [
+              "Ich verstehe Sie nicht.",
+              "Wie heißt der Herr?",
+              "Das Haus ist groß."
+            ],
+            "answer": 0,
+            "from": "day-14",
+            "point_ko": "Ich verstehe nicht."
+          },
+          {
+            "type": "cloze",
+            "prompt_de": "Das ___ ich nicht.",
+            "answer": "weiß",
+            "options": [
+              "weißt",
+              "weiß",
+              "wissen"
+            ],
+            "from": "day-14",
+            "point_ko": "wissen: ich weiß"
+          }
+        ],
+        "write": {
+          "situation_ko": "계단실에서 이웃 Frau Bürgin이 같이 사는 사람은 누구냐고 묻는다.",
+          "prompt_ko": "세 문장. 그 사람(er) 한 문장, 우리(wir) 한 문장, 내 가족 한 문장.",
+          "model_de": "Er heißt Yeon Ho und arbeitet als Architekt. Wir wohnen hier zusammen. Meine Familie wohnt in Korea.",
+          "chunks": [
+            "Er heißt … und arbeitet als …",
+            "Wir wohnen hier zusammen.",
+            "Meine Familie wohnt in …",
+            "Ich habe …"
+          ]
+        }
+      }
+    }
+  }
+}

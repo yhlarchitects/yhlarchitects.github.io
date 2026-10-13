@@ -1,287 +1,104 @@
 {
- "version": 1,
- "note": "Curriculum spine (pre-A1 to Goethe-Zertifikat B1, Basel, July 2027). grammar order follows the common DaF progression (Menschen, Netzwerk neu tables of contents via secondary sources) and the Goethe exam descriptions. can_do lines are short paraphrases of Goethe and fide descriptions, not verbatim quotes. scenarios are fide-style Basel situations. word_range is cumulative over the word files below, counted by the month field (an editorial assignment). The word list is split into four files because one file would be too large; words[] here stays empty. Private study use only.",
- "words_files": [
-  "words/goethe-a1.json",
-  "words/goethe-a2.json",
-  "words/goethe-b1-a-k.json",
-  "words/goethe-b1-l-z.json"
- ],
- "word_counts": {
-  "A1": 680,
-  "A2": 595,
-  "B1-new": 1669,
-  "total": 2944
- },
- "months": [
-  {
-   "month": "2026-10",
-   "cefr": "A1",
-   "grammar": [
-    "Verb an zweiter Stelle (V2)",
-    "W-Fragen und Ja/Nein-Fragen",
-    "Präsens regelmäßig",
-    "sein und haben",
-    "bestimmter und unbestimmter Artikel (Nominativ)",
-    "nicht und kein",
-    "Zahlen, Uhrzeit, Datum"
-   ],
-   "can_do": [
-    "sich und andere vorstellen",
-    "buchstabieren und Zahlen verstehen",
-    "ein einfaches Formular mit Name, Adresse, Geburtsdatum ausfüllen",
-    "nach Uhrzeit, Preis und Weg fragen"
-   ],
-   "scenarios": [
-    "Nachbarn im Haus begrüßen und sich vorstellen",
-    "ein U-Abo oder Ticket bei der BVB kaufen",
-    "sich mit jemandem verabreden"
-   ],
-   "word_range": [
-    1,
-    162
-   ],
-   "mock": "Diagnose (Start-Test)"
-  },
-  {
-   "month": "2026-11",
-   "cefr": "A1",
-   "grammar": [
-    "Akkusativ",
-    "Possessivartikel",
-    "unregelmäßige Verben im Präsens",
-    "Modalverben können, müssen, möchten mit Satzklammer",
-    "trennbare Verben",
-    "Zeitangaben am, um, im",
-    "Imperativ mit Sie"
-   ],
-   "can_do": [
-    "sagen, was man braucht und kaufen möchte",
-    "einen Termin vereinbaren und verschieben",
-    "kurze Durchsagen und Ansagen im Alltag verstehen",
-    "Tagesablauf beschreiben"
-   ],
-   "scenarios": [
-    "eine Wohnung besichtigen",
-    "Kleider und Lebensmittel einkaufen",
-    "einen Termin beim Coiffeur oder in der Verwaltung abmachen"
-   ],
-   "word_range": [
-    163,
-    434
-   ],
-   "mock": "A1 Hören (Start Deutsch 1 Format)"
-  },
-  {
-   "month": "2026-12",
-   "cefr": "A1",
-   "grammar": [
-    "Perfekt mit haben und sein",
-    "Präpositionen mit Dativ (mit, bei, nach, von, zu, aus, seit)",
-    "Wo? mit Dativ",
-    "Präteritum von sein und haben (war, hatte)",
-    "Modalverben wollen, dürfen, sollen",
-    "Imperativ du und ihr"
-   ],
-   "can_do": [
-    "über Vergangenes kurz berichten",
-    "Beschwerden beim Arzt nennen",
-    "einfache Mitteilungen, Schilder und Anzeigen lesen",
-    "eine kurze Einladung schreiben und beantworten"
-   ],
-   "scenarios": [
-    "beim Hausarzt einen Termin machen und Symptome nennen",
-    "in der Apotheke nach einem Medikament fragen",
-    "ein Paket auf der Post abholen",
-    "eine Einladung annehmen oder absagen"
-   ],
-   "word_range": [
-    435,
-    680
-   ],
-   "mock": "A1 Lesen (Start Deutsch 1 Format)"
-  },
-  {
-   "month": "2027-01",
-   "cefr": "A1-A2",
-   "grammar": [
-    "Verben mit Dativ",
-    "Wechselpräpositionen (Wo? / Wohin?)",
-    "Komparativ und Superlativ",
-    "Nebensätze mit weil und dass",
-    "reflexive Verben"
-   ],
-   "can_do": [
-    "Gründe angeben",
-    "Wohnung und Möbel beschreiben",
-    "einen Schaden melden",
-    "Vorlieben vergleichen"
-   ],
-   "scenarios": [
-    "dem Abwart einen Schaden in der Wohnung melden",
-    "ein Bankkonto eröffnen",
-    "sich in der Bibliothek anmelden"
-   ],
-   "word_range": [
-    681,
-    934
-   ],
-   "mock": "A1 Schreiben und Sprechen (Start Deutsch 1 Format)"
-  },
-  {
-   "month": "2027-02",
-   "cefr": "A2",
-   "grammar": [
-    "Nebensätze mit wenn und ob",
-    "Präteritum der Modalverben",
-    "Konjunktiv II: würde, hätte, könnte (Höflichkeit, Wünsche)",
-    "Adjektivdeklination Anfang (nach bestimmtem Artikel)",
-    "Präpositionalverben und da-/wo-Wörter"
-   ],
-   "can_do": [
-    "höflich bitten und Wünsche äußern",
-    "Auskünfte am Schalter und am Telefon einholen",
-    "kurze persönliche Nachrichten schreiben",
-    "über Erfahrungen sprechen"
-   ],
-   "scenarios": [
-    "am SBB-Schalter ein Ticket oder Halbtax kaufen",
-    "ein Handy-Abo abschließen oder kündigen",
-    "eine Reparatur bestellen",
-    "bei der Zahnärztin einen Termin machen"
-   ],
-   "word_range": [
-    935,
-    1275
-   ],
-   "mock": "A2 Hören (Goethe A2 Format)"
-  },
-  {
-   "month": "2027-03",
-   "cefr": "A2",
-   "grammar": [
-    "Adjektivdeklination vollständig",
-    "indirekte Fragen",
-    "Genitiv",
-    "Konnektoren deshalb, trotzdem",
-    "Infinitiv mit zu"
-   ],
-   "can_do": [
-    "Meinung äußern und kurz begründen",
-    "einfache Berichte und E-Mails im Beruf verstehen",
-    "sich krank melden und Abwesenheit erklären",
-    "Pläne und Absichten beschreiben"
-   ],
-   "scenarios": [
-    "an einer Teamsitzung kurz etwas sagen",
-    "sich bei der Arbeit krank melden",
-    "Ferien beantragen",
-    "bei der Krankenkasse eine Frage klären"
-   ],
-   "word_range": [
-    1276,
-    1493
-   ],
-   "mock": "B1 Lesen und Hören (Kontrolle: unter 40 Prozent heißt Termin nach September verschieben prüfen)"
-  },
-  {
-   "month": "2027-04",
-   "cefr": "A2-B1",
-   "grammar": [
-    "Relativsätze (Nominativ, Akkusativ, Dativ)",
-    "Präteritum regelmäßig und unregelmäßig",
-    "Passiv Präsens",
-    "Nebensätze mit obwohl",
-    "damit und um ... zu",
-    "Plusquamperfekt mit nachdem"
-   ],
-   "can_do": [
-    "sich schriftlich beschweren",
-    "Formulare von Behörden verstehen und ausfüllen",
-    "einen Ablauf Schritt für Schritt erklären",
-    "halbformelle E-Mails schreiben"
-   ],
-   "scenarios": [
-    "eine Beschwerde an die Verwaltung schreiben",
-    "die Aufenthaltsbewilligung verlängern",
-    "eine Frage zur Quellensteuer klären",
-    "an einer Mieterversammlung teilnehmen"
-   ],
-   "word_range": [
-    1494,
-    1946
-   ],
-   "mock": "B1 Schreiben (Goethe B1 Format, 3 Teile, 60 Minuten)"
-  },
-  {
-   "month": "2027-05",
-   "cefr": "B1",
-   "grammar": [
-    "Passiv Präteritum und Passiv mit Modalverben",
-    "Konjunktiv II der Vergangenheit",
-    "zweiteilige Konnektoren (entweder ... oder, weder ... noch, sowohl ... als auch, zwar ... aber)",
-    "temporale Konnektoren (während, bevor, seitdem, sobald)",
-    "Präpositionen mit Genitiv (wegen, trotz, während, statt)",
-    "n-Deklination"
-   ],
-   "can_do": [
-    "einen kurzen Vortrag zu einem Alltagsthema halten",
-    "Argumente für und gegen etwas nennen",
-    "Zeitungsartikel zu bekannten Themen in den Hauptpunkten verstehen",
-    "gemeinsam etwas planen und aushandeln"
-   ],
-   "scenarios": [
-    "ein Mitarbeitergespräch führen",
-    "sich in einem Verein anmelden und mitmachen",
-    "eine kurze Präsentation bei der Arbeit halten",
-    "im Notfall Hilfe holen und den Vorfall schildern"
-   ],
-   "word_range": [
-    1947,
-    2652
-   ],
-   "mock": "B1 Sprechen (Goethe B1 Format, 3 Teile, etwa 15 Minuten)"
-  },
-  {
-   "month": "2027-06",
-   "cefr": "B1",
-   "grammar": [
-    "Wiederholung nach Fehlerprofil",
-    "Partizip I und II als Adjektiv",
-    "lassen",
-    "Futur I"
-   ],
-   "can_do": [
-    "auf Reklamationen und Konflikte angemessen reagieren",
-    "längere Texte unter Zeitdruck nach Detail lesen",
-    "Durchsagen und Radiobeiträge verstehen",
-    "eine Meinung in einem Forumsbeitrag schreiben"
-   ],
-   "scenarios": [
-    "eine Ware reklamieren",
-    "einen Konflikt mit Nachbarn ansprechen",
-    "einen Artikel in der Lokalzeitung lesen und darüber sprechen"
-   ],
-   "word_range": [
-    2653,
-    2944
-   ],
-   "mock": "B1 alle vier Module unter Prüfungsbedingungen"
-  },
-  {
-   "month": "2027-07",
-   "cefr": "B1",
-   "grammar": [],
-   "can_do": [
-    "alle vier Module im Prüfungsformat unter Zeit bearbeiten"
-   ],
-   "scenarios": [],
-   "word_range": [
-    2944,
-    2944
-   ],
-   "mock": "B1 Hören und Lesen, letzter Durchgang vor der Prüfung"
-  }
- ],
- "words": []
+  "version": 1,
+  "note": "Curriculum spine for 2628 (pre-A1 to Goethe-Zertifikat B1, Basel, July 2027). grammar order follows the common DaF progression (Menschen, Netzwerk neu tables of contents via secondary sources) and the Goethe exam descriptions. can_do lines are short paraphrases of Goethe and fide descriptions, not verbatim quotes. scenarios are fide-style Basel situations. word_range is cumulative over the word files below, counted by the month field (an editorial assignment). The word list is split into four files because one file would be too large; words[] here stays empty. Private study use only.",
+  "words_files": [
+    "words/goethe-a1.json",
+    "words/goethe-a2.json",
+    "words/goethe-b1-a-k.json",
+    "words/goethe-b1-l-z.json"
+  ],
+  "word_counts": { "A1": 680, "A2": 595, "B1-new": 1669, "total": 2944 },
+  "months": [
+    {
+      "month": "2026-10",
+      "cefr": "A1",
+      "grammar": ["Verb an zweiter Stelle (V2)", "W-Fragen und Ja/Nein-Fragen", "Präsens regelmäßig", "sein und haben", "bestimmter und unbestimmter Artikel (Nominativ)", "nicht und kein", "Zahlen, Uhrzeit, Datum"],
+      "can_do": ["sich und andere vorstellen", "buchstabieren und Zahlen verstehen", "ein einfaches Formular mit Name, Adresse, Geburtsdatum ausfüllen", "nach Uhrzeit, Preis und Weg fragen"],
+      "scenarios": ["Nachbarn im Haus begrüßen und sich vorstellen", "ein U-Abo oder Ticket bei der BVB kaufen", "sich mit jemandem verabreden"],
+      "word_range": [1, 162],
+      "mock": "Diagnose (Start-Test)"
+    },
+    {
+      "month": "2026-11",
+      "cefr": "A1",
+      "grammar": ["Akkusativ", "Possessivartikel", "unregelmäßige Verben im Präsens", "Modalverben können, müssen, möchten mit Satzklammer", "trennbare Verben", "Zeitangaben am, um, im", "Imperativ mit Sie"],
+      "can_do": ["sagen, was man braucht und kaufen möchte", "einen Termin vereinbaren und verschieben", "kurze Durchsagen und Ansagen im Alltag verstehen", "Tagesablauf beschreiben"],
+      "scenarios": ["eine Wohnung besichtigen", "Kleider und Lebensmittel einkaufen", "einen Termin beim Coiffeur oder in der Verwaltung abmachen"],
+      "word_range": [163, 434],
+      "mock": "A1 Hören (Start Deutsch 1 Format)"
+    },
+    {
+      "month": "2026-12",
+      "cefr": "A1",
+      "grammar": ["Perfekt mit haben und sein", "Präpositionen mit Dativ (mit, bei, nach, von, zu, aus, seit)", "Wo? mit Dativ", "Präteritum von sein und haben (war, hatte)", "Modalverben wollen, dürfen, sollen", "Imperativ du und ihr"],
+      "can_do": ["über Vergangenes kurz berichten", "Beschwerden beim Arzt nennen", "einfache Mitteilungen, Schilder und Anzeigen lesen", "eine kurze Einladung schreiben und beantworten"],
+      "scenarios": ["beim Hausarzt einen Termin machen und Symptome nennen", "in der Apotheke nach einem Medikament fragen", "ein Paket auf der Post abholen", "eine Einladung annehmen oder absagen"],
+      "word_range": [435, 680],
+      "mock": "A1 Lesen (Start Deutsch 1 Format)"
+    },
+    {
+      "month": "2027-01",
+      "cefr": "A1-A2",
+      "grammar": ["Verben mit Dativ", "Wechselpräpositionen (Wo? / Wohin?)", "Komparativ und Superlativ", "Nebensätze mit weil und dass", "reflexive Verben"],
+      "can_do": ["Gründe angeben", "Wohnung und Möbel beschreiben", "einen Schaden melden", "Vorlieben vergleichen"],
+      "scenarios": ["dem Abwart einen Schaden in der Wohnung melden", "ein Bankkonto eröffnen", "sich in der Bibliothek anmelden"],
+      "word_range": [681, 934],
+      "mock": "A1 Schreiben und Sprechen (Start Deutsch 1 Format)"
+    },
+    {
+      "month": "2027-02",
+      "cefr": "A2",
+      "grammar": ["Nebensätze mit wenn und ob", "Präteritum der Modalverben", "Konjunktiv II: würde, hätte, könnte (Höflichkeit, Wünsche)", "Adjektivdeklination Anfang (nach bestimmtem Artikel)", "Präpositionalverben und da-/wo-Wörter"],
+      "can_do": ["höflich bitten und Wünsche äußern", "Auskünfte am Schalter und am Telefon einholen", "kurze persönliche Nachrichten schreiben", "über Erfahrungen sprechen"],
+      "scenarios": ["am SBB-Schalter ein Ticket oder Halbtax kaufen", "ein Handy-Abo abschließen oder kündigen", "eine Reparatur bestellen", "bei der Zahnärztin einen Termin machen"],
+      "word_range": [935, 1275],
+      "mock": "A2 Hören (Goethe A2 Format)"
+    },
+    {
+      "month": "2027-03",
+      "cefr": "A2",
+      "grammar": ["Adjektivdeklination vollständig", "indirekte Fragen", "Genitiv", "Konnektoren deshalb, trotzdem", "Infinitiv mit zu"],
+      "can_do": ["Meinung äußern und kurz begründen", "einfache Berichte und E-Mails im Beruf verstehen", "sich krank melden und Abwesenheit erklären", "Pläne und Absichten beschreiben"],
+      "scenarios": ["an einer Teamsitzung kurz etwas sagen", "sich bei der Arbeit krank melden", "Ferien beantragen", "bei der Krankenkasse eine Frage klären"],
+      "word_range": [1276, 1493],
+      "mock": "B1 Lesen und Hören (Kontrolle: unter 40 Prozent heißt Termin nach September verschieben prüfen)"
+    },
+    {
+      "month": "2027-04",
+      "cefr": "A2-B1",
+      "grammar": ["Relativsätze (Nominativ, Akkusativ, Dativ)", "Präteritum regelmäßig und unregelmäßig", "Passiv Präsens", "Nebensätze mit obwohl", "damit und um ... zu", "Plusquamperfekt mit nachdem"],
+      "can_do": ["sich schriftlich beschweren", "Formulare von Behörden verstehen und ausfüllen", "einen Ablauf Schritt für Schritt erklären", "halbformelle E-Mails schreiben"],
+      "scenarios": ["eine Beschwerde an die Verwaltung schreiben", "die Aufenthaltsbewilligung verlängern", "eine Frage zur Quellensteuer klären", "an einer Mieterversammlung teilnehmen"],
+      "word_range": [1494, 1946],
+      "mock": "B1 Schreiben (Goethe B1 Format, 3 Teile, 60 Minuten)"
+    },
+    {
+      "month": "2027-05",
+      "cefr": "B1",
+      "grammar": ["Passiv Präteritum und Passiv mit Modalverben", "Konjunktiv II der Vergangenheit", "zweiteilige Konnektoren (entweder ... oder, weder ... noch, sowohl ... als auch, zwar ... aber)", "temporale Konnektoren (während, bevor, seitdem, sobald)", "Präpositionen mit Genitiv (wegen, trotz, während, statt)", "n-Deklination"],
+      "can_do": ["einen kurzen Vortrag zu einem Alltagsthema halten", "Argumente für und gegen etwas nennen", "Zeitungsartikel zu bekannten Themen in den Hauptpunkten verstehen", "gemeinsam etwas planen und aushandeln"],
+      "scenarios": ["ein Mitarbeitergespräch führen", "sich in einem Verein anmelden und mitmachen", "eine kurze Präsentation bei der Arbeit halten", "im Notfall Hilfe holen und den Vorfall schildern"],
+      "word_range": [1947, 2652],
+      "mock": "B1 Sprechen (Goethe B1 Format, 3 Teile, etwa 15 Minuten)"
+    },
+    {
+      "month": "2027-06",
+      "cefr": "B1",
+      "grammar": ["Wiederholung nach Fehlerprofil", "Partizip I und II als Adjektiv", "lassen", "Futur I"],
+      "can_do": ["auf Reklamationen und Konflikte angemessen reagieren", "längere Texte unter Zeitdruck nach Detail lesen", "Durchsagen und Radiobeiträge verstehen", "eine Meinung in einem Forumsbeitrag schreiben"],
+      "scenarios": ["eine Ware reklamieren", "einen Konflikt mit Nachbarn ansprechen", "einen Artikel in der Lokalzeitung lesen und darüber sprechen"],
+      "word_range": [2653, 2944],
+      "mock": "B1 alle vier Module unter Prüfungsbedingungen"
+    },
+    {
+      "month": "2027-07",
+      "cefr": "B1",
+      "grammar": [],
+      "can_do": ["alle vier Module im Prüfungsformat unter Zeit bearbeiten"],
+      "scenarios": [],
+      "word_range": [2944, 2944],
+      "mock": "B1 Hören und Lesen, letzter Durchgang vor der Prüfung"
+    }
+  ],
+  "words": []
 }

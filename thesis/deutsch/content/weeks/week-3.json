@@ -1,0 +1,319 @@
+{
+  "id": "week-3",
+  "days": [
+    "day-15",
+    "day-16",
+    "day-17",
+    "day-18",
+    "day-19",
+    "day-20",
+    "day-21"
+  ],
+  "title_ko": "3주차 · 대성당에서 빵집까지, der·ein·복수·nicht·kein과 값·양식",
+  "phrases": [
+    {
+      "de": "Das ist das Münster.",
+      "ko": "이것은 대성당이다. (Das ist …)",
+      "from": "day-15"
+    },
+    {
+      "de": "Welche Farbe hat der Sandstein?",
+      "ko": "사암은 무슨 색인가?",
+      "from": "day-15"
+    },
+    {
+      "de": "Er ist rot.",
+      "ko": "그것은 붉다. (der → er)",
+      "from": "day-15"
+    },
+    {
+      "de": "Die Aussicht ist sehr schön.",
+      "ko": "전망이 아주 좋다.",
+      "from": "day-15"
+    },
+    {
+      "de": "Entschuldigung, wo ist der Eingang zum Turm?",
+      "ko": "실례합니다, 탑 입구가 어디예요?",
+      "from": "day-15"
+    },
+    {
+      "de": "Am Theaterplatz ist ein Brunnen.",
+      "ko": "극장 광장에 분수가 하나 있다. (처음 말할 때 ein)",
+      "from": "day-16"
+    },
+    {
+      "de": "Alles bewegt sich.",
+      "ko": "모든 것이 움직인다.",
+      "from": "day-16"
+    },
+    {
+      "de": "Ich bin am Tinguely-Brunnen. Wo bist du?",
+      "ko": "나 팅겔리 분수에 있어. 너 어디야?",
+      "from": "day-16"
+    },
+    {
+      "de": "Ich brauche noch zehn Minuten.",
+      "ko": "10분 더 걸려.",
+      "from": "day-16"
+    },
+    {
+      "de": "In Basel gibt es vier Fähren.",
+      "ko": "바젤에는 나룻배가 넷 있다. (es gibt)",
+      "from": "day-17"
+    },
+    {
+      "de": "Viele Leute nehmen die Fähre.",
+      "ko": "많은 사람이 나룻배를 탄다.",
+      "from": "day-17"
+    },
+    {
+      "de": "Ich bin am Ufer, bei der Fähre.",
+      "ko": "나 강가에, 나룻배 옆에 있어.",
+      "from": "day-17"
+    },
+    {
+      "de": "Ich steige nicht ein. Ich gehe zu Fuß.",
+      "ko": "나는 타지 않는다. 걸어간다.",
+      "from": "day-18"
+    },
+    {
+      "de": "Ist das Spalentor weit?",
+      "ko": "슈팔렌 문은 멀어요?",
+      "from": "day-18"
+    },
+    {
+      "de": "Das ist nicht weit.",
+      "ko": "멀지 않다.",
+      "from": "day-18"
+    },
+    {
+      "de": "Die Mauer ist nicht mehr da.",
+      "ko": "성벽은 이제 없다. (nicht mehr)",
+      "from": "day-18"
+    },
+    {
+      "de": "Das Mädchen hat kein Geld.",
+      "ko": "소녀는 돈이 없다. (명사 앞은 kein)",
+      "from": "day-19"
+    },
+    {
+      "de": "Wir rauchen nicht und haben keine Haustiere.",
+      "ko": "저희는 담배를 피우지 않고 반려동물이 없습니다.",
+      "from": "day-19"
+    },
+    {
+      "de": "Das ist für uns kein Problem.",
+      "ko": "저희에게는 문제가 되지 않습니다.",
+      "from": "day-19"
+    },
+    {
+      "de": "Was kostet das zusammen?",
+      "ko": "모두 얼마예요?",
+      "from": "day-20"
+    },
+    {
+      "de": "Das macht acht Franken zwanzig.",
+      "ko": "8프랑 20입니다.",
+      "from": "day-20"
+    },
+    {
+      "de": "Kann ich mit Karte bezahlen?",
+      "ko": "카드로 계산해도 돼요?",
+      "from": "day-20"
+    },
+    {
+      "de": "Ist das so richtig?",
+      "ko": "이렇게 쓰면 맞아요?",
+      "from": "day-21"
+    },
+    {
+      "de": "Im Anhang finden Sie das ausgefüllte Formular.",
+      "ko": "작성한 양식을 첨부합니다.",
+      "from": "day-21"
+    }
+  ],
+  "review": {
+    "tasks": [
+      {
+        "type": "cloze",
+        "prompt_de": "___ Kirche ist alt und groß.",
+        "answer": "Die",
+        "options": [
+          "Der",
+          "Die",
+          "Das"
+        ],
+        "from": "day-15",
+        "point_ko": "정관사 die (die Kirche)"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "「탑은 무슨 색이에요?」 바른 문장은?",
+        "options": [
+          "Welche Farbe hat der Turm?",
+          "Was Farbe hat der Turm?",
+          "Welche Farbe der Turm hat?"
+        ],
+        "answer": 0,
+        "from": "day-15",
+        "point_ko": "Welche Farbe hat …?"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Im Wasser ist ___ Figur.",
+        "answer": "eine",
+        "options": [
+          "ein",
+          "eine",
+          "einen"
+        ],
+        "from": "day-16",
+        "point_ko": "ein · eine (die Figur → eine)"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "「광장에 분수가 하나 있다. 그 분수는 새것이다.」 둘째 문장은?",
+        "options": [
+          "Der Brunnen ist neu.",
+          "Ein Brunnen ist neu.",
+          "Die Brunnen ist neu."
+        ],
+        "answer": 0,
+        "from": "day-16",
+        "point_ko": "처음은 ein, 다시 말할 때 der"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Über dem Fluss hängen vier ___.",
+        "answer": "Seile",
+        "options": [
+          "Seil",
+          "Seile",
+          "Seilen"
+        ],
+        "from": "day-17",
+        "point_ko": "복수 (das Seil → die Seile)"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "「바젤에는 나룻배가 넷 있다」 바른 문장은?",
+        "options": [
+          "In Basel gibt es vier Fähren.",
+          "In Basel es gibt vier Fähren.",
+          "In Basel gibt vier Fähren es."
+        ],
+        "answer": 0,
+        "from": "day-17",
+        "point_ko": "es gibt (동사는 둘째 자리)"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Ich steige ___ ein. Ich gehe zu Fuß.",
+        "answer": "nicht",
+        "options": [
+          "nicht",
+          "kein",
+          "keine"
+        ],
+        "from": "day-18",
+        "point_ko": "nicht: 동사를 부정"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "「슈팔렌 문이 멀어요?」 바른 질문은?",
+        "options": [
+          "Ist das Spalentor weit?",
+          "Ist weit das Spalentor?",
+          "Weit das Spalentor ist?"
+        ],
+        "answer": 0,
+        "from": "day-18",
+        "point_ko": "예·아니요 질문 (동사가 맨 앞)"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Wir haben ___ Haustiere.",
+        "answer": "keine",
+        "options": [
+          "kein",
+          "keine",
+          "nicht"
+        ],
+        "from": "day-19",
+        "point_ko": "keine (복수 명사 앞)"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "「소녀는 돈이 없다」 바른 문장은?",
+        "options": [
+          "Das Mädchen hat kein Geld.",
+          "Das Mädchen hat nicht Geld.",
+          "Das Mädchen hat keine Geld."
+        ],
+        "answer": 0,
+        "from": "day-19",
+        "point_ko": "kein: 관사 없는 명사를 부정 (das Geld → kein)"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Ich ___ zwei Brötchen, bitte.",
+        "answer": "möchte",
+        "options": [
+          "möchte",
+          "möchtest",
+          "möchten"
+        ],
+        "from": "day-20",
+        "point_ko": "Ich möchte …"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "가격표 8.20을 소리 내어 읽으면?",
+        "options": [
+          "acht Franken zwanzig",
+          "zwanzig Franken acht",
+          "achtzig Franken zwei"
+        ],
+        "answer": 0,
+        "from": "day-20",
+        "point_ko": "값 읽기 (프랑 다음 라펜)"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Im Anhang ___ Sie das ausgefüllte Formular.",
+        "answer": "finden",
+        "options": [
+          "finden",
+          "findet",
+          "findest"
+        ],
+        "from": "day-21",
+        "point_ko": "Im Anhang finden Sie …"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "양식의 「Unterschrift」 칸에 쓰는 것은?",
+        "options": [
+          "서명",
+          "출생지",
+          "우편번호"
+        ],
+        "answer": 0,
+        "from": "day-21",
+        "point_ko": "양식 낱말 (die Unterschrift)"
+      }
+    ],
+    "write": {
+      "situation_ko": "주말에 친구와 라인 강 나룻배를 타기로 했다. 먼저 와서 메시지를 보낸다.",
+      "prompt_ko": "du체 세 문장. 어디 있는지, 옆에 무엇이 있는지(ein · eine), 그리고 질문 하나.",
+      "model_de": "Ich bin am Ufer, bei der Fähre. Links ist eine Bäckerei. Wo bist du?",
+      "chunks": [
+        "Ich bin am …",
+        "bei der Fähre",
+        "Links / Rechts ist ein … / eine …",
+        "Das ist nicht weit.",
+        "Wo bist du?"
+      ]
+    }
+  }
+}

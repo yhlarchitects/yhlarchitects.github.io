@@ -1,0 +1,86 @@
+[
+  {
+    "id": "basel-strasse:das-mittagessen",
+    "field": "example_de",
+    "old": "Nach dem Mittagessen trinke ich einen Kaffee.",
+    "new": "Das Mittagessen ist um zwölf.",
+    "why_ko": "nach + 여격(12월)과 einen 대격(11월)이 9일째 카드에 나온다. 10월 문법만으로 바꾼다."
+  },
+  {
+    "id": "basel-strasse:das-mittagessen",
+    "field": "example_ko",
+    "old": "점심 뒤에 커피를 마신다.",
+    "new": "점심은 열두 시다.",
+    "why_ko": "위 예문 교체에 맞춘 번역."
+  },
+  {
+    "id": "a1-alltag:fragen",
+    "field": "example_de",
+    "old": "Darf ich etwas fragen?",
+    "new": "Lukas fragt: „Woher kommst du?“",
+    "why_ko": "dürfen 화법조동사와 문장 틀은 12월 문법. 10일째 카드라 현재형 fragt로 바꾼다."
+  },
+  {
+    "id": "a1-alltag:fragen",
+    "field": "example_ko",
+    "old": "뭐 좀 여쭤봐도 될까요?",
+    "new": "루카스가 묻는다. 「어디서 왔어?」",
+    "why_ko": "위 예문 교체에 맞춘 번역."
+  },
+  {
+    "id": "basel-strasse:das-jahr",
+    "field": "example_de",
+    "old": "Ich wohne seit zwei Jahren in Basel.",
+    "new": "Lukas ist einunddreißig Jahre alt.",
+    "why_ko": "seit + 여격 복수 Jahren은 12월 문법. 12일째 주제(나이)에 맞는 Jahre로 바꾼다."
+  },
+  {
+    "id": "basel-strasse:das-jahr",
+    "field": "example_ko",
+    "old": "나는 2년째 바젤에 산다.",
+    "new": "루카스는 서른한 살이다.",
+    "why_ko": "위 예문 교체에 맞춘 번역."
+  },
+  {
+    "id": "basel-strasse:das-dach",
+    "field": "example_de",
+    "old": "Auf dem Dach liegt Schnee.",
+    "new": "Das Dach ist alt.",
+    "why_ko": "auf + 여격(1월 Wechselpräposition)이 14일째 카드에 나온다. 7일째 낱말 alt로 바꾼다."
+  },
+  {
+    "id": "basel-strasse:das-dach",
+    "field": "example_ko",
+    "old": "지붕 위에 눈이 쌓여 있다.",
+    "new": "지붕이 오래됐다.",
+    "why_ko": "위 예문 교체에 맞춘 번역."
+  },
+  {
+    "id": "a1-alltag:das-fenster",
+    "field": "example_de",
+    "old": "Das Haus hat hohe Fenster.",
+    "new": "Die Fenster sind hoch.",
+    "why_ko": "명사 앞 형용사 어미 hohe는 2·3월 문법. 서술형 hoch로 바꾸면 14일째 본문 문장과도 같다."
+  },
+  {
+    "id": "a1-alltag:das-fenster",
+    "field": "example_ko",
+    "old": "그 집은 창이 높다.",
+    "new": "창문들이 높다.",
+    "why_ko": "위 예문 교체에 맞춘 번역."
+  },
+  {
+    "id": "a1-alltag:das-fenster",
+    "field": "en_hint",
+    "old": "window (건축 용어 fenestration)",
+    "new": "fenestration (건축 용어, 창 배치)",
+    "why_ko": "en_hint는 같은 뿌리 영어 낱말 자리다. window는 Fenster와 뿌리가 다르고 뜻 풀이일 뿐이라, 기억 고리인 fenestration을 앞에 둔다."
+  },
+  {
+    "id": "wortgruppen:das-kind",
+    "field": "example_ko",
+    "old": "그 누나는 아이가 하나 있다.",
+    "new": "그 여자 형제는 아이가 하나 있다.",
+    "why_ko": "Schwester는 나이도 말하는 사람의 성별도 정하지 않는다. 「누나」는 남자 동생 시점으로 고정해 버린다."
+  }
+]

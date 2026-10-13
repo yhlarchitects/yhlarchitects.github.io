@@ -1,0 +1,342 @@
+{
+  "id": "day-17",
+  "theme_ko": "복수",
+  "focus_ko": "복수: die Fähre → die Fähren · das Ufer → die Ufer · das Seil → die Seile",
+  "new_cards": [
+    "basel-strasse:die-faehre",
+    "basel-strasse:der-fluss",
+    "basel-strasse:das-ufer",
+    "basel-strasse:das-seil",
+    "basel-strasse:die-seite",
+    "a1-alltag:links",
+    "a1-alltag:rechts",
+    "a1-alltag:nehmen",
+    "a1-alltag:die-leute"
+  ],
+  "stair": {
+    "source": {
+      "author": "2628 선생",
+      "title": "Die Fähren",
+      "year": 2026,
+      "license": "own",
+      "url": ""
+    },
+    "layers": [
+      {
+        "level": "A1",
+        "text_de": "In Basel gibt es vier Fähren. Die Fähren fahren ohne Motor. Über dem Fluss hängt ein Seil. Der Fluss macht die Arbeit. Auf einer Seite ist das Münster, auf der anderen Seite ist Kleinbasel. Die Fähre fährt hin und her. Viele Leute nehmen die Fähre. Am Ufer warten die Leute. Die Fahrt ist kurz und ruhig.",
+        "gloss": [
+          {
+            "de": "es gibt",
+            "ko": "~이 있다"
+          },
+          {
+            "de": "ohne",
+            "ko": "~없이"
+          },
+          {
+            "de": "über dem Fluss",
+            "ko": "강 위에"
+          },
+          {
+            "de": "hängen",
+            "ko": "걸려 있다"
+          },
+          {
+            "de": "die Arbeit",
+            "ko": "일"
+          },
+          {
+            "de": "auf der anderen Seite",
+            "ko": "건너편에"
+          },
+          {
+            "de": "hin und her",
+            "ko": "이쪽저쪽으로"
+          },
+          {
+            "de": "warten",
+            "ko": "기다리다"
+          },
+          {
+            "de": "die Fahrt",
+            "ko": "타고 가는 길"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "In Basel gibt es vier ___.",
+            "answer": "Fähren",
+            "options": [
+              "Fähren",
+              "Fähre",
+              "Fährs"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "나룻배를 움직이는 것은?",
+            "options": [
+              "모터",
+              "강물",
+              "바람"
+            ],
+            "answer": 1
+          }
+        ]
+      },
+      {
+        "level": "A2",
+        "text_de": "Die vier Basler Rheinfähren fahren ohne Motor. Jede Fähre hängt an einem Seil, das über den Fluss gespannt ist. Man stellt das Boot schräg in die Strömung, und das Wasser schiebt es ans andere Ufer. Das ist alte Technik, aber sie funktioniert bis heute. Für Architekten ist das interessant: Mit wenig Mitteln entsteht eine elegante Lösung.",
+        "gloss": [
+          {
+            "de": "spannen",
+            "ko": "팽팽하게 걸다"
+          },
+          {
+            "de": "schräg",
+            "ko": "비스듬히"
+          },
+          {
+            "de": "die Strömung",
+            "ko": "물살"
+          },
+          {
+            "de": "schieben",
+            "ko": "밀다"
+          },
+          {
+            "de": "die Mittel",
+            "ko": "수단"
+          },
+          {
+            "de": "entstehen",
+            "ko": "생기다"
+          },
+          {
+            "de": "die Lösung",
+            "ko": "해법"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Jede Fähre hängt an einem ___.",
+            "answer": "Seil",
+            "options": [
+              "Seil",
+              "Turm",
+              "Tor"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "배를 비스듬히 두면 어떻게 되나?",
+            "options": [
+              "물살이 배를 건너편으로 민다",
+              "배가 멈춘다",
+              "모터가 켜진다"
+            ],
+            "answer": 0
+          }
+        ]
+      }
+    ],
+    "summit": {
+      "text_de": "",
+      "note_ko": "오늘 꼭대기는 비워 둔다. 원문은 19일째에 그림 형제."
+    }
+  },
+  "ear": {
+    "text_de": "In Basel gibt es vier Fähren. Die Fähren fahren ohne Motor. Der Fluss macht die Arbeit. Viele Leute nehmen die Fähre.",
+    "lang": "de-DE",
+    "rates": [
+      0.75,
+      0.9,
+      1.0
+    ]
+  },
+  "hand": {
+    "situation_ko": "주말 라인 강가에서 만나기로 했다. 어디에 있는지 알린다.",
+    "prompt_ko": "du체 두 문장.",
+    "model_de": "Ich bin am Ufer, bei der Fähre. Wo bist du?",
+    "chunks": [
+      "Ich bin am Ufer.",
+      "bei der Fähre",
+      "links / rechts"
+    ]
+  },
+  "mix": {
+    "tasks": [
+      {
+        "type": "cloze",
+        "prompt_de": "Da ist ___ Maschine.",
+        "answer": "eine",
+        "options": [
+          "ein",
+          "einen",
+          "eine"
+        ],
+        "from": "day-16",
+        "point_ko": "ein · eine (여성은 eine)"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "「siebenundvierzig」은 몇인가?",
+        "options": [
+          "47",
+          "74",
+          "407"
+        ],
+        "answer": 0,
+        "from": "day-12",
+        "point_ko": "21~100 읽기 (일의 자리 먼저)"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Er ___ als Architekt.",
+        "answer": "arbeitet",
+        "options": [
+          "arbeite",
+          "arbeitet",
+          "arbeitest"
+        ],
+        "from": "day-08",
+        "point_ko": "er · sie + -t"
+      }
+    ]
+  },
+  "illustration": {
+    "scene_ko": "토요일 오전, 작은 나룻배가 라인 강 위에 걸린 줄에 매달려 대성당 쪽에서 클라인바젤 쪽으로 모터 없이 건너간다. 강가에서 몇 사람이 기다린다.",
+    "prompt_en": "A small wooden ferry boat hangs from a steel cable stretched across the Rhine in Basel on a Saturday morning and crosses without a motor from the Minster side toward Kleinbasel, the boat angled into the current; a few people wait on the riverbank."
+  },
+  "variants": {
+    "junghyun": {
+      "stair": {
+        "layers": [
+          {
+            "level": "A1",
+            "text_de": "In Basel gibt es vier Fähren. Die Fähren fahren ohne Motor. Über dem Fluss hängt ein Seil. Der Fluss macht die Arbeit. Auf einer Seite ist das Münster, auf der anderen Seite ist Kleinbasel. Die Fähre fährt hin und her. Viele Leute nehmen die Fähre. Am Ufer warten die Leute. Die Fahrt ist kurz und ruhig.",
+            "gloss": [
+              {
+                "de": "es gibt",
+                "ko": "~이 있다"
+              },
+              {
+                "de": "ohne",
+                "ko": "~없이"
+              },
+              {
+                "de": "über dem Fluss",
+                "ko": "강 위에"
+              },
+              {
+                "de": "hängen",
+                "ko": "걸려 있다"
+              },
+              {
+                "de": "die Arbeit",
+                "ko": "일"
+              },
+              {
+                "de": "auf der anderen Seite",
+                "ko": "건너편에"
+              },
+              {
+                "de": "hin und her",
+                "ko": "이쪽저쪽으로"
+              },
+              {
+                "de": "warten",
+                "ko": "기다리다"
+              },
+              {
+                "de": "die Fahrt",
+                "ko": "타고 가는 길"
+              }
+            ],
+            "tasks": [
+              {
+                "type": "cloze",
+                "prompt_de": "In Basel gibt es vier ___.",
+                "answer": "Fähren",
+                "options": [
+                  "Fähren",
+                  "Fähre",
+                  "Fährs"
+                ]
+              },
+              {
+                "type": "mc",
+                "prompt_ko": "나룻배를 움직이는 것은?",
+                "options": [
+                  "모터",
+                  "강물",
+                  "바람"
+                ],
+                "answer": 1
+              }
+            ]
+          },
+          {
+            "level": "A2",
+            "text_de": "Die vier Basler Rheinfähren fahren ohne Motor. Jede Fähre hängt an einem Seil, das über den Fluss gespannt ist. Man stellt das Boot schräg in die Strömung, und das Wasser schiebt es ans andere Ufer. Das ist alte Technik, aber sie funktioniert bis heute. Für Designerinnen und Designer ist das interessant: Mit wenig Mitteln entsteht eine elegante Lösung.",
+            "gloss": [
+              {
+                "de": "spannen",
+                "ko": "팽팽하게 걸다"
+              },
+              {
+                "de": "schräg",
+                "ko": "비스듬히"
+              },
+              {
+                "de": "die Strömung",
+                "ko": "물살"
+              },
+              {
+                "de": "schieben",
+                "ko": "밀다"
+              },
+              {
+                "de": "die Mittel",
+                "ko": "수단"
+              },
+              {
+                "de": "entstehen",
+                "ko": "생기다"
+              },
+              {
+                "de": "die Lösung",
+                "ko": "해법"
+              }
+            ],
+            "tasks": [
+              {
+                "type": "cloze",
+                "prompt_de": "Jede Fähre hängt an einem ___.",
+                "answer": "Seil",
+                "options": [
+                  "Seil",
+                  "Turm",
+                  "Tor"
+                ]
+              },
+              {
+                "type": "mc",
+                "prompt_ko": "배를 비스듬히 두면 어떻게 되나?",
+                "options": [
+                  "물살이 배를 건너편으로 민다",
+                  "배가 멈춘다",
+                  "모터가 켜진다"
+                ],
+                "answer": 0
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

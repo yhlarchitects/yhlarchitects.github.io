@@ -1,0 +1,625 @@
+{
+  "id": "week-1",
+  "days": [
+    "day-01",
+    "day-02",
+    "day-03",
+    "day-04",
+    "day-05",
+    "day-06",
+    "day-07"
+  ],
+  "title_ko": "인사·이름·출신·철자·직업·노선, 그리고 첫 원문",
+  "phrases": [
+    {
+      "de": "Guten Morgen!",
+      "ko": "좋은 아침입니다.",
+      "from": "day-01"
+    },
+    {
+      "de": "Ich bin neu hier.",
+      "ko": "저는 여기 새로 왔습니다.",
+      "from": "day-01"
+    },
+    {
+      "de": "Ich heiße …",
+      "ko": "제 이름은 …입니다.",
+      "from": "day-01"
+    },
+    {
+      "de": "Wie ist Ihr Vorname?",
+      "ko": "이름(성 말고)이 무엇인가요?",
+      "from": "day-01"
+    },
+    {
+      "de": "Freut mich.",
+      "ko": "반갑습니다.",
+      "from": "day-01"
+    },
+    {
+      "de": "Auf Wiedersehen!",
+      "ko": "안녕히 계세요. (정중한 작별)",
+      "from": "day-01"
+    },
+    {
+      "de": "Woher kommen Sie?",
+      "ko": "어디서 오셨어요?",
+      "from": "day-02"
+    },
+    {
+      "de": "Ich komme aus Korea.",
+      "ko": "저는 한국에서 왔습니다.",
+      "from": "day-02"
+    },
+    {
+      "de": "Ich wohne in Basel.",
+      "ko": "저는 바젤에 삽니다.",
+      "from": "day-02"
+    },
+    {
+      "de": "Und Sie?",
+      "ko": "당신은요?",
+      "from": "day-02"
+    },
+    {
+      "de": "Wie bitte?",
+      "ko": "뭐라고요?",
+      "from": "day-03"
+    },
+    {
+      "de": "Ich verstehe das nicht.",
+      "ko": "그 말을 못 알아듣겠습니다.",
+      "from": "day-03"
+    },
+    {
+      "de": "Langsam, bitte.",
+      "ko": "천천히 말해 주세요.",
+      "from": "day-03"
+    },
+    {
+      "de": "Ich buchstabiere: …",
+      "ko": "철자를 불러 드릴게요: …",
+      "from": "day-03"
+    },
+    {
+      "de": "Was sind Sie von Beruf?",
+      "ko": "직업이 무엇인가요?",
+      "from": "day-04"
+    },
+    {
+      "de": "Ich arbeite als Architekt.",
+      "ko": "저는 건축가로 일합니다.",
+      "from": "day-04"
+    },
+    {
+      "de": "Ich spreche ein bisschen Deutsch.",
+      "ko": "독일어를 조금 합니다.",
+      "from": "day-04"
+    },
+    {
+      "de": "Welche Linie fährt nach …?",
+      "ko": "어느 노선이 …로 가나요?",
+      "from": "day-05"
+    },
+    {
+      "de": "Woher kommst du?",
+      "ko": "어디서 왔어? (du)",
+      "from": "day-06"
+    },
+    {
+      "de": "Kurz zu mir: …",
+      "ko": "짧게 제 소개를 하면: …",
+      "from": "day-06"
+    },
+    {
+      "de": "Wie geht es Ihnen?",
+      "ko": "어떻게 지내세요?",
+      "from": "day-06"
+    },
+    {
+      "de": "Von hier sieht man …",
+      "ko": "여기서 …이 보인다.",
+      "from": "day-07"
+    },
+    {
+      "de": "Schau mal, …",
+      "ko": "이것 봐, …",
+      "from": "day-07"
+    },
+    {
+      "de": "…, oder?",
+      "ko": "…, 그렇지?",
+      "from": "day-07"
+    }
+  ],
+  "review": {
+    "tasks": [
+      {
+        "type": "cloze",
+        "prompt_de": "Wie ___ Sie?",
+        "answer": "heißen",
+        "options": [
+          "heiße",
+          "heißt",
+          "heißen"
+        ],
+        "from": "day-01",
+        "point_ko": "heißen 활용 (Sie heißen)"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "Ich wohne in Basel.의 뜻은?",
+        "options": [
+          "저는 바젤에 삽니다.",
+          "저는 바젤에서 왔습니다.",
+          "저는 바젤에서 일합니다."
+        ],
+        "answer": 0,
+        "from": "day-02",
+        "point_ko": "wohnen in"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Ich ___: L, E, E.",
+        "answer": "buchstabiere",
+        "options": [
+          "buchstabiere",
+          "buchstabierst",
+          "buchstabieren"
+        ],
+        "from": "day-03",
+        "point_ko": "buchstabieren 활용 (ich)"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "Freut mich.는 언제 하는 말인가?",
+        "options": [
+          "처음 만나 인사할 때",
+          "길을 물을 때",
+          "헤어질 때"
+        ],
+        "answer": 0,
+        "from": "day-01",
+        "point_ko": "인사말"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Was sind Sie von ___?",
+        "answer": "Beruf",
+        "options": [
+          "Beruf",
+          "Sprache",
+          "Name"
+        ],
+        "from": "day-04",
+        "point_ko": "직업 묻기 (von Beruf)"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "zwölf는 몇인가?",
+        "options": [
+          "2",
+          "12",
+          "20"
+        ],
+        "answer": 1,
+        "from": "day-05",
+        "point_ko": "숫자 0~20"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Woher ___ Sie?",
+        "answer": "kommen",
+        "options": [
+          "komme",
+          "kommst",
+          "kommen"
+        ],
+        "from": "day-02",
+        "point_ko": "kommen 활용 (Sie)"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "못 알아들었을 때 하는 말은?",
+        "options": [
+          "Wie bitte?",
+          "Freut mich.",
+          "Auf Wiedersehen!"
+        ],
+        "answer": 0,
+        "from": "day-03",
+        "point_ko": "Wie bitte?"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Entschuldigung, welche Linie ___ zum Bahnhof SBB?",
+        "answer": "fährt",
+        "options": [
+          "fahre",
+          "fährt",
+          "fahren"
+        ],
+        "from": "day-05",
+        "point_ko": "fährt (er/sie/es 꼴)"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "관리회사 담당자 Herr Huber에게는 무엇으로 말하나?",
+        "options": [
+          "du",
+          "Sie"
+        ],
+        "answer": 1,
+        "from": "day-06",
+        "point_ko": "du와 Sie"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Ich lerne ___ bisschen Deutsch.",
+        "answer": "ein",
+        "options": [
+          "ein",
+          "eine",
+          "einen"
+        ],
+        "from": "day-04",
+        "point_ko": "ein bisschen (덩어리째)"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "Die Fassade ist glatt.의 뜻은?",
+        "options": [
+          "파사드가 매끈하다.",
+          "파사드가 오래됐다.",
+          "파사드가 아름답다."
+        ],
+        "answer": 0,
+        "from": "day-07",
+        "point_ko": "glatt"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Von hier ___ man das Münster.",
+        "answer": "sieht",
+        "options": [
+          "sehe",
+          "sieht",
+          "sehen"
+        ],
+        "from": "day-07",
+        "point_ko": "Von hier sieht man …"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "어순이 바른 문장은?",
+        "options": [
+          "Hier ist ein Haus.",
+          "Hier ein Haus ist.",
+          "Ein Haus hier ist."
+        ],
+        "answer": 0,
+        "from": "day-07",
+        "point_ko": "동사는 둘째 자리"
+      }
+    ],
+    "write": {
+      "situation_ko": "새 모임에서 처음 만난 사람에게 독일어로 자기를 소개한다.",
+      "prompt_ko": "Sie체 세 문장: 이름, 출신과 사는 곳, 하는 일과 독일어.",
+      "model_de": "Ich heiße Yeon Ho Lee. Ich komme aus Korea und wohne in Basel. Ich arbeite als Architekt und lerne Deutsch.",
+      "chunks": [
+        "Ich heiße …",
+        "Ich komme aus … und wohne in …",
+        "Ich arbeite als …",
+        "Ich lerne Deutsch."
+      ]
+    }
+  },
+  "variants": {
+    "junghyun": {
+      "phrases": [
+        {
+          "de": "Guten Morgen!",
+          "ko": "좋은 아침입니다.",
+          "from": "day-01"
+        },
+        {
+          "de": "Ich bin neu hier.",
+          "ko": "저는 여기 새로 왔습니다.",
+          "from": "day-01"
+        },
+        {
+          "de": "Ich heiße …",
+          "ko": "제 이름은 …입니다.",
+          "from": "day-01"
+        },
+        {
+          "de": "Wie ist Ihr Vorname?",
+          "ko": "이름(성 말고)이 무엇인가요?",
+          "from": "day-01"
+        },
+        {
+          "de": "Freut mich.",
+          "ko": "반갑습니다.",
+          "from": "day-01"
+        },
+        {
+          "de": "Auf Wiedersehen!",
+          "ko": "안녕히 계세요. (정중한 작별)",
+          "from": "day-01"
+        },
+        {
+          "de": "Woher kommen Sie?",
+          "ko": "어디서 오셨어요?",
+          "from": "day-02"
+        },
+        {
+          "de": "Ich komme aus Korea.",
+          "ko": "저는 한국에서 왔습니다.",
+          "from": "day-02"
+        },
+        {
+          "de": "Ich wohne in Basel.",
+          "ko": "저는 바젤에 삽니다.",
+          "from": "day-02"
+        },
+        {
+          "de": "Und Sie?",
+          "ko": "당신은요?",
+          "from": "day-02"
+        },
+        {
+          "de": "Wie bitte?",
+          "ko": "뭐라고요?",
+          "from": "day-03"
+        },
+        {
+          "de": "Ich verstehe das nicht.",
+          "ko": "그 말을 못 알아듣겠습니다.",
+          "from": "day-03"
+        },
+        {
+          "de": "Langsam, bitte.",
+          "ko": "천천히 말해 주세요.",
+          "from": "day-03"
+        },
+        {
+          "de": "Ich buchstabiere: …",
+          "ko": "철자를 불러 드릴게요: …",
+          "from": "day-03"
+        },
+        {
+          "de": "Was sind Sie von Beruf?",
+          "ko": "직업이 무엇인가요?",
+          "from": "day-04"
+        },
+        {
+          "de": "Ich bin Grafikdesignerin.",
+          "ko": "저는 그래픽 디자이너입니다.",
+          "from": "day-04"
+        },
+        {
+          "de": "Ich spreche ein bisschen Deutsch.",
+          "ko": "독일어를 조금 합니다.",
+          "from": "day-04"
+        },
+        {
+          "de": "Welche Linie fährt nach …?",
+          "ko": "어느 노선이 …로 가나요?",
+          "from": "day-05"
+        },
+        {
+          "de": "Woher kommst du?",
+          "ko": "어디서 왔어? (du)",
+          "from": "day-06"
+        },
+        {
+          "de": "Kurz zu mir: …",
+          "ko": "짧게 제 소개를 하면: …",
+          "from": "day-06"
+        },
+        {
+          "de": "Wie geht es Ihnen?",
+          "ko": "어떻게 지내세요?",
+          "from": "day-06"
+        },
+        {
+          "de": "Von hier sieht man …",
+          "ko": "여기서 …이 보인다.",
+          "from": "day-07"
+        },
+        {
+          "de": "Schau mal, …",
+          "ko": "이것 봐, …",
+          "from": "day-07"
+        },
+        {
+          "de": "…, oder?",
+          "ko": "…, 그렇지?",
+          "from": "day-07"
+        }
+      ],
+      "review": {
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Wie ___ Sie?",
+            "answer": "heißen",
+            "options": [
+              "heiße",
+              "heißt",
+              "heißen"
+            ],
+            "from": "day-01",
+            "point_ko": "heißen 활용 (Sie heißen)"
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "Ich wohne in Basel.의 뜻은?",
+            "options": [
+              "저는 바젤에 삽니다.",
+              "저는 바젤에서 왔습니다.",
+              "저는 바젤에서 일합니다."
+            ],
+            "answer": 0,
+            "from": "day-02",
+            "point_ko": "wohnen in"
+          },
+          {
+            "type": "cloze",
+            "prompt_de": "Ich ___: L, E, E.",
+            "answer": "buchstabiere",
+            "options": [
+              "buchstabiere",
+              "buchstabierst",
+              "buchstabieren"
+            ],
+            "from": "day-03",
+            "point_ko": "buchstabieren 활용 (ich)"
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "Freut mich.는 언제 하는 말인가?",
+            "options": [
+              "처음 만나 인사할 때",
+              "길을 물을 때",
+              "헤어질 때"
+            ],
+            "answer": 0,
+            "from": "day-01",
+            "point_ko": "인사말"
+          },
+          {
+            "type": "cloze",
+            "prompt_de": "Was sind Sie von ___?",
+            "answer": "Beruf",
+            "options": [
+              "Beruf",
+              "Sprache",
+              "Name"
+            ],
+            "from": "day-04",
+            "point_ko": "직업 묻기 (von Beruf)"
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "zwölf는 몇인가?",
+            "options": [
+              "2",
+              "12",
+              "20"
+            ],
+            "answer": 1,
+            "from": "day-05",
+            "point_ko": "숫자 0~20"
+          },
+          {
+            "type": "cloze",
+            "prompt_de": "Woher ___ Sie?",
+            "answer": "kommen",
+            "options": [
+              "komme",
+              "kommst",
+              "kommen"
+            ],
+            "from": "day-02",
+            "point_ko": "kommen 활용 (Sie)"
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "못 알아들었을 때 하는 말은?",
+            "options": [
+              "Wie bitte?",
+              "Freut mich.",
+              "Auf Wiedersehen!"
+            ],
+            "answer": 0,
+            "from": "day-03",
+            "point_ko": "Wie bitte?"
+          },
+          {
+            "type": "cloze",
+            "prompt_de": "Entschuldigung, welche Linie ___ zum Bahnhof SBB?",
+            "answer": "fährt",
+            "options": [
+              "fahre",
+              "fährt",
+              "fahren"
+            ],
+            "from": "day-05",
+            "point_ko": "fährt (er/sie/es 꼴)"
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "관리회사 담당자 Herr Huber에게는 무엇으로 말하나?",
+            "options": [
+              "du",
+              "Sie"
+            ],
+            "answer": 1,
+            "from": "day-06",
+            "point_ko": "du와 Sie"
+          },
+          {
+            "type": "cloze",
+            "prompt_de": "Ich lerne ___ bisschen Deutsch.",
+            "answer": "ein",
+            "options": [
+              "ein",
+              "eine",
+              "einen"
+            ],
+            "from": "day-04",
+            "point_ko": "ein bisschen (덩어리째)"
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "Die Fassade ist glatt.의 뜻은?",
+            "options": [
+              "파사드가 매끈하다.",
+              "파사드가 오래됐다.",
+              "파사드가 아름답다."
+            ],
+            "answer": 0,
+            "from": "day-07",
+            "point_ko": "glatt"
+          },
+          {
+            "type": "cloze",
+            "prompt_de": "Von hier ___ man das Münster.",
+            "answer": "sieht",
+            "options": [
+              "sehe",
+              "sieht",
+              "sehen"
+            ],
+            "from": "day-07",
+            "point_ko": "Von hier sieht man …"
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "어순이 바른 문장은?",
+            "options": [
+              "Hier ist ein Haus.",
+              "Hier ein Haus ist.",
+              "Ein Haus hier ist."
+            ],
+            "answer": 0,
+            "from": "day-07",
+            "point_ko": "동사는 둘째 자리"
+          }
+        ],
+        "write": {
+          "situation_ko": "HGK 수업이나 공방에서 처음 만난 사람에게 독일어로 자기를 소개한다.",
+          "prompt_ko": "Sie체 세 문장: 이름, 출신과 사는 곳, 하는 일과 공부.",
+          "model_de": "Ich heiße Jeonghyeon Kong. Ich komme aus Korea und wohne in Basel. Ich bin Grafikdesignerin und studiere an der HGK.",
+          "chunks": [
+            "Ich heiße …",
+            "Ich komme aus … und wohne in …",
+            "Ich bin Grafikdesignerin.",
+            "Ich studiere an der HGK."
+          ]
+        }
+      }
+    }
+  }
+}

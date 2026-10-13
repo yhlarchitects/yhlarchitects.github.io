@@ -1,0 +1,578 @@
+{
+  "id": "week-5",
+  "days": [
+    "day-01",
+    "day-02",
+    "day-03",
+    "day-04",
+    "day-05",
+    "day-06",
+    "day-07",
+    "day-08",
+    "day-09",
+    "day-10",
+    "day-11",
+    "day-12",
+    "day-13",
+    "day-14",
+    "day-15",
+    "day-16",
+    "day-17",
+    "day-18",
+    "day-19",
+    "day-20",
+    "day-21",
+    "day-22",
+    "day-23",
+    "day-24",
+    "day-25",
+    "day-26",
+    "day-27",
+    "day-28",
+    "day-29",
+    "day-30"
+  ],
+  "title_ko": "Oktober · 한 달 꼭지점",
+  "phrases": [
+    {
+      "de": "Guten Tag, ich heiße … Wie heißen Sie?",
+      "ko": "인사하고 이름 말하기, 이름 묻기 (말하기 1부)",
+      "from": "day-01"
+    },
+    {
+      "de": "Ich komme aus Korea und wohne in Basel.",
+      "ko": "출신과 사는 곳 (말하기 1부)",
+      "from": "day-02"
+    },
+    {
+      "de": "Wie bitte? Langsam, bitte.",
+      "ko": "못 들었을 때 되묻기",
+      "from": "day-03"
+    },
+    {
+      "de": "Wie schreibt man das?",
+      "ko": "철자 묻기 (창구 · 전화)",
+      "from": "day-03"
+    },
+    {
+      "de": "Was sind Sie von Beruf? Ich arbeite als …",
+      "ko": "직업 묻고 답하기 (말하기 1부)",
+      "from": "day-04"
+    },
+    {
+      "de": "Ich spreche Koreanisch und Englisch und lerne Deutsch.",
+      "ko": "할 줄 아는 말 (말하기 1부)",
+      "from": "day-04"
+    },
+    {
+      "de": "Welche Linie fährt zum Bahnhof SBB?",
+      "ko": "정류장에서 노선 묻기",
+      "from": "day-05"
+    },
+    {
+      "de": "Wie geht es Ihnen?",
+      "ko": "Sie 상대에게 안부 묻기",
+      "from": "day-06"
+    },
+    {
+      "de": "Hast du Geschwister? Ja, ich habe eine Schwester.",
+      "ko": "haben으로 묻고 답하기 (말하기 2부)",
+      "from": "day-11"
+    },
+    {
+      "de": "Wie alt sind Sie? Ich bin … Jahre alt.",
+      "ko": "나이 (말하기 1부)",
+      "from": "day-12"
+    },
+    {
+      "de": "Danke für die schnelle Antwort.",
+      "ko": "메일 첫 줄 (쓰기)",
+      "from": "day-13"
+    },
+    {
+      "de": "Freundliche Grüße",
+      "ko": "메일 끝인사 (쓰기)",
+      "from": "day-13"
+    },
+    {
+      "de": "Entschuldigung, ich verstehe nicht. Können Sie bitte Hochdeutsch sprechen?",
+      "ko": "스위스 독일어를 들었을 때",
+      "from": "day-14"
+    },
+    {
+      "de": "Wir rauchen nicht und haben keine Haustiere.",
+      "ko": "nicht와 kein을 한 문장에 (신청서)",
+      "from": "day-19"
+    },
+    {
+      "de": "Was kostet das? Kann ich mit Karte bezahlen?",
+      "ko": "값 묻고 계산하기",
+      "from": "day-20"
+    },
+    {
+      "de": "Ich möchte zwei Brötchen, bitte.",
+      "ko": "가게에서 주문하기 (말하기 3부)",
+      "from": "day-20"
+    },
+    {
+      "de": "Im Anhang finden Sie das ausgefüllte Formular.",
+      "ko": "양식 첨부 (쓰기)",
+      "from": "day-21"
+    },
+    {
+      "de": "Wie spät ist es? Es ist halb neun.",
+      "ko": "시각 묻고 답하기",
+      "from": "day-22"
+    },
+    {
+      "de": "Hast du am Freitag Zeit?",
+      "ko": "약속 잡기 (예/아니오 질문)",
+      "from": "day-24"
+    },
+    {
+      "de": "Termine ab 18 Uhr passen uns gut.",
+      "ko": "되는 시간 알리기 (쓰기)",
+      "from": "day-24"
+    },
+    {
+      "de": "Vom 16. bis 18. Oktober sind wir verreist.",
+      "ko": "없는 날짜 알리기 (쓰기)",
+      "from": "day-25"
+    },
+    {
+      "de": "Ein Billett nach Zürich, bitte.",
+      "ko": "역 창구에서 표 사기",
+      "from": "day-27"
+    },
+    {
+      "de": "Geben Sie mir bitte ein Wasser.",
+      "ko": "그림 카드로 부탁하기 (말하기 3부)",
+      "from": "day-29"
+    },
+    {
+      "de": "Wir möchten die Wohnung besichtigen.",
+      "ko": "집 보기 청하기",
+      "from": "day-30"
+    }
+  ],
+  "review": {
+    "tasks": [
+      {
+        "type": "cloze",
+        "prompt_de": "Ich ___ neu hier.",
+        "answer": "bin",
+        "options": [
+          "bin",
+          "ist",
+          "bist"
+        ],
+        "from": "day-01",
+        "point_ko": "sein: ich bin"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "___ kommen Sie? Aus Korea.",
+        "answer": "Woher",
+        "options": [
+          "Wo",
+          "Woher",
+          "Wie"
+        ],
+        "from": "day-02",
+        "point_ko": "W-질문: Woher · Wo"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "An der Fassade ___ Ornamente.",
+        "answer": "sind",
+        "options": [
+          "ist",
+          "bin",
+          "sind"
+        ],
+        "from": "day-07",
+        "point_ko": "sein: sie sind (복수)"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "예/아니오 질문으로 맞는 것은?",
+        "options": [
+          "Sie Deutsch sprechen?",
+          "Sprechen Sie Deutsch?",
+          "Deutsch Sie sprechen?"
+        ],
+        "answer": 1,
+        "from": "day-10",
+        "point_ko": "예/아니오 질문: 동사가 맨 앞"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Meine Schwester ___ ein Kind.",
+        "answer": "hat",
+        "options": [
+          "habe",
+          "hat",
+          "habt"
+        ],
+        "from": "day-11",
+        "point_ko": "haben: er · sie hat"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "dreiundachtzig는?",
+        "options": [
+          "38",
+          "83",
+          "33"
+        ],
+        "answer": 1,
+        "from": "day-12",
+        "point_ko": "21~100: 일의 자리 먼저"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Das Spalentor ist ___ weit.",
+        "answer": "nicht",
+        "options": [
+          "nicht",
+          "kein",
+          "keine"
+        ],
+        "from": "day-18",
+        "point_ko": "nicht + 형용사"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Wir haben ___ Haustiere.",
+        "answer": "keine",
+        "options": [
+          "nicht",
+          "kein",
+          "keine"
+        ],
+        "from": "day-19",
+        "point_ko": "kein + 복수 명사 = keine"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "「방이 없다」를 바르게 쓴 것은?",
+        "options": [
+          "Ich habe nicht Zimmer.",
+          "Ich habe keine Zimmer.",
+          "Ich habe kein Zimmer."
+        ],
+        "answer": 2,
+        "from": "day-19",
+        "point_ko": "kein + das-명사 (das Zimmer)"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "acht Franken zwanzig는?",
+        "options": [
+          "8.20 Franken",
+          "20.08 Franken",
+          "8.02 Franken"
+        ],
+        "answer": 0,
+        "from": "day-20",
+        "point_ko": "값 읽기"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "halb neun은 몇 시인가?",
+        "options": [
+          "9시 30분",
+          "8시 30분",
+          "8시 15분"
+        ],
+        "answer": 1,
+        "from": "day-22",
+        "point_ko": "halb + 다음 시각"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "___ Montag arbeite ich im Büro.",
+        "answer": "Am",
+        "options": [
+          "Um",
+          "Am",
+          "Im"
+        ],
+        "from": "day-23",
+        "point_ko": "요일 앞 am"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "___ du am Freitag Zeit?",
+        "answer": "Hast",
+        "options": [
+          "Hast",
+          "Hat",
+          "Habe"
+        ],
+        "from": "day-24",
+        "point_ko": "haben: du hast · 예/아니오 질문"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Wir treffen uns ___ sechs Uhr.",
+        "answer": "um",
+        "options": [
+          "am",
+          "um",
+          "im"
+        ],
+        "from": "day-24",
+        "point_ko": "시각 앞 um"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Mein Geburtstag ist am ___ März.",
+        "answer": "dritten",
+        "options": [
+          "drei",
+          "dritte",
+          "dritten"
+        ],
+        "from": "day-25",
+        "point_ko": "날짜: am + 서수 -en"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "1760을 읽으면?",
+        "options": [
+          "tausendsiebenhundertsechzig",
+          "siebzehnhundertsechzig",
+          "siebzehnsechzig"
+        ],
+        "answer": 1,
+        "from": "day-26",
+        "point_ko": "연도: 백 단위로 읽는다"
+      }
+    ],
+    "write": {
+      "situation_ko": "관리회사 Herr Huber가 메일로 집 보기 시간을 물었다. 시험 쓰기처럼 세 덩이로 답한다.",
+      "prompt_ko": "인사 · 용건(되는 때와 이유) · 끝인사, Sie체로 쓴다.",
+      "model_de": "Guten Tag, Herr Huber, danke für die schnelle Antwort. Ich arbeite bis 17 Uhr im Büro. Am Donnerstag um 18.30 Uhr passt es uns gut. Freundliche Grüße, Yeon Ho Lee",
+      "chunks": [
+        "Guten Tag, Herr Huber, …",
+        "danke für die schnelle Antwort.",
+        "Ich arbeite bis … Uhr im Büro.",
+        "Am … um … Uhr passt es uns gut.",
+        "Freundliche Grüße"
+      ]
+    }
+  },
+  "variants": {
+    "junghyun": {
+      "review": {
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Ich ___ neu hier.",
+            "answer": "bin",
+            "options": [
+              "bin",
+              "ist",
+              "bist"
+            ],
+            "from": "day-01",
+            "point_ko": "sein: ich bin"
+          },
+          {
+            "type": "cloze",
+            "prompt_de": "___ kommen Sie? Aus Korea.",
+            "answer": "Woher",
+            "options": [
+              "Wo",
+              "Woher",
+              "Wie"
+            ],
+            "from": "day-02",
+            "point_ko": "W-질문: Woher · Wo"
+          },
+          {
+            "type": "cloze",
+            "prompt_de": "An der Fassade ___ Ornamente.",
+            "answer": "sind",
+            "options": [
+              "ist",
+              "bin",
+              "sind"
+            ],
+            "from": "day-07",
+            "point_ko": "sein: sie sind (복수)"
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "예/아니오 질문으로 맞는 것은?",
+            "options": [
+              "Sie Deutsch sprechen?",
+              "Sprechen Sie Deutsch?",
+              "Deutsch Sie sprechen?"
+            ],
+            "answer": 1,
+            "from": "day-10",
+            "point_ko": "예/아니오 질문: 동사가 맨 앞"
+          },
+          {
+            "type": "cloze",
+            "prompt_de": "Meine Schwester ___ ein Kind.",
+            "answer": "hat",
+            "options": [
+              "habe",
+              "hat",
+              "habt"
+            ],
+            "from": "day-11",
+            "point_ko": "haben: er · sie hat"
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "dreiundachtzig는?",
+            "options": [
+              "38",
+              "83",
+              "33"
+            ],
+            "answer": 1,
+            "from": "day-12",
+            "point_ko": "21~100: 일의 자리 먼저"
+          },
+          {
+            "type": "cloze",
+            "prompt_de": "Das Spalentor ist ___ weit.",
+            "answer": "nicht",
+            "options": [
+              "nicht",
+              "kein",
+              "keine"
+            ],
+            "from": "day-18",
+            "point_ko": "nicht + 형용사"
+          },
+          {
+            "type": "cloze",
+            "prompt_de": "Wir haben ___ Haustiere.",
+            "answer": "keine",
+            "options": [
+              "nicht",
+              "kein",
+              "keine"
+            ],
+            "from": "day-19",
+            "point_ko": "kein + 복수 명사 = keine"
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "「방이 없다」를 바르게 쓴 것은?",
+            "options": [
+              "Ich habe nicht Zimmer.",
+              "Ich habe keine Zimmer.",
+              "Ich habe kein Zimmer."
+            ],
+            "answer": 2,
+            "from": "day-19",
+            "point_ko": "kein + das-명사 (das Zimmer)"
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "acht Franken zwanzig는?",
+            "options": [
+              "8.20 Franken",
+              "20.08 Franken",
+              "8.02 Franken"
+            ],
+            "answer": 0,
+            "from": "day-20",
+            "point_ko": "값 읽기"
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "halb neun은 몇 시인가?",
+            "options": [
+              "9시 30분",
+              "8시 30분",
+              "8시 15분"
+            ],
+            "answer": 1,
+            "from": "day-22",
+            "point_ko": "halb + 다음 시각"
+          },
+          {
+            "type": "cloze",
+            "prompt_de": "___ Montag arbeite ich im Büro.",
+            "answer": "Am",
+            "options": [
+              "Um",
+              "Am",
+              "Im"
+            ],
+            "from": "day-23",
+            "point_ko": "요일 앞 am"
+          },
+          {
+            "type": "cloze",
+            "prompt_de": "___ du am Freitag Zeit?",
+            "answer": "Hast",
+            "options": [
+              "Hast",
+              "Hat",
+              "Habe"
+            ],
+            "from": "day-24",
+            "point_ko": "haben: du hast · 예/아니오 질문"
+          },
+          {
+            "type": "cloze",
+            "prompt_de": "Wir treffen uns ___ sechs Uhr.",
+            "answer": "um",
+            "options": [
+              "am",
+              "um",
+              "im"
+            ],
+            "from": "day-24",
+            "point_ko": "시각 앞 um"
+          },
+          {
+            "type": "cloze",
+            "prompt_de": "Mein Geburtstag ist am ___ März.",
+            "answer": "dritten",
+            "options": [
+              "drei",
+              "dritte",
+              "dritten"
+            ],
+            "from": "day-25",
+            "point_ko": "날짜: am + 서수 -en"
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "1760을 읽으면?",
+            "options": [
+              "tausendsiebenhundertsechzig",
+              "siebzehnhundertsechzig",
+              "siebzehnsechzig"
+            ],
+            "answer": 1,
+            "from": "day-26",
+            "point_ko": "연도: 백 단위로 읽는다"
+          }
+        ],
+        "write": {
+          "situation_ko": "관리회사 Herr Huber가 메일로 집 보기 시간을 물었다. 시험 쓰기처럼 세 덩이로 답한다.",
+          "prompt_ko": "인사 · 용건(되는 때와 이유) · 끝인사, Sie체로 쓴다.",
+          "model_de": "Guten Tag, Herr Huber, danke für die schnelle Antwort. Ich bin bis 17 Uhr an der HGK. Am Donnerstag um 18.30 Uhr passt es uns gut. Freundliche Grüße, Jeonghyeon Kong",
+          "chunks": [
+            "Guten Tag, Herr Huber, …",
+            "danke für die schnelle Antwort.",
+            "Ich bin bis … Uhr an der HGK.",
+            "Am … um … Uhr passt es uns gut.",
+            "Freundliche Grüße"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+[
+  {"id": "a1-alltag:die-bahn", "field": "ko", "old": "철도, 전차", "new": "철도, 기차", "why_ko": "「전차」는 트램(das Tram)으로 읽힌다. die Bahn은 기차·철도."},
+  {"id": "a1-alltag:nichts", "field": "example_de", "old": "Am Ende hat sie nichts.", "new": "Am Ende hat das Mädchen nichts mehr.", "why_ko": "19일째 이야기의 das Mädchen은 es로 받는다. sie가 나오면 같은 날 die-maedchen 카드(-chen은 das)와 엇갈린다."},
+  {"id": "a1-alltag:nichts", "field": "example_ko", "old": "결국 그녀는 아무것도 없다.", "new": "결국 소녀에게는 아무것도 남지 않는다.", "why_ko": "example_de 수정에 맞춘다."},
+  {"id": "basel-strasse:die-kirche", "field": "example_de", "old": "Neben unserem Haus steht eine kleine Kirche.", "new": "Da ist eine Kirche. Sie ist sehr alt.", "why_ko": "neben + 여격, unser, 형용사 어미는 10월 범위 밖. 15일째에 나오는 카드다."},
+  {"id": "basel-strasse:die-kirche", "field": "example_ko", "old": "우리 집 옆에 작은 교회가 있다.", "new": "저기 교회가 있다. 아주 오래됐다.", "why_ko": "example_de 수정에 맞춘다."},
+  {"id": "basel-strasse:der-turm", "field": "example_de", "old": "Vom Turm aus sieht man die ganze Stadt.", "new": "Das Münster hat zwei Türme.", "why_ko": "vom … aus(여격)와 die ganze(형용사 어미)는 10월 범위 밖. 바꾼 문장은 복수 Türme도 보인다."},
+  {"id": "basel-strasse:der-turm", "field": "example_ko", "old": "탑에서 도시 전체가 보인다.", "new": "대성당에는 탑이 둘 있다.", "why_ko": "example_de 수정에 맞춘다."},
+  {"id": "basel-strasse:die-aussicht", "field": "example_de", "old": "Die Wohnung hat eine schöne Aussicht auf den Park.", "new": "Die Aussicht ist sehr schön.", "why_ko": "목적격 형용사 어미(eine schöne)와 auf den은 10월 범위 밖."},
+  {"id": "basel-strasse:die-aussicht", "field": "example_ko", "old": "그 집은 공원 쪽 전망이 좋다.", "new": "전망이 아주 좋다.", "why_ko": "example_de 수정에 맞춘다."},
+  {"id": "basel-strasse:die-figur", "field": "example_de", "old": "Das Kind malt eine kleine Figur.", "new": "Die Figur ist klein und schwarz.", "why_ko": "목적격 형용사 어미(eine kleine)는 범위 밖이고, 16일째 본문의 뜻(조형물)과도 멀다."},
+  {"id": "basel-strasse:die-figur", "field": "example_ko", "old": "아이가 작은 사람 모양을 그린다.", "new": "그 조형물은 작고 검다.", "why_ko": "example_de 수정에 맞춘다."},
+  {"id": "basel-strasse:die-seite", "field": "example_de", "old": "Das Büro ist auf der anderen Seite der Straße.", "new": "Kleinbasel ist auf der anderen Seite.", "why_ko": "속격 der Straße는 3월. auf der anderen Seite는 17일째 본문에 굳은 말로 풀이해 두었다."},
+  {"id": "basel-strasse:die-seite", "field": "example_ko", "old": "사무실은 길 건너편에 있다.", "new": "클라인바젤은 건너편에 있다.", "why_ko": "example_de 수정에 맞춘다."},
+  {"id": "basel-strasse:aussteigen", "field": "example_de", "old": "Wir steigen an der nächsten Haltestelle aus.", "new": "Wir steigen hier aus.", "why_ko": "an der nächsten(여격·형용사 어미)은 10월 범위 밖. 분리동사만 통째로 익히게 한다."},
+  {"id": "basel-strasse:aussteigen", "field": "example_ko", "old": "우리는 다음 정류장에서 내린다.", "new": "우리는 여기서 내린다.", "why_ko": "example_de 수정에 맞춘다."},
+  {"id": "basel-strasse:die-mauer", "field": "example_de", "old": "Hinter der Mauer ist ein Garten.", "new": "Die Mauer ist alt und hoch.", "why_ko": "hinter + 여격은 범위 밖."},
+  {"id": "basel-strasse:die-mauer", "field": "example_ko", "old": "담 뒤에 정원이 있다.", "new": "그 담은 오래되고 높다.", "why_ko": "example_de 수정에 맞춘다."},
+  {"id": "basel-strasse:das-tor", "field": "example_de", "old": "Das Tor zum Hof ist am Abend zu.", "new": "Das Tor ist heute zu.", "why_ko": "zum Hof(여격 축약)는 범위 밖."},
+  {"id": "basel-strasse:das-tor", "field": "example_ko", "old": "안뜰로 가는 대문은 저녁에 닫혀 있다.", "new": "대문이 오늘 닫혀 있다.", "why_ko": "example_de 수정에 맞춘다."}
+]

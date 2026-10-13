@@ -1,166 +1,297 @@
 {
- "id": "day-01",
- "theme_ko": "바젤 거리의 글자",
- "new_cards": [
-  "basel-strasse:die-tram",
-  "basel-strasse:die-haltestelle",
-  "basel-strasse:die-linie",
-  "basel-strasse:fahren",
-  "basel-strasse:aussteigen",
-  "basel-strasse:die-fahrkarte"
- ],
- "stair": {
-  "source": {
-   "author": "선생",
-   "title": "Die Linie 8",
-   "year": 2026,
-   "license": "own",
-   "url": ""
-  },
-  "layers": [
-   {
-    "level": "A1",
-    "text_de": "Ich bin am Bahnhof SBB. Hier ist die Haltestelle. Ich kaufe eine Fahrkarte am Automaten. Dann kommt die Tram. Sie ist grün. Das ist die Linie 8. Die 8 fährt über den Rhein bis nach Weil am Rhein. Weil am Rhein ist schon in Deutschland. Ich fahre nicht so weit. Nach drei Haltestellen steige ich aus.",
-    "gloss": [
-     {
-      "de": "der Automat",
-      "ko": "자동판매기"
-     },
-     {
-      "de": "grün",
-      "ko": "초록색의"
-     },
-     {
-      "de": "über den Rhein",
-      "ko": "라인강을 건너"
-     },
-     {
-      "de": "bis nach …",
-      "ko": "…까지"
-     },
-     {
-      "de": "schon",
-      "ko": "벌써, 이미"
-     },
-     {
-      "de": "so weit",
-      "ko": "그렇게 멀리"
-     }
-    ],
-    "tasks": [
-     {
-      "type": "cloze",
-      "prompt_de": "Ich kaufe eine ___ am Automaten.",
-      "answer": "Fahrkarte",
-      "options": [
-       "Haltestelle",
-       "Fahrkarte",
-       "Linie"
-      ]
-     },
-     {
-      "type": "mc",
-      "prompt_ko": "8번 트램의 끝은 어느 나라에 있나?",
-      "options": [
-       "스위스",
-       "프랑스",
-       "독일"
-      ],
-      "answer": 2
-     },
-     {
-      "type": "summary",
-      "prompt_ko": "한 줄로 요약 (독일어 또는 한국어)"
-     }
-    ]
-   },
-   {
-    "level": "A2",
-    "text_de": "Jeden Morgen warte ich am Bahnhof SBB auf die Linie 8. Die grünen Trams kommen fast immer pünktlich. Die 8 fährt quer durch die Stadt, über den Rhein und am Ende sogar über die Grenze nach Weil am Rhein. Ich fahre nur drei Haltestellen weit. Wenn die Tram voll ist, stehe ich an der Tür und lese die Schilder an den Haltestellen. So lerne ich jeden Tag ein paar neue Wörter.",
-    "gloss": [
-     {
-      "de": "warten auf",
-      "ko": "…을 기다리다"
-     },
-     {
-      "de": "pünktlich",
-      "ko": "제시간에"
-     },
-     {
-      "de": "quer durch",
-      "ko": "가로질러"
-     },
-     {
-      "de": "sogar",
-      "ko": "심지어"
-     },
-     {
-      "de": "die Grenze",
-      "ko": "국경"
-     },
-     {
-      "de": "voll",
-      "ko": "꽉 찬"
-     },
-     {
-      "de": "das Schild",
-      "ko": "표지판"
-     },
-     {
-      "de": "ein paar",
-      "ko": "몇몇"
-     }
-    ],
-    "tasks": [
-     {
-      "type": "cloze",
-      "prompt_de": "Die 8 fährt am Ende sogar über die ___ nach Weil am Rhein.",
-      "answer": "Grenze",
-      "options": [
-       "Tür",
-       "Brücke",
-       "Grenze"
-      ]
-     },
-     {
-      "type": "mc",
-      "prompt_ko": "트램이 꽉 차면 나는 무엇을 하나?",
-      "options": [
-       "문 옆에 서서 정류장 표지판을 읽는다",
-       "다음 트램을 기다린다",
-       "걸어서 간다"
-      ],
-      "answer": 0
-     },
-     {
-      "type": "summary",
-      "prompt_ko": "한 줄로 요약 (독일어 또는 한국어)"
-     }
-    ]
-   }
+  "id": "day-01",
+  "theme_ko": "인사와 이름",
+  "focus_ko": "sein · 동사는 둘째 자리 · Wie heißen Sie?",
+  "new_cards": [
+    "wortgruppen:gruesse",
+    "a1-alltag:hallo",
+    "a1-alltag:tschuess",
+    "a1-alltag:auf-wiedersehen",
+    "a1-alltag:heissen",
+    "a1-alltag:sein",
+    "a1-alltag:sie-hoeflich",
+    "basel-strasse:der-name",
+    "a1-alltag:der-vorname",
+    "a1-alltag:der-familienname"
   ],
-  "summit": {
-   "text_de": "",
-   "note_ko": "오늘 꼭대기는 비워 둔다. 원문은 7일째에 아돌프 로스."
+  "stair": {
+    "source": {
+      "author": "2628 선생",
+      "title": "Im Treppenhaus",
+      "year": 2026,
+      "license": "own",
+      "url": ""
+    },
+    "layers": [
+      {
+        "level": "A1",
+        "text_de": "Im Treppenhaus. „Guten Morgen! Ich bin neu hier. Ich heiße Yeon Ho Lee.“ „Guten Morgen! Mein Name ist Bürgin. Wie ist Ihr Vorname?“ „Yeon Ho. Lee ist der Familienname.“ „Freut mich, Herr Lee.“ „Freut mich auch, Frau Bürgin. Auf Wiedersehen!“ „Auf Wiedersehen!“",
+        "gloss": [
+          {
+            "de": "das Treppenhaus",
+            "ko": "계단실"
+          },
+          {
+            "de": "neu",
+            "ko": "새로 온, 새"
+          },
+          {
+            "de": "mein Name",
+            "ko": "제 이름"
+          },
+          {
+            "de": "Ihr",
+            "ko": "당신의"
+          },
+          {
+            "de": "Freut mich.",
+            "ko": "반갑습니다."
+          },
+          {
+            "de": "Herr / Frau",
+            "ko": "~씨 (남 / 여)"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Ich ___ Yeon Ho Lee.",
+            "answer": "heiße",
+            "options": [
+              "heiße",
+              "heißt",
+              "heißen"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "Lee는 무엇인가?",
+            "options": [
+              "이름 (Vorname)",
+              "성 (Familienname)",
+              "거리 이름"
+            ],
+            "answer": 1
+          }
+        ]
+      },
+      {
+        "level": "A2",
+        "text_de": "In der Deutschschweiz hört man im Treppenhaus oft „Grüezi“. Das ist Schweizerdeutsch und bedeutet so viel wie „Guten Tag“. Unter Nachbarn sagt man meistens Sie und den Familiennamen: „Grüezi, Frau Bürgin.“ Wer neu im Haus ist, stellt sich kurz vor: Name, Wohnung, vielleicht noch der Beruf. Das dauert eine Minute. Danach grüßt man sich jedes Mal.",
+        "gloss": [
+          {
+            "de": "die Deutschschweiz",
+            "ko": "독일어권 스위스"
+          },
+          {
+            "de": "bedeuten",
+            "ko": "뜻하다"
+          },
+          {
+            "de": "der Nachbar / die Nachbarin",
+            "ko": "이웃"
+          },
+          {
+            "de": "sich vorstellen",
+            "ko": "자기를 소개하다"
+          },
+          {
+            "de": "grüßen",
+            "ko": "인사하다"
+          },
+          {
+            "de": "jedes Mal",
+            "ko": "매번"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Unter Nachbarn sagt man meistens ___ und den Familiennamen.",
+            "answer": "Sie",
+            "options": [
+              "Sie",
+              "du",
+              "ihr"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "Grüezi는 어떤 인사인가?",
+            "options": [
+              "스위스 독일어로 '안녕하세요'",
+              "프랑스어로 '고맙습니다'",
+              "'안녕히 가세요'의 사투리"
+            ],
+            "answer": 0
+          }
+        ]
+      }
+    ],
+    "summit": {
+      "text_de": "",
+      "note_ko": "오늘 꼭대기는 비워 둔다. 원문은 7일째에 아돌프 로스."
+    }
+  },
+  "ear": {
+    "text_de": "Guten Morgen! Ich bin neu hier. Ich heiße Yeon Ho Lee. Wie heißen Sie?",
+    "lang": "de-DE",
+    "rates": [
+      0.75,
+      0.9,
+      1.0
+    ]
+  },
+  "hand": {
+    "situation_ko": "이번 주 건물 계단이나 사무실 입구에서 처음 보는 사람에게 인사한다.",
+    "prompt_ko": "Sie체 두 문장: 인사와 이름, 이어서 상대 이름을 묻는다.",
+    "model_de": "Guten Tag, ich heiße Yeon Ho Lee. Wie heißen Sie?",
+    "chunks": [
+      "Guten Tag, …",
+      "Ich heiße …",
+      "Wie heißen Sie?"
+    ]
+  },
+  "mix": {
+    "tasks": []
+  },
+  "illustration": {
+    "scene_ko": "평일 아침 바젤 옛 아파트 계단실. 이사 온 연호가 이웃 Frau Bürgin과 처음 인사하며 이름을 말한다.",
+    "prompt_en": "Yeon Ho, a Korean man, shakes hands with his neighbour Frau Bürgin, a Swiss woman, in the stairwell of an old apartment building in Basel on a weekday morning; he has just moved in and is telling her his name, a moving box stands by his door."
+  },
+  "variants": {
+    "junghyun": {
+      "stair": {
+        "layers": [
+          {
+            "level": "A1",
+            "text_de": "Im Treppenhaus. „Guten Morgen! Ich bin neu hier. Ich heiße Jeonghyeon Kong.“ „Guten Morgen! Mein Name ist Bürgin. Wie ist Ihr Vorname?“ „Jeonghyeon. Kong ist der Familienname.“ „Freut mich, Frau Kong.“ „Freut mich auch, Frau Bürgin. Auf Wiedersehen!“ „Auf Wiedersehen!“",
+            "gloss": [
+              {
+                "de": "das Treppenhaus",
+                "ko": "계단실"
+              },
+              {
+                "de": "neu",
+                "ko": "새로 온, 새"
+              },
+              {
+                "de": "mein Name",
+                "ko": "제 이름"
+              },
+              {
+                "de": "Ihr",
+                "ko": "당신의"
+              },
+              {
+                "de": "Freut mich.",
+                "ko": "반갑습니다."
+              },
+              {
+                "de": "Herr / Frau",
+                "ko": "~씨 (남 / 여)"
+              }
+            ],
+            "tasks": [
+              {
+                "type": "cloze",
+                "prompt_de": "Ich ___ Jeonghyeon Kong.",
+                "answer": "heiße",
+                "options": [
+                  "heiße",
+                  "heißt",
+                  "heißen"
+                ]
+              },
+              {
+                "type": "mc",
+                "prompt_ko": "Kong은 무엇인가?",
+                "options": [
+                  "이름 (Vorname)",
+                  "성 (Familienname)",
+                  "거리 이름"
+                ],
+                "answer": 1
+              }
+            ]
+          },
+          {
+            "level": "A2",
+            "text_de": "In der Deutschschweiz hört man im Treppenhaus oft „Grüezi“. Das ist Schweizerdeutsch und bedeutet so viel wie „Guten Tag“. Unter Nachbarn sagt man meistens Sie und den Familiennamen: „Grüezi, Frau Bürgin.“ Wer neu im Haus ist, stellt sich kurz vor: Name, Wohnung, vielleicht noch der Beruf. Das dauert eine Minute. Danach grüßt man sich jedes Mal.",
+            "gloss": [
+              {
+                "de": "die Deutschschweiz",
+                "ko": "독일어권 스위스"
+              },
+              {
+                "de": "bedeuten",
+                "ko": "뜻하다"
+              },
+              {
+                "de": "der Nachbar / die Nachbarin",
+                "ko": "이웃"
+              },
+              {
+                "de": "sich vorstellen",
+                "ko": "자기를 소개하다"
+              },
+              {
+                "de": "grüßen",
+                "ko": "인사하다"
+              },
+              {
+                "de": "jedes Mal",
+                "ko": "매번"
+              }
+            ],
+            "tasks": [
+              {
+                "type": "cloze",
+                "prompt_de": "Unter Nachbarn sagt man meistens ___ und den Familiennamen.",
+                "answer": "Sie",
+                "options": [
+                  "Sie",
+                  "du",
+                  "ihr"
+                ]
+              },
+              {
+                "type": "mc",
+                "prompt_ko": "Grüezi는 어떤 인사인가?",
+                "options": [
+                  "스위스 독일어로 '안녕하세요'",
+                  "프랑스어로 '고맙습니다'",
+                  "'안녕히 가세요'의 사투리"
+                ],
+                "answer": 0
+              }
+            ]
+          }
+        ]
+      },
+      "ear": {
+        "text_de": "Guten Morgen! Ich bin neu hier. Ich heiße Jeonghyeon Kong. Wie heißen Sie?",
+        "lang": "de-DE",
+        "rates": [
+          0.75,
+          0.9,
+          1.0
+        ]
+      },
+      "hand": {
+        "situation_ko": "이번 주 건물 계단이나 HGK 스튜디오에서 처음 보는 사람에게 인사한다.",
+        "prompt_ko": "Sie체 두 문장: 인사와 이름, 이어서 상대 이름을 묻는다.",
+        "model_de": "Guten Tag, ich heiße Jeonghyeon Kong. Wie heißen Sie?",
+        "chunks": [
+          "Guten Tag, …",
+          "Ich heiße …",
+          "Wie heißen Sie?"
+        ]
+      },
+      "illustration": {
+        "scene_ko": "평일 아침 바젤 옛 아파트 계단실. 이사 온 정현이 이웃 Frau Bürgin과 처음 인사하며 이름을 말한다.",
+        "prompt_en": "Jeonghyeon, a Korean woman, greets her neighbour Frau Bürgin, a Swiss woman, in the stairwell of an old apartment building in Basel on a weekday morning; she has just moved in and is telling her name, a rolled poster tube under her arm."
+      }
+    }
   }
- },
- "ear": {
-  "text_de": "Ich bin am Bahnhof SBB. Hier ist die Haltestelle. Ich kaufe eine Fahrkarte am Automaten. Dann kommt die Tram. Das ist die Linie 8. Die 8 fährt über den Rhein bis nach Weil am Rhein. Nach drei Haltestellen steige ich aus.",
-  "lang": "de-DE",
-  "rates": [
-   0.75,
-   0.9,
-   1.0
-  ]
- },
- "hand": {
-  "situation_ko": "트램 안. 이 트램이 바르퓌서플라츠에 서는지 옆 사람에게 묻는다.",
-  "prompt_ko": "정중한 질문 한 문장.",
-  "model_de": "Entschuldigung, hält diese Tram am Barfüsserplatz?",
-  "chunks": [
-   "Entschuldigung, …",
-   "Hält diese Tram am …?",
-   "Wo muss ich aussteigen?"
-  ]
- }
 }

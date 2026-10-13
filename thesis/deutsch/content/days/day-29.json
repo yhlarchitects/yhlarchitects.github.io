@@ -1,0 +1,215 @@
+{
+  "id": "day-29",
+  "theme_ko": "모의 말하기 1~3부",
+  "focus_ko": "모의 말하기: 자기소개 · 묻고 답하기 · 부탁하기",
+  "new_cards": [
+    "a1-alltag:die-aufgabe",
+    "a1-alltag:bitten",
+    "a1-alltag:helfen",
+    "a1-alltag:noch",
+    "a1-alltag:einmal",
+    "a1-alltag:zum-beispiel",
+    "a1-alltag:geben",
+    "a1-alltag:das-essen",
+    "a1-alltag:das-fruehstueck",
+    "a1-alltag:also"
+  ],
+  "stair": {
+    "source": {
+      "author": "2628 선생",
+      "title": "Probe: Sprechen",
+      "year": 2026,
+      "license": "own",
+      "url": ""
+    },
+    "layers": [
+      {
+        "level": "A1",
+        "text_de": "Teil 1: „Ich heiße Lukas Brunner. Ich bin einunddreißig Jahre alt. Ich komme aus der Schweiz und wohne in Basel. Ich spreche Deutsch und Englisch. Ich bin Architekt. Mein Hobby ist Musik.“ Teil 2, Thema Essen, Wort Frühstück: „Was essen Sie zum Frühstück?“ „Zum Frühstück esse ich Brot und trinke Kaffee.“ Teil 3, ein Bild mit Wasser: „Geben Sie mir bitte ein Wasser.“ „Ja, gern.“",
+        "gloss": [
+          {
+            "de": "der Teil",
+            "ko": "부분"
+          },
+          {
+            "de": "das Thema",
+            "ko": "주제"
+          },
+          {
+            "de": "zum Frühstück",
+            "ko": "아침으로"
+          },
+          {
+            "de": "das Bild",
+            "ko": "그림"
+          },
+          {
+            "de": "Geben Sie mir …",
+            "ko": "저에게 …을 주세요"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Zum Frühstück ___ ich Brot.",
+            "answer": "esse",
+            "options": [
+              "esse",
+              "isst",
+              "essen"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "3부에서 하는 일은?",
+            "options": [
+              "부탁하기",
+              "편지 쓰기",
+              "듣기"
+            ],
+            "answer": 0
+          }
+        ]
+      },
+      {
+        "level": "A2",
+        "text_de": "Im Prüfungsteil Sprechen von Start Deutsch 1 gibt es drei Aufgaben. In der ersten stellt man sich vor. In der zweiten bekommt man Karten mit einem Thema und einem Wort, zum Beispiel „Essen: Frühstück“, und stellt dazu eine Frage. Die andere Person antwortet. In der dritten formuliert man Bitten zu Bildkarten, also zum Beispiel: „Geben Sie mir bitte ein Wasser.“ In Teil 2 und 3 spricht man mit einer Partnerin oder einem Partner aus der Prüfungsgruppe.",
+        "gloss": [
+          {
+            "de": "die Karte",
+            "ko": "카드"
+          },
+          {
+            "de": "dazu",
+            "ko": "그에 대해"
+          },
+          {
+            "de": "formulieren",
+            "ko": "말로 만들다"
+          },
+          {
+            "de": "die Bitte",
+            "ko": "부탁"
+          },
+          {
+            "de": "die Bildkarte",
+            "ko": "그림 카드"
+          },
+          {
+            "de": "der Partner / die Partnerin",
+            "ko": "짝"
+          },
+          {
+            "de": "die Prüfungsgruppe",
+            "ko": "함께 시험 보는 무리"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "In der zweiten Aufgabe bekommt man Karten mit einem Thema und einem ___.",
+            "answer": "Wort",
+            "options": [
+              "Wort",
+              "Bild",
+              "Text"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "말하기 시험은 몇 부로 되어 있나?",
+            "options": [
+              "2",
+              "3",
+              "4"
+            ],
+            "answer": 1
+          }
+        ]
+      }
+    ],
+    "summit": {
+      "text_de": "",
+      "note_ko": "오늘 꼭대기는 비워 둔다. 내일 아돌프 로스를 다시 읽는다."
+    }
+  },
+  "ear": {
+    "text_de": "Ich heiße Lukas Brunner. Ich komme aus der Schweiz und wohne in Basel. Was essen Sie zum Frühstück? Zum Frühstück esse ich Brot.",
+    "lang": "de-DE",
+    "rates": [
+      0.75,
+      0.9,
+      1.0
+    ]
+  },
+  "hand": {
+    "situation_ko": "모의 1부: Name, Alter, Land, Wohnort, Sprachen, Beruf, Hobby에 한 문장씩 말해 본다.",
+    "prompt_ko": "그 가운데 세 낱말을 한 문장에 담아 적는다.",
+    "model_de": "Ich heiße Yeon Ho Lee, ich komme aus Korea und wohne in Basel.",
+    "chunks": [
+      "Ich heiße …",
+      "Ich komme aus … und wohne in …",
+      "Ich spreche …",
+      "Ich arbeite als … / Ich studiere …"
+    ]
+  },
+  "illustration": {
+    "scene_ko": "모의 말하기 시험장, 평일 아침. 응시자 Lukas Brunner가 시험관 두 사람 앞에서 자기소개를 한다. 탁자에는 낱말 카드와 물 한 잔이 그려진 그림 카드가 놓여 있고, 옆자리 짝이 차례를 기다린다.",
+    "prompt_en": "A small quiet exam room on a weekday morning. Lukas Brunner, a Swiss man of about thirty, sits at a table and introduces himself to two examiners sitting opposite him. Word cards and picture cards lie on the table; one picture card shows a glass of water. A second candidate sits next to him and waits for her turn."
+  },
+  "mix": {
+    "tasks": [
+      {
+        "type": "mc",
+        "prompt_ko": "nie의 뜻은?",
+        "options": [
+          "자주",
+          "곧",
+          "결코 ~ 않다"
+        ],
+        "answer": 2,
+        "from": "day-28",
+        "point_ko": "oft · bald · nie"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Heute ist der ___ Oktober.",
+        "answer": "zwölfte",
+        "options": [
+          "zwölf",
+          "zwölfte",
+          "zwölften"
+        ],
+        "from": "day-25",
+        "point_ko": "서수 날짜 (der zwölfte)"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "das Ufer의 복수는?",
+        "options": [
+          "die Ufer",
+          "die Ufern",
+          "die Ufers"
+        ],
+        "answer": 0,
+        "from": "day-17",
+        "point_ko": "복수 (das Ufer)"
+      }
+    ]
+  },
+  "variants": {
+    "junghyun": {
+      "hand": {
+        "situation_ko": "모의 1부: Name, Alter, Land, Wohnort, Sprachen, Beruf, Hobby에 한 문장씩 말해 본다.",
+        "prompt_ko": "그 가운데 세 낱말을 한 문장에 담고, 하는 일을 한 문장 더 적는다.",
+        "model_de": "Ich heiße Jeonghyeon Kong, ich komme aus Korea und wohne in Basel. Ich studiere Grafikdesign an der HGK.",
+        "chunks": [
+          "Ich heiße …",
+          "Ich komme aus … und wohne in …",
+          "Ich spreche …",
+          "Ich studiere … an der HGK."
+        ]
+      }
+    }
+  }
+}

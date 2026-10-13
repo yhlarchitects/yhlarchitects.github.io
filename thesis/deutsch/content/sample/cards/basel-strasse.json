@@ -1,42 +1,36 @@
 {
- "deck": "basel-strasse",
- "title_ko": "바젤 거리의 글자 (예시)",
- "cards": [
-  {
-   "id": "basel-strasse:die-haltestelle",
-   "de": "die Haltestelle",
-   "plural": "die Haltestellen",
-   "ko": "정류장",
-   "example_de": "Die Haltestelle ist direkt vor dem Haus.",
-   "example_ko": "정류장은 집 바로 앞에 있다.",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:die-gasse",
-   "de": "die Gasse",
-   "plural": "die Gassen",
-   "ko": "골목",
-   "example_de": "Die Gasse ist am Abend ruhig.",
-   "example_ko": "골목은 저녁에 조용하다.",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:die-bruecke",
-   "de": "die Brücke",
-   "plural": "die Brücken",
-   "ko": "다리",
-   "example_de": "Die Brücke führt über den Rhein.",
-   "example_ko": "다리는 라인강을 건너간다.",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  }
- ]
+  "deck": "basel-strasse",
+  "title_ko": "바젤 거리의 글자 (예시)",
+  "cards": [
+    {
+      "id": "basel-strasse:die-haltestelle",
+      "de": "die Haltestelle",
+      "plural": "die Haltestellen",
+      "ko": "정류장",
+      "example_de": "Die Haltestelle ist direkt vor dem Haus.",
+      "example_ko": "정류장은 집 바로 앞에 있다.",
+      "source": "선생 작성",
+      "tags": ["A1", "Nomen"]
+    },
+    {
+      "id": "basel-strasse:die-gasse",
+      "de": "die Gasse",
+      "plural": "die Gassen",
+      "ko": "골목",
+      "example_de": "Die Gasse ist am Abend ruhig.",
+      "example_ko": "골목은 저녁에 조용하다.",
+      "source": "선생 작성",
+      "tags": ["A1", "Nomen"]
+    },
+    {
+      "id": "basel-strasse:die-bruecke",
+      "de": "die Brücke",
+      "plural": "die Brücken",
+      "ko": "다리",
+      "example_de": "Die Brücke führt über den Rhein.",
+      "example_ko": "다리는 라인강을 건너간다.",
+      "source": "선생 작성",
+      "tags": ["A1", "Nomen"]
+    }
+  ]
 }

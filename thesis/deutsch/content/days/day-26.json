@@ -1,0 +1,218 @@
+{
+  "id": "day-26",
+  "theme_ko": "연도 읽기",
+  "focus_ko": "연도: siebzehnhundertsechzig · zweitausendsechsundzwanzig · Ich bin … geboren.",
+  "new_cards": [
+    "wortgruppen:jahreszahlen",
+    "a1-alltag:geboren",
+    "a1-alltag:lesen",
+    "a1-alltag:das-buch",
+    "a1-alltag:der-text",
+    "basel-strasse:die-schrift",
+    "basel-strasse:das-schild",
+    "a1-alltag:schon",
+    "a1-alltag:immer"
+  ],
+  "stair": {
+    "source": {
+      "author": "2628 선생",
+      "title": "Johann Peter Hebel",
+      "year": 2026,
+      "license": "own",
+      "url": ""
+    },
+    "layers": [
+      {
+        "level": "A1",
+        "text_de": "Johann Peter Hebel ist 1760 in Basel geboren. Das Geburtshaus ist am Totentanz, Nummer zwei. Hebel ist ein Dichter. Er schreibt Gedichte und kurze Geschichten. Das Buch mit den Geschichten ist von 1811. Der Text ist alt, die Schrift ist alt, aber die Geschichten sind immer noch gut. Ich lese schon die zweite Geschichte. In Basel haben viele Häuser ein Schild mit dem Namen.",
+        "gloss": [
+          {
+            "de": "das Geburtshaus",
+            "ko": "태어난 집"
+          },
+          {
+            "de": "am Totentanz",
+            "ko": "토텐탄츠 거리에"
+          },
+          {
+            "de": "der Dichter",
+            "ko": "시인, 작가"
+          },
+          {
+            "de": "das Gedicht",
+            "ko": "시"
+          },
+          {
+            "de": "die Geschichte",
+            "ko": "이야기"
+          },
+          {
+            "de": "immer noch",
+            "ko": "여전히"
+          },
+          {
+            "de": "die zweite",
+            "ko": "두 번째"
+          },
+          {
+            "de": "mit den Geschichten",
+            "ko": "이야기들이 담긴"
+          },
+          {
+            "de": "mit dem Namen",
+            "ko": "이름이 적힌"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Hebel ist ___ in Basel geboren.",
+            "answer": "1760",
+            "options": [
+              "1760",
+              "1811",
+              "1826"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "헤벨이 태어난 집은 어디인가?",
+            "options": [
+              "Totentanz 2",
+              "Spalentor",
+              "Münsterplatz"
+            ],
+            "answer": 0
+          }
+        ]
+      },
+      {
+        "level": "A2",
+        "text_de": "Hebel lebte von 1760 bis 1826. Er wurde in Basel geboren, aber er lebte und arbeitete die meiste Zeit in Baden, also im heutigen Deutschland. Bekannt ist er für seine Kalendergeschichten: kurze Texte mit einer klugen Pointe. Er schrieb auch Gedichte auf Alemannisch, in einem Dialekt, der dem Baseldeutschen nah ist. 1811 erschien das Buch „Schatzkästlein des rheinischen Hausfreundes“.",
+        "gloss": [
+          {
+            "de": "die meiste Zeit",
+            "ko": "대부분의 시간"
+          },
+          {
+            "de": "im heutigen Deutschland",
+            "ko": "오늘날의 독일에서"
+          },
+          {
+            "de": "bekannt",
+            "ko": "알려진"
+          },
+          {
+            "de": "die Kalendergeschichte",
+            "ko": "달력 이야기 (짧은 교훈담)"
+          },
+          {
+            "de": "klug",
+            "ko": "영리한"
+          },
+          {
+            "de": "die Pointe",
+            "ko": "핵심 반전"
+          },
+          {
+            "de": "der Dialekt",
+            "ko": "방언"
+          },
+          {
+            "de": "erscheinen",
+            "ko": "(책이) 나오다"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Hebel lebte von 1760 bis ___.",
+            "answer": "1826",
+            "options": [
+              "1811",
+              "1826",
+              "1860"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "Alemannisch는 무엇인가?",
+            "options": [
+              "바젤 말과 가까운 방언",
+              "프랑스 남부어",
+              "옛 라틴어"
+            ],
+            "answer": 0
+          }
+        ]
+      }
+    ],
+    "summit": {
+      "text_de": "",
+      "note_ko": "오늘 꼭대기는 비워 둔다. 원문은 28일째에 요한 페터 헤벨."
+    }
+  },
+  "ear": {
+    "text_de": "Johann Peter Hebel ist siebzehnhundertsechzig in Basel geboren. Das Buch ist von achtzehnhundertelf. Die Geschichten sind immer noch gut.",
+    "lang": "de-DE",
+    "rates": [
+      0.75,
+      0.9,
+      1.0
+    ]
+  },
+  "hand": {
+    "situation_ko": "양식이나 대화에서 태어난 곳과 해를 말한다.",
+    "prompt_ko": "한 문장, 연도는 소리 내어 읽는다.",
+    "model_de": "Ich bin in Korea geboren und wohne jetzt in Basel.",
+    "chunks": [
+      "Ich bin … geboren.",
+      "im Jahr …",
+      "Ich wohne seit … in Basel."
+    ]
+  },
+  "mix": {
+    "tasks": [
+      {
+        "type": "mc",
+        "prompt_ko": "„am dritten März“의 뜻은?",
+        "options": [
+          "3월 3일에",
+          "3월 30일에",
+          "3월에 세 번"
+        ],
+        "answer": 0,
+        "from": "day-25",
+        "point_ko": "서수 날짜"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Ich ___ auch einen Apfel.",
+        "answer": "möchte",
+        "options": [
+          "möchten",
+          "möchte",
+          "möchtest"
+        ],
+        "from": "day-20",
+        "point_ko": "Ich möchte …"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "„fünfundvierzig“는 몇인가?",
+        "options": [
+          "54",
+          "40",
+          "45"
+        ],
+        "answer": 2,
+        "from": "day-12",
+        "point_ko": "21~99: 일의 자리 먼저"
+      }
+    ]
+  },
+  "illustration": {
+    "scene_ko": "가을 오후, 연호와 정현이 바젤 토텐탄츠 2번지 헤벨 생가 앞에서 벽의 이름 판을 읽는다. 연호 손에 헤벨 이야기책이 있다.",
+    "prompt_en": "On an autumn afternoon a Korean couple, Yeonho and Jeonghyeon, stand in front of Johann Peter Hebel's birthplace at Totentanz 2 in Basel, reading the old name plaque on the facade; he holds a small book of Hebel's stories."
+  }
+}

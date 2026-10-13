@@ -1,522 +1,637 @@
 {
- "deck": "basel-strasse",
- "title_ko": "바젤 거리의 글자",
- "cards": [
-  {
-   "id": "basel-strasse:die-tram",
-   "de": "die Tram",
-   "plural": "die Trams",
-   "ko": "트램 (스위스에서는 das Tram)",
-   "example_de": "Die Tram ist heute sehr voll.",
-   "example_ko": "트램이 오늘 아주 붐빈다.",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:die-haltestelle",
-   "de": "die Haltestelle",
-   "plural": "die Haltestellen",
-   "ko": "정류장",
-   "example_de": "Die Haltestelle ist direkt vor dem Büro.",
-   "example_ko": "정류장은 사무실 바로 앞에 있다.",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:die-linie",
-   "de": "die Linie",
-   "plural": "die Linien",
-   "ko": "(교통) 노선, 선",
-   "example_de": "Welche Linie fährt zum Bahnhof?",
-   "example_ko": "어느 노선이 역으로 가나?",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:fahren",
-   "de": "fahren (sie fährt)",
-   "plural": "",
-   "ko": "(탈것이) 가다, 타고 가다",
-   "example_de": "Ich fahre jeden Tag mit der Tram ins Büro.",
-   "example_ko": "나는 매일 트램을 타고 사무실에 간다.",
-   "tags": [
-    "A1",
-    "Verb"
-   ]
-  },
-  {
-   "id": "basel-strasse:aussteigen",
-   "de": "aussteigen (ich steige aus)",
-   "plural": "",
-   "ko": "내리다",
-   "example_de": "Wir steigen an der nächsten Haltestelle aus.",
-   "example_ko": "우리는 다음 정류장에서 내린다.",
-   "tags": [
-    "A1",
-    "Verb"
-   ]
-  },
-  {
-   "id": "basel-strasse:die-fahrkarte",
-   "de": "die Fahrkarte",
-   "plural": "die Fahrkarten",
-   "ko": "승차권 (스위스에서는 das Billett)",
-   "example_de": "Die Fahrkarte kaufe ich am Automaten.",
-   "example_ko": "승차권은 자동판매기에서 산다.",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:die-faehre",
-   "de": "die Fähre",
-   "plural": "die Fähren",
-   "ko": "나룻배, 페리",
-   "example_de": "Am Sonntag nehmen wir die Fähre.",
-   "example_ko": "일요일에 우리는 나룻배를 탄다.",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:der-fluss",
-   "de": "der Fluss",
-   "plural": "die Flüsse",
-   "ko": "강",
-   "example_de": "Im Sommer schwimmen wir im Fluss.",
-   "example_ko": "여름에 우리는 강에서 헤엄친다.",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:das-ufer",
-   "de": "das Ufer",
-   "plural": "die Ufer",
-   "ko": "강가, 기슭",
-   "example_de": "Wir sitzen am Ufer und essen.",
-   "example_ko": "우리는 강가에 앉아 먹는다.",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:das-seil",
-   "de": "das Seil",
-   "plural": "die Seile",
-   "ko": "밧줄, 줄",
-   "example_de": "Das Seil ist lang und stark.",
-   "example_ko": "그 줄은 길고 튼튼하다.",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:die-seite",
-   "de": "die Seite",
-   "plural": "die Seiten",
-   "ko": "쪽, 편 (책의 쪽도)",
-   "example_de": "Das Büro ist auf der anderen Seite der Straße.",
-   "example_ko": "사무실은 길 건너편에 있다.",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:langsam",
-   "de": "langsam",
-   "plural": "",
-   "ko": "느리게, 천천히",
-   "example_de": "Bitte sprechen Sie langsam.",
-   "example_ko": "천천히 말씀해 주세요.",
-   "tags": [
-    "A1",
-    "Adjektiv"
-   ]
-  },
-  {
-   "id": "basel-strasse:die-kirche",
-   "de": "die Kirche",
-   "plural": "die Kirchen",
-   "ko": "교회, 성당",
-   "example_de": "Neben unserem Haus steht eine kleine Kirche.",
-   "example_ko": "우리 집 옆에 작은 교회가 있다.",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:der-turm",
-   "de": "der Turm",
-   "plural": "die Türme",
-   "ko": "탑",
-   "example_de": "Vom Turm aus sieht man die ganze Stadt.",
-   "example_ko": "탑에서 도시 전체가 보인다.",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:der-sandstein",
-   "de": "der Sandstein",
-   "plural": "die Sandsteine",
-   "ko": "사암",
-   "example_de": "Die Mauer ist aus Sandstein.",
-   "example_ko": "그 담은 사암으로 되어 있다.",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:das-dach",
-   "de": "das Dach",
-   "plural": "die Dächer",
-   "ko": "지붕",
-   "example_de": "Auf dem Dach liegt Schnee.",
-   "example_ko": "지붕 위에 눈이 쌓여 있다.",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:die-aussicht",
-   "de": "die Aussicht",
-   "plural": "die Aussichten",
-   "ko": "전망, 경치",
-   "example_de": "Die Wohnung hat eine schöne Aussicht auf den Park.",
-   "example_ko": "그 집은 공원 쪽 전망이 좋다.",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:von-hier-sieht-man",
-   "de": "Von hier sieht man …",
-   "plural": "",
-   "ko": "여기서 …이 보인다",
-   "example_de": "Von unserem Balkon sieht man die Bäume im Hof.",
-   "example_ko": "우리 발코니에서 안뜰의 나무들이 보인다.",
-   "tags": [
-    "A1",
-    "Ausdruck"
-   ]
-  },
-  {
-   "id": "basel-strasse:der-platz",
-   "de": "der Platz",
-   "plural": "die Plätze",
-   "ko": "광장; 자리",
-   "example_de": "Ist dieser Platz frei?",
-   "example_ko": "이 자리 비었나요?",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:das-museum",
-   "de": "das Museum",
-   "plural": "die Museen",
-   "ko": "박물관, 미술관",
-   "example_de": "Am Sonntag gehen wir ins Museum.",
-   "example_ko": "일요일에 우리는 미술관에 간다.",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:sich-treffen",
-   "de": "sich treffen (wir treffen uns)",
-   "plural": "",
-   "ko": "만나다",
-   "example_de": "Wir treffen uns um sechs vor dem Kino.",
-   "example_ko": "우리는 여섯 시에 극장 앞에서 만난다.",
-   "tags": [
-    "A1",
-    "Verb"
-   ]
-  },
-  {
-   "id": "basel-strasse:das-mittagessen",
-   "de": "das Mittagessen",
-   "plural": "die Mittagessen",
-   "ko": "점심",
-   "example_de": "Nach dem Mittagessen trinke ich einen Kaffee.",
-   "example_ko": "점심 뒤에 커피를 마신다.",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:die-kollegin",
-   "de": "die Kollegin / der Kollege",
-   "plural": "die Kolleginnen / die Kollegen",
-   "ko": "(여/남) 동료",
-   "example_de": "Meine Kollegin kommt aus Zürich.",
-   "example_ko": "내 동료는 취리히 출신이다.",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:um-uhr",
-   "de": "um … Uhr",
-   "plural": "",
-   "ko": "…시에",
-   "example_de": "Der Zug fährt um acht Uhr.",
-   "example_ko": "기차는 여덟 시에 떠난다.",
-   "tags": [
-    "A1",
-    "Ausdruck"
-   ]
-  },
-  {
-   "id": "basel-strasse:der-brunnen",
-   "de": "der Brunnen",
-   "plural": "die Brunnen",
-   "ko": "분수, 샘",
-   "example_de": "In Basel kann man aus vielen Brunnen Wasser trinken.",
-   "example_ko": "바젤에서는 많은 분수에서 물을 마실 수 있다.",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:die-figur",
-   "de": "die Figur",
-   "plural": "die Figuren",
-   "ko": "형상, 인물상",
-   "example_de": "Das Kind malt eine kleine Figur.",
-   "example_ko": "아이가 작은 사람 모양을 그린다.",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:die-maschine",
-   "de": "die Maschine",
-   "plural": "die Maschinen",
-   "ko": "기계",
-   "example_de": "Die Kaffeemaschine im Büro ist kaputt.",
-   "example_ko": "사무실 커피 기계가 고장 났다.",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:sich-bewegen",
-   "de": "sich bewegen (es bewegt sich)",
-   "plural": "",
-   "ko": "움직이다",
-   "example_de": "Ich bewege mich zu wenig.",
-   "example_ko": "나는 너무 적게 움직인다.",
-   "tags": [
-    "A1",
-    "Verb"
-   ]
-  },
-  {
-   "id": "basel-strasse:der-kuenstler",
-   "de": "der Künstler / die Künstlerin",
-   "plural": "die Künstler / die Künstlerinnen",
-   "ko": "예술가",
-   "example_de": "Die Künstlerin wohnt in Kleinbasel.",
-   "example_ko": "그 예술가는 클라인바젤에 산다.",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:das-theater",
-   "de": "das Theater",
-   "plural": "die Theater",
-   "ko": "극장, 연극",
-   "example_de": "Heute Abend gehen wir ins Theater.",
-   "example_ko": "오늘 저녁 우리는 극장에 간다.",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:das-tor",
-   "de": "das Tor",
-   "plural": "die Tore",
-   "ko": "대문, 성문",
-   "example_de": "Das Tor zum Hof ist am Abend zu.",
-   "example_ko": "안뜰로 가는 대문은 저녁에 닫혀 있다.",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:die-mauer",
-   "de": "die Mauer",
-   "plural": "die Mauern",
-   "ko": "담, 성벽",
-   "example_de": "Hinter der Mauer ist ein Garten.",
-   "example_ko": "담 뒤에 정원이 있다.",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:die-stadt",
-   "de": "die Stadt",
-   "plural": "die Städte",
-   "ko": "도시",
-   "example_de": "Basel ist keine große Stadt.",
-   "example_ko": "바젤은 큰 도시가 아니다.",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:alt",
-   "de": "alt",
-   "plural": "",
-   "ko": "오래된, 늙은",
-   "example_de": "Unsere Wohnung ist alt, aber hell.",
-   "example_ko": "우리 집은 오래됐지만 밝다.",
-   "tags": [
-    "A1",
-    "Adjektiv"
-   ]
-  },
-  {
-   "id": "basel-strasse:zu-fuss",
-   "de": "zu Fuß",
-   "plural": "",
-   "ko": "걸어서",
-   "example_de": "Ich gehe zu Fuß zur Arbeit.",
-   "example_ko": "나는 걸어서 출근한다.",
-   "tags": [
-    "A1",
-    "Ausdruck"
-   ]
-  },
-  {
-   "id": "basel-strasse:das-jahr",
-   "de": "das Jahr",
-   "plural": "die Jahre",
-   "ko": "해, 년",
-   "example_de": "Ich wohne seit zwei Jahren in Basel.",
-   "example_ko": "나는 2년째 바젤에 산다.",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:das-haus",
-   "de": "das Haus",
-   "plural": "die Häuser",
-   "ko": "집, 건물",
-   "example_de": "Das Haus hat vier Stockwerke.",
-   "example_ko": "그 건물은 4층이다.",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:die-fassade",
-   "de": "die Fassade",
-   "plural": "die Fassaden",
-   "ko": "파사드, 건물 정면",
-   "example_de": "Die Fassade ist aus Holz.",
-   "example_ko": "그 파사드는 나무로 되어 있다.",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:der-name",
-   "de": "der Name",
-   "plural": "die Namen",
-   "ko": "이름",
-   "example_de": "Wie ist Ihr Name?",
-   "example_ko": "성함이 어떻게 되세요?",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:die-schrift",
-   "de": "die Schrift",
-   "plural": "die Schriften",
-   "ko": "글자, 서체; 글",
-   "example_de": "Die Schrift auf dem Schild ist zu klein.",
-   "example_ko": "표지판 글자가 너무 작다.",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:das-ornament",
-   "de": "das Ornament",
-   "plural": "die Ornamente",
-   "ko": "장식, 장식 무늬",
-   "example_de": "Über der Tür ist ein Ornament aus Stein.",
-   "example_ko": "문 위에 돌 장식이 있다.",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:das-schild",
-   "de": "das Schild",
-   "plural": "die Schilder",
-   "ko": "표지판, 간판",
-   "example_de": "Auf dem Schild steht der Name der Straße.",
-   "example_ko": "표지판에 거리 이름이 적혀 있다.",
-   "tags": [
-    "A1",
-    "Nomen"
-   ]
-  },
-  {
-   "id": "basel-strasse:glatt",
-   "de": "glatt",
-   "plural": "",
-   "ko": "매끈한, 밋밋한",
-   "example_de": "Die Wand ist ganz glatt.",
-   "example_ko": "벽이 아주 매끈하다.",
-   "tags": [
-    "A1",
-    "Adjektiv"
-   ]
-  }
- ]
+  "deck": "basel-strasse",
+  "title_ko": "바젤 거리의 글자",
+  "cards": [
+    {
+      "id": "basel-strasse:die-tram",
+      "de": "das Tram",
+      "plural": "die Trams",
+      "ko": "트램, 노면전차",
+      "example_de": "Das Tram ist heute sehr voll.",
+      "example_ko": "트램이 오늘 아주 붐빈다.",
+      "source": "선생 작성",
+      "tags": [
+        "B1",
+        "CH",
+        "Nomen"
+      ],
+      "lemma": "das Tram",
+      "en_hint": "tram",
+      "note_ko": "스위스 표준어는 das Tram. 독일에서는 die Straßenbahn(A1)."
+    },
+    {
+      "id": "basel-strasse:die-haltestelle",
+      "de": "die Haltestelle",
+      "plural": "die Haltestellen",
+      "ko": "정류장",
+      "example_de": "Die Haltestelle ist direkt vor dem Büro.",
+      "example_ko": "정류장은 사무실 바로 앞에 있다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "die Haltestelle"
+    },
+    {
+      "id": "basel-strasse:die-linie",
+      "de": "die Linie",
+      "plural": "die Linien",
+      "ko": "(교통) 노선, 선",
+      "example_de": "Welche Linie fährt zum Bahnhof?",
+      "example_ko": "어느 노선이 역으로 가나?",
+      "source": "선생 작성",
+      "tags": [
+        "B1",
+        "Nomen"
+      ],
+      "lemma": "die Linie",
+      "en_hint": "line"
+    },
+    {
+      "id": "basel-strasse:fahren",
+      "de": "fahren (sie fährt)",
+      "plural": "",
+      "ko": "(탈것이) 가다, 타고 가다",
+      "example_de": "Ich fahre jeden Tag mit dem Tram ins Büro.",
+      "example_ko": "나는 매일 트램을 타고 사무실에 간다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "fahren"
+    },
+    {
+      "id": "basel-strasse:aussteigen",
+      "de": "aussteigen (ich steige aus)",
+      "plural": "",
+      "ko": "내리다",
+      "example_de": "Wir steigen hier aus.",
+      "example_ko": "우리는 여기서 내린다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "aussteigen",
+      "note_ko": "분리동사는 11월. 지금은 통째로."
+    },
+    {
+      "id": "basel-strasse:die-fahrkarte",
+      "de": "die Fahrkarte",
+      "plural": "die Fahrkarten",
+      "ko": "승차권",
+      "example_de": "Die Fahrkarte kaufe ich am Automaten.",
+      "example_ko": "승차권은 자동판매기에서 산다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "die Fahrkarte",
+      "note_ko": "스위스에서는 das Billett(B1).",
+      "ch_de": "das Billett"
+    },
+    {
+      "id": "basel-strasse:die-faehre",
+      "de": "die Fähre",
+      "plural": "die Fähren",
+      "ko": "나룻배, 페리",
+      "example_de": "Am Sonntag nehmen wir die Fähre.",
+      "example_ko": "일요일에 우리는 나룻배를 탄다.",
+      "source": "선생 작성",
+      "tags": [
+        "B1",
+        "Nomen"
+      ],
+      "lemma": "die Fähre",
+      "en_hint": "ferry"
+    },
+    {
+      "id": "basel-strasse:der-fluss",
+      "de": "der Fluss",
+      "plural": "die Flüsse",
+      "ko": "강",
+      "example_de": "Im Sommer schwimmen wir im Fluss.",
+      "example_ko": "여름에 우리는 강에서 헤엄친다.",
+      "source": "선생 작성",
+      "tags": [
+        "A2",
+        "Nomen"
+      ],
+      "lemma": "der Fluss"
+    },
+    {
+      "id": "basel-strasse:das-ufer",
+      "de": "das Ufer",
+      "plural": "die Ufer",
+      "ko": "강가, 기슭",
+      "example_de": "Wir sitzen am Ufer und essen.",
+      "example_ko": "우리는 강가에 앉아 먹는다.",
+      "source": "선생 작성",
+      "tags": [
+        "B1",
+        "Nomen"
+      ],
+      "lemma": "das Ufer"
+    },
+    {
+      "id": "basel-strasse:das-seil",
+      "de": "das Seil",
+      "plural": "die Seile",
+      "ko": "밧줄, 줄",
+      "example_de": "Das Seil ist lang und stark.",
+      "example_ko": "그 줄은 길고 튼튼하다.",
+      "source": "선생 작성",
+      "tags": [
+        "eigen",
+        "Nomen"
+      ]
+    },
+    {
+      "id": "basel-strasse:die-seite",
+      "de": "die Seite",
+      "plural": "die Seiten",
+      "ko": "쪽, 편 (책의 쪽도)",
+      "example_de": "Kleinbasel ist auf der anderen Seite.",
+      "example_ko": "클라인바젤은 건너편에 있다.",
+      "source": "선생 작성",
+      "tags": [
+        "A2",
+        "Nomen"
+      ],
+      "lemma": "die Seite",
+      "en_hint": "side"
+    },
+    {
+      "id": "basel-strasse:langsam",
+      "de": "langsam",
+      "plural": "",
+      "ko": "느리게, 천천히",
+      "example_de": "Bitte sprechen Sie langsam.",
+      "example_ko": "천천히 말씀해 주세요.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adjektiv"
+      ],
+      "lemma": "langsam"
+    },
+    {
+      "id": "basel-strasse:die-kirche",
+      "de": "die Kirche",
+      "plural": "die Kirchen",
+      "ko": "교회, 성당",
+      "example_de": "Da ist eine Kirche. Sie ist sehr alt.",
+      "example_ko": "저기 교회가 있다. 아주 오래됐다.",
+      "source": "선생 작성",
+      "tags": [
+        "A2",
+        "Nomen"
+      ],
+      "lemma": "die Kirche",
+      "en_hint": "church"
+    },
+    {
+      "id": "basel-strasse:der-turm",
+      "de": "der Turm",
+      "plural": "die Türme",
+      "ko": "탑",
+      "example_de": "Das Münster hat zwei Türme.",
+      "example_ko": "대성당에는 탑이 둘 있다.",
+      "source": "선생 작성",
+      "tags": [
+        "B1",
+        "Nomen"
+      ],
+      "lemma": "der Turm",
+      "en_hint": "tower"
+    },
+    {
+      "id": "basel-strasse:der-sandstein",
+      "de": "der Sandstein",
+      "plural": "die Sandsteine",
+      "ko": "사암",
+      "example_de": "Die Mauer ist aus Sandstein.",
+      "example_ko": "그 담은 사암으로 되어 있다.",
+      "source": "선생 작성",
+      "tags": [
+        "eigen",
+        "Nomen"
+      ],
+      "en_hint": "sandstone"
+    },
+    {
+      "id": "basel-strasse:das-dach",
+      "de": "das Dach",
+      "plural": "die Dächer",
+      "ko": "지붕",
+      "example_de": "Das Dach ist alt.",
+      "example_ko": "지붕이 오래됐다.",
+      "source": "선생 작성",
+      "tags": [
+        "B1",
+        "Nomen"
+      ],
+      "lemma": "das Dach"
+    },
+    {
+      "id": "basel-strasse:die-aussicht",
+      "de": "die Aussicht",
+      "plural": "die Aussichten",
+      "ko": "전망, 경치",
+      "example_de": "Die Aussicht ist sehr schön.",
+      "example_ko": "전망이 아주 좋다.",
+      "source": "선생 작성",
+      "tags": [
+        "B1",
+        "Nomen"
+      ],
+      "lemma": "die Aussicht"
+    },
+    {
+      "id": "basel-strasse:von-hier-sieht-man",
+      "de": "Von hier sieht man …",
+      "plural": "",
+      "ko": "여기서 …이 보인다",
+      "example_de": "Von unserem Balkon sieht man die Bäume im Hof.",
+      "example_ko": "우리 발코니에서 안뜰의 나무들이 보인다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Ausdruck"
+      ],
+      "lemma": "sehen",
+      "en_hint": "see"
+    },
+    {
+      "id": "basel-strasse:der-platz",
+      "de": "der Platz",
+      "plural": "die Plätze",
+      "ko": "광장; 자리",
+      "example_de": "Ist dieser Platz frei?",
+      "example_ko": "이 자리 비었나요?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "der Platz",
+      "en_hint": "place"
+    },
+    {
+      "id": "basel-strasse:das-museum",
+      "de": "das Museum",
+      "plural": "die Museen",
+      "ko": "박물관, 미술관",
+      "example_de": "Am Sonntag gehen wir ins Museum.",
+      "example_ko": "일요일에 우리는 미술관에 간다.",
+      "source": "선생 작성",
+      "tags": [
+        "A2",
+        "Nomen"
+      ],
+      "lemma": "das Museum",
+      "en_hint": "museum"
+    },
+    {
+      "id": "basel-strasse:sich-treffen",
+      "de": "sich treffen (wir treffen uns)",
+      "plural": "",
+      "ko": "만나다",
+      "example_de": "Wir treffen uns um sechs vor dem Kino.",
+      "example_ko": "우리는 여섯 시에 극장 앞에서 만난다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "(sich) treffen"
+    },
+    {
+      "id": "basel-strasse:das-mittagessen",
+      "de": "das Mittagessen",
+      "plural": "die Mittagessen",
+      "ko": "점심",
+      "example_de": "Das Mittagessen ist um zwölf.",
+      "example_ko": "점심은 열두 시다.",
+      "source": "선생 작성",
+      "tags": [
+        "A2",
+        "Nomen"
+      ],
+      "lemma": "das Mittagessen"
+    },
+    {
+      "id": "basel-strasse:die-kollegin",
+      "de": "der Kollege / die Kollegin",
+      "plural": "die Kollegen / die Kolleginnen",
+      "ko": "(남/여) 동료",
+      "example_de": "Meine Kollegin kommt aus Zürich.",
+      "example_ko": "내 동료는 취리히 출신이다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "der Kollege",
+      "en_hint": "colleague",
+      "note_ko": "der Kollege는 A1, die Kollegin은 A2 목록."
+    },
+    {
+      "id": "basel-strasse:um-uhr",
+      "de": "um … Uhr",
+      "plural": "",
+      "ko": "…시에",
+      "example_de": "Der Zug fährt um acht Uhr.",
+      "example_ko": "기차는 여덟 시에 떠난다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Ausdruck"
+      ],
+      "lemma": [
+        "um",
+        "die Uhr"
+      ],
+      "en_hint": "o'clock"
+    },
+    {
+      "id": "basel-strasse:der-brunnen",
+      "de": "der Brunnen",
+      "plural": "die Brunnen",
+      "ko": "분수, 샘",
+      "example_de": "In Basel kann man aus vielen Brunnen Wasser trinken.",
+      "example_ko": "바젤에서는 많은 분수에서 물을 마실 수 있다.",
+      "source": "선생 작성",
+      "tags": [
+        "eigen",
+        "Nomen"
+      ]
+    },
+    {
+      "id": "basel-strasse:die-figur",
+      "de": "die Figur",
+      "plural": "die Figuren",
+      "ko": "형상, 인물상",
+      "example_de": "Die Figur ist klein und schwarz.",
+      "example_ko": "그 조형물은 작고 검다.",
+      "source": "선생 작성",
+      "tags": [
+        "B1",
+        "Nomen"
+      ],
+      "lemma": "die Figur",
+      "en_hint": "figure"
+    },
+    {
+      "id": "basel-strasse:die-maschine",
+      "de": "die Maschine",
+      "plural": "die Maschinen",
+      "ko": "기계",
+      "example_de": "Die Kaffeemaschine im Büro ist kaputt.",
+      "example_ko": "사무실 커피 기계가 고장 났다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "die Maschine",
+      "en_hint": "machine"
+    },
+    {
+      "id": "basel-strasse:sich-bewegen",
+      "de": "sich bewegen (es bewegt sich)",
+      "plural": "",
+      "ko": "움직이다",
+      "example_de": "Ich bewege mich zu wenig.",
+      "example_ko": "나는 너무 적게 움직인다.",
+      "source": "선생 작성",
+      "tags": [
+        "B1",
+        "Verb"
+      ],
+      "lemma": "(sich) bewegen"
+    },
+    {
+      "id": "basel-strasse:der-kuenstler",
+      "de": "der Künstler / die Künstlerin",
+      "plural": "die Künstler / die Künstlerinnen",
+      "ko": "예술가",
+      "example_de": "Die Künstlerin wohnt in Kleinbasel.",
+      "example_ko": "그 예술가는 클라인바젤에 산다.",
+      "source": "선생 작성",
+      "tags": [
+        "B1",
+        "Nomen"
+      ],
+      "lemma": "der Künstler"
+    },
+    {
+      "id": "basel-strasse:das-theater",
+      "de": "das Theater",
+      "plural": "die Theater",
+      "ko": "극장, 연극",
+      "example_de": "Heute Abend gehen wir ins Theater.",
+      "example_ko": "오늘 저녁 우리는 극장에 간다.",
+      "source": "선생 작성",
+      "tags": [
+        "A2",
+        "Nomen"
+      ],
+      "lemma": "das Theater",
+      "en_hint": "theatre"
+    },
+    {
+      "id": "basel-strasse:das-tor",
+      "de": "das Tor",
+      "plural": "die Tore",
+      "ko": "대문, 성문",
+      "example_de": "Das Tor ist heute zu.",
+      "example_ko": "대문이 오늘 닫혀 있다.",
+      "source": "선생 작성",
+      "tags": [
+        "B1",
+        "Nomen"
+      ],
+      "lemma": "das Tor"
+    },
+    {
+      "id": "basel-strasse:die-mauer",
+      "de": "die Mauer",
+      "plural": "die Mauern",
+      "ko": "담, 성벽",
+      "example_de": "Die Mauer ist alt und hoch.",
+      "example_ko": "그 담은 오래되고 높다.",
+      "source": "선생 작성",
+      "tags": [
+        "B1",
+        "Nomen"
+      ],
+      "lemma": "die Mauer",
+      "note_ko": "die Mauer는 바깥 담·성벽, 방 안의 벽은 die Wand."
+    },
+    {
+      "id": "basel-strasse:die-stadt",
+      "de": "die Stadt",
+      "plural": "die Städte",
+      "ko": "도시",
+      "example_de": "Basel ist eine Stadt in der Schweiz.",
+      "example_ko": "바젤은 스위스에 있는 도시다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "die Stadt"
+    },
+    {
+      "id": "basel-strasse:alt",
+      "de": "alt",
+      "plural": "",
+      "ko": "오래된, 늙은",
+      "example_de": "Unsere Wohnung ist alt, aber hell.",
+      "example_ko": "우리 집은 오래됐지만 밝다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adjektiv"
+      ],
+      "lemma": "alt",
+      "en_hint": "old"
+    },
+    {
+      "id": "basel-strasse:zu-fuss",
+      "de": "zu Fuß",
+      "plural": "",
+      "ko": "걸어서",
+      "example_de": "Ich gehe zu Fuß zur Arbeit.",
+      "example_ko": "나는 걸어서 출근한다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Ausdruck"
+      ],
+      "lemma": "der Fuß",
+      "en_hint": "foot"
+    },
+    {
+      "id": "basel-strasse:das-jahr",
+      "de": "das Jahr",
+      "plural": "die Jahre",
+      "ko": "해, 년",
+      "example_de": "Lukas ist einunddreißig Jahre alt.",
+      "example_ko": "루카스는 서른한 살이다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Nomen"
+      ],
+      "en_hint": "year"
+    },
+    {
+      "id": "basel-strasse:das-haus",
+      "de": "das Haus",
+      "plural": "die Häuser",
+      "ko": "집, 건물",
+      "example_de": "Das Haus hat vier Stockwerke.",
+      "example_ko": "그 건물은 4층이다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "das Haus",
+      "en_hint": "house"
+    },
+    {
+      "id": "basel-strasse:die-fassade",
+      "de": "die Fassade",
+      "plural": "die Fassaden",
+      "ko": "파사드, 건물 정면",
+      "example_de": "Die Fassade ist aus Holz.",
+      "example_ko": "그 파사드는 나무로 되어 있다.",
+      "source": "선생 작성",
+      "tags": [
+        "eigen",
+        "Nomen"
+      ],
+      "en_hint": "facade"
+    },
+    {
+      "id": "basel-strasse:der-name",
+      "de": "der Name",
+      "plural": "die Namen",
+      "ko": "이름",
+      "example_de": "Wie ist Ihr Name?",
+      "example_ko": "성함이 어떻게 되세요?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "der Name",
+      "en_hint": "name"
+    },
+    {
+      "id": "basel-strasse:die-schrift",
+      "de": "die Schrift",
+      "plural": "die Schriften",
+      "ko": "글자, 서체; 글",
+      "example_de": "Die Schrift auf dem Schild ist zu klein.",
+      "example_ko": "표지판 글자가 너무 작다.",
+      "source": "선생 작성",
+      "tags": [
+        "B1",
+        "Nomen"
+      ],
+      "lemma": "die Schrift",
+      "en_hint": "script"
+    },
+    {
+      "id": "basel-strasse:das-ornament",
+      "de": "das Ornament",
+      "plural": "die Ornamente",
+      "ko": "장식, 장식 무늬",
+      "example_de": "Über der Tür ist ein Ornament aus Stein.",
+      "example_ko": "문 위에 돌 장식이 있다.",
+      "source": "선생 작성",
+      "tags": [
+        "eigen",
+        "Nomen"
+      ],
+      "en_hint": "ornament"
+    },
+    {
+      "id": "basel-strasse:das-schild",
+      "de": "das Schild",
+      "plural": "die Schilder",
+      "ko": "표지판, 간판",
+      "example_de": "Auf dem Schild steht der Name der Straße.",
+      "example_ko": "표지판에 거리 이름이 적혀 있다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "das Schild",
+      "note_ko": "das Schild는 표지판. der Schild는 방패."
+    },
+    {
+      "id": "basel-strasse:glatt",
+      "de": "glatt",
+      "plural": "",
+      "ko": "매끈한, 밋밋한",
+      "example_de": "Die Wand ist ganz glatt.",
+      "example_ko": "벽이 아주 매끈하다.",
+      "source": "선생 작성",
+      "tags": [
+        "B1",
+        "Adjektiv"
+      ],
+      "lemma": "glatt"
+    }
+  ]
 }

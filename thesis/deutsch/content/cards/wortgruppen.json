@@ -1,0 +1,681 @@
+{
+  "deck": "wortgruppen",
+  "title_ko": "낱말 묶음",
+  "cards": [
+    {
+      "id": "wortgruppen:gruesse",
+      "de": "Guten Morgen · Guten Tag · Guten Abend",
+      "plural": "",
+      "ko": "아침 인사 · 낮 인사 · 저녁 인사",
+      "example_de": "Guten Morgen, Frau Meier!",
+      "example_ko": "안녕하세요(아침), 마이어 씨!",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Ausdruck"
+      ],
+      "note_ko": "스위스에서는 Grüezi도 자주 듣는다. 글에서는 Guten Tag."
+    },
+    {
+      "id": "wortgruppen:laender",
+      "de": "Korea · die Schweiz · Deutschland · Frankreich",
+      "plural": "",
+      "ko": "한국 · 스위스 · 독일 · 프랑스",
+      "example_de": "Ich komme aus Korea. Ich wohne in der Schweiz.",
+      "example_ko": "저는 한국에서 왔고 스위스에 삽니다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Name"
+      ],
+      "note_ko": "die Schweiz는 관사와 함께 쓴다: in der Schweiz, aus der Schweiz."
+    },
+    {
+      "id": "wortgruppen:sprachen",
+      "de": "Deutsch · Englisch · Koreanisch · Französisch",
+      "plural": "",
+      "ko": "독일어 · 영어 · 한국어 · 프랑스어",
+      "example_de": "Ich spreche Englisch und ein bisschen Deutsch.",
+      "example_ko": "저는 영어와 독일어를 조금 합니다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Name"
+      ],
+      "note_ko": "언어 이름은 관사 없이 대문자로 쓴다."
+    },
+    {
+      "id": "wortgruppen:zahlen-0-12",
+      "de": "null · eins · zwei · drei · vier · fünf · sechs · sieben · acht · neun · zehn · elf · zwölf",
+      "plural": "",
+      "ko": "0부터 12까지",
+      "example_de": "Das ist die Linie acht.",
+      "example_ko": "이건 8번 노선이다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Zahl"
+      ],
+      "en_hint": "one, two, three … eleven, twelve"
+    },
+    {
+      "id": "wortgruppen:zahlen-13-20",
+      "de": "dreizehn · vierzehn · fünfzehn · sechzehn · siebzehn · achtzehn · neunzehn · zwanzig",
+      "plural": "",
+      "ko": "13부터 20까지",
+      "example_de": "Ich fahre sechzehn Minuten.",
+      "example_ko": "나는 16분 동안 간다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Zahl"
+      ],
+      "en_hint": "thirteen … nineteen",
+      "note_ko": "sechzehn은 sechs의 s가, siebzehn은 sieben의 en이 빠진다."
+    },
+    {
+      "id": "wortgruppen:die-familie",
+      "de": "die Familie",
+      "plural": "die Familien",
+      "ko": "가족",
+      "example_de": "Meine Familie wohnt in Korea.",
+      "example_ko": "우리 가족은 한국에 산다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Nomen"
+      ],
+      "lemma": "die Familie",
+      "en_hint": "family"
+    },
+    {
+      "id": "wortgruppen:die-eltern",
+      "de": "die Eltern",
+      "plural": "die Eltern",
+      "ko": "부모",
+      "example_de": "Die Eltern sind in Bern.",
+      "example_ko": "부모님은 베른에 계신다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Nomen"
+      ],
+      "lemma": "die Eltern",
+      "note_ko": "복수로만 쓴다."
+    },
+    {
+      "id": "wortgruppen:die-mutter",
+      "de": "die Mutter",
+      "plural": "die Mütter",
+      "ko": "어머니",
+      "example_de": "Die Mutter ist Ärztin.",
+      "example_ko": "어머니는 의사다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Nomen"
+      ],
+      "lemma": "die Mutter",
+      "en_hint": "mother"
+    },
+    {
+      "id": "wortgruppen:der-vater",
+      "de": "der Vater",
+      "plural": "die Väter",
+      "ko": "아버지",
+      "example_de": "Der Vater ist Lehrer.",
+      "example_ko": "아버지는 교사다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Nomen"
+      ],
+      "lemma": "der Vater",
+      "en_hint": "father"
+    },
+    {
+      "id": "wortgruppen:die-geschwister",
+      "de": "die Geschwister",
+      "plural": "die Geschwister",
+      "ko": "형제자매",
+      "example_de": "Haben Sie Geschwister?",
+      "example_ko": "형제자매가 있으세요?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Nomen"
+      ],
+      "lemma": "die Geschwister",
+      "note_ko": "복수로만 쓴다."
+    },
+    {
+      "id": "wortgruppen:der-bruder",
+      "de": "der Bruder",
+      "plural": "die Brüder",
+      "ko": "남자 형제",
+      "example_de": "Lukas hat zwei Brüder.",
+      "example_ko": "루카스는 남자 형제가 둘이다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Nomen"
+      ],
+      "lemma": "der Bruder",
+      "en_hint": "brother"
+    },
+    {
+      "id": "wortgruppen:die-schwester",
+      "de": "die Schwester",
+      "plural": "die Schwestern",
+      "ko": "여자 형제",
+      "example_de": "Ich habe eine Schwester.",
+      "example_ko": "나는 여자 형제가 하나 있다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Nomen"
+      ],
+      "lemma": "die Schwester",
+      "en_hint": "sister"
+    },
+    {
+      "id": "wortgruppen:das-kind",
+      "de": "das Kind",
+      "plural": "die Kinder",
+      "ko": "아이",
+      "example_de": "Die Schwester hat ein Kind.",
+      "example_ko": "그 여자 형제는 아이가 하나 있다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Nomen"
+      ],
+      "lemma": "das Kind",
+      "en_hint": "kindergarten"
+    },
+    {
+      "id": "wortgruppen:zahlen-zehner",
+      "de": "zwanzig · dreißig · vierzig · fünfzig · sechzig · siebzig · achtzig · neunzig · hundert",
+      "plural": "",
+      "ko": "20부터 100까지 열 단위",
+      "example_de": "Der Vater ist sechzig.",
+      "example_ko": "아버지는 예순이다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Zahl"
+      ],
+      "note_ko": "dreißig만 -ßig. sechzig, siebzig은 짧아진다."
+    },
+    {
+      "id": "wortgruppen:zahlen-21-99",
+      "de": "einundzwanzig · zweiunddreißig · neunundneunzig",
+      "plural": "",
+      "ko": "21~99: 일의 자리를 먼저",
+      "example_de": "Lukas ist einunddreißig.",
+      "example_ko": "루카스는 서른하나다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Zahl"
+      ],
+      "note_ko": "45는 fünfundvierzig. 5 다음 40. 받아 적을 때 뒤집히기 쉽다."
+    },
+    {
+      "id": "wortgruppen:der-sohn",
+      "de": "der Sohn",
+      "plural": "die Söhne",
+      "ko": "아들",
+      "example_de": "Ihr Sohn ist zwei.",
+      "example_ko": "그녀의 아들은 두 살이다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Nomen"
+      ],
+      "lemma": "der Sohn",
+      "en_hint": "son"
+    },
+    {
+      "id": "wortgruppen:die-tochter",
+      "de": "die Tochter",
+      "plural": "die Töchter",
+      "ko": "딸",
+      "example_de": "Die Tochter studiert in Bern.",
+      "example_ko": "딸은 베른에서 공부한다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Nomen"
+      ],
+      "lemma": "die Tochter",
+      "en_hint": "daughter"
+    },
+    {
+      "id": "wortgruppen:der-mann",
+      "de": "der Mann",
+      "plural": "die Männer",
+      "ko": "남자; 남편",
+      "example_de": "Der Mann ist sechzig.",
+      "example_ko": "그 남자는 예순이다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Nomen"
+      ],
+      "lemma": "der Mann",
+      "en_hint": "man",
+      "note_ko": "mein Mann은 '내 남편'."
+    },
+    {
+      "id": "wortgruppen:die-grosseltern",
+      "de": "die Großeltern",
+      "plural": "die Großeltern",
+      "ko": "조부모",
+      "example_de": "Die Großeltern sind am Wochenende hier.",
+      "example_ko": "조부모님이 주말에 여기 오신다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Nomen"
+      ],
+      "lemma": "die Großeltern",
+      "en_hint": "grandparents"
+    },
+    {
+      "id": "wortgruppen:die-farbe",
+      "de": "die Farbe",
+      "plural": "die Farben",
+      "ko": "색",
+      "example_de": "Welche Farbe hat das Tram?",
+      "example_ko": "트램은 무슨 색이야?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Nomen"
+      ],
+      "lemma": "die Farbe"
+    },
+    {
+      "id": "wortgruppen:farben-1",
+      "de": "rot · blau · grün · gelb",
+      "plural": "",
+      "ko": "빨강 · 파랑 · 초록 · 노랑",
+      "example_de": "Das Münster ist rot.",
+      "example_ko": "대성당은 붉다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Adjektiv"
+      ],
+      "en_hint": "red, blue, green, yellow"
+    },
+    {
+      "id": "wortgruppen:farben-2",
+      "de": "schwarz · weiß · grau · braun",
+      "plural": "",
+      "ko": "검정 · 하양 · 회색 · 갈색",
+      "example_de": "Die Figuren sind schwarz.",
+      "example_ko": "그 조형물들은 검다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Adjektiv"
+      ],
+      "en_hint": "white, grey, brown"
+    },
+    {
+      "id": "wortgruppen:hundert-tausend",
+      "de": "hundert · tausend · eine Million",
+      "plural": "",
+      "ko": "백 · 천 · 백만",
+      "example_de": "Das kostet hundertzwanzig Franken.",
+      "example_ko": "그건 120프랑이다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Zahl"
+      ],
+      "en_hint": "hundred, thousand, million"
+    },
+    {
+      "id": "wortgruppen:euro-cent",
+      "de": "der Euro · der Cent",
+      "plural": "die Euro · die Cent",
+      "ko": "유로 · 센트",
+      "example_de": "Ein Euro hat hundert Cent.",
+      "example_ko": "1유로는 100센트다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Nomen"
+      ],
+      "note_ko": "스위스 돈은 der Franken과 der Rappen. 1프랑 = 100라펜.",
+      "ch_de": "der Franken · der Rappen"
+    },
+    {
+      "id": "wortgruppen:wie-spaet",
+      "de": "Wie spät ist es? · Wie viel Uhr ist es?",
+      "plural": "",
+      "ko": "지금 몇 시예요?",
+      "example_de": "Wie spät ist es? Es ist acht Uhr.",
+      "example_ko": "몇 시예요? 여덟 시예요.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Ausdruck"
+      ]
+    },
+    {
+      "id": "wortgruppen:halb",
+      "de": "halb (halb neun = 8.30 Uhr)",
+      "plural": "",
+      "ko": "반 (다음 시각의 30분 전)",
+      "example_de": "Die Sitzung ist um halb neun.",
+      "example_ko": "회의는 8시 반이다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Ausdruck"
+      ],
+      "en_hint": "half",
+      "note_ko": "halb neun은 8시 30분. 영어 half nine(9시 30분)과 반대다."
+    },
+    {
+      "id": "wortgruppen:viertel",
+      "de": "Viertel nach / Viertel vor",
+      "plural": "",
+      "ko": "~시 15분 / ~시 15분 전",
+      "example_de": "Es ist Viertel nach acht.",
+      "example_ko": "8시 15분이다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Ausdruck"
+      ],
+      "en_hint": "quarter past / quarter to"
+    },
+    {
+      "id": "wortgruppen:minute-stunde",
+      "de": "die Minute / die Stunde",
+      "plural": "die Minuten / die Stunden",
+      "ko": "분 / 시간",
+      "example_de": "Eine Stunde hat sechzig Minuten.",
+      "example_ko": "한 시간은 60분이다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Nomen"
+      ],
+      "en_hint": "minute"
+    },
+    {
+      "id": "wortgruppen:wochentage-1",
+      "de": "der Montag · der Dienstag · der Mittwoch · der Donnerstag",
+      "plural": "die Montage · die Dienstage · die Mittwoche · die Donnerstage",
+      "ko": "월요일 · 화요일 · 수요일 · 목요일",
+      "example_de": "Am Montag arbeite ich.",
+      "example_ko": "월요일에 나는 일한다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Nomen"
+      ],
+      "en_hint": "Monday, Tuesday, Wednesday, Thursday"
+    },
+    {
+      "id": "wortgruppen:wochentage-2",
+      "de": "der Freitag · der Samstag · der Sonntag",
+      "plural": "die Freitage · die Samstage · die Sonntage",
+      "ko": "금요일 · 토요일 · 일요일",
+      "example_de": "Am Sonntag sind viele Geschäfte geschlossen.",
+      "example_ko": "일요일에는 가게가 많이 닫는다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Nomen"
+      ],
+      "en_hint": "Friday, Saturday, Sunday",
+      "note_ko": "독일 북부에서는 Samstag 대신 Sonnabend도 쓴다."
+    },
+    {
+      "id": "wortgruppen:das-wochenende",
+      "de": "das Wochenende",
+      "plural": "die Wochenenden",
+      "ko": "주말",
+      "example_de": "Am Wochenende habe ich Zeit.",
+      "example_ko": "주말에 나는 시간이 있다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Nomen"
+      ],
+      "en_hint": "weekend"
+    },
+    {
+      "id": "wortgruppen:die-woche",
+      "de": "die Woche",
+      "plural": "die Wochen",
+      "ko": "주",
+      "example_de": "Die Woche hat sieben Tage.",
+      "example_ko": "한 주는 7일이다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Nomen"
+      ],
+      "en_hint": "week"
+    },
+    {
+      "id": "wortgruppen:der-tag",
+      "de": "der Tag",
+      "plural": "die Tage",
+      "ko": "날, 낮",
+      "example_de": "Ein Tag hat vierundzwanzig Stunden.",
+      "example_ko": "하루는 24시간이다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Nomen"
+      ],
+      "en_hint": "day"
+    },
+    {
+      "id": "wortgruppen:morgen-vormittag",
+      "de": "der Morgen · der Vormittag",
+      "plural": "die Morgen · die Vormittage",
+      "ko": "아침 · 오전",
+      "example_de": "Am Morgen trinke ich Kaffee.",
+      "example_ko": "아침에 나는 커피를 마신다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Nomen"
+      ],
+      "en_hint": "morning"
+    },
+    {
+      "id": "wortgruppen:mittag-nachmittag",
+      "de": "der Mittag · der Nachmittag",
+      "plural": "die Mittage · die Nachmittage",
+      "ko": "정오 · 오후",
+      "example_de": "Am Nachmittag habe ich eine Sitzung.",
+      "example_ko": "오후에 나는 회의가 있다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Nomen"
+      ]
+    },
+    {
+      "id": "wortgruppen:abend-nacht",
+      "de": "der Abend · die Nacht",
+      "plural": "die Abende · die Nächte",
+      "ko": "저녁 · 밤",
+      "example_de": "Am Abend lerne ich Deutsch.",
+      "example_ko": "저녁에 나는 독일어를 배운다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Nomen"
+      ],
+      "en_hint": "night"
+    },
+    {
+      "id": "wortgruppen:ordinalzahlen",
+      "de": "der erste · der zweite · der dritte · der siebte · der zwanzigste",
+      "plural": "",
+      "ko": "첫째 · 둘째 · 셋째 · 일곱째 · 스무째 (날짜)",
+      "example_de": "Heute ist der zwölfte Oktober.",
+      "example_ko": "오늘은 10월 12일이다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Zahl"
+      ],
+      "note_ko": "19까지 -te, 20부터 -ste. erste, dritte, siebte, achte는 따로 외운다."
+    },
+    {
+      "id": "wortgruppen:der-monat",
+      "de": "der Monat",
+      "plural": "die Monate",
+      "ko": "달, 월",
+      "example_de": "Das Jahr hat zwölf Monate.",
+      "example_ko": "한 해는 열두 달이다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Nomen"
+      ],
+      "en_hint": "month"
+    },
+    {
+      "id": "wortgruppen:monate-winter",
+      "de": "der Dezember · der Januar · der Februar",
+      "plural": "(복수 거의 없음)",
+      "ko": "12월 · 1월 · 2월",
+      "example_de": "Im Januar ist es kalt.",
+      "example_ko": "1월에는 춥다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Nomen"
+      ],
+      "en_hint": "December, January, February"
+    },
+    {
+      "id": "wortgruppen:monate-fruehling",
+      "de": "der März · der April · der Mai",
+      "plural": "(복수 거의 없음)",
+      "ko": "3월 · 4월 · 5월",
+      "example_de": "Die Fasnacht ist im Februar oder März.",
+      "example_ko": "파스나흐트는 2월이나 3월이다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Nomen"
+      ],
+      "en_hint": "March, April, May"
+    },
+    {
+      "id": "wortgruppen:monate-sommer",
+      "de": "der Juni · der Juli · der August",
+      "plural": "(복수 거의 없음)",
+      "ko": "6월 · 7월 · 8월",
+      "example_de": "Im August schwimmen viele im Rhein.",
+      "example_ko": "8월에는 많은 사람이 라인강에서 수영한다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Nomen"
+      ],
+      "en_hint": "June, July, August"
+    },
+    {
+      "id": "wortgruppen:monate-herbst",
+      "de": "der September · der Oktober · der November",
+      "plural": "(복수 거의 없음)",
+      "ko": "9월 · 10월 · 11월",
+      "example_de": "Die Herbstmesse beginnt im Oktober.",
+      "example_ko": "가을 장터는 10월에 시작한다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Nomen"
+      ],
+      "en_hint": "September, October, November"
+    },
+    {
+      "id": "wortgruppen:jahreszeiten",
+      "de": "der Frühling · der Sommer · der Herbst · der Winter",
+      "plural": "(복수 거의 없음)",
+      "ko": "봄 · 여름 · 가을 · 겨울",
+      "example_de": "Im Herbst ist die Herbstmesse.",
+      "example_ko": "가을에는 가을 장터가 열린다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Nomen"
+      ],
+      "en_hint": "summer, winter (Herbst는 harvest와 같은 뿌리)"
+    },
+    {
+      "id": "wortgruppen:jahreszahlen",
+      "de": "1760 = siebzehnhundertsechzig · 2026 = zweitausendsechsundzwanzig",
+      "plural": "",
+      "ko": "연도 읽기: 1999년까지는 백 단위로, 2000년부터는 천 단위로",
+      "example_de": "Hebel ist 1760 in Basel geboren.",
+      "example_ko": "헤벨은 1760년 바젤에서 태어났다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Wortgruppe",
+        "Zahl"
+      ],
+      "note_ko": "연도 앞에 in을 붙이지 않는다: 1760 geboren 또는 im Jahr 1760."
+    }
+  ]
+}

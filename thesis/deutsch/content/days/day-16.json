@@ -1,0 +1,228 @@
+{
+  "id": "day-16",
+  "theme_ko": "ein·eine",
+  "focus_ko": "ein · eine: 처음 말할 때 ein, 다시 말할 때 der",
+  "new_cards": [
+    "a1-alltag:ein",
+    "basel-strasse:der-brunnen",
+    "basel-strasse:die-figur",
+    "basel-strasse:die-maschine",
+    "basel-strasse:sich-bewegen",
+    "basel-strasse:der-kuenstler",
+    "a1-alltag:das-wasser",
+    "a1-alltag:es",
+    "a1-alltag:brauchen"
+  ],
+  "stair": {
+    "source": {
+      "author": "2628 선생",
+      "title": "Der Tinguely-Brunnen",
+      "year": 2026,
+      "license": "own",
+      "url": ""
+    },
+    "layers": [
+      {
+        "level": "A1",
+        "text_de": "Am Theaterplatz ist ein Brunnen. Der Brunnen ist nicht alt. Im Wasser sind Figuren. Die Figuren sind Maschinen. Eine Figur spritzt Wasser, eine andere dreht sich. Alles bewegt sich. Es ist laut. Der Künstler heißt Jean Tinguely. Hier brauche ich viel Zeit. Ich bleibe lange.",
+        "gloss": [
+          {
+            "de": "am Theaterplatz",
+            "ko": "극장 광장에"
+          },
+          {
+            "de": "spritzen",
+            "ko": "(물을) 뿜다"
+          },
+          {
+            "de": "sich drehen",
+            "ko": "돌다"
+          },
+          {
+            "de": "eine andere",
+            "ko": "다른 하나"
+          },
+          {
+            "de": "alles",
+            "ko": "모든 것"
+          },
+          {
+            "de": "laut",
+            "ko": "시끄러운"
+          },
+          {
+            "de": "bleiben",
+            "ko": "머물다"
+          },
+          {
+            "de": "lange",
+            "ko": "오래"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Am Theaterplatz ist ___ Brunnen.",
+            "answer": "ein",
+            "options": [
+              "ein",
+              "eine",
+              "einen"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "물속 조형물들은 무엇인가?",
+            "options": [
+              "기계",
+              "동물",
+              "사람 동상"
+            ],
+            "answer": 0
+          }
+        ]
+      },
+      {
+        "level": "A2",
+        "text_de": "Der Fasnachtsbrunnen am Theaterplatz ist von Jean Tinguely. Er wurde zwischen 1975 und 1977 gebaut. Tinguely hat oft Maschinen gebaut, die nichts Nützliches tun: Sie bewegen sich, machen Lärm und spritzen Wasser. Im Becken stehen mehrere solche Figuren. Viele Leute setzen sich an den Rand und sehen einfach zu. In Basel kann man übrigens aus vielen Brunnen Wasser trinken.",
+        "gloss": [
+          {
+            "de": "nützlich",
+            "ko": "쓸모 있는"
+          },
+          {
+            "de": "der Lärm",
+            "ko": "소음"
+          },
+          {
+            "de": "mehrere",
+            "ko": "여럿의"
+          },
+          {
+            "de": "das Becken",
+            "ko": "수반, 물받이"
+          },
+          {
+            "de": "der Rand",
+            "ko": "가장자리"
+          },
+          {
+            "de": "zusehen",
+            "ko": "지켜보다"
+          },
+          {
+            "de": "übrigens",
+            "ko": "덧붙이자면"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Der Brunnen wurde zwischen 1975 und ___ gebaut.",
+            "answer": "1977",
+            "options": [
+              "1957",
+              "1977",
+              "1997"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "팅겔리 기계의 특징은?",
+            "options": [
+              "쓸모 있는 일을 하지 않는다",
+              "전기를 만든다",
+              "시계 역할을 한다"
+            ],
+            "answer": 0
+          }
+        ]
+      }
+    ],
+    "summit": {
+      "text_de": "",
+      "note_ko": "오늘 꼭대기는 비워 둔다. 원문은 19일째에 그림 형제."
+    }
+  },
+  "ear": {
+    "text_de": "Am Theaterplatz ist ein Brunnen. Im Wasser sind Figuren. Die Figuren sind Maschinen. Alles bewegt sich.",
+    "lang": "de-DE",
+    "rates": [
+      0.75,
+      0.9,
+      1.0
+    ]
+  },
+  "hand": {
+    "situation_ko": "퇴근 뒤 동료 Laura와 극장 광장 분수 앞에서 만나기로 했다. 먼저 와서 메시지를 보낸다.",
+    "prompt_ko": "du체 두 문장.",
+    "model_de": "Hallo Laura, ich bin am Tinguely-Brunnen. Wo bist du?",
+    "chunks": [
+      "Ich bin am …",
+      "Wo bist du?",
+      "Ich brauche noch zehn Minuten."
+    ]
+  },
+  "mix": {
+    "tasks": [
+      {
+        "type": "cloze",
+        "prompt_de": "___ Aussicht ist sehr schön.",
+        "answer": "Die",
+        "options": [
+          "Der",
+          "Das",
+          "Die"
+        ],
+        "from": "day-15",
+        "point_ko": "정관사 die (die Aussicht)"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "「독일어 하세요?」 바른 어순은?",
+        "options": [
+          "Sprechen Sie Deutsch?",
+          "Sie Deutsch sprechen?",
+          "Deutsch Sie sprechen?"
+        ],
+        "answer": 0,
+        "from": "day-10",
+        "point_ko": "예·아니요 질문 (동사가 맨 앞)"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "___ kommen Sie? Ich komme aus Korea.",
+        "answer": "Woher",
+        "options": [
+          "Wo",
+          "Woher",
+          "Wie"
+        ],
+        "from": "day-02",
+        "point_ko": "Woher · Wo 구별"
+      }
+    ]
+  },
+  "illustration": {
+    "scene_ko": "퇴근 뒤 10월 저녁, 연호가 극장 광장 팅겔리 분수 가장자리에 서서 휴대전화로 Laura에게 메시지를 쓴다. 물속 검은 기계 조형물이 물을 뿜고 돈다.",
+    "prompt_en": "A Korean man in his thirties with a work bag stands at the edge of the Tinguely Fountain on Theaterplatz in Basel on an October evening after work and types a message on his phone; in the shallow basin black metal machine sculptures spray water and turn."
+  },
+  "variants": {
+    "junghyun": {
+      "hand": {
+        "situation_ko": "수업 뒤 HGK 친구 Anna와 극장 광장 분수 앞에서 만나기로 했다. 먼저 와서 메시지를 보낸다.",
+        "prompt_ko": "du체 두 문장.",
+        "model_de": "Hallo Anna, ich bin am Tinguely-Brunnen. Wo bist du?",
+        "chunks": [
+          "Ich bin am …",
+          "Wo bist du?",
+          "Ich brauche noch zehn Minuten."
+        ]
+      },
+      "illustration": {
+        "scene_ko": "수업 뒤 10월 저녁, 정현이 포스터 통을 메고 극장 광장 팅겔리 분수 가장자리에서 Anna에게 메시지를 쓴다. 물속 기계 조형물이 물을 뿜고 돈다.",
+        "prompt_en": "A Korean woman in her thirties with a poster tube over her shoulder stands at the edge of the Tinguely Fountain on Theaterplatz in Basel on an October evening after her classes at art school and types a message on her phone; in the shallow basin black metal machine sculptures spray water and turn."
+      }
+    }
+  }
+}

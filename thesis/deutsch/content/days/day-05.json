@@ -1,162 +1,200 @@
 {
- "id": "day-05",
- "theme_ko": "바젤 거리의 글자",
- "new_cards": [
-  "basel-strasse:der-brunnen",
-  "basel-strasse:die-figur",
-  "basel-strasse:die-maschine",
-  "basel-strasse:sich-bewegen",
-  "basel-strasse:der-kuenstler",
-  "basel-strasse:das-theater"
- ],
- "stair": {
-  "source": {
-   "author": "선생",
-   "title": "Der Tinguely-Brunnen",
-   "year": 2026,
-   "license": "own",
-   "url": ""
-  },
-  "layers": [
-   {
-    "level": "A1",
-    "text_de": "Am Theaterplatz ist ein Brunnen. Er ist von Jean Tinguely. Tinguely war ein Künstler aus der Schweiz. Im Brunnen stehen zehn Figuren. Die Figuren sind Maschinen aus Metall. Sie sind schwarz. Sie bewegen sich und spritzen Wasser. Ich esse mein Mittagessen oft hier, mit meiner Kollegin. Wir sitzen am Brunnen und sehen zu.",
-    "gloss": [
-     {
-      "de": "war (sein)",
-      "ko": "…였다"
-     },
-     {
-      "de": "das Metall",
-      "ko": "금속"
-     },
-     {
-      "de": "schwarz",
-      "ko": "검은"
-     },
-     {
-      "de": "spritzen",
-      "ko": "뿜다"
-     },
-     {
-      "de": "zusehen",
-      "ko": "구경하다"
-     }
-    ],
-    "tasks": [
-     {
-      "type": "cloze",
-      "prompt_de": "Im Brunnen stehen zehn ___.",
-      "answer": "Figuren",
-      "options": [
-       "Türme",
-       "Fähren",
-       "Figuren"
-      ]
-     },
-     {
-      "type": "mc",
-      "prompt_ko": "분수의 형상들은 무엇으로 되어 있나?",
-      "options": [
-       "돌",
-       "금속",
-       "나무"
-      ],
-      "answer": 1
-     },
-     {
-      "type": "summary",
-      "prompt_ko": "한 줄로 요약 (독일어 또는 한국어)"
-     }
-    ]
-   },
-   {
-    "level": "A2",
-    "text_de": "Der Tinguely-Brunnen heißt offiziell Fasnachtsbrunnen. Jean Tinguely hat ihn 1977 gebaut. Der Brunnen liegt dort, wo früher die Bühne des alten Stadttheaters war. Seine zehn Figuren sehen ein bisschen aus wie Schauspieler: Jede macht eine andere Bewegung, und alle spielen mit dem Wasser. Im Winter friert der Brunnen manchmal zu, dann hängt Eis an den Maschinen. Das Theater Basel steht gleich daneben. Das Museum Tinguely liegt nicht hier, sondern weiter östlich am Rhein.",
-    "gloss": [
-     {
-      "de": "offiziell",
-      "ko": "공식적으로"
-     },
-     {
-      "de": "die Fasnacht",
-      "ko": "바젤 카니발"
-     },
-     {
-      "de": "die Bühne",
-      "ko": "무대"
-     },
-     {
-      "de": "der Schauspieler",
-      "ko": "배우"
-     },
-     {
-      "de": "die Bewegung",
-      "ko": "움직임"
-     },
-     {
-      "de": "zufrieren",
-      "ko": "얼어붙다"
-     },
-     {
-      "de": "das Eis",
-      "ko": "얼음"
-     },
-     {
-      "de": "gleich daneben",
-      "ko": "바로 옆에"
-     }
-    ],
-    "tasks": [
-     {
-      "type": "cloze",
-      "prompt_de": "Der Brunnen liegt dort, wo früher die ___ des alten Stadttheaters war.",
-      "answer": "Bühne",
-      "options": [
-       "Bühne",
-       "Mauer",
-       "Kirche"
-      ]
-     },
-     {
-      "type": "mc",
-      "prompt_ko": "팅겔리가 분수를 만든 해는?",
-      "options": [
-       "1957",
-       "1997",
-       "1977"
-      ],
-      "answer": 2
-     },
-     {
-      "type": "summary",
-      "prompt_ko": "한 줄로 요약 (독일어 또는 한국어)"
-     }
-    ]
-   }
+  "id": "day-05",
+  "theme_ko": "숫자와 노선",
+  "focus_ko": "0~20 · Welche Linie? · Wie viel?",
+  "new_cards": [
+    "wortgruppen:zahlen-0-12",
+    "wortgruppen:zahlen-13-20",
+    "a1-alltag:die-nummer",
+    "a1-alltag:welch",
+    "a1-alltag:wie-viel",
+    "basel-strasse:die-linie",
+    "basel-strasse:die-tram",
+    "basel-strasse:die-haltestelle",
+    "a1-alltag:der-bus",
+    "basel-strasse:fahren"
   ],
-  "summit": {
-   "text_de": "",
-   "note_ko": "오늘 꼭대기는 비워 둔다. 원문은 7일째에 아돌프 로스."
+  "stair": {
+    "source": {
+      "author": "2628 선생",
+      "title": "Die Linie 8",
+      "year": 2026,
+      "license": "own",
+      "url": ""
+    },
+    "layers": [
+      {
+        "level": "A1",
+        "text_de": "Ich bin an der Haltestelle. Hier fahren Trams und Busse. „Entschuldigung, welche Linie fährt nach Weil am Rhein?“ „Die Linie acht.“ „Danke! Fährt die Acht hier?“ „Ja, hier.“ Ich zähle: eins, zwei, drei, vier, fünf. Da ist die Acht. Das Tram ist grün. Ich fahre nach Weil am Rhein. Das ist in Deutschland.",
+        "gloss": [
+          {
+            "de": "an der Haltestelle",
+            "ko": "정류장에"
+          },
+          {
+            "de": "nach",
+            "ko": "~로 (지명)"
+          },
+          {
+            "de": "fährt",
+            "ko": "(탈것이) 간다. fahren의 er/sie/es 꼴, 모음이 바뀌니 통째로 외운다"
+          },
+          {
+            "de": "zählen",
+            "ko": "세다"
+          },
+          {
+            "de": "die Acht",
+            "ko": "8번 (트램)"
+          },
+          {
+            "de": "grün",
+            "ko": "초록"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Welche ___ fährt nach Weil am Rhein?",
+            "answer": "Linie",
+            "options": [
+              "Linie",
+              "Straße",
+              "Adresse"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "바일 암 라인으로 가는 노선은 몇 번인가?",
+            "options": [
+              "3",
+              "8",
+              "18"
+            ],
+            "answer": 1
+          }
+        ]
+      },
+      {
+        "level": "A2",
+        "text_de": "Die Linie 8 fährt seit Dezember 2014 über die Grenze nach Weil am Rhein in Deutschland. Man steigt in Basel ein und ist ohne Umsteigen in einem anderen Land. Die Trams der BVB, der Basler Verkehrsbetriebe, sind grün. Wer über die Grenze fährt, braucht das richtige Billett. Der Ausweis gehört auch in die Tasche.",
+        "gloss": [
+          {
+            "de": "seit",
+            "ko": "~부터 (지금까지)"
+          },
+          {
+            "de": "einsteigen",
+            "ko": "타다"
+          },
+          {
+            "de": "ohne Umsteigen",
+            "ko": "갈아타지 않고"
+          },
+          {
+            "de": "das Billett",
+            "ko": "승차권 (스위스)"
+          },
+          {
+            "de": "der Ausweis",
+            "ko": "신분증"
+          },
+          {
+            "de": "die Tasche",
+            "ko": "가방, 주머니"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Die Linie 8 fährt seit Dezember ___ nach Weil am Rhein.",
+            "answer": "2014",
+            "options": [
+              "2004",
+              "2014",
+              "2024"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "BVB 트램은 무슨 색인가?",
+            "options": [
+              "초록",
+              "노랑",
+              "빨강"
+            ],
+            "answer": 0
+          }
+        ]
+      }
+    ],
+    "summit": {
+      "text_de": "",
+      "note_ko": "오늘 꼭대기는 비워 둔다. 원문은 7일째에 아돌프 로스."
+    }
+  },
+  "ear": {
+    "text_de": "Welche Linie fährt nach Weil am Rhein? Die Linie acht. Eins, zwei, drei, vier, fünf. Da ist die Acht. Das Tram ist grün.",
+    "lang": "de-DE",
+    "rates": [
+      0.75,
+      0.9,
+      1.0
+    ]
+  },
+  "hand": {
+    "situation_ko": "정류장에서 어느 노선이 바젤 SBB역에 가는지 묻는다.",
+    "prompt_ko": "Sie체 질문 한 문장.",
+    "model_de": "Entschuldigung, welche Linie fährt zum Bahnhof SBB?",
+    "chunks": [
+      "Entschuldigung, …",
+      "Welche Linie fährt …?",
+      "… zum Bahnhof SBB",
+      "Danke!"
+    ]
+  },
+  "mix": {
+    "tasks": [
+      {
+        "type": "mc",
+        "prompt_ko": "「저는 건축가로 일합니다」를 독일어로?",
+        "options": [
+          "Ich arbeite als Architekt.",
+          "Ich arbeite wie Architekt.",
+          "Ich arbeite von Architekt."
+        ],
+        "answer": 0,
+        "from": "day-04",
+        "point_ko": "als + 직업"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Wo ___ Sie?",
+        "answer": "wohnen",
+        "options": [
+          "wohne",
+          "wohnen",
+          "wohnt"
+        ],
+        "from": "day-02",
+        "point_ko": "wohnen 활용 (Sie wohnen)"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "헤어질 때 정중하게 하는 인사는?",
+        "options": [
+          "Guten Morgen!",
+          "Freut mich.",
+          "Auf Wiedersehen!"
+        ],
+        "answer": 2,
+        "from": "day-01",
+        "point_ko": "인사말"
+      }
+    ]
+  },
+  "illustration": {
+    "scene_ko": "바젤 시내 트램 정류장. 연호와 정현이 노선 번호를 세다가 바일 암 라인행 초록색 8번 트램이 들어오는 것을 본다. 낮.",
+    "prompt_en": "Yeon Ho and Jeonghyeon, a Korean couple, stand at a tram stop in Basel and watch a green number 8 tram to Weil am Rhein arrive; other trams and a bus pass, the stop sign shows the line numbers, daytime."
   }
- },
- "ear": {
-  "text_de": "Am Theaterplatz ist ein Brunnen. Er ist von Jean Tinguely. Im Brunnen stehen zehn Figuren. Die Figuren sind Maschinen. Sie bewegen sich und spritzen Wasser.",
-  "lang": "de-DE",
-  "rates": [
-   0.75,
-   0.9,
-   1.0
-  ]
- },
- "hand": {
-  "situation_ko": "퇴근 뒤 정현과 극장 광장에서 만난다. 시간과 장소를 정하는 메시지.",
-  "prompt_ko": "du체 질문 한 문장.",
-  "model_de": "Treffen wir uns um 18 Uhr am Tinguely-Brunnen?",
-  "chunks": [
-   "Treffen wir uns …?",
-   "um 18 Uhr",
-   "am Tinguely-Brunnen"
-  ]
- }
 }

@@ -1,0 +1,357 @@
+{
+  "id": "day-23",
+  "theme_ko": "요일과 하루의 때",
+  "focus_ko": "am Montag · am Abend · morgen",
+  "new_cards": [
+    "wortgruppen:wochentage-1",
+    "wortgruppen:wochentage-2",
+    "wortgruppen:das-wochenende",
+    "wortgruppen:die-woche",
+    "wortgruppen:der-tag",
+    "wortgruppen:morgen-vormittag",
+    "wortgruppen:mittag-nachmittag",
+    "wortgruppen:abend-nacht",
+    "a1-alltag:morgen",
+    "basel-strasse:das-theater",
+    "eigene-saetze:vielen-dank-fuer-heute-abend"
+  ],
+  "stair": {
+    "source": {
+      "author": "2628 선생",
+      "title": "Meine Woche",
+      "year": 2026,
+      "license": "own",
+      "url": ""
+    },
+    "layers": [
+      {
+        "level": "A1",
+        "text_de": "Am Montag, Dienstag und Mittwoch arbeite ich im Büro. Am Donnerstag lerne ich am Abend Deutsch. Am Freitag essen Mario und ich am Mittag zusammen. Am Wochenende ist alles ruhig. Am Sonntag sind die Geschäfte zu. Morgen ist Freitag, und am Abend gehen wir ins Theater.",
+        "gloss": [
+          {
+            "de": "am Montag",
+            "ko": "월요일에"
+          },
+          {
+            "de": "am Abend",
+            "ko": "저녁에"
+          },
+          {
+            "de": "ruhig",
+            "ko": "조용한"
+          },
+          {
+            "de": "das Geschäft",
+            "ko": "가게"
+          },
+          {
+            "de": "zu",
+            "ko": "닫힌"
+          },
+          {
+            "de": "ins Theater",
+            "ko": "극장에"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Am ___ lerne ich am Abend Deutsch.",
+            "answer": "Donnerstag",
+            "options": [
+              "Donnerstag",
+              "Sonntag",
+              "Samstag"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "내일은 무슨 요일인가?",
+            "options": [
+              "목요일",
+              "금요일",
+              "토요일"
+            ],
+            "answer": 1
+          }
+        ]
+      },
+      {
+        "level": "A2",
+        "text_de": "In der Schweiz sind am Sonntag fast alle Geschäfte geschlossen. Wer am Sonntag einkaufen muss, geht oft zum Bahnhof SBB. Dort haben einige Läden auch am Sonntag offen. Am Samstag ist es in der Stadt dagegen voll. Viele erledigen ihre Einkäufe deshalb schon am Freitagabend oder am Samstagmorgen.",
+        "gloss": [
+          {
+            "de": "geschlossen",
+            "ko": "닫힌"
+          },
+          {
+            "de": "einkaufen",
+            "ko": "장을 보다"
+          },
+          {
+            "de": "einige",
+            "ko": "몇몇"
+          },
+          {
+            "de": "offen",
+            "ko": "열린"
+          },
+          {
+            "de": "dagegen",
+            "ko": "반면에"
+          },
+          {
+            "de": "erledigen",
+            "ko": "해치우다, 처리하다"
+          },
+          {
+            "de": "der Einkauf",
+            "ko": "장보기"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "In der Schweiz sind am ___ fast alle Geschäfte geschlossen.",
+            "answer": "Sonntag",
+            "options": [
+              "Sonntag",
+              "Montag",
+              "Samstag"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "일요일에 장을 볼 수 있는 곳으로 글에 나온 것은?",
+            "options": [
+              "바젤 SBB역",
+              "시청",
+              "대성당"
+            ],
+            "answer": 0
+          }
+        ]
+      }
+    ],
+    "summit": {
+      "text_de": "",
+      "note_ko": "오늘 꼭대기는 비워 둔다. 원문은 28일째에 요한 페터 헤벨."
+    }
+  },
+  "ear": {
+    "text_de": "Am Montag arbeite ich im Büro. Am Donnerstag lerne ich am Abend Deutsch. Morgen ist Freitag.",
+    "lang": "de-DE",
+    "rates": [
+      0.75,
+      0.9,
+      1.0
+    ]
+  },
+  "hand": {
+    "situation_ko": "저녁 초대를 받고 헤어지며, 또는 다음 날 메시지로 고맙다고 한다.",
+    "prompt_ko": "Sie체 또는 du체 두 문장.",
+    "model_de": "Vielen Dank für heute Abend. Bis Montag!",
+    "chunks": [
+      "Vielen Dank für …",
+      "heute Abend / am Samstag",
+      "Bis Montag!"
+    ]
+  },
+  "mix": {
+    "tasks": [
+      {
+        "type": "mc",
+        "prompt_ko": "Viertel vor neun은 몇 시인가?",
+        "options": [
+          "9:15",
+          "9:45",
+          "8:45"
+        ],
+        "answer": 2,
+        "from": "day-22",
+        "point_ko": "Viertel vor 시각"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Das Mädchen hat ___ Geld.",
+        "answer": "kein",
+        "options": [
+          "nicht",
+          "kein",
+          "keine"
+        ],
+        "from": "day-19",
+        "point_ko": "kein: 명사 부정"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Er ___ Musik.",
+        "answer": "hört",
+        "options": [
+          "hört",
+          "höre",
+          "hören"
+        ],
+        "from": "day-08",
+        "point_ko": "er + -t"
+      }
+    ]
+  },
+  "illustration": {
+    "scene_ko": "목요일 저녁, 연호가 바젤 집 식탁에서 독일어를 공부한다. 벽의 주간 달력에 월~수 사무실, 금요일 점심 Mario, 금요일 저녁 극장이 적혀 있다.",
+    "prompt_en": "Yeonho, a Korean architect, sits at the kitchen table of his Basel flat on a Thursday evening studying German from an open workbook; on the wall hangs a weekly calendar with Monday to Wednesday marked Büro, Friday noon Mario and Friday evening Theater, and two theatre tickets lie on the table."
+  },
+  "variants": {
+    "junghyun": {
+      "stair": {
+        "layers": [
+          {
+            "level": "A1",
+            "text_de": "Am Montag arbeite ich im Studio. Am Dienstag bin ich in der Siebdruckwerkstatt. Nicole ist auch da. Am Mittwoch habe ich am Nachmittag ein Gespräch mit der Professorin. Am Donnerstag arbeiten Victor und ich im Team. Am Abend lerne ich Deutsch. Am Freitag habe ich Buchbinden. Am Wochenende ist alles ruhig. Am Sonntag sind die Geschäfte zu. Morgen ist Freitag, und am Abend gehen wir ins Theater.",
+            "gloss": [
+              {
+                "de": "am Montag",
+                "ko": "월요일에"
+              },
+              {
+                "de": "am Nachmittag",
+                "ko": "오후에"
+              },
+              {
+                "de": "am Abend",
+                "ko": "저녁에"
+              },
+              {
+                "de": "in der Siebdruckwerkstatt",
+                "ko": "실크스크린 공방에"
+              },
+              {
+                "de": "das Gespräch",
+                "ko": "대화, 면담"
+              },
+              {
+                "de": "mit der Professorin",
+                "ko": "교수님과"
+              },
+              {
+                "de": "im Team",
+                "ko": "팀으로"
+              },
+              {
+                "de": "das Buchbinden",
+                "ko": "북바인딩(제본) 수업"
+              },
+              {
+                "de": "ruhig",
+                "ko": "조용한"
+              },
+              {
+                "de": "das Geschäft",
+                "ko": "가게"
+              },
+              {
+                "de": "zu",
+                "ko": "닫힌"
+              },
+              {
+                "de": "ins Theater",
+                "ko": "극장에"
+              }
+            ],
+            "tasks": [
+              {
+                "type": "cloze",
+                "prompt_de": "Am ___ bin ich in der Siebdruckwerkstatt.",
+                "answer": "Dienstag",
+                "options": [
+                  "Dienstag",
+                  "Donnerstag",
+                  "Sonntag"
+                ]
+              },
+              {
+                "type": "mc",
+                "prompt_ko": "Victor와 팀 작업을 하는 날은?",
+                "options": [
+                  "화요일",
+                  "목요일",
+                  "금요일"
+                ],
+                "answer": 1
+              }
+            ]
+          },
+          {
+            "level": "A2",
+            "text_de": "In der Schweiz sind am Sonntag fast alle Geschäfte geschlossen. Wer am Sonntag einkaufen muss, geht oft zum Bahnhof SBB. Dort haben einige Läden auch am Sonntag offen. Am Samstag ist es in der Stadt dagegen voll. Viele erledigen ihre Einkäufe deshalb schon am Freitagabend oder am Samstagmorgen.",
+            "gloss": [
+              {
+                "de": "geschlossen",
+                "ko": "닫힌"
+              },
+              {
+                "de": "einkaufen",
+                "ko": "장을 보다"
+              },
+              {
+                "de": "einige",
+                "ko": "몇몇"
+              },
+              {
+                "de": "offen",
+                "ko": "열린"
+              },
+              {
+                "de": "dagegen",
+                "ko": "반면에"
+              },
+              {
+                "de": "erledigen",
+                "ko": "해치우다, 처리하다"
+              },
+              {
+                "de": "der Einkauf",
+                "ko": "장보기"
+              }
+            ],
+            "tasks": [
+              {
+                "type": "cloze",
+                "prompt_de": "In der Schweiz sind am ___ fast alle Geschäfte geschlossen.",
+                "answer": "Sonntag",
+                "options": [
+                  "Sonntag",
+                  "Montag",
+                  "Samstag"
+                ]
+              },
+              {
+                "type": "mc",
+                "prompt_ko": "일요일에 장을 볼 수 있는 곳으로 글에 나온 것은?",
+                "options": [
+                  "바젤 SBB역",
+                  "시청",
+                  "대성당"
+                ],
+                "answer": 0
+              }
+            ]
+          }
+        ]
+      },
+      "ear": {
+        "text_de": "Am Montag arbeite ich im Studio. Am Donnerstag arbeiten Victor und ich im Team. Morgen ist Freitag.",
+        "lang": "de-DE",
+        "rates": [
+          0.75,
+          0.9,
+          1.0
+        ]
+      },
+      "illustration": {
+        "scene_ko": "화요일 오전, 정현이 HGK 드라이슈피츠 캠퍼스의 실크스크린 공방에서 스퀴지를 당기고, 옆에서 Nicole이 막 찍은 포스터를 펼친다. 벽에 한 주 계획표가 붙어 있다.",
+        "prompt_en": "On a Tuesday morning Jeonghyeon, a Korean graphic design student, pulls a squeegee across a silkscreen frame in the print workshop of the HGK on the Dreispitz campus in Basel, while her friend Nicole lays out freshly printed posters to dry; a weekly plan pinned to the wall lists studio, print workshop, talk with the professor, team work and bookbinding."
+      }
+    }
+  }
+}

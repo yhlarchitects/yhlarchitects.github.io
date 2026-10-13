@@ -1,0 +1,224 @@
+{
+  "id": "day-28",
+  "theme_ko": "복습 · 큰 수와 시간",
+  "focus_ko": "복습: 큰 수 · 시간 · nicht und kein",
+  "new_cards": [
+    "a1-alltag:die-sonne",
+    "a1-alltag:lang",
+    "a1-alltag:schnell",
+    "a1-alltag:das-wetter",
+    "a1-alltag:der-mensch",
+    "a1-alltag:bald",
+    "a1-alltag:oft",
+    "a1-alltag:nie",
+    "a1-alltag:dauern"
+  ],
+  "stair": {
+    "source": {
+      "author": "Johann Peter Hebel",
+      "title": "Die Planeten (Fortsetzung)",
+      "year": 1811,
+      "license": "public-domain",
+      "url": "https://de.wikisource.org/wiki/Die_Planeten_(Fortsetzung_1)"
+    },
+    "layers": [
+      {
+        "level": "A1",
+        "text_de": "Die Sonne ist sehr groß, die Erde ist klein. Auf der Erde hat ein Jahr 365 Tage. Uranus ist weit weg von der Sonne. Dort ist ein Jahr sehr lang: etwa 84 Erdjahre. Ein Mensch lebt oft nicht so lang! Das Wetter dort ist nie warm. Das Licht ist sehr schnell, aber es braucht auch Zeit. Von der Sonne bis zur Erde dauert es etwa acht Minuten.",
+        "gloss": [
+          {
+            "de": "die Erde",
+            "ko": "지구"
+          },
+          {
+            "de": "auf der Erde",
+            "ko": "지구에서"
+          },
+          {
+            "de": "von der Sonne",
+            "ko": "태양에서"
+          },
+          {
+            "de": "weit weg",
+            "ko": "멀리"
+          },
+          {
+            "de": "etwa",
+            "ko": "약"
+          },
+          {
+            "de": "das Erdjahr",
+            "ko": "지구의 한 해"
+          },
+          {
+            "de": "warm",
+            "ko": "따뜻한"
+          },
+          {
+            "de": "das Licht",
+            "ko": "빛"
+          },
+          {
+            "de": "bis zur Erde",
+            "ko": "지구까지"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Auf dem Uranus ist ein Jahr sehr ___.",
+            "answer": "lang",
+            "options": [
+              "lang",
+              "kurz",
+              "schnell"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "햇빛이 지구까지 오는 데 걸리는 시간은?",
+            "options": [
+              "약 8초",
+              "약 8분",
+              "약 8시간"
+            ],
+            "answer": 1
+          }
+        ]
+      },
+      {
+        "level": "A2",
+        "text_de": "Johann Peter Hebel hat 1811 auch über die Planeten geschrieben. Er rechnet für seine Leser: Wenn auf der Sonne jemand eine Kanone abschießt, wie lange fliegt die Kugel? Bis zum Merkur etwa 10 Jahre, bis zur Erde 25 Jahre, bis zum Uranus 479 Jahre. Mit diesen Zahlen will Hebel zeigen, wie groß der Himmel ist. Heute weiß man: Ein Jahr auf dem Uranus dauert etwa 84 Erdjahre. Hebel schrieb 83. Das ist sehr nah.",
+        "gloss": [
+          {
+            "de": "rechnen",
+            "ko": "계산하다"
+          },
+          {
+            "de": "der Leser",
+            "ko": "독자"
+          },
+          {
+            "de": "die Kanone",
+            "ko": "대포"
+          },
+          {
+            "de": "abschießen",
+            "ko": "쏘다"
+          },
+          {
+            "de": "die Kugel",
+            "ko": "포탄, 공"
+          },
+          {
+            "de": "der Himmel",
+            "ko": "하늘"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Bis zur Erde fliegt die Kugel etwa ___ Jahre.",
+            "answer": "25",
+            "options": [
+              "10",
+              "25",
+              "479"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "헤벨이 숫자를 늘어놓은 까닭은?",
+            "options": [
+              "하늘이 얼마나 큰지 보여 주려고",
+              "대포를 팔려고",
+              "달력을 고치려고"
+            ],
+            "answer": 0
+          }
+        ]
+      }
+    ],
+    "summit": {
+      "text_de": "Ein Jahr auf diesem Planeten währt so lang als bey uns 83 Jahre oder ein langes Menschenleben, und ein hundertjähriger Calender thut daselbst 8300 Jahre lang gut.",
+      "note_ko": "요한 페터 헤벨, 「행성들」 이어지는 글(『라인 지방 가정의 벗 보물상자』, 튀빙겐 1811) 가운데 천왕성의 한 해를 말하는 한 문장. 옛 철자(bey, Calender, thut) 그대로."
+    }
+  },
+  "ear": {
+    "text_de": "Die Sonne ist sehr groß. Auf der Erde hat ein Jahr dreihundertfünfundsechzig Tage. Auf dem Uranus ist ein Jahr sehr lang.",
+    "lang": "de-DE",
+    "rates": [
+      0.75,
+      0.9,
+      1.0
+    ]
+  },
+  "hand": {
+    "situation_ko": "사무실에서 Aaron이 오늘 바젤 날씨를 묻는다.",
+    "prompt_ko": "한두 문장.",
+    "model_de": "Heute ist das Wetter schön, die Sonne scheint.",
+    "chunks": [
+      "Das Wetter ist …",
+      "Die Sonne scheint.",
+      "Wie lange dauert …?"
+    ]
+  },
+  "mix": {
+    "tasks": [
+      {
+        "type": "mc",
+        "prompt_ko": "스위스에서 자전거(das Fahrrad)를 부르는 말은?",
+        "options": [
+          "Perron",
+          "Billett",
+          "Velo"
+        ],
+        "answer": 2,
+        "from": "day-27",
+        "point_ko": "스위스 말 Velo"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Eine Woche hat sieben ___.",
+        "answer": "Tage",
+        "options": [
+          "Tage",
+          "Stunden",
+          "Minuten"
+        ],
+        "from": "day-23",
+        "point_ko": "die Woche · der Tag"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Am Samstag ist ___ Familie hier.",
+        "answer": "meine",
+        "options": [
+          "mein",
+          "meine",
+          "dein"
+        ],
+        "from": "day-13",
+        "point_ko": "mein · meine"
+      }
+    ]
+  },
+  "illustration": {
+    "scene_ko": "1811년 무렵 밤, 요한 페터 헤벨이 촛불 켠 책상에서 행성 이야기를 쓴다. 종이에 태양과 지구, 멀리 천왕성이 그려져 있다.",
+    "prompt_en": "Around 1811, at night, Johann Peter Hebel sits at a wooden writing desk by candlelight, writing about the planets; on the paper beside him is a hand-drawn diagram of the sun, the small earth and distant Uranus."
+  },
+  "variants": {
+    "junghyun": {
+      "hand": {
+        "situation_ko": "HGK 친구 Anna가 오늘 바젤 날씨를 묻는다.",
+        "prompt_ko": "한두 문장.",
+        "model_de": "Heute ist das Wetter schön, die Sonne scheint.",
+        "chunks": [
+          "Das Wetter ist …",
+          "Die Sonne scheint.",
+          "Wie lange dauert …?"
+        ]
+      }
+    }
+  }
+}

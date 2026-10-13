@@ -1,0 +1,195 @@
+{
+  "id": "day-12",
+  "theme_ko": "21부터 100까지와 나이",
+  "focus_ko": "21~100: 일의 자리 먼저 · Wie alt sind Sie?",
+  "new_cards": [
+    "wortgruppen:zahlen-zehner",
+    "wortgruppen:zahlen-21-99",
+    "a1-alltag:das-alter",
+    "basel-strasse:das-jahr",
+    "wortgruppen:der-sohn",
+    "wortgruppen:die-tochter",
+    "a1-alltag:viel",
+    "wortgruppen:der-mann",
+    "a1-alltag:leben",
+    "a1-alltag:dort"
+  ],
+  "stair": {
+    "source": {
+      "author": "2628 선생",
+      "title": "Wie alt?",
+      "year": 2026,
+      "license": "own",
+      "url": ""
+    },
+    "layers": [
+      {
+        "level": "A1",
+        "text_de": "Frau Bürgin wohnt hier im Haus. Sie ist fünfundvierzig Jahre alt. Ihr Mann ist neunundvierzig. Der Sohn ist zwölf, die Tochter ist sieben. Die Großeltern leben in Bern. Der Großvater ist dreiundachtzig, die Großmutter ist achtzig. Dort ist viel Platz für die Kinder.",
+        "gloss": [
+          {
+            "de": "ihr Mann",
+            "ko": "그녀의 남편"
+          },
+          {
+            "de": "die Großeltern",
+            "ko": "조부모"
+          },
+          {
+            "de": "der Großvater",
+            "ko": "할아버지"
+          },
+          {
+            "de": "die Großmutter",
+            "ko": "할머니"
+          },
+          {
+            "de": "der Platz",
+            "ko": "자리, 공간"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Der Sohn ist ___, die Tochter ist sieben.",
+            "answer": "zwölf",
+            "options": [
+              "zwölf",
+              "zwanzig",
+              "zwei"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "할아버지는 몇 살인가?",
+            "options": [
+              "38",
+              "83",
+              "93"
+            ],
+            "answer": 1
+          }
+        ]
+      },
+      {
+        "level": "A2",
+        "text_de": "Schweizer Handynummern beginnen mit null sieben, zum Beispiel null sieben neun. Man sagt sie oft in Gruppen: zuerst drei Ziffern, dann noch einmal drei, dann zwei und zwei. Bei Zahlen über zwanzig sagt man auf Deutsch zuerst die Einer: Fünfundvierzig ist fünf und vierzig. Beim Mitschreiben passiert hier leicht ein Fehler. Darum hilft die Frage: „Können Sie das bitte wiederholen?“",
+        "gloss": [
+          {
+            "de": "die Ziffer",
+            "ko": "숫자 한 자리"
+          },
+          {
+            "de": "die Gruppe",
+            "ko": "묶음"
+          },
+          {
+            "de": "der Einer",
+            "ko": "일의 자리"
+          },
+          {
+            "de": "mitschreiben",
+            "ko": "받아 적다"
+          },
+          {
+            "de": "passieren",
+            "ko": "일어나다"
+          },
+          {
+            "de": "der Fehler",
+            "ko": "실수"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Schweizer Handynummern beginnen mit null ___.",
+            "answer": "sieben",
+            "options": [
+              "sieben",
+              "eins",
+              "vier"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "45를 독일어로 말할 때 먼저 말하는 것은?",
+            "options": [
+              "5",
+              "40",
+              "4"
+            ],
+            "answer": 0
+          }
+        ]
+      }
+    ],
+    "summit": {
+      "text_de": "",
+      "note_ko": "오늘 꼭대기는 비워 둔다. 원문은 14일째에 요한 페터 헤벨."
+    }
+  },
+  "ear": {
+    "text_de": "Frau Bürgin ist fünfundvierzig Jahre alt. Ihr Mann ist neunundvierzig. Der Großvater ist dreiundachtzig.",
+    "lang": "de-DE",
+    "rates": [
+      0.75,
+      0.9,
+      1.0
+    ]
+  },
+  "hand": {
+    "situation_ko": "전화번호를 받아 적다 놓쳤다. 들은 앞자리를 되말하고 나머지를 묻는다.",
+    "prompt_ko": "공손하게 짧게.",
+    "model_de": "Null sieben neun, und dann? Langsam, bitte.",
+    "chunks": [
+      "Null sieben …, und dann?",
+      "Langsam, bitte.",
+      "Wie alt sind Sie?"
+    ]
+  },
+  "illustration": {
+    "scene_ko": "오후, 바젤 아파트 계단실. 이웃 Frau Bürgin이 남편, 열두 살 아들, 일곱 살 딸과 함께 계단을 올라온다.",
+    "prompt_en": "Afternoon in the stairwell of an apartment building in Basel. The neighbour Frau Bürgin, a woman of about forty five, comes up the stairs with her husband, their twelve year old son and their seven year old daughter."
+  },
+  "mix": {
+    "tasks": [
+      {
+        "type": "cloze",
+        "prompt_de": "___ du Geschwister?",
+        "answer": "Hast",
+        "options": [
+          "Habe",
+          "Hat",
+          "Hast"
+        ],
+        "from": "day-11",
+        "point_ko": "haben 활용 (du hast)"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "'그들은 바젤에 산다'를 독일어로?",
+        "options": [
+          "Sie wohnt in Basel.",
+          "Sie wohnen in Basel.",
+          "Sie wohnst in Basel."
+        ],
+        "answer": 1,
+        "from": "day-09",
+        "point_ko": "sie(그들) + -en"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Welche Linie ___ nach Weil am Rhein?",
+        "answer": "fährt",
+        "options": [
+          "fährt",
+          "fahren",
+          "fahre"
+        ],
+        "from": "day-05",
+        "point_ko": "Welche Linie fährt …?"
+      }
+    ]
+  }
+}

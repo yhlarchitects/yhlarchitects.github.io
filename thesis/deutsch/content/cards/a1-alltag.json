@@ -1,0 +1,2845 @@
+{
+  "deck": "a1-alltag",
+  "title_ko": "A1 생활 낱말",
+  "cards": [
+    {
+      "id": "a1-alltag:hallo",
+      "de": "hallo",
+      "plural": "",
+      "ko": "안녕 (가벼운 인사)",
+      "example_de": "Hallo, ich bin Yeon Ho.",
+      "example_ko": "안녕, 나는 연호야.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Ausdruck"
+      ],
+      "lemma": "hallo",
+      "en_hint": "hello"
+    },
+    {
+      "id": "a1-alltag:tschuess",
+      "de": "tschüss",
+      "plural": "",
+      "ko": "안녕 (헤어질 때, 가볍게)",
+      "example_de": "Tschüss, bis morgen!",
+      "example_ko": "안녕, 내일 봐!",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Ausdruck"
+      ],
+      "lemma": "tschüss"
+    },
+    {
+      "id": "a1-alltag:auf-wiedersehen",
+      "de": "auf Wiedersehen",
+      "plural": "",
+      "ko": "안녕히 가세요 (정중하게)",
+      "example_de": "Danke, auf Wiedersehen!",
+      "example_ko": "감사합니다, 안녕히 계세요!",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Ausdruck"
+      ],
+      "lemma": "auf Wiedersehen"
+    },
+    {
+      "id": "a1-alltag:heissen",
+      "de": "heißen (ich heiße, Sie heißen)",
+      "plural": "",
+      "ko": "~라고 불리다, 이름이 ~이다",
+      "example_de": "Wie heißen Sie? Ich heiße Jeonghyeon.",
+      "example_ko": "성함이 어떻게 되세요? 저는 정현입니다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "heißen"
+    },
+    {
+      "id": "a1-alltag:sein",
+      "de": "sein (ich bin, du bist, er ist, wir sind, Sie sind)",
+      "plural": "",
+      "ko": "~이다, 있다",
+      "example_de": "Ich bin Architekt. Sind Sie Frau Meier?",
+      "example_ko": "저는 건축가입니다. 마이어 씨세요?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "sein",
+      "note_ko": "가장 불규칙한 동사. 표째로 외운다."
+    },
+    {
+      "id": "a1-alltag:sie-hoeflich",
+      "de": "Sie",
+      "plural": "",
+      "ko": "당신 (높임, 늘 대문자)",
+      "example_de": "Und Sie? Woher kommen Sie?",
+      "example_ko": "그럼 당신은요? 어디서 오셨어요?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Pronomen"
+      ],
+      "lemma": "Sie",
+      "note_ko": "문장 가운데서도 대문자. 소문자 sie는 그녀·그들."
+    },
+    {
+      "id": "a1-alltag:der-vorname",
+      "de": "der Vorname",
+      "plural": "die Vornamen",
+      "ko": "이름 (성 아닌 이름)",
+      "example_de": "Mein Vorname ist Yeon Ho.",
+      "example_ko": "제 이름은 연호입니다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "der Vorname"
+    },
+    {
+      "id": "a1-alltag:der-familienname",
+      "de": "der Familienname",
+      "plural": "die Familiennamen",
+      "ko": "성",
+      "example_de": "Mein Familienname ist Lee.",
+      "example_ko": "제 성은 이입니다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "der Familienname",
+      "en_hint": "family name"
+    },
+    {
+      "id": "a1-alltag:kommen",
+      "de": "kommen (ich komme)",
+      "plural": "",
+      "ko": "오다",
+      "example_de": "Ich komme aus Korea.",
+      "example_ko": "저는 한국에서 왔습니다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "kommen",
+      "en_hint": "come"
+    },
+    {
+      "id": "a1-alltag:woher",
+      "de": "woher",
+      "plural": "",
+      "ko": "어디에서",
+      "example_de": "Woher kommen Sie?",
+      "example_ko": "어디에서 오셨어요?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Fragewort"
+      ],
+      "lemma": "woher"
+    },
+    {
+      "id": "a1-alltag:wo",
+      "de": "wo",
+      "plural": "",
+      "ko": "어디에",
+      "example_de": "Wo wohnen Sie? In Basel.",
+      "example_ko": "어디 사세요? 바젤에요.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Fragewort"
+      ],
+      "lemma": "wo",
+      "note_ko": "wo는 where. 영어 who(누구)는 wer."
+    },
+    {
+      "id": "a1-alltag:wohnen",
+      "de": "wohnen (ich wohne)",
+      "plural": "",
+      "ko": "살다, 거주하다",
+      "example_de": "Ich wohne in Basel.",
+      "example_ko": "저는 바젤에 삽니다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "wohnen"
+    },
+    {
+      "id": "a1-alltag:das-land",
+      "de": "das Land",
+      "plural": "die Länder",
+      "ko": "나라; 시골",
+      "example_de": "Die Schweiz ist ein Land in Europa.",
+      "example_ko": "스위스는 유럽에 있는 나라다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "das Land",
+      "en_hint": "land"
+    },
+    {
+      "id": "a1-alltag:die-strasse",
+      "de": "die Straße",
+      "plural": "die Straßen",
+      "ko": "거리, 길",
+      "example_de": "Die Straße ist ruhig.",
+      "example_ko": "그 길은 조용하다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "die Straße",
+      "en_hint": "street",
+      "note_ko": "스위스 표기는 Strasse. 거리 이름에 그대로 쓴다: Bündnerstrasse."
+    },
+    {
+      "id": "a1-alltag:die-adresse",
+      "de": "die Adresse",
+      "plural": "die Adressen",
+      "ko": "주소",
+      "example_de": "Wie ist Ihre Adresse?",
+      "example_ko": "주소가 어떻게 되세요?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "die Adresse",
+      "en_hint": "address"
+    },
+    {
+      "id": "a1-alltag:hier",
+      "de": "hier",
+      "plural": "",
+      "ko": "여기",
+      "example_de": "Ich wohne hier.",
+      "example_ko": "저는 여기 삽니다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adverb"
+      ],
+      "lemma": "hier",
+      "en_hint": "here"
+    },
+    {
+      "id": "a1-alltag:der-buchstabe",
+      "de": "der Buchstabe",
+      "plural": "die Buchstaben",
+      "ko": "글자, 철자",
+      "example_de": "Das Wort hat fünf Buchstaben.",
+      "example_ko": "그 낱말은 다섯 글자다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "der Buchstabe"
+    },
+    {
+      "id": "a1-alltag:buchstabieren",
+      "de": "buchstabieren (ich buchstabiere)",
+      "plural": "",
+      "ko": "철자를 하나씩 말하다",
+      "example_de": "Können Sie das bitte buchstabieren?",
+      "example_ko": "철자를 불러 주시겠어요?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "buchstabieren"
+    },
+    {
+      "id": "a1-alltag:schreiben",
+      "de": "schreiben (ich schreibe)",
+      "plural": "",
+      "ko": "쓰다",
+      "example_de": "Wie schreibt man das?",
+      "example_ko": "그거 어떻게 써요?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "schreiben"
+    },
+    {
+      "id": "a1-alltag:wie",
+      "de": "wie",
+      "plural": "",
+      "ko": "어떻게",
+      "example_de": "Wie heißen Sie?",
+      "example_ko": "성함이 어떻게 되세요?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Fragewort"
+      ],
+      "lemma": "wie"
+    },
+    {
+      "id": "a1-alltag:das-wort",
+      "de": "das Wort",
+      "plural": "die Wörter",
+      "ko": "낱말",
+      "example_de": "Das Wort ist neu für mich.",
+      "example_ko": "그 낱말은 나에게 새롭다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "das Wort",
+      "en_hint": "word"
+    },
+    {
+      "id": "a1-alltag:wiederholen",
+      "de": "wiederholen (ich wiederhole)",
+      "plural": "",
+      "ko": "되풀이하다, 다시 말하다",
+      "example_de": "Können Sie das bitte wiederholen?",
+      "example_ko": "다시 한 번 말씀해 주시겠어요?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "wiederholen"
+    },
+    {
+      "id": "a1-alltag:bitte",
+      "de": "bitte",
+      "plural": "",
+      "ko": "~해 주세요 (부탁); 천만에요",
+      "example_de": "Langsam, bitte.",
+      "example_ko": "천천히 부탁합니다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Ausdruck"
+      ],
+      "lemma": "bitte"
+    },
+    {
+      "id": "a1-alltag:verstehen",
+      "de": "verstehen (ich verstehe)",
+      "plural": "",
+      "ko": "이해하다, 알아듣다",
+      "example_de": "Ich verstehe das nicht.",
+      "example_ko": "그건 못 알아듣겠어요.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "verstehen"
+    },
+    {
+      "id": "a1-alltag:die-entschuldigung",
+      "de": "die Entschuldigung",
+      "plural": "die Entschuldigungen",
+      "ko": "사과; 실례합니다",
+      "example_de": "Entschuldigung, wie bitte?",
+      "example_ko": "실례지만, 뭐라고 하셨어요?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "die Entschuldigung"
+    },
+    {
+      "id": "a1-alltag:der-beruf",
+      "de": "der Beruf",
+      "plural": "die Berufe",
+      "ko": "직업",
+      "example_de": "Was sind Sie von Beruf?",
+      "example_ko": "직업이 무엇인가요?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "der Beruf"
+    },
+    {
+      "id": "a1-alltag:arbeiten",
+      "de": "arbeiten (ich arbeite, er arbeitet)",
+      "plural": "",
+      "ko": "일하다",
+      "example_de": "Ich arbeite in Basel.",
+      "example_ko": "저는 바젤에서 일합니다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "arbeiten"
+    },
+    {
+      "id": "a1-alltag:sprechen",
+      "de": "sprechen (ich spreche)",
+      "plural": "",
+      "ko": "말하다",
+      "example_de": "Ich spreche Koreanisch und Englisch.",
+      "example_ko": "저는 한국어와 영어를 합니다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "sprechen",
+      "en_hint": "speak",
+      "note_ko": "er spricht는 11월 불규칙 동사에서."
+    },
+    {
+      "id": "a1-alltag:die-sprache",
+      "de": "die Sprache",
+      "plural": "die Sprachen",
+      "ko": "언어",
+      "example_de": "Welche Sprachen sprechen Sie?",
+      "example_ko": "어떤 언어를 하세요?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "die Sprache"
+    },
+    {
+      "id": "a1-alltag:lernen",
+      "de": "lernen (ich lerne)",
+      "plural": "",
+      "ko": "배우다",
+      "example_de": "Ich lerne Deutsch.",
+      "example_ko": "저는 독일어를 배웁니다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "lernen",
+      "en_hint": "learn"
+    },
+    {
+      "id": "a1-alltag:was",
+      "de": "was",
+      "plural": "",
+      "ko": "무엇",
+      "example_de": "Was sind Sie von Beruf?",
+      "example_ko": "직업이 무엇인가요?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Fragewort"
+      ],
+      "lemma": "was",
+      "en_hint": "what"
+    },
+    {
+      "id": "a1-alltag:ein-bisschen",
+      "de": "ein bisschen",
+      "plural": "",
+      "ko": "조금",
+      "example_de": "Ich spreche ein bisschen Deutsch.",
+      "example_ko": "저는 독일어를 조금 합니다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Ausdruck"
+      ],
+      "lemma": "ein bisschen",
+      "en_hint": "a bit"
+    },
+    {
+      "id": "a1-alltag:die-nummer",
+      "de": "die Nummer",
+      "plural": "die Nummern",
+      "ko": "번호",
+      "example_de": "Welche Nummer hat das Tram?",
+      "example_ko": "그 트램은 몇 번이에요?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "die Nummer",
+      "en_hint": "number"
+    },
+    {
+      "id": "a1-alltag:welch",
+      "de": "welch- (welcher, welche, welches)",
+      "plural": "",
+      "ko": "어느, 어떤",
+      "example_de": "Welche Linie ist das?",
+      "example_ko": "이건 몇 번 노선이에요?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Fragewort"
+      ],
+      "lemma": "welch-",
+      "en_hint": "which"
+    },
+    {
+      "id": "a1-alltag:wie-viel",
+      "de": "wie viel",
+      "plural": "",
+      "ko": "얼마나 (양·값)",
+      "example_de": "Wie viel kostet das?",
+      "example_ko": "그거 얼마예요?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Fragewort"
+      ],
+      "lemma": "wie viel"
+    },
+    {
+      "id": "a1-alltag:der-bus",
+      "de": "der Bus",
+      "plural": "die Busse",
+      "ko": "버스",
+      "example_de": "Der Bus ist heute voll.",
+      "example_ko": "버스가 오늘 꽉 찼다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "der Bus",
+      "en_hint": "bus"
+    },
+    {
+      "id": "a1-alltag:du",
+      "de": "du (du bist, du kommst)",
+      "plural": "",
+      "ko": "너 (친한 사이)",
+      "example_de": "Woher kommst du?",
+      "example_ko": "너는 어디서 왔어?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Grammatik",
+        "Pronomen"
+      ],
+      "note_ko": "동료·학생끼리는 du. 처음 보는 어른·관청에는 Sie. 동사 끝은 -st."
+    },
+    {
+      "id": "a1-alltag:dein",
+      "de": "dein / deine",
+      "plural": "",
+      "ko": "너의",
+      "example_de": "Ist das dein Handy?",
+      "example_ko": "이거 네 휴대전화야?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Pronomen"
+      ],
+      "lemma": "dein"
+    },
+    {
+      "id": "a1-alltag:der-freund",
+      "de": "der Freund",
+      "plural": "die Freunde",
+      "ko": "친구; 남자 친구",
+      "example_de": "Das ist Lukas, ein Freund.",
+      "example_ko": "이쪽은 친구 루카스야.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "der Freund",
+      "en_hint": "friend",
+      "note_ko": "die Freundin(A2)은 여자 친구 또는 애인. 문맥으로 구별한다."
+    },
+    {
+      "id": "a1-alltag:der-herr",
+      "de": "der Herr",
+      "plural": "die Herren",
+      "ko": "~씨 (남성), 신사",
+      "example_de": "Guten Tag, Herr Huber.",
+      "example_ko": "안녕하세요, 후버 씨.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "der Herr"
+    },
+    {
+      "id": "a1-alltag:die-frau",
+      "de": "die Frau",
+      "plural": "die Frauen",
+      "ko": "여자, 부인; ~씨 (여성)",
+      "example_de": "Guten Tag, Frau Meier.",
+      "example_ko": "안녕하세요, 마이어 씨.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "die Frau"
+    },
+    {
+      "id": "a1-alltag:gut",
+      "de": "gut",
+      "plural": "",
+      "ko": "좋은, 잘",
+      "example_de": "Wie geht's? Gut, danke.",
+      "example_ko": "어떻게 지내? 잘 지내, 고마워.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adjektiv"
+      ],
+      "lemma": "gut",
+      "en_hint": "good"
+    },
+    {
+      "id": "a1-alltag:danke",
+      "de": "danke",
+      "plural": "",
+      "ko": "고마워요",
+      "example_de": "Danke, das ist nett.",
+      "example_ko": "고마워요, 친절하시네요.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Ausdruck"
+      ],
+      "lemma": "danke",
+      "en_hint": "thanks"
+    },
+    {
+      "id": "a1-alltag:ja",
+      "de": "ja",
+      "plural": "",
+      "ko": "네, 응",
+      "example_de": "Ja, ich komme.",
+      "example_ko": "응, 갈게.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Ausdruck"
+      ],
+      "lemma": "ja",
+      "en_hint": "yes"
+    },
+    {
+      "id": "a1-alltag:nein",
+      "de": "nein",
+      "plural": "",
+      "ko": "아니요",
+      "example_de": "Nein, ich bin Jeonghyeon.",
+      "example_ko": "아니요, 저는 정현이에요.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Ausdruck"
+      ],
+      "lemma": "nein"
+    },
+    {
+      "id": "a1-alltag:sehen",
+      "de": "sehen (ich sehe, er sieht)",
+      "plural": "",
+      "ko": "보다",
+      "example_de": "Ich sehe das Münster.",
+      "example_ko": "나는 대성당을 본다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "sehen",
+      "en_hint": "see"
+    },
+    {
+      "id": "a1-alltag:sehr",
+      "de": "sehr",
+      "plural": "",
+      "ko": "매우",
+      "example_de": "Das Haus ist sehr alt.",
+      "example_ko": "그 집은 아주 오래됐다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adverb"
+      ],
+      "lemma": "sehr"
+    },
+    {
+      "id": "a1-alltag:aber",
+      "de": "aber",
+      "plural": "",
+      "ko": "그러나",
+      "example_de": "Das Haus ist alt, aber schön.",
+      "example_ko": "그 집은 오래됐지만 아름답다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Konjunktion"
+      ],
+      "lemma": "aber"
+    },
+    {
+      "id": "a1-alltag:schoen",
+      "de": "schön",
+      "plural": "",
+      "ko": "아름다운, 좋은",
+      "example_de": "Die Fassade ist schön.",
+      "example_ko": "그 파사드는 아름답다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adjektiv"
+      ],
+      "lemma": "schön"
+    },
+    {
+      "id": "a1-alltag:neu",
+      "de": "neu",
+      "plural": "",
+      "ko": "새로운",
+      "example_de": "Das Haus daneben ist neu.",
+      "example_ko": "그 옆 집은 새것이다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adjektiv"
+      ],
+      "lemma": "neu",
+      "en_hint": "new"
+    },
+    {
+      "id": "a1-alltag:er",
+      "de": "er",
+      "plural": "",
+      "ko": "그 (남성); 그것 (남성 명사)",
+      "example_de": "Er arbeitet als Architekt.",
+      "example_ko": "그는 건축가로 일한다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Pronomen"
+      ],
+      "lemma": "er"
+    },
+    {
+      "id": "a1-alltag:sie",
+      "de": "sie (sie wohnt / sie wohnen)",
+      "plural": "",
+      "ko": "그녀; 그들",
+      "example_de": "Sie wohnt in Basel.",
+      "example_ko": "그녀는 바젤에 산다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Pronomen"
+      ],
+      "lemma": "sie",
+      "note_ko": "sie wohnt는 그녀, sie wohnen은 그들. 대문자 Sie는 당신."
+    },
+    {
+      "id": "a1-alltag:studieren",
+      "de": "studieren (sie studiert)",
+      "plural": "",
+      "ko": "대학에서 공부하다",
+      "example_de": "Sie studiert in Basel.",
+      "example_ko": "그녀는 바젤에서 공부한다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "studieren",
+      "en_hint": "study"
+    },
+    {
+      "id": "a1-alltag:der-student",
+      "de": "der Student / die Studentin",
+      "plural": "die Studenten / die Studentinnen",
+      "ko": "대학생",
+      "example_de": "Jeonghyeon ist Studentin.",
+      "example_ko": "정현은 대학생이다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "der Student",
+      "en_hint": "student",
+      "note_ko": "die Studentin은 A2 목록."
+    },
+    {
+      "id": "a1-alltag:machen",
+      "de": "machen (ich mache, er macht)",
+      "plural": "",
+      "ko": "하다, 만들다",
+      "example_de": "Was machst du heute?",
+      "example_ko": "오늘 뭐 해?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "machen",
+      "en_hint": "make"
+    },
+    {
+      "id": "a1-alltag:hoeren",
+      "de": "hören (ich höre, sie hört)",
+      "plural": "",
+      "ko": "듣다",
+      "example_de": "Er hört Musik.",
+      "example_ko": "그는 음악을 듣는다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "hören",
+      "en_hint": "hear"
+    },
+    {
+      "id": "a1-alltag:das-hobby",
+      "de": "das Hobby",
+      "plural": "die Hobbys",
+      "ko": "취미",
+      "example_de": "Was ist Ihr Hobby?",
+      "example_ko": "취미가 무엇인가요?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "das Hobby",
+      "en_hint": "hobby"
+    },
+    {
+      "id": "a1-alltag:gern",
+      "de": "gern",
+      "plural": "",
+      "ko": "기꺼이, 즐겨",
+      "example_de": "Ich gehe gern ins Museum.",
+      "example_ko": "나는 박물관에 즐겨 간다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adverb"
+      ],
+      "lemma": "gern"
+    },
+    {
+      "id": "a1-alltag:heute",
+      "de": "heute",
+      "plural": "",
+      "ko": "오늘",
+      "example_de": "Heute ist Sonntag.",
+      "example_ko": "오늘은 일요일이다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adverb"
+      ],
+      "lemma": "heute"
+    },
+    {
+      "id": "a1-alltag:jetzt",
+      "de": "jetzt",
+      "plural": "",
+      "ko": "지금",
+      "example_de": "Jetzt ist es zwölf Uhr.",
+      "example_ko": "지금은 열두 시다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adverb"
+      ],
+      "lemma": "jetzt"
+    },
+    {
+      "id": "a1-alltag:wir",
+      "de": "wir (wir wohnen)",
+      "plural": "",
+      "ko": "우리",
+      "example_de": "Wir wohnen in Basel.",
+      "example_ko": "우리는 바젤에 산다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Pronomen"
+      ],
+      "lemma": "wir",
+      "en_hint": "we"
+    },
+    {
+      "id": "a1-alltag:ihr",
+      "de": "ihr (ihr wohnt)",
+      "plural": "",
+      "ko": "너희",
+      "example_de": "Wo wohnt ihr?",
+      "example_ko": "너희는 어디 살아?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Pronomen"
+      ],
+      "lemma": "ihr",
+      "note_ko": "ihr wohnt는 너희. 대문자 Ihr Name은 당신의 이름."
+    },
+    {
+      "id": "a1-alltag:zusammen",
+      "de": "zusammen",
+      "plural": "",
+      "ko": "함께; 합계",
+      "example_de": "Wir essen oft zusammen.",
+      "example_ko": "우리는 자주 함께 먹는다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adverb"
+      ],
+      "lemma": "zusammen"
+    },
+    {
+      "id": "a1-alltag:auch",
+      "de": "auch",
+      "plural": "",
+      "ko": "~도, 또한",
+      "example_de": "Ich komme auch aus Korea.",
+      "example_ko": "나도 한국에서 왔다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adverb"
+      ],
+      "lemma": "auch",
+      "note_ko": "영어 also에 해당하는 말이 auch. 독일어 also는 '그러니까'."
+    },
+    {
+      "id": "a1-alltag:oder",
+      "de": "oder",
+      "plural": "",
+      "ko": "또는",
+      "example_de": "Tee oder Kaffee?",
+      "example_ko": "차 아니면 커피?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Konjunktion"
+      ],
+      "lemma": "oder",
+      "en_hint": "or"
+    },
+    {
+      "id": "a1-alltag:essen",
+      "de": "essen (wir essen)",
+      "plural": "",
+      "ko": "먹다",
+      "example_de": "Wir essen um zwölf.",
+      "example_ko": "우리는 열두 시에 먹는다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "essen",
+      "en_hint": "eat",
+      "note_ko": "du isst, er isst는 11월 불규칙 동사에서."
+    },
+    {
+      "id": "a1-alltag:trinken",
+      "de": "trinken (ich trinke)",
+      "plural": "",
+      "ko": "마시다",
+      "example_de": "Ich trinke Wasser.",
+      "example_ko": "나는 물을 마신다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "trinken",
+      "en_hint": "drink"
+    },
+    {
+      "id": "a1-alltag:der-kaffee",
+      "de": "der Kaffee",
+      "plural": "die Kaffees",
+      "ko": "커피",
+      "example_de": "Der Kaffee ist heiß.",
+      "example_ko": "커피가 뜨겁다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "der Kaffee",
+      "en_hint": "coffee"
+    },
+    {
+      "id": "a1-alltag:der-tee",
+      "de": "der Tee",
+      "plural": "die Tees",
+      "ko": "차",
+      "example_de": "Trinkst du Tee?",
+      "example_ko": "차 마셔?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "der Tee",
+      "en_hint": "tea"
+    },
+    {
+      "id": "a1-alltag:fragen",
+      "de": "fragen (ich frage)",
+      "plural": "",
+      "ko": "묻다",
+      "example_de": "Lukas fragt: „Woher kommst du?“",
+      "example_ko": "루카스가 묻는다. 「어디서 왔어?」",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "fragen"
+    },
+    {
+      "id": "a1-alltag:die-frage",
+      "de": "die Frage",
+      "plural": "die Fragen",
+      "ko": "질문",
+      "example_de": "Ich habe eine Frage.",
+      "example_ko": "질문이 하나 있습니다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "die Frage"
+    },
+    {
+      "id": "a1-alltag:antworten",
+      "de": "antworten (sie antwortet)",
+      "plural": "",
+      "ko": "대답하다",
+      "example_de": "Sie antwortet schnell.",
+      "example_ko": "그녀는 빨리 답한다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "antworten",
+      "en_hint": "answer"
+    },
+    {
+      "id": "a1-alltag:die-antwort",
+      "de": "die Antwort",
+      "plural": "die Antworten",
+      "ko": "대답",
+      "example_de": "Danke für die Antwort.",
+      "example_ko": "답장 고맙습니다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "die Antwort",
+      "en_hint": "answer"
+    },
+    {
+      "id": "a1-alltag:richtig",
+      "de": "richtig",
+      "plural": "",
+      "ko": "옳은, 맞는",
+      "example_de": "Ist das richtig?",
+      "example_ko": "그게 맞아요?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adjektiv"
+      ],
+      "lemma": "richtig",
+      "en_hint": "right"
+    },
+    {
+      "id": "a1-alltag:falsch",
+      "de": "falsch",
+      "plural": "",
+      "ko": "틀린",
+      "example_de": "Die Nummer ist falsch.",
+      "example_ko": "번호가 틀렸다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adjektiv"
+      ],
+      "lemma": "falsch",
+      "en_hint": "false"
+    },
+    {
+      "id": "a1-alltag:leider",
+      "de": "leider",
+      "plural": "",
+      "ko": "유감스럽게도",
+      "example_de": "Leider nein.",
+      "example_ko": "유감이지만 아니에요.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adverb"
+      ],
+      "lemma": "leider"
+    },
+    {
+      "id": "a1-alltag:das-handy",
+      "de": "das Handy",
+      "plural": "die Handys",
+      "ko": "휴대전화",
+      "example_de": "Mein Handy ist leer.",
+      "example_ko": "휴대전화 배터리가 없다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "das Handy",
+      "note_ko": "헷갈림 주의: 영어 handy(편리한)와 다르다. 독일어 Handy는 휴대전화."
+    },
+    {
+      "id": "a1-alltag:das-telefon",
+      "de": "das Telefon",
+      "plural": "die Telefone",
+      "ko": "전화(기)",
+      "example_de": "Das Telefon klingelt.",
+      "example_ko": "전화가 울린다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "das Telefon",
+      "en_hint": "telephone"
+    },
+    {
+      "id": "a1-alltag:man",
+      "de": "man",
+      "plural": "",
+      "ko": "(일반적인) 사람, 누구나",
+      "example_de": "Wie sagt man das auf Deutsch?",
+      "example_ko": "그걸 독일어로 뭐라고 해요?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Pronomen"
+      ],
+      "lemma": "man",
+      "note_ko": "man은 Mann(남자)과 다르다. n이 하나."
+    },
+    {
+      "id": "a1-alltag:haben",
+      "de": "haben (ich habe, du hast, er hat)",
+      "plural": "",
+      "ko": "가지다, 있다",
+      "example_de": "Hast du Geschwister?",
+      "example_ko": "형제자매 있어?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "haben",
+      "en_hint": "have"
+    },
+    {
+      "id": "a1-alltag:wer",
+      "de": "wer",
+      "plural": "",
+      "ko": "누구",
+      "example_de": "Wer ist das?",
+      "example_ko": "저 사람은 누구야?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Fragewort"
+      ],
+      "lemma": "wer",
+      "note_ko": "헷갈림 주의: wer는 who(누구). 영어 where(어디)는 wo."
+    },
+    {
+      "id": "a1-alltag:der-lehrer",
+      "de": "der Lehrer / die Lehrerin",
+      "plural": "die Lehrer / die Lehrerinnen",
+      "ko": "교사",
+      "example_de": "Der Vater ist Lehrer.",
+      "example_ko": "아버지는 교사다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "der Lehrer"
+    },
+    {
+      "id": "a1-alltag:das-alter",
+      "de": "das Alter",
+      "plural": "die Alter",
+      "ko": "나이",
+      "example_de": "Alter: 31 Jahre.",
+      "example_ko": "나이: 31세.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "das Alter",
+      "note_ko": "Wie alt sind Sie?로 묻는다. alt와 같은 뿌리."
+    },
+    {
+      "id": "a1-alltag:viel",
+      "de": "viel",
+      "plural": "",
+      "ko": "많은, 많이",
+      "example_de": "Er arbeitet viel.",
+      "example_ko": "그는 일을 많이 한다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adjektiv"
+      ],
+      "lemma": "viel"
+    },
+    {
+      "id": "a1-alltag:leben",
+      "de": "leben (ich lebe)",
+      "plural": "",
+      "ko": "살다, 생활하다",
+      "example_de": "Meine Eltern leben in Korea.",
+      "example_ko": "부모님은 한국에서 사신다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "leben",
+      "en_hint": "live"
+    },
+    {
+      "id": "a1-alltag:dort",
+      "de": "dort",
+      "plural": "",
+      "ko": "거기, 저기",
+      "example_de": "Die Haltestelle ist dort.",
+      "example_ko": "정류장은 저기 있다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adverb"
+      ],
+      "lemma": "dort"
+    },
+    {
+      "id": "a1-alltag:mein",
+      "de": "mein / meine",
+      "plural": "",
+      "ko": "나의",
+      "example_de": "Meine Schwester ist verheiratet.",
+      "example_ko": "내 여자 형제는 결혼했다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Pronomen"
+      ],
+      "lemma": "mein",
+      "en_hint": "mine"
+    },
+    {
+      "id": "a1-alltag:die-e-mail",
+      "de": "die E-Mail",
+      "plural": "die E-Mails",
+      "ko": "이메일",
+      "example_de": "Ich schreibe eine E-Mail.",
+      "example_ko": "나는 이메일을 쓴다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "die E-Mail",
+      "en_hint": "e-mail",
+      "note_ko": "스위스에서는 das E-Mail도 쓴다."
+    },
+    {
+      "id": "a1-alltag:verheiratet",
+      "de": "verheiratet",
+      "plural": "",
+      "ko": "결혼한, 기혼",
+      "example_de": "Ich bin verheiratet.",
+      "example_ko": "저는 기혼입니다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adjektiv"
+      ],
+      "lemma": "verheiratet"
+    },
+    {
+      "id": "a1-alltag:ledig",
+      "de": "ledig",
+      "plural": "",
+      "ko": "미혼인",
+      "example_de": "Er ist ledig.",
+      "example_ko": "그는 미혼이다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adjektiv"
+      ],
+      "lemma": "ledig"
+    },
+    {
+      "id": "a1-alltag:dir",
+      "de": "dir (Wie geht es dir?)",
+      "plural": "",
+      "ko": "너에게",
+      "example_de": "Wie geht es dir?",
+      "example_ko": "어떻게 지내?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Pronomen"
+      ],
+      "lemma": "dir",
+      "note_ko": "여격(12월). 지금은 Wie geht es dir?를 통째로."
+    },
+    {
+      "id": "a1-alltag:warum",
+      "de": "warum",
+      "plural": "",
+      "ko": "왜",
+      "example_de": "Warum lernst du Deutsch?",
+      "example_ko": "왜 독일어를 배워?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Fragewort"
+      ],
+      "lemma": "warum"
+    },
+    {
+      "id": "a1-alltag:dann",
+      "de": "dann",
+      "plural": "",
+      "ko": "그다음, 그러면",
+      "example_de": "Zuerst Kaffee, dann Arbeit.",
+      "example_ko": "먼저 커피, 그다음 일.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adverb"
+      ],
+      "lemma": "dann",
+      "en_hint": "then"
+    },
+    {
+      "id": "a1-alltag:das-fenster",
+      "de": "das Fenster",
+      "plural": "die Fenster",
+      "ko": "창문",
+      "example_de": "Die Fenster sind hoch.",
+      "example_ko": "창문들이 높다.",
+      "source": "선생 작성",
+      "tags": [
+        "A2",
+        "Nomen"
+      ],
+      "lemma": "das Fenster",
+      "en_hint": "fenestration (건축 용어, 창 배치)"
+    },
+    {
+      "id": "a1-alltag:gross",
+      "de": "groß",
+      "plural": "",
+      "ko": "큰",
+      "example_de": "Das Haus ist groß.",
+      "example_ko": "그 집은 크다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adjektiv"
+      ],
+      "lemma": "groß",
+      "en_hint": "great"
+    },
+    {
+      "id": "a1-alltag:klein",
+      "de": "klein",
+      "plural": "",
+      "ko": "작은",
+      "example_de": "Basel ist nicht klein.",
+      "example_ko": "바젤은 작지 않다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adjektiv"
+      ],
+      "lemma": "klein"
+    },
+    {
+      "id": "a1-alltag:kurz",
+      "de": "kurz",
+      "plural": "",
+      "ko": "짧은, 짧게",
+      "example_de": "Der Mann sagt nur kurz: Nein.",
+      "example_ko": "남자는 짧게 '아니요'라고만 한다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adjektiv"
+      ],
+      "lemma": "kurz"
+    },
+    {
+      "id": "a1-alltag:gehen",
+      "de": "gehen (ich gehe)",
+      "plural": "",
+      "ko": "가다 (걸어서)",
+      "example_de": "Ich gehe nach Hause.",
+      "example_ko": "나는 집에 간다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "gehen",
+      "en_hint": "go"
+    },
+    {
+      "id": "a1-alltag:wissen",
+      "de": "wissen (ich weiß, er weiß)",
+      "plural": "",
+      "ko": "알다 (사실을)",
+      "example_de": "Das weiß ich nicht.",
+      "example_ko": "그건 모르겠어요.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "wissen",
+      "note_ko": "ich weiß, er weiß: 끝에 t가 붙지 않는다."
+    },
+    {
+      "id": "a1-alltag:der-die-das",
+      "de": "der · die · das",
+      "plural": "",
+      "ko": "정관사 (남성 · 여성 · 중성)",
+      "example_de": "Der Turm, die Kirche, das Dach.",
+      "example_ko": "탑, 교회, 지붕.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Artikel"
+      ],
+      "lemma": "der/die/das",
+      "note_ko": "낱말마다 성이 정해져 있다. 낱말을 늘 관사와 함께 외운다."
+    },
+    {
+      "id": "a1-alltag:ein",
+      "de": "ein / eine",
+      "plural": "",
+      "ko": "하나의 (부정관사)",
+      "example_de": "Da ist ein Brunnen.",
+      "example_ko": "저기 분수가 하나 있다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Artikel"
+      ],
+      "lemma": "ein",
+      "en_hint": "a, an, one",
+      "note_ko": "처음 말할 때 ein, 다시 말할 때 der/die/das."
+    },
+    {
+      "id": "a1-alltag:das-wasser",
+      "de": "das Wasser",
+      "plural": "(복수 거의 없음)",
+      "ko": "물",
+      "example_de": "Das Wasser ist kalt.",
+      "example_ko": "물이 차갑다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "das Wasser",
+      "en_hint": "water"
+    },
+    {
+      "id": "a1-alltag:es",
+      "de": "es",
+      "plural": "",
+      "ko": "그것 (중성)",
+      "example_de": "Das Haus ist alt. Es ist schön.",
+      "example_ko": "그 집은 오래됐다. 아름답다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Pronomen"
+      ],
+      "lemma": "es"
+    },
+    {
+      "id": "a1-alltag:brauchen",
+      "de": "brauchen (ich brauche)",
+      "plural": "",
+      "ko": "필요하다",
+      "example_de": "Ich brauche eine Fahrkarte.",
+      "example_ko": "나는 승차권이 필요하다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "brauchen"
+    },
+    {
+      "id": "a1-alltag:links",
+      "de": "links",
+      "plural": "",
+      "ko": "왼쪽에",
+      "example_de": "Links ist das Münster.",
+      "example_ko": "왼쪽에 대성당이 있다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adverb"
+      ],
+      "lemma": "links"
+    },
+    {
+      "id": "a1-alltag:rechts",
+      "de": "rechts",
+      "plural": "",
+      "ko": "오른쪽에",
+      "example_de": "Das Gleis ist da rechts.",
+      "example_ko": "선로는 저기 오른쪽이다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adverb"
+      ],
+      "lemma": "rechts",
+      "en_hint": "right"
+    },
+    {
+      "id": "a1-alltag:nehmen",
+      "de": "nehmen (ich nehme, er nimmt)",
+      "plural": "",
+      "ko": "잡다, 타다, 고르다",
+      "example_de": "Wir nehmen die Fähre.",
+      "example_ko": "우리는 나룻배를 탄다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "nehmen"
+    },
+    {
+      "id": "a1-alltag:die-leute",
+      "de": "die Leute",
+      "plural": "die Leute",
+      "ko": "사람들",
+      "example_de": "Die Leute sitzen am Rhein.",
+      "example_ko": "사람들이 라인 강가에 앉아 있다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "die Leute",
+      "note_ko": "복수로만 쓴다."
+    },
+    {
+      "id": "a1-alltag:nicht",
+      "de": "nicht",
+      "plural": "",
+      "ko": "~ 않다",
+      "example_de": "Das ist nicht weit.",
+      "example_ko": "그건 멀지 않다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adverb"
+      ],
+      "lemma": "nicht",
+      "en_hint": "not"
+    },
+    {
+      "id": "a1-alltag:der-bahnhof",
+      "de": "der Bahnhof",
+      "plural": "die Bahnhöfe",
+      "ko": "역",
+      "example_de": "Der Bahnhof SBB ist groß.",
+      "example_ko": "바젤 SBB역은 크다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "der Bahnhof"
+    },
+    {
+      "id": "a1-alltag:die-bahn",
+      "de": "die Bahn",
+      "plural": "die Bahnen",
+      "ko": "철도, 기차",
+      "example_de": "Ich fahre mit der Bahn nach Zürich.",
+      "example_ko": "나는 기차로 취리히에 간다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "die Bahn"
+    },
+    {
+      "id": "a1-alltag:einsteigen",
+      "de": "einsteigen (ich steige ein)",
+      "plural": "",
+      "ko": "타다, 승차하다",
+      "example_de": "Bitte hier einsteigen.",
+      "example_ko": "여기서 타세요.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "einsteigen",
+      "note_ko": "분리동사는 11월. 지금은 통째로."
+    },
+    {
+      "id": "a1-alltag:mit",
+      "de": "mit (mit dem Tram)",
+      "plural": "",
+      "ko": "~와 함께, ~을 타고",
+      "example_de": "Ich fahre mit dem Tram.",
+      "example_ko": "나는 트램을 타고 간다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Präposition"
+      ],
+      "lemma": "mit",
+      "note_ko": "mit 뒤 여격은 12월. 지금은 mit dem Tram을 통째로."
+    },
+    {
+      "id": "a1-alltag:weit",
+      "de": "weit",
+      "plural": "",
+      "ko": "먼, 넓은",
+      "example_de": "Das ist nicht weit.",
+      "example_ko": "그건 멀지 않다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adjektiv"
+      ],
+      "lemma": "weit",
+      "en_hint": "wide"
+    },
+    {
+      "id": "a1-alltag:kein",
+      "de": "kein / keine",
+      "plural": "",
+      "ko": "~ 없는 (명사 부정)",
+      "example_de": "Ich habe kein Auto.",
+      "example_ko": "나는 차가 없다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Artikel"
+      ],
+      "lemma": "kein",
+      "note_ko": "명사 앞은 kein, 동사·형용사는 nicht."
+    },
+    {
+      "id": "a1-alltag:das-brot",
+      "de": "das Brot",
+      "plural": "die Brote",
+      "ko": "빵",
+      "example_de": "Ich kaufe ein Brot.",
+      "example_ko": "나는 빵 하나를 산다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "das Brot",
+      "en_hint": "bread"
+    },
+    {
+      "id": "a1-alltag:das-geld",
+      "de": "das Geld",
+      "plural": "(복수 없음)",
+      "ko": "돈",
+      "example_de": "Ich habe kein Geld dabei.",
+      "example_ko": "나는 돈을 안 가져왔다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "das Geld"
+    },
+    {
+      "id": "a1-alltag:das-maedchen",
+      "de": "das Mädchen",
+      "plural": "die Mädchen",
+      "ko": "소녀",
+      "example_de": "Das Mädchen ist arm.",
+      "example_ko": "그 소녀는 가난하다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "das Mädchen",
+      "note_ko": "-chen으로 끝나면 늘 das."
+    },
+    {
+      "id": "a1-alltag:nichts",
+      "de": "nichts",
+      "plural": "",
+      "ko": "아무것도 ~ 않다",
+      "example_de": "Am Ende hat das Mädchen nichts mehr.",
+      "example_ko": "결국 소녀에게는 아무것도 남지 않는다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Pronomen"
+      ],
+      "lemma": "nichts"
+    },
+    {
+      "id": "a1-alltag:die-zeit",
+      "de": "die Zeit",
+      "plural": "die Zeiten",
+      "ko": "시간",
+      "example_de": "Ich habe heute keine Zeit.",
+      "example_ko": "나는 오늘 시간이 없다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "die Zeit"
+    },
+    {
+      "id": "a1-alltag:die-milch",
+      "de": "die Milch",
+      "plural": "(복수 거의 없음)",
+      "ko": "우유",
+      "example_de": "Kaffee mit Milch, bitte.",
+      "example_ko": "우유 넣은 커피 주세요.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "die Milch",
+      "en_hint": "milk"
+    },
+    {
+      "id": "a1-alltag:der-hunger",
+      "de": "der Hunger",
+      "plural": "(복수 없음)",
+      "ko": "배고픔",
+      "example_de": "Hast du Hunger?",
+      "example_ko": "배고파?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "der Hunger",
+      "en_hint": "hunger"
+    },
+    {
+      "id": "a1-alltag:kosten",
+      "de": "kosten (es kostet)",
+      "plural": "",
+      "ko": "(값이) 나가다",
+      "example_de": "Was kostet das Brot?",
+      "example_ko": "그 빵 얼마예요?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "kosten",
+      "en_hint": "cost"
+    },
+    {
+      "id": "a1-alltag:bezahlen",
+      "de": "bezahlen (ich bezahle)",
+      "plural": "",
+      "ko": "지불하다",
+      "example_de": "Kann ich mit Karte bezahlen?",
+      "example_ko": "카드로 계산해도 되나요?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "bezahlen"
+    },
+    {
+      "id": "a1-alltag:zahlen",
+      "de": "zahlen (ich zahle)",
+      "plural": "",
+      "ko": "지불하다",
+      "example_de": "Zahlen, bitte!",
+      "example_ko": "계산할게요!",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "zahlen"
+    },
+    {
+      "id": "a1-alltag:das-broetchen",
+      "de": "das Brötchen",
+      "plural": "die Brötchen",
+      "ko": "작은 빵",
+      "example_de": "Zwei Brötchen, bitte.",
+      "example_ko": "작은 빵 두 개 주세요.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "das Brötchen",
+      "note_ko": "스위스에서는 das Brötli라고도 한다.",
+      "ch_de": "das Brötli"
+    },
+    {
+      "id": "a1-alltag:moechten",
+      "de": "möchten (ich möchte)",
+      "plural": "",
+      "ko": "~하고 싶다, ~을 원하다 (정중히)",
+      "example_de": "Ich möchte zwei Brötchen.",
+      "example_ko": "작은 빵 두 개 주세요.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "möchten",
+      "note_ko": "화법조동사는 11월. 지금은 Ich möchte …를 통째로."
+    },
+    {
+      "id": "a1-alltag:der-apfel",
+      "de": "der Apfel",
+      "plural": "die Äpfel",
+      "ko": "사과",
+      "example_de": "Ein Apfel, bitte.",
+      "example_ko": "사과 하나 주세요.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "der Apfel",
+      "en_hint": "apple"
+    },
+    {
+      "id": "a1-alltag:bekommen",
+      "de": "bekommen (ich bekomme)",
+      "plural": "",
+      "ko": "받다, 얻다",
+      "example_de": "Was bekommen Sie?",
+      "example_ko": "무엇을 드릴까요?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "bekommen",
+      "note_ko": "헷갈림 주의: bekommen은 '받다'. 영어 become(되다)이 아니다."
+    },
+    {
+      "id": "a1-alltag:merci-vielmal",
+      "de": "Merci vielmal",
+      "plural": "",
+      "ko": "정말 고맙습니다 (스위스)",
+      "example_de": "Merci vielmal und einen schönen Tag!",
+      "example_ko": "정말 고맙습니다, 좋은 하루 보내세요!",
+      "source": "선생 작성",
+      "tags": [
+        "eigen",
+        "CH",
+        "Ausdruck"
+      ],
+      "note_ko": "스위스 말. 독일에서는 Vielen Dank."
+    },
+    {
+      "id": "a1-alltag:das-formular",
+      "de": "das Formular",
+      "plural": "die Formulare",
+      "ko": "양식, 서식",
+      "example_de": "Bitte füllen Sie das Formular aus.",
+      "example_ko": "양식을 작성해 주세요.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "das Formular",
+      "en_hint": "form"
+    },
+    {
+      "id": "a1-alltag:der-familienstand",
+      "de": "der Familienstand",
+      "plural": "(복수 없음)",
+      "ko": "혼인 여부",
+      "example_de": "Familienstand: ledig.",
+      "example_ko": "혼인 여부: 미혼.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "der Familienstand",
+      "note_ko": "스위스 양식에서는 der Zivilstand.",
+      "ch_de": "der Zivilstand"
+    },
+    {
+      "id": "a1-alltag:die-postleitzahl",
+      "de": "die Postleitzahl",
+      "plural": "die Postleitzahlen",
+      "ko": "우편번호",
+      "example_de": "Die Postleitzahl ist 4057.",
+      "example_ko": "우편번호는 4057이다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "die Postleitzahl",
+      "note_ko": "양식에는 줄여서 PLZ."
+    },
+    {
+      "id": "a1-alltag:der-geburtsort",
+      "de": "der Geburtsort",
+      "plural": "die Geburtsorte",
+      "ko": "출생지",
+      "example_de": "Geburtsort: Bern.",
+      "example_ko": "출생지: 베른.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "der Geburtsort"
+    },
+    {
+      "id": "a1-alltag:das-geburtsjahr",
+      "de": "das Geburtsjahr",
+      "plural": "die Geburtsjahre",
+      "ko": "출생 연도",
+      "example_de": "Geburtsjahr: 1995.",
+      "example_ko": "출생 연도: 1995.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "das Geburtsjahr"
+    },
+    {
+      "id": "a1-alltag:maennlich",
+      "de": "männlich",
+      "plural": "",
+      "ko": "남성의",
+      "example_de": "Geschlecht: männlich.",
+      "example_ko": "성별: 남.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adjektiv"
+      ],
+      "lemma": "männlich"
+    },
+    {
+      "id": "a1-alltag:weiblich",
+      "de": "weiblich",
+      "plural": "",
+      "ko": "여성의",
+      "example_de": "Geschlecht: weiblich.",
+      "example_ko": "성별: 여.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adjektiv"
+      ],
+      "lemma": "weiblich"
+    },
+    {
+      "id": "a1-alltag:die-unterschrift",
+      "de": "die Unterschrift",
+      "plural": "die Unterschriften",
+      "ko": "서명",
+      "example_de": "Hier fehlt die Unterschrift.",
+      "example_ko": "여기 서명이 빠졌다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "die Unterschrift"
+    },
+    {
+      "id": "a1-alltag:ausfuellen",
+      "de": "ausfüllen (ich fülle aus)",
+      "plural": "",
+      "ko": "(양식을) 채우다",
+      "example_de": "Ich fülle das Formular aus.",
+      "example_ko": "나는 양식을 작성한다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "ausfüllen",
+      "en_hint": "fill out",
+      "note_ko": "분리동사는 11월. 지금은 통째로."
+    },
+    {
+      "id": "a1-alltag:die-uhr",
+      "de": "die Uhr",
+      "plural": "die Uhren",
+      "ko": "시계; ~시",
+      "example_de": "Die Uhr ist kaputt.",
+      "example_ko": "시계가 고장 났다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "die Uhr"
+    },
+    {
+      "id": "a1-alltag:wann",
+      "de": "wann",
+      "plural": "",
+      "ko": "언제",
+      "example_de": "Wann kommt das Tram?",
+      "example_ko": "트램은 언제 와요?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Fragewort"
+      ],
+      "lemma": "wann",
+      "en_hint": "when"
+    },
+    {
+      "id": "a1-alltag:puenktlich",
+      "de": "pünktlich",
+      "plural": "",
+      "ko": "시간을 지키는",
+      "example_de": "Das Tram ist pünktlich.",
+      "example_ko": "트램이 제시간에 온다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adjektiv"
+      ],
+      "lemma": "pünktlich"
+    },
+    {
+      "id": "a1-alltag:der-termin",
+      "de": "der Termin",
+      "plural": "die Termine",
+      "ko": "약속, 예약 시간",
+      "example_de": "Ich habe um zehn einen Termin.",
+      "example_ko": "나는 열 시에 약속이 있다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "der Termin",
+      "note_ko": "헷갈림 주의: Termin은 약속·예약. 영어 term(학기·용어)이 아니다."
+    },
+    {
+      "id": "a1-alltag:morgen",
+      "de": "morgen",
+      "plural": "",
+      "ko": "내일",
+      "example_de": "Bis morgen!",
+      "example_ko": "내일 봐!",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adverb"
+      ],
+      "lemma": "morgen",
+      "note_ko": "소문자 morgen은 내일, der Morgen은 아침."
+    },
+    {
+      "id": "a1-alltag:das-kino",
+      "de": "das Kino",
+      "plural": "die Kinos",
+      "ko": "영화관",
+      "example_de": "Gehen wir ins Kino?",
+      "example_ko": "영화 보러 갈까?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "das Kino",
+      "en_hint": "cinema"
+    },
+    {
+      "id": "a1-alltag:vielleicht",
+      "de": "vielleicht",
+      "plural": "",
+      "ko": "아마, 어쩌면",
+      "example_de": "Vielleicht am Freitag?",
+      "example_ko": "금요일은 어때?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adverb"
+      ],
+      "lemma": "vielleicht"
+    },
+    {
+      "id": "a1-alltag:klar",
+      "de": "klar",
+      "plural": "",
+      "ko": "분명한; 물론",
+      "example_de": "Klar, gern!",
+      "example_ko": "물론, 좋아!",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adjektiv"
+      ],
+      "lemma": "klar",
+      "en_hint": "clear"
+    },
+    {
+      "id": "a1-alltag:frei",
+      "de": "frei",
+      "plural": "",
+      "ko": "비어 있는, 시간 있는",
+      "example_de": "Bist du am Freitag frei?",
+      "example_ko": "금요일에 시간 돼?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adjektiv"
+      ],
+      "lemma": "frei",
+      "en_hint": "free"
+    },
+    {
+      "id": "a1-alltag:spaet",
+      "de": "spät",
+      "plural": "",
+      "ko": "늦은",
+      "example_de": "Ist 20 Uhr zu spät?",
+      "example_ko": "저녁 8시는 너무 늦어?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adjektiv"
+      ],
+      "lemma": "spät"
+    },
+    {
+      "id": "a1-alltag:besuchen",
+      "de": "besuchen (ich besuche)",
+      "plural": "",
+      "ko": "방문하다",
+      "example_de": "Wir besuchen Freunde in Zürich.",
+      "example_ko": "우리는 취리히에 사는 친구를 방문한다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "besuchen"
+    },
+    {
+      "id": "a1-alltag:das-restaurant",
+      "de": "das Restaurant",
+      "plural": "die Restaurants",
+      "ko": "식당",
+      "example_de": "Das Restaurant ist am Rhein.",
+      "example_ko": "그 식당은 라인 강가에 있다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "das Restaurant",
+      "en_hint": "restaurant"
+    },
+    {
+      "id": "a1-alltag:das-datum",
+      "de": "das Datum",
+      "plural": "die Daten",
+      "ko": "날짜",
+      "example_de": "Welches Datum ist heute?",
+      "example_ko": "오늘이 며칠이야?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "das Datum",
+      "en_hint": "date"
+    },
+    {
+      "id": "a1-alltag:der-geburtstag",
+      "de": "der Geburtstag",
+      "plural": "die Geburtstage",
+      "ko": "생일",
+      "example_de": "Wann ist dein Geburtstag?",
+      "example_ko": "네 생일은 언제야?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "der Geburtstag",
+      "en_hint": "birthday"
+    },
+    {
+      "id": "a1-alltag:geboren",
+      "de": "geboren",
+      "plural": "",
+      "ko": "태어난",
+      "example_de": "Ich bin in Korea geboren.",
+      "example_ko": "나는 한국에서 태어났다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adjektiv"
+      ],
+      "lemma": "geboren",
+      "en_hint": "born"
+    },
+    {
+      "id": "a1-alltag:lesen",
+      "de": "lesen (ich lese, er liest)",
+      "plural": "",
+      "ko": "읽다",
+      "example_de": "Ich lese jeden Tag fünf Minuten.",
+      "example_ko": "나는 매일 5분 읽는다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "lesen"
+    },
+    {
+      "id": "a1-alltag:das-buch",
+      "de": "das Buch",
+      "plural": "die Bücher",
+      "ko": "책",
+      "example_de": "Das Buch ist von 1811.",
+      "example_ko": "그 책은 1811년에 나왔다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "das Buch",
+      "en_hint": "book"
+    },
+    {
+      "id": "a1-alltag:der-text",
+      "de": "der Text",
+      "plural": "die Texte",
+      "ko": "글, 텍스트",
+      "example_de": "Der Text ist kurz.",
+      "example_ko": "그 글은 짧다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "der Text",
+      "en_hint": "text"
+    },
+    {
+      "id": "a1-alltag:schon",
+      "de": "schon",
+      "plural": "",
+      "ko": "이미, 벌써",
+      "example_de": "Die Geschichte ist schon über 200 Jahre alt.",
+      "example_ko": "그 이야기는 벌써 200년이 넘었다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adverb"
+      ],
+      "lemma": "schon"
+    },
+    {
+      "id": "a1-alltag:immer",
+      "de": "immer",
+      "plural": "",
+      "ko": "늘, 항상",
+      "example_de": "Das Tram ist immer voll.",
+      "example_ko": "트램은 늘 꽉 찬다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adverb"
+      ],
+      "lemma": "immer"
+    },
+    {
+      "id": "a1-alltag:das-ticket",
+      "de": "das Ticket",
+      "plural": "die Tickets",
+      "ko": "표, 티켓",
+      "example_de": "Ich kaufe ein Ticket in der App.",
+      "example_ko": "나는 앱에서 표를 산다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "das Ticket",
+      "en_hint": "ticket"
+    },
+    {
+      "id": "a1-alltag:der-bahnsteig",
+      "de": "der Bahnsteig",
+      "plural": "die Bahnsteige",
+      "ko": "승강장",
+      "example_de": "Der Zug fährt von Bahnsteig 7.",
+      "example_ko": "기차는 7번 승강장에서 떠난다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "der Bahnsteig",
+      "note_ko": "스위스에서는 der Perron이라고 한다.",
+      "ch_de": "der Perron"
+    },
+    {
+      "id": "a1-alltag:das-gleis",
+      "de": "das Gleis",
+      "plural": "die Gleise",
+      "ko": "선로, 타는 곳 번호",
+      "example_de": "Der Zug nach Zürich fährt auf Gleis 7.",
+      "example_ko": "취리히행 기차는 7번 선로에서 떠난다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "das Gleis"
+    },
+    {
+      "id": "a1-alltag:der-zug",
+      "de": "der Zug",
+      "plural": "die Züge",
+      "ko": "기차",
+      "example_de": "Der Zug ist pünktlich.",
+      "example_ko": "기차가 제시간이다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "der Zug"
+    },
+    {
+      "id": "a1-alltag:die-abfahrt",
+      "de": "die Abfahrt",
+      "plural": "die Abfahrten",
+      "ko": "출발",
+      "example_de": "Abfahrt: 10.07 Uhr.",
+      "example_ko": "출발: 10시 7분.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "die Abfahrt"
+    },
+    {
+      "id": "a1-alltag:das-fahrrad",
+      "de": "das Fahrrad",
+      "plural": "die Fahrräder",
+      "ko": "자전거",
+      "example_de": "Ich fahre mit dem Fahrrad ins Büro.",
+      "example_ko": "나는 자전거로 사무실에 간다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "das Fahrrad",
+      "note_ko": "스위스에서는 거의 늘 das Velo.",
+      "ch_de": "das Velo"
+    },
+    {
+      "id": "a1-alltag:der-automat",
+      "de": "der Automat",
+      "plural": "die Automaten",
+      "ko": "자동판매기",
+      "example_de": "Das Billett kaufe ich am Automaten.",
+      "example_ko": "승차권은 자동판매기에서 산다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "der Automat",
+      "en_hint": "automat (automatic)"
+    },
+    {
+      "id": "a1-alltag:teuer",
+      "de": "teuer",
+      "plural": "",
+      "ko": "비싼",
+      "example_de": "Das ist zu teuer.",
+      "example_ko": "그건 너무 비싸다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adjektiv"
+      ],
+      "lemma": "teuer"
+    },
+    {
+      "id": "a1-alltag:billig",
+      "de": "billig",
+      "plural": "",
+      "ko": "싼",
+      "example_de": "Das Abo ist nicht billig.",
+      "example_ko": "그 정기권은 싸지 않다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adjektiv"
+      ],
+      "lemma": "billig"
+    },
+    {
+      "id": "a1-alltag:die-sonne",
+      "de": "die Sonne",
+      "plural": "die Sonnen",
+      "ko": "해, 태양",
+      "example_de": "Heute scheint die Sonne.",
+      "example_ko": "오늘은 해가 난다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "die Sonne",
+      "en_hint": "sun"
+    },
+    {
+      "id": "a1-alltag:lang",
+      "de": "lang",
+      "plural": "",
+      "ko": "긴",
+      "example_de": "Das Jahr dort ist sehr lang.",
+      "example_ko": "거기서 한 해는 아주 길다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adjektiv"
+      ],
+      "lemma": "lang",
+      "en_hint": "long"
+    },
+    {
+      "id": "a1-alltag:schnell",
+      "de": "schnell",
+      "plural": "",
+      "ko": "빠른, 빨리",
+      "example_de": "Das Tram ist schnell.",
+      "example_ko": "트램은 빠르다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adjektiv"
+      ],
+      "lemma": "schnell"
+    },
+    {
+      "id": "a1-alltag:das-wetter",
+      "de": "das Wetter",
+      "plural": "(복수 거의 없음)",
+      "ko": "날씨",
+      "example_de": "Wie ist das Wetter in Basel?",
+      "example_ko": "바젤 날씨는 어때?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "das Wetter",
+      "en_hint": "weather"
+    },
+    {
+      "id": "a1-alltag:der-mensch",
+      "de": "der Mensch",
+      "plural": "die Menschen",
+      "ko": "사람, 인간",
+      "example_de": "Ein Mensch lebt etwa 80 Jahre.",
+      "example_ko": "사람은 80년쯤 산다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "der Mensch"
+    },
+    {
+      "id": "a1-alltag:bald",
+      "de": "bald",
+      "plural": "",
+      "ko": "곧",
+      "example_de": "Bis bald!",
+      "example_ko": "곧 봐!",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adverb"
+      ],
+      "lemma": "bald",
+      "note_ko": "헷갈림 주의: bald는 '곧'. 영어 bald(대머리)가 아니다."
+    },
+    {
+      "id": "a1-alltag:oft",
+      "de": "oft",
+      "plural": "",
+      "ko": "자주",
+      "example_de": "Ich fahre oft mit dem Tram.",
+      "example_ko": "나는 자주 트램을 탄다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adverb"
+      ],
+      "lemma": "oft",
+      "en_hint": "often"
+    },
+    {
+      "id": "a1-alltag:nie",
+      "de": "nie",
+      "plural": "",
+      "ko": "결코 ~ 않다",
+      "example_de": "Er kommt nie zu spät.",
+      "example_ko": "그는 절대 늦지 않는다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adverb"
+      ],
+      "lemma": "nie"
+    },
+    {
+      "id": "a1-alltag:dauern",
+      "de": "dauern (es dauert)",
+      "plural": "",
+      "ko": "(시간이) 걸리다",
+      "example_de": "Wie lange dauert die Fahrt?",
+      "example_ko": "가는 데 얼마나 걸려요?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "dauern"
+    },
+    {
+      "id": "a1-alltag:die-aufgabe",
+      "de": "die Aufgabe",
+      "plural": "die Aufgaben",
+      "ko": "과제, 문제",
+      "example_de": "Die Aufgabe ist kurz.",
+      "example_ko": "그 과제는 짧다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "die Aufgabe"
+    },
+    {
+      "id": "a1-alltag:bitten",
+      "de": "bitten (ich bitte)",
+      "plural": "",
+      "ko": "부탁하다",
+      "example_de": "Ich bitte um Hilfe.",
+      "example_ko": "도움을 부탁합니다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "bitten"
+    },
+    {
+      "id": "a1-alltag:helfen",
+      "de": "helfen (ich helfe, sie hilft)",
+      "plural": "",
+      "ko": "돕다",
+      "example_de": "Können Sie mir bitte helfen?",
+      "example_ko": "좀 도와주시겠어요?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "helfen",
+      "en_hint": "help"
+    },
+    {
+      "id": "a1-alltag:noch",
+      "de": "noch",
+      "plural": "",
+      "ko": "더, 여전히",
+      "example_de": "Noch einmal, bitte.",
+      "example_ko": "한 번 더 부탁합니다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adverb"
+      ],
+      "lemma": "noch"
+    },
+    {
+      "id": "a1-alltag:einmal",
+      "de": "einmal",
+      "plural": "",
+      "ko": "한 번",
+      "example_de": "Bitte noch einmal.",
+      "example_ko": "한 번 더요.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adverb"
+      ],
+      "lemma": "einmal"
+    },
+    {
+      "id": "a1-alltag:zum-beispiel",
+      "de": "zum Beispiel",
+      "plural": "",
+      "ko": "예를 들어",
+      "example_de": "Ich esse gern Obst, zum Beispiel Äpfel.",
+      "example_ko": "나는 과일을 즐겨 먹는다, 예를 들어 사과.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Ausdruck"
+      ],
+      "lemma": "zum Beispiel"
+    },
+    {
+      "id": "a1-alltag:geben",
+      "de": "geben (ich gebe, er gibt)",
+      "plural": "",
+      "ko": "주다",
+      "example_de": "Geben Sie mir bitte ein Wasser.",
+      "example_ko": "물 한 병 주세요.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "geben",
+      "en_hint": "give"
+    },
+    {
+      "id": "a1-alltag:das-essen",
+      "de": "das Essen",
+      "plural": "die Essen",
+      "ko": "음식, 식사",
+      "example_de": "Das Essen ist gut.",
+      "example_ko": "음식이 맛있다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "das Essen"
+    },
+    {
+      "id": "a1-alltag:das-fruehstueck",
+      "de": "das Frühstück",
+      "plural": "die Frühstücke",
+      "ko": "아침 식사",
+      "example_de": "Was essen Sie zum Frühstück?",
+      "example_ko": "아침으로 무엇을 드세요?",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "das Frühstück"
+    },
+    {
+      "id": "a1-alltag:also",
+      "de": "also",
+      "plural": "",
+      "ko": "그러니까, 그럼",
+      "example_de": "Also, bis Freitag!",
+      "example_ko": "그럼 금요일에 봐!",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Adverb"
+      ],
+      "lemma": "also",
+      "note_ko": "헷갈림 주의: also는 '그러니까'. 영어 also(또한)는 auch."
+    },
+    {
+      "id": "a1-alltag:die-wohnung",
+      "de": "die Wohnung",
+      "plural": "die Wohnungen",
+      "ko": "집 (아파트 한 채)",
+      "example_de": "Wir suchen eine Wohnung.",
+      "example_ko": "우리는 집을 구한다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "die Wohnung"
+    },
+    {
+      "id": "a1-alltag:das-zimmer",
+      "de": "das Zimmer",
+      "plural": "die Zimmer",
+      "ko": "방",
+      "example_de": "Die Wohnung hat zwei Zimmer.",
+      "example_ko": "그 집은 방이 둘이다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "das Zimmer"
+    },
+    {
+      "id": "a1-alltag:die-kueche",
+      "de": "die Küche",
+      "plural": "die Küchen",
+      "ko": "부엌",
+      "example_de": "Die Küche ist neu.",
+      "example_ko": "부엌은 새것이다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "die Küche",
+      "en_hint": "kitchen"
+    },
+    {
+      "id": "a1-alltag:das-bad",
+      "de": "das Bad",
+      "plural": "die Bäder",
+      "ko": "욕실",
+      "example_de": "Das Bad hat ein Fenster.",
+      "example_ko": "욕실에 창이 있다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "das Bad",
+      "en_hint": "bath",
+      "note_ko": "헷갈림 주의: Bad는 욕실. 영어 bad(나쁜)가 아니다."
+    },
+    {
+      "id": "a1-alltag:der-balkon",
+      "de": "der Balkon",
+      "plural": "die Balkone",
+      "ko": "발코니",
+      "example_de": "Ein Balkon ist auch da.",
+      "example_ko": "발코니도 있다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "der Balkon",
+      "en_hint": "balcony"
+    },
+    {
+      "id": "a1-alltag:die-miete",
+      "de": "die Miete",
+      "plural": "die Mieten",
+      "ko": "월세",
+      "example_de": "Die Miete ist nicht billig.",
+      "example_ko": "월세가 싸지 않다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Nomen"
+      ],
+      "lemma": "die Miete"
+    },
+    {
+      "id": "a1-alltag:suchen",
+      "de": "suchen (wir suchen)",
+      "plural": "",
+      "ko": "찾다",
+      "example_de": "Wir suchen eine Wohnung in Basel.",
+      "example_ko": "우리는 바젤에서 집을 구한다.",
+      "source": "선생 작성",
+      "tags": [
+        "A1",
+        "Verb"
+      ],
+      "lemma": "suchen",
+      "en_hint": "seek"
+    }
+  ]
+}

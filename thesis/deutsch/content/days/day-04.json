@@ -1,166 +1,354 @@
 {
- "id": "day-04",
- "theme_ko": "바젤 거리의 글자",
- "new_cards": [
-  "basel-strasse:der-platz",
-  "basel-strasse:das-museum",
-  "basel-strasse:sich-treffen",
-  "basel-strasse:das-mittagessen",
-  "basel-strasse:die-kollegin",
-  "basel-strasse:um-uhr"
- ],
- "stair": {
-  "source": {
-   "author": "선생",
-   "title": "Der Barfüsserplatz",
-   "year": 2026,
-   "license": "own",
-   "url": ""
-  },
-  "layers": [
-   {
-    "level": "A1",
-    "text_de": "Das ist der Barfüsserplatz. Viele Leute sagen einfach „Barfi“. Hier halten viele Trams, auch die Linie 8. Am Platz steht eine alte Kirche. Heute ist sie ein Museum, das Historische Museum. Um zwölf Uhr treffe ich hier meine Kollegin. Wir essen zusammen zu Mittag. Dann fahren wir mit der Tram zurück ins Büro.",
-    "gloss": [
-     {
-      "de": "einfach",
-      "ko": "그냥"
-     },
-     {
-      "de": "halten",
-      "ko": "(트램이) 서다"
-     },
-     {
-      "de": "historisch",
-      "ko": "역사의"
-     },
-     {
-      "de": "zusammen",
-      "ko": "함께"
-     },
-     {
-      "de": "zu Mittag essen",
-      "ko": "점심을 먹다"
-     },
-     {
-      "de": "zurück",
-      "ko": "되돌아"
-     },
-     {
-      "de": "das Büro",
-      "ko": "사무실"
-     }
-    ],
-    "tasks": [
-     {
-      "type": "cloze",
-      "prompt_de": "Hier ___ viele Trams.",
-      "answer": "halten",
-      "options": [
-       "wohnen",
-       "halten",
-       "sehen"
-      ]
-     },
-     {
-      "type": "mc",
-      "prompt_ko": "광장의 옛 교회는 지금 무엇인가?",
-      "options": [
-       "역사박물관",
-       "식당",
-       "트램 정류장"
-      ],
-      "answer": 0
-     },
-     {
-      "type": "summary",
-      "prompt_ko": "한 줄로 요약 (독일어 또는 한국어)"
-     }
-    ]
-   },
-   {
-    "level": "A2",
-    "text_de": "Der Barfüsserplatz ist einer der wichtigsten Treffpunkte in Basel. Seinen Namen hat er von den Franziskanern. Man nannte diese Mönche früher „Barfüßer“, weil sie nur Sandalen und keine festen Schuhe trugen. Ihre Kirche steht noch heute am Platz, und darin ist das Historische Museum. Mittags ist hier viel los: Die Leute steigen aus der Tram, kaufen schnell etwas zu essen und gehen weiter. Wer sich in Basel verabredet, sagt oft nur: „Treffen wir uns am Barfi?“",
-    "gloss": [
-     {
-      "de": "der Treffpunkt",
-      "ko": "만나는 곳"
-     },
-     {
-      "de": "der Mönch",
-      "ko": "수도사"
-     },
-     {
-      "de": "nannte (nennen)",
-      "ko": "불렀다"
-     },
-     {
-      "de": "trugen (tragen)",
-      "ko": "신었다, 입었다"
-     },
-     {
-      "de": "fest",
-      "ko": "단단한"
-     },
-     {
-      "de": "viel los",
-      "ko": "북적이는"
-     },
-     {
-      "de": "sich verabreden",
-      "ko": "약속을 잡다"
-     }
-    ],
-    "tasks": [
-     {
-      "type": "cloze",
-      "prompt_de": "Mittags ist hier viel ___.",
-      "answer": "los",
-      "options": [
-       "Zeit",
-       "los",
-       "Platz"
-      ]
-     },
-     {
-      "type": "mc",
-      "prompt_ko": "‘바르퓌서’라는 이름은 어디서 왔나?",
-      "options": [
-       "광장의 분수",
-       "옛 시장",
-       "샌들만 신은 수도사들"
-      ],
-      "answer": 2
-     },
-     {
-      "type": "summary",
-      "prompt_ko": "한 줄로 요약 (독일어 또는 한국어)"
-     }
-    ]
-   }
+  "id": "day-04",
+  "theme_ko": "직업과 언어",
+  "focus_ko": "Beruf · als · sprechen · lernen",
+  "new_cards": [
+    "a1-alltag:der-beruf",
+    "a1-alltag:arbeiten",
+    "eigene-saetze:ich-arbeite-seit",
+    "a1-alltag:sprechen",
+    "a1-alltag:die-sprache",
+    "wortgruppen:sprachen",
+    "a1-alltag:lernen",
+    "a1-alltag:was",
+    "basel-strasse:die-kollegin",
+    "a1-alltag:ein-bisschen"
   ],
-  "summit": {
-   "text_de": "",
-   "note_ko": "오늘 꼭대기는 비워 둔다. 원문은 7일째에 아돌프 로스."
+  "stair": {
+    "source": {
+      "author": "2628 선생",
+      "title": "Was sind Sie von Beruf?",
+      "year": 2026,
+      "license": "own",
+      "url": ""
+    },
+    "layers": [
+      {
+        "level": "A1",
+        "text_de": "„Was sind Sie von Beruf?“ „Ich bin Architekt. Ich arbeite in Basel.“ „Und welche Sprachen sprechen Sie?“ „Ich spreche Koreanisch und Englisch. Ich lerne Deutsch.“ „Und im Büro?“ „Im Büro sprechen wir Englisch und ein bisschen Deutsch. Meine Kollegin Laura kommt aus der Schweiz.“",
+        "gloss": [
+          {
+            "de": "von Beruf",
+            "ko": "직업으로"
+          },
+          {
+            "de": "welche",
+            "ko": "어떤"
+          },
+          {
+            "de": "das Büro",
+            "ko": "사무실"
+          },
+          {
+            "de": "meine",
+            "ko": "나의"
+          },
+          {
+            "de": "aus der Schweiz",
+            "ko": "스위스에서 (출신)"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Ich ___ Deutsch.",
+            "answer": "lerne",
+            "options": [
+              "lerne",
+              "lernen",
+              "lernt"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "사무실에서는 어떤 말을 하나?",
+            "options": [
+              "영어와 독일어 조금",
+              "한국어만",
+              "프랑스어"
+            ],
+            "answer": 0
+          }
+        ]
+      },
+      {
+        "level": "A2",
+        "text_de": "In Basel arbeiten viele Menschen aus anderen Ländern. In vielen Büros spricht man deshalb Englisch. Aber Deutsch hilft im Alltag sehr: beim Arzt, bei der Wohnungssuche, am Telefon mit der Verwaltung. Wer den Satz „Ich arbeite seit … als …“ sagen kann, kann sich schon kurz vorstellen. Das Wort „als“ steht vor dem Beruf: Ich arbeite als Architekt.",
+        "gloss": [
+          {
+            "de": "deshalb",
+            "ko": "그래서"
+          },
+          {
+            "de": "der Alltag",
+            "ko": "일상"
+          },
+          {
+            "de": "der Arzt",
+            "ko": "의사"
+          },
+          {
+            "de": "die Wohnungssuche",
+            "ko": "집 구하기"
+          },
+          {
+            "de": "die Verwaltung",
+            "ko": "(부동산) 관리회사"
+          },
+          {
+            "de": "der Satz",
+            "ko": "문장"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Ich arbeite ___ Architekt.",
+            "answer": "als",
+            "options": [
+              "als",
+              "wie",
+              "von"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "글에서 독일어가 도움이 되는 곳으로 나오지 않은 것은?",
+            "options": [
+              "병원",
+              "집 구하기",
+              "공항 면세점"
+            ],
+            "answer": 2
+          }
+        ]
+      }
+    ],
+    "summit": {
+      "text_de": "",
+      "note_ko": "오늘 꼭대기는 비워 둔다. 원문은 7일째에 아돌프 로스."
+    }
+  },
+  "ear": {
+    "text_de": "Ich bin Architekt. Ich arbeite in Basel. Ich spreche Koreanisch und Englisch. Ich lerne Deutsch.",
+    "lang": "de-DE",
+    "rates": [
+      0.75,
+      0.9,
+      1.0
+    ]
+  },
+  "hand": {
+    "situation_ko": "새 동료나 강좌 첫날, 무슨 일을 하는지 말한다.",
+    "prompt_ko": "Sie체 한 문장: 하는 일과 독일어 공부.",
+    "model_de": "Ich arbeite als Architekt in Basel und lerne Deutsch.",
+    "chunks": [
+      "Ich arbeite als …",
+      "Ich studiere …",
+      "Ich spreche ein bisschen Deutsch."
+    ]
+  },
+  "mix": {
+    "tasks": [
+      {
+        "type": "cloze",
+        "prompt_de": "Ich ___ das nicht.",
+        "answer": "verstehe",
+        "options": [
+          "versteht",
+          "verstehen",
+          "verstehe"
+        ],
+        "from": "day-03",
+        "point_ko": "verstehen 활용 (ich verstehe)"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "어순이 바른 질문은?",
+        "options": [
+          "Wie Sie heißen?",
+          "Wie heißen Sie?",
+          "Heißen wie Sie?"
+        ],
+        "answer": 1,
+        "from": "day-01",
+        "point_ko": "W-Frage 어순"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Ich ___ aus Korea.",
+        "answer": "komme",
+        "options": [
+          "komme",
+          "kommen",
+          "kommt"
+        ],
+        "from": "day-02",
+        "point_ko": "kommen 활용 (ich komme)"
+      }
+    ]
+  },
+  "illustration": {
+    "scene_ko": "바젤 독일어 강좌 첫날 저녁 교실. 강사가 직업을 묻고, 연호가 건축 스케치북을 앞에 두고 답한다.",
+    "prompt_en": "On the first evening of a German course in a classroom in Basel, the teacher asks Yeon Ho, a Korean architect, about his job and his languages; he answers, a sketchbook with building drawings open on his desk."
+  },
+  "variants": {
+    "junghyun": {
+      "stair": {
+        "layers": [
+          {
+            "level": "A1",
+            "text_de": "„Was sind Sie von Beruf?“ „Ich bin Grafikdesignerin. Ich bin Masterstudentin an der HGK in Basel.“ „Und welche Sprachen sprechen Sie?“ „Ich spreche Koreanisch und Englisch. Ich lerne Deutsch.“ „Und an der HGK?“ „Im Studio sprechen wir Englisch und ein bisschen Deutsch. Meine Kollegin Nicole arbeitet oft in der Siebdruckwerkstatt. Mit ihr spreche ich Deutsch.“",
+            "gloss": [
+              {
+                "de": "von Beruf",
+                "ko": "직업으로"
+              },
+              {
+                "de": "die Grafikdesignerin",
+                "ko": "그래픽 디자이너 (여)"
+              },
+              {
+                "de": "die Masterstudentin",
+                "ko": "석사 과정 학생 (여)"
+              },
+              {
+                "de": "an der HGK",
+                "ko": "HGK에서 (바젤 디자인·예술 대학)"
+              },
+              {
+                "de": "welche",
+                "ko": "어떤"
+              },
+              {
+                "de": "das Studio",
+                "ko": "작업실, 스튜디오"
+              },
+              {
+                "de": "meine",
+                "ko": "나의"
+              },
+              {
+                "de": "die Siebdruckwerkstatt",
+                "ko": "실크스크린 공방"
+              },
+              {
+                "de": "mit ihr",
+                "ko": "그녀와"
+              }
+            ],
+            "tasks": [
+              {
+                "type": "cloze",
+                "prompt_de": "Ich ___ Deutsch.",
+                "answer": "lerne",
+                "options": [
+                  "lerne",
+                  "lernen",
+                  "lernt"
+                ]
+              },
+              {
+                "type": "mc",
+                "prompt_ko": "스튜디오에서는 어떤 말을 하나?",
+                "options": [
+                  "영어와 독일어 조금",
+                  "한국어만",
+                  "프랑스어"
+                ],
+                "answer": 0
+              }
+            ]
+          },
+          {
+            "level": "A2",
+            "text_de": "In Basel leben viele Menschen aus anderen Ländern, auch an der HGK. In manchen Kursen spricht man deshalb Englisch. Aber Deutsch hilft im Alltag sehr: beim Arzt, bei der Wohnungssuche, am Telefon mit der Verwaltung. Wer den Satz „Ich arbeite seit … als …“ sagen kann, kann sich schon kurz vorstellen. Das Wort „als“ steht vor dem Beruf: Ich arbeite als Grafikdesignerin.",
+            "gloss": [
+              {
+                "de": "leben",
+                "ko": "살다"
+              },
+              {
+                "de": "manche",
+                "ko": "어떤 (것들)"
+              },
+              {
+                "de": "der Kurs",
+                "ko": "수업, 강좌"
+              },
+              {
+                "de": "deshalb",
+                "ko": "그래서"
+              },
+              {
+                "de": "der Alltag",
+                "ko": "일상"
+              },
+              {
+                "de": "der Arzt",
+                "ko": "의사"
+              },
+              {
+                "de": "die Wohnungssuche",
+                "ko": "집 구하기"
+              },
+              {
+                "de": "die Verwaltung",
+                "ko": "(부동산) 관리회사"
+              },
+              {
+                "de": "der Satz",
+                "ko": "문장"
+              }
+            ],
+            "tasks": [
+              {
+                "type": "cloze",
+                "prompt_de": "Ich arbeite ___ Grafikdesignerin.",
+                "answer": "als",
+                "options": [
+                  "als",
+                  "wie",
+                  "von"
+                ]
+              },
+              {
+                "type": "mc",
+                "prompt_ko": "글에서 독일어가 도움이 되는 곳으로 나오지 않은 것은?",
+                "options": [
+                  "병원",
+                  "집 구하기",
+                  "공항 면세점"
+                ],
+                "answer": 2
+              }
+            ]
+          }
+        ]
+      },
+      "ear": {
+        "text_de": "Ich bin Grafikdesignerin. Ich bin Masterstudentin an der HGK. Ich spreche Koreanisch und Englisch. Ich lerne Deutsch.",
+        "lang": "de-DE",
+        "rates": [
+          0.75,
+          0.9,
+          1.0
+        ]
+      },
+      "hand": {
+        "situation_ko": "HGK 수업 첫날이나 공방에서 처음 만난 사람에게 무슨 일을 하는지 말한다.",
+        "prompt_ko": "Sie체 한 문장: 하는 일과 공부.",
+        "model_de": "Ich bin Grafikdesignerin, studiere an der HGK und lerne Deutsch.",
+        "chunks": [
+          "Ich bin Grafikdesignerin.",
+          "Ich studiere an der HGK.",
+          "Ich spreche ein bisschen Deutsch."
+        ]
+      },
+      "illustration": {
+        "scene_ko": "드라이슈피츠 HGK 실크스크린 공방. 방문객이 정현에게 하는 일과 쓰는 말을 묻고, 뒤에서 Nicole이 판화를 뜬다. 오후.",
+        "prompt_en": "In the silkscreen workshop of the HGK on the Dreispitz campus in Basel, a visitor asks Jeonghyeon, a Korean graphic designer and master student, about her work and her languages; behind her, her friend Nicole pulls a print through a screen, afternoon."
+      }
+    }
   }
- },
- "ear": {
-  "text_de": "Das ist der Barfüsserplatz. Viele Leute sagen einfach „Barfi“. Hier halten viele Trams. Um zwölf Uhr treffe ich hier meine Kollegin. Wir essen zusammen zu Mittag.",
-  "lang": "de-DE",
-  "rates": [
-   0.75,
-   0.9,
-   1.0
-  ]
- },
- "hand": {
-  "situation_ko": "회사. 동료에게 오늘 점심을 같이 하자고 메시지를 보낸다.",
-  "prompt_ko": "du체 질문 한 문장, 이어서 시간과 장소.",
-  "model_de": "Hast du heute Mittag Zeit? Wir könnten um zwölf Uhr am Barfi essen.",
-  "chunks": [
-   "Hast du heute Mittag Zeit?",
-   "Wir könnten …",
-   "um zwölf Uhr"
-  ]
- }
 }

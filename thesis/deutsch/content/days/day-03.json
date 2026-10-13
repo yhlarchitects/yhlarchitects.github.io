@@ -1,172 +1,302 @@
 {
- "id": "day-03",
- "theme_ko": "바젤 거리의 글자",
- "new_cards": [
-  "basel-strasse:die-kirche",
-  "basel-strasse:der-turm",
-  "basel-strasse:der-sandstein",
-  "basel-strasse:das-dach",
-  "basel-strasse:die-aussicht",
-  "basel-strasse:von-hier-sieht-man",
-  "eigene-saetze:besichtigen"
- ],
- "stair": {
-  "source": {
-   "author": "선생",
-   "title": "Das Münster",
-   "year": 2026,
-   "license": "own",
-   "url": ""
-  },
-  "layers": [
-   {
-    "level": "A1",
-    "text_de": "Das ist das Münster. Die Kirche ist sehr alt. Sie ist aus rotem Sandstein. Das Münster hat zwei Türme. Das Dach hat bunte Ziegel. Hinter der Kirche ist eine Terrasse. Sie heißt Pfalz. Von hier sieht man den Rhein und die Fähre. Auf der anderen Seite liegt Kleinbasel. Die Aussicht ist schön.",
-    "gloss": [
-     {
-      "de": "das Münster",
-      "ko": "대성당 (바젤 뮌스터)"
-     },
-     {
-      "de": "rot",
-      "ko": "붉은"
-     },
-     {
-      "de": "bunt",
-      "ko": "알록달록한"
-     },
-     {
-      "de": "der Ziegel",
-      "ko": "기와"
-     },
-     {
-      "de": "hinter",
-      "ko": "…뒤에"
-     },
-     {
-      "de": "die Terrasse",
-      "ko": "테라스"
-     },
-     {
-      "de": "heißen",
-      "ko": "이름이 …이다"
-     }
-    ],
-    "tasks": [
-     {
-      "type": "cloze",
-      "prompt_de": "Das Münster hat zwei ___.",
-      "answer": "Türme",
-      "options": [
-       "Dächer",
-       "Türme",
-       "Fähren"
-      ]
-     },
-     {
-      "type": "mc",
-      "prompt_ko": "팔츠(Pfalz)는 무엇인가?",
-      "options": [
-       "강 건너 동네",
-       "성당의 탑",
-       "성당 뒤 테라스"
-      ],
-      "answer": 2
-     },
-     {
-      "type": "summary",
-      "prompt_ko": "한 줄로 요약 (독일어 또는 한국어)"
-     }
-    ]
-   },
-   {
-    "level": "A2",
-    "text_de": "Das Basler Münster steht auf einem Hügel über dem Rhein. Man hat es über viele Jahrhunderte gebaut, deshalb sieht man romanische und gotische Teile. Die zwei Türme heißen Georgsturm und Martinsturm. Wer genug Zeit und Kraft hat, kann auf die Türme steigen. In der Kirche liegt das Grab von Erasmus von Rotterdam. Hinter dem Münster liegt die Pfalz, eine Terrasse mit einer weiten Aussicht über den Fluss. Unten am Ufer fährt die Fähre langsam hin und her.",
-    "gloss": [
-     {
-      "de": "der Hügel",
-      "ko": "언덕"
-     },
-     {
-      "de": "das Jahrhundert",
-      "ko": "세기"
-     },
-     {
-      "de": "deshalb",
-      "ko": "그래서"
-     },
-     {
-      "de": "romanisch / gotisch",
-      "ko": "로마네스크의 / 고딕의"
-     },
-     {
-      "de": "die Kraft",
-      "ko": "힘"
-     },
-     {
-      "de": "steigen",
-      "ko": "오르다"
-     },
-     {
-      "de": "das Grab",
-      "ko": "무덤"
-     },
-     {
-      "de": "weit",
-      "ko": "탁 트인, 먼"
-     }
-    ],
-    "tasks": [
-     {
-      "type": "cloze",
-      "prompt_de": "In der Kirche liegt das ___ von Erasmus von Rotterdam.",
-      "answer": "Grab",
-      "options": [
-       "Dach",
-       "Tor",
-       "Grab"
-      ]
-     },
-     {
-      "type": "mc",
-      "prompt_ko": "로마네스크와 고딕 부분이 함께 보이는 까닭은?",
-      "options": [
-       "여러 세기에 걸쳐 지어서",
-       "20세기에 새로 지어서",
-       "한 건축가가 두 양식을 좋아해서"
-      ],
-      "answer": 0
-     },
-     {
-      "type": "summary",
-      "prompt_ko": "한 줄로 요약 (독일어 또는 한국어)"
-     }
-    ]
-   }
+  "id": "day-03",
+  "theme_ko": "철자",
+  "focus_ko": "Buchstabieren · Wie schreibt man das? · Wie bitte?",
+  "new_cards": [
+    "a1-alltag:der-buchstabe",
+    "a1-alltag:buchstabieren",
+    "a1-alltag:schreiben",
+    "a1-alltag:wie",
+    "a1-alltag:das-wort",
+    "a1-alltag:wiederholen",
+    "a1-alltag:bitte",
+    "basel-strasse:langsam",
+    "a1-alltag:verstehen",
+    "a1-alltag:die-entschuldigung"
   ],
-  "summit": {
-   "text_de": "",
-   "note_ko": "오늘 꼭대기는 비워 둔다. 원문은 7일째에 아돌프 로스."
+  "stair": {
+    "source": {
+      "author": "2628 선생",
+      "title": "Wie schreibt man das?",
+      "year": 2026,
+      "license": "own",
+      "url": ""
+    },
+    "layers": [
+      {
+        "level": "A1",
+        "text_de": "Am Telefon. „Ihr Vorname, bitte?“ „Yeon Ho.“ „Entschuldigung, wie bitte? Ich verstehe das nicht. Langsam, bitte.“ „Ich buchstabiere: Y, E, O, N, und dann H, O. Das sind zwei Wörter.“ „Danke. Ich wiederhole: Y, E, O, N, H, O.“ „Ja, genau.“",
+        "gloss": [
+          {
+            "de": "das Telefon",
+            "ko": "전화"
+          },
+          {
+            "de": "Wie bitte?",
+            "ko": "뭐라고요?"
+          },
+          {
+            "de": "und dann",
+            "ko": "그다음에"
+          },
+          {
+            "de": "zwei Wörter",
+            "ko": "낱말 둘 (Wort의 복수)"
+          },
+          {
+            "de": "genau",
+            "ko": "맞아요, 바로 그거예요"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Langsam, ___.",
+            "answer": "bitte",
+            "options": [
+              "bitte",
+              "danke",
+              "tschüss"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "Yeon Ho는 몇 글자인가?",
+            "options": [
+              "4",
+              "6",
+              "8"
+            ],
+            "answer": 1
+          }
+        ]
+      },
+      {
+        "level": "A2",
+        "text_de": "Im Deutschen klingen manche Buchstaben anders als im Englischen. J heißt „Jott“, Y heißt „Ypsilon“, V heißt „Fau“ und W heißt „We“. Ä, Ö und Ü sind eigene Buchstaben, und ß heißt „Eszett“. In der Schweiz schreibt man kein ß, sondern immer ss. Am Telefon buchstabiert man oft mit Namen, in der Schweiz zum Beispiel: A wie Anna, B wie Berta.",
+        "gloss": [
+          {
+            "de": "klingen",
+            "ko": "소리가 나다"
+          },
+          {
+            "de": "manche",
+            "ko": "어떤 (것들)"
+          },
+          {
+            "de": "anders als",
+            "ko": "~와 다르게"
+          },
+          {
+            "de": "eigen",
+            "ko": "고유한, 따로인"
+          },
+          {
+            "de": "sondern",
+            "ko": "~이 아니라"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "In der Schweiz schreibt man kein ß, sondern immer ___.",
+            "answer": "ss",
+            "options": [
+              "ss",
+              "sz",
+              "s"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "독일어로 J는 어떻게 읽나?",
+            "options": [
+              "제이",
+              "요트",
+              "이"
+            ],
+            "answer": 1
+          }
+        ]
+      }
+    ],
+    "summit": {
+      "text_de": "",
+      "note_ko": "오늘 꼭대기는 비워 둔다. 원문은 7일째에 아돌프 로스."
+    }
+  },
+  "ear": {
+    "text_de": "Wie schreibt man das? Ich buchstabiere: Y, E, O, N, H, O. Yeon Ho.",
+    "lang": "de-DE",
+    "rates": [
+      0.75,
+      0.9,
+      1.0
+    ]
+  },
+  "hand": {
+    "situation_ko": "전화나 창구에서 이름 철자를 불러야 한다.",
+    "prompt_ko": "이름을 한 글자씩 부른다. 앞에 한 문장.",
+    "model_de": "Mein Vorname ist Yeon Ho. Ich buchstabiere: Y, E, O, N, H, O.",
+    "chunks": [
+      "Ich buchstabiere: …",
+      "Langsam, bitte.",
+      "Können Sie das bitte wiederholen?"
+    ]
+  },
+  "mix": {
+    "tasks": [
+      {
+        "type": "cloze",
+        "prompt_de": "Ich wohne ___ Basel.",
+        "answer": "in",
+        "options": [
+          "aus",
+          "in",
+          "hier"
+        ],
+        "from": "day-02",
+        "point_ko": "wohnen in · kommen aus"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "Herr Lee, Frau Kong에서 Lee와 Kong은?",
+        "options": [
+          "Familienname",
+          "Vorname",
+          "Beruf"
+        ],
+        "answer": 0,
+        "from": "day-01",
+        "point_ko": "Vorname · Familienname"
+      }
+    ]
+  },
+  "illustration": {
+    "scene_ko": "바젤 설계사무소 책상. 연호가 전화기를 들고 이름 철자를 한 글자씩 부르고, 메모지에 Y E O N H O가 적혀 있다. 오전.",
+    "prompt_en": "Yeon Ho, a Korean architect, sits at his desk in an architecture office in Basel and spells his first name on the phone, letter by letter; a note on the desk shows the letters Y E O N H O, morning."
+  },
+  "variants": {
+    "junghyun": {
+      "stair": {
+        "layers": [
+          {
+            "level": "A1",
+            "text_de": "Am Telefon. „Ihr Vorname, bitte?“ „Jeonghyeon.“ „Entschuldigung, wie bitte? Ich verstehe das nicht. Langsam, bitte.“ „Ich buchstabiere: J, E, O, N, G, H, Y, E, O, N.“ „Danke. Das Wort ist lang! Ich wiederhole: J, E, O, N, G, H, Y, E, O, N.“ „Ja, genau.“",
+            "gloss": [
+              {
+                "de": "das Telefon",
+                "ko": "전화"
+              },
+              {
+                "de": "Wie bitte?",
+                "ko": "뭐라고요?"
+              },
+              {
+                "de": "lang",
+                "ko": "긴"
+              },
+              {
+                "de": "genau",
+                "ko": "맞아요, 바로 그거예요"
+              }
+            ],
+            "tasks": [
+              {
+                "type": "cloze",
+                "prompt_de": "Langsam, ___.",
+                "answer": "bitte",
+                "options": [
+                  "bitte",
+                  "danke",
+                  "tschüss"
+                ]
+              },
+              {
+                "type": "mc",
+                "prompt_ko": "Jeonghyeon은 몇 글자인가?",
+                "options": [
+                  "8",
+                  "10",
+                  "12"
+                ],
+                "answer": 1
+              }
+            ]
+          },
+          {
+            "level": "A2",
+            "text_de": "Im Deutschen klingen manche Buchstaben anders als im Englischen. J heißt „Jott“, Y heißt „Ypsilon“, V heißt „Fau“ und W heißt „We“. Ä, Ö und Ü sind eigene Buchstaben, und ß heißt „Eszett“. In der Schweiz schreibt man kein ß, sondern immer ss. Am Telefon buchstabiert man oft mit Namen, in der Schweiz zum Beispiel: A wie Anna, B wie Berta.",
+            "gloss": [
+              {
+                "de": "klingen",
+                "ko": "소리가 나다"
+              },
+              {
+                "de": "manche",
+                "ko": "어떤 (것들)"
+              },
+              {
+                "de": "anders als",
+                "ko": "~와 다르게"
+              },
+              {
+                "de": "eigen",
+                "ko": "고유한, 따로인"
+              },
+              {
+                "de": "sondern",
+                "ko": "~이 아니라"
+              }
+            ],
+            "tasks": [
+              {
+                "type": "cloze",
+                "prompt_de": "In der Schweiz schreibt man kein ß, sondern immer ___.",
+                "answer": "ss",
+                "options": [
+                  "ss",
+                  "sz",
+                  "s"
+                ]
+              },
+              {
+                "type": "mc",
+                "prompt_ko": "독일어로 J는 어떻게 읽나?",
+                "options": [
+                  "제이",
+                  "요트",
+                  "이"
+                ],
+                "answer": 1
+              }
+            ]
+          }
+        ]
+      },
+      "ear": {
+        "text_de": "Wie schreibt man das? Ich buchstabiere: J, E, O, N, G, H, Y, E, O, N. Jeonghyeon.",
+        "lang": "de-DE",
+        "rates": [
+          0.75,
+          0.9,
+          1.0
+        ]
+      },
+      "hand": {
+        "situation_ko": "전화나 창구에서 이름 철자를 불러야 한다.",
+        "prompt_ko": "이름을 한 글자씩 부른다. 앞에 한 문장.",
+        "model_de": "Mein Vorname ist Jeonghyeon. Ich buchstabiere: J, E, O, N, G, H, Y, E, O, N.",
+        "chunks": [
+          "Ich buchstabiere: …",
+          "Langsam, bitte.",
+          "Können Sie das bitte wiederholen?"
+        ]
+      },
+      "illustration": {
+        "scene_ko": "드라이슈피츠 HGK 스튜디오 책상. 정현이 전화기를 들고 이름 철자를 한 글자씩 부르고, 메모지에 JEONGHYEON이 적혀 있다. 오후.",
+        "prompt_en": "Jeonghyeon, a Korean graphic design student, sits at her desk in an HGK studio on the Dreispitz campus in Basel and spells her first name on the phone, letter by letter; a note next to her sketches shows the letters J E O N G H Y E O N, afternoon."
+      }
+    }
   }
- },
- "ear": {
-  "text_de": "Das ist das Münster. Die Kirche ist sehr alt. Sie ist aus rotem Sandstein. Das Münster hat zwei Türme. Hinter der Kirche ist die Pfalz. Von hier sieht man den Rhein. Die Aussicht ist schön.",
-  "lang": "de-DE",
-  "rates": [
-   0.75,
-   0.9,
-   1.0
-  ]
- },
- "hand": {
-  "situation_ko": "관리사와 토요일 11시에 집 보기를 잡아 두었다. 그 약속이 그대로인지 확인한다.",
-  "prompt_ko": "Sie체 확인 질문 한 문장.",
-  "model_de": "Guten Tag, ist die Besichtigung am Samstag um 11 Uhr noch aktuell?",
-  "chunks": [
-   "Ist … noch aktuell?",
-   "die Besichtigung am Samstag",
-   "um 11 Uhr",
-   "Freundliche Grüße"
-  ]
- }
 }

@@ -1,0 +1,71 @@
+[
+  {
+    "id": "basel-strasse:um-uhr",
+    "field": "en_hint",
+    "old": "hour",
+    "new": "o'clock",
+    "why_ko": "Uhr는 시계·~시이고 '한 시간'은 die Stunde다. hour 힌트는 zwei Uhren을 '두 시간'으로 읽게 만든다."
+  },
+  {
+    "id": "wortgruppen:monate-herbst",
+    "field": "example_de",
+    "old": "Die Herbstmesse ist im Oktober.",
+    "new": "Die Herbstmesse beginnt im Oktober.",
+    "why_ko": "바젤 가을 장터는 10월 말에 시작해 11월 중순까지 16일 열린다. '10월에 있다'는 사실과 어긋난다."
+  },
+  {
+    "id": "wortgruppen:monate-herbst",
+    "field": "example_ko",
+    "old": "가을 장터는 10월에 열린다.",
+    "new": "가을 장터는 10월에 시작한다.",
+    "why_ko": "example_de 고침에 맞춘다."
+  },
+  {
+    "id": "eigene-saetze:vom-bis-verreist",
+    "field": "note_ko",
+    "old": "verreist는 A2 목록 밖 낱말 verreisen에서. 날짜는 vom sechzehnten bis achtzehnten으로 읽는다.",
+    "new": "verreist는 A2 낱말 verreisen에서. 날짜는 vom sechzehnten bis achtzehnten으로 읽는다.",
+    "why_ko": "verreisen은 goethe-a2.json에 있다. '목록 밖'은 틀린 안내다."
+  },
+  {
+    "id": "eigene-saetze:vom-bis-verreist",
+    "field": "tags",
+    "old": [
+      "eigen",
+      "Ausdruck"
+    ],
+    "new": [
+      "A2",
+      "Ausdruck"
+    ],
+    "why_ko": "목록 낱말(verreisen, A2)이 있으니 eigen이 아니다."
+  },
+  {
+    "id": "eigene-saetze:vom-bis-verreist",
+    "field": "lemma",
+    "old": null,
+    "new": "verreisen",
+    "why_ko": "수준 표시를 목록 표제어로 잡는다."
+  },
+  {
+    "id": "a1-alltag:der-bahnsteig",
+    "field": "example_de",
+    "old": "Der Zug fährt vom Bahnsteig 7.",
+    "new": "Der Zug fährt von Bahnsteig 7.",
+    "why_ko": "번호가 붙은 Bahnsteig·Gleis 앞에는 관사를 빼는 것이 보통이다 (von Gleis 7, auf Gleis 7)."
+  },
+  {
+    "id": "a1-alltag:nie",
+    "field": "example_de",
+    "old": "Er ist nie zu spät.",
+    "new": "Er kommt nie zu spät.",
+    "why_ko": "'늦지 않는다'는 독일어로 zu spät kommen이 자연스럽다. ist zu spät는 영어 is late를 옮긴 말투다."
+  },
+  {
+    "id": "a1-alltag:spaet",
+    "field": "example_ko",
+    "old": "8시는 너무 늦어?",
+    "new": "저녁 8시는 너무 늦어?",
+    "why_ko": "20 Uhr를 그냥 8시로 옮기면 아침 8시로도 읽힌다."
+  }
+]

@@ -1,0 +1,215 @@
+{
+  "id": "day-19",
+  "theme_ko": "kein",
+  "focus_ko": "kein · keine: 명사를 부정 (동사·형용사는 nicht)",
+  "new_cards": [
+    "a1-alltag:kein",
+    "eigene-saetze:wir-rauchen-nicht",
+    "eigene-saetze:kein-problem-fuer-uns",
+    "a1-alltag:das-brot",
+    "a1-alltag:das-geld",
+    "a1-alltag:das-maedchen",
+    "a1-alltag:nichts",
+    "a1-alltag:die-zeit",
+    "a1-alltag:die-milch",
+    "a1-alltag:der-hunger"
+  ],
+  "stair": {
+    "source": {
+      "author": "Brüder Grimm",
+      "title": "Die Sternthaler",
+      "year": 1857,
+      "license": "public-domain",
+      "url": "https://de.wikisource.org/wiki/Die_Sternthaler_(1857)"
+    },
+    "layers": [
+      {
+        "level": "A1",
+        "text_de": "Ein Mädchen ist arm. Es hat keine Eltern mehr. Es hat kein Zimmer und kein Bett. Es hat nur die Kleider und ein Stück Brot. Das Mädchen hat kein Geld, aber ein gutes Herz. Ein Mann sagt: „Ich habe Hunger.“ Das Mädchen sagt: „Hier, das Brot ist für dich.“ Am Ende hat es nichts mehr. Da fallen Sterne vom Himmel. Die Sterne sind Geld.",
+        "gloss": [
+          {
+            "de": "arm",
+            "ko": "가난한"
+          },
+          {
+            "de": "das Zimmer",
+            "ko": "방"
+          },
+          {
+            "de": "das Bett",
+            "ko": "침대"
+          },
+          {
+            "de": "die Kleider",
+            "ko": "옷"
+          },
+          {
+            "de": "das Stück",
+            "ko": "조각"
+          },
+          {
+            "de": "ein gutes Herz",
+            "ko": "착한 마음 (das Herz)"
+          },
+          {
+            "de": "für dich",
+            "ko": "너에게 주는, 네 것"
+          },
+          {
+            "de": "der Stern",
+            "ko": "별"
+          },
+          {
+            "de": "vom Himmel",
+            "ko": "하늘에서"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Das Mädchen hat ___ Geld.",
+            "answer": "kein",
+            "options": [
+              "kein",
+              "nicht",
+              "keine"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "소녀가 남자에게 준 것은?",
+            "options": [
+              "빵",
+              "돈",
+              "옷"
+            ],
+            "answer": 0
+          }
+        ]
+      },
+      {
+        "level": "A2",
+        "text_de": "Bei der Wohnungssuche fragen Verwaltungen oft: Rauchen Sie? Haben Sie Haustiere? Spielen Sie ein Instrument? In unserer Nachricht vom 8. Oktober stand: „Wir rauchen nicht, haben keine Haustiere und spielen kein Instrument.“ Merken Sie sich: Vor einem Nomen mit ein oder ohne Artikel steht kein, sonst steht nicht. Die Wohnung ist im vierten Stock ohne Lift? „Das ist für uns kein Problem.“",
+        "gloss": [
+          {
+            "de": "das Haustier",
+            "ko": "반려동물"
+          },
+          {
+            "de": "das Instrument",
+            "ko": "악기"
+          },
+          {
+            "de": "die Nachricht",
+            "ko": "메시지"
+          },
+          {
+            "de": "sich merken",
+            "ko": "기억해 두다"
+          },
+          {
+            "de": "sonst",
+            "ko": "그렇지 않으면"
+          },
+          {
+            "de": "der Stock",
+            "ko": "층"
+          },
+          {
+            "de": "der Lift",
+            "ko": "승강기 (스위스)"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Vor einem Nomen mit ein oder ohne Artikel steht ___, sonst steht nicht.",
+            "answer": "kein",
+            "options": [
+              "kein",
+              "nicht",
+              "nichts"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "보낸 문장에서 Haustiere 앞에 오는 말은?",
+            "options": [
+              "keine",
+              "nicht",
+              "kein"
+            ],
+            "answer": 0
+          }
+        ]
+      }
+    ],
+    "summit": {
+      "text_de": "Es war einmal ein kleines Mädchen, dem war Vater und Mutter gestorben, und es war so arm, daß es kein Kämmerchen mehr hatte darin zu wohnen und kein Bettchen mehr darin zu schlafen und endlich gar nichts mehr als die Kleider auf dem Leib und ein Stückchen Brot in der Hand, das ihm ein mitleidiges Herz geschenkt hatte. Es war aber gut und fromm.",
+      "note_ko": "그림 형제, 「별 은화」(『어린이와 가정을 위한 옛이야기』 1857년 판) 첫 두 문장. 옛 철자(daß, Sternthaler) 그대로. kein이 두 번 나온다."
+    }
+  },
+  "ear": {
+    "text_de": "Das Mädchen hat kein Geld und kein Zimmer. Es hat nur ein Stück Brot. Am Ende hat es nichts mehr.",
+    "lang": "de-DE",
+    "rates": [
+      0.75,
+      0.9,
+      1.0
+    ]
+  },
+  "hand": {
+    "situation_ko": "집 신청서의 흡연·반려동물 칸에 한 줄 답한다(10월 8일에 보낸 문장).",
+    "prompt_ko": "wir로 한 문장, nicht와 kein을 하나씩.",
+    "model_de": "Wir rauchen nicht und haben keine Haustiere.",
+    "chunks": [
+      "Wir rauchen nicht.",
+      "Wir haben keine …",
+      "Das ist für uns kein Problem."
+    ]
+  },
+  "mix": {
+    "tasks": [
+      {
+        "type": "mc",
+        "prompt_ko": "「그건 멀지 않다」 바른 문장은?",
+        "options": [
+          "Das nicht ist weit.",
+          "Das ist nicht weit.",
+          "Das ist weit nicht."
+        ],
+        "answer": 1,
+        "from": "day-18",
+        "point_ko": "nicht 자리"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "___ Turm ist hoch.",
+        "answer": "Der",
+        "options": [
+          "Das",
+          "Die",
+          "Der"
+        ],
+        "from": "day-15",
+        "point_ko": "정관사 der (der Turm)"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Wo ___ ihr?",
+        "answer": "wohnt",
+        "options": [
+          "wohnt",
+          "wohnen",
+          "wohnst"
+        ],
+        "from": "day-09",
+        "point_ko": "ihr + -t"
+      }
+    ]
+  },
+  "illustration": {
+    "scene_ko": "그림 형제 「별 은화」. 밤 들판에서 가난한 소녀가 마지막 빵 한 조각을 배고픈 노인에게 건넨다. 하늘에서 별이 은화가 되어 떨어진다.",
+    "prompt_en": "A poor little girl in a simple dress stands in an open field at night and gives her last piece of bread to a hungry old man; above them, stars fall from the sky and turn into silver coins."
+  }
+}

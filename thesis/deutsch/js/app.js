@@ -1,6 +1,7 @@
-// Deutsch - 화면과 흐름. 빌드 도구 없이 ES 모듈로 돈다.
-import { S, save, USERS, BLOCKS, ymd, weekMinutes, closedOn, addLog, addAttempt, exportFor } from "./store.js";
-import { loadContent } from "./content.js";
+// Deutsch 2628 - 화면과 흐름. 빌드 도구 없이 ES 모듈로 돈다.
+import { S, save, USERS, BLOCKS, ymd, weekMinutes, closedOn, addLog, addAttempt, exportFor, exportState, mergeState } from "./store.js";
+import { loadContent, forUser } from "./content.js";
+import * as sync from "./sync.js";
 import { RATINGS, preview, rate, intervalKo, buildQueue } from "./srs.js";
 import { hasSpeech, deVoices, onVoices, pickVoice, speak, stopSpeaking } from "./speech.js";
 import { canRecord, startRec, putRec, getRec } from "./rec.js";
@@ -30,6 +31,7 @@ function go(route) { if (location.hash === "#/" + route) route_(); else location
 function user() { return S().user; }
 function dateKo(d = new Date()) { return (d.getMonth() + 1) + "월 " + d.getDate() + "일 " + "일월화수목금토"[d.getDay()] + "요일"; }
 function norm(s) { return String(s == null ? "" : s).trim().replace(/\s+/g, " "); }
+function whenKo(iso) { const d = new Date(iso); return (d.getMonth() + 1) + "." + d.getDate() + " " + String(d.getHours()).padStart(2, "0") + ":" + String(d.getMinutes()).padStart(2, "0"); }
 function fold(s) { return norm(s).toLowerCase().replace(/ä/g, "a").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ß/g, "ss").replace(/ae/g, "a").replace(/oe/g, "o").replace(/ue/g, "u"); }
 
 /* ── 블록 시간 ── */
@@ -62,6 +64,19 @@ function introduced(u) {
   const ids = [];
   C.days.forEach((d, i) => { if (i <= upto) for (const id of d.new_cards || []) if (!ids.includes(id)) ids.push(id); });
   return ids.length ? ids : Object.keys(C.cards);
+}
+
+/* ── 주간 챕터: 그 주 마지막 날을 마치면 「표현 정리」·「꼭지점 찍기」 ── */
+function dayDone(u, dayId) { return S().log.some((e) => e.user === u && e.dayId === dayId && e.closed && BLOCKS[e.block]); }
+function weekClosed(u, w) { return S().log.some((e) => e.user === u && e.block === "week" && e.dayId === w.id && e.closed); }
+function weekEndingOn(dayId) { return (C.weeks || []).find((w) => w.days[w.days.length - 1] === dayId) || null; }
+function latestDoneWeek(u) {
+  let best = null; let bi = -1;
+  for (const w of C.weeks || []) {
+    const last = w.days[w.days.length - 1]; const i = C.days.findIndex((d) => d.id === last);
+    if (i > bi && dayDone(u, last)) { best = w; bi = i; }
+  }
+  return best;
 }
 
 /* ── 피드백: 맞힌 것 → 고칠 것 하나 → 바른 문장 ── */
@@ -119,6 +134,13 @@ function screenToday() {
       h("span", { class: "nm" }, BLOCKS[b]),
       h("span", { class: "hint" }, hints[b]),
       h("span", { class: "st" }, closed.has(b) ? "닫음" : "5분")));
+  const wk = latestDoneWeek(u);
+  if (wk && (!weekClosed(u, wk) || (day && day.id === wk.days[wk.days.length - 1]))) {
+    rows.push(h("button", { class: "blk", type: "button", "data-block": "week", onclick: () => go("week?" + wk.id) },
+      h("span", { class: "nm" }, "주간 정리"),
+      h("span", { class: "hint" }, wk.title_ko || wk.id),
+      h("span", { class: "st" }, weekClosed(u, wk) ? "닫음" : "정리")));
+  }
   const mins = weekMinutes(u);
   render(
     h("p", { class: "meta" }, dateKo(), " · ", closed.size ? h("b", { id: "closed-today" }, "오늘 닫힘") : "블록 하나면 오늘이 닫힌다"),
@@ -129,8 +151,9 @@ function screenToday() {
     h("div", { class: "foot" },
       btn(S().diagnostic[u] ? "진단 다시" : "진단", () => go("diag"), "btn"),
       btn("기록 내보내기", () => exportJSON(), "btn"),
+      btn("기기 연결", () => go("settings"), "btn"),
       btn("사람 바꾸기", () => { S().user = null; save(); go("pick"); }, "btn")),
-    h("p", { class: "fn", id: "export-msg" }, "기록은 이 기기에만 있다.")
+    h("p", { class: "fn", id: "export-msg" }, sync.code() ? "연결한 기기끼리 기록이 합쳐진다." : "기록은 이 기기에만 있다.")
   );
 }
 
@@ -138,7 +161,7 @@ function exportJSON() {
   const u = user();
   const data = exportFor(u, { base: C.base, days: C.days.map((d) => d.id), sample: C.sample });
   const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
-  const a = h("a", { href: URL.createObjectURL(blob), download: "deutsch-" + u + "-" + ymd() + ".json" });
+  const a = h("a", { href: URL.createObjectURL(blob), download: "deutsch-2628-" + u + "-" + ymd() + ".json" });
   document.body.append(a); a.click(); a.remove();
   setTimeout(() => URL.revokeObjectURL(a.href), 4000);
   const m = document.getElementById("export-msg"); if (m) m.textContent = "기록을 내려받았다.";
@@ -152,8 +175,16 @@ function blockFrame(block, day, ...body) {
     h("p", { class: "meta" }, "약 5분 · ", day ? day.theme_ko || day.id : ""),
     h("h1", null, BLOCKS[block]),
     ...body,
-    h("div", { class: "closebar" }, btn("이 블록 닫기", () => { endSession(true); go("today"); }, "btn big primary")),
+    h("div", { class: "closebar" }, btn("이 블록 닫기", () => { endSession(true); afterClose(day); }, "btn big primary")),
   ];
+}
+// 그 주 마지막 날을 처음 닫으면 주간 정리로 한 번 데려간다. 그 뒤로는 오늘 화면의 줄로.
+function afterClose(day) {
+  const u = user(); const w = day ? weekEndingOn(day.id) : null;
+  const seen = (S().prefs.weekSeen = S().prefs.weekSeen || {});
+  const mine = (seen[u] = seen[u] || {});
+  if (w && !mine[w.id] && !weekClosed(u, w)) { mine[w.id] = true; save(); go("week?" + w.id); return; }
+  go("today");
 }
 
 /* ── 복습 ── */
@@ -169,11 +200,21 @@ function screenReview() {
       const dues = Object.values(reviews).map((c) => new Date(c.due)).sort((a, b) => a - b);
       area.append(h("p", { class: "lead", id: "review-done" }, "지금 볼 카드는 다 봤다."),
         dues.length ? h("p", { class: "muted" }, "다음 카드는 " + intervalKo(dues[0]) + " 뒤.") : null);
+      const mix = day && day.mix ? day.mix.tasks || [] : [];
+      if (mix.length) {
+        area.append(h("h2", { id: "mix" }, "섞어 풀기"), h("p", { class: "muted" }, "지난 날 배운 것을 섞었다. 틀려도 그게 연습이다."));
+        mix.forEach((t) => {
+          const v = taskView(t, { dayId: day.id, level: "mix", block: "review", from: t.from });
+          if (v) { if (t.point_ko) v.prepend(h("p", { class: "fn" }, t.point_ko)); area.append(v); }
+        });
+      }
       return;
     }
     const id = queue[0]; const c = C.cards[id]; const shown = Date.now();
     const back = h("div", { class: "back", hidden: true },
       h("p", { class: "ko" }, c.ko || ""),
+      c.en_hint ? h("p", { class: "muted small", lang: "en" }, "영어 · " + c.en_hint) : null,
+      c.note_ko ? h("p", { class: "muted small" }, c.note_ko) : null,
       c.example_de ? h("p", { class: "ex", lang: "de" }, c.example_de) : null,
       c.example_ko ? h("p", { class: "muted" }, c.example_ko) : null,
       c.example_de && hasSpeech() ? btn("예문 듣기", () => speak(c.example_de, voiceOpts()), "btn") : null,
@@ -250,7 +291,7 @@ function taskView(task, ctx) {
   const box = h("div", { class: "task card", "data-task": task.type });
   const out = h("div", { class: "out" });
   const log = (answer, correct, fb) => {
-    addAttempt({ block: "stair", dayId: ctx.dayId, level: ctx.level, task: task.type, prompt: task.prompt_de || task.prompt_ko || "", answer, correct });
+    addAttempt({ block: ctx.block || "stair", dayId: ctx.dayId, level: ctx.level, from: ctx.from, task: task.type, prompt: task.prompt_de || task.prompt_ko || "", answer, correct });
     if (correct === false && session) session.errors.push({ task: task.type, wrong: answer, right: task.type === "mc" ? (task.options || [])[task.answer] : task.answer });
     out.replaceChildren(fb);
   };
@@ -278,14 +319,6 @@ function taskView(task, ctx) {
         : feedback({ fix: "「" + o + "」이 아니라 「" + want + "」.", sentence: want, sentenceLabel: "바른 답", de: false }));
     } }, o)));
     box.append(opts);
-  } else if (task.type === "summary") {
-    box.append(h("p", { class: "label" }, "한 줄 요약"), h("p", { class: "q" }, task.prompt_ko || ""));
-    const ta = h("textarea", { rows: "2", "aria-label": "요약" });
-    const ok = btn("저장", () => {
-      if (!norm(ta.value)) return;
-      log(norm(ta.value), null, feedback({ right: "적은 요약을 저장했다." }));
-    }, "btn");
-    box.append(ta, ok);
   } else {
     return null;
   }
@@ -403,14 +436,14 @@ function screenEar() {
 }
 
 /* ── 손 ── */
-function screenHand() {
-  const u = user(); const day = currentDay(u); const hand = day && day.hand;
-  if (!hand) { render(...blockFrame("hand", day, h("p", { class: "muted" }, "오늘 쓰기 지시가 없다."))); return; }
-  const ta = h("textarea", { rows: "3", lang: "de", id: "hand-input", "aria-label": "한 문장", spellcheck: "false" });
-  const out = h("div", { class: "out", id: "hand-out" });
+// 쓰기 한 칸: 상황 · 지시 · 입력 · 제출하면 모범 문장과 덩어리. 손 블록과 주간 정리가 같이 쓴다.
+function handView(hand, ctx) {
+  const pre = ctx.idPrefix || "hand";
+  const ta = h("textarea", { rows: "3", lang: "de", id: pre + "-input", "aria-label": "한 문장", spellcheck: "false" });
+  const out = h("div", { class: "out", id: pre + "-out" });
   const submit = btn("제출", () => {
     const v = norm(ta.value); if (!v) return;
-    addAttempt({ block: "hand", dayId: day.id, task: "write", prompt: hand.prompt_ko, situation: hand.situation_ko, answer: v });
+    addAttempt({ block: ctx.block, dayId: ctx.dayId, task: "write", prompt: hand.prompt_ko, situation: hand.situation_ko, answer: v });
     out.replaceChildren(
       h("p", { class: "label" }, "모범 문장"),
       h("p", { class: "model", lang: "de" }, hand.model_de),
@@ -420,11 +453,85 @@ function screenHand() {
       h("p", { class: "muted small" }, "적은 문장은 기록에 남았다."));
     submit.textContent = "다시 제출";
   }, "btn big primary");
-  submit.id = "hand-submit";
-  render(...blockFrame("hand", day,
-    h("p", { class: "label" }, "상황"), h("p", null, hand.situation_ko),
-    h("p", { class: "label" }, "쓰기"), h("p", null, hand.prompt_ko),
-    ta, h("div", { class: "row" }, submit), out));
+  submit.id = pre + "-submit";
+  return [
+    hand.situation_ko ? h("p", { class: "label" }, "상황") : null, hand.situation_ko ? h("p", null, hand.situation_ko) : null,
+    h("p", { class: "label" }, "쓰기"), h("p", null, hand.prompt_ko || ""),
+    ta, h("div", { class: "row" }, submit), out];
+}
+function screenHand() {
+  const u = user(); const day = currentDay(u); const hand = day && day.hand;
+  if (!hand) { render(...blockFrame("hand", day, h("p", { class: "muted" }, "오늘 쓰기 지시가 없다."))); return; }
+  render(...blockFrame("hand", day, ...handView(hand, { block: "hand", dayId: day.id })));
+}
+
+/* ── 주간 정리 ── */
+function screenWeek() {
+  const u = user();
+  const want = location.hash.split("?")[1];
+  const w = (C.weeks || []).find((x) => x.id === want) || latestDoneWeek(u);
+  const back = h("div", { class: "bar" }, btn("오늘로", () => go("today"), "btn"));
+  if (!w) { endSession(false); render(back, h("h1", null, "주간 정리"), h("p", { class: "muted" }, "아직 정리할 주가 없다.")); return; }
+  openSession("week", w.id);
+  const phrases = w.phrases || [];
+  const rv = w.review || {};
+  const tasks = (rv.tasks || []).map((t) => {
+    const v = taskView(t, { dayId: w.id, level: "week", block: "week", from: t.from });
+    if (v && t.point_ko) v.prepend(h("p", { class: "fn" }, t.point_ko));
+    return v;
+  }).filter(Boolean);
+  render(
+    back,
+    h("p", { class: "meta" }, "주간 정리 · 약 10분"),
+    h("h1", null, w.title_ko || w.id),
+    h("h2", { id: "phrases" }, "표현 정리"),
+    phrases.length ? h("ul", { class: "phrases" }, phrases.map((p) => h("li", null,
+      h("p", { class: "de", lang: "de" }, p.de),
+      h("p", { class: "muted" }, p.ko)))) : h("p", { class: "muted" }, "표현이 아직 없다."),
+    h("h2", { id: "peaks" }, "꼭지점 찍기"),
+    tasks.length || rv.write ? h("p", { class: "muted" }, "한 주 배운 것을 짚는다.") : h("p", { class: "muted" }, "문항이 아직 없다."),
+    ...tasks,
+    rv.write ? h("h3", null, "쓰기") : null,
+    ...(rv.write ? handView(rv.write, { block: "week", dayId: w.id, idPrefix: "week-hand" }) : []),
+    h("div", { class: "closebar" }, btn("이 정리 닫기", () => { endSession(true); go("today"); }, "btn big primary")));
+}
+
+/* ── 설정: 기기 연결 ── */
+// 한 코드에 두 사람 기록이 함께 담긴다. 기기마다 사람은 따로 고른다.
+function syncBox() {
+  const box = h("div", { class: "task", id: "sync" });
+  const note = h("p", { class: "fn", id: "sync-msg" });
+  const fail = (e) => { note.textContent = "안 됐다: " + (e.message || e); };
+  function draw() {
+    const c = sync.code(); const st = sync.status();
+    if (!c) {
+      const inp = h("input", { type: "text", id: "sync-code", placeholder: "다른 기기의 코드 20자", autocapitalize: "characters", spellcheck: "false", autocomplete: "off" });
+      box.replaceChildren(
+        h("p", null, "같은 코드를 넣은 기기끼리 연호·정현 두 사람의 기록(카드 일정 · 진도 · 시간)이 자동으로 합쳐진다. 기록은 이 기기에서 잠근 채 올라가고, 서버는 내용을 읽지 못한다. 녹음은 기기에만 남는다."),
+        h("div", { class: "row" }, btn("코드 만들기", async () => { note.textContent = "만드는 중"; try { await sync.start(); note.textContent = "만들었다. 다른 기기에는 위 코드를 넣는다."; draw(); } catch (e) { fail(e); } }, "btn big primary")),
+        h("div", { class: "row" }, inp, btn("코드 넣기", async () => { note.textContent = "잇는 중"; try { await sync.join(inp.value); note.textContent = "이었다. 기록을 합쳤다."; draw(); } catch (e) { fail(e); } }, "btn")),
+        note);
+      return;
+    }
+    box.replaceChildren(
+      h("p", null, h("span", { class: "label" }, "코드"), " ", h("b", { id: "sync-key", lang: "en" }, sync.pretty(c))),
+      h("p", { class: "fn" }, "다른 기기의 이 화면에서 「코드 넣기」에 넣는다. 코드를 잃으면 서버 기록도 못 연다. 남에게 보이지 않는다."),
+      h("p", { class: "muted", id: "sync-st" }, st.err ? "마지막 시도 실패: " + st.err : st.at ? "마지막 동기화 " + whenKo(st.at) : "아직 맞추지 않았다"),
+      h("div", { class: "row" },
+        btn("지금 맞추기", async () => { note.textContent = "맞추는 중"; try { const r = await sync.syncNow(); note.textContent = r.changed ? "다른 기기 기록을 합쳤다." : "같다."; draw(); } catch (e) { fail(e); draw(); } }, "btn"),
+        btn("이 기기에서 끊기", () => { if (confirm("이 기기만 끊는다. 서버 기록과 이 기기 기록은 그대로다.")) { sync.leave(); draw(); } }, "btn")),
+      note);
+  }
+  draw();
+  return box;
+}
+function screenSettings() {
+  endSession(false);
+  render(
+    h("div", { class: "bar" }, btn("오늘로", () => go("today"), "btn")),
+    h("h1", null, "설정"),
+    h("h2", null, "기기 연결"),
+    syncBox());
 }
 
 /* ── 진단 ── */
@@ -504,10 +611,12 @@ function screenDiag() {
 }
 
 /* ── 길 ── */
-const ROUTES = { pick: screenPick, today: screenToday, review: screenReview, stair: screenStair, ear: screenEar, hand: screenHand, diag: screenDiag };
+const ROUTES = { pick: screenPick, today: screenToday, review: screenReview, stair: screenStair, ear: screenEar, hand: screenHand, diag: screenDiag, week: screenWeek, settings: screenSettings };
 function route_() {
+  if (!C) return; // 콘텐츠를 읽는 중에 주소가 바뀌면 main() 이 끝나고 그린다
   const name = (location.hash.replace(/^#\/?/, "") || "today").split("?")[0];
   if (!user() || !USERS[user()]) { if (name !== "pick") history.replaceState(null, "", "#/pick"); return screenPick(); }
+  forUser(C, user()); // 정현이면 variants.junghyun 을 덮은 날들
   setWho();
   (ROUTES[name] || screenToday)();
 }
@@ -533,6 +642,9 @@ async function main() {
   try { C = await loadContent(); }
   catch (e) { render(h("h1", null, "열 수 없다"), h("p", { class: "muted" }, "콘텐츠를 읽지 못했다. 처음 한 번은 인터넷이 필요하다.")); return; }
   if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => {});
+  // 다른 기기 기록이 들어오면 오늘 · 설정 화면만 다시 그린다(카드를 넘기는 중에는 건드리지 않는다)
+  try { await sync.setup({ app: "deutsch2628", get: exportState, merge: mergeState, changed: () => { const r = (location.hash.replace(/^#\/?/, "") || "today").split("?")[0]; if (r === "today" || r === "settings") route_(); } }); }
+  catch (e) { /* 동기화가 안 돼도 앱은 돈다 */ }
   route_();
 }
 main();

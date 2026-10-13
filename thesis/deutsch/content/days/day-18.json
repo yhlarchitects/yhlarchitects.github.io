@@ -1,0 +1,208 @@
+{
+  "id": "day-18",
+  "theme_ko": "nicht",
+  "focus_ko": "nicht: 동사·형용사·부사를 부정",
+  "new_cards": [
+    "a1-alltag:nicht",
+    "basel-strasse:das-tor",
+    "basel-strasse:die-mauer",
+    "a1-alltag:der-bahnhof",
+    "a1-alltag:die-bahn",
+    "a1-alltag:einsteigen",
+    "basel-strasse:aussteigen",
+    "basel-strasse:zu-fuss",
+    "a1-alltag:mit",
+    "a1-alltag:weit"
+  ],
+  "stair": {
+    "source": {
+      "author": "2628 선생",
+      "title": "Das Spalentor",
+      "year": 2026,
+      "license": "own",
+      "url": ""
+    },
+    "layers": [
+      {
+        "level": "A1",
+        "text_de": "Ich komme mit der Bahn aus Zürich. Am Bahnhof SBB steige ich aus. Das Tram? Nein, ich steige nicht ein. Ich gehe gern zu Fuß. Die Stadt ist nicht groß, und nichts ist sehr weit. Dann sehe ich das Spalentor. Das Tor ist sehr alt. Früher war hier eine Mauer um die Stadt. Die Mauer ist heute nicht mehr da.",
+        "gloss": [
+          {
+            "de": "mit der Bahn",
+            "ko": "기차로"
+          },
+          {
+            "de": "am Bahnhof",
+            "ko": "역에서"
+          },
+          {
+            "de": "gern",
+            "ko": "즐겨"
+          },
+          {
+            "de": "nichts",
+            "ko": "아무것도 ~ 않다"
+          },
+          {
+            "de": "früher",
+            "ko": "예전에"
+          },
+          {
+            "de": "war",
+            "ko": "~이었다 (sein의 과거)"
+          },
+          {
+            "de": "um die Stadt",
+            "ko": "도시를 둘러싸고"
+          },
+          {
+            "de": "nicht mehr",
+            "ko": "더는 ~ 않다"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Die Mauer ist heute ___ mehr da.",
+            "answer": "nicht",
+            "options": [
+              "nicht",
+              "kein",
+              "nichts"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "역에서 트램을 타나?",
+            "options": [
+              "탄다",
+              "안 탄다, 걸어간다",
+              "자전거를 탄다"
+            ],
+            "answer": 1
+          }
+        ]
+      },
+      {
+        "level": "A2",
+        "text_de": "Das Spalentor wurde um 1400 gebaut. Es ist eines von drei Toren der alten Stadtmauer, die heute noch stehen. Die anderen zwei sind das St. Alban-Tor und das St. Johanns-Tor. Im 19. Jahrhundert hat man die Stadtmauer fast überall abgerissen, denn die Stadt wollte wachsen. Wer heute durch das Spalentor geht, geht durch über sechshundert Jahre Geschichte.",
+        "gloss": [
+          {
+            "de": "die Stadtmauer",
+            "ko": "성벽"
+          },
+          {
+            "de": "stehen",
+            "ko": "서 있다"
+          },
+          {
+            "de": "das Jahrhundert",
+            "ko": "세기"
+          },
+          {
+            "de": "abreißen",
+            "ko": "허물다"
+          },
+          {
+            "de": "wachsen",
+            "ko": "자라다, 커지다"
+          },
+          {
+            "de": "die Geschichte",
+            "ko": "역사"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Das Spalentor wurde um ___ gebaut.",
+            "answer": "1400",
+            "options": [
+              "1200",
+              "1400",
+              "1800"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "지금도 서 있는 옛 성문은 몇 개인가?",
+            "options": [
+              "2",
+              "3",
+              "5"
+            ],
+            "answer": 1
+          }
+        ]
+      }
+    ],
+    "summit": {
+      "text_de": "",
+      "note_ko": "오늘 꼭대기는 비워 둔다. 원문은 내일 그림 형제."
+    }
+  },
+  "ear": {
+    "text_de": "Am Bahnhof steige ich aus. Ich steige nicht ins Tram ein. Ich gehe zu Fuß. Das Spalentor ist sehr alt.",
+    "lang": "de-DE",
+    "rates": [
+      0.75,
+      0.9,
+      1.0
+    ]
+  },
+  "hand": {
+    "situation_ko": "길에서 어떤 곳이 먼지, 걸어갈 수 있는지 묻는다.",
+    "prompt_ko": "Sie체 질문 두 문장.",
+    "model_de": "Entschuldigung, ist das Spalentor weit? Kann ich zu Fuß gehen?",
+    "chunks": [
+      "Ist … weit?",
+      "Kann ich zu Fuß gehen?",
+      "Ich gehe zu Fuß.",
+      "Das ist nicht weit."
+    ]
+  },
+  "mix": {
+    "tasks": [
+      {
+        "type": "mc",
+        "prompt_ko": "die Fähre의 복수는?",
+        "options": [
+          "die Fährer",
+          "die Fährs",
+          "die Fähren"
+        ],
+        "answer": 2,
+        "from": "day-17",
+        "point_ko": "복수 (die Fähre → die Fähren)"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Hallo Aaron! Ist ___ Familie in Bern?",
+        "answer": "deine",
+        "options": [
+          "deine",
+          "dein",
+          "du"
+        ],
+        "from": "day-13",
+        "point_ko": "dein · deine"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "___ Linie fährt zum Bahnhof SBB?",
+        "answer": "Welche",
+        "options": [
+          "Wo",
+          "Welche",
+          "Wie"
+        ],
+        "from": "day-05",
+        "point_ko": "Welche …? (W-Frage)"
+      }
+    ]
+  },
+  "illustration": {
+    "scene_ko": "평일 아침, 바젤 SBB역에서 걸어온 연호가 옛 성문 슈팔렌 문 앞에 선다. 문 옆 길로 초록 트램이 지나간다.",
+    "prompt_en": "A Korean man in his thirties, who has walked from Basel SBB station, stops in front of the Spalentor, the tall medieval city gate of Basel with its pointed tiled roof, on a weekday morning; a green tram passes on the street beside the gate."
+  }
+}

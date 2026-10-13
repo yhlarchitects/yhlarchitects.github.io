@@ -1,0 +1,423 @@
+{
+  "id": "week-4",
+  "days": [
+    "day-22",
+    "day-23",
+    "day-24",
+    "day-25",
+    "day-26",
+    "day-27",
+    "day-28"
+  ],
+  "title_ko": "시각 · 요일 · 날짜 · 연도, 약속 잡기와 표 사기",
+  "phrases": [
+    {
+      "de": "Wie spät ist es?",
+      "ko": "몇 시예요?",
+      "from": "day-22"
+    },
+    {
+      "de": "Es ist Viertel nach acht.",
+      "ko": "8시 15분이에요.",
+      "from": "day-22"
+    },
+    {
+      "de": "Ich habe um halb neun einen Termin mit Tabea.",
+      "ko": "8시 반에 Tabea와 회의가 있다.",
+      "from": "day-22"
+    },
+    {
+      "de": "Meinst du halb neun, also 8.30 Uhr?",
+      "ko": "halb neun 말이야, 그러니까 8시 30분?",
+      "from": "day-22"
+    },
+    {
+      "de": "am Montag · am Abend",
+      "ko": "월요일에 · 저녁에",
+      "from": "day-23"
+    },
+    {
+      "de": "Morgen ist Freitag.",
+      "ko": "내일은 금요일이다.",
+      "from": "day-23"
+    },
+    {
+      "de": "Am Sonntag sind die Geschäfte zu.",
+      "ko": "일요일에는 가게가 닫혀 있다.",
+      "from": "day-23"
+    },
+    {
+      "de": "Vielen Dank für heute Abend.",
+      "ko": "오늘 저녁 고마웠어요.",
+      "from": "day-23"
+    },
+    {
+      "de": "Hast du am Freitag Zeit?",
+      "ko": "금요일에 시간 있어?",
+      "from": "day-24"
+    },
+    {
+      "de": "Am Freitag bin ich nicht frei. Vielleicht am Samstag?",
+      "ko": "금요일은 안 돼. 토요일은 어때?",
+      "from": "day-24"
+    },
+    {
+      "de": "Um sechs passt mir gut.",
+      "ko": "6시가 나한테 좋아.",
+      "from": "day-24"
+    },
+    {
+      "de": "Dann treffen wir uns um sechs.",
+      "ko": "그럼 6시에 만나자.",
+      "from": "day-24"
+    },
+    {
+      "de": "Wir richten uns gerne nach Ihnen.",
+      "ko": "그쪽 일정에 기꺼이 맞추겠습니다.",
+      "from": "day-24"
+    },
+    {
+      "de": "der zwölfte Oktober · am dritten März",
+      "ko": "10월 12일 · 3월 3일에",
+      "from": "day-25"
+    },
+    {
+      "de": "Vom 16. bis 18. Oktober sind wir verreist.",
+      "ko": "10월 16일부터 18일까지 우리는 여행 중이다.",
+      "from": "day-25"
+    },
+    {
+      "de": "Wann ist dein Geburtstag?",
+      "ko": "네 생일은 언제야?",
+      "from": "day-25"
+    },
+    {
+      "de": "Ich bin in Korea geboren.",
+      "ko": "나는 한국에서 태어났다.",
+      "from": "day-26"
+    },
+    {
+      "de": "immer noch",
+      "ko": "여전히",
+      "from": "day-26"
+    },
+    {
+      "de": "Ein Billett nach Zürich, bitte.",
+      "ko": "취리히행 표 한 장 주세요.",
+      "from": "day-27"
+    },
+    {
+      "de": "Abfahrt 10.07 Uhr, Gleis 7.",
+      "ko": "출발 10시 7분, 7번 선로.",
+      "from": "day-27"
+    },
+    {
+      "de": "Das Wetter ist schön, die Sonne scheint.",
+      "ko": "날씨가 좋다, 해가 난다.",
+      "from": "day-28"
+    },
+    {
+      "de": "Wie lange dauert das?",
+      "ko": "얼마나 걸려요?",
+      "from": "day-28"
+    }
+  ],
+  "review": {
+    "tasks": [
+      {
+        "type": "mc",
+        "prompt_ko": "„halb neun“은 몇 시인가?",
+        "options": [
+          "8:30",
+          "9:30",
+          "8:50"
+        ],
+        "answer": 0,
+        "from": "day-22",
+        "point_ko": "halb + 다음 시"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Es ist Viertel ___ acht. (7:45)",
+        "answer": "vor",
+        "options": [
+          "vor",
+          "nach",
+          "halb"
+        ],
+        "from": "day-22",
+        "point_ko": "Viertel vor · nach"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "주말(das Wochenende)에 드는 두 요일은?",
+        "options": [
+          "Freitag und Samstag",
+          "Samstag und Sonntag",
+          "Sonntag und Montag"
+        ],
+        "answer": 1,
+        "from": "day-23",
+        "point_ko": "요일"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Ich lerne ___ Abend Deutsch.",
+        "answer": "am",
+        "options": [
+          "am",
+          "um",
+          "im"
+        ],
+        "from": "day-23",
+        "point_ko": "am + 하루의 때"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Am Freitag bin ich nicht ___.",
+        "answer": "frei",
+        "options": [
+          "frei",
+          "spät",
+          "klar"
+        ],
+        "from": "day-24",
+        "point_ko": "frei: 시간이 빈"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "약속을 거절하고 다른 날을 제안하는 말은?",
+        "options": [
+          "Am Freitag bin ich nicht frei. Vielleicht am Samstag?",
+          "Klar! Um acht?",
+          "Gut, dann treffen wir uns um sechs."
+        ],
+        "answer": 0,
+        "from": "day-24",
+        "point_ko": "다른 날 제안"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Heute ist der ___ Oktober.",
+        "answer": "zwölfte",
+        "options": [
+          "zwölf",
+          "zwölfte",
+          "zwölften"
+        ],
+        "from": "day-25",
+        "point_ko": "der + 서수 -te"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Vom 16. ___ 18. Oktober sind wir verreist.",
+        "answer": "bis",
+        "options": [
+          "bis",
+          "um",
+          "am"
+        ],
+        "from": "day-25",
+        "point_ko": "vom … bis …"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "„achtzehnhundertelf“는 몇 년인가?",
+        "options": [
+          "1811",
+          "1711",
+          "1801"
+        ],
+        "answer": 0,
+        "from": "day-26",
+        "point_ko": "연도는 백 단위로 읽는다"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Ich ___ in Korea geboren.",
+        "answer": "bin",
+        "options": [
+          "bin",
+          "habe",
+          "ist"
+        ],
+        "from": "day-26",
+        "point_ko": "Ich bin … geboren."
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Ein ___ nach Zürich, bitte.",
+        "answer": "Billett",
+        "options": [
+          "Billett",
+          "Gleis",
+          "Velo"
+        ],
+        "from": "day-27",
+        "point_ko": "표 사기 · 스위스 말 Billett"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "„Gleis 7“은 무엇인가?",
+        "options": [
+          "7번 선로",
+          "7시",
+          "7번 버스"
+        ],
+        "answer": 0,
+        "from": "day-27",
+        "point_ko": "das Gleis"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Von der Sonne bis zur Erde ___ es etwa acht Minuten.",
+        "answer": "dauert",
+        "options": [
+          "dauert",
+          "dauern",
+          "dauere"
+        ],
+        "from": "day-28",
+        "point_ko": "dauern: es dauert"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "„nie“와 뜻이 반대인 말은?",
+        "options": [
+          "immer",
+          "bald",
+          "schnell"
+        ],
+        "answer": 0,
+        "from": "day-28",
+        "point_ko": "nie · immer"
+      }
+    ],
+    "write": {
+      "situation_ko": "친구가 이번 주에 만나자고 한다. 안 되는 날과 되는 날을 알리고 만날 곳을 묻는다.",
+      "prompt_ko": "du체 세 문장: 안 되는 날, 되는 날과 시각, 만날 곳 묻기.",
+      "model_de": "Am Freitag bin ich nicht frei. Samstag um sechs passt mir gut. Wo treffen wir uns?",
+      "chunks": [
+        "Am … bin ich nicht frei.",
+        "… um … passt mir gut.",
+        "Wo treffen wir uns?"
+      ]
+    }
+  },
+  "variants": {
+    "junghyun": {
+      "phrases": [
+        {
+          "de": "Wie spät ist es?",
+          "ko": "몇 시예요?",
+          "from": "day-22"
+        },
+        {
+          "de": "Es ist Viertel nach acht.",
+          "ko": "8시 15분이에요.",
+          "from": "day-22"
+        },
+        {
+          "de": "Um halb neun beginnt der Workshop.",
+          "ko": "8시 반에 워크숍이 시작한다.",
+          "from": "day-22"
+        },
+        {
+          "de": "Meinen Sie halb neun, also 8.30 Uhr?",
+          "ko": "halb neun 말씀이세요, 그러니까 8시 30분요?",
+          "from": "day-22"
+        },
+        {
+          "de": "am Montag · am Abend",
+          "ko": "월요일에 · 저녁에",
+          "from": "day-23"
+        },
+        {
+          "de": "Morgen ist Freitag.",
+          "ko": "내일은 금요일이다.",
+          "from": "day-23"
+        },
+        {
+          "de": "Am Sonntag sind die Geschäfte zu.",
+          "ko": "일요일에는 가게가 닫혀 있다.",
+          "from": "day-23"
+        },
+        {
+          "de": "Vielen Dank für heute Abend.",
+          "ko": "오늘 저녁 고마웠어요.",
+          "from": "day-23"
+        },
+        {
+          "de": "Hast du am Freitag Zeit?",
+          "ko": "금요일에 시간 있어?",
+          "from": "day-24"
+        },
+        {
+          "de": "Am Freitag bin ich nicht frei. Vielleicht am Samstag?",
+          "ko": "금요일은 안 돼. 토요일은 어때?",
+          "from": "day-24"
+        },
+        {
+          "de": "Um sechs passt mir gut.",
+          "ko": "6시가 나한테 좋아.",
+          "from": "day-24"
+        },
+        {
+          "de": "Dann treffen wir uns um sechs.",
+          "ko": "그럼 6시에 만나자.",
+          "from": "day-24"
+        },
+        {
+          "de": "Wir richten uns gerne nach Ihnen.",
+          "ko": "그쪽 일정에 기꺼이 맞추겠습니다.",
+          "from": "day-24"
+        },
+        {
+          "de": "der zwölfte Oktober · am dritten März",
+          "ko": "10월 12일 · 3월 3일에",
+          "from": "day-25"
+        },
+        {
+          "de": "Vom 16. bis 18. Oktober sind wir verreist.",
+          "ko": "10월 16일부터 18일까지 우리는 여행 중이다.",
+          "from": "day-25"
+        },
+        {
+          "de": "Wann ist dein Geburtstag?",
+          "ko": "네 생일은 언제야?",
+          "from": "day-25"
+        },
+        {
+          "de": "Ich bin in Korea geboren.",
+          "ko": "나는 한국에서 태어났다.",
+          "from": "day-26"
+        },
+        {
+          "de": "immer noch",
+          "ko": "여전히",
+          "from": "day-26"
+        },
+        {
+          "de": "Ein Billett nach Zürich, bitte.",
+          "ko": "취리히행 표 한 장 주세요.",
+          "from": "day-27"
+        },
+        {
+          "de": "Abfahrt 10.07 Uhr, Gleis 7.",
+          "ko": "출발 10시 7분, 7번 선로.",
+          "from": "day-27"
+        },
+        {
+          "de": "Das Wetter ist schön, die Sonne scheint.",
+          "ko": "날씨가 좋다, 해가 난다.",
+          "from": "day-28"
+        },
+        {
+          "de": "Wie lange dauert das?",
+          "ko": "얼마나 걸려요?",
+          "from": "day-28"
+        }
+      ]
+    }
+  }
+}

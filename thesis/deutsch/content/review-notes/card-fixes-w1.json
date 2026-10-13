@@ -1,0 +1,58 @@
+[
+  {
+    "id": "a1-alltag:sein",
+    "field": "example_de",
+    "old": "Ich bin Architekt. Sie sind Frau Meier?",
+    "new": "Ich bin Architekt. Sind Sie Frau Meier?",
+    "why_ko": "평서 어순에 물음표만 붙인 말투다. 첫 달에 배우는 예/아니오 질문은 동사가 맨 앞에 온다."
+  },
+  {
+    "id": "a1-alltag:das-land",
+    "field": "example_de",
+    "old": "Die Schweiz ist ein kleines Land.",
+    "new": "Die Schweiz ist ein Land in Europa.",
+    "why_ko": "kleines는 형용사 어미 변화로 2027년 2~3월 진도다. 첫 주 카드 예문에서 뺀다."
+  },
+  {
+    "id": "a1-alltag:das-land",
+    "field": "example_ko",
+    "old": "스위스는 작은 나라다.",
+    "new": "스위스는 유럽에 있는 나라다.",
+    "why_ko": "위 예문을 바꾸면 해석도 같이 바뀐다."
+  },
+  {
+    "id": "basel-strasse:die-stadt",
+    "field": "example_de",
+    "old": "Basel ist keine große Stadt.",
+    "new": "Basel ist eine Stadt in der Schweiz.",
+    "why_ko": "große는 형용사 어미 변화(진도 밖)이고 kein은 2일째 진도 밖이다. in der Schweiz는 같은 날 통째로 배운다."
+  },
+  {
+    "id": "basel-strasse:die-stadt",
+    "field": "example_ko",
+    "old": "바젤은 큰 도시가 아니다.",
+    "new": "바젤은 스위스에 있는 도시다.",
+    "why_ko": "위 예문을 바꾸면 해석도 같이 바뀐다."
+  },
+  {
+    "id": "basel-strasse:die-kollegin",
+    "field": "ko",
+    "old": "(여/남) 동료",
+    "new": "(남/여) 동료",
+    "why_ko": "독일어 칸은 der Kollege / die Kollegin 순서(남/여)인데 한국어는 여/남으로 뒤집혀 있다."
+  },
+  {
+    "id": "a1-alltag:bitte",
+    "field": "ko",
+    "old": "부디, 제발; 천만에요",
+    "new": "~해 주세요 (부탁); 천만에요",
+    "why_ko": "제발은 애원하는 뉘앙스라 Langsam, bitte 같은 가벼운 부탁과 어긋난다."
+  },
+  {
+    "id": "wortgruppen:zahlen-13-20",
+    "field": "note_ko",
+    "old": "sechzehn, siebzehn: s와 en이 빠진다.",
+    "new": "sechzehn은 sechs의 s가, siebzehn은 sieben의 en이 빠진다.",
+    "why_ko": "어느 낱말에서 무엇이 빠지는지 한 번에 읽히지 않는다."
+  }
+]

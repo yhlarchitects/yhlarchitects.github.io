@@ -1,0 +1,199 @@
+{
+  "id": "day-10",
+  "theme_ko": "예·아니요 질문",
+  "focus_ko": "동사가 맨 앞: Ist das …? Sprechen Sie …?",
+  "new_cards": [
+    "a1-alltag:fragen",
+    "a1-alltag:die-frage",
+    "a1-alltag:antworten",
+    "a1-alltag:die-antwort",
+    "a1-alltag:richtig",
+    "a1-alltag:falsch",
+    "a1-alltag:leider",
+    "a1-alltag:das-handy",
+    "a1-alltag:das-telefon",
+    "a1-alltag:man"
+  ],
+  "stair": {
+    "source": {
+      "author": "2628 선생",
+      "title": "Am Telefon",
+      "year": 2026,
+      "license": "own",
+      "url": ""
+    },
+    "layers": [
+      {
+        "level": "A1",
+        "text_de": "Das Handy klingelt. „Guten Tag, hier ist die Verwaltung. Ist das Herr Lee?“ „Ja, richtig.“ „Sprechen Sie Deutsch?“ „Ja, ein bisschen. Langsam, bitte.“ „Wohnen Sie jetzt in Basel?“ „Ja.“ „Ist die Hausnummer zwölf?“ „Nein, leider falsch.“ „Entschuldigung! Ich habe eine Frage …“",
+        "gloss": [
+          {
+            "de": "klingeln",
+            "ko": "(전화가) 울리다"
+          },
+          {
+            "de": "hier ist …",
+            "ko": "(전화) …입니다"
+          },
+          {
+            "de": "die Verwaltung",
+            "ko": "(부동산) 관리회사"
+          },
+          {
+            "de": "die Hausnummer",
+            "ko": "집 번호, 번지"
+          },
+          {
+            "de": "ein bisschen",
+            "ko": "조금"
+          },
+          {
+            "de": "Ich habe eine Frage.",
+            "ko": "질문이 하나 있어요. (haben은 내일)"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "___ Sie Deutsch?",
+            "answer": "Sprechen",
+            "options": [
+              "Sprechen",
+              "Spricht",
+              "Sprichst"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "집 번호는 맞았나?",
+            "options": [
+              "맞았다",
+              "틀렸다",
+              "묻지 않았다"
+            ],
+            "answer": 1
+          }
+        ]
+      },
+      {
+        "level": "A2",
+        "text_de": "Am Telefon ist Deutsch schwer: Man sieht das Gesicht nicht, und viele sprechen schnell. Darum hilft es, ein paar Sätze bereit zu haben: „Können Sie bitte langsam sprechen?“ und „Können Sie das bitte wiederholen?“ Bei einer Ja/Nein-Frage steht das Verb am Anfang: „Ist das Herr Lee?“ Mit einer W-Frage bekommt man mehr Information: „Wann passt es Ihnen?“",
+        "gloss": [
+          {
+            "de": "schwer",
+            "ko": "어려운"
+          },
+          {
+            "de": "darum",
+            "ko": "그래서"
+          },
+          {
+            "de": "ein paar",
+            "ko": "몇 개의"
+          },
+          {
+            "de": "bereit",
+            "ko": "준비된"
+          },
+          {
+            "de": "der Anfang",
+            "ko": "처음"
+          },
+          {
+            "de": "passen",
+            "ko": "(시간이) 맞다"
+          }
+        ],
+        "tasks": [
+          {
+            "type": "cloze",
+            "prompt_de": "Bei einer Ja/Nein-Frage steht das ___ am Anfang.",
+            "answer": "Verb",
+            "options": [
+              "Verb",
+              "Nomen",
+              "Fragewort"
+            ]
+          },
+          {
+            "type": "mc",
+            "prompt_ko": "통화가 어려운 까닭으로 글에 나온 것은?",
+            "options": [
+              "얼굴이 안 보이고 말이 빠르다",
+              "전화비가 비싸다",
+              "사투리만 쓴다"
+            ],
+            "answer": 0
+          }
+        ]
+      }
+    ],
+    "summit": {
+      "text_de": "",
+      "note_ko": "오늘 꼭대기는 비워 둔다. 원문은 14일째에 요한 페터 헤벨."
+    }
+  },
+  "ear": {
+    "text_de": "Ist das Herr Lee? Ja, richtig. Sprechen Sie Deutsch? Ja, ein bisschen. Langsam, bitte.",
+    "lang": "de-DE",
+    "rates": [
+      0.75,
+      0.9,
+      1.0
+    ]
+  },
+  "hand": {
+    "situation_ko": "관리회사에 전화를 건다. 맞게 걸었는지 확인한다.",
+    "prompt_ko": "Sie체 예·아니요 질문 한 문장.",
+    "model_de": "Guten Tag, hier ist Lee. Ist das die Verwaltung?",
+    "chunks": [
+      "Hier ist …",
+      "Ist das …?",
+      "Langsam, bitte."
+    ]
+  },
+  "illustration": {
+    "scene_ko": "저녁, 바젤 집 부엌. 연호의 휴대폰이 울리고, 관리회사 전화를 받은 연호가 메모지를 앞에 두고 귀를 기울인다.",
+    "prompt_en": "Early evening in the kitchen of a Basel apartment. Yeon Ho, a Korean man, answers his ringing mobile phone, a call from the property management. He listens carefully, a notepad and pen in front of him on the table."
+  },
+  "mix": {
+    "tasks": [
+      {
+        "type": "cloze",
+        "prompt_de": "Ich trinke Kaffee. Und ihr? Was ___ ihr?",
+        "answer": "trinkt",
+        "options": [
+          "trinken",
+          "trinke",
+          "trinkt"
+        ],
+        "from": "day-09",
+        "point_ko": "ihr + -t"
+      },
+      {
+        "type": "mc",
+        "prompt_ko": "siebzehn은 몇?",
+        "options": [
+          "17",
+          "70",
+          "7"
+        ],
+        "answer": 0,
+        "from": "day-05",
+        "point_ko": "숫자 13~20"
+      },
+      {
+        "type": "cloze",
+        "prompt_de": "Wie ___? Ich verstehe das nicht.",
+        "answer": "bitte",
+        "options": [
+          "danke",
+          "bitte",
+          "hier"
+        ],
+        "from": "day-03",
+        "point_ko": "Wie bitte?"
+      }
+    ]
+  }
+}
