@@ -1,4 +1,4 @@
-// 메시지 검사: 연호 영어에서 자주 나오는 꼴만 잡는다. 순서가 곧 우선순위.
+// 메시지 검사: 업무 영어에서 자주 나오는 꼴만 잡는다. 순서가 곧 우선순위.
 // 고칠 것은 하나만 보여 주고, 바른 꼴에는 기계로 고칠 수 있는 것을 모두 고쳐 둔다.
 
 const ABBR = { sth: "something", tmr: "tomorrow", tmrw: "tomorrow", prob: "probably", cuz: "because", u: "you", plz: "please", pls: "please", thx: "thanks", btw: "by the way", ive: "I've", im: "I'm", dont: "don't", cant: "can't" };

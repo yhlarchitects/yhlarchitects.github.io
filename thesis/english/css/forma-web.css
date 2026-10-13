@@ -1,4 +1,9 @@
-/* forma web v1 */
+/* FORMA WEB v1 - 2026-10-07. 볼트의 모든 HTML 산출물(여행 계획·건축 방문 수첩·대시보드·공모전 보드·인쇄 소책자)이 공유하는 한 벌.
+   원본은 옵시디언 스니펫 .obsidian/snippets/forma.css (2026-10-06 FORMA). 값이 거기서 바뀌면 여기도 같은 값으로 고친다.
+   규칙 다섯: ① 색은 검정·흰색 + 파랑 #1E4C98 하나 ② 상태는 6색 칩(라이트·다크 같은 색, 글자 검정) ③ 선 1px 두 단계(진한 선·옅은 선)
+   ④ 모서리 2px, 알약 999px, 상자 .94em, 그림자 없음 ⑤ 글꼴 Univers 55 → Pretendard Variable, 숫자는 tabular.
+   타이폴로지는 .wrap 폭과 조립하는 부품만 다르고 토큰은 같다. */
+
 :root {
   --blue: #1E4C98; --blue-text: #1E4C98; --pill: #1E4C98;
   --bg: #FFFFFF; --bg2: #F4F4F2; --box: #EFEFEC;
