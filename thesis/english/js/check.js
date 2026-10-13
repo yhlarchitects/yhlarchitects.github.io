@@ -84,7 +84,7 @@ export const RULES = [
   { id: "how_about", ko: "how about we 뒤에는 원형: 「How about we restate it?」.", re: /\bhow\s+about,?\s+we\s+(?:\w+ly\s+)?\w+ing\b/gi, to: null, ex: "How about we restate the cap in Clause 4?" },
   { id: "consider_to", ko: "consider 뒤에는 -ing: 「consider changing」.", re: /\bconsider\s+to\b/gi, to: null, ex: "Let's consider changing it." },
   { id: "there_are", ko: "여럿이면 there are: 「There are a few issues」.", re: /\bthere(?:\s+is|'s)\s+(a\s+few|several|many|two|three|four|\d+)\b/gi, to: (m, q) => keepCase(m, "there are " + q) },
-  { id: "an", ko: "모음 소리 앞에는 an.", re: /\ba\s+(?!one\b|once\b|uni|use|euro)([aeiou]\w*)/gi, to: (m, w) => keepCase(m, "an " + w) },
+  { id: "an", ko: "모음 소리 앞에는 an.", re: /\ba\s+(?!one\b|once\b|uni|use|usu|uto|ubiq|eu)([aeiou]\w*)/gi, to: (m, w) => keepCase(m, "an " + w) },
   { id: "the_same", ko: "same 앞에는 the: 「the same result」.", re: /\b(a|got)\s+same\b/gi, to: (m, w) => (w.toLowerCase() === "a" ? keepCase(m, "the same") : w + " the same") },
   { id: "a_few", ko: "셀 수 있는 복수에는 a few: 「a few questions」.", re: /\ba\s+little\s+(\w+[^s\W]s)\b/gi, to: (m, w) => keepCase(m, "a few " + w) },
   { id: "shout", ko: "느낌표 · 글자를 겹치지 않는다. 급하면 날짜를 쓴다.", re: /!{2,}|\b([A-Za-z]*?)([A-Za-z])\2{2,}\b/g, to: (m, a, c) => (m[0] === "!" ? "!" : a + c) },

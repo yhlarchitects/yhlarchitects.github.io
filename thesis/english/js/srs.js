@@ -2,7 +2,7 @@
 import { fsrs, generatorParameters, createEmptyCard, Rating } from "../vendor/ts-fsrs.js";
 
 const f = fsrs(generatorParameters({ enable_fuzz: true }));
-const NEW_PER_SESSION = 10;
+const NEW_PER_SESSION = 12;
 
 export const RATINGS = [
   { r: Rating.Again, ko: "다시" },

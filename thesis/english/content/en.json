@@ -1,98 +1,2380 @@
 {
-  "version": "2026-10-12",
-  "groups": {
-    "A": "허락 대신 알리기",
-    "B": "반대와 제안",
-    "C": "동사꼴",
-    "D": "전치사 · 구조 · 관사",
-    "E": "말투",
-    "F": "메일 부탁"
+ "version": "2026-10-13",
+ "groups": {
+  "w1": "1주 · 근대의 뿌리 · 짓기, 장식, 기능",
+  "w2": "2주 · 역사와 기억 · 복원, 기념비, 도시",
+  "w3": "3주 · 철학과 공간 · 숭고, 몽상, 몸, 다른 자리, 생산",
+  "w4": "4주 · 도시와 오늘 · 거리, 기호, 지역, 혼잡, 방"
+ },
+ "cards": {
+  "w1d1g1": {
+   "g": "w1",
+   "rule": "g",
+   "sit": "셈퍼 「건축의 네 요소」 (1851)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "Semper explain that the first walls were woven.",
+   "en": "Semper explains that the first walls were woven.",
+   "why": "3인칭 단수 현재 -s"
   },
-  "cards": {
-    "a01": { "g": "A", "rule": "perm", "sit": "상사에게 내일 보내겠다고 알릴 때", "was": "I will send it tomorrow, is that ok?", "en": "I'll send it tomorrow. Let me know if you need it sooner." },
-    "a02": { "g": "A", "rule": "perm", "sit": "도면 수정을 제안할 때", "was": "May I propose to move the stair?", "en": "I propose we move the stair. It frees up the corner." },
-    "a03": { "g": "A", "rule": "perm", "sit": "회의 전에 초안을 돌릴 때", "was": "Is it ok for me to share the draft before the meeting?", "en": "I'll share the draft before the meeting." },
-    "a04": { "g": "A", "rule": "perm", "sit": "금요일에 쉰다고 알릴 때", "was": "Is it ok if I take Friday off?", "en": "I'm taking Friday off. Everything for the submission is on the server." },
-    "a05": { "g": "A", "rule": "perm", "sit": "내 판단으로 먼저 시작했을 때", "was": "I already started the facade, I hope it's ok?", "en": "I've started on the facade, based on Tuesday's markup." },
-    "a06": { "g": "A", "rule": "perm", "sit": "다른 안을 하나 더 보여 줄 때", "was": "Can I also propose another option?", "en": "I'd also like to show you a second option." },
-    "a07": { "g": "A", "rule": "perm", "sit": "결정을 받아야 할 때", "was": "What do you think, is it ok to go with B?", "en": "I recommend B. Can you confirm by Thursday?" },
-    "a08": { "g": "A", "rule": "tag", "sit": "내 판단을 말할 때", "was": "This one is better, no?", "en": "This one is better: it saves a column." },
-    "a09": { "g": "A", "rule": "tag", "sit": "확인할 일을 짚을 때", "was": "We need to check the fire exit, right?", "en": "We need to check the fire exit." },
-    "b01": { "g": "B", "rule": "perm", "sit": "이미 정해진 방향인지 물으면서 다른 안을 내고 싶을 때 · 무난", "was": "can I also propose sth, or this ref are solid direction that is already agreed upon", "en": "Is this reference already the agreed direction, or is there still room for me to propose something?" },
-    "b02": { "g": "B", "rule": "perm", "sit": "같은 장면 · 단호하게", "was": "can I also propose sth, or this ref are solid direction that is already agreed upon", "en": "Before I go further, is this direction fixed? If not, I'd like to put an alternative on the table." },
-    "b03": { "g": "B", "rule": "perm", "sit": "같은 장면 · 품위 있게 반대", "was": "can I also propose sth, or this ref are solid direction that is already agreed upon", "en": "I can develop this reference, but I'm not convinced it's the strongest direction. If the decision is still open, I'd like to show you an alternative before we commit." },
-    "b04": { "g": "B", "rule": null, "sit": "안이 좋지 않다고 말할 때", "was": "I'm not sure but maybe it's not good idea?", "en": "I see it differently: the ramp takes the whole garden." },
-    "b05": { "g": "B", "rule": null, "sit": "회의에서 말을 꺼낼 때", "was": "Sorry, may I say something?", "en": "One point before we move on." },
-    "b06": { "g": "B", "rule": "consider_to", "sit": "바꾸자고 할 때", "was": "I think maybe we can consider to change it?", "en": "Let's change it. Here's why." },
-    "b07": { "g": "B", "rule": null, "sit": "내가 하겠다고 나설 때", "was": "If you don't mind, I can prepare a version.", "en": "I'll prepare a version by tomorrow." },
-    "b08": { "g": "B", "rule": null, "sit": "이해했지만 걱정이 있을 때", "was": "Yes yes, I understand, but...", "en": "I understand. My concern is the budget." },
-    "c01": { "g": "C", "rule": "will_be", "sit": "오늘 보낸다고 할 때", "was": "I will be send it today.", "en": "I'll send it today." },
-    "c02": { "g": "C", "rule": "thats_base", "sit": "맞장구칠 때", "was": "That's make sense.", "en": "That makes sense." },
-    "c03": { "g": "C", "rule": "do_ed", "sit": "확인했는지 물을 때", "was": "Did you checked the section?", "en": "Did you check the section?" },
-    "c04": { "g": "C", "rule": "is_works", "sit": "시간이 되는지 물을 때", "was": "Is this works for you?", "en": "Does this work for you?" },
-    "c05": { "g": "C", "rule": "does_s", "sit": "결과를 확인할 때", "was": "Does it means we lose the terrace?", "en": "Does that mean we lose the terrace?" },
-    "c06": { "g": "C", "rule": "been_worked", "sit": "하루 종일 한 일을 말할 때", "was": "I have been worked on the model all day.", "en": "I've been working on the model all day." },
-    "c07": { "g": "C", "rule": "should_have", "sit": "늦게 보낸 것을 인정할 때", "was": "I should have send it earlier.", "en": "I should have sent it earlier." },
-    "c08": { "g": "C", "rule": "gonna", "sit": "안 맞는다고 할 때", "was": "It will not gonna fit.", "en": "It won't fit." },
-    "c09": { "g": "C", "rule": "they_s", "sit": "구조 쪽 의견을 전할 때", "was": "They says the slab is too thin.", "en": "They say the slab is too thin." },
-    "c10": { "g": "C", "rule": "keep_continue", "sit": "계속하겠다고 할 때", "was": "I keep continue the plans.", "en": "I'll keep going with the plans." },
-    "c11": { "g": "C", "rule": "am_agree", "sit": "동의할 때", "was": "I am agree.", "en": "I agree." },
-    "d01": { "g": "D", "rule": "share_me", "sit": "파일을 달라고 할 때", "was": "Can you share me the file?", "en": "Can you send me the file?" },
-    "d02": { "g": "D", "rule": "explain_to", "sit": "바뀐 점을 설명해 달라고 할 때", "was": "Can you explain me the change?", "en": "Can you explain the change to me?" },
-    "d03": { "g": "D", "rule": "requested", "sit": "발주처 요청을 전할 때", "was": "The client requested me to revise it.", "en": "The client asked me to revise it." },
-    "d04": { "g": "D", "rule": "there_are", "sit": "문제가 몇 개 있을 때", "was": "There is a few issues.", "en": "There are a few issues." },
-    "d05": { "g": "D", "rule": "an", "sit": "가능성을 말할 때", "was": "It's a option we can test.", "en": "It's an option we can test." },
-    "d06": { "g": "D", "rule": "the_same", "sit": "결과가 같을 때", "was": "We got same result.", "en": "We got the same result." },
-    "d07": { "g": "D", "rule": "a_few", "sit": "질문이 몇 개 있을 때", "was": "I have a little questions.", "en": "I have a few questions." },
-    "d08": { "g": "D", "rule": "discuss_about", "sit": "논의하자고 할 때", "was": "Let's discuss about the facade.", "en": "Let's discuss the facade." },
-    "d09": { "g": "D", "rule": "until_by", "sit": "마감을 말할 때", "was": "I'll send it until Friday.", "en": "I'll send it by Friday." },
-    "e01": { "g": "E", "rule": "abbr", "sit": "내일 보낸다고 할 때", "was": "I'll send sth tmr.", "en": "I'll send it tomorrow." },
-    "e02": { "g": "E", "rule": "punct", "sit": "확인하고 알려 준다고 할 때", "was": "Ok... I'll check,, then update.", "en": "OK. I'll check and update you." },
-    "e03": { "g": "E", "rule": "lines", "sit": "생각을 세 번에 나눠 보내던 때", "was": "Hi / Quick question / About the section", "en": "Hi, one question on the section: is the slab 250 or 300?" },
-    "e04": { "g": "E", "rule": null, "sit": "오늘은 못 한다고 할 때", "was": "Sorry sorry I can't today maybe tomorrow?", "en": "I can't today. You'll have it tomorrow morning." },
-    "e05": { "g": "E", "rule": "shout", "sit": "지원팀에 급하게 부탁할 때", "was": "YESS plzzzz ASAPPPPP ive been suffering for 3days!!", "en": "Yes please, as soon as you can. It's been three days." },
-    "e06": { "g": "E", "rule": "paren", "sit": "덧붙임을 괄호로 달 때", "was": "Could we grab a quick coffee this week(or today)?", "en": "Could we grab a quick coffee this week (or today)?" },
-    "e07": { "g": "E", "rule": null, "sit": "옆자리 인사 담당에게 메일을 쓸 때", "was": "To whom it may concern, sorry for the delay,", "en": "Hi Anna, sorry for the delay." },
-    "f01": { "g": "F", "rule": "ask", "sit": "휴가 신청서에 서명을 받을 때", "was": "I gently request your signature for my leave days application.", "en": "Could you sign my leave request for 3 to 22 April? I'm back on the 23rd." },
-    "f02": { "g": "F", "rule": "ask", "sit": "승인을 기다릴 때", "was": "Thank you for your approval in advance,,,!", "en": "Let me know once it's approved. Thanks!" },
-    "f03": { "g": "F", "rule": "perm", "sit": "늦게 낸 서류를 알릴 때", "was": "Sorry for the delay, I hope everything would be ok….", "en": "Sorry for the delay. It's filled in now." },
-    "f04": { "g": "F", "rule": "help_to", "sit": "문제를 풀어 달라고 할 때", "was": "Could you help me to solve it?", "en": "Could you help me solve it?" },
-    "f05": { "g": "F", "rule": "look_at", "sit": "PDF를 봐 달라고 할 때", "was": "Please take a look the pdf.", "en": "Please take a look at the PDF." },
-    "f06": { "g": "F", "rule": "asked_to", "sit": "인사팀에 물어본 것을 전할 때", "was": "I asked to HR about the copyright.", "en": "I asked HR about the copyright." },
-    "f07": { "g": "F", "rule": "informed_from", "sit": "방금 들은 소식을 전할 때", "was": "I just informed from HR about the questionnaire.", "en": "HR just told me about the questionnaire." },
-    "f08": { "g": "F", "rule": "meantime", "sit": "기다리는 동안 할 일을 말할 때", "was": "In a mean time, I'll share the survey result.", "en": "In the meantime, I'll share the survey result." },
-    "f09": { "g": "F", "rule": "how_about", "sit": "계약 조항 문구를 제안할 때", "was": "How about, we explicitly reaffirming the cap in Clause 4?", "en": "How about we restate the cap in Clause 4?" },
-    "f10": { "g": "F", "rule": null, "sit": "새 팀에 합류했다고 알릴 때", "was": "I joing the team from today.", "en": "I'm joining the team today." },
-    "f11": { "g": "F", "rule": null, "sit": "라이선스가 끊겼을 때", "was": "Seems like all my license got expired, I was in holliday.", "en": "It looks like my licences expired while I was on holiday." },
-    "f12": { "g": "F", "rule": null, "sit": "기한 연장을 제안할 때", "was": "I think we could a one or two weeks extension seems feasible.", "en": "A one- or two-week extension seems feasible." }
+  "w1d1n1": {
+   "g": "w1",
+   "rule": "n",
+   "sit": "셈퍼 「건축의 네 요소」 (1851) · tectonic · stereotomic",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Semper set the light, jointed frame, which Frampton would later call ______, against the heavy, piled-up earthwork of the mound.",
+   "en": "Semper set the light, jointed frame, which Frampton would later call tectonic, against the heavy, piled-up earthwork of the mound.",
+   "why": "tectonic은 짜 맞춘 가벼운 뼈대, stereotomic은 쌓아 올린 무거운 덩어리(돌 · 흙). 프램턴 「Studies in Tectonic Culture」(1995)의 짝."
   },
-  "prompts": [
-    { "ko": "지금 하는 일을 처음 만난 사람에게 설명한다." },
-    { "ko": "이번 주 막힌 일 하나와 어떻게 풀지." },
-    { "ko": "좋아하는 건물 하나와 그 이유." },
-    { "ko": "상사에게 일정이 밀린 이유와 새 날짜를 알린다." },
-    { "ko": "A안과 B안 중 B를 고르게 설득한다." },
-    { "ko": "회의에서 반대 의견을 내야 했던 장면을 다시 말한다." },
-    { "ko": "발주처에게 비용이 늘었다고 알리고 대안 둘을 낸다." },
-    { "ko": "재료 하나(콘크리트 · 나무 · 벽돌)에 대한 내 생각." },
-    { "ko": "내가 건축을 시작한 이유." },
-    { "ko": "지금 사는 도시에서 일하는 하루." },
-    { "ko": "한국어 개념어 하나를 영어로 30초 동안 풀어 설명한다." },
-    { "ko": "앞으로 5년 동안 하고 싶은 일." }
-  ],
-  "talks": [
-    { "month": "2026-10", "title": "Kéré · TED", "q": "Francis Kere TED talk" },
-    { "month": "2026-11", "title": "Zumthor · Different Kinds of Silence", "q": "Peter Zumthor Different Kinds of Silence lecture" },
-    { "month": "2026-12", "title": "99% Invisible · The Kirkbride Plan", "q": "99 Percent Invisible Kirkbride Plan" },
-    { "month": "2027-01", "title": "Kéré · TED", "q": "Francis Kere TED talk" },
-    { "month": "2027-02", "title": "Lacaton & Vassal · Freedom of Use", "q": "Lacaton Vassal Freedom of Use lecture" },
-    { "month": "2027-03", "title": "Alain Bertaud · lecture", "q": "Alain Bertaud Order without Design lecture" },
-    { "month": "2027-04", "title": "Herzog · Grace La", "q": "Jacques Herzog Grace La conversation" },
-    { "month": "2027-05", "title": "Aravena · TED", "q": "Alejandro Aravena TED" },
-    { "month": "2027-06", "title": "Koolhaas · Countryside", "q": "Rem Koolhaas Countryside lecture" },
-    { "month": "2027-07", "title": "Aureli · The Longhouse", "q": "Pier Vittorio Aureli lecture" },
-    { "month": "2027-08", "title": "Herzog · Serota", "q": "Jacques Herzog Nicholas Serota conversation" },
-    { "month": "2027-09", "title": "Talking Practice", "q": "Talking Practice podcast architecture" },
-    { "month": "2027-10", "title": "Minsuk Cho · Obrist", "q": "Minsuk Cho Hans Ulrich Obrist" }
-  ]
+  "w1d1k1": {
+   "g": "w1",
+   "rule": "k",
+   "sit": "셈퍼 「건축의 네 요소」 (1851) · 써야 할 말: began as",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "벽은 쌓은 것이 아니라 짠 것에서 시작했다.",
+   "wl": "ko",
+   "en": "The wall began not as something built but as something woven.",
+   "why": "began as로 기원을 말한다. started from보다 정확하고, not X but Y의 대구가 산다."
+  },
+  "w1d1g2": {
+   "g": "w1",
+   "rule": "there_are",
+   "sit": "셈퍼 「건축의 네 요소」 (1851)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "There is four elements in his theory.",
+   "en": "There are four elements in his theory.",
+   "why": "there are + 복수"
+  },
+  "w1d1n2": {
+   "g": "w1",
+   "rule": "n",
+   "sit": "셈퍼 「건축의 네 요소」 (1851) · artifice · artefact",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "To call the wall a garment is not to accuse it of ______; for Semper, dressing was honest.",
+   "en": "To call the wall a garment is not to accuse it of artifice; for Semper, dressing was honest.",
+   "why": "artifice는 꾸밈 · 속임수의 기교, artefact는 사람이 만든 물건. 비난의 뜻이 있는 쪽은 artifice."
+  },
+  "w1d1k2": {
+   "g": "w1",
+   "rule": "k",
+   "sit": "셈퍼 「건축의 네 요소」 (1851) · 써야 할 말: comes first · gather around",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "화덕이 먼저이고, 나머지 셋은 그것을 지키려고 그 둘레에 모인다.",
+   "wl": "ko",
+   "en": "The hearth comes first; the other three gather around it to keep it alive.",
+   "why": "comes first는 순서와 위계를 함께 말한다. keep it alive는 불을 지킨다는 은유까지 살린다."
+  },
+  "w1d1g3": {
+   "g": "w1",
+   "rule": "g",
+   "sit": "셈퍼 「건축의 네 요소」 (1851)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "I have been read Der Stil all week.",
+   "en": "I've been reading Der Stil all week.",
+   "why": "진행은 been + -ing"
+  },
+  "w1d1n3": {
+   "g": "w1",
+   "rule": "n",
+   "sit": "셈퍼 「건축의 네 요소」 (1851) · continual · continuous",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "The hearth needed ______ attention: the fire had to be tended day after day.",
+   "en": "The hearth needed continual attention: the fire had to be tended day after day.",
+   "why": "continual은 되풀이되는(날마다), continuous는 한순간도 끊기지 않는. day after day가 있으니 continual."
+  },
+  "w1d1k3": {
+   "g": "w1",
+   "rule": "k",
+   "sit": "셈퍼 「건축의 네 요소」 (1851) · 써야 할 말: 자랑하지 않는 동사",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "오늘의 레인스크린 외피는 셈퍼를 들어 본 적도 없이 그를 뒷받침한다.",
+   "wl": "ko",
+   "en": "Today's rainscreen façade bears Semper out without ever having heard of him.",
+   "why": "bear out = 옳다는 것을 뒷받침하다. prove보다 차분하고, without ever having heard of가 아이러니를 만든다."
+  },
+  "w1d1g4": {
+   "g": "w1",
+   "rule": "share_me",
+   "sit": "셈퍼 「건축의 네 요소」 (1851)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "Can you share me the PDF of the treatise?",
+   "en": "Can you send me the PDF of the treatise?",
+   "why": "share는 사람을 바로 받지 않는다 (send me / share it with me)"
+  },
+  "w1d1n4": {
+   "g": "w1",
+   "rule": "n",
+   "sit": "셈퍼 「건축의 네 요소」 (1851) · compose · comprises",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Four elements ______ the system; the system ______ four elements.",
+   "en": "Four elements compose the system; the system comprises four elements.",
+   "why": "부분이 전체를 compose, 전체가 부분을 comprise. is comprised of는 흔하지만 학술 글에서는 피한다."
+  },
+  "w1d1n5": {
+   "g": "w1",
+   "rule": "n",
+   "sit": "셈퍼 「건축의 네 요소」 (1851) · seminal · canonical",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Semper's treatise is ______: it planted ideas that Loos and Frampton would grow.",
+   "en": "Semper's treatise is seminal: it planted ideas that Loos and Frampton would grow.",
+   "why": "seminal은 뒤의 생각들의 씨앗이 된, canonical은 정전으로 공인된. 영향의 방향을 말할 때는 seminal."
+  },
+  "w1d2g1": {
+   "g": "w1",
+   "rule": "does_s",
+   "sit": "설리번 「예술적으로 고찰한 고층 사무 건물」 (1896)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "Does it means that form is secondary?",
+   "en": "Does that mean form is secondary?",
+   "why": "does 뒤 원형"
+  },
+  "w1d2n1": {
+   "g": "w1",
+   "rule": "n",
+   "sit": "설리번 「예술적으로 고찰한 고층 사무 건물」 (1896) · ostensibly · apparently",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "The slogan is ______ about utility, but Sullivan's examples are drawn from living nature.",
+   "en": "The slogan is ostensibly about utility, but Sullivan's examples are drawn from living nature.",
+   "why": "ostensibly는 겉으로 내세운 것과 실제가 다를 때. apparently는 「보아하니 · 듣자 하니」."
+  },
+  "w1d2k1": {
+   "g": "w1",
+   "rule": "k",
+   "sit": "설리번 「예술적으로 고찰한 고층 사무 건물」 (1896) · 써야 할 말: 짧게, 대구로",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "그에게 기능은 쓸모가 아니라 생명이었다.",
+   "wl": "ko",
+   "en": "For him, function meant not use but life.",
+   "why": "meant가 「이었다」보다 정의를 정확히 한다. not X but Y로 무게를 뒤에."
+  },
+  "w1d2g2": {
+   "g": "w1",
+   "rule": "thats_base",
+   "sit": "설리번 「예술적으로 고찰한 고층 사무 건물」 (1896)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "That's make sense only if function means life.",
+   "en": "That makes sense only if function means life.",
+   "why": "That's 뒤에 동사를 붙이지 않는다"
+  },
+  "w1d2n2": {
+   "g": "w1",
+   "rule": "n",
+   "sit": "설리번 「예술적으로 고찰한 고층 사무 건물」 (1896) · reductive · reductionist",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "To read the phrase as a call for bare boxes is ______: it keeps the slogan and drops the philosophy.",
+   "en": "To read the phrase as a call for bare boxes is reductive: it keeps the slogan and drops the philosophy.",
+   "why": "reductive는 지나치게 단순화한(평가어), reductionist는 환원주의라는 입장 · 방법(학파어)."
+  },
+  "w1d2k2": {
+   "g": "w1",
+   "rule": "k",
+   "sit": "설리번 「예술적으로 고찰한 고층 사무 건물」 (1896) · 써야 할 말: 최상급 대구",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "가장 많이 인용된 문장이 가장 많이 오독되었다.",
+   "wl": "ko",
+   "en": "His most quoted sentence is also his most misread.",
+   "why": "also 한 단어로 역설을 세운다. 같은 최상급을 두 번 쓰는 것이 리듬이다."
+  },
+  "w1d2g3": {
+   "g": "w1",
+   "rule": "g",
+   "sit": "설리번 「예술적으로 고찰한 고층 사무 건물」 (1896)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "Sullivan's examples comes from nature.",
+   "en": "Sullivan's examples come from nature.",
+   "why": "주어와 동사의 수 일치"
+  },
+  "w1d2n3": {
+   "g": "w1",
+   "rule": "n",
+   "sit": "설리번 「예술적으로 고찰한 고층 사무 건물」 (1896) · flaunt · flout",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "A tall building, Sullivan believed, should ______ its height, every inch of it proud and soaring.",
+   "en": "A tall building, Sullivan believed, should flaunt its height, every inch of it proud and soaring.",
+   "why": "flaunt는 자랑스럽게 드러내다, flout는 규칙을 대놓고 무시하다. 철자가 비슷해 원어민도 헷갈린다."
+  },
+  "w1d2k3": {
+   "g": "w1",
+   "rule": "k",
+   "sit": "설리번 「예술적으로 고찰한 고층 사무 건물」 (1896) · 써야 할 말: could not have known",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "그는 자기 문장이 나중에 무엇을 정당화하는 데 쓰일지 알 수 없었다.",
+   "wl": "ko",
+   "en": "He could not have known what his sentence would later be used to justify.",
+   "why": "과거의 불가능은 could not have + p.p. be used to justify의 수동이 「남의 손」을 표시한다."
+  },
+  "w1d2g4": {
+   "g": "w1",
+   "rule": "discuss_about",
+   "sit": "설리번 「예술적으로 고찰한 고층 사무 건물」 (1896)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "Let's discuss about the three-part scheme.",
+   "en": "Let's discuss the three-part scheme.",
+   "why": "discuss는 about 없이"
+  },
+  "w1d2n4": {
+   "g": "w1",
+   "rule": "n",
+   "sit": "설리번 「예술적으로 고찰한 고층 사무 건물」 (1896) · immanent · imminent · eminent",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "For Sullivan, form is ______ in function: not added to it but already inside it.",
+   "en": "For Sullivan, form is immanent in function: not added to it but already inside it.",
+   "why": "immanent 내재하는, imminent 임박한, eminent 저명한. 철학 글에서는 immanent가 자주 나온다."
+  },
+  "w1d2n5": {
+   "g": "w1",
+   "rule": "n",
+   "sit": "설리번 「예술적으로 고찰한 고층 사무 건물」 (1896) · latter · later",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Of the base and the attic, the ______ was harder to design, since it had to end the building.",
+   "en": "Of the base and the attic, the latter was harder to design, since it had to end the building.",
+   "why": "latter는 앞서 말한 둘 중 뒤의 것, later는 시간상 나중. 짝으로 the former가 있다."
+  },
+  "w1d3g1": {
+   "g": "w1",
+   "rule": "g",
+   "sit": "로스 「장식과 범죄」 (1910)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "Loos was not against beauty, he was against waste.",
+   "en": "Loos was not against beauty; he was against waste.",
+   "why": "쉼표로 두 문장을 잇지 않는다 (세미콜론 · 마침표)"
+  },
+  "w1d3n1": {
+   "g": "w1",
+   "rule": "n",
+   "sit": "로스 「장식과 범죄」 (1910) · censure · censor",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Loos wanted to ______ ornament, not to ban it by law.",
+   "en": "Loos wanted to censure ornament, not to ban it by law.",
+   "why": "censure는 공개적으로 꾸짖다, censor는 검열해 막다. 로스는 법이 아니라 말로 쳤다."
+  },
+  "w1d3k1": {
+   "g": "w1",
+   "rule": "k",
+   "sit": "로스 「장식과 범죄」 (1910) · 써야 할 말: quarrel with",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "로스가 싸운 상대는 풍요가 아니라 장식이었다.",
+   "wl": "ko",
+   "en": "Loos's quarrel was not with richness but with ornament.",
+   "why": "quarrel with는 논쟁의 상대. fight against보다 지적인 다툼의 말이다."
+  },
+  "w1d3g2": {
+   "g": "w1",
+   "rule": "an",
+   "sit": "로스 「장식과 범죄」 (1910)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "It's a ironic essay.",
+   "en": "It's an ironic essay.",
+   "why": "모음 소리 앞은 an"
+  },
+  "w1d3n2": {
+   "g": "w1",
+   "rule": "n",
+   "sit": "로스 「장식과 범죄」 (1910) · specious · spurious",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "His economic argument is ______: it sounds rigorous but ignores the pleasure of the craftsman.",
+   "en": "His economic argument is specious: it sounds rigorous but ignores the pleasure of the craftsman.",
+   "why": "specious는 그럴듯해 보이지만 틀린, spurious는 가짜의 · 근거 없는. 논증을 평가할 때는 specious."
+  },
+  "w1d3k2": {
+   "g": "w1",
+   "rule": "k",
+   "sit": "로스 「장식과 범죄」 (1910) · 써야 할 말: age 동사",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "이 글은 군데군데 나쁘게 늙었다.",
+   "wl": "ko",
+   "en": "In places, the essay has aged badly.",
+   "why": "age badly = 시간이 지나 낡아 보이다. in places = 군데군데."
+  },
+  "w1d3g3": {
+   "g": "w1",
+   "rule": "am_agree",
+   "sit": "로스 「장식과 범죄」 (1910)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "I am agree with his point about labour.",
+   "en": "I agree with his point about labour.",
+   "why": "agree는 동사"
+  },
+  "w1d3n3": {
+   "g": "w1",
+   "rule": "n",
+   "sit": "로스 「장식과 범죄」 (1910) · belie · betray",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "His richly veined interiors ______ his reputation as a puritan.",
+   "en": "His richly veined interiors belie his reputation as a puritan.",
+   "why": "belie는 겉으로 보이는 것이 거짓임을 드러내다, betray는 숨긴 것을 무심코 드러내다."
+  },
+  "w1d3k3": {
+   "g": "w1",
+   "rule": "k",
+   "sit": "로스 「장식과 범죄」 (1910) · 써야 할 말: obscure, 대조",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "도발적인 제목이 차분한 경제 논리를 가린다.",
+   "wl": "ko",
+   "en": "The provocative title obscures a sober economic argument.",
+   "why": "obscure = 가리다. sober는 감정 없이 냉정한, provocative와 맞선다."
+  },
+  "w1d3g4": {
+   "g": "w1",
+   "rule": "the_same",
+   "sit": "로스 「장식과 범죄」 (1910)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "We got same conclusion as Le Corbusier.",
+   "en": "We reached the same conclusion as Le Corbusier.",
+   "why": "the same · reach a conclusion"
+  },
+  "w1d3n4": {
+   "g": "w1",
+   "rule": "n",
+   "sit": "로스 「장식과 범죄」 (1910) · epitome · epithet",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "The essay is often read as the ______ of modernism's hostility to decoration.",
+   "en": "The essay is often read as the epitome of modernism's hostility to decoration.",
+   "why": "epitome는 전형 · 축도, epithet은 별칭 · 수식어."
+  },
+  "w1d3n5": {
+   "g": "w1",
+   "rule": "n",
+   "sit": "로스 「장식과 범죄」 (1910) · eschewed · avoided",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Loos ______ the decorated surface in favour of the material itself.",
+   "en": "Loos eschewed the decorated surface in favour of the material itself.",
+   "why": "eschew는 원칙에 따라 의도적으로 멀리하다. avoid는 일반어라 입장이 드러나지 않는다."
+  },
+  "w1d4g1": {
+   "g": "w1",
+   "rule": "g",
+   "sit": "르코르뷔지에 「건축을 향하여」 (1923)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "Le Corbusier requested the reader to look at ships.",
+   "en": "Le Corbusier asked the reader to look at ships.",
+   "why": "사람에게 부탁한 것은 asked + 사람 + to"
+  },
+  "w1d4n1": {
+   "g": "w1",
+   "rule": "n",
+   "sit": "르코르뷔지에 「건축을 향하여」 (1923) · polemical · controversial",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "The machine metaphor is ______: it borrows the authority of engineering to settle an aesthetic question.",
+   "en": "The machine metaphor is polemical: it borrows the authority of engineering to settle an aesthetic question.",
+   "why": "polemical은 논쟁을 거는 · 공격적으로 주장하는(글의 성격), controversial은 논란이 되는(받아들여진 결과)."
+  },
+  "w1d4k1": {
+   "g": "w1",
+   "rule": "k",
+   "sit": "르코르뷔지에 「건축을 향하여」 (1923) · 써야 할 말: What ... is 강조 구문",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "이 책이 요구하는 것은 차가움이 아니라 정밀함이다.",
+   "wl": "ko",
+   "en": "What the book demands is precision, not coldness.",
+   "why": "What ... is로 시작하면 핵심이 문장 끝에서 울린다."
+  },
+  "w1d4g2": {
+   "g": "w1",
+   "rule": "do_ed",
+   "sit": "르코르뷔지에 「건축을 향하여」 (1923)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "Did you checked the photos of the silos?",
+   "en": "Did you check the photos of the silos?",
+   "why": "did 뒤 원형"
+  },
+  "w1d4n2": {
+   "g": "w1",
+   "rule": "n",
+   "sit": "르코르뷔지에 「건축을 향하여」 (1923) · appropriated · approximated",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "He ______ American silos for his argument, retouching photographs to remove their classical details.",
+   "en": "He appropriated American silos for his argument, retouching photographs to remove their classical details.",
+   "why": "appropriate는 남의 것을 자기 목적에 가져다 쓰다. approximate는 근사하다."
+  },
+  "w1d4k2": {
+   "g": "w1",
+   "rule": "k",
+   "sit": "르코르뷔지에 「건축을 향하여」 (1923) · 써야 할 말: 수사 의문 · exempt",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "집만 그 규율에서 예외일 이유가 있는가?",
+   "wl": "ko",
+   "en": "Why should the house alone be exempt from that discipline?",
+   "why": "should가 수사 의문의 힘을 준다. alone은 명사 뒤에서 「~만」."
+  },
+  "w1d4g3": {
+   "g": "w1",
+   "rule": "g",
+   "sit": "르코르뷔지에 「건축을 향하여」 (1923)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "I should have bring the French edition.",
+   "en": "I should have brought the French edition.",
+   "why": "should have + 과거분사"
+  },
+  "w1d4n3": {
+   "g": "w1",
+   "rule": "n",
+   "sit": "르코르뷔지에 「건축을 향하여」 (1923) · dichotomy · dialectic",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "The book sets up a ______ between engineer and architect, but the best buildings dissolve it.",
+   "en": "The book sets up a dichotomy between engineer and architect, but the best buildings dissolve it.",
+   "why": "dichotomy는 둘로 딱 가름, dialectic은 대립을 거쳐 넘어서는 과정. 「세우고 녹인다」면 dichotomy."
+  },
+  "w1d4k3": {
+   "g": "w1",
+   "rule": "k",
+   "sit": "르코르뷔지에 「건축을 향하여」 (1923) · 써야 할 말: where 절",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "공학이 끝나는 곳에서 건축이 시작된다.",
+   "wl": "ko",
+   "en": "Architecture begins where engineering ends.",
+   "why": "where 절로 경계를 말한다. 단순현재로 원칙의 어조."
+  },
+  "w1d4g4": {
+   "g": "w1",
+   "rule": "g",
+   "sit": "르코르뷔지에 「건축을 향하여」 (1923)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "The five points was published in 1927.",
+   "en": "The five points were published in 1927.",
+   "why": "주어와 동사의 수 일치"
+  },
+  "w1d4n4": {
+   "g": "w1",
+   "rule": "n",
+   "sit": "르코르뷔지에 「건축을 향하여」 (1923) · albeit · although",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "The book is a manifesto, ______ an unusually well-illustrated one.",
+   "en": "The book is a manifesto, albeit an unusually well-illustrated one.",
+   "why": "albeit 뒤에는 절 없이 구가 온다. although 뒤에는 주어 동사가 필요하다."
+  },
+  "w1d4n5": {
+   "g": "w1",
+   "rule": "n",
+   "sit": "르코르뷔지에 「건축을 향하여」 (1923) · austere · ascetic",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "The villas of the 1920s are ______, but they are not ascetic: they are full of light and pleasure.",
+   "en": "The villas of the 1920s are austere, but they are not ascetic: they are full of light and pleasure.",
+   "why": "austere는 꾸밈없이 엄정한(사물 · 공간), ascetic은 금욕적인(사람 · 생활)."
+  },
+  "w1d5g1": {
+   "g": "w1",
+   "rule": "g",
+   "sit": "하이데거 「짓기 거주하기 사유하기」 (1951)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "The bridge don't connect banks that already exist.",
+   "en": "The bridge doesn't connect banks that already exist.",
+   "why": "3인칭 단수 부정은 doesn't"
+  },
+  "w1d5n1": {
+   "g": "w1",
+   "rule": "n",
+   "sit": "하이데거 「짓기 거주하기 사유하기」 (1951) · claim · maintain · pretend",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Despite decades of criticism, his admirers still ______ that the lecture is really about architecture.",
+   "en": "Despite decades of criticism, his admirers still maintain that the lecture is really about architecture.",
+   "why": "반론을 견디며 계속 주장할 때 maintain. claim은 쓰는 사람이 의심한다는 신호, pretend는 「~인 척하다」."
+  },
+  "w1d5k1": {
+   "g": "w1",
+   "rule": "k",
+   "sit": "하이데거 「짓기 거주하기 사유하기」 (1951) · 써야 할 말: not ... but, 한 문장",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "집이 모자란 게 아니라, 사는 법을 잊은 것이다.",
+   "wl": "ko",
+   "en": "What we lack is not houses but the knowledge of how to live in them.",
+   "why": "What we lack is로 시작하면 무게가 뒤로 간다. forgot보다 lack이 상태를 말한다."
+  },
+  "w1d5g2": {
+   "g": "w1",
+   "rule": "g",
+   "sit": "하이데거 「짓기 거주하기 사유하기」 (1951)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "I'll send you my notes until Friday.",
+   "en": "I'll send you my notes by Friday.",
+   "why": "마감은 until이 아니라 by"
+  },
+  "w1d5n2": {
+   "g": "w1",
+   "rule": "n",
+   "sit": "하이데거 「짓기 거주하기 사유하기」 (1951) · ambiguity · ambivalence",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "The title of Loos's essay thrives on its ______: “crime” can be read morally or economically.",
+   "en": "The title of Loos's essay thrives on its ambiguity: “crime” can be read morally or economically.",
+   "why": "ambiguity는 말이 두 뜻으로 읽힘, ambivalence는 사람의 마음이 두 갈래. 글에는 ambiguity."
+  },
+  "w1d5k2": {
+   "g": "w1",
+   "rule": "k",
+   "sit": "하이데거 「짓기 거주하기 사유하기」 (1951) · 써야 할 말: less ... than",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "설리번에게 「형태는 기능을 따른다」는 미학 선언이라기보다 자연에 대한 믿음이었다.",
+   "wl": "ko",
+   "en": "For Sullivan, “form follows function” was less an aesthetic manifesto than an article of faith about nature.",
+   "why": "an article of faith = 신조. less X than Y가 「~라기보다」의 정확한 꼴."
+  },
+  "w1d5g3": {
+   "g": "w1",
+   "rule": "help_to",
+   "sit": "하이데거 「짓기 거주하기 사유하기」 (1951)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "Could you help me to understand the fourfold?",
+   "en": "Could you help me understand the fourfold?",
+   "why": "help + 사람 + 원형 (to를 빼는 편이 자연스럽다)"
+  },
+  "w1d5n3": {
+   "g": "w1",
+   "rule": "n",
+   "sit": "하이데거 「짓기 거주하기 사유하기」 (1951) · historicity · historicism",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Postmodernism was charged with ______: wearing period styles as costume.",
+   "en": "Postmodernism was charged with historicism: wearing period styles as costume.",
+   "why": "historicism은 과거 양식을 빌려 쓰는 태도(비판어), historicity는 어떤 것이 역사 속에 놓여 있다는 성질."
+  },
+  "w1d5k3": {
+   "g": "w1",
+   "rule": "k",
+   "sit": "하이데거 「짓기 거주하기 사유하기」 (1951) · 써야 할 말: 동사 하나로 대비",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "전통을 지키는 것과 전통을 박제하는 것은 다르다.",
+   "wl": "ko",
+   "en": "Keeping a tradition alive is not the same as embalming it.",
+   "why": "박제는 stuff보다 embalm(방부 처리)이 은유로 정확하다. preserve는 양쪽 다 되어 대비가 죽는다."
+  },
+  "w1d5g4": {
+   "g": "w1",
+   "rule": "meantime",
+   "sit": "하이데거 「짓기 거주하기 사유하기」 (1951)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "In a mean time, I'll reread the lecture.",
+   "en": "In the meantime, I'll reread the lecture.",
+   "why": "in the meantime"
+  },
+  "w1d5n4": {
+   "g": "w1",
+   "rule": "n",
+   "sit": "하이데거 「짓기 거주하기 사유하기」 (1951) · uninterested · disinterested",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "For Kant, a judgement of beauty must be ______, free of any wish to possess the object.",
+   "en": "For Kant, a judgement of beauty must be disinterested, free of any wish to possess the object.",
+   "why": "disinterested = 사심 없는, uninterested = 관심 없는. 철학 글에서 바꿔 쓰면 뜻이 무너진다."
+  },
+  "w1d5n5": {
+   "g": "w1",
+   "rule": "n",
+   "sit": "하이데거 「짓기 거주하기 사유하기」 (1951) · imply · infer",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "From Rossi's analogous city, one might ______ that design is a form of collective memory.",
+   "en": "From Rossi's analogous city, one might infer that design is a form of collective memory.",
+   "why": "imply는 말하는 쪽이 넌지시, infer는 읽는 쪽이 끌어냄. 독자가 주어면 infer."
+  },
+  "w2d1g1": {
+   "g": "w2",
+   "rule": "g",
+   "sit": "러스킨 「기억의 등불」 (1849) 대 비올레르뒤크 「복원」 (1866)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "Viollet-le-Duc has been restored Carcassonne in the 1850s.",
+   "en": "Viollet-le-Duc restored Carcassonne in the 1850s.",
+   "why": "지난 시점의 일은 단순과거 (has been + 과거분사는 수동)"
+  },
+  "w2d1n1": {
+   "g": "w2",
+   "rule": "n",
+   "sit": "러스킨 「기억의 등불」 (1849) 대 비올레르뒤크 「복원」 (1866) · evocative · provocative",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Ruskin's prose is ______: it moves the reader before it convinces them.",
+   "en": "Ruskin's prose is evocative: it moves the reader before it convinces them.",
+   "why": "evocative는 이미지 · 감정을 불러일으키는, provocative는 도발하는. 러스킨은 설득보다 환기."
+  },
+  "w2d1k1": {
+   "g": "w2",
+   "rule": "k",
+   "sit": "러스킨 「기억의 등불」 (1849) 대 비올레르뒤크 「복원」 (1866) · 써야 할 말: prefer A to B",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "러스킨은 거짓말보다 폐허를 택했다.",
+   "wl": "ko",
+   "en": "Ruskin preferred a ruin to a lie.",
+   "why": "prefer A to B, 전치사는 than이 아니라 to. 짧을수록 세다."
+  },
+  "w2d1g2": {
+   "g": "w2",
+   "rule": "perm",
+   "sit": "러스킨 「기억의 등불」 (1849) 대 비올레르뒤크 「복원」 (1866)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "I'll bring the Ruskin chapter to the meeting, is it ok?",
+   "en": "I'll bring the Ruskin chapter to the meeting, if that works for you.",
+   "why": "허락 꼬리표 → if that works for you 또는 그냥 평서"
+  },
+  "w2d1n2": {
+   "g": "w2",
+   "rule": "n",
+   "sit": "러스킨 「기억의 등불」 (1849) 대 비올레르뒤크 「복원」 (1866) · pastiche · parody",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Critics called the new spire a ______: medieval in manner, nineteenth-century in conception.",
+   "en": "Critics called the new spire a pastiche: medieval in manner, nineteenth-century in conception.",
+   "why": "pastiche는 옛 양식을 본뜬 혼성 모방(조롱 없음), parody는 비웃으며 흉내 냄."
+  },
+  "w2d1k2": {
+   "g": "w2",
+   "rule": "k",
+   "sit": "러스킨 「기억의 등불」 (1849) 대 비올레르뒤크 「복원」 (1866) · 써야 할 말: replace A with B",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "복원은 시간의 흔적을 자신만만한 사본으로 바꿔 버린다.",
+   "wl": "ko",
+   "en": "Restoration replaces the marks of time with a confident copy.",
+   "why": "replace A with B에서 사라지는 쪽이 A. confident가 사본의 오만을 말한다."
+  },
+  "w2d1g3": {
+   "g": "w2",
+   "rule": "g",
+   "sit": "러스킨 「기억의 등불」 (1849) 대 비올레르뒤크 「복원」 (1866)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "Ruskin and Viollet-le-Duc has a few common point.",
+   "en": "Ruskin and Viollet-le-Duc have a few points in common.",
+   "why": "주어 둘은 복수 · a few + 복수 · in common"
+  },
+  "w2d1n3": {
+   "g": "w2",
+   "rule": "n",
+   "sit": "러스킨 「기억의 등불」 (1849) 대 비올레르뒤크 「복원」 (1866) · authentic · authoritative",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "To Ruskin, a restored cathedral was not ______ but counterfeit.",
+   "en": "To Ruskin, a restored cathedral was not authentic but counterfeit.",
+   "why": "authentic은 진짜의, authoritative는 권위 있는 · 믿을 만한(근거 · 판본)."
+  },
+  "w2d1k3": {
+   "g": "w2",
+   "rule": "k",
+   "sit": "러스킨 「기억의 등불」 (1849) 대 비올레르뒤크 「복원」 (1866) · 써야 할 말: may never have",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "비올레르뒤크가 되살린 것은 건물이 아니라, 그 건물이 한 번도 가진 적 없을지 모르는 완전함이었다.",
+   "wl": "ko",
+   "en": "What Viollet-le-Duc brought back was not the building but a completeness it may never have had.",
+   "why": "may never have + 과거분사 = 과거에 대한 부정 추측. What ... was 구문으로 무게를 뒤에."
+  },
+  "w2d1g4": {
+   "g": "w2",
+   "rule": "g",
+   "sit": "러스킨 「기억의 등불」 (1849) 대 비올레르뒤크 「복원」 (1866)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "I will be visit Carcassonne next month.",
+   "en": "I'll be visiting Carcassonne next month.",
+   "why": "will be 뒤에는 -ing (또는 will + 원형)"
+  },
+  "w2d1n4": {
+   "g": "w2",
+   "rule": "n",
+   "sit": "러스킨 「기억의 등불」 (1849) 대 비올레르뒤크 「복원」 (1866) · academic · scholarly",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "The debate is far from ______: every conservation charter since Venice (1964) has had to take a side.",
+   "en": "The debate is far from academic: every conservation charter since Venice (1964) has had to take a side.",
+   "why": "academic에는 「현실과 상관없는 탁상공론」이라는 뜻이 있다. scholarly는 학문적인(칭찬)."
+  },
+  "w2d1n5": {
+   "g": "w2",
+   "rule": "n",
+   "sit": "러스킨 「기억의 등불」 (1849) 대 비올레르뒤크 「복원」 (1866) · caricatured · characterised",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Ruskin's position is often ______ as a refusal of all care, yet he urged constant, modest repair.",
+   "en": "Ruskin's position is often caricatured as a refusal of all care, yet he urged constant, modest repair.",
+   "why": "caricature는 과장해 비틀다, characterise는 특징을 기술하다. 「오해받는다」의 뜻이면 caricatured."
+  },
+  "w2d2g1": {
+   "g": "w2",
+   "rule": "g",
+   "sit": "리글 「기념비에 대한 현대의 숭배」 (1903)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "In 1903 Riegl is works for the Central Commission.",
+   "en": "In 1903 Riegl was working for the Central Commission.",
+   "why": "be와 일반동사를 겹치지 않는다"
+  },
+  "w2d2n1": {
+   "g": "w2",
+   "rule": "n",
+   "sit": "리글 「기념비에 대한 현대의 숭배」 (1903) · democratic · popular",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Age value is ______: anyone can feel it without knowing a single date.",
+   "en": "Age value is democratic: anyone can feel it without knowing a single date.",
+   "why": "democratic은 누구에게나 열린(자격이 필요 없는), popular는 인기 있는. 리글이 강조한 것은 접근의 평등."
+  },
+  "w2d2k1": {
+   "g": "w2",
+   "rule": "k",
+   "sit": "리글 「기념비에 대한 현대의 숭배」 (1903) · 써야 할 말: move 동사",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "폐허는 날짜를 하나도 모르는 사람도 움직인다.",
+   "wl": "ko",
+   "en": "A ruin moves people who know nothing about its dates.",
+   "why": "move = 마음을 움직이다. impress보다 깊고, touch보다 덜 감상적이다."
+  },
+  "w2d2g2": {
+   "g": "w2",
+   "rule": "explain_to",
+   "sit": "리글 「기념비에 대한 현대의 숭배」 (1903)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "Could you explain me the difference between age value and historical value?",
+   "en": "Could you explain the difference between age value and historical value to me?",
+   "why": "explain + 사람 X → explain A to 사람"
+  },
+  "w2d2n2": {
+   "g": "w2",
+   "rule": "n",
+   "sit": "리글 「기념비에 대한 현대의 숭배」 (1903) · irreplaceable · irreparable",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "The patina on the bronze is ______; scrubbing it off would erase a century.",
+   "en": "The patina on the bronze is irreplaceable; scrubbing it off would erase a century.",
+   "why": "irreplaceable은 대신할 수 없는(가치), irreparable은 고칠 수 없는(손상)."
+  },
+  "w2d2k2": {
+   "g": "w2",
+   "rule": "k",
+   "sit": "리글 「기념비에 대한 현대의 숭배」 (1903) · 써야 할 말: not between ... but between",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "보존 싸움은 옳고 그름 사이가 아니라, 한꺼번에 다 채울 수 없는 가치들 사이의 싸움이다.",
+   "wl": "ko",
+   "en": "Conservation disputes are not between right and wrong but between values that cannot all be satisfied at once.",
+   "why": "cannot all be = 다 ~될 수는 없다(부분 부정). all cannot be는 「하나도 안 된다」로 읽힐 수 있다."
+  },
+  "w2d2g3": {
+   "g": "w2",
+   "rule": "g",
+   "sit": "리글 「기념비에 대한 현대의 숭배」 (1903)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "The patina have been removed last year.",
+   "en": "The patina was removed last year.",
+   "why": "last year 같은 지난 시점에는 현재완료 X · 수 일치"
+  },
+  "w2d2n3": {
+   "g": "w2",
+   "rule": "n",
+   "sit": "리글 「기념비에 대한 현대의 숭배」 (1903) · descriptive · normative",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Riegl's account is ______ rather than prescriptive: it explains why we disagree before telling us what to do.",
+   "en": "Riegl's account is descriptive rather than prescriptive: it explains why we disagree before telling us what to do.",
+   "why": "normative는 규범을 세우는(prescriptive와 같은 편), descriptive는 있는 그대로 기술하는."
+  },
+  "w2d2k3": {
+   "g": "w2",
+   "rule": "k",
+   "sit": "리글 「기념비에 대한 현대의 숭배」 (1903) · 써야 할 말: itself의 자리",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "여기서는 시간 그 자체가 기념비가 된다.",
+   "wl": "ko",
+   "en": "Here, time itself becomes the monument.",
+   "why": "강조의 itself는 명사 바로 뒤. the monument의 관사가 「유일한 것」을 말한다."
+  },
+  "w2d2g4": {
+   "g": "w2",
+   "rule": "g",
+   "sit": "리글 「기념비에 대한 현대의 숭배」 (1903)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "I read it yesterday. It was interesting. But too long. Let's talk.",
+   "en": "I read it yesterday; it's interesting, if a little long. Shall we talk it through?",
+   "why": "짧은 줄 쪼개 보내기 → 한 문장"
+  },
+  "w2d2n4": {
+   "g": "w2",
+   "rule": "n",
+   "sit": "리글 「기념비에 대한 현대의 숭배」 (1903) · past · over",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "The town council and the conservator talk ______ each other: one speaks of use, the other of age.",
+   "en": "The town council and the conservator talk past each other: one speaks of use, the other of age.",
+   "why": "talk past each other = 서로 딴소리하다, talk over each other = 말을 끊고 겹쳐 말하다."
+  },
+  "w2d2n5": {
+   "g": "w2",
+   "rule": "n",
+   "sit": "리글 「기념비에 대한 현대의 숭배」 (1903) · resolve · dissolve",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Riegl's scheme does not ______ the conflict; it makes it legible.",
+   "en": "Riegl's scheme does not resolve the conflict; it makes it legible.",
+   "why": "resolve는 답을 내 해결하다, dissolve는 녹여 없애다(문제 자체가 사라짐)."
+  },
+  "w2d3g1": {
+   "g": "w2",
+   "rule": "perm",
+   "sit": "로시 「도시의 건축」 (1966)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "May I keep continue the discussion on typology?",
+   "en": "Shall I carry on with the discussion on typology?",
+   "why": "keep과 continue를 겹치지 않는다 · 허락보다 제안"
+  },
+  "w2d3n1": {
+   "g": "w2",
+   "rule": "n",
+   "sit": "로시 「도시의 건축」 (1966) · type · model",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "For Rossi, a ______ is a principle that can take many forms; a ______ is something to be copied exactly.",
+   "en": "For Rossi, a type is a principle that can take many forms; a model is something to be copied exactly.",
+   "why": "콰트르메르 드 캥시의 구분을 로시가 이어받았다. type은 원리, model은 그대로 복제하는 대상."
+  },
+  "w2d3k1": {
+   "g": "w2",
+   "rule": "k",
+   "sit": "로시 「도시의 건축」 (1966) · 써야 할 말: what explains",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "형태가 기능보다 오래 산다면, 기능이 형태를 설명할 수는 없다.",
+   "wl": "ko",
+   "en": "If form outlives function, function cannot be what explains form.",
+   "why": "what explains로 「설명하는 것」을 명사절로. cannot be가 논리적 불가능을 말한다."
+  },
+  "w2d3g2": {
+   "g": "w2",
+   "rule": "there_are",
+   "sit": "로시 「도시의 건축」 (1966)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "There is a few permanences in every city.",
+   "en": "There are a few permanences in every city.",
+   "why": "there are + 복수 (a few + 복수)"
+  },
+  "w2d3n2": {
+   "g": "w2",
+   "rule": "n",
+   "sit": "로시 「도시의 건축」 (1966) · metaphysical · metaphorical",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Rossi's drawings have a ______ stillness: empty piazzas, long shadows, no people.",
+   "en": "Rossi's drawings have a metaphysical stillness: empty piazzas, long shadows, no people.",
+   "why": "metaphysical은 데 키리코의 「형이상학적 회화」를 가리킨다. metaphorical은 은유적인."
+  },
+  "w2d3k2": {
+   "g": "w2",
+   "rule": "k",
+   "sit": "로시 「도시의 건축」 (1966) · 써야 할 말: locus",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "도시는 집단 기억이 머무는 자리다.",
+   "wl": "ko",
+   "en": "The city is the locus of collective memory.",
+   "why": "locus는 학술어 「자리」. place보다 개념적이고, 로시가 실제로 쓴 말이다."
+  },
+  "w2d3g3": {
+   "g": "w2",
+   "rule": "g",
+   "sit": "로시 「도시의 건축」 (1966)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "Rossi's drawings, (the ones with long shadows)are famous.",
+   "en": "Rossi's drawings (the ones with long shadows) are famous.",
+   "why": "괄호 앞뒤 띄어쓰기 · 쉼표와 괄호를 겹치지 않는다"
+  },
+  "w2d3n3": {
+   "g": "w2",
+   "rule": "n",
+   "sit": "로시 「도시의 건축」 (1966) · embodies · embeds",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "The city ______ the memory of its inhabitants, as a body carries its scars.",
+   "en": "The city embodies the memory of its inhabitants, as a body carries its scars.",
+   "why": "embody는 몸으로 구현하다, embed는 안에 박아 넣다."
+  },
+  "w2d3k3": {
+   "g": "w2",
+   "rule": "k",
+   "sit": "로시 「도시의 건축」 (1966) · 써야 할 말: keep -ing",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "사람들은 같은 꼴로 거듭 돌아온다.",
+   "wl": "ko",
+   "en": "People keep returning to the same forms.",
+   "why": "keep + -ing가 되풀이를 말한다. keep continue처럼 동사를 겹치지 않는다."
+  },
+  "w2d3g4": {
+   "g": "w2",
+   "rule": "g",
+   "sit": "로시 「도시의 건축」 (1966)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "I found rigid grid is not interesting.",
+   "en": "I don't find the rigid grid interesting.",
+   "why": "관사 the · find + 목적어 + 형용사"
+  },
+  "w2d3n4": {
+   "g": "w2",
+   "rule": "n",
+   "sit": "로시 「도시의 건축」 (1966) · empirical · empiric",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "His critique is often mistaken for nostalgia, but it is ______, grounded in the observation of real cities.",
+   "en": "His critique is often mistaken for nostalgia, but it is empirical, grounded in the observation of real cities.",
+   "why": "empiric은 거의 쓰지 않고 옛말로 「돌팔이」. 경험에 근거한은 empirical."
+  },
+  "w2d3n5": {
+   "g": "w2",
+   "rule": "n",
+   "sit": "로시 「도시의 건축」 (1966) · incidental · accidental",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Uses are ______ to form: they arrive later and can leave without harming it.",
+   "en": "Uses are incidental to form: they arrive later and can leave without harming it.",
+   "why": "incidental은 부수적인(본질이 아닌), accidental은 우연한. 로시의 요지는 위계."
+  },
+  "w2d4g1": {
+   "g": "w2",
+   "rule": "g",
+   "sit": "타푸리 「건축과 유토피아」 (1973)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "Does Tafuri gives any way out?",
+   "en": "Does Tafuri offer any way out?",
+   "why": "does 뒤 원형"
+  },
+  "w2d4n1": {
+   "g": "w2",
+   "rule": "n",
+   "sit": "타푸리 「건축과 유토피아」 (1973) · sardonic · sarcastic",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Tafuri's tone is ______: he seems to take a grim pleasure in closing every exit.",
+   "en": "Tafuri's tone is sardonic: he seems to take a grim pleasure in closing every exit.",
+   "why": "sardonic은 건조하게 냉소하는(지적인 어조), sarcastic은 대놓고 비꼬는(말투)."
+  },
+  "w2d4k1": {
+   "g": "w2",
+   "rule": "k",
+   "sit": "타푸리 「건축과 유토피아」 (1973) · 써야 할 말: there can be no ..., only",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "계급의 건축은 있을 수 없다. 건축에 대한 계급 비판이 있을 뿐이다.",
+   "wl": "ko",
+   "en": "There can be no class architecture, only a class critique of architecture.",
+   "why": "there can be no = 원리상 불가능. 쉼표 뒤 only로 한 문장에 묶는다."
+  },
+  "w2d4g2": {
+   "g": "w2",
+   "rule": "g",
+   "sit": "타푸리 「건축과 유토피아」 (1973)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "I'm gonna summarise chapter two for the reading group.",
+   "en": "I'll summarise chapter two for the reading group.",
+   "why": "gonna는 글에 쓰지 않는다"
+  },
+  "w2d4n2": {
+   "g": "w2",
+   "rule": "n",
+   "sit": "타푸리 「건축과 유토피아」 (1973) · co-opted · coerced",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "The avant-garde was ______ by the very system it attacked.",
+   "en": "The avant-garde was co-opted by the very system it attacked.",
+   "why": "co-opt는 흡수해 제 편으로 만들다, coerce는 힘으로 강제하다."
+  },
+  "w2d4k2": {
+   "g": "w2",
+   "rule": "k",
+   "sit": "타푸리 「건축과 유토피아」 (1973) · 써야 할 말: for all",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "혁명의 언어를 썼지만, 그들은 자본이 필요로 하던 일을 했다.",
+   "wl": "ko",
+   "en": "For all their revolutionary language, they did the work that capital needed.",
+   "why": "for all = ~에도 불구하고. despite보다 문어적이고 아이러니가 산다."
+  },
+  "w2d4g3": {
+   "g": "w2",
+   "rule": "g",
+   "sit": "타푸리 「건축과 유토피아」 (1973)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "Tafuri taught in Venice, his students were deeply influenced.",
+   "en": "Tafuri taught in Venice, and his students were deeply influenced.",
+   "why": "쉼표로 두 문장을 잇지 않는다"
+  },
+  "w2d4n3": {
+   "g": "w2",
+   "rule": "n",
+   "sit": "타푸리 「건축과 유토피아」 (1973) · totalising · totalitarian",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "His argument is ______: it leaves the architect no role except that of critic.",
+   "en": "His argument is totalising: it leaves the architect no role except that of critic.",
+   "why": "totalising은 모든 것을 한 틀로 설명하는(이론 비판어), totalitarian은 전체주의의(정치)."
+  },
+  "w2d4k3": {
+   "g": "w2",
+   "rule": "k",
+   "sit": "타푸리 「건축과 유토피아」 (1973) · 써야 할 말: is better read as",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "이 책은 절망의 권고가 아니라 명료함의 요구로 읽는 편이 낫다.",
+   "wl": "ko",
+   "en": "The book is better read not as a counsel of despair but as a demand for lucidity.",
+   "why": "is better read as는 다른 해석을 정중하게 제안하는 꼴."
+  },
+  "w2d4g4": {
+   "g": "w2",
+   "rule": "g",
+   "sit": "타푸리 「건축과 유토피아」 (1973)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "We could a one more session on Tafuri seems feasible.",
+   "en": "One more session on Tafuri seems feasible.",
+   "why": "두 문장을 섞지 않는다 (주어 하나, 동사 하나)"
+  },
+  "w2d4n4": {
+   "g": "w2",
+   "rule": "n",
+   "sit": "타푸리 「건축과 유토피아」 (1973) · arduous · ardent",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Tafuri is ______ to read but impossible to ignore.",
+   "en": "Tafuri is arduous to read but impossible to ignore.",
+   "why": "arduous는 힘든 · 고된, ardent는 열렬한."
+  },
+  "w2d4n5": {
+   "g": "w2",
+   "rule": "n",
+   "sit": "타푸리 「건축과 유토피아」 (1973) · diagnosis · prognosis",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "The book offers a ______ rather than a programme.",
+   "en": "The book offers a diagnosis rather than a programme.",
+   "why": "diagnosis는 지금 무엇이 문제인지, prognosis는 앞으로 어떻게 될지."
+  },
+  "w2d5g1": {
+   "g": "w2",
+   "rule": "g",
+   "sit": "로 · 쾨터 「콜라주 시티」 (1978)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "Can I share you the figure-ground drawings?",
+   "en": "Shall I send you the figure-ground drawings?",
+   "why": "share는 사람을 바로 받지 않는다 · 허락보다 제안"
+  },
+  "w2d5n1": {
+   "g": "w2",
+   "rule": "n",
+   "sit": "로 · 쾨터 「콜라주 시티」 (1978) · palpable · palatable",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "The figure-ground plans make the argument ______: you see it before you read it.",
+   "en": "The figure-ground plans make the argument palpable: you see it before you read it.",
+   "why": "palpable은 손에 잡힐 듯 뚜렷한, palatable은 받아들일 만한 · 입에 맞는."
+  },
+  "w2d5k1": {
+   "g": "w2",
+   "rule": "k",
+   "sit": "로 · 쾨터 「콜라주 시티」 (1978) · 써야 할 말: 현재완료",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "근대 도시는 공간 없는 물체들을 만들어 냈다.",
+   "wl": "ko",
+   "en": "The modern city has produced objects without space.",
+   "why": "has produced는 결과가 지금 눈앞에 있다는 뜻. produced만 쓰면 지난 일로 닫힌다."
+  },
+  "w2d5g2": {
+   "g": "w2",
+   "rule": "informed_from",
+   "sit": "로 · 쾨터 「콜라주 시티」 (1978)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "I was informed from the library that the book is out of print.",
+   "en": "The library told me the book is out of print.",
+   "why": "informed from X → informed by, 더 좋게는 능동"
+  },
+  "w2d5n2": {
+   "g": "w2",
+   "rule": "n",
+   "sit": "로 · 쾨터 「콜라주 시티」 (1978) · wary · weary",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "The authors are ______ of utopia, not hostile to it: they keep it as an image, not as a plan.",
+   "en": "The authors are wary of utopia, not hostile to it: they keep it as an image, not as a plan.",
+   "why": "wary는 경계하는, weary는 지친. 철자 한 글자 차이."
+  },
+  "w2d5k2": {
+   "g": "w2",
+   "rule": "k",
+   "sit": "로 · 쾨터 「콜라주 시티」 (1978) · 써야 할 말: side with A against B",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "그들은 고슴도치에 맞서 여우 편에 선다.",
+   "wl": "ko",
+   "en": "They side with the fox against the hedgehog.",
+   "why": "side with A against B로 한 번에. take the side of보다 짧고 단단하다."
+  },
+  "w2d5g3": {
+   "g": "w2",
+   "rule": "g",
+   "sit": "로 · 쾨터 「콜라주 시티」 (1978)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "Let me look the plan of Parma again.",
+   "en": "Let me look at the plan of Parma again.",
+   "why": "look at"
+  },
+  "w2d5n3": {
+   "g": "w2",
+   "rule": "n",
+   "sit": "로 · 쾨터 「콜라주 시티」 (1978) · affectionate · affected",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Their irony is ______: it mocks the hedgehog while admitting his appeal.",
+   "en": "Their irony is affectionate: it mocks the hedgehog while admitting his appeal.",
+   "why": "affectionate는 애정 어린, affected는 꾸민 · 가식적인."
+  },
+  "w2d5k3": {
+   "g": "w2",
+   "rule": "k",
+   "sit": "로 · 쾨터 「콜라주 시티」 (1978) · 써야 할 말: rather than + -ing",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "원리에서 모든 것을 끌어내는 대신, 그들은 조각을 모은다.",
+   "wl": "ko",
+   "en": "Rather than deriving everything from first principles, they assemble fragments.",
+   "why": "rather than 뒤 -ing. first principles = 제1원리(복수형이 관용)."
+  },
+  "w2d5g4": {
+   "g": "w2",
+   "rule": "shout",
+   "sit": "로 · 쾨터 「콜라주 시티」 (1978)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "THE KEY POINT IS THE FIGURE-GROUND!!",
+   "en": "The key point is the figure-ground.",
+   "why": "대문자 · 느낌표 대신 문장 자리로 강조"
+  },
+  "w2d5n4": {
+   "g": "w2",
+   "rule": "n",
+   "sit": "로 · 쾨터 「콜라주 시티」 (1978) · residual · residential",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "The open space of the modern estate is ______: nobody owns it, nobody uses it.",
+   "en": "The open space of the modern estate is residual: nobody owns it, nobody uses it.",
+   "why": "residual은 쓰고 남은 찌꺼기의, residential은 주거의."
+  },
+  "w2d5n5": {
+   "g": "w2",
+   "rule": "n",
+   "sit": "로 · 쾨터 「콜라주 시티」 (1978) · discursive · discourteous",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Rowe's prose is ______, full of asides, ironies and Latin tags.",
+   "en": "Rowe's prose is discursive, full of asides, ironies and Latin tags.",
+   "why": "discursive는 곁가지를 타며 이어 가는(나쁜 말 아님), discourteous는 무례한."
+  },
+  "w3d1g1": {
+   "g": "w3",
+   "rule": "g",
+   "sit": "버크 「숭고와 아름다움」 (1757) · 칸트 「판단력 비판」 (1790)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "The sublime is depend on distance.",
+   "en": "The sublime depends on distance.",
+   "why": "be와 일반동사를 겹치지 않는다"
+  },
+  "w3d1n1": {
+   "g": "w3",
+   "rule": "n",
+   "sit": "버크 「숭고와 아름다움」 (1757) · 칸트 「판단력 비판」 (1790) · sublime · sublimated",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "The nave is not merely large; it is ______, so large that the eye gives up measuring.",
+   "en": "The nave is not merely large; it is sublime, so large that the eye gives up measuring.",
+   "why": "sublimated는 심리학의 「승화된」. 미학어는 sublime."
+  },
+  "w3d1k1": {
+   "g": "w3",
+   "rule": "k",
+   "sit": "버크 「숭고와 아름다움」 (1757) · 칸트 「판단력 비판」 (1790) · 써야 할 말: only because",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "숭고는 우리가 안전하기 때문에 비로소 즐길 수 있는 두려움이다.",
+   "wl": "ko",
+   "en": "The sublime is a terror we can enjoy only because we are safe.",
+   "why": "only because = 그래야만 비로소. because만 쓰면 조건의 날이 무뎌진다."
+  },
+  "w3d1g2": {
+   "g": "w3",
+   "rule": "g",
+   "sit": "버크 「숭고와 아름다움」 (1757) · 칸트 「판단력 비판」 (1790)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "Kant have written three Critiques.",
+   "en": "Kant wrote three Critiques.",
+   "why": "끝난 사람의 일은 단순과거 · 수 일치"
+  },
+  "w3d1n2": {
+   "g": "w3",
+   "rule": "n",
+   "sit": "버크 「숭고와 아름다움」 (1757) · 칸트 「판단력 비판」 (1790) · physiological · psychological",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Burke's theory is ______: it explains beauty through nerves and muscles, not through proportion.",
+   "en": "Burke's theory is physiological: it explains beauty through nerves and muscles, not through proportion.",
+   "why": "버크는 신경의 이완 · 긴장으로 설명했다. physiological은 몸의 작동, psychological은 마음의 작동."
+  },
+  "w3d1k2": {
+   "g": "w3",
+   "rule": "k",
+   "sit": "버크 「숭고와 아름다움」 (1757) · 칸트 「판단력 비판」 (1790) · 써야 할 말: relocate",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "칸트는 숭고를 대상에서 마음으로 옮겨 놓았다.",
+   "wl": "ko",
+   "en": "Kant relocated the sublime from the object to the mind.",
+   "why": "relocate는 자리를 옮기다. move보다 개념의 이동에 맞는다."
+  },
+  "w3d1g3": {
+   "g": "w3",
+   "rule": "g",
+   "sit": "버크 「숭고와 아름다움」 (1757) · 칸트 「판단력 비판」 (1790)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "Shall I explain to you about Burke's theory?",
+   "en": "Shall I walk you through Burke's theory?",
+   "why": "explain A to 사람, about 빼기 · walk you through"
+  },
+  "w3d1n3": {
+   "g": "w3",
+   "rule": "n",
+   "sit": "버크 「숭고와 아름다움」 (1757) · 칸트 「판단력 비판」 (1790) · a reminder of · a remainder of",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "For Kant, the sublime is ______ the mind's own power.",
+   "en": "For Kant, the sublime is a reminder of the mind's own power.",
+   "why": "reminder는 상기시키는 것, remainder는 나머지. 발음이 비슷해 쓰기에서 틀린다."
+  },
+  "w3d1k3": {
+   "g": "w3",
+   "rule": "k",
+   "sit": "버크 「숭고와 아름다움」 (1757) · 칸트 「판단력 비판」 (1790) · 써야 할 말: wants nothing from",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "아름다움은 대상에게서 아무것도 바라지 않는 즐거움이다.",
+   "wl": "ko",
+   "en": "Beauty is a pleasure that wants nothing from its object.",
+   "why": "disinterested를 풀어 쓴 꼴. 말로 할 때는 이쪽이 더 잘 들린다."
+  },
+  "w3d1g4": {
+   "g": "w3",
+   "rule": "g",
+   "sit": "버크 「숭고와 아름다움」 (1757) · 칸트 「판단력 비판」 (1790)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "I've ask the curator for the section drawings.",
+   "en": "I've asked the curator for the section drawings.",
+   "why": "have + 과거분사"
+  },
+  "w3d1n4": {
+   "g": "w3",
+   "rule": "n",
+   "sit": "버크 「숭고와 아름다움」 (1757) · 칸트 「판단력 비판」 (1790) · contemplative · contemptuous",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Ando's concrete is often called austere, but its effect is ______ rather than cold.",
+   "en": "Ando's concrete is often called austere, but its effect is contemplative rather than cold.",
+   "why": "contemplative는 관조적인, contemptuous는 경멸하는."
+  },
+  "w3d1n5": {
+   "g": "w3",
+   "rule": "n",
+   "sit": "버크 「숭고와 아름다움」 (1757) · 칸트 「판단력 비판」 (1790) · damn · dam",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "To call a building “pretty” is to ______ it with faint praise.",
+   "en": "To call a building “pretty” is to damn it with faint praise.",
+   "why": "damn with faint praise = 시큰둥한 칭찬으로 깎아내리다. 원어민 비평의 단골 관용구."
+  },
+  "w3d2g1": {
+   "g": "w3",
+   "rule": "g",
+   "sit": "바슐라르 「공간의 시학」 (1958)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "Please return the book until Monday.",
+   "en": "Please return the book by Monday.",
+   "why": "마감은 until이 아니라 by"
+  },
+  "w3d2n1": {
+   "g": "w3",
+   "rule": "n",
+   "sit": "바슐라르 「공간의 시학」 (1958) · phenomenological · phenomenal",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Bachelard's method is ______ rather than analytical: he collects images and lets them resonate.",
+   "en": "Bachelard's method is phenomenological rather than analytical: he collects images and lets them resonate.",
+   "why": "phenomenological은 현상학의, phenomenal은 일상어로 「굉장한」."
+  },
+  "w3d2k1": {
+   "g": "w3",
+   "rule": "k",
+   "sit": "바슐라르 「공간의 시학」 (1958) · 써야 할 말: chief benefit",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "집의 가장 큰 쓸모는 비바람을 막는 것이 아니라 몽상을 지키는 것이다.",
+   "wl": "ko",
+   "en": "The chief benefit of the house is not to keep out the weather but to shelter daydreaming.",
+   "why": "chief benefit이 「가장 큰 쓸모」의 무게를 낸다. not to ... but to로 대구."
+  },
+  "w3d2g2": {
+   "g": "w3",
+   "rule": "g",
+   "sit": "바슐라르 「공간의 시학」 (1958)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "He explained them the idea of topoanalysis.",
+   "en": "He explained the idea of topoanalysis to them.",
+   "why": "explain + 사람 X → explain A to 사람"
+  },
+  "w3d2n2": {
+   "g": "w3",
+   "rule": "n",
+   "sit": "바슐라르 「공간의 시학」 (1958) · replete · complete",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "The book is ______ with poems; Rilke and Baudelaire appear on almost every page.",
+   "en": "The book is replete with poems; Rilke and Baudelaire appear on almost every page.",
+   "why": "replete with = ~로 가득한. complete with는 「~까지 딸린」."
+  },
+  "w3d2k2": {
+   "g": "w3",
+   "rule": "k",
+   "sit": "바슐라르 「공간의 시학」 (1958) · 써야 할 말: not a single",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "그 책에는 도면이 한 장도 없다.",
+   "wl": "ko",
+   "en": "The book contains not a single plan.",
+   "why": "not a single이 no보다 세다. 놀라움이 들어간다."
+  },
+  "w3d2g3": {
+   "g": "w3",
+   "rule": "g",
+   "sit": "바슐라르 「공간의 시학」 (1958)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "Its a beautiful book, its full of poems.",
+   "en": "It's a beautiful book, full of poems.",
+   "why": "it's(= it is)와 its(소유) · 쉼표로 두 문장 잇지 않기"
+  },
+  "w3d2n3": {
+   "g": "w3",
+   "rule": "n",
+   "sit": "바슐라르 「공간의 시학」 (1958) · viscerally · visibly",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Childhood houses are remembered ______: not as plans but as gestures and smells.",
+   "en": "Childhood houses are remembered viscerally: not as plans but as gestures and smells.",
+   "why": "viscerally는 몸으로 · 본능적으로, visibly는 눈에 띄게."
+  },
+  "w3d2k3": {
+   "g": "w3",
+   "rule": "k",
+   "sit": "바슐라르 「공간의 시학」 (1958) · 써야 할 말: laid bare",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "다락은 지붕의 뼈대가 드러나는 맑은 공간이다.",
+   "wl": "ko",
+   "en": "The attic is a lucid space where the structure of the roof is laid bare.",
+   "why": "lay bare = 벗겨서 드러내다. lucid는 「맑은」을 정신의 명료함까지 겹쳐 말한다."
+  },
+  "w3d2g4": {
+   "g": "w3",
+   "rule": "g",
+   "sit": "바슐라르 「공간의 시학」 (1958)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "Whom should I ask to for the scan?",
+   "en": "Who should I ask for the scan?",
+   "why": "ask 뒤 to 없이 · 말에서는 who"
+  },
+  "w3d2n4": {
+   "g": "w3",
+   "rule": "n",
+   "sit": "바슐라르 「공간의 시학」 (1958) · ambivalent · ambiguous",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Bachelard is ______ about the cellar: it frightens and attracts at once.",
+   "en": "Bachelard is ambivalent about the cellar: it frightens and attracts at once.",
+   "why": "사람의 마음이 두 갈래면 ambivalent. 1주에 본 ambiguity와 짝."
+  },
+  "w3d2n5": {
+   "g": "w3",
+   "rule": "n",
+   "sit": "바슐라르 「공간의 시학」 (1958) · refuge · refuse",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "A corner is a ______ for the body, a half-box into which one can withdraw.",
+   "en": "A corner is a refuge for the body, a half-box into which one can withdraw.",
+   "why": "refuge는 피난처. refuse는 명사로 「쓰레기」(첫 음절 강세)."
+  },
+  "w3d3g1": {
+   "g": "w3",
+   "rule": "g",
+   "sit": "팔라스마 「피부의 눈」 (1996)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "They argues that vision dominates.",
+   "en": "They argue that vision dominates.",
+   "why": "they 뒤 동사에 -s 없음"
+  },
+  "w3d3n1": {
+   "g": "w3",
+   "rule": "n",
+   "sit": "팔라스마 「피부의 눈」 (1996) · ocularcentrism · egocentrism",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Pallasmaa calls the dominance of sight in Western thought ______.",
+   "en": "Pallasmaa calls the dominance of sight in Western thought ocularcentrism.",
+   "why": "ocularcentrism은 시각 중심주의. 팔라스마 이전 마틴 제이 등이 쓴 학술어."
+  },
+  "w3d3k1": {
+   "g": "w3",
+   "rule": "k",
+   "sit": "팔라스마 「피부의 눈」 (1996) · 써야 할 말: hear ... in",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "우리는 방의 크기를 메아리로 듣는다.",
+   "wl": "ko",
+   "en": "We hear the size of a room in its echo.",
+   "why": "hear A in B = B 속에서 A를 듣다. 감각을 바꿔 쓰는 꼴이 팔라스마의 문체다."
+  },
+  "w3d3g2": {
+   "g": "w3",
+   "rule": "thats_base",
+   "sit": "팔라스마 「피부의 눈」 (1996)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "That's mean we should design with touch.",
+   "en": "That means we should design with touch.",
+   "why": "That's 뒤에 동사를 붙이지 않는다"
+  },
+  "w3d3n2": {
+   "g": "w3",
+   "rule": "n",
+   "sit": "팔라스마 「피부의 눈」 (1996) · superficial · superfluous",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "A building designed for the photograph tends to be ______: striking at first sight, empty on the third visit.",
+   "en": "A building designed for the photograph tends to be superficial: striking at first sight, empty on the third visit.",
+   "why": "superficial은 겉만 있는, superfluous는 쓸데없는 · 남아도는."
+  },
+  "w3d3k2": {
+   "g": "w3",
+   "rule": "k",
+   "sit": "팔라스마 「피부의 눈」 (1996) · 써야 할 말: tends to · by",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "사진을 위해 지은 건물은 세 번째 방문쯤이면 비어 보인다.",
+   "wl": "ko",
+   "en": "A building designed for the camera tends to feel empty by the third visit.",
+   "why": "tends to로 일반화를 누그러뜨린다. by the third visit = 세 번째쯤이면."
+  },
+  "w3d3g3": {
+   "g": "w3",
+   "rule": "g",
+   "sit": "팔라스마 「피부의 눈」 (1996)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "How about to visit the Therme Vals together?",
+   "en": "How about visiting the Therme Vals together?",
+   "why": "How about + -ing"
+  },
+  "w3d3n3": {
+   "g": "w3",
+   "rule": "n",
+   "sit": "팔라스마 「피부의 눈」 (1996) · tactile · tactical",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "The worn step is a ______ trace of countless feet.",
+   "en": "The worn step is a tactile trace of countless feet.",
+   "why": "tactile은 촉각의, tactical은 전술적인."
+  },
+  "w3d3k3": {
+   "g": "w3",
+   "rule": "k",
+   "sit": "팔라스마 「피부의 눈」 (1996) · 써야 할 말: had sensed",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "그 책은 학생들이 느꼈지만 말하지 못한 것에 이름을 붙였다.",
+   "wl": "ko",
+   "en": "The book gave a name to what students had sensed but could not say.",
+   "why": "느낀 것이 먼저이므로 had sensed. could not say로 과거의 무능."
+  },
+  "w3d3g4": {
+   "g": "w3",
+   "rule": "g",
+   "sit": "팔라스마 「피부의 눈」 (1996)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "Can I ask, do we need a sensory section in the report, or we skip?",
+   "en": "Do we need a sensory section in the report, or shall we skip it?",
+   "why": "질문 앞 허락 꼬리표 빼기 · 두 갈래 질문도 질문꼴로"
+  },
+  "w3d3n4": {
+   "g": "w3",
+   "rule": "n",
+   "sit": "팔라스마 「피부의 눈」 (1996) · sweeping · thorough",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "His critique is sometimes ______: it can treat every glass building as a moral failure.",
+   "en": "His critique is sometimes sweeping: it can treat every glass building as a moral failure.",
+   "why": "sweeping은 지나치게 일반화한(비판어), thorough는 빈틈없는(칭찬)."
+  },
+  "w3d3n5": {
+   "g": "w3",
+   "rule": "n",
+   "sit": "팔라스마 「피부의 눈」 (1996) · resonated · reasoned",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "The book ______ with students who felt that theory had forgotten the body.",
+   "en": "The book resonated with students who felt that theory had forgotten the body.",
+   "why": "resonate with = ~에게 울리다 · 공감을 얻다."
+  },
+  "w3d4g1": {
+   "g": "w3",
+   "rule": "abbr",
+   "sit": "푸코 「다른 공간들」 (1967 강연 · 1984 발표)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "pls send the foucault txt asap thx",
+   "en": "Could you send me the Foucault text when you have a moment? Thanks.",
+   "why": "줄임말 · 소문자 고유명사 금지"
+  },
+  "w3d4n1": {
+   "g": "w3",
+   "rule": "n",
+   "sit": "푸코 「다른 공간들」 (1967 강연 · 1984 발표) · heterogeneous · homogeneous",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Foucault's list is ______: cemetery, fairground and library sit together without apology.",
+   "en": "Foucault's list is heterogeneous: cemetery, fairground and library sit together without apology.",
+   "why": "heterogeneous는 이질적인 것이 섞인, homogeneous는 균질한."
+  },
+  "w3d4k1": {
+   "g": "w3",
+   "rule": "k",
+   "sit": "푸코 「다른 공간들」 (1967 강연 · 1984 발표) · 써야 할 말: at once",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "거울은 유토피아이면서 동시에 헤테로토피아다.",
+   "wl": "ko",
+   "en": "The mirror is at once a utopia and a heterotopia.",
+   "why": "at once A and B = A이면서 동시에 B. both보다 긴장이 있다."
+  },
+  "w3d4g2": {
+   "g": "w3",
+   "rule": "g",
+   "sit": "푸코 「다른 공간들」 (1967 강연 · 1984 발표)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "He gave the lecture to architects. In 1967. In Paris.",
+   "en": "He gave the lecture to architects in Paris in 1967.",
+   "why": "조각 문장으로 끊지 않는다"
+  },
+  "w3d4n2": {
+   "g": "w3",
+   "rule": "n",
+   "sit": "푸코 「다른 공간들」 (1967 강연 · 1984 발표) · tentative · tentacular",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "The lecture is ______: it sketches a concept rather than defending it.",
+   "en": "The lecture is tentative: it sketches a concept rather than defending it.",
+   "why": "tentative는 잠정적인 · 시험 삼아 하는. tentacular는 촉수 같은."
+  },
+  "w3d4k2": {
+   "g": "w3",
+   "rule": "k",
+   "sit": "푸코 「다른 공간들」 (1967 강연 · 1984 발표) · 써야 할 말: 동사 둘, 목적어 하나",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "헤테로토피아는 실재하면서 다른 모든 자리를 비추고 뒤집는 곳이다.",
+   "wl": "ko",
+   "en": "A heterotopia is a real place that reflects and inverts all the others.",
+   "why": "reflects and inverts가 목적어 하나를 나눠 갖는다. the others로 반복을 피한다."
+  },
+  "w3d4g3": {
+   "g": "w3",
+   "rule": "do_ed",
+   "sit": "푸코 「다른 공간들」 (1967 강연 · 1984 발표)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "Did you asked the library for the 1984 issue?",
+   "en": "Did you ask the library for the 1984 issue?",
+   "why": "did 뒤 원형"
+  },
+  "w3d4n3": {
+   "g": "w3",
+   "rule": "n",
+   "sit": "푸코 「다른 공간들」 (1967 강연 · 1984 발표) · vacuous · vacant",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Architects have stretched the term until it is almost ______.",
+   "en": "Architects have stretched the term until it is almost vacuous.",
+   "why": "vacuous는 내용이 텅 빈(생각 · 말), vacant는 비어 있는(자리 · 방)."
+  },
+  "w3d4k3": {
+   "g": "w3",
+   "rule": "k",
+   "sit": "푸코 「다른 공간들」 (1967 강연 · 1984 발표) · 써야 할 말: par excellence",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "배는 헤테로토피아의 전형이다.",
+   "wl": "ko",
+   "en": "The ship is the heterotopia par excellence.",
+   "why": "par excellence는 명사 뒤에 둔다. 「전형」을 typical로 옮기면 뜻이 약해진다."
+  },
+  "w3d4g4": {
+   "g": "w3",
+   "rule": "requested",
+   "sit": "푸코 「다른 공간들」 (1967 강연 · 1984 발표)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "I requested him to send the issue.",
+   "en": "I asked him to send the issue.",
+   "why": "사람에게 부탁한 것은 asked + 사람 + to"
+  },
+  "w3d4n4": {
+   "g": "w3",
+   "rule": "n",
+   "sit": "푸코 「다른 공간들」 (1967 강연 · 1984 발표) · condenses · condescends",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "The garden is a heterotopia because it ______ the whole world into a small rectangle.",
+   "en": "The garden is a heterotopia because it condenses the whole world into a small rectangle.",
+   "why": "condense는 압축하다, condescend는 깔보며 내려오다."
+  },
+  "w3d4n5": {
+   "g": "w3",
+   "rule": "n",
+   "sit": "푸코 「다른 공간들」 (1967 강연 · 1984 발표) · reluctant · reticent",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Foucault was ______ to publish the text; it waited seventeen years.",
+   "en": "Foucault was reluctant to publish the text; it waited seventeen years.",
+   "why": "reluctant는 내키지 않는, reticent는 자기 이야기를 잘 안 하는. 원어민도 자주 섞는다."
+  },
+  "w3d5g1": {
+   "g": "w3",
+   "rule": "g",
+   "sit": "르페브르 「공간의 생산」 (1974)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "The triad, (perceived, conceived, lived)is hard to apply.",
+   "en": "The triad (perceived, conceived, lived) is hard to apply.",
+   "why": "괄호 앞뒤 띄어쓰기 · 쉼표와 괄호를 겹치지 않는다"
+  },
+  "w3d5n1": {
+   "g": "w3",
+   "rule": "n",
+   "sit": "르페브르 「공간의 생산」 (1974) · dialectical · dialectal",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Lefebvre's triad is ______: each term depends on the other two.",
+   "en": "Lefebvre's triad is dialectical: each term depends on the other two.",
+   "why": "dialectical은 변증법적인, dialectal은 방언의."
+  },
+  "w3d5k1": {
+   "g": "w3",
+   "rule": "k",
+   "sit": "르페브르 「공간의 생산」 (1974) · 써야 할 말: 관사 그대로",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "사회적 공간은 사회적 생산물이다.",
+   "wl": "ko",
+   "en": "Social space is a social product.",
+   "why": "space는 관사 없이, product는 a. 짧은 정의문일수록 관사가 뜻을 정한다."
+  },
+  "w3d5g2": {
+   "g": "w3",
+   "rule": "discuss_about",
+   "sit": "르페브르 「공간의 생산」 (1974)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "I hope you are well. I want to ask. Can we discuss about Lefebvre on Friday?",
+   "en": "Hope you're well. Could we discuss Lefebvre on Friday?",
+   "why": "서두 쪼개기 · discuss는 about 없이"
+  },
+  "w3d5n2": {
+   "g": "w3",
+   "rule": "n",
+   "sit": "르페브르 「공간의 생산」 (1974) · purports · supports",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "The masterplan ______ to describe city life but in fact prescribes it.",
+   "en": "The masterplan purports to describe city life but in fact prescribes it.",
+   "why": "purport to = ~라고 내세우다(의심이 깔림)."
+  },
+  "w3d5k2": {
+   "g": "w3",
+   "rule": "k",
+   "sit": "르페브르 「공간의 생산」 (1974) · 써야 할 말: into which",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "공간은 삶을 붓는 빈 그릇이 아니다.",
+   "wl": "ko",
+   "en": "Space is not an empty container into which life is poured.",
+   "why": "전치사 + which로 관계절을 닫는다. that으로는 전치사를 앞에 둘 수 없다."
+  },
+  "w3d5g3": {
+   "g": "w3",
+   "rule": "g",
+   "sit": "르페브르 「공간의 생산」 (1974)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "I joing the reading group from today.",
+   "en": "I'm joining the reading group from today.",
+   "why": "철자 · 오늘부터의 일은 진행형"
+  },
+  "w3d5n3": {
+   "g": "w3",
+   "rule": "n",
+   "sit": "르페브르 「공간의 생산」 (1974) · appropriated · expropriated",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "The plaza was designed for parades but ______ by skateboarders.",
+   "en": "The plaza was designed for parades but appropriated by skateboarders.",
+   "why": "appropriate는 제 것으로 끌어다 쓰다, expropriate는 소유권을 빼앗다(국가 · 수용)."
+  },
+  "w3d5k3": {
+   "g": "w3",
+   "rule": "k",
+   "sit": "르페브르 「공간의 생산」 (1974) · 써야 할 말: answerable to",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "건축가는 둘째 항으로 훈련받지만, 셋째 항에 책임을 진다.",
+   "wl": "ko",
+   "en": "Architects are trained in the second term but answerable to the third.",
+   "why": "answerable to = ~에 대해 책임지는. responsible for와 방향이 다르다."
+  },
+  "w3d5g4": {
+   "g": "w3",
+   "rule": "g",
+   "sit": "르페브르 「공간의 생산」 (1974)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "Lefebvre and Debord was friends for a few years.",
+   "en": "Lefebvre and Debord were friends for a few years.",
+   "why": "주어 둘은 복수 동사"
+  },
+  "w3d5n4": {
+   "g": "w3",
+   "rule": "n",
+   "sit": "르페브르 「공간의 생산」 (1974) · homogenising · hegemonic",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Abstract space is ______: it treats every site as interchangeable.",
+   "en": "Abstract space is homogenising: it treats every site as interchangeable.",
+   "why": "homogenising은 균질하게 만드는, hegemonic은 지배적인. 「서로 바꿔도 된다」는 균질화."
+  },
+  "w3d5n5": {
+   "g": "w3",
+   "rule": "n",
+   "sit": "르페브르 「공간의 생산」 (1974) · unwieldy · unwilling",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "The book is famously ______: long, digressive and hard to summarise.",
+   "en": "The book is famously unwieldy: long, digressive and hard to summarise.",
+   "why": "unwieldy는 커서 다루기 힘든, unwilling은 내키지 않는."
+  },
+  "w4d1g1": {
+   "g": "w4",
+   "rule": "g",
+   "sit": "제이콥스 「미국 대도시의 죽음과 삶」 (1961)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "Jacobs was lived on Hudson Street.",
+   "en": "Jacobs lived on Hudson Street.",
+   "why": "자동사는 수동으로 쓰지 않는다"
+  },
+  "w4d1n1": {
+   "g": "w4",
+   "rule": "n",
+   "sit": "제이콥스 「미국 대도시의 죽음과 삶」 (1961) · hard-won · hard-pressed",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Jacobs's authority was ______: it came from observation, not from credentials.",
+   "en": "Jacobs's authority was hard-won: it came from observation, not from credentials.",
+   "why": "hard-won은 애써 얻어 낸, hard-pressed는 궁지에 몰린."
+  },
+  "w4d1k1": {
+   "g": "w4",
+   "rule": "k",
+   "sit": "제이콥스 「미국 대도시의 죽음과 삶」 (1961) · 써야 할 말: comes not from ... but from",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "안전은 경찰이 아니라 거리를 보는 눈에서 온다.",
+   "wl": "ko",
+   "en": "Safety comes not from the police but from eyes on the street.",
+   "why": "not from ... but from으로 전치사를 반복해야 대구가 선다."
+  },
+  "w4d1g2": {
+   "g": "w4",
+   "rule": "g",
+   "sit": "제이콥스 「미국 대도시의 죽음과 삶」 (1961)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "Only few planners listened to her at first.",
+   "en": "Only a few planners listened to her at first.",
+   "why": "only a few (few만 쓰면 「거의 없다」)"
+  },
+  "w4d1n2": {
+   "g": "w4",
+   "rule": "n",
+   "sit": "제이콥스 「미국 대도시의 죽음과 삶」 (1961) · razed · raised",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Urban renewal ______ whole neighbourhoods in the name of hygiene.",
+   "en": "Urban renewal razed whole neighbourhoods in the name of hygiene.",
+   "why": "raze는 허물어 없애다, raise는 세우다. 발음이 같아 말로는 문맥만이 가른다."
+  },
+  "w4d1k2": {
+   "g": "w4",
+   "rule": "k",
+   "sit": "제이콥스 「미국 대도시의 죽음과 삶」 (1961) · 써야 할 말: Her method was to",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "그녀의 방법은 그냥 보는 것이었다.",
+   "wl": "ko",
+   "en": "Her method was simply to look.",
+   "why": "simply가 「그냥」의 겸손과 자신감을 함께 낸다."
+  },
+  "w4d1g3": {
+   "g": "w4",
+   "rule": "g",
+   "sit": "제이콥스 「미국 대도시의 죽음과 삶」 (1961)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "Should I bring her book to the meeting? or not?",
+   "en": "Shall I bring her book to the meeting?",
+   "why": "질문 꼬리 쪼개기 금지 · 제안은 shall I"
+  },
+  "w4d1n3": {
+   "g": "w4",
+   "rule": "n",
+   "sit": "제이콥스 「미국 대도시의 죽음과 삶」 (1961) · parochial · provincial",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Her critics found her ______: she seemed to want every city to look like the Village.",
+   "en": "Her critics found her parochial: she seemed to want every city to look like the Village.",
+   "why": "parochial은 제 동네 기준으로만 보는(시야), provincial은 촌스러운(세련)."
+  },
+  "w4d1k3": {
+   "g": "w4",
+   "rule": "k",
+   "sit": "제이콥스 「미국 대도시의 죽음과 삶」 (1961) · 써야 할 말: Few ... have",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "외부인이 쓴 책이 한 직업을 이만큼 철저히 바꾼 일은 드물다.",
+   "wl": "ko",
+   "en": "Few books by an outsider have changed a profession so thoroughly.",
+   "why": "Few로 시작하면 부정의 힘이 문장 머리에 선다. a few와 뜻이 정반대."
+  },
+  "w4d1g4": {
+   "g": "w4",
+   "rule": "will_be",
+   "sit": "제이콥스 「미국 대도시의 죽음과 삶」 (1961)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "I will be finish the summary until tomorrow.",
+   "en": "I'll finish the summary by tomorrow.",
+   "why": "will be + 원형 X · 마감은 by"
+  },
+  "w4d1n4": {
+   "g": "w4",
+   "rule": "n",
+   "sit": "제이콥스 「미국 대도시의 죽음과 삶」 (1961) · spontaneous · simultaneous",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "The sidewalk ballet is ______: nobody choreographs it.",
+   "en": "The sidewalk ballet is spontaneous: nobody choreographs it.",
+   "why": "spontaneous는 저절로 일어나는, simultaneous는 동시의."
+  },
+  "w4d1n5": {
+   "g": "w4",
+   "rule": "n",
+   "sit": "제이콥스 「미국 대도시의 죽음과 삶」 (1961) · upshot · outset",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "The ______ of her argument is that a city cannot be designed from above.",
+   "en": "The upshot of her argument is that a city cannot be designed from above.",
+   "why": "upshot은 결론 · 귀결, outset은 처음."
+  },
+  "w4d2g1": {
+   "g": "w4",
+   "rule": "am_agree",
+   "sit": "벤투리 「복합성과 대립성」 (1966) · 「라스베이거스의 교훈」 (1972)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "I am agree that less is a bore.",
+   "en": "I agree that less is a bore.",
+   "why": "agree는 동사"
+  },
+  "w4d2n1": {
+   "g": "w4",
+   "rule": "n",
+   "sit": "벤투리 「복합성과 대립성」 (1966) · 「라스베이거스의 교훈」 (1972) · disarming · alarming",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Venturi's tone is ______: he wins by charm rather than by force.",
+   "en": "Venturi's tone is disarming: he wins by charm rather than by force.",
+   "why": "disarming은 경계를 풀게 하는 · 마음을 누그러뜨리는, alarming은 놀라게 하는."
+  },
+  "w4d2k1": {
+   "g": "w4",
+   "rule": "k",
+   "sit": "벤투리 「복합성과 대립성」 (1966) · 「라스베이거스의 교훈」 (1972) · 써야 할 말: while pretending not to",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "모더니즘은 오리를 지으면서 오리가 아닌 척했다.",
+   "wl": "ko",
+   "en": "Modernism built ducks while pretending not to.",
+   "why": "pretending not to 뒤 동사를 생략해 날을 세운다."
+  },
+  "w4d2g2": {
+   "g": "w4",
+   "rule": "g",
+   "sit": "벤투리 「복합성과 대립성」 (1966) · 「라스베이거스의 교훈」 (1972)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "The Vanna Venturi House was build for his mother.",
+   "en": "The Vanna Venturi House was built for his mother.",
+   "why": "수동은 be + 과거분사"
+  },
+  "w4d2n2": {
+   "g": "w4",
+   "rule": "n",
+   "sit": "벤투리 「복합성과 대립성」 (1966) · 「라스베이거스의 교훈」 (1972) · disingenuous · ingenious",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Modernism, Venturi implies, was ______: it claimed to have no symbolism while making a symbol of structure.",
+   "en": "Modernism, Venturi implies, was disingenuous: it claimed to have no symbolism while making a symbol of structure.",
+   "why": "disingenuous는 솔직하지 않은 · 모르는 척하는, ingenious는 독창적인."
+  },
+  "w4d2k2": {
+   "g": "w4",
+   "rule": "k",
+   "sit": "벤투리 「복합성과 대립성」 (1966) · 「라스베이거스의 교훈」 (1972) · 써야 할 말: make ... take ... seriously",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "그 책은 엘리트 직업이 상업 거리를 진지하게 보게 만들었다.",
+   "wl": "ko",
+   "en": "The book made an elite profession take the commercial strip seriously.",
+   "why": "make + 목적어 + 원형. take ... seriously가 「진지하게 보다」의 관용."
+  },
+  "w4d2g3": {
+   "g": "w4",
+   "rule": "the_same",
+   "sit": "벤투리 「복합성과 대립성」 (1966) · 「라스베이거스의 교훈」 (1972)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "It's a same idea as Venturi's.",
+   "en": "It's the same idea as Venturi's.",
+   "why": "the same"
+  },
+  "w4d2n3": {
+   "g": "w4",
+   "rule": "n",
+   "sit": "벤투리 「복합성과 대립성」 (1966) · 「라스베이거스의 교훈」 (1972) · provocation · provision",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Learning from Las Vegas was a ______ to an elite profession: it took the commercial strip seriously.",
+   "en": "Learning from Las Vegas was a provocation to an elite profession: it took the commercial strip seriously.",
+   "why": "provocation은 도발, provision은 공급 · 조항."
+  },
+  "w4d2k3": {
+   "g": "w4",
+   "rule": "k",
+   "sit": "벤투리 「복합성과 대립성」 (1966) · 「라스베이거스의 교훈」 (1972) · 써야 할 말: 짧게",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "그의 부드러움은 전략이었다.",
+   "wl": "ko",
+   "en": "His gentleness was strategic.",
+   "why": "명사 주어 + 형용사 하나. 길게 풀면 아이러니가 사라진다."
+  },
+  "w4d2g4": {
+   "g": "w4",
+   "rule": "abbr",
+   "sit": "벤투리 「복합성과 대립성」 (1966) · 「라스베이거스의 교훈」 (1972)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "FYI venturi book pg 16, pls chk",
+   "en": "For reference, the passage is on page 16 of Venturi's book. Could you have a look?",
+   "why": "줄임말 · 소문자 고유명사 · 소유격"
+  },
+  "w4d2n4": {
+   "g": "w4",
+   "rule": "n",
+   "sit": "벤투리 「복합성과 대립성」 (1966) · 「라스베이거스의 교훈」 (1972) · riposte · repost",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "“Less is a bore” is a ______ to “less is more”.",
+   "en": "“Less is a bore” is a riposte to “less is more”.",
+   "why": "riposte는 재치 있는 응수(펜싱의 되찌르기에서). repost는 다시 올리기."
+  },
+  "w4d2n5": {
+   "g": "w4",
+   "rule": "n",
+   "sit": "벤투리 「복합성과 대립성」 (1966) · 「라스베이거스의 교훈」 (1972) · literally · literarily",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Some postmodernists took his ideas ______, and the result was often kitsch.",
+   "en": "Some postmodernists took his ideas literally, and the result was often kitsch.",
+   "why": "literally는 글자 그대로, literarily는 문학적으로(드묾)."
+  },
+  "w4d3g1": {
+   "g": "w4",
+   "rule": "g",
+   "sit": "프램턴 「비판적 지역주의를 향하여」 (1983)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "We should have mention Frampton in the report.",
+   "en": "We should have mentioned Frampton in the report.",
+   "why": "should have + 과거분사"
+  },
+  "w4d3n1": {
+   "g": "w4",
+   "rule": "n",
+   "sit": "프램턴 「비판적 지역주의를 향하여」 (1983) · revivalist · revisionist",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Critical regionalism is not ______: it does not want to bring back the vernacular.",
+   "en": "Critical regionalism is not revivalist: it does not want to bring back the vernacular.",
+   "why": "revivalist는 옛 양식을 되살리는, revisionist는 기존 해석을 고쳐 쓰는(역사학)."
+  },
+  "w4d3k1": {
+   "g": "w4",
+   "rule": "k",
+   "sit": "프램턴 「비판적 지역주의를 향하여」 (1983) · 써야 할 말: how to ... and yet",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "어떻게 근대가 되면서도 근원으로 돌아갈 것인가.",
+   "wl": "ko",
+   "en": "How to become modern and yet return to sources.",
+   "why": "and yet이 두 요구의 긴장을 붙잡는다. but보다 끈질기다."
+  },
+  "w4d3g2": {
+   "g": "w4",
+   "rule": "g",
+   "sit": "프램턴 「비판적 지역주의를 향하여」 (1983)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "Glass parapets also not really fits the critical regionalism idea.",
+   "en": "Glass parapets don't really fit the idea of critical regionalism either.",
+   "why": "부정은 don't + 원형 · 부정의 「도」는 either"
+  },
+  "w4d3n2": {
+   "g": "w4",
+   "rule": "n",
+   "sit": "프램턴 「비판적 지역주의를 향하여」 (1983) · buzzword · byword",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "The term has become a ______ in competition reports, used for any building with local stone.",
+   "en": "The term has become a buzzword in competition reports, used for any building with local stone.",
+   "why": "buzzword는 유행어, byword는 대명사 · 전형(a byword for quality)."
+  },
+  "w4d3k2": {
+   "g": "w4",
+   "rule": "k",
+   "sit": "프램턴 「비판적 지역주의를 향하여」 (1983) · 써야 할 말: neither ... nor",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "그것은 세계 기술에 항복하지도, 민속으로 물러나지도 않는다.",
+   "wl": "ko",
+   "en": "It neither surrenders to global technique nor retreats into folklore.",
+   "why": "neither 뒤와 nor 뒤의 꼴을 맞춘다(동사 + 전치사구)."
+  },
+  "w4d3g3": {
+   "g": "w4",
+   "rule": "perm",
+   "sit": "프램턴 「비판적 지역주의를 향하여」 (1983)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "Could you look into the Bagsværd drawings, is it ok?",
+   "en": "Could you look into the Bagsværd drawings and let me know what you think?",
+   "why": "허락 꼬리표 빼기 · 부탁은 끝까지 한 문장으로"
+  },
+  "w4d3n3": {
+   "g": "w4",
+   "rule": "n",
+   "sit": "프램턴 「비판적 지역주의를 향하여」 (1983) · indicts · indicates",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Frampton ______ the camera for reducing architecture to scenography.",
+   "en": "Frampton indicts the camera for reducing architecture to scenography.",
+   "why": "indict는 고발하다(c 묵음, 「인다이트」), indicate는 가리키다."
+  },
+  "w4d3k3": {
+   "g": "w4",
+   "rule": "k",
+   "sit": "프램턴 「비판적 지역주의를 향하여」 (1983) · 써야 할 말: 세미콜론과 생략",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "밖은 공장 같고, 안은 구름 낀 하늘 같다.",
+   "wl": "ko",
+   "en": "Outside, it looks like a factory; inside, like a sky full of clouds.",
+   "why": "뒤 절에서 it looks를 생략한다. 세미콜론이 대구를 잡는다."
+  },
+  "w4d3g4": {
+   "g": "w4",
+   "rule": "g",
+   "sit": "프램턴 「비판적 지역주의를 향하여」 (1983)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "I checked the license for the photo. I'm on holliday next week.",
+   "en": "I've checked the licence for the photo, and I'm on holiday next week.",
+   "why": "철자 licence(영국 명사) · holiday · 줄 쪼개기"
+  },
+  "w4d3n4": {
+   "g": "w4",
+   "rule": "n",
+   "sit": "프램턴 「비판적 지역주의를 향하여」 (1983) · concealed · conceited",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "The vault at Bagsværd is ______; you cannot see it from outside.",
+   "en": "The vault at Bagsværd is concealed; you cannot see it from outside.",
+   "why": "concealed는 감춰진, conceited는 자만하는."
+  },
+  "w4d3n5": {
+   "g": "w4",
+   "rule": "n",
+   "sit": "프램턴 「비판적 지역주의를 향하여」 (1983) · dilemma · dichotomy",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Ricoeur's question is a genuine ______: each answer costs something.",
+   "en": "Ricoeur's question is a genuine dilemma: each answer costs something.",
+   "why": "dilemma는 어느 쪽을 골라도 잃는 상황, dichotomy는 둘로 나뉜 구도. 1주의 dichotomy와 짝."
+  },
+  "w4d4g1": {
+   "g": "w4",
+   "rule": "perm",
+   "sit": "콜하스 「광기의 뉴욕」 (1978) · 「크기」 (1995)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "I have a few questions on the grid, may I?",
+   "en": "I have a few questions about the grid.",
+   "why": "허락 꼬리표 빼기 · 「~에 대한 질문」은 about"
+  },
+  "w4d4n1": {
+   "g": "w4",
+   "rule": "n",
+   "sit": "콜하스 「광기의 뉴욕」 (1978) · 「크기」 (1995) · retroactive · reactive",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "A manifesto usually comes before the movement; Koolhaas's is ______.",
+   "en": "A manifesto usually comes before the movement; Koolhaas's is retroactive.",
+   "why": "retroactive는 거슬러 적용되는 · 소급하는, reactive는 반응하는."
+  },
+  "w4d4k1": {
+   "g": "w4",
+   "rule": "k",
+   "sit": "콜하스 「광기의 뉴욕」 (1978) · 「크기」 (1995) · 써야 할 말: without ever",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "도시는 이론을 한 번도 글로 쓰지 않고 이미 실행해 버렸다.",
+   "wl": "ko",
+   "en": "The city had already carried out a theory without ever writing it down.",
+   "why": "without ever + -ing가 「한 번도 ~하지 않고」. 과거완료로 책보다 앞섰음을 말한다."
+  },
+  "w4d4g2": {
+   "g": "w4",
+   "rule": "g",
+   "sit": "콜하스 「광기의 뉴욕」 (1978) · 「크기」 (1995)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "The floors is unrelated to each other.",
+   "en": "The floors are unrelated to each other.",
+   "why": "주어와 동사의 수 일치"
+  },
+  "w4d4n2": {
+   "g": "w4",
+   "rule": "n",
+   "sit": "콜하스 「광기의 뉴욕」 (1978) · 「크기」 (1995) · aphoristic · apocalyptic",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Koolhaas's prose is ______, full of slogans that are easy to quote and hard to pin down.",
+   "en": "Koolhaas's prose is aphoristic, full of slogans that are easy to quote and hard to pin down.",
+   "why": "aphoristic은 경구풍의, apocalyptic은 종말론적인."
+  },
+  "w4d4k2": {
+   "g": "w4",
+   "rule": "k",
+   "sit": "콜하스 「광기의 뉴욕」 (1978) · 「크기」 (1995) · 써야 할 말: It is ... that",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "자유를 낳는 것은 오히려 엄격한 틀이다.",
+   "wl": "ko",
+   "en": "It is the rigid frame that produces the freedom.",
+   "why": "분열문 It is ... that으로 뜻밖의 주어를 앞에 세운다."
+  },
+  "w4d4g3": {
+   "g": "w4",
+   "rule": "g",
+   "sit": "콜하스 「광기의 뉴욕」 (1978) · 「크기」 (1995)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "Please kindly informed me the date of the talk.",
+   "en": "Could you let me know the date of the talk?",
+   "why": "inform 꼴 · please kindly 겹치기 대신 could you"
+  },
+  "w4d4n3": {
+   "g": "w4",
+   "rule": "n",
+   "sit": "콜하스 「광기의 뉴욕」 (1978) · 「크기」 (1995) · permissive · permeable",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "The grid is ______: it imposes order on the surface and allows chaos inside.",
+   "en": "The grid is permissive: it imposes order on the surface and allows chaos inside.",
+   "why": "permissive는 허용하는 · 관대한, permeable은 투과성 있는."
+  },
+  "w4d4k3": {
+   "g": "w4",
+   "rule": "k",
+   "sit": "콜하스 「광기의 뉴욕」 (1978) · 「크기」 (1995) · 써야 할 말: beyond a certain",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "어느 크기를 넘으면, 건물은 맥락에 속하기를 그치고 스스로 맥락이 된다.",
+   "wl": "ko",
+   "en": "Beyond a certain size, a building stops belonging to its context and becomes one.",
+   "why": "stop + -ing = ~하기를 그치다. 끝의 one이 context의 반복을 막는다."
+  },
+  "w4d4g4": {
+   "g": "w4",
+   "rule": "g",
+   "sit": "콜하스 「광기의 뉴욕」 (1978) · 「크기」 (1995)",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "Does the grid allows chaos?",
+   "en": "Does the grid allow chaos?",
+   "why": "does 뒤 원형"
+  },
+  "w4d4n4": {
+   "g": "w4",
+   "rule": "n",
+   "sit": "콜하스 「광기의 뉴욕」 (1978) · 「크기」 (1995) · indifferent · different",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Bigness is ______ to context: it neither respects nor opposes it.",
+   "en": "Bigness is indifferent to context: it neither respects nor opposes it.",
+   "why": "indifferent to = ~에 무관심한. different from과 다르다."
+  },
+  "w4d4n5": {
+   "g": "w4",
+   "rule": "n",
+   "sit": "콜하스 「광기의 뉴욕」 (1978) · 「크기」 (1995) · recasts · recounts",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "The book ______ Manhattan's builders as unwitting theorists.",
+   "en": "The book recasts Manhattan's builders as unwitting theorists.",
+   "why": "recast는 다른 역할로 다시 그리다, recount는 이야기해 들려주다."
+  },
+  "w4d5g1": {
+   "g": "w4",
+   "rule": "g",
+   "sit": "칸 「벽돌에게 묻기」 · 「섬기는 공간과 섬김받는 공간」",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "Do Kahn's buildings uses only brick?",
+   "en": "Do Kahn's buildings use only brick?",
+   "why": "do 뒤 원형"
+  },
+  "w4d5n1": {
+   "g": "w4",
+   "rule": "n",
+   "sit": "칸 「벽돌에게 묻기」 · 「섬기는 공간과 섬김받는 공간」 · gnomic · genomic",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Kahn's sayings are ______: they sound like poetry and work like design rules.",
+   "en": "Kahn's sayings are gnomic: they sound like poetry and work like design rules.",
+   "why": "gnomic은 짧고 뜻이 깊은 격언풍(「노믹」), genomic은 유전체의."
+  },
+  "w4d5k1": {
+   "g": "w4",
+   "rule": "k",
+   "sit": "칸 「벽돌에게 묻기」 · 「섬기는 공간과 섬김받는 공간」 · 써야 할 말: more than",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "그는 읽히기보다 인용된다.",
+   "wl": "ko",
+   "en": "He is quoted more than he is read.",
+   "why": "수동 둘을 more than으로 맞세운다. 주어가 같아 리듬이 산다."
+  },
+  "w4d5g2": {
+   "g": "w4",
+   "rule": "been_worked",
+   "sit": "칸 「벽돌에게 묻기」 · 「섬기는 공간과 섬김받는 공간」",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "We have been worked on the Salk drawings since Monday.",
+   "en": "We've been working on the Salk drawings since Monday.",
+   "why": "진행은 been + -ing"
+  },
+  "w4d5n2": {
+   "g": "w4",
+   "rule": "n",
+   "sit": "칸 「벽돌에게 묻기」 · 「섬기는 공간과 섬김받는 공간」 · legible · eligible",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Served and servant spaces make the building's hierarchy ______.",
+   "en": "Served and servant spaces make the building's hierarchy legible.",
+   "why": "legible은 읽히는, eligible은 자격이 있는."
+  },
+  "w4d5k2": {
+   "g": "w4",
+   "rule": "k",
+   "sit": "칸 「벽돌에게 묻기」 · 「섬기는 공간과 섬김받는 공간」 · 써야 할 말: listen for",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "설계는 재료가 원하는 것에 귀 기울이는 데서 시작한다.",
+   "wl": "ko",
+   "en": "Design begins by listening for what the material wants.",
+   "why": "listen for = 올 소리를 기다리며 듣다. listen to보다 정확하다."
+  },
+  "w4d5g3": {
+   "g": "w4",
+   "rule": "g",
+   "sit": "칸 「벽돌에게 묻기」 · 「섬기는 공간과 섬김받는 공간」",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "Can you ask to the archive for the Richards plans?",
+   "en": "Could you ask the archive for the Richards plans?",
+   "why": "ask 뒤 to 없이"
+  },
+  "w4d5n3": {
+   "g": "w4",
+   "rule": "n",
+   "sit": "칸 「벽돌에게 묻기」 · 「섬기는 공간과 섬김받는 공간」 · figurative · figural",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "The brick story is ______, not literal.",
+   "en": "The brick story is figurative, not literal.",
+   "why": "figurative는 비유적인, figural은 형상의(미술 용어)."
+  },
+  "w4d5k3": {
+   "g": "w4",
+   "rule": "k",
+   "sit": "칸 「벽돌에게 묻기」 · 「섬기는 공간과 섬김받는 공간」 · 써야 할 말: a place of the mind",
+   "ask": "이 생각을 영어로 소리 내어 옮긴다",
+   "was": "방은 빛과 비례와 대화가 만나는 마음의 자리다.",
+   "wl": "ko",
+   "en": "The room is a place of the mind, where light, proportion and conversation meet.",
+   "why": "쉼표 뒤 where 절이 덧붙임의 여유를 준다."
+  },
+  "w4d5g4": {
+   "g": "w4",
+   "rule": "ask",
+   "sit": "칸 「벽돌에게 묻기」 · 「섬기는 공간과 섬김받는 공간」",
+   "ask": "틀린 곳을 찾아 바른 문장으로 소리 내어 말한다",
+   "was": "I'd like to gently request a leave on Friday, to see the Kahn exhibition.",
+   "en": "I'd like to take Friday off to see the Kahn exhibition.",
+   "why": "정중함 겹치기 대신 담백하게 · take a day off"
+  },
+  "w4d5n4": {
+   "g": "w4",
+   "rule": "n",
+   "sit": "칸 「벽돌에게 묻기」 · 「섬기는 공간과 섬김받는 공간」 · primordial · primary",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "Kahn's buildings have a ______ weight, as if they had always been there.",
+   "en": "Kahn's buildings have a primordial weight, as if they had always been there.",
+   "why": "primordial은 태초의 · 근원적인, primary는 첫째의 · 주된."
+  },
+  "w4d5n5": {
+   "g": "w4",
+   "rule": "n",
+   "sit": "칸 「벽돌에게 묻기」 · 「섬기는 공간과 섬김받는 공간」 · posited · positioned",
+   "ask": "빈칸에 맞는 말을 골라 문장 전체를 소리 내어 말한다",
+   "was": "He ______ the room as the origin of architecture.",
+   "en": "He posited the room as the origin of architecture.",
+   "why": "posit은 전제로 내세우다, position은 위치시키다."
+  }
+ },
+ "prompts": [
+  {
+   "ko": "셈퍼 「건축의 네 요소」 (1851). 셈퍼에게 벽은 「옷」이다. 그렇다면 구조를 드러내라는 근대의 「정직」 요구는 틀렸는가? 한쪽을 택해 주장하고, 반대편의 장점 하나를 인정하라.",
+   "words": "rests on · the point is not ... but · granted · which is why"
+  },
+  {
+   "ko": "설리번 「예술적으로 고찰한 고층 사무 건물」 (1896). 「형태는 기능을 따른다」는 오늘도 유효한가? 유효하다고 주장하되, 「기능」의 뜻을 새로 정의해서.",
+   "words": "provided · strictly speaking · far from · it is precisely because"
+  },
+  {
+   "ko": "로스 「장식과 범죄」 (1910). 「장식은 범죄다」는 오늘의 미니멀 인테리어를 정당화하는가? 아니라고 주장하라.",
+   "words": "on the face of it · what Loos objected to · by contrast · the irony is that"
+  },
+  {
+   "ko": "르코르뷔지에 「건축을 향하여」 (1923). 「집은 살기 위한 기계」를 오늘의 스마트홈이 실현했는가? 아니라고 주장하라.",
+   "words": "the point was never · if anything · what is missing is · conflate"
+  },
+  {
+   "ko": "하이데거 「짓기 거주하기 사유하기」 (1951). 건축가들은 하이데거를 자주 인용한다. 그것이 오독이라고 주장한 뒤, 그들이 맞게 읽은 점 하나를 인정하라.",
+   "words": "to be fair · that said · it does not follow that · if anything"
+  },
+  {
+   "ko": "러스킨 「기억의 등불」 (1849) 대 비올레르뒤크 「복원」 (1866). 숭례문(2008 화재 뒤 2013 복구)은 러스킨의 눈으로 보면 거짓인가? 아니라고 주장하라.",
+   "words": "by Ruskin's standard · what changes the verdict is · granted · in that sense"
+  },
+  {
+   "ko": "리글 「기념비에 대한 현대의 숭배」 (1903). 낡은 공장 벽의 녹과 얼룩을 지워야 하는가? 리글의 가치 둘을 써서 「남긴다」 쪽을 주장하라.",
+   "words": "what is at stake · whereas · it would be naive to · the compromise is"
+  },
+  {
+   "ko": "로시 「도시의 건축」 (1966). 세운상가는 로시의 「영속물」인가, 실패한 근대의 잔해인가? 영속물이라고 주장하라.",
+   "words": "on Rossi's terms · it is precisely because · whatever we think of · far from"
+  },
+  {
+   "ko": "타푸리 「건축과 유토피아」 (1973). 타푸리가 옳다면 건축가는 왜 설계를 계속하는가? 그래도 설계할 이유가 있다고 주장하라.",
+   "words": "even if we grant · it does not follow that · what remains is · modest"
+  },
+  {
+   "ko": "로 · 쾨터 「콜라주 시티」 (1978). 신도시(예: 세종)는 「공간 없는 물체」의 도시인가? 그렇다고 주장하되 한 가지는 인정하라.",
+   "words": "seen in figure-ground · admittedly · the deeper problem · what it lacks"
+  },
+  {
+   "ko": "버크 「숭고와 아름다움」 (1757) · 칸트 「판단력 비판」 (1790). 고층 아파트 거실 창의 야경은 숭고인가? 아니라고 주장하라.",
+   "words": "what is missing is · at most · strictly in Kant's sense · comfortable"
+  },
+  {
+   "ko": "바슐라르 「공간의 시학」 (1958). 원룸에는 다락도 지하실도 없다. 바슐라르식으로 그곳에도 몽상이 가능한가? 가능하다고 주장하라.",
+   "words": "vertically · in miniature · it is less about ... than about · even"
+  },
+  {
+   "ko": "팔라스마 「피부의 눈」 (1996). 유리 커튼월 사무실은 팔라스마의 비판을 피할 수 없는가? 피할 수 있다고 주장하라.",
+   "words": "it depends less on ... than on · consider · the problem is not ... but · as long as"
+  },
+  {
+   "ko": "푸코 「다른 공간들」 (1967 강연 · 1984 발표). 공항 면세 구역은 헤테로토피아인가? 그렇다고 주장한 뒤 한계를 하나 들어라.",
+   "words": "by Foucault's criteria · its own rules of entry · that said · it is closer to"
+  },
+  {
+   "ko": "르페브르 「공간의 생산」 (1974). 공공 공간의 「주민 참여 설계」는 르페브르의 「살아 낸 공간」을 되살리는가? 대체로 아니라고 주장하라.",
+   "words": "in principle · in practice · what gets lost · unless"
+  },
+  {
+   "ko": "제이콥스 「미국 대도시의 죽음과 삶」 (1961). 제이콥스는 젠트리피케이션에 책임이 있는가? 없다고 주장하되 불편한 점 하나를 인정하라.",
+   "words": "to blame her for · what she described · the uncomfortable part · it is not her fault that"
+  },
+  {
+   "ko": "벤투리 「복합성과 대립성」 (1966) · 「라스베이거스의 교훈」 (1972). 오늘의 「아이코닉 건축」은 오리인가, 장식된 헛간인가? 오리라고 주장하라.",
+   "words": "by Venturi's definition · what gives it away · the difference is that · ironically"
+  },
+  {
+   "ko": "프램턴 「비판적 지역주의를 향하여」 (1983). 한옥 지붕을 얹은 공공 청사는 비판적 지역주의인가? 아니라고 주장하라.",
+   "words": "on Frampton's terms · what it borrows is · by contrast · the test is"
+  },
+  {
+   "ko": "콜하스 「광기의 뉴욕」 (1978) · 「크기」 (1995). 판교 테크노밸리 같은 대형 업무 단지는 「크기」의 실현인가? 아니라고 주장하라.",
+   "words": "big is not the same as · what Koolhaas meant · far from · in short"
+  },
+  {
+   "ko": "칸 「벽돌에게 묻기」 · 「섬기는 공간과 섬김받는 공간」. 오늘의 사무소 설계에서 「섬기는 공간」은 여전히 표현할 가치가 있는가? 있다고 주장하라.",
+   "words": "far from being · what Kahn understood · today more than ever · the alternative is"
+  }
+ ],
+ "talks": [
+  {
+   "month": "2026-10",
+   "title": "Kéré · TED",
+   "q": "Francis Kere TED talk"
+  },
+  {
+   "month": "2026-11",
+   "title": "Zumthor · Different Kinds of Silence",
+   "q": "Peter Zumthor Different Kinds of Silence lecture"
+  },
+  {
+   "month": "2026-12",
+   "title": "99% Invisible · The Kirkbride Plan",
+   "q": "99 Percent Invisible Kirkbride Plan"
+  },
+  {
+   "month": "2027-01",
+   "title": "Kéré · TED",
+   "q": "Francis Kere TED talk"
+  },
+  {
+   "month": "2027-02",
+   "title": "Lacaton & Vassal · Freedom of Use",
+   "q": "Lacaton Vassal Freedom of Use lecture"
+  },
+  {
+   "month": "2027-03",
+   "title": "Alain Bertaud · lecture",
+   "q": "Alain Bertaud Order without Design lecture"
+  },
+  {
+   "month": "2027-04",
+   "title": "Herzog · Grace La",
+   "q": "Jacques Herzog Grace La conversation"
+  },
+  {
+   "month": "2027-05",
+   "title": "Aravena · TED",
+   "q": "Alejandro Aravena TED"
+  },
+  {
+   "month": "2027-06",
+   "title": "Koolhaas · Countryside",
+   "q": "Rem Koolhaas Countryside lecture"
+  },
+  {
+   "month": "2027-07",
+   "title": "Aureli · The Longhouse",
+   "q": "Pier Vittorio Aureli lecture"
+  },
+  {
+   "month": "2027-08",
+   "title": "Herzog · Serota",
+   "q": "Jacques Herzog Nicholas Serota conversation"
+  },
+  {
+   "month": "2027-09",
+   "title": "Talking Practice",
+   "q": "Talking Practice podcast architecture"
+  },
+  {
+   "month": "2027-10",
+   "title": "Minsuk Cho · Obrist",
+   "q": "Minsuk Cho Hans Ulrich Obrist"
+  }
+ ]
 }

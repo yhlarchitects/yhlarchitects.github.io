@@ -44,10 +44,10 @@ function endSession(closed) { flushSession(closed); session = null; }
 window.addEventListener("pagehide", () => flushSession(false));
 document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden") flushSession(false); else if (session) session.start = Date.now(); });
 
-/* ── 카드 들이기: 걸린 규칙의 카드가 먼저, 그다음 하루에 여섯 장씩 ── */
+/* ── 카드 들이기: 걸린 규칙의 카드가 먼저, 그다음 하루에 열두 장씩 (교재 하루 열두 문항과 같은 속도) ── */
 function introduced() {
   const all = Object.keys(C.cards);
-  const n = Math.min(all.length, 12 + 6 * daysUsed());
+  const n = Math.min(all.length, 12 + 12 * daysUsed());
   const ids = S().pulled.filter((id) => C.cards[id]);
   for (const id of all.slice(0, n)) if (!ids.includes(id)) ids.push(id);
   return ids;
@@ -81,7 +81,7 @@ function screenToday() {
       h("span", { class: "nm" }, BLOCKS[b]),
       h("span", { class: "hint" }, hints[b]),
       h("span", { class: "st" }, closed.has(b) ? "닫음" : "5분")));
-  const seen = Object.keys(S().reviews).length;
+  const seen = Object.keys(S().reviews).filter((id) => C.cards[id]).length;
   const stat = (n, unit, l, id) => h("div", { class: "stat" }, h("span", { class: "n", id }, String(n), unit ? h("small", null, unit) : null), h("span", { class: "l" }, l));
   render(
     h("p", { class: "meta" }, dateKo(), " · ", closed.size ? h("b", { id: "closed-today" }, "오늘 닫힘") : "블록 하나면 오늘이 닫힌다"),
@@ -165,6 +165,7 @@ function screenReview() {
     const id = q[0]; const c = C.cards[id]; const shown = Date.now();
     const back = h("div", { class: "back", hidden: true },
       h("p", { class: "en", lang: "en" }, c.en),
+      c.why ? h("p", { class: "muted why" }, c.why) : null,
       hasSpeech() ? btn("듣기", () => speak(c.en, voiceOpts()), "btn") : null,
       h("div", { class: "rates" }, RATINGS.map(({ r, ko }) => {
         const due = preview(reviews[id])[r];
@@ -177,8 +178,8 @@ function screenReview() {
       h("p", { class: "meta" }, "남은 카드 ", h("b", null, String(q.length)), " · ", C.groups[c.g] || ""),
       h("div", { class: "face card" },
         h("p", { class: "sit muted" }, c.sit),
-        h("p", { class: "fn" }, "이렇게 쓰던 것을 소리 내어 고쳐 말한다"),
-        h("p", { class: "was", lang: "en" }, c.was)),
+        h("p", { class: "fn" }, c.ask || "이렇게 쓰던 것을 소리 내어 고쳐 말한다"),
+        h("p", { class: c.ask ? "was q" : "was", lang: c.wl || "en" }, c.was)),
       flip, back);
   }
 
@@ -284,6 +285,7 @@ function screenTalk() {
   show();
   render(...blockFrame("talk", "같은 이야기를 세 번, 점점 짧게",
     h("p", { class: "lead" }, p.ko),
+    p.words ? h("p", null, h("span", { class: "label" }, "쓸 말"), " ", h("span", { lang: "en" }, p.words)) : null,
     h("p", { class: "fn" }, "영어로 말한다. 멈추지 말고, 막히면 쉬운 말로 돌아간다."),
     chips, timer, slot,
     h("div", { class: "row" }, btn("다른 주제", () => { S().talkPtr = i + 1; save(); go("talk"); }, "btn"))));
@@ -296,8 +298,8 @@ function screenMemory() {
   const msgs = S().msgs.slice(0, 30);
   const recs = S().recs.slice(0, 30);
   const total = Object.keys(C.cards).length;
-  const seen = Object.keys(S().reviews).length;
-  const dues = Object.values(S().reviews).map((c) => new Date(c.due)).sort((a, b) => a - b);
+  const seen = Object.keys(S().reviews).filter((id) => C.cards[id]).length;
+  const dues = Object.entries(S().reviews).filter(([id]) => C.cards[id]).map(([, c]) => c).map((c) => new Date(c.due)).sort((a, b) => a - b);
   const persisted = h("p", { class: "fn", id: "persist" });
   if (navigator.storage && navigator.storage.persisted) navigator.storage.persisted().then((p) => { persisted.textContent = p ? "이 기기에 고정 저장되어 있다." : "브라우저가 정리하면 지워질 수 있다. 홈 화면에 추가하거나 가끔 내보내 둔다."; });
   const msgOut = h("p", { class: "fn", id: "io-msg" });
