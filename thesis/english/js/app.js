@@ -4,6 +4,7 @@ import { check, RULE_KO } from "./check.js";
 import { RATINGS, preview, rate, intervalKo, buildQueue } from "./srs.js";
 import { hasSpeech, enVoices, onVoices, speak, stopSpeaking } from "./speech.js";
 import { canRecord, startRec, putRec, getRec } from "./rec.js";
+import * as sync from "./sync.js";
 
 const app = document.getElementById("app");
 let C = null;          // 콘텐츠
@@ -291,6 +292,35 @@ function screenTalk() {
     h("div", { class: "row" }, btn("다른 주제", () => { S().talkPtr = i + 1; save(); go("talk"); }, "btn"))));
 }
 
+/* ── 동기화 칸: 열쇠가 없으면 만들기 · 넣기, 있으면 상태 · 지금 맞추기 · 끊기 ── */
+function syncBox() {
+  const box = h("div", { class: "task", id: "sync" });
+  const note = h("p", { class: "fn", id: "sync-msg" });
+  const fail = (e) => { note.textContent = "안 됐다: " + (e.message || e); };
+  function draw() {
+    const c = sync.code(); const st = sync.status();
+    if (!c) {
+      const inp = h("input", { type: "text", id: "sync-code", placeholder: "다른 기기의 열쇠 20자", autocapitalize: "characters", spellcheck: "false", autocomplete: "off" });
+      box.replaceChildren(
+        h("p", null, "열쇠를 넣은 기기끼리 기록(카드 일정 · 걸린 꼴 · 보낸 메시지 · 시간)이 자동으로 합쳐진다. 기록은 이 기기에서 잠근 채 yhlarchitects 저장소에 올라가고, 서버는 내용을 읽지 못한다. 녹음 파일은 기기에만 남는다."),
+        h("div", { class: "row" }, btn("이 기기에서 시작", async () => { note.textContent = "만드는 중"; try { await sync.start(); note.textContent = "시작했다. 다른 기기에는 위 열쇠를 넣는다."; draw(); } catch (e) { fail(e); } }, "btn big primary")),
+        h("div", { class: "row" }, inp, btn("열쇠로 잇기", async () => { note.textContent = "잇는 중"; try { await sync.join(inp.value); note.textContent = "이었다. 두 기기 기록을 합쳤다."; setTimeout(() => go("memory"), 600); } catch (e) { fail(e); } }, "btn")),
+        note);
+      return;
+    }
+    box.replaceChildren(
+      h("p", null, h("span", { class: "label" }, "열쇠"), " ", h("b", { id: "sync-key", lang: "en" }, sync.pretty(c))),
+      h("p", { class: "fn" }, "다른 기기의 이 화면에서 「열쇠로 잇기」에 넣는다. 열쇠를 잃으면 서버 기록도 못 연다. 남에게 보이지 않는다."),
+      h("p", { class: "muted", id: "sync-st" }, st.err ? "마지막 시도 실패: " + st.err : st.at ? "마지막 동기화 " + whenKo(st.at) : "아직 맞추지 않았다"),
+      h("div", { class: "row" },
+        btn("지금 맞추기", async () => { note.textContent = "맞추는 중"; try { const r = await sync.syncNow(); note.textContent = r.changed ? "다른 기기 기록을 합쳤다." : "같다."; draw(); } catch (e) { fail(e); draw(); } }, "btn"),
+        btn("이 기기에서 끊기", () => { if (confirm("이 기기만 끊는다. 서버 기록과 이 기기 기록은 그대로다.")) { sync.leave(); draw(); } }, "btn")),
+      note);
+  }
+  draw();
+  return box;
+}
+
 /* ── 기억 ── */
 function screenMemory() {
   endSession(false);
@@ -329,8 +359,10 @@ function screenMemory() {
       h("p", { class: "fn" }, whenKo(m.at), m.rules.length ? " · " + m.rules.map((x) => RULE_KO[x] || x).join(" · ") : "")))) : h("p", { class: "muted" }, "아직 없다."),
     h("h2", null, "녹음"),
     recs.length ? h("ul", { class: "memlist", id: "recs" }, recs.map(playRow)) : h("p", { class: "muted" }, "아직 없다."),
+    h("h2", null, "기기 사이 동기화"),
+    syncBox(),
     h("h2", null, "옮기기"),
-    h("p", { class: "fn" }, "다른 기기로 옮길 때: 여기서 내보내고, 그 기기에서 불러온다. 두 기기 기록은 합쳐진다. 녹음 파일은 옮겨지지 않는다."),
+    h("p", { class: "fn" }, "열쇠 없이 옮길 때: 여기서 내보내고, 그 기기에서 불러온다. 두 기기 기록은 합쳐진다. 녹음 파일은 옮겨지지 않는다."),
     h("div", { class: "row" },
       btn("내보내기", () => {
         const blob = new Blob([JSON.stringify(exportAll(), null, 2)], { type: "application/json" });
@@ -370,6 +402,9 @@ async function main() {
   try { C = await (await fetch("content/en.json", { cache: "no-cache" })).json(); }
   catch (e) { render(h("h1", null, "열 수 없다"), h("p", { class: "muted" }, "콘텐츠를 읽지 못했다. 처음 한 번은 인터넷이 필요하다.")); return; }
   if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => {});
+  // 다른 기기 기록이 들어오면 오늘 · 기억 화면만 다시 그린다(카드를 넘기는 중에는 건드리지 않는다)
+  try { await sync.setup({ app: "english", get: exportAll, merge: importAll, changed: () => { const r = location.hash.replace(/^#\/?/, "") || "today"; if (r === "today" || r === "memory") route_(); } }); }
+  catch (e) { /* 동기화가 안 돼도 앱은 돈다 */ }
   route_();
 }
 main();

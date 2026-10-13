@@ -1,5 +1,7 @@
 // 기억: 이 기기의 localStorage 한 덩어리. 진도·카드 일정·자주 걸린 규칙·보낸 메시지 짝·녹음 목록.
-// 내보내기 JSON 으로 다른 기기에 옮긴다(불러오기는 합친다).
+// 동기화 열쇠를 넣은 기기끼리는 sync.js 가 합친다. 열쇠 없이는 내보내기 JSON 으로 옮긴다(불러오기는 합친다).
+
+import { schedule } from "./sync.js";
 
 const KEY = "english:v1";
 
@@ -36,7 +38,7 @@ export function S() {
 }
 
 export function save() {
-  try { localStorage.setItem(KEY, JSON.stringify(S())); return true; }
+  try { localStorage.setItem(KEY, JSON.stringify(S())); schedule(); return true; }
   catch (e) { return false; }
 }
 

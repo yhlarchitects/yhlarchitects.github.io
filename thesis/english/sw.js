@@ -1,6 +1,6 @@
 // 서비스 워커: 앱 셸은 미리 받아 두고(보이면서 뒤에서 갱신), 콘텐츠는 네트워크 먼저·안 되면 저장본.
 // 앱 파일을 고치면 VERSION 을 올린다.
-const VERSION = "2026-10-13-1";
+const VERSION = "2026-10-13-2";
 const SHELL = "en-shell-" + VERSION;
 const CONTENT = "en-content-v1";
 const SHELL_FILES = [
@@ -16,6 +16,7 @@ const SHELL_FILES = [
   "js/srs.js",
   "js/speech.js",
   "js/rec.js",
+  "js/sync.js",
   "vendor/ts-fsrs.js",
   "icons/icon.svg",
   "icons/icon-180.png",
