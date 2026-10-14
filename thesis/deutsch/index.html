@@ -278,7 +278,7 @@ html[data-native-font=ios] :is(.timer,.calendar-day,.progress-value,.folder-numb
 :root{--desk:#f7f8f9;--dot:#c8ccd1;--folder-height:max(350px,calc(100dvh - 134px))}
 html,body{background-color:var(--desk);background-image:radial-gradient(circle,var(--dot) .65px,transparent .9px);background-size:18px 18px;background-position:9px 9px;background-repeat:repeat;overflow-anchor:none}
 .folio-intro{background:transparent}
-html[data-view=cards]{--folder-height:max(310px,calc(100dvh - 296px))}
+
 .folder-content,.file-folder:last-child>.folder-content{padding:0!important;height:var(--folder-height);min-height:0;flex:none;overflow:visible}
 .folder-reader{height:100%;overflow-y:auto;overflow-x:hidden;overscroll-behavior-y:contain;scrollbar-width:thin;scrollbar-color:#00000025 transparent;padding:12px max(20px,env(safe-area-inset-right)) 24px max(20px,env(safe-area-inset-left));-webkit-overflow-scrolling:touch;touch-action:pan-y}
 .folder-reader>.lesson{min-height:100%;display:flex;flex-direction:column}
@@ -808,7 +808,7 @@ function turnFolderNote(direction){
  return movePaper(()=>{folioPages[view]=next;render()},{direction,surface:'.folio-note-stage'});
 }
 function scrollToFile(v){
- if(v==='home'||v==='cards'){window.scrollTo(0,0);return}
+ if(v==='home'){window.scrollTo(0,0);return}
  const target=$('.file-folder[data-file="'+v+'"]');if(target)window.scrollTo(0,Math.max(0,scrollY+target.getBoundingClientRect().top-16));
 }
 async function switchFolder(v){
@@ -827,7 +827,7 @@ async function switchFolder(v){
   if(oldClone){moves.push(oldClone.animate([{height:oldHeight+'px'},{height:'0px'}],{duration,easing,fill:'both'}));const paper=oldClone.querySelector('.folder-reader');moves.push(paper.animate([{transform:'none',opacity:1},{transform:'translateY(-25px) scale(.97)',opacity:0}],{duration:430,easing,fill:'both'}))}
   if(incoming){moves.push(incoming.animate([{height:'0px'},{height:endHeight+'px'}],{duration,easing,fill:'both'}));moves.push(incoming.querySelector('.folder-reader').animate([{transform:'translateY(35px) scale(.97)',opacity:0},{transform:'none',opacity:1}],{duration:560,delay:90,easing,fill:'both'}))}
   navigationMoves=moves;const started=performance.now();
-  const track=()=>{const t=Math.min(1,(performance.now()-started)/duration),ease=1-Math.pow(1-t,3);const target=v==='home'||v==='cards'?0:Math.max(0,scrollY+$('.file-folder[data-file="'+v+'"]').getBoundingClientRect().top-16);window.scrollTo(0,startScroll+(target-startScroll)*ease);if(t<1)raf=requestAnimationFrame(track)};track();
+  const track=()=>{const t=Math.min(1,(performance.now()-started)/duration),ease=1-Math.pow(1-t,3);const target=v==='home'?0:Math.max(0,scrollY+$('.file-folder[data-file="'+v+'"]').getBoundingClientRect().top-16);window.scrollTo(0,startScroll+(target-startScroll)*ease);if(t<1)raf=requestAnimationFrame(track)};track();
   await Promise.allSettled(moves.map(a=>a.finished));
  }finally{
   cancelAnimationFrame(raf);navigationMoves.forEach(a=>a.cancel());navigationMoves=[];render();scrollToFile(v);shell.inert=false;navigationBusy=false;delete document.documentElement.dataset.moving;focusHeading();
