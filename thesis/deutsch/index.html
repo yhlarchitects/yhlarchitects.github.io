@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko" data-page="study-files-v26" data-theme="light">
+<html lang="ko" data-page="study-files-v27" data-theme="light">
 <!-- forma-web: skip 사용자 요청: 세로로 폴더 접기·확대, 가로로 해당 폴더 카드만 이동. 여린 회색 도트 바탕. 여섯 폴더색·아이폰 기본 글꼴·메모·완료·음성·리본은 유지. -->
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
@@ -275,10 +275,10 @@ html[data-native-font=ios]{--sans:-apple-system,BlinkMacSystemFont,"Apple SD Got
 html[data-native-font=ios] :is(.reading-line,.loose-paper h2,.recall-deck .answer,.answer-slip .answer,.reference-note p:nth-child(2),.writing-paper textarea){letter-spacing:normal}
 html[data-native-font=ios] :is(.timer,.calendar-day,.progress-value,.folder-number){font-variant-numeric:tabular-nums}
 /* A quiet dotted desk around six colored, vertically opening folders. */
-:root{--desk:#f7f8f9;--dot:#c8ccd1;--folder-height:max(350px,calc(100dvh - 134px))}
+:root{--desk:#f7f8f9;--dot:#c8ccd1;--folder-height:max(350px,calc(100dvh - 96px))}
 html,body{background-color:var(--desk);background-image:radial-gradient(circle,var(--dot) .65px,transparent .9px);background-size:18px 18px;background-position:9px 9px;background-repeat:repeat;overflow-anchor:none}
 .folio-intro{background:transparent}
-
+html:not([data-view=home]) .cabinet{padding-bottom:56px}
 .folder-content,.file-folder:last-child>.folder-content{padding:0!important;height:var(--folder-height);min-height:0;flex:none;overflow:visible}
 .folder-reader{height:100%;overflow-y:auto;overflow-x:hidden;overscroll-behavior-y:contain;scrollbar-width:thin;scrollbar-color:#00000025 transparent;padding:12px max(20px,env(safe-area-inset-right)) 24px max(20px,env(safe-area-inset-left));-webkit-overflow-scrolling:touch;touch-action:pan-y}
 .folder-reader>.lesson{min-height:100%;display:flex;flex-direction:column}
@@ -330,7 +330,7 @@ const months={};let lessonLoading=null;const quizMap={};
 function lesson(){if(language!=='de')return null;const m=months[month];if(!m||!m.days)return null;const d=m.days[selected];if(!d)return null;return (person==='junghyun'&&d.junghyun)||d.base}
 function deck(){const L=lesson();if(!L)return [];const w=L.week||{phrases:[],tasks:[]};return [...L.cards.map(c=>({kind:'word',...c})),...L.tasks.map(t=>({kind:'task',...t})),...w.phrases.map(p=>({kind:'word',de:p.de,ko:p.ko,plural:'',exde:'',exko:'',note:'이번 주 표현',week:true})),...w.tasks.map(t=>({kind:'task',...t,week:true}))]}
 function need(){const L=lesson();return L?L.cards.length+L.tasks.length:0}
-function loadMonth(m){if(months[m]||lessonLoading===m)return;lessonLoading=m;fetch('content/'+m+'.json?v=26').then(r=>r.ok?r.json():{days:{}}).catch(()=>({days:{}})).then(j=>{months[m]=j;if(lessonLoading===m)lessonLoading=null;render()})}
+function loadMonth(m){if(months[m]||lessonLoading===m)return;lessonLoading=m;fetch('content/'+m+'.json?v=27').then(r=>r.ok?r.json():{days:{}}).catch(()=>({days:{}})).then(j=>{months[m]=j;if(lessonLoading===m)lessonLoading=null;render()})}
 function emptyLesson(label,title){return `<section class="lesson">${heading(label,title)}<div class="loose-paper"><p class="eyebrow">${language==='en'?'ENGLISH':'DEUTSCH'}</p><p class="prompt">${language==='en'?'영어 교재는 다음 판에서 이어집니다.':lessonLoading?'교재를 불러오고 있어요.':'이 날의 교재는 없어요.'}</p><p class="hint">${language==='en'?'언어를 Deutsch로 바꾸면 10월과 11월 교재가 열립니다.':'10월 1일부터 11월 30일까지의 날짜를 골라 주세요.'}</p></div><div class="lesson-actions"><button class="action secondary" data-view="calendar">쌓인 날들 →</button></div></section>`}
 function speechText(which){const L=lesson();if(!L)return '';if(which==='card'){const c=deck()[card];if(!c)return '';return c.kind==='word'?c.de+(c.exde?'. '+c.exde:''):c.type==='cloze'?c.prompt.replace(/_+/,c.options[c.answer]):c.options[c.answer]}if(which.startsWith('ear'))return L.ear.text;return [...L.reading.layers.flatMap(l=>l.lines),...(L.reading.summit?L.reading.summit.lines:[])].join(' ')}
 function themeLine(L){return `<p class="lesson-theme"><strong>${esc(L.theme)}</strong>${esc(L.focus)}</p>`}
@@ -701,6 +701,7 @@ function peelPaper(){
   render();
  },{flip:true,surface:view==='cards'?'.recall-deck':'.loose-paper'}).then(()=>{if(focused)$('[data-peek],[data-reveal]')?.focus({preventScroll:true})});
 }
+function readerOverflows(reader){return !!reader&&reader.scrollHeight>reader.clientHeight+3}
 function readerCanScroll(reader,dy){return !!reader&&(dy<0?reader.scrollTop+reader.clientHeight<reader.scrollHeight-3:reader.scrollTop>3)}
 function startTouch(x,y,target){
  if(navigationBusy||editable(target)||window.getSelection()?.toString()||$('#profile-dialog').open)return;
@@ -716,7 +717,7 @@ function moveTouch(x,y,event){
   if(Math.max(Math.abs(dx),Math.abs(dy))<9)return;
   if(Math.abs(dx)>Math.abs(dy)*1.3)g.axis='x';
   else if(Math.abs(dy)>Math.abs(dx)*1.3){
-   if(g.kind==='folio'&&g.target.closest('.folder-reader')&&readerCanScroll(g.reader,dy)){touchState=null;return}
+   if(g.kind==='folio'&&g.target.closest('.folder-reader')&&(readerOverflows(g.reader)||readerCanScroll(g.reader,dy))){touchState=null;return}
    g.axis='y';
   }else return;
  }
@@ -744,7 +745,7 @@ document.addEventListener('wheel',e=>{
  if(!delta)return;
  resetWheelAfterPause();
  if(navigationBusy||wheelLocked){e.preventDefault();return}
- if(!horizontal&&readerCanScroll(e.target.closest('.folder-reader'),-delta)){wheelTotal=0;return}
+ const wheelReader=e.target.closest('.folder-reader');if(!horizontal&&(readerOverflows(wheelReader)||readerCanScroll(wheelReader,-delta))){wheelTotal=0;return}
  e.preventDefault();if(axis!==wheelAxis){wheelTotal=0;wheelAxis=axis}wheelTotal+=delta;
  if(Math.abs(wheelTotal)>90){wheelLocked=true;const direction=wheelTotal>0?1:-1;if(horizontal)turnFolderNote(direction);else nextFile(direction)}
 },{passive:false});
@@ -809,7 +810,7 @@ function turnFolderNote(direction){
 }
 function scrollToFile(v){
  if(v==='home'){window.scrollTo(0,0);return}
- const target=$('.file-folder[data-file="'+v+'"]');if(target)window.scrollTo(0,Math.max(0,scrollY+target.getBoundingClientRect().top-16));
+ const target=$('.file-folder[data-file="'+v+'"]');if(target)window.scrollTo(0,Math.max(0,scrollY+target.getBoundingClientRect().top-8));
 }
 async function switchFolder(v){
  if(navigationBusy||v===view||!allowed.includes(v))return;
@@ -827,7 +828,7 @@ async function switchFolder(v){
   if(oldClone){moves.push(oldClone.animate([{height:oldHeight+'px'},{height:'0px'}],{duration,easing,fill:'both'}));const paper=oldClone.querySelector('.folder-reader');moves.push(paper.animate([{transform:'none',opacity:1},{transform:'translateY(-25px) scale(.97)',opacity:0}],{duration:430,easing,fill:'both'}))}
   if(incoming){moves.push(incoming.animate([{height:'0px'},{height:endHeight+'px'}],{duration,easing,fill:'both'}));moves.push(incoming.querySelector('.folder-reader').animate([{transform:'translateY(35px) scale(.97)',opacity:0},{transform:'none',opacity:1}],{duration:560,delay:90,easing,fill:'both'}))}
   navigationMoves=moves;const started=performance.now();
-  const track=()=>{const t=Math.min(1,(performance.now()-started)/duration),ease=1-Math.pow(1-t,3);const target=v==='home'?0:Math.max(0,scrollY+$('.file-folder[data-file="'+v+'"]').getBoundingClientRect().top-16);window.scrollTo(0,startScroll+(target-startScroll)*ease);if(t<1)raf=requestAnimationFrame(track)};track();
+  const track=()=>{const t=Math.min(1,(performance.now()-started)/duration),ease=1-Math.pow(1-t,3);const target=v==='home'?0:Math.max(0,scrollY+$('.file-folder[data-file="'+v+'"]').getBoundingClientRect().top-8);window.scrollTo(0,startScroll+(target-startScroll)*ease);if(t<1)raf=requestAnimationFrame(track)};track();
   await Promise.allSettled(moves.map(a=>a.finished));
  }finally{
   cancelAnimationFrame(raf);navigationMoves.forEach(a=>a.cancel());navigationMoves=[];render();scrollToFile(v);shell.inert=false;navigationBusy=false;delete document.documentElement.dataset.moving;focusHeading();
