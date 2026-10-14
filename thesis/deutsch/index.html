@@ -320,6 +320,7 @@ html[data-view=cards]{--folder-height:max(310px,calc(100dvh - 296px))}
 .situation{font-size:13px;line-height:1.7;margin-bottom:12px}.chunks{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}.chunks span{font:12px/1.4 var(--mono);padding:6px 9px;border:1px solid var(--line)}.week-write{margin-top:14px}
 .translation-slip .number{font-family:var(--mono)}
 .folio-note>.reading-quiz,.folio-note>.week-write{margin-top:0}.folio-note>.reading-paper .layer-label:first-of-type{margin-top:0}
+.sync-paper{background:#fff;padding:20px 20px 18px;box-shadow:0 1px 1px #00000019,0 5px 10px #20233125}.sync-paper .eyebrow{margin-bottom:14px}.sync-paper h2{font-size:22px;line-height:1.25;letter-spacing:-.04em;margin:0 0 12px}.sync-paper p{font-size:12px;line-height:1.7}.sync-paper .sync-code{font:20px/1.4 var(--mono);letter-spacing:.04em;margin:14px 0 6px;overflow-wrap:anywhere;user-select:all;-webkit-user-select:all}.sync-paper .sync-when{font-size:11px;color:#636366;margin-bottom:4px}.sync-paper input{width:100%;border:1px solid var(--line);border-radius:8px;background:#fff;padding:13px 14px;min-height:48px;color:var(--ink);font:16px var(--mono);margin:16px 0 0;text-transform:uppercase}.sync-paper .sync-actions{display:flex;gap:10px;margin-top:12px}.sync-paper .sync-actions .action{flex:1}.sync-paper .sync-note{font-size:11px;color:#636366;margin-top:12px;min-height:16px}.folio-note>.sync-paper{margin-top:0}
 </style></head>
 <body><div class="shell"><main id="screen"></main></div><dialog class="profile-dialog" id="profile-dialog" aria-labelledby="profile-title"><h2 id="profile-title">누구의 폴더를 열까요?</h2><p>처음 고른 이름을 이 기기에서 기억해요.</p><div class="profile-choices"><button class="profile-choice" data-choose-profile="yeonho"><strong>연호</strong><span>독일어 · 영어</span></button><button class="profile-choice" data-choose-profile="junghyun"><strong>정현</strong><span>독일어</span></button></div><button data-profile-cancel hidden>돌아가기</button></dialog><div class="toast" role="status" aria-live="polite"></div>
 <script>
@@ -347,7 +348,7 @@ let person='yeonho',needsProfileChoice=true;try{const saved=localStorage.getItem
 let storage='study-files-v14:'+person+':';let stored={};try{stored=JSON.parse(localStorage.getItem(storage+'data'))||{}}catch(e){}
 function seed(){return {de:{},en:{},notes:{}}}
 let data=stored.de&&stored.en?stored:seed();if(!data.notes)data.notes={};language=person==='yeonho'&&data.preferences?.language==='en'?'en':'de';
-function persist(){try{localStorage.setItem(storage+'data',JSON.stringify(data));return true}catch(e){toast('저장 공간을 사용할 수 없습니다.');return false}}
+function persist(){try{localStorage.setItem(storage+'data',JSON.stringify(data));if(syncApi)syncApi.schedule();return true}catch(e){toast('저장 공간을 사용할 수 없습니다.');return false}}
 function state(day=selected){return data[language][day]||[false,false,false,false]}
 function count(day=selected){return state(day).filter(Boolean).length}
 function monthCount(){return Object.entries(data[language]).filter(([d,v])=>d.startsWith(month)&&v.every(Boolean)).length}
@@ -421,7 +422,7 @@ const stickerKinds=['label','oval','ticket','tag'];
 function stickerFor(day){return data.stickers?.[language+':'+day]||stickerKinds[Number(day.slice(-2))%4]}
 function stampDay(){const stamp=$('.calendar-day[data-date="'+selected+'"]');if(stamp&&count()===4&&!reducedMotion.matches)stamp.animate([{transform:'translateY(-9px) scale(1.28) rotate(-10deg)',opacity:.2},{transform:'translateY(0) scale(.96) rotate(1deg)',opacity:1,offset:.7},{transform:'none',opacity:1}],{duration:340,easing:'ease-out'})}
 function stickerDrawer(){return `<div class="sticker-drawer"><p>${count()===4?'오늘 붙일 스티커를 골라 보세요.':'네 가지 연습을 마치면 스티커가 붙어요.'}</p><div class="sticker-choices" aria-label="날짜 스티커">${stickerKinds.map((kind,i)=>`<button class="sticker-choice stamp-${kind}" data-sticker="${kind}" aria-label="${['테두리 라벨','타원','티켓','꼬리표'][i]}" aria-pressed="${stickerFor(selected)===kind}" ${count()===4?'':'disabled'}>${selected.slice(-2)}</button>`).join('')}</div></div>`}
-function calendar(){const first=parse(month+'-01'),offset=(first.getDay()+6)%7,last=new Date(first.getFullYear(),first.getMonth()+1,0).getDate();let cells=(language==='de'?['Mo','Di','Mi','Do','Fr','Sa','So']:['Mo','Tu','We','Th','Fr','Sa','Su']).map(w=>`<span class="weekday">${w}</span>`).join('');for(let i=0;i<offset;i++)cells+='<span></span>';for(let n=1;n<=last;n++){const d=month+'-'+String(n).padStart(2,'0'),c=count(d);cells+=`<button class="calendar-day ${c===4?'done stamped stamp-'+stickerFor(d):c?'partial':''}" data-date="${d}" aria-label="${fmt(d)}, ${c}개 완료" aria-pressed="${d===selected}">${n}</button>`}return `<section class="lesson">${heading('ARCHIVE','한 장씩 쌓인 날들.')}<div class="month-paper"><div class="month-control"><h2>${new Intl.DateTimeFormat(language==='de'?'de-DE':'en-GB',{month:'long',year:'numeric'}).format(first)}</h2><div><button data-month="-1" aria-label="이전 달">←</button><button data-today aria-label="오늘로 이동">·</button><button data-month="1" aria-label="다음 달">→</button></div></div><div class="month-grid">${cells}</div><p class="calendar-legend">스티커는 네 가지 완료 · 작은 점은 진행 중</p></div><div class="notes-entry"><button class="action secondary" data-view="notes">전체 노트 모아 보기 <span>↗</span></button></div><div class="daily-checks"><h3 class="day-label">${fmt()} <span class="mono">/ ${count()} OF 4</span></h3><p class="record-hint">학습하면 자동으로 체크돼요. 눌러서 고칠 수도 있어요.</p>${tasks.map((t,i)=>`<button class="check-task" data-complete="${i}" aria-pressed="${state()[i]}" ${selected>today?'disabled':''}><span>${t[1]}</span><span class="check-mark">${state()[i]?'✓':'○'}</span></button>`).join('')}</div>${dailyNotes()}${stickerDrawer()}<div class="lesson-actions"><button class="action" data-view="cards">이날 파일 펼치기 <span>↗</span></button></div></section>`}
+function calendar(){const first=parse(month+'-01'),offset=(first.getDay()+6)%7,last=new Date(first.getFullYear(),first.getMonth()+1,0).getDate();let cells=(language==='de'?['Mo','Di','Mi','Do','Fr','Sa','So']:['Mo','Tu','We','Th','Fr','Sa','Su']).map(w=>`<span class="weekday">${w}</span>`).join('');for(let i=0;i<offset;i++)cells+='<span></span>';for(let n=1;n<=last;n++){const d=month+'-'+String(n).padStart(2,'0'),c=count(d);cells+=`<button class="calendar-day ${c===4?'done stamped stamp-'+stickerFor(d):c?'partial':''}" data-date="${d}" aria-label="${fmt(d)}, ${c}개 완료" aria-pressed="${d===selected}">${n}</button>`}return `<section class="lesson">${heading('ARCHIVE','한 장씩 쌓인 날들.')}<div class="month-paper"><div class="month-control"><h2>${new Intl.DateTimeFormat(language==='de'?'de-DE':'en-GB',{month:'long',year:'numeric'}).format(first)}</h2><div><button data-month="-1" aria-label="이전 달">←</button><button data-today aria-label="오늘로 이동">·</button><button data-month="1" aria-label="다음 달">→</button></div></div><div class="month-grid">${cells}</div><p class="calendar-legend">스티커는 네 가지 완료 · 작은 점은 진행 중</p></div><div class="notes-entry"><button class="action secondary" data-view="notes">전체 노트 모아 보기 <span>↗</span></button></div><div class="daily-checks"><h3 class="day-label">${fmt()} <span class="mono">/ ${count()} OF 4</span></h3><p class="record-hint">학습하면 자동으로 체크돼요. 눌러서 고칠 수도 있어요.</p>${tasks.map((t,i)=>`<button class="check-task" data-complete="${i}" aria-pressed="${state()[i]}" ${selected>today?'disabled':''}><span>${t[1]}</span><span class="check-mark">${state()[i]?'✓':'○'}</span></button>`).join('')}</div>${dailyNotes()}${stickerDrawer()}${syncPaper()}<div class="lesson-actions"><button class="action" data-view="cards">이날 파일 펼치기 <span>↗</span></button></div></section>`}
 // Completion and notes keep the existing person-specific storage keys.
 const accents=[['mint','파스텔 민트','#e3f5ec'],['pink','파스텔 핑크','#f9e5ed']];
 let notesQuery='',notesLanguage='all',notesType='all',notesLimit=40,noteReturn=false;
@@ -615,6 +616,46 @@ document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||
  else if(b.dataset.month)turnMonth(Number(b.dataset.month));
  else if(b.hasAttribute('data-today')){selected=today;month=today.slice(0,7);card=0;revealed=false;remaining=duration;folioPages.reading=folioPages.speaking=folioPages.writing=0;render()}
 });
+// 기기 맞추기(js/sync.js, yhl-sync): 두 사람 기록을 한 덩어리로 주고받는다. 체크는 합집합, 메모 글은 최신 우선(noteAt).
+const SYNC_PEOPLE=['yeonho','junghyun'];let syncApi=null;
+function syncLoad(p){if(p===person)return data;try{const s=JSON.parse(localStorage.getItem('study-files-v14:'+p+':data'));return s&&s.de&&s.en?s:null}catch(e){return null}}
+function syncGet(){const state={};for(const p of SYNC_PEOPLE){const d=syncLoad(p);if(d)state[p]=d}return {app:'study-files',state}}
+function syncUnion(a,b){const out=Array.isArray(a)?[...a]:[];for(const x of Array.isArray(b)?b:[])if(!out.includes(x))out.push(x);return out}
+function syncMergeInto(mine,theirs){
+ for(const lang of ['de','en']){const m=mine[lang]||(mine[lang]={}),t=theirs[lang]||{};for(const day of Object.keys(t)){const a=Array.isArray(m[day])?m[day]:[],b=Array.isArray(t[day])?t[day]:[];m[day]=[0,1,2,3].map(i=>Boolean(a[i]||b[i]))}}
+ mine.notes=mine.notes||{};mine.noteAt=mine.noteAt||{};const tn=theirs.notes||{},ta=theirs.noteAt||{};
+ for(const id of Object.keys(tn)){if(typeof tn[id]!=='string')continue;const ma=mine.noteAt[id]||'',ba=ta[id]||'',have=typeof mine.notes[id]==='string'&&mine.notes[id].trim();if(ba>ma||(!have&&tn[id].trim()&&ba>=ma)){mine.notes[id]=tn[id];if(ba)mine.noteAt[id]=ba}}
+ if(theirs.stickers){mine.stickers=mine.stickers||{};for(const id of Object.keys(theirs.stickers))if(!mine.stickers[id])mine.stickers[id]=theirs.stickers[id]}
+ if(theirs.activity){mine.activity=mine.activity||{};for(const id of Object.keys(theirs.activity)){const b=theirs.activity[id]||{},a=mine.activity[id]||(mine.activity[id]={cards:[],readingSeconds:0,readingLines:[]});a.cards=syncUnion(a.cards,b.cards);a.readingLines=syncUnion(a.readingLines,b.readingLines);a.readingSeconds=Math.max(Number(a.readingSeconds)||0,Number(b.readingSeconds)||0);if(b.ear)a.ear=syncUnion(a.ear,b.ear);for(const k of ['quiz','answers'])if(b[k]){a[k]=a[k]||{};for(const q of Object.keys(b[k]))if(a[k][q]===undefined)a[k][q]=b[k][q]}}}
+ return mine;
+}
+function syncMerge(incoming){
+ if(!incoming||incoming.app!=='study-files'||!incoming.state)throw new Error('이 앱의 기록이 아니에요.');
+ for(const p of SYNC_PEOPLE){const t=incoming.state[p];if(!t||typeof t!=='object')continue;
+  if(p===person){syncMergeInto(data,t);persist()}
+  else{const m=syncLoad(p)||seed();syncMergeInto(m,t);try{localStorage.setItem('study-files-v14:'+p+':data',JSON.stringify(m))}catch(e){}}}
+}
+function syncChanged(){refreshFolderBadges();if((view==='calendar'||view==='notes')&&!navigationBusy&&!editable(document.activeElement))render()}
+function syncWhen(iso){const d=new Date(iso||'');if(isNaN(d))return '';return new Intl.DateTimeFormat('ko-KR',{month:'long',day:'numeric',hour:'2-digit',minute:'2-digit',hour12:false}).format(d)}
+function syncPaper(){
+ const api=syncApi,code=api?api.code():null,st=api?api.status():{};
+ const body=code
+  ?`<p>이 기기의 코드예요. 다른 기기의 같은 자리에 넣으면 두 사람의 체크와 메모가 합쳐져요.</p><p class="sync-code" lang="en">${api.pretty(code)}</p><p class="sync-when">${st.err?'마지막 시도 실패 · '+esc(st.err):st.at?'마지막으로 맞춘 시각 · '+syncWhen(st.at):'아직 맞추지 않았어요.'}</p><div class="sync-actions"><button class="action" data-sync="now">지금 맞추기</button><button class="action secondary" data-sync="leave">이 기기에서 끊기</button></div>`
+  :`<p>코드를 만들어 다른 기기에 넣으면, 같은 코드의 기기끼리 체크와 메모가 합쳐져요. 기록은 이 기기에서 잠근 채 올라가고 서버는 내용을 읽지 못해요.</p><div class="sync-actions"><button class="action" data-sync="start" ${api?'':'disabled'}>코드 만들기</button></div><label class="sr-only" for="sync-code-input">다른 기기의 코드</label><input id="sync-code-input" type="text" data-sync-input placeholder="다른 기기의 코드 20자" autocapitalize="characters" autocomplete="off" spellcheck="false"><div class="sync-actions"><button class="action secondary" data-sync="join" ${api?'':'disabled'}>코드 넣기</button></div>`;
+ return `<section class="sync-paper" aria-label="기기 맞추기"><p class="eyebrow">SYNC / 기기 맞추기</p><h2>기기 사이 기록 맞추기.</h2>${body}<p class="sync-note" aria-live="polite" data-sync-note></p></section>`;
+}
+function syncRedraw(say){const p=$('.sync-paper');if(p)p.outerHTML=syncPaper();const n=$('.sync-paper [data-sync-note]');if(n&&say)n.textContent=say}
+document.addEventListener('click',async e=>{const b=e.target.closest('[data-sync]');if(!b||b.disabled||!syncApi)return;
+ const say=s=>{const n=$('.sync-paper [data-sync-note]');if(n)n.textContent=s},what=b.dataset.sync;
+ try{
+  if(what==='start'){say('코드를 만들고 있어요.');await syncApi.start();syncRedraw();toast('코드를 만들었어요. 다른 기기에 넣어 주세요.')}
+  else if(what==='join'){const v=$('.sync-paper [data-sync-input]')?.value||'';say('기록을 합치고 있어요.');await syncApi.join(v);syncRedraw();toast('기록을 합쳤어요.')}
+  else if(what==='now'){say('맞추는 중이에요.');const r=await syncApi.syncNow();syncRedraw();toast(r.changed?'다른 기기의 기록을 합쳤어요.':'이미 같아요.')}
+  else if(what==='leave'){if(!confirm('이 기기만 끊어요. 서버와 이 기기의 기록은 그대로예요.'))return;syncApi.leave();syncRedraw()}
+ }catch(err){syncRedraw(err&&err.message?err.message:String(err))}
+});
+document.addEventListener('input',e=>{const type=e.target.dataset?.note;if(type){if(!data.noteAt)data.noteAt={};data.noteAt[language+':'+selected+':'+type]=new Date().toISOString()}});
+window.studyFilesSync={get:syncGet,merge:syncMerge,changed:syncChanged,attach(api){syncApi=api;syncRedraw()}};
 document.addEventListener('input',e=>{if(e.target.hasAttribute('data-note-search')){notesQuery=e.target.value;folioPages.notes=0;refreshNotes();return}const type=e.target.dataset.note;if(type){data.notes[language+':'+selected+':'+type]=e.target.value;const ok=persist();refreshFolderBadges();e.target.nextElementSibling.textContent=ok?'이 브라우저에 저장됨':'저장 공간을 사용할 수 없습니다.';if(ok&&e.target.value.trim()&&!e.isComposing)markComplete(type)}});
 document.addEventListener('compositionend',e=>{const type=e.target.dataset.note;if(type&&e.target.value.trim()&&persist())markComplete(type)});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&ribbonOpen){e.preventDefault();setRibbon(false,{keyboard:true})}});
@@ -729,7 +770,7 @@ window.addEventListener('resize',stopDrag);
 window.addEventListener('pagehide',stopDrag);
 
 const folioPages={reading:0,speaking:0,writing:0,calendar:0,notes:0};
-const folioTitles={reading:['원문 계단','낱말 풀이','풀이 문제','간직할 표현'],speaking:['듣기 대본','말하기 타이머'],writing:['나의 한 문장','본보기 문장','이번 주 쓰기'],calendar:['학습 달력','이날의 학습','이날의 노트']};
+const folioTitles={reading:['원문 계단','낱말 풀이','풀이 문제','간직할 표현'],speaking:['듣기 대본','말하기 타이머'],writing:['나의 한 문장','본보기 문장','이번 주 쓰기'],calendar:['학습 달력','이날의 학습','이날의 노트','기기 맞추기']};
 function resetFolioPages(){Object.keys(folioPages).forEach(k=>folioPages[k]=0)}
 function pageControls(index,total,title){return `<nav class="folio-pager" aria-label="이 폴더의 카드"><button data-folio-step="-1" aria-label="이전 카드" ${index<=0?'disabled':''}>←</button><span>${esc(title)}<b>${total?index+1:0} / ${total}</b></span><button data-folio-step="1" aria-label="다음 카드" ${index>=total-1?'disabled':''}>→</button></nav>`}
 function mountFolioPages(){
@@ -738,7 +779,7 @@ function mountFolioPages(){
  const reader=document.createElement('div');reader.className='folder-reader';reader.dataset.folderScroll='';content.append(reader);reader.append(lesson);
  if(view==='cards'){reader.dataset.noteIndex=card;reader.dataset.noteTotal=deck().length;return}
  if(view==='notes'){reader.dataset.noteIndex=folioPages.notes;return}
- const allSelectors={reading:[['.reading-paper'],['.translation-slip'],['.reading-quiz'],['.note-paper']],speaking:[['.loose-paper'],['.timer-paper',':scope>.save-status']],writing:[['.writing-paper'],['.reference-note'],['.week-write']],calendar:[['.month-paper'],['.daily-checks','.sticker-drawer'],['.daily-notes','.notes-entry']]}[view];
+ const allSelectors={reading:[['.reading-paper'],['.translation-slip'],['.reading-quiz'],['.note-paper']],speaking:[['.loose-paper'],['.timer-paper',':scope>.save-status']],writing:[['.writing-paper'],['.reference-note'],['.week-write']],calendar:[['.month-paper'],['.daily-checks','.sticker-drawer'],['.daily-notes','.notes-entry'],['.sync-paper']]}[view];
  if(!allSelectors)return;
  const titles=[],selectors=allSelectors.filter((group,i)=>{const has=group.some(s=>lesson.querySelector(s));if(has)titles.push(folioTitles[view][i]);return has});if(!selectors.length)return;
  const theme=lesson.querySelector('.lesson-theme');
@@ -803,4 +844,5 @@ function turnCard(direction){
 render();scrollToFile(view);initQuietScreen();
 })();
 </script><!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "89894b1a3f054c01b57106249f69807c"}'></script><!-- End Cloudflare Web Analytics --><script>if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}))</script>
+<script type="module">import * as sync from './js/sync.js';const b=window.studyFilesSync;b.attach(sync);sync.setup({app:'study-files',get:b.get,merge:b.merge,changed:b.changed}).catch(()=>{})</script>
 </body></html>
