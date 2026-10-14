@@ -1,7 +1,13 @@
 (() => {
   'use strict';
   const films = VIDEO-CATALOG;
-  const filmOrder = ['yakushima', 'manhattan', 'nordhavn'];
+  const filmOrder = ['yakushima', 'manhattan', 'nordhavn', 'amk-library'];
+  // Where the screen's crop is anchored for each film (CSS object-position).
+  // A portrait phone shows one narrow column of a landscape film; name that column here.
+  // Films without an entry stay centred.
+  const filmPosition = { 'amk-library': '35.9% 50%' };
+  const positionOf = film => filmPosition[film.id] || '50% 50%';
+  const anchorOf = element => (element.style.objectPosition || '50% 50%').split(/\s+/).map(part => parseFloat(part) / 100);
   const orderedFilms = [
     ...filmOrder.map(id => films.find(film => film.id === id)).filter(Boolean),
     ...films.filter(film => !filmOrder.includes(film.id))
@@ -13,6 +19,10 @@
   let video = layer.querySelector('video');
   const toggle = document.getElementById('yhla');
   const contact = document.getElementById('contact');
+  const workspaceToggle = document.getElementById('workspace-toggle');
+  const workspace = document.getElementById('workspace');
+  const panels = [contact, workspace].filter(Boolean);
+  let openedPanel = null;
   const status = document.getElementById('status');
   let cover = layer.querySelector('.cover');
   let outgoing = null;
@@ -108,7 +118,7 @@
     const distance = Math.max(Math.abs(touch.clientX - start.x), Math.abs(touch.clientY - start.y));
     const swiped = distance >= 48 && performance.now() - start.time <= 1500;
     const tapped = distance < 12;
-    const email = event.target.closest?.('a[href]');
+    const email = event.target.closest?.('a[href]') || (workspace && workspace.contains(event.target));
     if (!hadGesture || swiped || (tapped && !email)) {
       if (event.cancelable) event.preventDefault();
       suppressTouchClickUntil = performance.now() + 750;
@@ -149,6 +159,7 @@
     lastTime = 0;
     loopRestartPending = false;
     video.dataset.film = film.id;
+    video.style.objectPosition = cover.style.objectPosition = positionOf(film);
     layer.classList.remove('is-playing');
     if (film.poster) {
       video.poster = film.poster;
@@ -222,23 +233,37 @@
     dissolve.finished.then(finish, finish);
   }
 
-  function setOpened(value) {
-    if (value && contact.hidden) {
-      contact.hidden = false;
+  const toggleFor = panel => panel === workspace ? workspaceToggle : toggle;
+  function showPanel(panel, value) {
+    if (value && panel.hidden) {
+      panel.hidden = false;
       // Establish the closed style before starting the normal reveal transition.
-      void contact.offsetHeight;
+      void panel.offsetHeight;
     }
+    panel.classList.toggle('is-shown', value);
+    panel.setAttribute('aria-hidden', String(!value));
+    panel.inert = !value;
+    toggleFor(panel).setAttribute('aria-expanded', String(value));
+  }
+  // One lens for both panels: contact (YHLA) and the WORKSPACE sign-in.
+  function setOpened(value, panel = contact) {
+    panels.forEach(item => { if (item !== panel || !value) showPanel(item, false); });
+    if (value) showPanel(panel, true);
+    openedPanel = value ? panel : null;
     opened = value;
-    toggle.setAttribute('aria-expanded', String(value));
-    contact.setAttribute('aria-hidden', String(!value));
-    contact.inert = !value;
     document.body.classList.toggle('is-open', value);
     updateInk(true);
+    if (value && panel === workspace && !touchScreen.matches) {
+      const field = workspace.querySelector('input:not([hidden])');
+      field?.focus({ preventScroll: true });
+    }
   }
 
   function activateTarget(target) {
     if (target.closest?.('a[href]')) return;
-    if (toggle.contains(target)) setOpened(!opened);
+    if (workspace && workspace.contains(target)) return;
+    if (toggle.contains(target)) setOpened(openedPanel !== contact, contact);
+    else if (workspaceToggle && workspaceToggle.contains(target)) setOpened(openedPanel !== workspace, workspace);
     else if (opened) setOpened(false);
     else nextFilm();
   }
@@ -248,11 +273,14 @@
     if (event.altKey || event.ctrlKey || event.metaKey || event.isComposing) return;
     if (event.key === 'Escape' && opened) {
       event.preventDefault();
+      const mark = toggleFor(openedPanel || contact);
       setOpened(false);
-      toggle.focus({ preventScroll: true });
+      mark.focus({ preventScroll: true });
       return;
     }
     if (!navigationKeys.has(event.key)) return;
+    // Typing inside the sign-in panel belongs to the form.
+    if (workspace && workspace.contains(event.target)) return;
     // Enter still opens a focused email link. Elsewhere it always advances,
     // including when Escape has returned keyboard focus to the YHLA mark.
     if (event.key === 'Enter' && event.target.closest?.('a[href]')) {
@@ -306,10 +334,14 @@
   });
   function resetIntroduction() {
     opened = false;
-    toggle.setAttribute('aria-expanded', 'false');
-    contact.setAttribute('aria-hidden', 'true');
-    contact.inert = true;
-    contact.hidden = true;
+    openedPanel = null;
+    panels.forEach(panel => {
+      toggleFor(panel).setAttribute('aria-expanded', 'false');
+      panel.classList.remove('is-shown');
+      panel.setAttribute('aria-hidden', 'true');
+      panel.inert = true;
+      panel.hidden = true;
+    });
     document.body.classList.remove('is-open');
     // Do not save or restore an open introduction in the browser's page cache.
     const lens = document.querySelector('.lens');
@@ -348,8 +380,9 @@
       if (!width || !height) return false;
       const frame = scene.video.getBoundingClientRect();
       const scale = Math.max(frame.width / width, frame.height / height);
-      const offsetX = (width * scale - frame.width) / 2;
-      const offsetY = (height * scale - frame.height) / 2;
+      const [anchorX, anchorY] = anchorOf(scene.video);
+      const offsetX = (width * scale - frame.width) * anchorX;
+      const offsetY = (height * scale - frame.height) * anchorY;
       context.globalAlpha = opacity;
       context.drawImage(source, (box.left - frame.left + offsetX) / scale,
         (box.top - frame.top + offsetY) / scale, box.width / scale, box.height / scale,
@@ -379,8 +412,8 @@
       } catch { /* Keep the last sampled fallback while a frame loads. */ }
     }
     for (const group of inkGroups) {
-      const contactVisible = getComputedStyle(contact).visibility !== 'hidden';
-      const words = [...group.element.querySelectorAll('.word')].filter(word => contactVisible || !contact.contains(word));
+      const hiddenPanels = panels.filter(panel => getComputedStyle(panel).visibility === 'hidden');
+      const words = [...group.element.querySelectorAll('.word')].filter(word => !hiddenPanels.some(panel => panel.contains(word)));
       let total = 0;
       let samples = 0;
       try {
@@ -410,6 +443,8 @@
       group.pending = null;
       group.count = 0;
       document.documentElement.style.setProperty(group.property, white ? '#fff' : '#000');
+      // The sign-in panel's veil is the opposite of the ink: paper on a dark film, shadow on a light one.
+      document.documentElement.style.setProperty('--veil', white ? 'rgba(0, 0, 0, .24)' : 'rgba(255, 255, 255, .24)');
     }
   }
   layers.forEach(item => item.querySelector('.cover').addEventListener('load', () => updateInk(true)));
@@ -435,6 +470,65 @@
   positionFilmPage();
   document.addEventListener('visibilitychange', () => { if (!document.hidden) updateInk(true); });
   setInterval(updateInk, 250);
+
+  // WORKSPACE sign-in. The panel talks to the workspace origin without cookies;
+  // a successful code returns a one-time hand-off that the workspace turns into the session.
+  if (workspace) {
+    const origin = workspace.dataset.origin || '';
+    const relative = value => typeof value === 'string' && /^\/(?!\/)/.test(value) ? value : '/';
+    let step = 'email';
+    let busy = false;
+    const note = name => workspace.querySelectorAll('.note [data-note]').forEach(item => { item.hidden = item.dataset.note !== name; });
+    const show = name => {
+      step = name;
+      workspace.querySelectorAll('[data-step]').forEach(item => { item.hidden = item.dataset.step !== name; });
+      workspace.elements.email.readOnly = name === 'code';
+      (name === 'code' ? workspace.elements.code : workspace.elements.email).focus({ preventScroll: true });
+    };
+    const post = (path, body) => fetch(origin + path, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+    workspace.addEventListener('submit', async event => {
+      event.preventDefault();
+      if (busy) return;
+      const email = workspace.elements.email.value.trim();
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { workspace.elements.email.focus(); return; }
+      busy = true;
+      workspace.querySelectorAll('button').forEach(button => { button.disabled = true; });
+      try {
+        if (step === 'email') {
+          const reply = await post('/auth/request', { email });
+          if (reply.status === 429) note('later');
+          else if (reply.status === 503) note('offline');
+          else if (!reply.ok) note('wrong');
+          else { note('sent'); show('code'); }
+        } else {
+          const code = workspace.elements.code.value.trim();
+          if (!/^\d{6}$/.test(code)) { note('wrong'); workspace.elements.code.focus(); return; }
+          const next = relative(workspace.dataset.next);
+          const reply = await post('/auth/verify', { email, code, next });
+          const data = await reply.json().catch(() => ({}));
+          if (reply.status === 429) note('later');
+          else if (!reply.ok) note('wrong');
+          else {
+            note('in');
+            if (data.handoff) location.assign(origin + '/auth/finish?t=' + encodeURIComponent(data.handoff));
+            else location.assign(origin + next);
+          }
+        }
+      } catch {
+        note('offline');
+      } finally {
+        busy = false;
+        workspace.querySelectorAll('button').forEach(button => { button.disabled = false; });
+      }
+    });
+    // The workspace sends visitors here to sign in: open the panel at once.
+    const query = new URLSearchParams(location.search);
+    if (query.has('workspace')) {
+      workspace.dataset.next = relative(query.get('next'));
+      history.replaceState(null, '', location.pathname);
+      requestAnimationFrame(() => setOpened(true, workspace));
+    }
+  }
 
   // A fresh visit can start on any film; navigation then follows the fixed cycle.
   if (films.length) load(choose(films));
