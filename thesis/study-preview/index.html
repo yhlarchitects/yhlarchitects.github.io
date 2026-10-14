@@ -1,6 +1,6 @@
 <!doctype html>
-<html lang="ko" data-page="study-files-v18" data-theme="light">
-<!-- forma-web: skip 사용자 요청으로 전체 배경은 흰색, v4·v5의 민트와 보라 조합을 공부앱의 강조 영역에 적용. 종이·폴더 동작과 기기별 글꼴 및 기록 기능 유지. 이전 판 보존. -->
+<html lang="ko" data-page="study-files-v20" data-theme="light">
+<!-- forma-web: skip 사용자 제공 Aether 이미지의 연두·연보라·살구색을 적용. 전체 배경은 흰색, 글자는 검정. 폴더·종이 동작과 자동 체크·노트는 유지하며 독일어 음성 선택 수정 포함. 이전 판 보존. -->
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <title>한 장씩 · 공부 노트</title>
@@ -164,8 +164,18 @@ html,body{background:#fff}.back-sheet{background:#f5f5f7}.green-spine{color:var(
 .accent-dot{width:18px;height:10px;background:linear-gradient(90deg,var(--accent) 50%,var(--companion) 50%);border-radius:3px;border:1px solid #00000010}.accent-options{gap:10px}.accent-option{flex:1;min-height:60px;border:1px solid var(--line);border-radius:6px;color:var(--ink);font-size:11px;padding:30px 5px 9px}.accent-option:before{inset:8px 12px auto;height:14px;background:linear-gradient(90deg,var(--choice) 65%,var(--other) 65%);border-radius:2px}.accent-option[aria-pressed=true]{outline:1px solid var(--ink);outline-offset:1px}
 @media(hover:hover) and (pointer:fine){.action:not(.secondary):hover{background:var(--companion);color:var(--ink)}}
 
+.speech-status{font-size:11px;line-height:1.65;margin-top:10px;color:#505054;overflow-wrap:anywhere}.paper-tools button[aria-pressed=true]{font-weight:600}
+/* Colors sampled from the supplied Aether reference. */
+:root{--mint:#c8f5ca;--lilac:#ccccfe;--coral:#febeb4;--accent:var(--mint);--companion:var(--lilac);--accent-soft:#f1fcf2;--accent-line:var(--mint)}
+.folder[data-view=writing] path{fill:var(--coral)}.folder[data-view=writing] .folder-meta{color:var(--ink)}
+.writing-paper{border-left-color:var(--coral)}.reference-note{background:var(--coral)}
+.ribbon:nth-child(3){background:var(--coral)!important;color:var(--ink)}
+.stamp-tag{--stamp-color:var(--coral)}.saved-note[data-note-kind=writing]{border-left-color:var(--coral)}
+.accent-dot{width:24px;background:linear-gradient(90deg,var(--accent) 0 40%,var(--companion) 40% 72%,var(--coral) 72%)}
+.accent-option:before{background:linear-gradient(90deg,var(--choice) 0 50%,var(--other) 50% 76%,var(--coral) 76%)}
+
 </style></head>
-<body><div class="shell"><header class="masthead"><button class="wordmark" data-view="home" aria-label="오늘의 파일로 돌아가기">LANGUAGE & SPACE<span>하루에 한 장씩</span></button><div class="header-controls"><button class="profile-switch" data-profile aria-label="현재 연호, 정현으로 바꾸기">연호 <span aria-hidden="true">↔</span></button><div class="languages" aria-label="학습 언어"><button data-language="de" aria-pressed="true">DE</button><button data-language="en" aria-pressed="false">EN</button></div></div></header><main id="screen"></main><footer class="edition"><span>LANGUAGE & SPACE / PAPER STUDY</span><span>V18 · 예시 교재</span><details class="appearance"><summary><span class="accent-dot" aria-hidden="true"></span>색 배치</summary><div class="appearance-panel"><p>두 색의 자리를 골라 보세요.</p><div class="accent-options" aria-label="민트와 보라 배치 선택"></div><small></small></div></details></footer></div><div class="toast" role="status" aria-live="polite"></div>
+<body><div class="shell"><header class="masthead"><button class="wordmark" data-view="home" aria-label="오늘의 파일로 돌아가기">LANGUAGE & SPACE<span>하루에 한 장씩</span></button><div class="header-controls"><button class="profile-switch" data-profile aria-label="현재 연호, 정현으로 바꾸기">연호 <span aria-hidden="true">↔</span></button><div class="languages" aria-label="학습 언어"><button data-language="de" aria-pressed="true">DE</button><button data-language="en" aria-pressed="false">EN</button></div></div></header><main id="screen"></main><footer class="edition"><span>LANGUAGE & SPACE / PAPER STUDY</span><span>V20 · 예시 교재</span><details class="appearance"><summary><span class="accent-dot" aria-hidden="true"></span>색 배치</summary><div class="appearance-panel"><p>연두와 보라의 자리를 골라 보세요.</p><div class="accent-options" aria-label="연두와 보라 배치 선택"></div><small></small></div></details></footer></div><div class="toast" role="status" aria-live="polite"></div>
 <script>
 (()=>{'use strict';
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
@@ -194,8 +204,8 @@ function home(){const t=text[language];return `<div class="home-layout"><div><se
 function paperGrip(label,open=false){return `<button class="paper-peek" data-peek aria-label="${label}, 위로 젖히기" aria-expanded="${open}"><span aria-hidden="true">↟</span></button>`}
 function heading(label,title){return `<div class="view-head"><button class="back" data-view="${noteReturn?'notes':'home'}">← ${noteReturn?'전체 노트':'오늘의 파일'}</button><p class="eyebrow">${label} / ${selected.slice(5).replace('-','.')}<br>${language.toUpperCase()} · 05 MIN</p></div><h1 class="page-title">${title}</h1><p class="gesture-caption">옆으로 넘기기 · 맨 위에서 아래로 당겨 넣기</p>`}
 function note(type,label,placeholder){const v=data.notes[language+':'+selected+':'+type]||'';return `<label class="note-label" for="${type}-note">${label}</label><textarea id="${type}-note" data-note="${type}" placeholder="${placeholder}">${esc(v)}</textarea><p class="save-status" aria-live="polite">${v?'이 브라우저에 저장됨':''}</p>`}
-function reading(){const t=text[language];return `<section class="lesson">${heading('02 / READ','방을 읽는 법.')}<article class="loose-paper reading-paper">${paperGrip(showTranslation?'해석 접기':'해석 펼치기',showTranslation)}<p class="eyebrow">READING NOTE / 학습용 창작문</p><h2 lang="${language}">${t.title}</h2>${t.reading.map((line,i)=>`<p class="reading-line"><span class="line-number">0${i+1}</span><span lang="${language}">${line}</span></p>`).join('')}<div class="paper-tools"><button data-speak="reading">소리 듣기 ↗</button><button data-translation aria-expanded="${showTranslation}" aria-controls="reading-translation">${showTranslation?'해석 접기':'해석 펼치기'} ${showTranslation?'−':'+'}</button></div></article><aside class="translation-slip" id="reading-translation" ${showTranslation?'':'hidden'}><p class="eyebrow">ON THE OTHER SIDE / 문장별 해석</p>${t.readko.map((line,i)=>`<p><span class="number">0${i+1}</span> &nbsp;${line}</p>`).join('')}</aside><div class="lesson-actions">${complete('reading')}<button class="action secondary" data-view="speaking">소리 내기 →</button></div><div class="note-paper">${note('reading','내가 간직할 표현','한 줄을 옮겨 적어 두세요.')}</div></section>`}
-function cards(){const c=text[language].cards[card];return `<section class="lesson">${heading('01 / RECALL','기억에서 꺼내기.')}<article class="loose-paper recall-deck ${revealed?'recall-back':''}"><div class="card-count"><p class="eyebrow" style="margin:0">${revealed?'꺼낸 표현':'한국어를 보고 먼저 말해 보세요.'}</p><span class="eyebrow">0${card+1} / 03</span></div>${paperGrip(revealed?'한국어로 뒤집기':'표현으로 뒤집기',revealed)}${revealed?`<p class="answer" lang="${language}">${c[1]}</p><p class="hint">${c[2]}</p><div class="paper-tools"><button data-speak="card">소리 듣기 ↗</button><button data-reveal aria-expanded="true">한국어 다시 보기 ↶</button></div><div class="ratings" aria-label="기억 정도"><button data-rate="다시">다시</button><button data-rate="기억">기억났어요</button><button data-rate="쉬움">쉬웠어요</button></div>`:`<p class="recall-question">${c[0]}</p><button class="action" data-reveal aria-expanded="false">위로 젖혀 표현 보기 <span>↟</span></button>`}</article><div class="card-turns"><button data-card-turn="-1">← ${card?'앞 문장':'파일 넣기'}</button><span>옆으로 넘겨도 돼요</span><button data-card-turn="1">${card===2?'원문 읽기':'다음 문장'} →</button></div><div class="lesson-actions">${complete('cards')}<button class="action secondary" data-view="reading">원문 읽기 →</button></div></section>`}
+function reading(){const t=text[language];return `<section class="lesson">${heading('02 / READ','방을 읽는 법.')}<article class="loose-paper reading-paper">${paperGrip(showTranslation?'해석 접기':'해석 펼치기',showTranslation)}<p class="eyebrow">READING NOTE / 학습용 창작문</p><h2 lang="${language}">${t.title}</h2>${t.reading.map((line,i)=>`<p class="reading-line"><span class="line-number">0${i+1}</span><span lang="${language}">${line}</span></p>`).join('')}<div class="paper-tools"><button data-speak="reading" aria-pressed="false">${language==='de'?'독일어':'영어'} 듣기 ↗</button><button data-translation aria-expanded="${showTranslation}" aria-controls="reading-translation">${showTranslation?'해석 접기':'해석 펼치기'} ${showTranslation?'−':'+'}</button></div></article><aside class="translation-slip" id="reading-translation" ${showTranslation?'':'hidden'}><p class="eyebrow">ON THE OTHER SIDE / 문장별 해석</p>${t.readko.map((line,i)=>`<p><span class="number">0${i+1}</span> &nbsp;${line}</p>`).join('')}</aside><div class="lesson-actions">${complete('reading')}<button class="action secondary" data-view="speaking">소리 내기 →</button></div><div class="note-paper">${note('reading','내가 간직할 표현','한 줄을 옮겨 적어 두세요.')}</div></section>`}
+function cards(){const c=text[language].cards[card];return `<section class="lesson">${heading('01 / RECALL','기억에서 꺼내기.')}<article class="loose-paper recall-deck ${revealed?'recall-back':''}"><div class="card-count"><p class="eyebrow" style="margin:0">${revealed?'꺼낸 표현':'한국어를 보고 먼저 말해 보세요.'}</p><span class="eyebrow">0${card+1} / 03</span></div>${paperGrip(revealed?'한국어로 뒤집기':'표현으로 뒤집기',revealed)}${revealed?`<p class="answer" lang="${language}">${c[1]}</p><p class="hint">${c[2]}</p><div class="paper-tools"><button data-speak="card" aria-pressed="false">${language==='de'?'독일어':'영어'} 듣기 ↗</button><button data-reveal aria-expanded="true">한국어 다시 보기 ↶</button></div><div class="ratings" aria-label="기억 정도"><button data-rate="다시">다시</button><button data-rate="기억">기억났어요</button><button data-rate="쉬움">쉬웠어요</button></div>`:`<p class="recall-question">${c[0]}</p><button class="action" data-reveal aria-expanded="false">위로 젖혀 표현 보기 <span>↟</span></button>`}</article><div class="card-turns"><button data-card-turn="-1">← ${card?'앞 문장':'파일 넣기'}</button><span>옆으로 넘겨도 돼요</span><button data-card-turn="1">${card===2?'원문 읽기':'다음 문장'} →</button></div><div class="lesson-actions">${complete('cards')}<button class="action secondary" data-view="reading">원문 읽기 →</button></div></section>`}
 function clock(){return String(Math.floor(remaining/60)).padStart(2,'0')+':'+String(remaining%60).padStart(2,'0')}
 function speaking(){const t=text[language];return `<section class="lesson">${heading('03 / SPEAK','입 밖으로 꺼내기.')}<div class="loose-paper">${paperGrip(peekSpeaking?'뜻 접기':'뜻 펼치기',peekSpeaking)}<p class="eyebrow">A SMALL QUESTION / 오늘의 질문</p><p class="prompt mono" lang="${language}">${t.prompt}</p><p class="prompt-translation" ${peekSpeaking?'':'hidden'}>${t.promptko}</p></div><div class="timer-paper"><p class="eyebrow">생각을 끝까지 말해 보세요.</p><p class="timer" data-clock>${clock()}</p><div class="durations" aria-label="연습 시간">${[90,60,45].map(n=>`<button data-duration="${n}" aria-pressed="${duration===n}">${n}초</button>`).join('')}</div><div class="lesson-actions"><button class="action" data-timer>${timer?'잠시 멈춤':'말하기 시작'} <span>${timer?'Ⅱ':'↗'}</span></button><button class="action secondary" data-reset>처음부터</button></div></div><div class="lesson-actions">${complete('speaking')}<button class="action secondary" data-view="writing">한 문장 남기기 →</button></div><p class="save-status">타이머로 연습합니다. 음성은 녹음하지 않습니다.</p></section>`}
 function writing(){const t=text[language];return `<section class="lesson">${heading('04 / WRITE','나의 한 문장.')}<div class="loose-paper writing-paper">${paperGrip(peekWriting?'참고 문장 접기':'참고 문장 펼치기',peekWriting)}<p class="eyebrow">LEAVE A LINE / ${fmt()}</p>${note('writing','오늘의 표현을 빌려 적어 보세요.',t.write)}</div><aside class="reference-note" ${peekWriting?'':'hidden'}><p class="eyebrow">다시 볼 표현</p><p lang="${language}">${t.sentence}</p><p>${t.translation}</p></aside><div class="lesson-actions">${complete('writing')}<button class="action secondary" data-view="home">파일 덮기 →</button></div></section>`}
@@ -205,7 +215,7 @@ function stampDay(){const stamp=$('.calendar-day[data-date="'+selected+'"]');if(
 function stickerDrawer(){return `<div class="sticker-drawer"><p>${count()===4?'오늘 붙일 스티커를 골라 보세요.':'네 가지 연습을 마치면 스티커가 붙어요.'}</p><div class="sticker-choices" aria-label="날짜 스티커">${stickerKinds.map((kind,i)=>`<button class="sticker-choice stamp-${kind}" data-sticker="${kind}" aria-label="${['테두리 라벨','타원','티켓','꼬리표'][i]}" aria-pressed="${stickerFor(selected)===kind}" ${count()===4?'':'disabled'}>${selected.slice(-2)}</button>`).join('')}</div></div>`}
 function calendar(){const first=parse(month+'-01'),offset=(first.getDay()+6)%7,last=new Date(first.getFullYear(),first.getMonth()+1,0).getDate();let cells=['M','T','W','T','F','S','S'].map(w=>`<span class="weekday">${w}</span>`).join('');for(let i=0;i<offset;i++)cells+='<span></span>';for(let n=1;n<=last;n++){const d=month+'-'+String(n).padStart(2,'0'),c=count(d);cells+=`<button class="calendar-day ${c===4?'done stamped stamp-'+stickerFor(d):c?'partial':''}" data-date="${d}" aria-label="${fmt(d)}, ${c}개 완료" aria-pressed="${d===selected}">${n}</button>`}return `<section class="lesson">${heading('ARCHIVE','한 장씩 쌓인 날들.')}<div class="month-paper"><div class="month-control"><h2>${month.replace('-',' / ')}</h2><div><button data-month="-1" aria-label="이전 달">←</button><button data-today aria-label="오늘로 이동">·</button><button data-month="1" aria-label="다음 달">→</button></div></div><div class="month-grid">${cells}</div><p class="calendar-legend">스티커는 네 가지 완료 · 작은 점은 진행 중</p></div><div class="notes-entry"><button class="action secondary" data-view="notes">전체 노트 모아 보기 <span>↗</span></button></div><div class="daily-checks"><h3 class="day-label">${fmt()} <span class="mono">/ ${count()} OF 4</span></h3><p class="record-hint">학습하면 자동으로 체크돼요. 눌러서 고칠 수도 있어요.</p>${tasks.map((t,i)=>`<button class="check-task" data-complete="${i}" aria-pressed="${state()[i]}" ${selected>today?'disabled':''}><span>${t[1]}</span><span class="check-mark">${state()[i]?'✓':'○'}</span></button>`).join('')}</div>${dailyNotes()}${stickerDrawer()}<div class="lesson-actions"><button class="action" data-view="home">이날 파일 펼치기 <span>↗</span></button></div></section>`}
 // Completion and notes keep the existing person-specific storage keys.
-const accents=[['mint','민트 중심','#b0d9d5'],['lilac','보라 중심','#b498c1']];
+const accents=[['mint','연두 중심','#c8f5ca'],['lilac','보라 중심','#ccccfe']];
 let notesQuery='',notesLanguage='all',notesType='all',notesLimit=40,noteReturn=false;
 function applyAccent(){
  const chosen=accents.find(a=>a[0]===data.preferences?.accent)||accents[0],other=accents.find(a=>a[0]!==chosen[0]);
@@ -277,7 +287,7 @@ function motionClone(element){
  return clone;
 }
 function focusHeading(){const title=$('#screen h1');if(title){title.tabIndex=-1;title.focus({preventScroll:true})}}
-function commitView(v){pause();if(v==='notes'||v==='home')noteReturn=false;if(window.speechSynthesis)speechSynthesis.cancel();ribbonOpen=false;view=v;render();window.scrollTo(0,0)}
+function commitView(v){pause();if(v==='notes'||v==='home')noteReturn=false;stopSpeech();ribbonOpen=false;view=v;render();window.scrollTo(0,0)}
 async function openFolder(v,source){
  if(navigationBusy||view===v)return;
  const pull=view==='home'&&source?.matches('.folder,.sentence-sheet')&&!reducedMotion.matches&&typeof source.animate==='function';
@@ -357,7 +367,67 @@ function changePerson(){
  notesQuery='';notesLanguage='all';notesType='all';notesLimit=40;card=0;revealed=false;showTranslation=false;peekSpeaking=false;peekWriting=false;selected=today;month=today.slice(0,7);commitView('home');remaining=duration;
 }
 function pause(){if(timer){remaining=Math.max(0,Math.ceil((deadline-Date.now())/1000));clearInterval(timer);timer=null}}
-function speak(which){if(!window.speechSynthesis){toast('이 브라우저는 읽어 주기를 지원하지 않습니다.');return}speechSynthesis.cancel();const t=text[language],u=new SpeechSynthesisUtterance(which==='card'?t.cards[card][1]:t.reading.join(' '));u.lang=t.lang;u.rate=.85;u.onerror=()=>toast('기기의 음성 설정을 확인해 주세요.');speechSynthesis.speak(u)}
+// Select an actual matching voice. Never hand a missing language to the default voice.
+const studySynth=window.speechSynthesis||null;
+let currentSpeech=null,voiceWait=null,voiceWaitTimer=null,speechStartTimer=null;
+const voiceLanguage=s=>String(s||'').trim().replace(/_/g,'-').toLowerCase();
+const speechLanguageName=()=>language==='de'?'독일어':'영어';
+function availableVoices(){try{return studySynth?[...studySynth.getVoices()]:[]}catch(e){return []}}
+function matchingVoice(voices,locale){
+ const target=voiceLanguage(locale),base=target.split('-')[0];
+ return voices.filter(v=>voiceLanguage(v.lang).split('-')[0]===base).sort((a,b)=>{
+  const rank=v=>(voiceLanguage(v.lang)===target?100:0)+(v.localService?10:0)+(v.default?1:0);
+  return rank(b)-rank(a);
+ })[0]||null;
+}
+function syncSpeechButtons(){
+ $$('[data-speak]').forEach(b=>{const active=!!currentSpeech&&currentSpeech.which===b.dataset.speak;
+  b.textContent=active?'읽기 멈추기 ■':speechLanguageName()+' 듣기 ↗';b.setAttribute('aria-pressed',String(active));
+ });
+}
+function speechMessage(message){
+ let status=$('[data-speech-status]');
+ if(!status){const tools=$('[data-speak]')?.closest('.paper-tools');if(!tools)return;status=document.createElement('p');status.className='speech-status';status.dataset.speechStatus='';status.setAttribute('role','status');status.setAttribute('aria-live','polite');tools.after(status)}
+ status.textContent=message;status.hidden=!message;
+}
+function stopSpeech(){
+ currentSpeech=null;voiceWait=null;clearTimeout(voiceWaitTimer);clearTimeout(speechStartTimer);
+ if(studySynth){try{studySynth.cancel()}catch(e){}}
+ syncSpeechButtons();speechMessage('');
+}
+function voiceWaitMatches(){return voiceWait&&voiceWait.language===language&&voiceWait.person===person&&voiceWait.view===view&&voiceWait.card===card&&voiceWait.selected===selected}
+function refreshWaitingVoice(final=false){
+ const voices=availableVoices();if(!voiceWaitMatches())return;
+ if(matchingVoice(voices,text[language].lang)){
+  clearTimeout(voiceWaitTimer);voiceWait=null;speechMessage(speechLanguageName()+' 음성이 준비됐어요. 듣기를 다시 눌러 주세요.');
+ }else if(final){speechMessage('이 브라우저에서 '+speechLanguageName()+' 음성을 찾지 못했어요. 기기에 해당 언어의 음성을 추가한 뒤 다시 눌러 주세요.')}
+}
+function speak(which){
+ if(!studySynth||typeof window.SpeechSynthesisUtterance!=='function'){speechMessage('이 브라우저는 음성 읽기를 지원하지 않아요.');return}
+ if(currentSpeech?.which===which){stopSpeech();speechMessage('읽기를 멈췄어요.');return}
+ stopSpeech();const t=text[language],voice=matchingVoice(availableVoices(),t.lang);
+ if(!voice){
+  voiceWait={language,person,view,card,selected};
+  speechMessage(speechLanguageName()+' 음성을 확인하고 있어요. 잠시 후 다시 눌러 주세요.');
+  voiceWaitTimer=setTimeout(()=>refreshWaitingVoice(true),1500);return;
+ }
+ const utterance=new SpeechSynthesisUtterance(which==='card'?t.cards[card][1]:t.reading.join(' '));
+ // The language and voice are assigned together before speak, inside the button gesture.
+ utterance.voice=voice;utterance.lang=voice.lang.replace(/_/g,'-');utterance.rate=.85;utterance.pitch=1;utterance.volume=1;
+ const session={utterance,which,language};currentSpeech=session;syncSpeechButtons();speechMessage(speechLanguageName()+' 음성을 준비하고 있어요.');
+ utterance.onstart=()=>{if(currentSpeech!==session)return;clearTimeout(speechStartTimer);speechMessage(speechLanguageName()+'로 읽고 있어요.')};
+ utterance.onend=()=>{if(currentSpeech!==session)return;clearTimeout(speechStartTimer);currentSpeech=null;syncSpeechButtons();speechMessage(speechLanguageName()+' 읽기를 마쳤어요.')};
+ utterance.onerror=e=>{
+  if(currentSpeech!==session)return;clearTimeout(speechStartTimer);currentSpeech=null;syncSpeechButtons();
+  if(['canceled','interrupted'].includes(e.error)){speechMessage('');return}
+  if(['language-unavailable','voice-unavailable'].includes(e.error))speechMessage(speechLanguageName()+' 음성을 사용할 수 없어요. 기기에 해당 언어의 음성을 추가한 뒤 다시 눌러 주세요.');
+  else speechMessage('음성을 재생하지 못했어요. 듣기를 다시 눌러 주세요.');
+ };
+ speechStartTimer=setTimeout(()=>{if(currentSpeech!==session)return;stopSpeech();speechMessage('음성 재생이 시작되지 않았어요. 듣기를 다시 눌러 주세요.')},6000);
+ try{if(studySynth.paused)studySynth.resume();studySynth.speak(utterance)}catch(e){if(currentSpeech===session){stopSpeech();speechMessage('음성을 재생하지 못했어요. 듣기를 다시 눌러 주세요.')}}
+}
+if(studySynth){availableVoices();studySynth.addEventListener('voiceschanged',()=>refreshWaitingVoice())}
+
 document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||b.disabled)return;
  if(b.hasAttribute('data-more-notes')){const offset=notesLimit;notesLimit+=40;refreshNotes();const first=$$('.saved-note')[offset]?.querySelector('button');first?.focus({preventScroll:true})}
  else if(b.dataset.accent){if(!accents.some(a=>a[0]===b.dataset.accent))return;data.preferences={...data.preferences,accent:b.dataset.accent};persist();applyAccent()}
@@ -367,7 +437,7 @@ document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||
  else if(b.hasAttribute('data-card-turn'))turnCard(Number(b.dataset.cardTurn));
  else if(b.dataset.view)navigate(b.dataset.view,b);
  else if(b.hasAttribute('data-profile'))changePerson();
- else if(b.dataset.language){pause();remaining=duration;language=b.dataset.language;card=0;revealed=false;showTranslation=false;peekSpeaking=false;peekWriting=false;render()}
+ else if(b.dataset.language){stopSpeech();pause();remaining=duration;language=b.dataset.language;card=0;revealed=false;showTranslation=false;peekSpeaking=false;peekWriting=false;render()}
  else if(b.hasAttribute('data-secret'))setRibbon(!ribbonOpen,{keyboard:e.detail===0});
  else if(b.hasAttribute('data-translation'))peelPaper();
  else if(b.hasAttribute('data-reveal'))peelPaper();
@@ -384,7 +454,7 @@ document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||
 document.addEventListener('input',e=>{if(e.target.hasAttribute('data-note-search')){notesQuery=e.target.value;notesLimit=40;refreshNotes();return}const type=e.target.dataset.note;if(type){data.notes[language+':'+selected+':'+type]=e.target.value;const ok=persist();e.target.nextElementSibling.textContent=ok?'이 브라우저에 저장됨':'저장 공간을 사용할 수 없습니다.';if(ok&&e.target.value.trim()&&!e.isComposing)markComplete(type)}});
 document.addEventListener('compositionend',e=>{const type=e.target.dataset.note;if(type&&e.target.value.trim()&&persist())markComplete(type)});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&ribbonOpen){e.preventDefault();setRibbon(false,{keyboard:true})}});
-window.addEventListener('pagehide',()=>{navigationMoves.forEach(a=>a.cancel());ribbonMoves.forEach(a=>a.cancel());pause();if(window.speechSynthesis)speechSynthesis.cancel()});
+window.addEventListener('pagehide',()=>{navigationMoves.forEach(a=>a.cancel());ribbonMoves.forEach(a=>a.cancel());pause();stopSpeech()});
 // One spatial order connects the files; cards and months have their own inner order.
 const fileOrder=['home','cards','reading','speaking','writing','calendar'];
 let touchState=null,suppressClickUntil=0,peekSpeaking=false,peekWriting=false;
@@ -394,7 +464,7 @@ function stopDrag(){
  touchState=null;
 }
 async function movePaper(change,{direction=1,flip=false,surface='.lesson'}={}){
- if(navigationBusy)return;
+ if(navigationBusy)return;stopSpeech();
  if(reducedMotion.matches){change();return}
  navigationBusy=true;document.documentElement.dataset.moving='true';const shell=$('.shell');shell.inert=true;
  try{
