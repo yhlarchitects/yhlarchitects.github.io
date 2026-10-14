@@ -445,6 +445,7 @@
       document.documentElement.style.setProperty(group.property, white ? '#fff' : '#000');
       // The sign-in panel's veil is the opposite of the ink: paper on a dark film, shadow on a light one.
       document.documentElement.style.setProperty('--veil', white ? 'rgba(0, 0, 0, .24)' : 'rgba(255, 255, 255, .24)');
+      document.documentElement.style.setProperty('--rule', white ? 'rgba(255, 255, 255, .6)' : 'rgba(0, 0, 0, .55)');
     }
   }
   layers.forEach(item => item.querySelector('.cover').addEventListener('load', () => updateInk(true)));

@@ -227,7 +227,7 @@ body.is-open .lens {
   overflow: auto;
   margin: 0;
   padding: 1.3em 1.5em 1.2em;
-  border: 1px solid currentColor;
+  border: .5px solid var(--rule, currentColor);
   background: var(--veil, rgba(255, 255, 255, .24));
 }
 #workspace .field { display: flex; flex-direction: column; gap: .6em; padding: .8em 0 .4em; }
@@ -236,7 +236,7 @@ body.is-open .lens {
   margin: 0;
   padding: .4em 0;
   border: 0;
-  border-bottom: 1px solid currentColor;
+  border-bottom: .5px solid var(--rule, currentColor);
   border-radius: 0;
   background: transparent;
   color: inherit;
@@ -245,9 +245,9 @@ body.is-open .lens {
   -webkit-appearance: none;
   appearance: none;
 }
-#workspace input:focus { border-bottom-width: 2px; }
+#workspace input:focus { border-bottom-color: currentColor; }
 #workspace .actions { display: flex; gap: .8em; align-items: center; padding-top: 1em; }
-#workspace .line { display: block; padding: .5em .9em; border: 1px solid currentColor; }
+#workspace .line { display: block; padding: .5em .9em; border: .5px solid var(--rule, currentColor); }
 #workspace button:disabled { opacity: .4; cursor: default; }
 #workspace .note { display: flex; min-height: 1.4em; align-items: center; padding-top: 1em; }
 #workspace [hidden] { display: none !important; }
