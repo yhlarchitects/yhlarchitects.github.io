@@ -1,35 +1,806 @@
 <!doctype html>
-<html lang="ko" data-page="deutsch-2628">
-<!-- forma-web v1 · 토큰 원본 .obsidian/snippets/forma.css · 스킬 .claude/skills/forma-web -->
+<html lang="ko" data-page="study-files-v26" data-theme="light">
+<!-- forma-web: skip 사용자 요청: 세로로 폴더 접기·확대, 가로로 해당 폴더 카드만 이동. 여린 회색 도트 바탕. 여섯 폴더색·아이폰 기본 글꼴·메모·완료·음성·리본은 유지. -->
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Deutsch</title>
-<meta name="description" content="연호·정현 독일어 하루 5분 블록">
-<meta name="theme-color" content="#FFFFFF">
-<link rel="manifest" href="manifest.webmanifest">
-<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="icons/icon-180.png">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Deutsch">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-<link rel="stylesheet" href="css/forma-web.css">
-<link rel="stylesheet" href="css/app.css">
-<script src="js/theme.js"></script>
-</head>
-<body>
-<header class="top">
-  <div class="name"><b>Deutsch</b> <span id="who"></span></div>
-  <div class="tools">
-    <button class="btn js-theme" type="button" aria-pressed="false">어둡게</button>
-  </div>
-</header>
-<main class="wrap narrow" id="app" aria-live="polite">
-  <p class="muted">불러오는 중</p>
-</main>
-<noscript><p class="wrap narrow">이 앱은 자바스크립트가 필요하다.</p></noscript>
-<script type="module" src="js/app.js"></script>
-<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "89894b1a3f054c01b57106249f69807c"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
-</html>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>공부 노트</title>
+<script>
+// iPhone and iPad use the system font for every script, including old mono labels.
+if(/iPhone|iPad|iPod/i.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1))document.documentElement.dataset.nativeFont='ios';
+</script>
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#f7f8f9">
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icons/icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="icons/icon-180.png"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Deutsch"><meta name="apple-mobile-web-app-status-bar-style" content="default">
+<style>
+@font-face{font-family:"Study Sans";src:url("./fonts/pretendard-variable.woff2") format("woff2");font-style:normal;font-weight:45 920;font-display:swap}
+@font-face{font-family:"Study Hangul";src:url("./fonts/pretendard-variable.woff2") format("woff2");font-style:normal;font-weight:45 920;font-display:swap;unicode-range:U+1100-11FF,U+3130-318F,U+A960-A97F,U+AC00-D7AF,U+D7B0-D7FF}
+
+:root{--desk:#e0e0e0;--paper:#e8e8e8;--sage:#e0e0e0;--green:#999999;--lavender:#c3c3c3;--grey:#c0c0c0;--rose:#acacac;--orange:#a3a3a3;--ink:#272727;--line:rgba(28,28,30,.16);--mono:Consolas,Menlo,"Courier New","Apple SD Gothic Neo","Study Hangul",monospace;--sans:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Study Sans","Malgun Gothic",sans-serif;color:var(--ink);background:var(--desk);font-family:var(--sans);font-synthesis:none;color-scheme:light}
+*{box-sizing:border-box}body{margin:0}button,textarea{font:inherit;color:inherit}button{cursor:pointer;border:0;border-radius:0;background:none;min-height:44px}button:disabled{opacity:.45;cursor:default}button,textarea{-webkit-tap-highlight-color:transparent}button:focus-visible,textarea:focus-visible{outline:2px solid var(--ink);outline-offset:3px}h1,h2,h3,p{margin:0}h1,h2,h3{font-weight:400}p{word-break:keep-all}a{color:inherit}[hidden]{display:none!important}small{font-size:inherit}.mono,.eyebrow,.number{font-family:var(--mono)}.eyebrow{font-size:10px;line-height:1.4;letter-spacing:.025em}.shell{max-width:980px;margin:auto;padding:0 28px 24px}.masthead{height:76px;display:flex;align-items:center;justify-content:space-between;gap:12px}.wordmark{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.015em;line-height:1.2;text-align:left;padding:0}.wordmark span{display:block;font-weight:400;font-size:9px;letter-spacing:.09em;margin-top:3px}.languages{display:flex;gap:0}.languages button{font:12px var(--mono);padding:0 11px;position:relative}.languages button[aria-pressed=true]:after{content:"";position:absolute;bottom:10px;left:11px;right:11px;height:2px;background:var(--ink)}.home-layout{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}.intro{padding:16px 0 22px}.intro .eyebrow{margin-bottom:12px}.intro-line{display:flex;align-items:baseline;justify-content:space-between;gap:12px}.intro h1{font-size:42px;line-height:1.2;letter-spacing:-.065em}.intro p:last-child{font-size:12px;margin-top:12px;line-height:1.5}.progress-note{font:11px var(--mono);white-space:nowrap}.progress-note b{font-size:21px;font-weight:400}.paper-stage{height:265px;position:relative;margin:12px 0 16px;isolation:isolate;z-index:2}.back-sheet{position:absolute;left:29px;top:12px;right:3px;height:220px;background:var(--sage);transform:rotate(2deg);box-shadow:1px 2px 2px #27272716}.green-spine{position:absolute;right:0;top:6px;width:48px;height:232px;background:var(--green);transform:rotate(2deg);display:flex;align-items:center;justify-content:center}.green-spine span{writing-mode:vertical-rl;font:11px var(--mono);letter-spacing:.05em}.sentence-sheet{display:block;position:absolute;left:0;right:35px;top:0;min-height:210px;padding:20px 22px 24px;text-align:left;background:var(--paper);transform:rotate(-2deg);box-shadow:1px 3px 3px #27272722}.sentence-sheet .eyebrow{font-size:9px;margin-bottom:20px;display:block}.sentence-sheet .sentence{display:block;font:23px/1.35 var(--mono);letter-spacing:-.045em;overflow-wrap:break-word;max-width:28ch}.sentence-sheet .sheet-bottom{display:block;font-size:10px;margin-top:20px}.paper-clip{position:absolute;top:-8px;left:16px;width:10px;height:36px;border:1px solid #606060;border-radius:6px;z-index:4;transform:rotate(-2deg);pointer-events:none}.paper-clip:before{content:"";position:absolute;top:3px;left:3px;width:7px;height:24px;border:1px solid #606060;border-radius:5px}.word-note{position:absolute;right:6px;bottom:0;width:190px;padding:14px 16px;background:var(--lavender);transform:rotate(2deg);box-shadow:1px 2px 3px #27272720;pointer-events:none}.word-note .eyebrow{font-size:8px;margin-bottom:7px}.word-note strong{display:block;font:16px var(--mono);font-weight:400}.word-note p:last-child{font-size:11px;margin-top:4px}.punch{position:absolute;right:1px;top:1px;width:44px;height:44px;padding:0;z-index:8}.punch:before{content:"";display:block;width:9px;height:9px;border-radius:50%;margin:auto;background:var(--desk);box-shadow:inset 1px 1px 1px #27272744}.punch:hover:before{outline:1px solid var(--ink);outline-offset:3px}.punch[aria-expanded=true]:before{background:var(--ink)}.folder-stack{padding-top:20px;isolation:isolate}.folder{width:100%;height:144px;padding:47px 22px 18px;position:relative;display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;text-align:left;isolation:isolate;margin-top:-32px;transition:transform .18s ease}.folder:first-child{margin-top:0}.folder svg{position:absolute;inset:0;width:100%;height:100%;z-index:-1;filter:drop-shadow(0 -1px 0 #27272718)}.folder-tab{position:absolute;top:10px;left:var(--tab);font:10px var(--mono);letter-spacing:.025em}.folder-row{display:flex;align-items:center;justify-content:space-between;gap:16px}.folder-title{font-size:27px;line-height:1.15;letter-spacing:-.04em}.folder-arrow{font-size:24px;line-height:1}.folder-meta{display:flex;justify-content:space-between;gap:12px;font-size:11px;line-height:1.4;margin-top:9px}.folder-meta small{font:9px var(--mono);white-space:nowrap}@media(hover:hover) and (pointer:fine){.folder:hover{transform:translateX(4px)}}.folder:focus-visible{outline-offset:-5px}.folder:last-child{box-shadow:0 3px 2px #27272714}.home-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;border-top:1px solid var(--line);margin-top:20px;padding-top:8px}.home-foot p{font-size:10px;line-height:1.65}.archive-link{display:flex;align-items:center;gap:12px;font-size:12px;white-space:nowrap;padding:6px 0}.archive-link b{font:20px var(--mono);font-weight:400}.edition{font:9px/1.6 var(--mono);margin-top:28px;opacity:.7;display:flex;justify-content:space-between;gap:12px}.ribbon-popover{position:absolute;top:24px;left:8px;right:-6px;z-index:12;filter:drop-shadow(1px 5px 3px #27272726)}.ribbon-head{background:var(--paper);padding-left:10px;display:flex;justify-content:space-between;align-items:center;margin:0 8px 8px;font:9px var(--mono)}.ribbon-close{font-size:12px;min-width:44px;padding:0 8px;background:var(--paper)}.ribbon{padding:13px 38px 13px 14px;margin:0 0 12px;min-height:70px;mask:radial-gradient(circle at calc(100% - 17px) 50%,transparent 5px,#000000 6px);background:var(--ribbon);transform:rotate(var(--angle));border-top:1px solid #ffffff88;border-bottom:1px solid #27272744;animation:unfold .25s ease-out;transform-origin:right center}.ribbon .eyebrow{font-size:9px;line-height:1.4;font-weight:700;letter-spacing:-.025em}.ribbon p:last-child{font-size:12px;line-height:1.45;margin-top:5px}.ribbon.brown{color:#f6f6f6}.ribbon-foot{font-size:9px;background:var(--paper);padding:7px 10px;width:max-content;margin-left:auto;max-width:100%}@keyframes unfold{from{opacity:0;translate:14px -5px}to{opacity:1;translate:0 0}}.view-head{display:flex;justify-content:space-between;align-items:center;margin:0 0 18px;gap:12px}.back{font-size:12px;padding:0;text-align:left}.view-head .eyebrow{font-size:9px;text-align:right}.page-title{font-size:32px;letter-spacing:-.045em;line-height:1.2;margin:0 0 24px}.lesson{max-width:650px;margin:auto}.loose-paper{background:var(--paper);padding:26px 26px 28px;position:relative;box-shadow:2px 3px 2px #27272716}.loose-paper .eyebrow{margin-bottom:22px}.loose-paper h2{font:27px/1.2 var(--mono);letter-spacing:-.055em;margin:0 0 24px}.reading-line{display:grid;grid-template-columns:18px 1fr;gap:8px;font:17px/1.65 var(--mono);letter-spacing:-.035em;margin-top:18px}.reading-line:first-of-type{margin-top:0}.line-number{font:9px var(--mono);padding-top:6px}.reading-paper{border-right:14px solid var(--green);padding-right:24px}.paper-tools{border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;margin-top:22px;padding-top:6px}.paper-tools button{font-size:12px;padding:4px 0}.translation-slip{background:var(--lavender);padding:20px 22px;position:relative;transform:rotate(1deg);margin:-6px -5px 22px 25px;box-shadow:1px 3px 2px #27272716}.translation-slip .eyebrow{font-size:9px;margin-bottom:14px}.translation-slip p{font-size:13px;line-height:1.7;margin-top:10px}.lesson-actions{display:flex;gap:10px;margin:20px 0 0}.action{padding:13px 16px;min-height:48px;font-size:13px;background:var(--green);display:flex;justify-content:space-between;align-items:center;gap:12px;flex:1;text-align:left;word-break:keep-all}.action.secondary{background:transparent;border:1px solid var(--line)}.action[aria-pressed=true]{background:var(--sage)}.note-label{display:block;font-size:12px;margin-bottom:12px}.note-paper{background:var(--sage);padding:20px 22px;margin-top:22px}.note-paper textarea,.writing-paper textarea{width:100%;font-size:16px;line-height:30px;resize:vertical;min-height:96px;border:0;border-radius:0;padding:0;background:repeating-linear-gradient(transparent 0,transparent 29px,var(--line) 29px,var(--line) 30px);background-attachment:local;color:var(--ink)}textarea::placeholder{color:#626262;opacity:1}.save-status{font-size:10px;min-height:14px;margin-top:8px}.card-count{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}.recall-question{font-size:26px;line-height:1.45;letter-spacing:-.035em;min-height:100px;margin-bottom:22px}.answer-slip{background:var(--lavender);margin:-5px 8px 20px 22px;padding:22px;transform:rotate(1deg);position:relative;box-shadow:1px 2px 2px #27272720}.answer-slip .answer{font:21px/1.5 var(--mono);letter-spacing:-.04em;margin:0 0 14px}.answer-slip .hint{font-size:12px;line-height:1.7}.ratings{display:flex;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:16px}.ratings button{flex:1;padding:12px 4px;background:var(--paper);font-size:12px}.ratings button:hover{background:var(--sage)}.prompt{font-size:23px;line-height:1.4;letter-spacing:-.035em}.prompt-translation{font-size:12px;line-height:1.7;margin-top:16px}.timer-paper{background:var(--lavender);padding:24px;margin:16px 0}.timer{font:70px/1 var(--mono);letter-spacing:-.075em;margin:20px 0}.durations{display:flex;gap:8px}.durations button{flex:1;border-bottom:1px solid var(--line);font:12px var(--mono);padding:8px}.durations button[aria-pressed=true]{border-bottom:3px solid var(--ink)}.writing-paper textarea{min-height:210px;font-family:var(--mono)}.reference-note{background:var(--lavender);padding:18px 22px;margin:-5px -4px 20px 30px;position:relative;transform:rotate(1deg)}.reference-note p:nth-child(2){font:16px/1.5 var(--mono);margin-top:12px}.reference-note p:last-child{font-size:12px;line-height:1.6;margin-top:8px}.month-paper{background:var(--sage);padding:22px}.month-control{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:22px}.month-control h2{font:26px var(--mono);letter-spacing:-.04em}.month-control>div{display:flex}.month-control button{min-width:44px;font-size:19px}.month-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}.weekday{font:10px var(--mono);text-align:center;padding-bottom:8px}.calendar-day{padding:0;aspect-ratio:1;font:15px var(--mono);border:1px solid transparent;position:relative;min-height:38px}.calendar-day[aria-pressed=true]{border-color:var(--ink);border-radius:50%}.calendar-day.done{background:var(--green);border-radius:50%}.calendar-day.partial:after{content:"";width:3px;height:3px;border-radius:50%;background:var(--ink);position:absolute;bottom:4px;left:calc(50% - 1px)}.calendar-legend{font-size:10px;margin-top:18px}.daily-checks{margin:18px 0 0;background:var(--paper);padding:18px 22px}.daily-checks h3{font-size:15px;margin-bottom:12px}.check-task{width:100%;display:flex;align-items:center;justify-content:space-between;min-height:52px;font-size:14px;border-top:1px solid var(--line);padding:10px 0}.check-mark{font:18px var(--mono)}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);max-width:calc(100% - 32px);background:var(--ink);color:var(--paper);padding:12px 18px;font-size:12px;z-index:50;box-shadow:0 3px 8px #27272725}.toast:empty{display:none}
+@media(max-width:650px){.shell{max-width:460px;padding:0 18px 16px}.masthead{height:60px}.home-layout{display:block}.intro{padding:9px 0 14px}.intro .eyebrow{font-size:9px;margin-bottom:8px}.intro h1{font-size:34px}.intro p:last-child{font-size:11px;margin-top:8px}.progress-note{font-size:10px}.progress-note b{font-size:18px}.paper-stage{height:194px;margin:9px 0 17px}.back-sheet{height:167px;left:22px;top:8px}.green-spine{height:176px;width:35px}.green-spine span{font-size:9px}.sentence-sheet{right:27px;min-height:167px;padding:18px 19px 22px}.sentence-sheet .eyebrow{font-size:8px;margin-bottom:16px}.sentence-sheet .sentence{font-size:20px;line-height:1.32;max-width:27ch}.sentence-sheet .sheet-bottom{font-size:9px;margin-top:14px}.word-note{width:159px;padding:11px 14px;right:4px;bottom:0}.word-note .eyebrow{font-size:8px;margin-bottom:5px}.word-note strong{font-size:14px}.word-note p:last-child{font-size:10px}.punch{right:-5px;top:0}.folder-stack{padding-top:8px}.folder{height:112px;margin-top:-28px;padding:37px 18px 14px}.folder-tab{top:8px;font-size:9px}.folder-title{font-size:22px}.folder-arrow{font-size:20px}.folder-meta{font-size:10px;margin-top:6px}.folder-meta small{font-size:9px}.home-foot{margin-top:16px;padding-top:7px}.home-foot p{font-size:9px}.archive-link{font-size:11px}.archive-link b{font-size:18px}.edition{font-size:8px;margin-top:16px}.ribbon-popover{top:6px;left:0;right:-2px}.ribbon{min-height:66px;padding:12px 35px 12px 12px;margin-bottom:10px}.ribbon-head{margin-bottom:5px}.ribbon-close{min-height:36px}.ribbon .eyebrow{font-size:9px}.ribbon p:last-child{font-size:11px}.view-head{margin-bottom:14px}.page-title{font-size:28px;margin-bottom:20px}.loose-paper{padding:22px 20px 24px}.loose-paper h2{font-size:24px;margin-bottom:22px}.reading-paper{padding-right:19px;border-right-width:11px}.reading-line{font-size:16px;line-height:1.65;grid-template-columns:14px 1fr;gap:7px;margin-top:17px}.translation-slip{padding:18px;margin-left:22px}.lesson-actions{margin-top:16px}.note-paper{padding:18px}.month-paper{padding:20px 14px}.month-grid{gap:3px}.recall-question{font-size:24px}.answer-slip{padding:20px}.timer-paper{padding:20px}.timer{font-size:65px}.reference-note{margin-left:22px;padding:18px}.ribbon-foot{font-size:8px}}
+@media(max-width:350px){.shell{padding-left:14px;padding-right:14px}.intro h1{font-size:30px}.sentence-sheet .sentence{font-size:18px}.sentence-sheet{padding-left:16px;padding-right:16px}.word-note{width:145px}.folder-title{font-size:21px}.folder-meta{font-size:9px}.folder-tab{font-size:8px}.folder{padding-left:16px;padding-right:16px}.calendar-day{min-height:34px}.ribbon .eyebrow{font-size:8px}.reading-line{font-size:15px}.page-title{font-size:26px}.recall-question{font-size:22px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media print{body{background:#ffffff}.masthead,.edition,.toast,.ribbon-popover,.punch{display:none}.shell{max-width:none;padding:0}.home-layout{display:grid;grid-template-columns:1fr 1fr;gap:30px}.folder{break-inside:avoid}.lesson{max-width:none}.lesson-actions,.paper-tools{display:none}*{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+/* V12: paper leaves its folder; ribbons are pulled from the bookmark. */
+.paper-transition{position:fixed;inset:0;z-index:100;pointer-events:none;overflow:hidden;isolation:isolate}
+.motion-snapshot{position:absolute;z-index:0;margin:0!important;pointer-events:none}
+.paper-window{position:fixed;inset:0;z-index:1;pointer-events:none}
+.paper-flight{position:fixed!important;margin:0!important;transform-origin:top left;will-change:transform,opacity;pointer-events:none;box-shadow:2px 7px 12px #27272726}
+.folder-front{position:fixed!important;z-index:2;margin:0!important;transform-origin:center bottom;pointer-events:none;will-change:transform,opacity}
+html[data-moving=true]{scroll-behavior:auto}
+html[data-moving=true] .shell{pointer-events:none}
+.ribbon-popover{top:-11px;filter:drop-shadow(1px 5px 3px #27272726);clip-path:inset(-12px -4px -12px -10px);outline:none;pointer-events:none}
+.ribbon{animation:none;pointer-events:auto;transform-origin:calc(100% - 17px) 50%;will-change:transform,clip-path}
+.ribbon-popover[hidden]{display:none!important}
+.punch{z-index:15}
+@media(max-width:650px){.ribbon-popover{top:-11px}}
+@media(prefers-reduced-motion:reduce){.paper-flight,.folder-front,.ribbon{will-change:auto}}
+@media print{.paper-transition{display:none}}
+
+
+/* Apple devices use their native Korean font; Windows uses the bundled font. */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.intro h1{font-weight:450;letter-spacing:-.045em}
+.folder-title{font-weight:450;letter-spacing:-.035em}
+.page-title{font-weight:450;letter-spacing:-.04em}
+
+
+.header-controls{display:flex;align-items:center;gap:8px}
+.profile-switch{display:flex;align-items:center;gap:5px;padding:0 4px;font:11px var(--sans);white-space:nowrap}
+.profile-switch span{font-size:12px}
+html,body{touch-action:pan-y;overscroll-behavior-x:none;overscroll-behavior-y:none}
+button,a{touch-action:pan-y}
+textarea,input{touch-action:pan-y;font-size:16px}
+body{overflow-x:hidden}
+.touch-dragging{will-change:transform;user-select:none;-webkit-user-select:none;transition:none!important}
+.loose-paper.touch-dragging{transform-origin:center bottom}
+.paper-peek{position:absolute;right:4px;top:4px;width:44px;height:44px;padding:0;font:20px var(--mono);z-index:1;touch-action:none}
+.paper-peek:after{content:"";position:absolute;right:7px;top:7px;width:13px;height:13px;border-top:1px solid var(--line);border-right:1px solid var(--line)}
+.recall-deck{min-height:308px;transform-origin:center center}
+.recall-deck .card-count{padding-right:27px}
+.recall-deck.recall-back{background:var(--lavender)}
+.recall-deck .answer{font:21px/1.5 var(--mono);letter-spacing:-.04em;margin:0 0 16px}
+.recall-deck .hint{font-size:12px;line-height:1.7}
+.card-turns{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:8px}
+.card-turns button{font-size:11px;padding:8px 0;min-width:66px;text-align:left}
+.card-turns button:last-child{text-align:right}
+.card-turns span{font-size:9px;opacity:.75}
+.gesture-caption{font-size:9px;line-height:1.5;margin:-9px 0 15px;opacity:.7}
+.word-note{pointer-events:auto;text-align:left;min-height:0}
+.reading-paper>.eyebrow,.writing-paper>.eyebrow{padding-right:25px}
+@media print{.paper-peek,.gesture-caption,.card-turns{display:none}}
+
+/* Reusable paper rules and die-cut shapes, without bitmap backgrounds. */
+:root{--stock:#ededed;--rule:#929292;--ticket-ink:#555555}
+#screen h1:focus{outline:none}
+.ribbon{will-change:auto}
+.sentence-sheet{background-color:var(--stock);background-image:linear-gradient(#88888866,#88888866),repeating-linear-gradient(to bottom,transparent 0,transparent 26px,#a3a3a33b 26px,#a3a3a33b 27px);background-size:100% 1px,100% calc(100% - 44px);background-position:0 43px,0 44px;background-repeat:no-repeat}
+.sentence-sheet .sentence{line-height:1.35}
+.recall-deck{background:var(--stock);border-top:1px solid #ffffff99;box-shadow:1px 3px 2px #2727271c,0 5px 0 #dddddd}
+.recall-deck .card-count{border-bottom:1px solid #7e7e7e6b;padding-bottom:13px}
+.recall-question{line-height:36px;background:repeating-linear-gradient(to bottom,transparent 0,transparent 35px,#92929238 35px,#92929238 36px)}
+.recall-deck.recall-back{background-color:var(--lavender);background-image:linear-gradient(#61616120 1px,transparent 1px),linear-gradient(90deg,#61616120 1px,transparent 1px);background-size:32px 32px}
+.recall-deck.recall-back .hint{background:#c3c3c3da;padding:6px 0}
+.reading-paper{background-color:var(--stock);border-right-color:var(--green)}
+.reading-paper>.eyebrow{border-bottom:1px solid #7777776b;padding-bottom:12px}
+.reading-line>span:last-child{background:repeating-linear-gradient(to bottom,transparent 0,transparent calc(1.65em - 1px),#9292922e calc(1.65em - 1px),#9292922e 1.65em)}
+.word-note{background:var(--sage);clip-path:polygon(15px 0,100% 0,100% 100%,15px 100%,0 calc(100% - 16px),0 16px);padding-left:31px;border-right:1px solid #2727273a;box-shadow:none}
+.word-note:before{content:"";position:absolute;left:9px;top:calc(50% - 5px);width:9px;height:9px;border-radius:50%;background:var(--desk);box-shadow:0 0 0 3px #84848466}
+.word-note:after{content:"";position:absolute;left:23px;top:0;bottom:0;border-left:1px dashed #4f4f4f66}
+.translation-slip{background-color:var(--stock);background-image:linear-gradient(90deg,transparent 0,transparent 18px,#7b7b7b66 18px,#7b7b7b66 19px,transparent 19px),repeating-linear-gradient(to bottom,transparent 0,transparent 25px,#73737342 25px,#73737342 26px);background-position:0 0,0 7px;padding-left:29px;padding-top:22px;border-top:1px solid #27272735;border-bottom:1px solid #27272735;mask:radial-gradient(circle at 0 6px,transparent 2.1px,#000000 2.8px) 0 0/100% 12px repeat-y}
+.translation-slip .eyebrow{padding-bottom:8px;border-bottom:2px dotted #7575755e;background:var(--stock);margin-bottom:6px}
+.translation-slip p:not(.eyebrow){line-height:26px;margin-top:0}
+.reference-note{background-color:var(--orange);padding-right:40px;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%);mask:radial-gradient(circle at 0 6px,transparent 2px,#000000 2.8px) 0 0/100% 12px repeat-y}
+.reference-note:before{content:"";position:absolute;left:12px;right:31px;top:12px;bottom:12px;border:1px solid #57575760;pointer-events:none}
+.reference-note:after{content:"";position:absolute;right:22px;top:0;bottom:0;border-right:1px dashed #57575760}
+.note-paper,.writing-paper{background-color:var(--stock);background-image:linear-gradient(#94949425 1px,transparent 1px),linear-gradient(90deg,#94949425 1px,transparent 1px);background-size:15px 15px;border-left:3px double #848484;padding-left:24px}
+.note-paper textarea,.writing-paper textarea{background-color:#edededa6}
+.writing-paper .note-label{background:var(--stock);width:max-content;max-width:100%}
+.timer-paper{background-color:var(--lavender);background-image:linear-gradient(#61616132 1px,transparent 1px),linear-gradient(90deg,#61616132 1px,transparent 1px);background-size:36px 36px;box-shadow:0 3px 0 var(--paper),0 4px 0 #27272755,0 7px 0 var(--paper)}
+.timer-paper .eyebrow{width:max-content;max-width:100%;background:var(--lavender)}
+.month-paper{background:var(--stock);border-top:3px double #5d5d5d;box-shadow:0 3px 0 #d1d1d1}
+.calendar-day.done{background:transparent;border-radius:0}
+.calendar-day{isolation:isolate}
+.calendar-day.stamped:before{content:"";position:absolute;inset:1px;z-index:-1;background:var(--stamp-color);transform:rotate(var(--stamp-angle));clip-path:var(--stamp-cut);box-shadow:inset 0 0 0 1px #27272728}
+.calendar-day.stamped:after{content:"";position:absolute;inset:5px;z-index:-1;border:1px solid #5555555e;transform:rotate(var(--stamp-angle));clip-path:var(--stamp-cut)}
+.calendar-day[aria-pressed=true]{border-color:var(--ink);border-radius:2px;outline:1px solid #ffffff88;outline-offset:1px}
+.stamp-label{--stamp-color:#e9e9e9;--stamp-cut:polygon(18% 0,82% 0,100% 18%,100% 82%,82% 100%,18% 100%,0 82%,0 18%);--stamp-angle:-5deg}
+.stamp-oval{--stamp-color:#b2b2b2;--stamp-cut:ellipse(49% 42% at 50% 50%);--stamp-angle:6deg}
+.stamp-ticket{--stamp-color:#cdcdcd;--stamp-cut:polygon(0 18%,12% 18%,12% 0,88% 0,88% 18%,100% 18%,100% 82%,88% 82%,88% 100%,12% 100%,12% 82%,0 82%);--stamp-angle:-3deg}
+.stamp-tag{--stamp-color:#c3c3c3;--stamp-cut:polygon(36% 0,64% 0,72% 16%,92% 30%,100% 54%,92% 82%,70% 100%,30% 100%,8% 82%,0 54%,8% 30%,28% 16%);--stamp-angle:5deg}
+.sticker-drawer{margin-top:20px;padding:17px 18px 13px;background:var(--paper);border-top:1px dashed var(--line)}
+.sticker-drawer p{font-size:11px;line-height:1.6}
+.sticker-choices{display:flex;gap:12px;margin-top:10px}
+.sticker-choice{height:48px;flex:1;min-width:44px;position:relative;padding:0;font:12px var(--mono);isolation:isolate}
+.sticker-choice:before{content:"";position:absolute;inset:3px;z-index:-1;background:var(--stamp-color);clip-path:var(--stamp-cut);transform:rotate(var(--stamp-angle))}
+.sticker-choice:after{content:"";position:absolute;inset:8px;z-index:-1;border:1px solid #55555588;clip-path:var(--stamp-cut);transform:rotate(var(--stamp-angle))}
+.sticker-choice[aria-pressed=true]{outline:1px solid var(--line);outline-offset:2px}
+.sticker-choice[disabled]{opacity:.35}
+.day-label{display:inline-block;position:relative;padding:10px 18px;margin:-4px 0 12px;background:#e9e9e9;color:#4b4b4b;clip-path:polygon(10px 0,calc(100% - 10px) 0,100% 10px,100% calc(100% - 10px),calc(100% - 10px) 100%,10px 100%,0 calc(100% - 10px),0 10px)}
+.day-label:before{content:"";position:absolute;inset:3px;border:3px double #5e5e5e;clip-path:inherit;pointer-events:none}
+.daily-checks{background:var(--stock)}
+.daily-checks h3{font-size:13px;font-weight:400}
+@media(max-width:650px){.word-note{width:174px;padding-left:31px}.translation-slip{padding-left:29px}.recall-question{line-height:34px;background:repeating-linear-gradient(to bottom,transparent 0,transparent 33px,#92929238 33px,#92929238 34px)}.reference-note{padding-right:39px}.month-paper{padding-left:12px;padding-right:12px}}
+@media(max-width:350px){.word-note{width:163px}.sticker-choices{gap:8px}}
+
+/* White study surfaces with one personal highlight color. */
+:root{--desk:#f2f2f7;--paper:#fff;--stock:#fff;--sage:#ececef;--grey:#e5e5ea;--rose:#f0f0f3;--orange:#fafafa;--lavender:#f2f2f5;--ink:#1c1c1e;--line:#d5d5da;--rule:#d5d5da;--ticket-ink:#636366;--accent:#36845d;--accent-soft:#eaf3ee;--accent-line:#a2c5b2;--green:var(--accent);color:var(--ink);background:var(--desk)}
+.green-spine{color:#fff}.back-sheet{background:#e5e5ea}.sentence-sheet{background-color:#fff;background-image:linear-gradient(var(--line),var(--line)),repeating-linear-gradient(to bottom,transparent 0,transparent 26px,#ebebef 26px,#ebebef 27px);box-shadow:0 2px 4px #00000012}
+.word-note{background:#f8f8fa;border-color:var(--line)}.word-note:before{box-shadow:0 0 0 3px #d1d1d6}.word-note:after{border-color:#aeaeb2}
+.folder svg{filter:drop-shadow(0 -1px 0 #00000014)}.folder:last-child{box-shadow:0 2px 3px #0000000a}.folder[data-done=true] .folder-meta small{color:var(--accent);font-weight:700}
+.intro p:last-child,.folder-meta,.save-status,.gesture-caption,.calendar-legend{color:#636366;opacity:1}
+.loose-paper{box-shadow:0 2px 4px #0000000d}.recall-deck{background:#fff;box-shadow:0 2px 4px #0000000d,0 5px 0 #e5e5ea}.recall-deck .card-count,.reading-paper>.eyebrow{border-color:var(--line)}
+.recall-question{background:repeating-linear-gradient(to bottom,transparent 0,transparent 35px,#e5e5ea 35px,#e5e5ea 36px)}
+.recall-deck.recall-back{background-color:#fff;background-image:linear-gradient(#ebebef 1px,transparent 1px),linear-gradient(90deg,#ebebef 1px,transparent 1px)}.recall-deck.recall-back .hint{background:#ffffffde}
+.reading-paper{background:#fff;border-right-color:var(--accent)}.reading-line>span:last-child{background:repeating-linear-gradient(to bottom,transparent 0,transparent calc(1.65em - 1px),#e5e5ea calc(1.65em - 1px),#e5e5ea 1.65em)}
+.translation-slip{background-color:#fff;background-image:linear-gradient(90deg,transparent 18px,#d1d1d6 18px,#d1d1d6 19px,transparent 19px),repeating-linear-gradient(to bottom,transparent 0,transparent 25px,#e5e5ea 25px,#e5e5ea 26px);border-color:var(--line)}.translation-slip .eyebrow{border-color:#c7c7cc}
+.reference-note{background:#f8f8fa}.reference-note:before,.reference-note:after{border-color:#c7c7cc}
+.note-paper,.writing-paper{background-color:#fff;background-image:linear-gradient(#ebebef 1px,transparent 1px),linear-gradient(90deg,#ebebef 1px,transparent 1px);border-left-color:var(--accent-line)}.note-paper textarea,.writing-paper textarea{background-color:#ffffffb3}.writing-paper .note-label{background:#fff}textarea::placeholder{color:#8e8e93}
+.timer-paper{background-color:#fff;background-image:linear-gradient(#e5e5ea 1px,transparent 1px),linear-gradient(90deg,#e5e5ea 1px,transparent 1px);box-shadow:0 3px 0 #eeeef0,0 4px 0 #d1d1d6,0 7px 0 #fff}.timer-paper .eyebrow{background:#fff}.durations button[aria-pressed=true]{border-color:var(--accent);color:var(--accent)}
+.action{background:var(--accent);color:#fff}.action.secondary{color:var(--ink);background:transparent}.ratings button:hover{background:var(--accent-soft)}.action[aria-pressed=true]{background:var(--accent-soft);color:var(--accent)}
+.ribbon{background:#fff!important;color:var(--ink);border-color:#d1d1d6}.ribbon:first-child{background:var(--accent)!important;color:#fff}.ribbon:nth-child(2){background:#e5e5ea!important}.ribbon.brown{color:#fff}
+.month-paper{background:#fff;border-top-color:var(--line);box-shadow:0 3px 0 #e5e5ea}.daily-checks{background:#fff}.day-label{background:var(--accent-soft);color:var(--accent)}.day-label:before{border-color:var(--accent-line)}
+.stamp-label,.stamp-oval,.stamp-ticket,.stamp-tag{--stamp-color:var(--accent-soft)}.calendar-day.stamped{color:var(--accent);font-weight:700}.calendar-day.stamped:after,.sticker-choice:after{border-color:var(--accent-line)}.calendar-day.partial:after{background:var(--accent)}.check-task[aria-pressed=true] .check-mark{color:var(--accent)}.sticker-drawer{background:#fff}
+.home-foot{align-items:flex-start}.archive-links{display:flex;flex-direction:column;align-items:stretch;min-width:132px}.archive-link{justify-content:space-between;gap:10px}.archive-link+.archive-link{border-top:1px solid var(--line)}.archive-link b{margin-left:auto}
+.auto-status{flex:1;min-width:0;display:flex;gap:9px;align-items:center;padding:12px 0;color:#636366;font-size:12px;line-height:1.55}.auto-status .status-dot{width:6px;height:6px;background:#aeaeb2;border-radius:50%;flex-shrink:0}.auto-status.is-done{color:var(--accent)}.auto-status.is-done .status-dot{background:var(--accent)}.auto-status+.action{flex:0 0 auto;font-size:12px;padding:12px}
+.record-hint{font-size:11px;line-height:1.7;color:#636366;margin:2px 0 12px}.daily-notes{margin-top:18px}.daily-notes h3{font-size:15px;margin-bottom:12px}.daily-notes .record-hint{margin:8px 0}.notes-entry{margin:18px 0}
+.notes-intro{font-size:13px;line-height:1.7;color:#636366;margin-top:-5px;margin-bottom:18px}.notes-tools{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}.notes-search{grid-column:1/-1;position:relative}.notes-search input{width:100%;border:1px solid var(--line);border-radius:8px;background:#fff;padding:13px 14px;line-height:1.35;min-height:48px;color:var(--ink);font:16px var(--sans)}
+.filter-label{font-size:11px;color:#636366;display:grid;gap:6px}.filter-label select{width:100%;min-height:44px;padding:10px 8px;border:1px solid var(--line);background:#fff;border-radius:7px;color:var(--ink);font:14px var(--sans)}.notes-total{font:11px var(--mono);color:#636366;margin:18px 0 12px}.note-group{margin-top:22px}.note-group h2{font-size:13px;color:#636366;margin:0 0 10px;line-height:1.6}
+.saved-note{background:#fff;padding:18px 18px 12px;border:1px solid #e5e5ea;border-left:3px solid var(--accent-line);margin-bottom:10px;border-radius:3px}.saved-note header{font-size:10px;color:#636366;line-height:1.5;display:flex;gap:10px;justify-content:space-between}.saved-note .note-body{font-size:16px;line-height:1.7;white-space:pre-wrap;overflow-wrap:anywhere;word-break:normal;margin:12px 0}.saved-note button{display:block;font-size:11px;color:var(--accent);padding:8px 0;text-align:left}.empty-notes{padding:28px 20px;background:#fff;font-size:14px;line-height:1.8;color:#636366;border-radius:5px}.empty-notes p+p{font-size:12px;margin-top:10px}.note-context{font:10px var(--mono);color:#636366;margin:0 0 12px}
+.edition{align-items:center;opacity:1;color:#636366;flex-wrap:wrap}.appearance{position:relative;font-family:var(--sans);font-size:11px}.appearance summary{cursor:pointer;list-style:none;min-height:44px;display:flex;align-items:center;gap:7px}.appearance summary::-webkit-details-marker{display:none}.accent-dot{width:10px;height:10px;background:var(--accent);border-radius:50%}.appearance-panel{position:absolute;bottom:46px;right:0;width:238px;z-index:30;background:#fff;padding:18px;border:1px solid var(--line);border-radius:12px;box-shadow:0 6px 30px #00000012}.appearance-panel p{font-size:12px;margin-bottom:12px}.accent-options{display:flex;justify-content:space-between;gap:3px}.accent-option{min-width:36px;height:44px;position:relative;padding:0;border-radius:50%;font-size:14px;color:#fff}.accent-option:before{content:"";position:absolute;inset:6px 3px;z-index:-1;background:var(--choice);border-radius:50%}.accent-option{isolation:isolate}.accent-option[aria-pressed=true]{outline:1px solid var(--choice);outline-offset:-1px}.appearance-panel small{display:block;margin-top:12px;color:#636366;font-size:10px;line-height:1.6}
+.more-notes{width:100%;margin:18px 0}
+@media(max-width:650px){.intro h1{font-size:32px}.folder-title{font-size:22px}.recall-question{background:repeating-linear-gradient(to bottom,transparent 0,transparent 33px,#e5e5ea 33px,#e5e5ea 34px)}.home-foot p{font-size:10px}.edition{margin-top:13px}.auto-status{font-size:11px}.notes-tools{gap:8px}}
+@media(max-width:350px){.intro h1{font-size:28px}.home-foot{gap:12px}.home-foot p{font-size:9px}.archive-links{min-width:123px}.auto-status+.action{padding:10px;font-size:11px}}
+@media print{.appearance,.notes-tools,.saved-note button{display:none}.saved-note{break-inside:avoid}.note-body{white-space:pre-wrap}}
+
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+/* The earlier mint and lilac palette, with a pure white canvas. */
+:root{--desk:#fff;--mint:#b0d9d5;--lilac:#b498c1;--accent:var(--mint);--companion:var(--lilac);--accent-soft:#edf6f5;--accent-line:var(--mint);background:#fff}
+html,body{background:#fff}.back-sheet{background:#f5f5f7}.green-spine{color:var(--ink)}.word-note{background:var(--companion);border-color:#00000022}.word-note:before{background:#fff;box-shadow:0 0 0 3px #0000001a}.word-note:after{border-color:#00000030}
+.folder[data-view=cards] path{fill:var(--accent)}.folder[data-view=reading] path{fill:#fafafa}.folder[data-view=speaking] path{fill:var(--companion)}.folder[data-view=writing] path{fill:#fafafa}.folder[data-view=cards] .folder-meta,.folder[data-view=speaking] .folder-meta{color:var(--ink)}.folder[data-done=true] .folder-meta small{color:var(--ink)}
+.action,.action[aria-pressed=true]{background:var(--accent);color:var(--ink)}.action.secondary{background:transparent;color:var(--ink);border-color:var(--line)}.auto-status.is-done{color:var(--ink)}.auto-status.is-done .status-dot{background:var(--accent);box-shadow:0 0 0 1px #00000020}
+.recall-deck.recall-back{background-color:var(--accent);background-image:linear-gradient(#0000000c 1px,transparent 1px),linear-gradient(90deg,#0000000c 1px,transparent 1px)}.recall-deck.recall-back .hint{background:transparent}.ratings button{background:#ffffffb8}.ratings button:hover{background:var(--companion);color:var(--ink)}
+.translation-slip{background-color:var(--companion);background-image:linear-gradient(90deg,transparent 18px,#00000026 18px,#00000026 19px,transparent 19px),repeating-linear-gradient(to bottom,transparent 0,transparent 25px,#00000015 25px,#00000015 26px)}.translation-slip .eyebrow{background:var(--companion);border-color:#00000030}
+.note-paper{border-left-color:var(--accent)}.writing-paper{border-left-color:var(--companion)}.reference-note{background:var(--companion)}.reference-note:before,.reference-note:after{border-color:#00000030}
+.timer-paper{background-color:var(--companion);background-image:linear-gradient(#00000012 1px,transparent 1px),linear-gradient(90deg,#00000012 1px,transparent 1px)}.timer-paper .eyebrow{background:var(--companion)}.durations button[aria-pressed=true]{color:var(--ink);border-color:var(--ink)}.timer-paper .action{background:var(--accent)}.timer-paper .action.secondary{background:#ffffff60;border-color:#00000030}
+.ribbon:first-child{background:var(--accent)!important;color:var(--ink)}.ribbon:nth-child(2){background:var(--companion)!important;color:var(--ink)}.ribbon:nth-child(3){background:#fff!important}.ribbon.brown{color:var(--ink)}
+.stamp-label,.stamp-ticket{--stamp-color:var(--accent)}.stamp-oval,.stamp-tag{--stamp-color:var(--companion)}.calendar-day.stamped{color:var(--ink)}.calendar-day.stamped:after,.sticker-choice:after{border-color:#00000030}.calendar-day.partial:after{background:var(--ink)}.check-task[aria-pressed=true] .check-mark{color:var(--ink)}.day-label{background:#fff;color:var(--ink)}.day-label:before{border-color:var(--companion)}
+.saved-note[data-note-kind=reading]{border-left-color:var(--accent)}.saved-note[data-note-kind=writing]{border-left-color:var(--companion)}.saved-note button{color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:4px}
+.accent-dot{width:18px;height:10px;background:linear-gradient(90deg,var(--accent) 50%,var(--companion) 50%);border-radius:3px;border:1px solid #00000010}.accent-options{gap:10px}.accent-option{flex:1;min-height:60px;border:1px solid var(--line);border-radius:6px;color:var(--ink);font-size:11px;padding:30px 5px 9px}.accent-option:before{inset:8px 12px auto;height:14px;background:linear-gradient(90deg,var(--choice) 65%,var(--other) 65%);border-radius:2px}.accent-option[aria-pressed=true]{outline:1px solid var(--ink);outline-offset:1px}
+@media(hover:hover) and (pointer:fine){.action:not(.secondary):hover{background:var(--companion);color:var(--ink)}}
+
+.speech-status{font-size:11px;line-height:1.65;margin-top:10px;color:#505054;overflow-wrap:anywhere}.paper-tools button[aria-pressed=true]{font-weight:600}
+/* Colors sampled from the supplied Aether reference. */
+:root{--mint:#c8f5ca;--lilac:#ccccfe;--coral:#febeb4;--accent:var(--mint);--companion:var(--lilac);--accent-soft:#f1fcf2;--accent-line:var(--mint)}
+.folder[data-view=writing] path{fill:var(--coral)}.folder[data-view=writing] .folder-meta{color:var(--ink)}
+.writing-paper{border-left-color:var(--coral)}.reference-note{background:var(--coral)}
+.ribbon:nth-child(3){background:var(--coral)!important;color:var(--ink)}
+.stamp-tag{--stamp-color:var(--coral)}.saved-note[data-note-kind=writing]{border-left-color:var(--coral)}
+.accent-dot{width:24px;background:linear-gradient(90deg,var(--accent) 0 40%,var(--companion) 40% 72%,var(--coral) 72%)}
+.accent-option:before{background:linear-gradient(90deg,var(--choice) 0 50%,var(--other) 50% 76%,var(--coral) 76%)}
+
+/* Six full-width folders share the same learning and archive surface. */
+:root{--mint:#e3f5ec;--lilac:#f9e5ed;--coral:#f9e5ed;--folder-blue:#8191c3;--folder-purple:#b49dc3;--folder-grey:#eeeef2;--folder-black:#303034;--tail-color:var(--folder-purple);--mint-detail:#a6ffc5;--pink-detail:#efd0de;--accent:var(--mint);--companion:var(--lilac);--ink:#242428;--line:#00000023;--desk:#fff;--paper:#fff}
+.shell{max-width:720px;padding:0 0 24px}
+.masthead{height:60px;padding:0 22px;gap:10px}
+.wordmark{font-size:11px;font-weight:400;letter-spacing:-.025em}.wordmark span{font-size:8px;letter-spacing:.08em}
+.header-controls{gap:10px}.profile-switch{font-size:11px}.languages button{font-size:11px;padding:0 9px}
+.folio-intro{padding:13px 22px 30px}.greeting-line{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.greeting-line h1{font-size:21px;line-height:1.3;letter-spacing:-.045em;font-weight:450}
+.daily-progress{display:flex;align-items:center;gap:4px;white-space:nowrap}.daily-progress i{display:block;width:5px;height:5px;border:1px solid #929299;border-radius:50%}.daily-progress i.filled{background:var(--accent);border-color:var(--accent)}.daily-progress b{font:10px var(--mono);margin-left:6px}
+.folio-date{display:flex;align-items:center;gap:8px;min-height:36px;padding:0;margin-top:4px;font-size:10px;color:#5c5c63}.folio-date time{font:11px var(--mono);color:var(--ink)}.folio-date time span{color:#929299}.date-arrow{font-size:13px}
+.cabinet{position:relative;isolation:isolate;padding-bottom:12px}
+.file-folder{position:relative;margin-top:-33px;filter:drop-shadow(0 -3px 4px #20233126);--folder-color:var(--accent);--folder-ink:var(--ink)}
+.file-folder:first-child{margin-top:0}
+.file-folder[data-file=reading]{--folder-color:var(--folder-grey)}.file-folder[data-file=speaking]{--folder-color:var(--folder-blue)}.file-folder[data-file=writing]{--folder-color:var(--companion)}.file-folder[data-file=calendar]{--folder-color:var(--folder-black);--folder-ink:#fff}.file-folder[data-file=notes]{--folder-color:var(--folder-purple)}
+.folder,.folder:first-child{height:92px;margin:0;padding:42px 22px 16px;display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch;box-shadow:none!important;transform:none;color:var(--folder-ink);transition:none;isolation:isolate}
+.folder svg{filter:none!important}.folder path{fill:var(--folder-color)!important;stroke:#ffffff45;stroke-width:.65;vector-effect:non-scaling-stroke}
+.folder-tab{left:var(--tab);top:11px;display:flex;align-items:baseline;gap:10px;white-space:nowrap;font-family:var(--sans)}
+.folder-number{font:9px var(--mono);opacity:.7}.folder-title{font-size:17px;line-height:1.2;font-weight:450;letter-spacing:-.035em}
+.folder-meta{display:flex;align-items:center;justify-content:space-between;gap:6px;margin:0;padding-right:24px;color:inherit!important;font-size:10px;line-height:1.5}.folder-meta small{font:9px var(--mono);color:inherit!important}
+.folder-arrow{position:absolute;right:20px;top:45px;font:18px var(--mono)}
+.folder[aria-expanded=true]{height:76px;padding-top:45px;padding-bottom:10px}
+.folder[aria-expanded=true] .folder-arrow{display:none}
+.folder-content{position:relative;background:var(--folder-color);padding:10px 20px 46px}
+.folder-content:focus,.folio-intro h1:focus{outline:none}
+.folder-content>.lesson{position:relative;max-width:none;color:var(--ink);margin:0;padding:0;min-width:0}
+.folder-inside-head{display:flex;align-items:center;justify-content:space-between;gap:10px;font:9px var(--mono);margin:0 40px 14px 0;color:#56565e}.folder-inside-head button{font:11px var(--sans);padding:0}
+.file-folder[data-file=calendar] .folder-inside-head{color:#fff}.file-folder[data-file=cards] .folder-inside-head{display:none}
+.folder-content .loose-paper{box-shadow:0 1px 1px #00000019,0 5px 10px #20233125;padding:21px 20px}
+.folder-content .recall-deck{min-height:216px;box-shadow:0 1px 1px #00000020,0 4px 0 #f6f6f9,0 5px 0 #00000022,0 8px 14px #22243a30}
+.recall-deck .card-count{margin-bottom:16px;padding-bottom:12px}.recall-deck .card-count .eyebrow{font-size:9px;line-height:1.5}.recall-question{font-size:23px;min-height:72px;line-height:1.5;margin-bottom:18px;background:repeating-linear-gradient(to bottom,transparent 0,transparent 33px,#00000010 33px,#00000010 34px)}
+.recall-deck .action{min-height:44px;font-size:12px;padding:10px 12px;background:#eeeef2}.recall-deck.recall-back{background-color:#fff}
+.recall-deck .answer{font-size:20px;line-height:1.45;margin-bottom:12px}.recall-deck .hint{font-size:11px}.recall-deck .paper-tools{margin-top:16px}.ratings{margin-top:12px}.ratings button{font-size:11px;padding:10px 4px;min-height:44px}
+.card-turns{margin-top:10px}.card-turns button{font-size:11px;min-height:44px;padding:8px 0}.card-turns span{font-size:8px}.file-folder[data-file=cards] .lesson-actions{margin-top:0}.file-folder[data-file=cards] .lesson-actions .action{display:none}.auto-status{font-size:10px;padding:4px 0;min-height:24px;color:#31313b}.auto-status .status-dot{background:#00000055}
+.folder-content .lesson-actions{gap:12px}.folder-content .action.secondary{background:#ffffff8a;border-color:#00000020}.folder-content .lesson-actions>.action{font-size:11px;padding:11px 12px}
+.folder-bookmark{position:absolute;right:18px;top:-62px;width:30px;height:64px;background:var(--pink-detail);border-top:1px solid #ffffff88;box-shadow:0 2px 3px #0000001a;z-index:12}.folder-bookmark:after{content:"";position:absolute;bottom:0;left:0;border-left:15px solid transparent;border-right:15px solid transparent;border-bottom:9px solid var(--folder-color);pointer-events:none}.folder-bookmark .punch{right:-7px;top:0}.punch:before{background:#fff}
+.folder-bookmark .ribbon-popover{left:auto;right:0;top:8px;width:min(360px,calc(100vw - 44px));clip-path:inset(-14px -6px -14px -12px);filter:drop-shadow(0 6px 6px #00000030)}.ribbon{margin-bottom:9px}.ribbon:nth-child(3){background:#eeeef2!important}
+.folder-content .page-title{font-size:25px;margin:0 0 18px}.notes-library>.view-head{display:none}.notes-library>.page-title{font-size:20px;margin:0 0 12px}.notes-intro{font-size:12px;line-height:1.65;margin:0 0 16px}.notes-library>.record-hint{color:#34343c}
+.folder-content .month-paper{box-shadow:0 4px 10px #00000030}.file-folder[data-file=calendar] .daily-notes h3,.file-folder[data-file=calendar] .daily-notes>.record-hint,.file-folder[data-file=calendar] .sticker-drawer>summary{color:#fff}.file-folder[data-file=calendar] .auto-status{color:#fff}.file-folder[data-file=calendar] .lesson-actions>.action{background:var(--accent)}
+.translation-slip{margin-right:0}.reference-note{margin-right:0;background:#eeeef2}.folder-content .reading-line{font-size:16px}.folder-content .reading-paper{padding-right:15px;border-right-width:9px}.folder-content .note-paper{padding:18px}.folder-content .timer-paper{margin-top:14px}
+.edition{padding:0 22px;margin-top:12px;font-size:8px}.appearance-panel{right:0}.accent-dot{background:linear-gradient(90deg,var(--accent) 0 40%,var(--companion) 40% 75%,#e3f5ec 75%)}.accent-option:before{background:linear-gradient(90deg,var(--choice) 0 50%,var(--other) 50% 76%,#e3f5ec 76%)}
+.saved-note[data-note-kind=writing]{border-left-color:var(--companion)}.writing-paper{border-left-color:var(--companion)}.stamp-tag{--stamp-color:var(--companion)}
+@media(hover:hover) and (pointer:fine){.folder:hover{transform:none}.folder:hover path{filter:brightness(1.025)}}
+@media(min-width:651px){.shell{padding-top:16px}.folio-intro{padding-top:16px;padding-bottom:36px}.greeting-line h1{font-size:25px}.folder-tab{top:12px}.folder-title{font-size:20px}.folder-content{padding:12px 32px 46px}.recall-deck{max-width:540px;margin:auto}.card-turns,.file-folder[data-file=cards] .lesson-actions{max-width:540px;margin-left:auto;margin-right:auto}.folder-bookmark{right:30px}}
+@media(max-width:350px){.masthead{padding:0 16px}.folio-intro{padding-left:16px;padding-right:16px}.greeting-line h1{font-size:19px}.folder{padding-left:16px;padding-right:16px}.folder-title{font-size:15px}.folder-number{font-size:8px}.folder-tab{gap:7px}.folder-meta{font-size:9px}.folder-content{padding:10px 14px 46px}.folder-content .loose-paper{padding:18px 16px}.recall-question{font-size:21px}.folder-content .reading-line{font-size:15px}.folder-bookmark{right:14px}.daily-progress{gap:3px}.daily-progress b{font-size:9px}}
+@media print{.masthead,.folio-intro,.folder,.folder-bookmark,.edition{display:none}.file-folder{filter:none;margin:0}.folder-content{background:#fff;padding:0}.file-folder:not(.is-open){display:none}}
+
+/* The final folder fills the viewport and the browser's page backdrop. */
+:root{background:var(--tail-color);--card-stock:#f0f0f0;--card-rule:#5b91aa;--card-margin:#c16c63}
+html{min-height:100%;background:var(--tail-color)}
+body{min-height:100vh;min-height:100dvh;background-color:var(--tail-color);background-image:linear-gradient(to bottom,#fff 0 var(--tail-start,100vh),var(--tail-color) var(--tail-start,100vh) 100%);background-repeat:no-repeat}
+.shell{min-height:100vh;min-height:100svh;min-height:100dvh;display:flex;flex-direction:column;padding:0;max-width:720px}
+#screen{display:flex;flex:1;flex-direction:column;min-width:0}
+.folio-intro{flex:none;display:grid;grid-template-columns:minmax(0,1fr) 88px;gap:5px 14px;padding:calc(20px + env(safe-area-inset-top)) max(22px,env(safe-area-inset-right)) 30px max(22px,env(safe-area-inset-left));background:#fff}
+.greeting-line{grid-column:1/-1;min-height:44px;gap:10px;margin-bottom:2px}
+.greeting-line h1{font-size:21px;line-height:1.3;letter-spacing:-.045em;font-weight:450;min-width:0}
+.greeting-picker{font:inherit;letter-spacing:inherit;text-align:left;padding:0;min-height:44px}
+.study-language{margin-left:auto}.study-language select{max-width:106px;min-height:44px;padding:4px 19px 4px 5px;background:transparent;border:0;border-radius:0;color:#50505b;font:12px var(--sans)}
+.folio-date{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:8px;min-height:76px;margin:0;padding:0;text-align:left}
+.folio-date time{font:16px/1.35 var(--sans);letter-spacing:-.025em;color:var(--ink)}
+.date-weekday{font:10px/1.35 var(--mono);color:#60606a}.date-weekday span{padding-left:4px}
+.progress-holder{display:flex;align-items:center;justify-content:flex-end;min-width:0}
+.progress-sticker{position:relative;isolation:isolate;width:86px;height:74px;min-height:74px;padding:13px 10px 10px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;transform:rotate(-4deg);filter:drop-shadow(0 2px 1px #25283920);color:var(--ink)}
+.progress-sticker:before{content:"";position:absolute;inset:0;z-index:-2;background:var(--companion);clip-path:var(--stamp-cut)}
+.progress-sticker:after{content:"";position:absolute;inset:5px;z-index:-1;border:3px double #24242877;clip-path:var(--stamp-cut)}
+.progress-caption{font:8px/1 var(--mono);letter-spacing:.08em}.progress-value{display:flex;align-items:baseline;gap:5px;font:13px/1 var(--mono)}.progress-value b{font-size:31px;font-weight:400;letter-spacing:-.06em}
+.cabinet{flex:1;display:flex;flex-direction:column;min-height:0;padding:0}
+.file-folder{flex-shrink:0}.file-folder:last-child{flex:1;display:flex;flex-direction:column;min-height:calc(120px + env(safe-area-inset-bottom));filter:none}
+.file-folder:last-child:after{content:"";position:absolute;left:0;right:0;top:36px;bottom:0;background:var(--folder-color);z-index:-1}
+.file-folder:last-child>.folder{flex-shrink:0;filter:drop-shadow(0 -3px 4px #20233126)}
+.file-folder:last-child>.folder path{stroke:none}
+.file-folder:last-child>.folder-content{flex:1;padding-bottom:max(32px,env(safe-area-inset-bottom))}
+.folder-content{padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+.folder-content .recall-deck,.folder-content .recall-deck.recall-back{--rule-step:34px;background-color:var(--card-stock);background-image:linear-gradient(90deg,transparent 35px,var(--card-margin) 35px,var(--card-margin) 36px,transparent 36px),linear-gradient(var(--card-stock) 70px,transparent 70px),repeating-linear-gradient(to bottom,transparent 0,transparent 33px,var(--card-rule) 33px,var(--card-rule) 34px);background-size:100% 100%,100% 100%,100% 34px;background-position:0 0,0 0,0 37px;background-repeat:no-repeat,no-repeat,repeat;border-radius:7px;padding:24px 20px 22px 52px;min-height:242px;box-shadow:0 1px 1px #00000019,0 4px 0 #fafafa,0 5px 0 #00000020,0 8px 14px #22243a30}
+.recall-deck .card-count{min-height:24px;margin:0 0 22px;padding:0 20px 0 0;border:0;align-items:flex-start;gap:10px}
+.recall-deck .card-count .eyebrow{font-size:8px;line-height:1.5}.recall-deck .card-count>span{white-space:nowrap}
+.recall-deck .recall-question{font-size:21px;line-height:34px;min-height:68px;margin:0 0 16px;background:none}
+.recall-deck .action{min-height:44px;background:var(--card-stock);border:1px solid #00000022;padding:10px 11px;line-height:1.4}
+.recall-deck .answer{font-size:19px;line-height:34px;margin:0 0 14px}.recall-deck.recall-back .hint{font-size:11px;line-height:1.7;background:#f0f0f0ef;padding:5px 0}
+.recall-deck .paper-tools{background:var(--card-stock);margin-top:14px}.recall-deck .ratings button{background:var(--card-stock)}
+.profile-dialog{width:min(360px,calc(100vw - 40px));max-height:calc(100dvh - 40px);margin:auto;padding:26px 22px 20px;border:0;border-radius:5px;background:#fff;color:var(--ink);box-shadow:0 12px 60px #2023313d}
+.profile-dialog::backdrop{background:#f9e5edd9}.profile-dialog h2{font-size:22px;font-weight:450;letter-spacing:-.045em;margin:0 0 8px}.profile-dialog>p{font-size:12px;line-height:1.7;color:#63636b;margin:0 0 22px}
+.profile-choices{display:grid;gap:10px}.profile-choice{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:76px;padding:18px 17px;background:var(--accent);text-align:left;border-radius:3px}.profile-choice:last-child{background:var(--companion)}.profile-choice strong{font-size:23px;font-weight:450;letter-spacing:-.04em}.profile-choice span{font-size:11px}.profile-choice[aria-pressed=true]{outline:1px solid var(--ink);outline-offset:-5px}
+.profile-dialog [data-profile-cancel]{font-size:12px;padding:12px 0 0;min-height:44px;display:block;margin-left:auto}
+html[data-onboarding=true] .shell{visibility:hidden}
+@media(min-width:651px){.folio-intro{padding-top:28px;padding-bottom:34px}.greeting-line h1{font-size:24px}.folio-date time{font-size:19px}.folder-content{padding-left:32px;padding-right:32px}.recall-deck .recall-question{font-size:23px}}
+@media(max-width:350px){.folio-intro{padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right));grid-template-columns:minmax(0,1fr) 80px;gap:4px 8px}.greeting-line h1{font-size:19px}.study-language select{max-width:93px;font-size:11px}.folio-date time{font-size:15px}.progress-sticker{width:79px;height:70px;min-height:70px}.folder-content{padding-left:14px;padding-right:14px}.folder-content .recall-deck,.folder-content .recall-deck.recall-back{padding-left:46px;padding-right:16px;background-image:linear-gradient(90deg,transparent 30px,var(--card-margin) 30px,var(--card-margin) 31px,transparent 31px),linear-gradient(var(--card-stock) 70px,transparent 70px),repeating-linear-gradient(to bottom,transparent 0,transparent 33px,var(--card-rule) 33px,var(--card-rule) 34px)}.recall-deck .recall-question{font-size:20px}.recall-deck .answer{font-size:18px}}
+@media(prefers-reduced-motion:reduce){.progress-sticker{transform:none}}
+@media print{html,body{background:#fff}.shell,#screen,.cabinet,.file-folder:last-child{display:block;min-height:0}.profile-dialog{display:none}.file-folder:last-child:after{display:none}}
+
+html[data-person=junghyun] .notes-tools{grid-template-columns:1fr}
+
+/* The iOS preference applies to text, numbers, inputs and inherited mono tokens. */
+html[data-native-font=ios]{--sans:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;--mono:var(--sans);font-family:var(--sans)}
+html[data-native-font=ios] :is(.reading-line,.loose-paper h2,.recall-deck .answer,.answer-slip .answer,.reference-note p:nth-child(2),.writing-paper textarea){letter-spacing:normal}
+html[data-native-font=ios] :is(.timer,.calendar-day,.progress-value,.folder-number){font-variant-numeric:tabular-nums}
+/* A quiet dotted desk around six colored, vertically opening folders. */
+:root{--desk:#f7f8f9;--dot:#c8ccd1;--folder-height:max(350px,calc(100dvh - 134px))}
+html,body{background-color:var(--desk);background-image:radial-gradient(circle,var(--dot) .65px,transparent .9px);background-size:18px 18px;background-position:9px 9px;background-repeat:repeat;overflow-anchor:none}
+.folio-intro{background:transparent}
+html[data-view=cards]{--folder-height:max(310px,calc(100dvh - 296px))}
+.folder-content,.file-folder:last-child>.folder-content{padding:0!important;height:var(--folder-height);min-height:0;flex:none;overflow:visible}
+.folder-reader{height:100%;overflow-y:auto;overflow-x:hidden;overscroll-behavior-y:contain;scrollbar-width:thin;scrollbar-color:#00000025 transparent;padding:12px max(20px,env(safe-area-inset-right)) 24px max(20px,env(safe-area-inset-left));-webkit-overflow-scrolling:touch;touch-action:pan-y}
+.folder-reader>.lesson{min-height:100%;display:flex;flex-direction:column}
+.folder-reader .folder-inside-head{margin-bottom:8px}
+.folder-reader .recall-deck{flex:1;min-height:256px}
+.folder-reader .card-turns{flex:none;margin-top:12px;gap:8px}
+.card-turns span{font-size:9px;white-space:nowrap}.card-turns button:disabled{opacity:.25}
+.folio-pager{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:44px;margin:0 34px 10px 0;font:10px/1.4 var(--sans);flex:none;color:var(--ink)}
+.folio-pager button{padding:6px 10px;min-width:44px;font:18px var(--sans)}
+.folio-pager span{text-align:center}.folio-pager b{font-weight:400;font-variant-numeric:tabular-nums;display:block;font-size:10px;opacity:.7}
+.folio-note-stage{flex:1;min-width:0;position:relative}
+.folio-note-stage>.folio-note{min-width:0}.folio-note>*:first-child{margin-top:0}
+.folio-note>.translation-slip,.folio-note>.reference-note{margin:0 4px 18px;transform:none}
+.folio-note .reading-paper{padding-top:20px}.folio-note>.note-paper{min-height:300px;margin-top:0}
+.folio-note>.timer-paper{margin-top:0}.folio-note>.writing-paper textarea{min-height:230px}
+.folder-reader .lesson-actions{flex:none;margin-top:14px}.folder-reader .auto-status{flex:none}
+.folder-reader .notes-intro{font-size:11px;margin-bottom:12px}.folder-reader .notes-tools{gap:7px;margin-bottom:10px}
+.folder-reader .notes-library>.record-hint{font-size:10px;margin-top:12px}
+.notes-library #notes-results{display:flex;flex:1;flex-direction:column}.notes-library .notes-total{margin:0 0 7px;font-size:10px}
+.notes-library .note-group{margin:0}.notes-library .saved-note{min-height:230px;margin-bottom:0}.notes-library .note-group h2{margin:0 0 10px}
+.file-folder[data-file=calendar] .folio-pager{color:#fff}
+.file-folder[data-file=calendar] .folder-reader>.lesson{color:var(--ink)}
+.file-folder[data-file=calendar] .folio-note>.daily-notes{margin-top:0}
+.folder-content.is-folding{overflow:clip}.folder-content.is-folding .folder-bookmark{visibility:hidden}
+.folder-reader,.folio-note-stage,.recall-deck{overflow-anchor:none}
+@media(min-width:651px){.folder-reader{padding:14px 32px 28px}.folder-reader>.lesson{max-width:650px;margin:auto}.folio-pager{max-width:650px}}
+@media(max-width:350px){.folder-reader{padding-left:14px;padding-right:14px}.folio-pager{font-size:9px;gap:4px;margin-right:30px}.card-turns span{font-size:8px}}
+@media print{html,body{background:#fff}.folder-content,.file-folder:last-child>.folder-content{height:auto}.folder-reader{height:auto;overflow:visible;padding:0}.folio-pager{display:none}.folio-note[hidden]{display:block!important}}
+
+.lesson-theme{font-size:13px;line-height:1.6;color:var(--ticket-ink);margin:-8px 0 14px}.lesson-theme strong{color:var(--ink);font-weight:600;margin-right:8px}
+.recall-example{font-size:13px;line-height:1.6;color:var(--ticket-ink);margin:-12px 0 18px}
+.answer .plural{font-size:14px;color:var(--ticket-ink)}
+.example{font:15px/1.6 var(--mono);margin-top:10px}.example-ko{font-size:12px;line-height:1.6;color:var(--ticket-ink);margin-top:2px}
+.task-question{font-size:19px;line-height:1.5;min-height:0;margin-bottom:14px}
+.options{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:12px}.options button{padding:13px 14px;min-height:46px;background:var(--paper);font:15px/1.4 var(--mono);text-align:left}.options button.is-right{background:var(--accent-soft,#eaf3ee)}.options button.is-wrong{background:var(--rose)}.options button[disabled]{opacity:1}
+.layer-label{margin-top:24px}.reading-paper .layer-label:first-of-type{margin-top:18px}.summit{margin-top:4px}.credit{font-size:11px;line-height:1.6;color:var(--ticket-ink);margin-top:14px}.credit a{text-decoration:underline;color:inherit}
+.reading-quiz{margin-top:14px;display:grid;gap:12px}.quiz-item{background:var(--paper);padding:16px 18px 18px;box-shadow:0 1px 0 var(--line)}.quiz-prompt{font:16px/1.6 var(--mono);margin-top:6px}.quiz-item .hint{margin-top:10px}
+.rates{margin-top:18px}
+.situation{font-size:13px;line-height:1.7;margin-bottom:12px}.chunks{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}.chunks span{font:12px/1.4 var(--mono);padding:6px 9px;border:1px solid var(--line)}.week-write{margin-top:14px}
+.translation-slip .number{font-family:var(--mono)}
+.folio-note>.reading-quiz,.folio-note>.week-write{margin-top:0}.folio-note>.reading-paper .layer-label:first-of-type{margin-top:0}
+</style></head>
+<body><div class="shell"><main id="screen"></main></div><dialog class="profile-dialog" id="profile-dialog" aria-labelledby="profile-title"><h2 id="profile-title">누구의 폴더를 열까요?</h2><p>처음 고른 이름을 이 기기에서 기억해요.</p><div class="profile-choices"><button class="profile-choice" data-choose-profile="yeonho"><strong>연호</strong><span>독일어 · 영어</span></button><button class="profile-choice" data-choose-profile="junghyun"><strong>정현</strong><span>독일어</span></button></div><button data-profile-cancel hidden>돌아가기</button></dialog><div class="toast" role="status" aria-live="polite"></div>
+<script>
+(()=>{'use strict';
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const months={};let lessonLoading=null;const quizMap={};
+function lesson(){if(language!=='de')return null;const m=months[month];if(!m||!m.days)return null;const d=m.days[selected];if(!d)return null;return (person==='junghyun'&&d.junghyun)||d.base}
+function deck(){const L=lesson();if(!L)return [];const w=L.week||{phrases:[],tasks:[]};return [...L.cards.map(c=>({kind:'word',...c})),...L.tasks.map(t=>({kind:'task',...t})),...w.phrases.map(p=>({kind:'word',de:p.de,ko:p.ko,plural:'',exde:'',exko:'',note:'이번 주 표현',week:true})),...w.tasks.map(t=>({kind:'task',...t,week:true}))]}
+function need(){const L=lesson();return L?L.cards.length+L.tasks.length:0}
+function loadMonth(m){if(months[m]||lessonLoading===m)return;lessonLoading=m;fetch('content/'+m+'.json?v=26').then(r=>r.ok?r.json():{days:{}}).catch(()=>({days:{}})).then(j=>{months[m]=j;if(lessonLoading===m)lessonLoading=null;render()})}
+function emptyLesson(label,title){return `<section class="lesson">${heading(label,title)}<div class="loose-paper"><p class="eyebrow">${language==='en'?'ENGLISH':'DEUTSCH'}</p><p class="prompt">${language==='en'?'영어 교재는 다음 판에서 이어집니다.':lessonLoading?'교재를 불러오고 있어요.':'이 날의 교재는 없어요.'}</p><p class="hint">${language==='en'?'언어를 Deutsch로 바꾸면 10월과 11월 교재가 열립니다.':'10월 1일부터 11월 30일까지의 날짜를 골라 주세요.'}</p></div><div class="lesson-actions"><button class="action secondary" data-view="calendar">쌓인 날들 →</button></div></section>`}
+function speechText(which){const L=lesson();if(!L)return '';if(which==='card'){const c=deck()[card];if(!c)return '';return c.kind==='word'?c.de+(c.exde?'. '+c.exde:''):c.type==='cloze'?c.prompt.replace(/_+/,c.options[c.answer]):c.options[c.answer]}if(which.startsWith('ear'))return L.ear.text;return [...L.reading.layers.flatMap(l=>l.lines),...(L.reading.summit?L.reading.summit.lines:[])].join(' ')}
+function themeLine(L){return `<p class="lesson-theme"><strong>${esc(L.theme)}</strong>${esc(L.focus)}</p>`}
+function quizItem(t,id){quizMap[id]=t;const picked=(activity().quiz||{})[id];return `<div class="quiz-item" data-quiz-item="${id}"><p class="eyebrow">${t.type==='cloze'?'빈칸':'고르기'}</p><p class="quiz-prompt" lang="${t.type==='cloze'?'de':'ko'}">${esc(t.prompt)}</p><div class="options" role="group">${t.options.map((o,i)=>`<button data-quiz="${id}" data-option="${i}" class="${picked===undefined?'':i===t.answer?'is-right':i===picked?'is-wrong':''}" aria-pressed="${picked===i}" lang="de" ${picked===undefined?'':'disabled'}>${esc(o)}</button>`).join('')}</div>${picked===undefined?'':`<p class="hint">${picked===t.answer?'맞았어요.':'정답은 '+esc(t.options[t.answer])+'.'} ${esc(t.point||'')}</p>`}</div>`}
+const tasks=[['cards','문장 카드','오늘의 낱말과 문제','RECALL','var(--grey)',18],['reading','원문 읽기','쉬운 판에서 원문까지','READ','var(--paper)',158],['speaking','소리 내기','세 속도로 듣고 따라 말하기','SPEAK','var(--rose)',74],['writing','한 문장 남기기','오늘의 표현을 내 것으로','WRITE','var(--orange)',188]];
+const today=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Zurich',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+const parse=s=>new Date(s+'T12:00:00'),key=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+const shift=(s,n)=>{const d=parse(s);d.setDate(d.getDate()+n);return key(d)},esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+if('scrollRestoration' in history)history.scrollRestoration='manual';
+const params=new URLSearchParams(location.search),allowed=['home','cards','reading','speaking','writing','calendar','notes'];
+let view=params.get('view')||document.documentElement.dataset.initial||'cards';if(!allowed.includes(view))view='cards';
+let language='de',selected=today,month=today.slice(0,7),revealed=false,card=0,showTranslation=false,ribbonOpen=params.has('ribbon')||document.documentElement.hasAttribute('data-ribbon'),duration=90,remaining=90,timer=null,deadline=0;
+const profiles={yeonho:{name:'연호',greeting:'연호야, 반가워!'},junghyun:{name:'정현',greeting:'정현아, 반가워!'}};
+let person='yeonho',needsProfileChoice=true;try{const saved=localStorage.getItem('study-files-person');if(Object.hasOwn(profiles,saved)){person=saved;needsProfileChoice=false}}catch(e){}
+let storage='study-files-v14:'+person+':';let stored={};try{stored=JSON.parse(localStorage.getItem(storage+'data'))||{}}catch(e){}
+function seed(){return {de:{},en:{},notes:{}}}
+let data=stored.de&&stored.en?stored:seed();if(!data.notes)data.notes={};language=person==='yeonho'&&data.preferences?.language==='en'?'en':'de';
+function persist(){try{localStorage.setItem(storage+'data',JSON.stringify(data));return true}catch(e){toast('저장 공간을 사용할 수 없습니다.');return false}}
+function state(day=selected){return data[language][day]||[false,false,false,false]}
+function count(day=selected){return state(day).filter(Boolean).length}
+function monthCount(){return Object.entries(data[language]).filter(([d,v])=>d.startsWith(month)&&v.every(Boolean)).length}
+function fmt(day=selected){return new Intl.DateTimeFormat(language==='de'?'de-DE':'en-GB',{day:'numeric',month:'long',year:'numeric'}).format(parse(day))}
+function toast(s){$('.toast').textContent=s;clearTimeout(window.toastTimeout);window.toastTimeout=setTimeout(()=>$('.toast').textContent='',2600)}
+function folder(t,i){
+ const active=view===t[0],done=i<4&&state()[i],tab=[14,168,62,192,20,148][i];
+ const meta=i<4?(done?'완료':'05 MIN'):i===4?String(monthCount()).padStart(2,'0')+' DAYS':String(allNotes().length).padStart(2,'0')+' NOTES';
+ return `<button class="folder" id="folder-${t[0]}" data-done="${done}" data-view="${t[0]}" aria-expanded="${active}" aria-controls="file-${t[0]}" style="--tab:${(tab+16)/4}%" aria-label="${t[1]} ${active?'접기':'펼치기'}"><svg viewBox="0 0 400 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 36 H${tab-8} Q${tab} 36 ${tab+5} 24 L${tab+11} 9 Q${tab+15} 1 ${tab+25} 1 H${tab+155} Q${tab+165} 1 ${tab+170} 12 L${tab+177} 27 Q${tab+183} 36 ${tab+194} 36 H400 V100 H0Z"/></svg><span class="folder-tab"><span class="folder-number">${String(i+1).padStart(2,'0')}</span><span class="folder-title">${t[1]}</span></span><span class="folder-meta"><span>${t[2]}</span><small>${meta}</small></span><span class="folder-arrow" aria-hidden="true">${active?'−':'+'}</span></button>`;
+}
+function home(){return ''}
+function cabinet(){
+ const files=[...tasks,['calendar','쌓인 날들','한 장씩 쌓인 나의 시간','DAYS'],['notes','전체 노트','내가 남긴 문장 모아 보기','NOTES']];
+ return `${intro()}<section class="cabinet" aria-label="학습과 기록, 여섯 폴더">${files.map((t,i)=>`<section class="file-folder ${view===t[0]?'is-open':''}" data-file="${t[0]}">${folder(t,i)}<div class="folder-content" id="file-${t[0]}" role="region" aria-labelledby="folder-${t[0]}" ${view===t[0]?'':'hidden'}>${view===t[0]?`<div class="folder-bookmark"><button class="punch" data-secret aria-label="숨은 문장 펼치기" aria-expanded="${ribbonOpen}" aria-controls="ribbon-stack"></button>${ribbons()}</div>`+({cards,reading,speaking,writing,calendar,notes}[view])():''}</div></section>`).join('')}</section>`;
+}
+function progressSticker(){
+ return `<button class="progress-sticker stamp-${stickerFor(selected)}" data-view="calendar" aria-label="${fmt()}, 연습 4개 중 ${count()}개 완료. 쌓인 날들 펼치기"><span class="progress-caption">${language==='de'?'GELERNT':'STUDIED'}</span><span class="progress-value"><b>${count()}</b><span>/ 4</span></span></button>`;
+}
+function intro(){
+ const locale=language==='de'?'de-DE':'en-GB',weekday=new Intl.DateTimeFormat(locale,{weekday:'long'}).format(parse(selected));
+ return `<section class="folio-intro"><div class="greeting-line"><h1><button class="greeting-picker" data-profile aria-label="사용자 선택, 현재 ${profiles[person].name}">${profiles[person].greeting}</button></h1>${person==='yeonho'?`<label class="study-language"><span class="sr-only">학습 언어</span><select data-study-language aria-label="학습 언어"><option value="de" ${language==='de'?'selected':''}>Deutsch</option><option value="en" ${language==='en'?'selected':''}>English</option></select></label>`:''}</div><button class="folio-date" data-view="calendar" aria-label="${fmt()}, 쌓인 날들 펼치기"><time datetime="${selected}" lang="${language}">${fmt()}</time><span class="date-weekday" lang="${language}">${weekday}<span aria-hidden="true"> ↗</span></span></button><div class="progress-holder" aria-live="polite">${progressSticker()}</div></section>`;
+}
+function updatePageTail(){
+ const last=$('.file-folder[data-file="notes"]');if(!last)return;
+ const top=Math.max(0,scrollY+last.getBoundingClientRect().top+36);
+ document.body.style.setProperty('--tail-start',top+'px');
+}
+function openProfilePicker(){
+ const dialog=$('#profile-dialog');if(!dialog||navigationBusy)return;
+ pause();stopSpeech();if(view==='speaking')render();
+ dialog.querySelector('[data-profile-cancel]').hidden=needsProfileChoice;
+ dialog.querySelectorAll('[data-choose-profile]').forEach(b=>b.setAttribute('aria-pressed',String(!needsProfileChoice&&b.dataset.chooseProfile===person)));
+ if(!dialog.open)dialog.showModal();
+}
+function chooseProfile(next){
+ if(!Object.hasOwn(profiles,next))return;resetFolioPages();
+ pause();stopSpeech();person=next;storage='study-files-v14:'+person+':';let saved={};
+ try{localStorage.setItem('study-files-person',person);saved=JSON.parse(localStorage.getItem(storage+'data'))||{}}catch(e){}
+ data=saved.de&&saved.en?saved:seed();if(!data.notes)data.notes={};
+ language=person==='yeonho'&&data.preferences?.language==='en'?'en':'de';
+ needsProfileChoice=false;document.documentElement.dataset.onboarding='false';
+ notesQuery='';notesLanguage='all';notesType='all';notesLimit=40;card=0;revealed=false;showTranslation=false;peekSpeaking=false;peekWriting=false;selected=today;month=today.slice(0,7);noteReturn=false;remaining=duration;
+ $('#profile-dialog').close();commitView('cards');focusHeading();
+}
+function changeLanguage(next){
+ resetFolioPages();
+ if(!['de','en'].includes(next)||person==='junghyun'&&next!=='de'||next===language)return;
+ stopSpeech();pause();remaining=duration;language=next;data.preferences={...data.preferences,language};persist();card=0;revealed=false;showTranslation=false;peekSpeaking=false;peekWriting=false;noteReturn=false;render();
+}
+function initQuietScreen(){
+ const dialog=$('#profile-dialog');
+ dialog.addEventListener('cancel',e=>{if(needsProfileChoice)e.preventDefault()});
+ dialog.addEventListener('click',e=>{if(e.target===dialog&&!needsProfileChoice){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close()}});
+ document.addEventListener('change',e=>{if(e.target.hasAttribute('data-study-language'))changeLanguage(e.target.value)});
+ if(typeof ResizeObserver==='function')new ResizeObserver(updatePageTail).observe($('#screen'));
+ window.addEventListener('resize',updatePageTail);
+ if(needsProfileChoice)openProfilePicker();
+}
+
+function ribbons(){return `<aside class="ribbon-popover" id="ribbon-stack" tabindex="-1" aria-label="숨은 문장 책갈피, 바깥 여백을 누르면 접힙니다" ${ribbonOpen?'':'hidden'}><div class="ribbon brown" style="--ribbon:var(--accent);--angle:-2deg"><p class="eyebrow">EIN WORT NACH DEM ANDEREN.<br>ONE WORD AT A TIME.</p><p>한 번에 한 단어씩.</p></div><div class="ribbon" style="--ribbon:#e5e5ea;--angle:1.5deg"><p class="eyebrow">AUCH LANGSAM IST EIN TEMPO.<br>SLOW IS A PACE, TOO.</p><p>천천히 가는 것도 하나의 속도.</p></div><div class="ribbon" style="--ribbon:#fff;--angle:-1deg"><p class="eyebrow">FÜR HEUTE REICHT DAS.<br>ENOUGH FOR TODAY.</p><p>오늘은 이만하면 됐어요.</p></div></aside>`}
+
+function paperGrip(label,open=false){return `<button class="paper-peek" data-peek aria-label="${label}" aria-expanded="${open}"><span aria-hidden="true">↗</span></button>`}
+function heading(label,title){return `<div class="folder-inside-head"><span>${label} / ${selected.slice(5).replace('-','.')} · ${language.toUpperCase()}</span>${noteReturn?'<button data-view="notes">전체 노트로 ↗</button>':''}</div>`}
+function note(type,label,placeholder){const v=data.notes[language+':'+selected+':'+type]||'';return `<label class="note-label" for="${type}-note">${label}</label><textarea id="${type}-note" data-note="${type}" placeholder="${placeholder}">${esc(v)}</textarea><p class="save-status" aria-live="polite">${v?'이 브라우저에 저장됨':''}</p>`}
+function reading(){const L=lesson();if(!L)return emptyLesson('02 / READ','원문을 읽는 법.');const R=L.reading;let n=0;const layerHtml=(title,lines)=>`<p class="eyebrow layer-label">${title}</p>${lines.map(line=>`<p class="reading-line"><span class="line-number">${String(++n).padStart(2,'0')}</span><span lang="de">${esc(line)}</span></p>`).join('')}`;const layers=R.layers.map(l=>layerHtml(l.level==='A1'?'쉬운 판 / A1':l.level.startsWith('원문')?esc(l.level):'중간 판 / '+esc(l.level),l.lines)).join('');const S=R.summit;const summit=S&&S.text?`<div class="summit">${layerHtml('원문 / '+esc(S.source.author)+', '+esc(S.source.title)+(S.source.year?' ('+esc(S.source.year)+')':''),S.lines)}${S.note?`<p class="hint">${esc(S.note)}</p>`:''}<p class="credit">${S.source.license==='public-domain'?'퍼블릭 도메인':S.source.license==='cc-by-sa-4.0'?'CC BY-SA 4.0':esc(S.source.license)}${S.swiss?' · 스위스 표기(ss) 원문 그대로':''}${S.source.url?` · <a href="${esc(S.source.url)}" target="_blank" rel="noopener">출처 ↗</a>`:''}</p></div>`:'';const gloss=R.layers.flatMap(l=>l.gloss||[]),quiz=R.layers.flatMap(l=>l.tasks||[]);return `<section class="lesson">${heading('02 / READ','원문을 읽는 법.')}${themeLine(L)}<article class="loose-paper reading-paper">${paperGrip(showTranslation?'풀이 접기':'풀이 펼치기',showTranslation)}<p class="eyebrow">READING STAIR / 쉬운 판에서 원문까지</p><h2 lang="ko">${esc(L.theme)}</h2>${layers}${summit}<div class="paper-tools"><button data-speak="reading" aria-pressed="false">독일어 듣기 ↗</button><button data-translation aria-expanded="${showTranslation}" aria-controls="reading-translation">${showTranslation?'풀이 접기':'풀이 펼치기'} ${showTranslation?'−':'+'}</button></div></article><aside class="translation-slip" id="reading-translation" ${showTranslation?'':'hidden'}><p class="eyebrow">ON THE OTHER SIDE / 낱말 풀이</p>${gloss.length?gloss.map(g=>`<p><span class="number" lang="de">${esc(g.de)}</span> &nbsp;${esc(g.ko)}</p>`).join(''):'<p>이 날은 풀이 없이 원문만 읽는다.</p>'}</aside>${quiz.length?`<div class="reading-quiz">${quiz.map((t,i)=>quizItem(t,'r'+i)).join('')}</div>`:''}<div class="lesson-actions">${complete('reading')}<button class="action secondary" data-view="speaking">소리 내기 →</button></div><div class="note-paper">${note('reading','내가 간직할 표현','한 줄을 옮겨 적어 두세요.')}</div></section>`}
+function cards(){const L=lesson();if(!L)return emptyLesson('01 / RECALL','기억에서 꺼내기.');const d=deck();if(!d.length)return emptyLesson('01 / RECALL','기억에서 꺼내기.');if(card>=d.length)card=0;const c=d[card],total=d.length,base=need();const counter=`<span class="eyebrow">${String(card+1).padStart(2,'0')} / ${String(total).padStart(2,'0')}${c.week?' · 주간':''}</span>`;let body;if(c.kind==='word'){body=revealed?`<p class="answer" lang="de">${esc(c.de)}${c.plural?`<span class="plural">, ${esc(c.plural)}</span>`:''}</p>${c.exde?`<p class="example" lang="de">${esc(c.exde)}</p><p class="example-ko">${esc(c.exko)}</p>`:''}${c.note?`<p class="hint">${esc(c.note)}</p>`:''}<div class="paper-tools"><button data-speak="card" aria-pressed="false">독일어 듣기 ↗</button><button data-reveal aria-expanded="true">한국어 다시 보기 ↶</button></div><div class="ratings" aria-label="기억 정도"><button data-rate="다시">다시</button><button data-rate="기억">기억났어요</button><button data-rate="쉬움">쉬웠어요</button></div>`:`<p class="recall-question">${esc(c.ko)}</p>${c.exko?`<p class="recall-example">${esc(c.exko)}</p>`:''}<button class="action" data-reveal aria-expanded="false">위로 젖혀 표현 보기 <span>↟</span></button>`}else{const picked=(activity().answers||{})[card];body=`<p class="eyebrow">${c.type==='cloze'?'빈칸 채우기':'고르기'}${c.from?' · '+esc(c.from.replace('day-',''))+'일째에서':''}</p><p class="recall-question task-question" lang="${c.type==='cloze'?'de':'ko'}">${esc(c.prompt)}</p><div class="options" role="group">${c.options.map((o,i)=>`<button data-option="${i}" class="${picked===undefined?'':i===c.answer?'is-right':i===picked?'is-wrong':''}" aria-pressed="${picked===i}" lang="de" ${picked===undefined?'':'disabled'}>${esc(o)}</button>`).join('')}</div>${picked===undefined?'':`<p class="hint">${picked===c.answer?'맞았어요.':'정답은 '+esc(c.options[c.answer])+'.'} ${esc(c.point||'')}</p><div class="paper-tools"><button data-speak="card" aria-pressed="false">독일어 듣기 ↗</button><button data-card-turn="1">다음 장 →</button></div>`}`}return `<section class="lesson">${heading('01 / RECALL','기억에서 꺼내기.')}${themeLine(L)}<article class="loose-paper recall-deck ${revealed&&c.kind==='word'?'recall-back':''}"><div class="card-count"><p class="eyebrow" style="margin:0">${c.kind==='task'?'답을 골라 보세요.':revealed?'꺼낸 표현':'한국어를 보고 먼저 말해 보세요.'}</p>${counter}</div>${c.kind==='word'?paperGrip(revealed?'한국어로 뒤집기':'표현으로 뒤집기',revealed):''}${body}</article><div class="card-turns"><button data-card-turn="-1">← ${card?'앞 장':'파일 넣기'}</button><span>${base<total&&card===base-1?'다음부터는 주간 복습':'옆으로 넘겨도 돼요'}</span><button data-card-turn="1">${card===total-1?'원문 읽기':'다음 장'} →</button></div><div class="lesson-actions">${complete('cards')}<button class="action secondary" data-view="reading">원문 읽기 →</button></div></section>`}
+function clock(){return String(Math.floor(remaining/60)).padStart(2,'0')+':'+String(remaining%60).padStart(2,'0')}
+function speaking(){const L=lesson();if(!L)return emptyLesson('03 / SPEAK','입 밖으로 꺼내기.');const E=L.ear,heard=activity().ear||[];return `<section class="lesson">${heading('03 / SPEAK','입 밖으로 꺼내기.')}${themeLine(L)}<div class="loose-paper">${paperGrip(peekSpeaking?'대본 접기':'대본 펼치기',peekSpeaking)}<p class="eyebrow">EAR / 세 속도로 듣고 따라 말하기</p><p class="prompt mono" lang="de" ${peekSpeaking?'':'hidden'}>${esc(E.text)}</p><p class="prompt-translation" ${peekSpeaking?'hidden':''}>먼저 대본 없이 듣고, 그다음 위로 젖혀 대본을 보며 따라 읽어 보세요.</p><div class="durations rates" aria-label="듣기 속도">${E.rates.map(r=>`<button data-speak="ear${r}" data-rate-speed="${r}" aria-pressed="${heard.includes(r)}">${r>=1?'보통':r>=0.9?'조금 느리게':'느리게'} ↗</button>`).join('')}</div></div><div class="timer-paper"><p class="eyebrow">대본을 덮고 같은 내용을 끝까지 말해 보세요.</p><p class="timer" data-clock>${clock()}</p><div class="durations" aria-label="연습 시간">${[90,60,45].map(n=>`<button data-duration="${n}" aria-pressed="${duration===n}">${n}초</button>`).join('')}</div><div class="lesson-actions"><button class="action" data-timer>${timer?'잠시 멈춤':'말하기 시작'} <span>${timer?'Ⅱ':'↗'}</span></button><button class="action secondary" data-reset>처음부터</button></div></div><div class="lesson-actions">${complete('speaking')}<button class="action secondary" data-view="writing">한 문장 남기기 →</button></div><p class="save-status">세 속도를 다 듣거나 타이머를 마치면 체크됩니다. 음성은 녹음하지 않습니다.</p></section>`}
+function writing(){const L=lesson();if(!L)return emptyLesson('04 / WRITE','나의 한 문장.');const H=L.hand,W=L.week&&L.week.write;return `<section class="lesson">${heading('04 / WRITE','나의 한 문장.')}${themeLine(L)}<div class="loose-paper writing-paper">${paperGrip(peekWriting?'본보기 접기':'본보기 펼치기',peekWriting)}<p class="eyebrow">LEAVE A LINE / ${fmt()}</p>${H.situation?`<p class="situation">${esc(H.situation)}</p>`:''}${note('writing',esc(H.prompt||'오늘의 표현을 빌려 적어 보세요.'),(H.chunks||[]).join(' / '))}${H.chunks&&H.chunks.length?`<div class="chunks" aria-label="쓸 조각">${H.chunks.map(ch=>`<span lang="de">${esc(ch)}</span>`).join('')}</div>`:''}</div><aside class="reference-note" ${peekWriting?'':'hidden'}><p class="eyebrow">본보기 문장</p><p lang="de">${esc(H.model)}</p></aside>${W?`<div class="loose-paper writing-paper week-write"><p class="eyebrow">WEEK / ${esc(L.week.title)}</p>${W.situation?`<p class="situation">${esc(W.situation)}</p>`:''}${note('weekwrite',esc(W.prompt),(W.chunks||[]).join(' / '))}<p class="hint" lang="de">${esc(W.model)}</p></div>`:''}<div class="lesson-actions">${complete('writing')}<button class="action secondary" data-view="home">파일 덮기 →</button></div></section>`}
+const stickerKinds=['label','oval','ticket','tag'];
+function stickerFor(day){return data.stickers?.[language+':'+day]||stickerKinds[Number(day.slice(-2))%4]}
+function stampDay(){const stamp=$('.calendar-day[data-date="'+selected+'"]');if(stamp&&count()===4&&!reducedMotion.matches)stamp.animate([{transform:'translateY(-9px) scale(1.28) rotate(-10deg)',opacity:.2},{transform:'translateY(0) scale(.96) rotate(1deg)',opacity:1,offset:.7},{transform:'none',opacity:1}],{duration:340,easing:'ease-out'})}
+function stickerDrawer(){return `<div class="sticker-drawer"><p>${count()===4?'오늘 붙일 스티커를 골라 보세요.':'네 가지 연습을 마치면 스티커가 붙어요.'}</p><div class="sticker-choices" aria-label="날짜 스티커">${stickerKinds.map((kind,i)=>`<button class="sticker-choice stamp-${kind}" data-sticker="${kind}" aria-label="${['테두리 라벨','타원','티켓','꼬리표'][i]}" aria-pressed="${stickerFor(selected)===kind}" ${count()===4?'':'disabled'}>${selected.slice(-2)}</button>`).join('')}</div></div>`}
+function calendar(){const first=parse(month+'-01'),offset=(first.getDay()+6)%7,last=new Date(first.getFullYear(),first.getMonth()+1,0).getDate();let cells=(language==='de'?['Mo','Di','Mi','Do','Fr','Sa','So']:['Mo','Tu','We','Th','Fr','Sa','Su']).map(w=>`<span class="weekday">${w}</span>`).join('');for(let i=0;i<offset;i++)cells+='<span></span>';for(let n=1;n<=last;n++){const d=month+'-'+String(n).padStart(2,'0'),c=count(d);cells+=`<button class="calendar-day ${c===4?'done stamped stamp-'+stickerFor(d):c?'partial':''}" data-date="${d}" aria-label="${fmt(d)}, ${c}개 완료" aria-pressed="${d===selected}">${n}</button>`}return `<section class="lesson">${heading('ARCHIVE','한 장씩 쌓인 날들.')}<div class="month-paper"><div class="month-control"><h2>${new Intl.DateTimeFormat(language==='de'?'de-DE':'en-GB',{month:'long',year:'numeric'}).format(first)}</h2><div><button data-month="-1" aria-label="이전 달">←</button><button data-today aria-label="오늘로 이동">·</button><button data-month="1" aria-label="다음 달">→</button></div></div><div class="month-grid">${cells}</div><p class="calendar-legend">스티커는 네 가지 완료 · 작은 점은 진행 중</p></div><div class="notes-entry"><button class="action secondary" data-view="notes">전체 노트 모아 보기 <span>↗</span></button></div><div class="daily-checks"><h3 class="day-label">${fmt()} <span class="mono">/ ${count()} OF 4</span></h3><p class="record-hint">학습하면 자동으로 체크돼요. 눌러서 고칠 수도 있어요.</p>${tasks.map((t,i)=>`<button class="check-task" data-complete="${i}" aria-pressed="${state()[i]}" ${selected>today?'disabled':''}><span>${t[1]}</span><span class="check-mark">${state()[i]?'✓':'○'}</span></button>`).join('')}</div>${dailyNotes()}${stickerDrawer()}<div class="lesson-actions"><button class="action" data-view="cards">이날 파일 펼치기 <span>↗</span></button></div></section>`}
+// Completion and notes keep the existing person-specific storage keys.
+const accents=[['mint','파스텔 민트','#e3f5ec'],['pink','파스텔 핑크','#f9e5ed']];
+let notesQuery='',notesLanguage='all',notesType='all',notesLimit=40,noteReturn=false;
+function applyAccent(){
+ const chosen=accents[0],other=accents[1]; // Keep the requested pair regardless of a legacy color preference.
+ const rgb=chosen[2].slice(1).match(/../g).map(c=>parseInt(c,16));
+ const tint=n=>'rgb('+rgb.map(c=>Math.round(c*n+255*(1-n))).join(',')+')';
+ const style=document.documentElement.style;style.setProperty('--accent',chosen[2]);style.setProperty('--companion',other[2]);style.setProperty('--accent-soft',tint(.25));style.setProperty('--accent-line',chosen[2]);
+
+ const desk='#f7f8f9';$('meta[name=theme-color]').content=desk;document.documentElement.style.backgroundColor=desk;
+}
+function activity(){if(!data.activity)data.activity={};const id=language+':'+selected;const a=data.activity[id]||(data.activity[id]={cards:[],readingSeconds:0,readingLines:[]});if(!a.cards)a.cards=[];if(!a.readingLines)a.readingLines=[];return a}
+function completionHint(id){
+ if(selected>today)return '아직 오지 않은 날이에요.';
+ if(state()[tasks.findIndex(t=>t[0]===id)])return '캘린더에 기록했어요';
+ if(id==='cards')return `장 ${activity().cards.filter(i=>i<need()).length} / ${need()} 확인하면 자동 체크`;
+ return {reading:'끝까지 읽으면 자동 체크',speaking:'세 속도를 듣거나 타이머를 마치면 자동 체크',writing:'글을 남기면 자동 체크'}[id];
+}
+function complete(id){const done=state()[tasks.findIndex(t=>t[0]===id)];return `<div class="auto-status ${done?'is-done':''}" data-status="${id}" role="status"><span class="status-dot" aria-hidden="true"></span><span>${completionHint(id)}</span></div>`}
+
+function refreshFolderBadges(){
+ $$('.folder').forEach((b,i)=>{const done=i<4&&state()[i];b.dataset.done=String(done);const badge=b.querySelector('.folder-meta small');if(badge)badge.textContent=i<4?(done?'완료':'05 MIN'):i===4?String(monthCount()).padStart(2,'0')+' DAYS':String(allNotes().length).padStart(2,'0')+' NOTES'});
+ const progress=$('.progress-holder');if(progress)progress.innerHTML=progressSticker();
+}
+
+function refreshCompletion(id){const el=$('[data-status="'+id+'"]');if(el)el.outerHTML=complete(id)}
+function markComplete(id){
+ if(selected>today)return;const i=tasks.findIndex(t=>t[0]===id);if(i<0||state()[i])return;
+ const previous=[...state()],next=[...previous];next[i]=true;data[language][selected]=next;
+ if(!persist()){data[language][selected]=previous;refreshCompletion(id);return}
+ refreshCompletion(id);refreshFolderBadges();toast(tasks[i][1]+' · 캘린더에 기록했어요.');
+}
+function recordCard(){
+ if(selected>today)return;const a=activity();if(!a.cards.includes(card)){a.cards.push(card);persist()}
+ if(need()&&a.cards.filter(i=>i<need()).length>=need())markComplete('cards');refreshCompletion('cards');
+}
+let lastReadingTick=performance.now();
+setInterval(()=>{
+ const now=performance.now(),elapsed=Math.min(.75,(now-lastReadingTick)/1000);lastReadingTick=now;
+ if(needsProfileChoice||$('#profile-dialog').open||view!=='reading'||selected>today||state()[1]||document.hidden||navigationBusy||ribbonOpen)return;
+ const lines=$$('.reading-line');if(!lines.length)return;
+ const a=activity();let visible=false;
+ const reader=$('.folder-reader')?.getBoundingClientRect();lines.forEach((line,i)=>{const r=line.getBoundingClientRect(),height=Math.max(0,Math.min(innerHeight,reader?.bottom??innerHeight,r.bottom)-Math.max(0,reader?.top??0,r.top));if(line.checkVisibility()&&r.height>0&&height>=r.height*.75){visible=true;if(!a.readingLines.includes(i))a.readingLines.push(i)}});
+ if(visible)a.readingSeconds+=elapsed;
+ if(a.readingSeconds>=12&&a.readingLines.length===lines.length)markComplete('reading');
+},500);
+function allNotes(){
+ return Object.entries(data.notes).flatMap(([id,value])=>{
+  const match=/^(de|en):(\d{4}-\d{2}-\d{2}):(reading|writing)$/.exec(id);
+  if(!match||typeof value!=='string'||!value.trim())return [];if(person==='junghyun'&&match[1]!=='de')return [];
+  return [{id,language:match[1],date:match[2],type:match[3],value}];
+ }).sort((a,b)=>b.date.localeCompare(a.date)||a.language.localeCompare(b.language)||a.type.localeCompare(b.type));
+}
+function savedNote(n){return `<article class="saved-note" data-note-kind="${n.type}"><header><span>${n.type==='reading'?'간직한 표현':'나의 한 문장'}</span><span class="mono">${n.language.toUpperCase()}</span></header><p class="note-body">${esc(n.value)}</p><button data-open-note="${n.id}">이날의 ${n.type==='reading'?'읽기':'쓰기'}에서 이어 쓰기 ↗</button></article>`}
+function dailyNotes(){const items=allNotes().filter(n=>n.date===selected&&n.language===language);return `<section class="daily-notes" aria-label="이날의 노트"><h3>이날 남긴 노트</h3>${items.length?items.map(savedNote).join(''):'<p class="record-hint">아직 남긴 글이 없어요.</p>'}</section>`}
+function notes(){return `<section class="lesson notes-library"><div class="view-head"><button class="back" data-view="calendar">← 쌓인 날들</button><p class="eyebrow">ALL NOTES<br>${profiles[person].name}의 기록</p></div><h1 class="page-title">내가 남긴 모든 문장.</h1><p class="notes-intro">읽다가 적은 표현도, 직접 쓴 한 문장도.<br>여기에서 다시 찾아볼 수 있어요.</p><div class="notes-tools"><label class="notes-search"><span class="sr-only">노트 검색</span><input type="search" data-note-search aria-label="노트 검색" placeholder="기억나는 단어로 찾기" value="${esc(notesQuery)}"></label><label class="filter-label" ${person==='junghyun'?'hidden':''}>언어<select data-notes-language aria-label="노트 언어"><option value="all">모든 언어</option><option value="de">독일어</option><option value="en">영어</option></select></label><label class="filter-label">종류<select data-notes-type aria-label="노트 종류"><option value="all">모든 노트</option><option value="reading">간직한 표현</option><option value="writing">나의 한 문장</option></select></label></div><div id="notes-results" aria-live="polite"></div><p class="record-hint">${profiles[person].name}님의 이 브라우저에 저장된 노트예요.</p></section>`}
+document.addEventListener('change',e=>{if(e.target.hasAttribute('data-notes-language')){notesLanguage=e.target.value;folioPages.notes=0;refreshNotes()}if(e.target.hasAttribute('data-notes-type')){notesType=e.target.value;folioPages.notes=0;refreshNotes()}});
+document.addEventListener('visibilitychange',()=>{lastReadingTick=performance.now()});
+
+const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
+let navigationBusy=false,navigationMoves=[],ribbonMoves=[],ribbonTurn=0;
+function motionClone(element){
+ const clone=element.cloneNode(true),computed=getComputedStyle(element);for(const prop of ['--folder-color','--folder-ink'])clone.style.setProperty(prop,computed.getPropertyValue(prop));for(const prop of ['color','backgroundColor','backgroundImage','padding','fontSize','boxShadow','borderRadius','display','flexDirection'])clone.style[prop]=computed[prop];if(element.id==='screen')clone.style.height=element.getBoundingClientRect().height+'px';clone.removeAttribute('id');clone.setAttribute('aria-hidden','true');clone.inert=true;
+ clone.querySelectorAll('[id]').forEach(e=>e.removeAttribute('id'));
+ clone.querySelectorAll('button,a,input,textarea,[tabindex]').forEach(e=>e.tabIndex=-1);
+ return clone;
+}
+function focusHeading(){const title=$('.file-folder.is-open>.folder-content')||$('#screen h1');if(title){title.tabIndex=-1;title.focus({preventScroll:true})}}
+function commitView(v){pause();if(v==='notes'||v==='home')noteReturn=false;stopSpeech();ribbonOpen=false;view=v;render();scrollToFile(v)}
+async function setRibbon(open,{keyboard=false}={}){
+ const panel=$('#ribbon-stack'),trigger=$('[data-secret]');if(!panel||(!open&&panel.hidden))return;
+ const turn=++ribbonTurn,wasHidden=panel.hidden,items=[...panel.querySelectorAll('.ribbon')];
+ const current=items.map(e=>{const s=getComputedStyle(e);return {transform:s.transform,clipPath:s.clipPath}});
+ ribbonMoves.forEach(a=>a.cancel());ribbonMoves=[];
+ ribbonOpen=open;panel.hidden=false;panel.inert=!open;
+ trigger?.setAttribute('aria-expanded',String(open));trigger?.setAttribute('aria-label',open?'숨은 문장 접기':'숨은 문장 펼치기');
+ const starts=items.map(e=>({transform:`translate3d(${e.offsetWidth+12}px,${-e.offsetTop}px,0) rotate(0deg)`,clipPath:'inset(0 0 0 0)'}));
+ const ends=items.map(e=>({transform:`translate3d(0,0,0) rotate(${e.style.getPropertyValue('--angle')||'0deg'})`,clipPath:'inset(0 0 0 0)'}));
+ if(reducedMotion.matches||!items[0]?.animate){
+  items.forEach((e,i)=>Object.assign(e.style,open?ends[i]:starts[i]));panel.hidden=!open;
+  if(keyboard)(open?panel:trigger)?.focus({preventScroll:true});return;
+ }
+ const moves=items.map((e,i)=>{
+  const from=wasHidden?starts[i]:current[i],to=open?ends[i]:starts[i];
+  const frames=open&&wasHidden?[from,{transform:`translate3d(${e.offsetWidth*.25}px,${-e.offsetTop*.55}px,0) rotate(0deg)`,clipPath:'inset(0 0 0 0)',offset:.55},to]:[from,to];
+  return e.animate(frames,{duration:open?590:370,delay:open?i*65:(items.length-1-i)*38,easing:open?'cubic-bezier(.2,.65,.25,1)':'cubic-bezier(.45,0,.7,.45)',fill:'both'});
+ });
+ ribbonMoves=moves;await Promise.allSettled(moves.map(a=>a.finished));
+ if(turn!==ribbonTurn||!panel.isConnected)return;
+ items.forEach((e,i)=>Object.assign(e.style,open?ends[i]:starts[i]));moves.forEach(a=>a.cancel());ribbonMoves=[];panel.hidden=!open;
+ if(keyboard)(open?panel:trigger)?.focus({preventScroll:true});
+}
+document.addEventListener('click',e=>{
+ if(navigationBusy){e.preventDefault();e.stopImmediatePropagation();return}
+ if(ribbonOpen&&!e.target.closest('.ribbon,[data-secret]')){
+  setRibbon(false);e.preventDefault();e.stopImmediatePropagation();
+ }
+},true);
+window.addEventListener('resize',()=>{if(navigationBusy)navigationMoves.forEach(a=>a.cancel())});
+reducedMotion.addEventListener('change',()=>{if(reducedMotion.matches){navigationMoves.forEach(a=>a.cancel());if($('#ribbon-stack'))setRibbon(ribbonOpen)}});
+
+function render(){if(person==='junghyun')language='de';loadMonth(month);ribbonTurn++;ribbonMoves.forEach(a=>a.cancel());ribbonMoves=[];document.documentElement.dataset.view=view;document.documentElement.dataset.person=person;document.documentElement.dataset.onboarding=String(needsProfileChoice);document.title=profiles[person].name+'의 '+(language==='de'?'독일어':'영어')+' 노트';$('#screen').innerHTML=cabinet();applyAccent();mountFolioPages();refreshNotes();updatePageTail()}
+function changePerson(){openProfilePicker()}
+function pause(){if(timer){remaining=Math.max(0,Math.ceil((deadline-Date.now())/1000));clearInterval(timer);timer=null}}
+// Select an actual matching voice. Never hand a missing language to the default voice.
+const studySynth=window.speechSynthesis||null;
+let currentSpeech=null,voiceWait=null,voiceWaitTimer=null,speechStartTimer=null;
+const voiceLanguage=s=>String(s||'').trim().replace(/_/g,'-').toLowerCase();
+const speechLanguageName=()=>language==='de'?'독일어':'영어';
+function availableVoices(){try{return studySynth?[...studySynth.getVoices()]:[]}catch(e){return []}}
+function matchingVoice(voices,locale){
+ const target=voiceLanguage(locale),base=target.split('-')[0];
+ return voices.filter(v=>voiceLanguage(v.lang).split('-')[0]===base).sort((a,b)=>{
+  const rank=v=>(voiceLanguage(v.lang)===target?100:0)+(v.localService?10:0)+(v.default?1:0);
+  return rank(b)-rank(a);
+ })[0]||null;
+}
+function syncSpeechButtons(){
+ $$('[data-speak]').forEach(b=>{const active=!!currentSpeech&&currentSpeech.which===b.dataset.speak;
+  b.textContent=active?'읽기 멈추기 ■':speechLanguageName()+' 듣기 ↗';b.setAttribute('aria-pressed',String(active));
+ });
+}
+function speechMessage(message){
+ let status=$('[data-speech-status]');
+ if(!status){const tools=$('[data-speak]')?.closest('.paper-tools');if(!tools)return;status=document.createElement('p');status.className='speech-status';status.dataset.speechStatus='';status.setAttribute('role','status');status.setAttribute('aria-live','polite');tools.after(status)}
+ status.textContent=message;status.hidden=!message;
+}
+function stopSpeech(){
+ currentSpeech=null;voiceWait=null;clearTimeout(voiceWaitTimer);clearTimeout(speechStartTimer);
+ if(studySynth){try{studySynth.cancel()}catch(e){}}
+ syncSpeechButtons();speechMessage('');
+}
+function voiceWaitMatches(){return voiceWait&&voiceWait.language===language&&voiceWait.person===person&&voiceWait.view===view&&voiceWait.card===card&&voiceWait.selected===selected}
+function refreshWaitingVoice(final=false){
+ const voices=availableVoices();if(!voiceWaitMatches())return;
+ if(matchingVoice(voices,language==='de'?'de-DE':'en-GB')){
+  clearTimeout(voiceWaitTimer);voiceWait=null;speechMessage(speechLanguageName()+' 음성이 준비됐어요. 듣기를 다시 눌러 주세요.');
+ }else if(final){speechMessage('이 브라우저에서 '+speechLanguageName()+' 음성을 찾지 못했어요. 기기에 해당 언어의 음성을 추가한 뒤 다시 눌러 주세요.')}
+}
+function speak(which,rate=.85){
+ if(!studySynth||typeof window.SpeechSynthesisUtterance!=='function'){speechMessage('이 브라우저는 음성 읽기를 지원하지 않아요.');return}
+ if(currentSpeech?.which===which){stopSpeech();speechMessage('읽기를 멈췄어요.');return}
+ stopSpeech();const voice=matchingVoice(availableVoices(),language==='de'?'de-DE':'en-GB');const spoken=speechText(which);if(!spoken){speechMessage('읽을 교재가 없어요.');return}
+ if(!voice){
+  voiceWait={language,person,view,card,selected};
+  speechMessage(speechLanguageName()+' 음성을 확인하고 있어요. 잠시 후 다시 눌러 주세요.');
+  voiceWaitTimer=setTimeout(()=>refreshWaitingVoice(true),1500);return;
+ }
+ const utterance=new SpeechSynthesisUtterance(spoken);
+ // The language and voice are assigned together before speak, inside the button gesture.
+ utterance.voice=voice;utterance.lang=voice.lang.replace(/_/g,'-');utterance.rate=rate;utterance.pitch=1;utterance.volume=1;
+ const session={utterance,which,language};currentSpeech=session;syncSpeechButtons();speechMessage(speechLanguageName()+' 음성을 준비하고 있어요.');
+ utterance.onstart=()=>{if(currentSpeech!==session)return;clearTimeout(speechStartTimer);speechMessage(speechLanguageName()+'로 읽고 있어요.')};
+ utterance.onend=()=>{if(currentSpeech!==session)return;clearTimeout(speechStartTimer);currentSpeech=null;syncSpeechButtons();speechMessage(speechLanguageName()+' 읽기를 마쳤어요.');if(which.startsWith('ear')&&selected<=today){const a=activity();a.ear=a.ear||[];if(!a.ear.includes(rate))a.ear.push(rate);persist();if(a.ear.length>=3)markComplete('speaking');refreshCompletion('speaking');$$('[data-rate-speed]').forEach(b=>b.setAttribute('aria-pressed',String(a.ear.includes(Number(b.dataset.rateSpeed)))))}};
+ utterance.onerror=e=>{
+  if(currentSpeech!==session)return;clearTimeout(speechStartTimer);currentSpeech=null;syncSpeechButtons();
+  if(['canceled','interrupted'].includes(e.error)){speechMessage('');return}
+  if(['language-unavailable','voice-unavailable'].includes(e.error))speechMessage(speechLanguageName()+' 음성을 사용할 수 없어요. 기기에 해당 언어의 음성을 추가한 뒤 다시 눌러 주세요.');
+  else speechMessage('음성을 재생하지 못했어요. 듣기를 다시 눌러 주세요.');
+ };
+ speechStartTimer=setTimeout(()=>{if(currentSpeech!==session)return;stopSpeech();speechMessage('음성 재생이 시작되지 않았어요. 듣기를 다시 눌러 주세요.')},6000);
+ try{if(studySynth.paused)studySynth.resume();studySynth.speak(utterance)}catch(e){if(currentSpeech===session){stopSpeech();speechMessage('음성을 재생하지 못했어요. 듣기를 다시 눌러 주세요.')}}
+}
+if(studySynth){availableVoices();studySynth.addEventListener('voiceschanged',()=>refreshWaitingVoice())}
+
+document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||b.disabled)return;
+ if(b.hasAttribute('data-folio-step')){turnFolderNote(Number(b.dataset.folioStep));return}
+ if(b.dataset.chooseProfile){chooseProfile(b.dataset.chooseProfile);return}
+ if(b.hasAttribute('data-profile-cancel')){$('#profile-dialog').close();$('.greeting-picker')?.focus();return}
+ if(b.hasAttribute('data-more-notes')){const offset=notesLimit;notesLimit+=40;refreshNotes();const first=$$('.saved-note')[offset]?.querySelector('button');first?.focus({preventScroll:true})}
+ else if(b.dataset.accent){if(!accents.some(a=>a[0]===b.dataset.accent))return;data.preferences={...data.preferences,accent:b.dataset.accent};persist();applyAccent()}
+ else if(b.dataset.openNote){const n=allNotes().find(n=>n.id===b.dataset.openNote);if(!n)return;noteReturn=true;pause();remaining=duration;selected=n.date;month=n.date.slice(0,7);language=n.language;showTranslation=false;folioPages[n.type]=n.type==='reading'?2:0;commitView(n.type);focusHeading()}
+ else if(b.dataset.sticker){if(count()!==4||!stickerKinds.includes(b.dataset.sticker))return;if(!data.stickers)data.stickers={};data.stickers[language+':'+selected]=b.dataset.sticker;persist();render();stampDay()}
+ else if(b.hasAttribute('data-peek'))peelPaper();
+ else if(b.hasAttribute('data-card-turn'))turnCard(Number(b.dataset.cardTurn));
+ else if(b.dataset.view)navigate(b.dataset.view,b);
+ else if(b.hasAttribute('data-profile'))changePerson();
+ else if(b.dataset.language)changeLanguage(b.dataset.language);
+ else if(b.hasAttribute('data-secret'))setRibbon(!ribbonOpen,{keyboard:e.detail===0});
+ else if(b.hasAttribute('data-translation'))peelPaper();
+ else if(b.hasAttribute('data-reveal'))peelPaper();
+ else if(b.dataset.rate){recordCard();turnCard(1)}
+ else if(b.dataset.speak)speak(b.dataset.speak,b.dataset.rateSpeed?Number(b.dataset.rateSpeed):.85);
+ else if(b.dataset.quiz){const id=b.dataset.quiz,t=quizMap[id];if(!t)return;const a=activity();a.quiz=a.quiz||{};if(a.quiz[id]!==undefined)return;a.quiz[id]=Number(b.dataset.option);persist();const el=b.closest('[data-quiz-item]');if(el)el.outerHTML=quizItem(t,id)}
+ else if(b.dataset.option!==undefined){const a=activity();a.answers=a.answers||{};if(a.answers[card]!==undefined)return;a.answers[card]=Number(b.dataset.option);persist();recordCard();render()}
+ else if(b.hasAttribute('data-complete')){if(selected>today)return;const i=Number(b.dataset.complete),s=[...state()];s[i]=!s[i];data[language][selected]=s;if(!s[i]){const a=activity();if(i===0)a.cards=[];if(i===1){a.readingSeconds=0;a.readingLines=[]}}persist();render();if(view==='calendar')stampDay();$('[data-complete="'+i+'"]')?.focus()}
+ else if(b.dataset.duration){pause();duration=Number(b.dataset.duration);remaining=duration;render()}
+ else if(b.hasAttribute('data-timer')){if(timer){pause();render()}else{if(!remaining)remaining=duration;deadline=Date.now()+remaining*1000;timer=setInterval(()=>{remaining=Math.max(0,Math.ceil((deadline-Date.now())/1000));if($('[data-clock]'))$('[data-clock]').textContent=clock();if(!remaining){pause();markComplete('speaking');render()}},200);render()}}
+ else if(b.hasAttribute('data-reset')){pause();remaining=duration;render()}
+ else if(b.dataset.date){pause();remaining=duration;card=0;revealed=false;showTranslation=false;selected=b.dataset.date;month=selected.slice(0,7);folioPages.reading=folioPages.speaking=folioPages.writing=0;render()}
+ else if(b.dataset.month)turnMonth(Number(b.dataset.month));
+ else if(b.hasAttribute('data-today')){selected=today;month=today.slice(0,7);card=0;revealed=false;remaining=duration;folioPages.reading=folioPages.speaking=folioPages.writing=0;render()}
+});
+document.addEventListener('input',e=>{if(e.target.hasAttribute('data-note-search')){notesQuery=e.target.value;folioPages.notes=0;refreshNotes();return}const type=e.target.dataset.note;if(type){data.notes[language+':'+selected+':'+type]=e.target.value;const ok=persist();refreshFolderBadges();e.target.nextElementSibling.textContent=ok?'이 브라우저에 저장됨':'저장 공간을 사용할 수 없습니다.';if(ok&&e.target.value.trim()&&!e.isComposing)markComplete(type)}});
+document.addEventListener('compositionend',e=>{const type=e.target.dataset.note;if(type&&e.target.value.trim()&&persist())markComplete(type)});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&ribbonOpen){e.preventDefault();setRibbon(false,{keyboard:true})}});
+window.addEventListener('pagehide',()=>{navigationMoves.forEach(a=>a.cancel());ribbonMoves.forEach(a=>a.cancel());pause();stopSpeech()});
+// One spatial order connects the files; cards and months have their own inner order.
+const fileOrder=['home','cards','reading','speaking','writing','calendar','notes'];
+let touchState=null,suppressClickUntil=0,peekSpeaking=false,peekWriting=false;
+const editable=el=>el?.closest('textarea,input,select,[contenteditable=true]');
+function stopDrag(){
+ if(touchState?.surface){touchState.surface.style.removeProperty('transform');touchState.surface.classList.remove('touch-dragging')}
+ touchState=null;
+}
+async function movePaper(change,{direction=1,flip=false,surface='.lesson'}={}){
+ if(navigationBusy)return;stopSpeech();
+ if(reducedMotion.matches){change();return}
+ navigationBusy=true;document.documentElement.dataset.moving='true';const shell=$('.shell');shell.inert=true;
+ try{
+  const old=$('#screen '+surface);if(old){
+   const first=getComputedStyle(old).transform;
+   const out=old.animate([{transform:first==='none'?'none':first,opacity:1},{transform:flip?'perspective(1000px) rotateX(-88deg)':`translate3d(${-direction*Math.min(innerWidth,700)}px,0,0)`,opacity:0}],{duration:flip?190:210,easing:'cubic-bezier(.45,0,.7,.4)',fill:'forwards'});
+   navigationMoves=[out];await Promise.allSettled([out.finished]);out.cancel();
+  }
+  change();
+  const incoming=$('#screen '+surface);if(incoming){
+   const arrive=incoming.animate([{transform:flip?'perspective(1000px) rotateX(88deg)':`translate3d(${direction*Math.min(innerWidth,700)*.72}px,0,0)`,opacity:0},{transform:'none',opacity:1}],{duration:flip?250:280,easing:'cubic-bezier(.18,.75,.25,1)',fill:'both'});
+   navigationMoves=[arrive];await Promise.allSettled([arrive.finished]);arrive.cancel();
+  }
+ }finally{navigationMoves.forEach(a=>a.cancel());navigationMoves=[];navigationBusy=false;delete document.documentElement.dataset.moving;shell.inert=false;focusHeading()}
+}
+function turnMonth(direction){
+ return movePaper(()=>{const d=parse(month+'-01');d.setMonth(d.getMonth()+direction);month=key(d).slice(0,7);selected=month===today.slice(0,7)?today:month+'-01';card=0;revealed=false;remaining=duration;render()},{direction,surface:'.month-paper'});
+}
+function peelPaper(){
+ if(!['cards','reading','speaking','writing'].includes(view))return;
+ if(view==='reading'||view==='writing'){const next=folioPages[view]===1?0:1;return movePaper(()=>{folioPages[view]=next;render()},{direction:next?1:-1,surface:'.folio-note-stage'})}
+ const focused=document.activeElement?.matches('[data-peek],[data-reveal],[data-translation]');
+ return movePaper(()=>{
+  if(view==='cards'){revealed=!revealed;if(revealed)recordCard()}
+  else if(view==='reading')showTranslation=!showTranslation;
+  else if(view==='speaking')peekSpeaking=!peekSpeaking;
+  else if(view==='writing')peekWriting=!peekWriting;
+  render();
+ },{flip:true,surface:view==='cards'?'.recall-deck':'.loose-paper'}).then(()=>{if(focused)$('[data-peek],[data-reveal]')?.focus({preventScroll:true})});
+}
+function readerCanScroll(reader,dy){return !!reader&&(dy<0?reader.scrollTop+reader.clientHeight<reader.scrollHeight-3:reader.scrollTop>3)}
+function startTouch(x,y,target){
+ if(navigationBusy||editable(target)||window.getSelection()?.toString()||$('#profile-dialog').open)return;
+ if(!target.closest('#screen'))return;
+ const kind=ribbonOpen?'ribbon':target.closest('[data-secret]')?'bookmark':view==='home'?'closed':'folio';
+ const reader=target.closest('.folder-reader')||$('.folder-reader');
+ const surface=view==='cards'?$('.recall-deck'):$('.folio-note-stage')||reader;
+ touchState={x,y,lastX:x,lastY:y,target,surface,reader,kind,start:performance.now(),axis:null,fromView:view};
+}
+function moveTouch(x,y,event){
+ const g=touchState;if(!g)return;const dx=x-g.x,dy=y-g.y;g.lastX=x;g.lastY=y;
+ if(!g.axis){
+  if(Math.max(Math.abs(dx),Math.abs(dy))<9)return;
+  if(Math.abs(dx)>Math.abs(dy)*1.3)g.axis='x';
+  else if(Math.abs(dy)>Math.abs(dx)*1.3){
+   if(g.kind==='folio'&&g.target.closest('.folder-reader')&&readerCanScroll(g.reader,dy)){touchState=null;return}
+   g.axis='y';
+  }else return;
+ }
+ if(event.cancelable)event.preventDefault();
+ if(g.kind==='folio'&&g.surface){g.surface.classList.add('touch-dragging');g.surface.style.transform=g.axis==='x'?`translate3d(${dx*.68}px,0,0)`:`translate3d(0,${dy*.22}px,0) scale(${Math.max(.97,1-Math.abs(dy)/6000)})`}
+}
+function finishTouch(event,cancelled=false){
+ const g=touchState;if(!g)return;const dx=g.lastX-g.x,dy=g.lastY-g.y,elapsed=performance.now()-g.start;
+ const distance=g.axis==='x'?Math.abs(dx):Math.abs(dy),enough=distance>=(g.axis==='x'?60:68)||(distance>34&&distance/Math.max(elapsed,1)>.55),released=g.surface?.style.transform||'none';
+ if(g.axis){if(event.cancelable)event.preventDefault();suppressClickUntil=performance.now()+450}
+ stopDrag();
+ if(cancelled||!g.axis||!enough){if(g.surface&&distance>9&&!reducedMotion.matches)g.surface.animate([{transform:released},{transform:'none'}],{duration:180,easing:'ease-out'});return}
+ if(g.kind==='ribbon'){if(dx>0||dy>0)setRibbon(false);return}
+ if(g.kind==='bookmark'){setRibbon(true);return}
+ if(g.kind==='closed'){if(g.axis==='y'){const target=g.target.closest('.folder');switchFolder(target?.dataset.view||'cards')}return}
+ if(g.axis==='x')turnFolderNote(dx<0?1:-1);else nextFile(dy<0?1:-1);
+}
+let wheelTotal=0,wheelAxis='',wheelLocked=false,wheelReset;
+function resetWheelAfterPause(){clearTimeout(wheelReset);wheelReset=setTimeout(()=>{wheelTotal=0;wheelLocked=false;wheelAxis=''},260)}
+document.addEventListener('wheel',e=>{
+ if(wheelLocked){resetWheelAfterPause();e.preventDefault();return}
+ if(editable(e.target)||!e.target.closest('.folder-reader,.folder')||ribbonOpen||$('#profile-dialog').open)return;
+ if(e.ctrlKey){e.preventDefault();return}
+ const horizontal=Math.abs(e.deltaX)>Math.abs(e.deltaY)*1.3,delta=horizontal?e.deltaX:e.deltaY,axis=horizontal?'x':'y';
+ if(!delta)return;
+ resetWheelAfterPause();
+ if(navigationBusy||wheelLocked){e.preventDefault();return}
+ if(!horizontal&&readerCanScroll(e.target.closest('.folder-reader'),-delta)){wheelTotal=0;return}
+ e.preventDefault();if(axis!==wheelAxis){wheelTotal=0;wheelAxis=axis}wheelTotal+=delta;
+ if(Math.abs(wheelTotal)>90){wheelLocked=true;const direction=wheelTotal>0?1:-1;if(horizontal)turnFolderNote(direction);else nextFile(direction)}
+},{passive:false});
+
+// Safari gesture events supplement CSS so two fingers never scale the study surface.
+for(const type of ['gesturestart','gesturechange','gestureend'])document.addEventListener(type,e=>{e.preventDefault();stopDrag()},{passive:false});
+document.addEventListener('dblclick',e=>{if(!editable(e.target))e.preventDefault()},{passive:false});
+document.addEventListener('touchstart',e=>{if(e.touches.length>1){e.preventDefault();stopDrag();return}const t=e.touches[0];startTouch(t.clientX,t.clientY,e.target)},{passive:false});
+document.addEventListener('touchmove',e=>{if(e.touches.length>1){e.preventDefault();stopDrag();return}const t=e.touches[0];moveTouch(t.clientX,t.clientY,e)},{passive:false});
+document.addEventListener('touchend',e=>finishTouch(e),{passive:false});
+document.addEventListener('touchcancel',e=>finishTouch(e,true),{passive:false});
+document.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'&&e.button===0){startTouch(e.clientX,e.clientY,e.target);if(touchState)e.preventDefault()}});
+document.addEventListener('pointermove',e=>{if(e.pointerType==='mouse')moveTouch(e.clientX,e.clientY,e)});
+document.addEventListener('pointerup',e=>{if(e.pointerType==='mouse')finishTouch(e)});
+document.addEventListener('pointercancel',e=>{if(e.pointerType==='mouse')finishTouch(e,true)});
+document.addEventListener('click',e=>{if(performance.now()<suppressClickUntil){e.preventDefault();e.stopImmediatePropagation()}},true);
+document.addEventListener('keydown',e=>{
+ if(editable(e.target)||e.altKey||e.ctrlKey||e.metaKey||navigationBusy||ribbonOpen||$('#profile-dialog').open)return;
+ if(e.key==='Escape'&&view!=='home'){e.preventDefault();switchFolder('home')}
+ else if(e.target.closest('#screen')&&['ArrowLeft','ArrowRight'].includes(e.key)){e.preventDefault();if(view!=='home')turnFolderNote(e.key==='ArrowRight'?1:-1)}
+ else if(e.target.closest('#screen')&&['ArrowUp','ArrowDown'].includes(e.key)){e.preventDefault();nextFile(e.key==='ArrowDown'?1:-1)}
+});
+window.addEventListener('resize',stopDrag);
+window.addEventListener('pagehide',stopDrag);
+
+const folioPages={reading:0,speaking:0,writing:0,calendar:0,notes:0};
+const folioTitles={reading:['원문 계단','낱말 풀이','풀이 문제','간직할 표현'],speaking:['듣기 대본','말하기 타이머'],writing:['나의 한 문장','본보기 문장','이번 주 쓰기'],calendar:['학습 달력','이날의 학습','이날의 노트']};
+function resetFolioPages(){Object.keys(folioPages).forEach(k=>folioPages[k]=0)}
+function pageControls(index,total,title){return `<nav class="folio-pager" aria-label="이 폴더의 카드"><button data-folio-step="-1" aria-label="이전 카드" ${index<=0?'disabled':''}>←</button><span>${esc(title)}<b>${total?index+1:0} / ${total}</b></span><button data-folio-step="1" aria-label="다음 카드" ${index>=total-1?'disabled':''}>→</button></nav>`}
+function mountFolioPages(){
+ const content=$('.file-folder.is-open>.folder-content');if(!content)return;
+ const lesson=content.querySelector(':scope>.lesson');if(!lesson)return;
+ const reader=document.createElement('div');reader.className='folder-reader';reader.dataset.folderScroll='';content.append(reader);reader.append(lesson);
+ if(view==='cards'){reader.dataset.noteIndex=card;reader.dataset.noteTotal=deck().length;return}
+ if(view==='notes'){reader.dataset.noteIndex=folioPages.notes;return}
+ const allSelectors={reading:[['.reading-paper'],['.translation-slip'],['.reading-quiz'],['.note-paper']],speaking:[['.loose-paper'],['.timer-paper',':scope>.save-status']],writing:[['.writing-paper'],['.reference-note'],['.week-write']],calendar:[['.month-paper'],['.daily-checks','.sticker-drawer'],['.daily-notes','.notes-entry']]}[view];
+ if(!allSelectors)return;
+ const titles=[],selectors=allSelectors.filter((group,i)=>{const has=group.some(s=>lesson.querySelector(s));if(has)titles.push(folioTitles[view][i]);return has});if(!selectors.length)return;
+ const theme=lesson.querySelector('.lesson-theme');
+ const stage=document.createElement('div');stage.className='folio-note-stage';
+ const index=folioPages[view]=Math.max(0,Math.min(folioPages[view]||0,selectors.length-1));
+ selectors.forEach((group,i)=>{const page=document.createElement('div');page.className='folio-note';page.dataset.notePage=i;page.hidden=i!==index;group.forEach(selector=>{const child=lesson.querySelector(selector);if(child){child.hidden=false;page.append(child)}});stage.append(page)});
+ const head=lesson.querySelector('.folder-inside-head');if(head)head.after(stage);else lesson.prepend(stage);if(theme&&head)head.after(theme);
+ stage.insertAdjacentHTML('beforebegin',pageControls(index,selectors.length,titles[index]));
+ reader.dataset.noteIndex=index;reader.dataset.noteTotal=selectors.length;
+}
+function filteredFolioNotes(){const q=notesQuery.trim().toLocaleLowerCase();return allNotes().filter(n=>(notesLanguage==='all'||n.language===notesLanguage)&&(notesType==='all'||n.type===notesType)&&(!q||n.value.toLocaleLowerCase().includes(q)||n.date.includes(q)))}
+function refreshNotes(){
+ if(view!=='notes')return;
+ const all=allNotes(),items=filteredFolioNotes();folioPages.notes=Math.max(0,Math.min(folioPages.notes,items.length-1));
+ $('[data-notes-language]').value=notesLanguage;$('[data-notes-type]').value=notesType;
+ const item=items[folioPages.notes];
+ $('#notes-results').innerHTML=`<p class="notes-total">${items.length}개의 노트 · 전체 ${all.length}개</p>${pageControls(folioPages.notes,items.length,'내가 남긴 문장')}<div class="folio-note-stage">${item?`<section class="note-group"><h2>${fmt(item.date)}</h2>${savedNote(item)}</section>`:`<div class="empty-notes"><p>${all.length?'찾는 노트가 없어요.':'아직 남긴 문장이 없어요.'}</p><p>${all.length?'다른 단어나 필터로 찾아보세요.':'읽기나 쓰기에서 남긴 글이 날짜별로 모여요.'}</p></div>`}</div>`;
+ const reader=$('.folder-reader');if(reader){reader.dataset.noteIndex=folioPages.notes;reader.dataset.noteTotal=items.length}
+}
+function folioBoundary(direction){const surface=$('.folio-note-stage')||$('.recall-deck');if(surface&&!reducedMotion.matches)surface.animate([{transform:'none'},{transform:`translateX(${-direction*12}px)`},{transform:'none'}],{duration:180});}
+function turnFolderNote(direction){
+ if(view==='cards')return turnCard(direction);
+ const total=view==='notes'?filteredFolioNotes().length:Number($('.folder-reader')?.dataset.noteTotal||0),index=folioPages[view]||0,next=index+direction;
+ if(next<0||next>=total){folioBoundary(direction);return}
+ return movePaper(()=>{folioPages[view]=next;render()},{direction,surface:'.folio-note-stage'});
+}
+function scrollToFile(v){
+ if(v==='home'||v==='cards'){window.scrollTo(0,0);return}
+ const target=$('.file-folder[data-file="'+v+'"]');if(target)window.scrollTo(0,Math.max(0,scrollY+target.getBoundingClientRect().top-16));
+}
+async function switchFolder(v){
+ if(navigationBusy||v===view||!allowed.includes(v))return;
+ if(reducedMotion.matches){commitView(v);focusHeading();return}
+ const oldView=view,oldContent=$('.file-folder.is-open>.folder-content'),oldHeight=oldContent?.getBoundingClientRect().height||0,oldScroll=oldContent?.querySelector('.folder-reader')?.scrollTop||0,oldClone=oldContent?motionClone(oldContent):null;
+ const startScroll=scrollY,shell=$('.shell');navigationBusy=true;shell.inert=true;document.documentElement.dataset.moving='true';let raf=0;
+ try{
+  pause();stopSpeech();ribbonOpen=false;if(v==='home'||v==='notes')noteReturn=false;view=v;render();
+  const oldFolder=$('.file-folder[data-file="'+oldView+'"]'),incoming=$('.file-folder.is-open>.folder-content');
+  const endHeight=incoming?.getBoundingClientRect().height||0;
+  if(oldClone&&oldFolder){oldFolder.querySelector('.folder-content').replaceWith(oldClone);oldClone.hidden=false;oldClone.classList.add('is-folding');Object.assign(oldClone.style,{height:oldHeight+'px',minHeight:'0',padding:'0',flex:'none'});oldClone.querySelector('.folder-reader').style.height=oldHeight+'px';oldClone.querySelector('.folder-reader').scrollTop=oldScroll}
+  if(incoming){incoming.classList.add('is-folding');incoming.querySelector('.folder-reader').style.height=endHeight+'px';incoming.style.height='0px'}
+  // Animate the real folder heights together, so the intervening tabs slide with them.
+  const duration=650,easing='cubic-bezier(.22,.72,.18,1)',moves=[];
+  if(oldClone){moves.push(oldClone.animate([{height:oldHeight+'px'},{height:'0px'}],{duration,easing,fill:'both'}));const paper=oldClone.querySelector('.folder-reader');moves.push(paper.animate([{transform:'none',opacity:1},{transform:'translateY(-25px) scale(.97)',opacity:0}],{duration:430,easing,fill:'both'}))}
+  if(incoming){moves.push(incoming.animate([{height:'0px'},{height:endHeight+'px'}],{duration,easing,fill:'both'}));moves.push(incoming.querySelector('.folder-reader').animate([{transform:'translateY(35px) scale(.97)',opacity:0},{transform:'none',opacity:1}],{duration:560,delay:90,easing,fill:'both'}))}
+  navigationMoves=moves;const started=performance.now();
+  const track=()=>{const t=Math.min(1,(performance.now()-started)/duration),ease=1-Math.pow(1-t,3);const target=v==='home'||v==='cards'?0:Math.max(0,scrollY+$('.file-folder[data-file="'+v+'"]').getBoundingClientRect().top-16);window.scrollTo(0,startScroll+(target-startScroll)*ease);if(t<1)raf=requestAnimationFrame(track)};track();
+  await Promise.allSettled(moves.map(a=>a.finished));
+ }finally{
+  cancelAnimationFrame(raf);navigationMoves.forEach(a=>a.cancel());navigationMoves=[];render();scrollToFile(v);shell.inert=false;navigationBusy=false;delete document.documentElement.dataset.moving;focusHeading();
+ }
+}
+function navigate(v,source){if(navigationBusy)return;if(v===view){if(source?.matches('.folder'))return switchFolder('home');return}return switchFolder(v)}
+function nextFile(direction){
+ const files=fileOrder.filter(v=>v!=='home'),at=files.indexOf(view),next=files[at+direction];if(at<0){return switchFolder('cards')}if(next)return switchFolder(next);
+}
+function turnCard(direction){
+ const next=card+direction;if(next<0){if(card===0&&direction<0)return switchFolder('home');folioBoundary(direction);return}if(next>=deck().length){if(deck().length)return switchFolder('reading');folioBoundary(direction);return}
+ return movePaper(()=>{card=next;revealed=false;render()},{direction,surface:'.recall-deck'});
+}
+
+render();scrollToFile(view);initQuietScreen();
+})();
+</script><!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "89894b1a3f054c01b57106249f69807c"}'></script><!-- End Cloudflare Web Analytics --><script>if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}))</script>
+</body></html>
