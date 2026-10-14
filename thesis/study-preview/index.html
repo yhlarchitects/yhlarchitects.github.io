@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="ko" data-page="study-files-v17" data-theme="light">
-<!-- forma-web: skip 정현의 요청에 따라 흰색·연회색 바탕과 한 가지 변경 가능한 강조색을 적용한 공부앱. 기존 종이·폴더 동작과 기기별 글꼴을 유지하며 이전 판은 보존. -->
+<html lang="ko" data-page="study-files-v18" data-theme="light">
+<!-- forma-web: skip 사용자 요청으로 전체 배경은 흰색, v4·v5의 민트와 보라 조합을 공부앱의 강조 영역에 적용. 종이·폴더 동작과 기기별 글꼴 및 기록 기능 유지. 이전 판 보존. -->
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <title>한 장씩 · 공부 노트</title>
 <meta name="robots" content="noindex,nofollow">
-<meta name="theme-color" content="#f2f2f7">
+<meta name="theme-color" content="#ffffff">
 <style>
 @font-face{font-family:"Study Sans";src:url("./fonts/pretendard-variable.woff2") format("woff2");font-style:normal;font-weight:45 920;font-display:swap}
 @font-face{font-family:"Study Hangul";src:url("./fonts/pretendard-variable.woff2") format("woff2");font-style:normal;font-weight:45 920;font-display:swap;unicode-range:U+1100-11FF,U+3130-318F,U+A960-A97F,U+AC00-D7AF,U+D7B0-D7FF}
@@ -149,8 +149,23 @@ body{overflow-x:hidden}
 @media print{.appearance,.notes-tools,.saved-note button{display:none}.saved-note{break-inside:avoid}.note-body{white-space:pre-wrap}}
 
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+/* The earlier mint and lilac palette, with a pure white canvas. */
+:root{--desk:#fff;--mint:#b0d9d5;--lilac:#b498c1;--accent:var(--mint);--companion:var(--lilac);--accent-soft:#edf6f5;--accent-line:var(--mint);background:#fff}
+html,body{background:#fff}.back-sheet{background:#f5f5f7}.green-spine{color:var(--ink)}.word-note{background:var(--companion);border-color:#00000022}.word-note:before{background:#fff;box-shadow:0 0 0 3px #0000001a}.word-note:after{border-color:#00000030}
+.folder[data-view=cards] path{fill:var(--accent)}.folder[data-view=reading] path{fill:#fafafa}.folder[data-view=speaking] path{fill:var(--companion)}.folder[data-view=writing] path{fill:#fafafa}.folder[data-view=cards] .folder-meta,.folder[data-view=speaking] .folder-meta{color:var(--ink)}.folder[data-done=true] .folder-meta small{color:var(--ink)}
+.action,.action[aria-pressed=true]{background:var(--accent);color:var(--ink)}.action.secondary{background:transparent;color:var(--ink);border-color:var(--line)}.auto-status.is-done{color:var(--ink)}.auto-status.is-done .status-dot{background:var(--accent);box-shadow:0 0 0 1px #00000020}
+.recall-deck.recall-back{background-color:var(--accent);background-image:linear-gradient(#0000000c 1px,transparent 1px),linear-gradient(90deg,#0000000c 1px,transparent 1px)}.recall-deck.recall-back .hint{background:transparent}.ratings button{background:#ffffffb8}.ratings button:hover{background:var(--companion);color:var(--ink)}
+.translation-slip{background-color:var(--companion);background-image:linear-gradient(90deg,transparent 18px,#00000026 18px,#00000026 19px,transparent 19px),repeating-linear-gradient(to bottom,transparent 0,transparent 25px,#00000015 25px,#00000015 26px)}.translation-slip .eyebrow{background:var(--companion);border-color:#00000030}
+.note-paper{border-left-color:var(--accent)}.writing-paper{border-left-color:var(--companion)}.reference-note{background:var(--companion)}.reference-note:before,.reference-note:after{border-color:#00000030}
+.timer-paper{background-color:var(--companion);background-image:linear-gradient(#00000012 1px,transparent 1px),linear-gradient(90deg,#00000012 1px,transparent 1px)}.timer-paper .eyebrow{background:var(--companion)}.durations button[aria-pressed=true]{color:var(--ink);border-color:var(--ink)}.timer-paper .action{background:var(--accent)}.timer-paper .action.secondary{background:#ffffff60;border-color:#00000030}
+.ribbon:first-child{background:var(--accent)!important;color:var(--ink)}.ribbon:nth-child(2){background:var(--companion)!important;color:var(--ink)}.ribbon:nth-child(3){background:#fff!important}.ribbon.brown{color:var(--ink)}
+.stamp-label,.stamp-ticket{--stamp-color:var(--accent)}.stamp-oval,.stamp-tag{--stamp-color:var(--companion)}.calendar-day.stamped{color:var(--ink)}.calendar-day.stamped:after,.sticker-choice:after{border-color:#00000030}.calendar-day.partial:after{background:var(--ink)}.check-task[aria-pressed=true] .check-mark{color:var(--ink)}.day-label{background:#fff;color:var(--ink)}.day-label:before{border-color:var(--companion)}
+.saved-note[data-note-kind=reading]{border-left-color:var(--accent)}.saved-note[data-note-kind=writing]{border-left-color:var(--companion)}.saved-note button{color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:4px}
+.accent-dot{width:18px;height:10px;background:linear-gradient(90deg,var(--accent) 50%,var(--companion) 50%);border-radius:3px;border:1px solid #00000010}.accent-options{gap:10px}.accent-option{flex:1;min-height:60px;border:1px solid var(--line);border-radius:6px;color:var(--ink);font-size:11px;padding:30px 5px 9px}.accent-option:before{inset:8px 12px auto;height:14px;background:linear-gradient(90deg,var(--choice) 65%,var(--other) 65%);border-radius:2px}.accent-option[aria-pressed=true]{outline:1px solid var(--ink);outline-offset:1px}
+@media(hover:hover) and (pointer:fine){.action:not(.secondary):hover{background:var(--companion);color:var(--ink)}}
+
 </style></head>
-<body><div class="shell"><header class="masthead"><button class="wordmark" data-view="home" aria-label="오늘의 파일로 돌아가기">LANGUAGE & SPACE<span>하루에 한 장씩</span></button><div class="header-controls"><button class="profile-switch" data-profile aria-label="현재 연호, 정현으로 바꾸기">연호 <span aria-hidden="true">↔</span></button><div class="languages" aria-label="학습 언어"><button data-language="de" aria-pressed="true">DE</button><button data-language="en" aria-pressed="false">EN</button></div></div></header><main id="screen"></main><footer class="edition"><span>LANGUAGE & SPACE / PAPER STUDY</span><span>V17 · 예시 교재</span><details class="appearance"><summary><span class="accent-dot" aria-hidden="true"></span>강조색</summary><div class="appearance-panel"><p>오늘의 색을 골라 보세요.</p><div class="accent-options" aria-label="강조색 선택"></div><small></small></div></details></footer></div><div class="toast" role="status" aria-live="polite"></div>
+<body><div class="shell"><header class="masthead"><button class="wordmark" data-view="home" aria-label="오늘의 파일로 돌아가기">LANGUAGE & SPACE<span>하루에 한 장씩</span></button><div class="header-controls"><button class="profile-switch" data-profile aria-label="현재 연호, 정현으로 바꾸기">연호 <span aria-hidden="true">↔</span></button><div class="languages" aria-label="학습 언어"><button data-language="de" aria-pressed="true">DE</button><button data-language="en" aria-pressed="false">EN</button></div></div></header><main id="screen"></main><footer class="edition"><span>LANGUAGE & SPACE / PAPER STUDY</span><span>V18 · 예시 교재</span><details class="appearance"><summary><span class="accent-dot" aria-hidden="true"></span>색 배치</summary><div class="appearance-panel"><p>두 색의 자리를 골라 보세요.</p><div class="accent-options" aria-label="민트와 보라 배치 선택"></div><small></small></div></details></footer></div><div class="toast" role="status" aria-live="polite"></div>
 <script>
 (()=>{'use strict';
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
@@ -190,15 +205,15 @@ function stampDay(){const stamp=$('.calendar-day[data-date="'+selected+'"]');if(
 function stickerDrawer(){return `<div class="sticker-drawer"><p>${count()===4?'오늘 붙일 스티커를 골라 보세요.':'네 가지 연습을 마치면 스티커가 붙어요.'}</p><div class="sticker-choices" aria-label="날짜 스티커">${stickerKinds.map((kind,i)=>`<button class="sticker-choice stamp-${kind}" data-sticker="${kind}" aria-label="${['테두리 라벨','타원','티켓','꼬리표'][i]}" aria-pressed="${stickerFor(selected)===kind}" ${count()===4?'':'disabled'}>${selected.slice(-2)}</button>`).join('')}</div></div>`}
 function calendar(){const first=parse(month+'-01'),offset=(first.getDay()+6)%7,last=new Date(first.getFullYear(),first.getMonth()+1,0).getDate();let cells=['M','T','W','T','F','S','S'].map(w=>`<span class="weekday">${w}</span>`).join('');for(let i=0;i<offset;i++)cells+='<span></span>';for(let n=1;n<=last;n++){const d=month+'-'+String(n).padStart(2,'0'),c=count(d);cells+=`<button class="calendar-day ${c===4?'done stamped stamp-'+stickerFor(d):c?'partial':''}" data-date="${d}" aria-label="${fmt(d)}, ${c}개 완료" aria-pressed="${d===selected}">${n}</button>`}return `<section class="lesson">${heading('ARCHIVE','한 장씩 쌓인 날들.')}<div class="month-paper"><div class="month-control"><h2>${month.replace('-',' / ')}</h2><div><button data-month="-1" aria-label="이전 달">←</button><button data-today aria-label="오늘로 이동">·</button><button data-month="1" aria-label="다음 달">→</button></div></div><div class="month-grid">${cells}</div><p class="calendar-legend">스티커는 네 가지 완료 · 작은 점은 진행 중</p></div><div class="notes-entry"><button class="action secondary" data-view="notes">전체 노트 모아 보기 <span>↗</span></button></div><div class="daily-checks"><h3 class="day-label">${fmt()} <span class="mono">/ ${count()} OF 4</span></h3><p class="record-hint">학습하면 자동으로 체크돼요. 눌러서 고칠 수도 있어요.</p>${tasks.map((t,i)=>`<button class="check-task" data-complete="${i}" aria-pressed="${state()[i]}" ${selected>today?'disabled':''}><span>${t[1]}</span><span class="check-mark">${state()[i]?'✓':'○'}</span></button>`).join('')}</div>${dailyNotes()}${stickerDrawer()}<div class="lesson-actions"><button class="action" data-view="home">이날 파일 펼치기 <span>↗</span></button></div></section>`}
 // Completion and notes keep the existing person-specific storage keys.
-const accents=[['green','초록','#36845d'],['blue','파랑','#326dcc'],['violet','보라','#7957ae'],['rose','분홍','#ac5072'],['orange','주황','#a96227']];
+const accents=[['mint','민트 중심','#b0d9d5'],['lilac','보라 중심','#b498c1']];
 let notesQuery='',notesLanguage='all',notesType='all',notesLimit=40,noteReturn=false;
 function applyAccent(){
- const chosen=accents.find(a=>a[0]===data.preferences?.accent)||accents[0];
+ const chosen=accents.find(a=>a[0]===data.preferences?.accent)||accents[0],other=accents.find(a=>a[0]!==chosen[0]);
  const rgb=chosen[2].slice(1).match(/../g).map(c=>parseInt(c,16));
  const tint=n=>'rgb('+rgb.map(c=>Math.round(c*n+255*(1-n))).join(',')+')';
- const style=document.documentElement.style;style.setProperty('--accent',chosen[2]);style.setProperty('--accent-soft',tint(.10));style.setProperty('--accent-line',tint(.42));
- $('.accent-options').innerHTML=accents.map(a=>`<button class="accent-option" data-accent="${a[0]}" style="--choice:${a[2]}" aria-label="${a[1]} 강조색" aria-pressed="${a[0]===chosen[0]}">${a[0]===chosen[0]?'✓':''}</button>`).join('');
- $('.appearance-panel small').textContent=profiles[person].name+'님의 색으로 기억해요.';
+ const style=document.documentElement.style;style.setProperty('--accent',chosen[2]);style.setProperty('--companion',other[2]);style.setProperty('--accent-soft',tint(.25));style.setProperty('--accent-line',chosen[2]);
+ $('.accent-options').innerHTML=accents.map(a=>`<button class="accent-option" data-accent="${a[0]}" style="--choice:${a[2]};--other:${accents.find(b=>b[0]!==a[0])[2]}" aria-label="${a[1]}" aria-pressed="${a[0]===chosen[0]}">${a[1]}${a[0]===chosen[0]?' ✓':''}</button>`).join('');
+ $('.appearance-panel small').textContent=profiles[person].name+'님의 배치로 기억해요.';
 }
 function activity(){if(!data.activity)data.activity={};const id=language+':'+selected;return data.activity[id]||(data.activity[id]={cards:[],readingSeconds:0,readingLines:[]})}
 function completionHint(id){
@@ -236,7 +251,7 @@ function allNotes(){
   return [{id,language:match[1],date:match[2],type:match[3],value}];
  }).sort((a,b)=>b.date.localeCompare(a.date)||a.language.localeCompare(b.language)||a.type.localeCompare(b.type));
 }
-function savedNote(n){return `<article class="saved-note"><header><span>${n.type==='reading'?'간직한 표현':'나의 한 문장'}</span><span class="mono">${n.language.toUpperCase()}</span></header><p class="note-body">${esc(n.value)}</p><button data-open-note="${n.id}">이날의 ${n.type==='reading'?'읽기':'쓰기'}에서 이어 쓰기 ↗</button></article>`}
+function savedNote(n){return `<article class="saved-note" data-note-kind="${n.type}"><header><span>${n.type==='reading'?'간직한 표현':'나의 한 문장'}</span><span class="mono">${n.language.toUpperCase()}</span></header><p class="note-body">${esc(n.value)}</p><button data-open-note="${n.id}">이날의 ${n.type==='reading'?'읽기':'쓰기'}에서 이어 쓰기 ↗</button></article>`}
 function dailyNotes(){const items=allNotes().filter(n=>n.date===selected&&n.language===language);return `<section class="daily-notes" aria-label="이날의 노트"><h3>이날 남긴 노트</h3>${items.length?items.map(savedNote).join(''):'<p class="record-hint">아직 남긴 글이 없어요.</p>'}</section>`}
 function notes(){return `<section class="lesson notes-library"><div class="view-head"><button class="back" data-view="calendar">← 쌓인 날들</button><p class="eyebrow">ALL NOTES<br>${profiles[person].name}의 기록</p></div><h1 class="page-title">내가 남긴 모든 문장.</h1><p class="notes-intro">읽다가 적은 표현도, 직접 쓴 한 문장도.<br>여기에서 다시 찾아볼 수 있어요.</p><div class="notes-tools"><label class="notes-search"><span class="sr-only">노트 검색</span><input type="search" data-note-search aria-label="노트 검색" placeholder="기억나는 단어로 찾기" value="${esc(notesQuery)}"></label><label class="filter-label">언어<select data-notes-language aria-label="노트 언어"><option value="all">모든 언어</option><option value="de">독일어</option><option value="en">영어</option></select></label><label class="filter-label">종류<select data-notes-type aria-label="노트 종류"><option value="all">모든 노트</option><option value="reading">간직한 표현</option><option value="writing">나의 한 문장</option></select></label></div><div id="notes-results" aria-live="polite"></div><p class="record-hint">${profiles[person].name}님의 이 브라우저에 저장된 노트예요.</p></section>`}
 function refreshNotes(){
