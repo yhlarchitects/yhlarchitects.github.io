@@ -116,6 +116,11 @@ body.is-open .lens {
   -webkit-backdrop-filter: blur(var(--depth-four));
   backdrop-filter: blur(var(--depth-four));
 }
+/* The sign-in sits one step deeper: twice the blur, and the film lightens. */
+body.is-deep .lens {
+  -webkit-backdrop-filter: blur(calc(var(--depth-four) * 2)) brightness(1.35);
+  backdrop-filter: blur(calc(var(--depth-four) * 2)) brightness(1.35);
+}
 .identity {
   font: 400 var(--contact-size)/1 'Univers 55', Arial, sans-serif;
   color: #000;
@@ -214,6 +219,18 @@ body.is-open .lens {
   right: max(var(--page-gutter), env(safe-area-inset-right, 0px));
   bottom: max(calc(var(--page-gutter) * .5), env(safe-area-inset-bottom, 0px));
   font-size: .85em;
+  /* Appears with the introduction (YHLA), not before. */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--dismiss-time) ease-in-out, visibility 0s linear var(--dismiss-time);
+}
+body.is-open #workspace-toggle {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition-duration: var(--reveal-time), 0s;
+  transition-delay: 0s;
 }
 #workspace-toggle::before { content: ''; position: absolute; inset: -12px -14px; }
 #workspace {
@@ -227,8 +244,8 @@ body.is-open .lens {
   overflow: auto;
   margin: 0;
   padding: 1.3em 1.5em 1.2em;
-  border: .5px solid var(--rule, currentColor);
-  background: var(--veil, rgba(255, 255, 255, .24));
+  border: 0;
+  background: transparent;
 }
 #workspace .field { display: flex; flex-direction: column; gap: .6em; padding: .8em 0 .4em; }
 #workspace input {

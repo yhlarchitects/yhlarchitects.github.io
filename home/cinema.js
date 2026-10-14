@@ -252,19 +252,26 @@
     openedPanel = value ? panel : null;
     opened = value;
     document.body.classList.toggle('is-open', value);
+    document.body.classList.toggle('is-deep', value && panel === workspace);
     updateInk(true);
     if (value && panel === workspace && !touchScreen.matches) {
       const field = workspace.querySelector('input:not([hidden])');
       field?.focus({ preventScroll: true });
     }
   }
+  // Two steps: YHLA opens the introduction (and shows the WORKSPACE mark),
+  // WORKSPACE goes one step deeper. Closing steps back up, not all the way out.
+  function stepBack() {
+    if (openedPanel === workspace) setOpened(true, contact);
+    else setOpened(false);
+  }
 
   function activateTarget(target) {
     if (target.closest?.('a[href]')) return;
     if (workspace && workspace.contains(target)) return;
-    if (toggle.contains(target)) setOpened(openedPanel !== contact, contact);
-    else if (workspaceToggle && workspaceToggle.contains(target)) setOpened(openedPanel !== workspace, workspace);
-    else if (opened) setOpened(false);
+    if (toggle.contains(target)) setOpened(!opened, contact);
+    else if (workspaceToggle && workspaceToggle.contains(target)) setOpened(true, openedPanel === workspace ? contact : workspace);
+    else if (opened) stepBack();
     else nextFilm();
   }
   document.addEventListener('click', event => activateTarget(event.target));
@@ -274,7 +281,7 @@
     if (event.key === 'Escape' && opened) {
       event.preventDefault();
       const mark = toggleFor(openedPanel || contact);
-      setOpened(false);
+      stepBack();
       mark.focus({ preventScroll: true });
       return;
     }
@@ -342,7 +349,7 @@
       panel.inert = true;
       panel.hidden = true;
     });
-    document.body.classList.remove('is-open');
+    document.body.classList.remove('is-open', 'is-deep');
     // Do not save or restore an open introduction in the browser's page cache.
     const lens = document.querySelector('.lens');
     void getComputedStyle(lens).backdropFilter;
