@@ -116,10 +116,10 @@ body.is-open .lens {
   -webkit-backdrop-filter: blur(var(--depth-four));
   backdrop-filter: blur(var(--depth-four));
 }
-/* The sign-in sits one step deeper: twice the blur, and the film lightens. */
+/* The sign-in sits one step deeper: twice the blur. */
 body.is-deep .lens {
-  -webkit-backdrop-filter: blur(calc(var(--depth-four) * 2)) brightness(1.35);
-  backdrop-filter: blur(calc(var(--depth-four) * 2)) brightness(1.35);
+  -webkit-backdrop-filter: blur(calc(var(--depth-four) * 2));
+  backdrop-filter: blur(calc(var(--depth-four) * 2));
 }
 .identity {
   font: 400 var(--contact-size)/1 'Univers 55', Arial, sans-serif;
