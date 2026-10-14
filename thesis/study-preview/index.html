@@ -143,6 +143,7 @@ body{overflow-x:hidden}
 .filter-label{font-size:11px;color:#636366;display:grid;gap:6px}.filter-label select{width:100%;min-height:44px;padding:10px 8px;border:1px solid var(--line);background:#fff;border-radius:7px;color:var(--ink);font:14px var(--sans)}.notes-total{font:11px var(--mono);color:#636366;margin:18px 0 12px}.note-group{margin-top:22px}.note-group h2{font-size:13px;color:#636366;margin:0 0 10px;line-height:1.6}
 .saved-note{background:#fff;padding:18px 18px 12px;border:1px solid #e5e5ea;border-left:3px solid var(--accent-line);margin-bottom:10px;border-radius:3px}.saved-note header{font-size:10px;color:#636366;line-height:1.5;display:flex;gap:10px;justify-content:space-between}.saved-note .note-body{font-size:16px;line-height:1.7;white-space:pre-wrap;overflow-wrap:anywhere;word-break:normal;margin:12px 0}.saved-note button{display:block;font-size:11px;color:var(--accent);padding:8px 0;text-align:left}.empty-notes{padding:28px 20px;background:#fff;font-size:14px;line-height:1.8;color:#636366;border-radius:5px}.empty-notes p+p{font-size:12px;margin-top:10px}.note-context{font:10px var(--mono);color:#636366;margin:0 0 12px}
 .edition{align-items:center;opacity:1;color:#636366;flex-wrap:wrap}.appearance{position:relative;font-family:var(--sans);font-size:11px}.appearance summary{cursor:pointer;list-style:none;min-height:44px;display:flex;align-items:center;gap:7px}.appearance summary::-webkit-details-marker{display:none}.accent-dot{width:10px;height:10px;background:var(--accent);border-radius:50%}.appearance-panel{position:absolute;bottom:46px;right:0;width:238px;z-index:30;background:#fff;padding:18px;border:1px solid var(--line);border-radius:12px;box-shadow:0 6px 30px #00000012}.appearance-panel p{font-size:12px;margin-bottom:12px}.accent-options{display:flex;justify-content:space-between;gap:3px}.accent-option{min-width:36px;height:44px;position:relative;padding:0;border-radius:50%;font-size:14px;color:#fff}.accent-option:before{content:"";position:absolute;inset:6px 3px;z-index:-1;background:var(--choice);border-radius:50%}.accent-option{isolation:isolate}.accent-option[aria-pressed=true]{outline:1px solid var(--choice);outline-offset:-1px}.appearance-panel small{display:block;margin-top:12px;color:#636366;font-size:10px;line-height:1.6}
+.more-notes{width:100%;margin:18px 0}
 @media(max-width:650px){.intro h1{font-size:32px}.folder-title{font-size:22px}.recall-question{background:repeating-linear-gradient(to bottom,transparent 0,transparent 33px,#e5e5ea 33px,#e5e5ea 34px)}.home-foot p{font-size:10px}.edition{margin-top:13px}.auto-status{font-size:11px}.notes-tools{gap:8px}}
 @media(max-width:350px){.intro h1{font-size:28px}.home-foot{gap:12px}.home-foot p{font-size:9px}.archive-links{min-width:123px}.auto-status+.action{padding:10px;font-size:11px}}
 @media print{.appearance,.notes-tools,.saved-note button{display:none}.saved-note{break-inside:avoid}.note-body{white-space:pre-wrap}}
@@ -190,7 +191,7 @@ function stickerDrawer(){return `<div class="sticker-drawer"><p>${count()===4?'�
 function calendar(){const first=parse(month+'-01'),offset=(first.getDay()+6)%7,last=new Date(first.getFullYear(),first.getMonth()+1,0).getDate();let cells=['M','T','W','T','F','S','S'].map(w=>`<span class="weekday">${w}</span>`).join('');for(let i=0;i<offset;i++)cells+='<span></span>';for(let n=1;n<=last;n++){const d=month+'-'+String(n).padStart(2,'0'),c=count(d);cells+=`<button class="calendar-day ${c===4?'done stamped stamp-'+stickerFor(d):c?'partial':''}" data-date="${d}" aria-label="${fmt(d)}, ${c}개 완료" aria-pressed="${d===selected}">${n}</button>`}return `<section class="lesson">${heading('ARCHIVE','한 장씩 쌓인 날들.')}<div class="month-paper"><div class="month-control"><h2>${month.replace('-',' / ')}</h2><div><button data-month="-1" aria-label="이전 달">←</button><button data-today aria-label="오늘로 이동">·</button><button data-month="1" aria-label="다음 달">→</button></div></div><div class="month-grid">${cells}</div><p class="calendar-legend">스티커는 네 가지 완료 · 작은 점은 진행 중</p></div><div class="notes-entry"><button class="action secondary" data-view="notes">전체 노트 모아 보기 <span>↗</span></button></div><div class="daily-checks"><h3 class="day-label">${fmt()} <span class="mono">/ ${count()} OF 4</span></h3><p class="record-hint">학습하면 자동으로 체크돼요. 눌러서 고칠 수도 있어요.</p>${tasks.map((t,i)=>`<button class="check-task" data-complete="${i}" aria-pressed="${state()[i]}" ${selected>today?'disabled':''}><span>${t[1]}</span><span class="check-mark">${state()[i]?'✓':'○'}</span></button>`).join('')}</div>${dailyNotes()}${stickerDrawer()}<div class="lesson-actions"><button class="action" data-view="home">이날 파일 펼치기 <span>↗</span></button></div></section>`}
 // Completion and notes keep the existing person-specific storage keys.
 const accents=[['green','초록','#36845d'],['blue','파랑','#326dcc'],['violet','보라','#7957ae'],['rose','분홍','#ac5072'],['orange','주황','#a96227']];
-let notesQuery='',notesLanguage='all',notesType='all',noteReturn=false;
+let notesQuery='',notesLanguage='all',notesType='all',notesLimit=40,noteReturn=false;
 function applyAccent(){
  const chosen=accents.find(a=>a[0]===data.preferences?.accent)||accents[0];
  const rgb=chosen[2].slice(1).match(/../g).map(c=>parseInt(c,16));
@@ -243,12 +244,13 @@ function refreshNotes(){
  const all=allNotes(),q=notesQuery.trim().toLocaleLowerCase(),items=all.filter(n=>(notesLanguage==='all'||n.language===notesLanguage)&&(notesType==='all'||n.type===notesType)&&(!q||n.value.toLocaleLowerCase().includes(q)||n.date.includes(q)));
  $('[data-notes-language]').value=notesLanguage;$('[data-notes-type]').value=notesType;
  let result=`<p class="notes-total">${items.length}개의 노트 · 전체 ${all.length}개</p>`,date='';
- for(const n of items){if(date!==n.date){if(date)result+='</section>';date=n.date;result+=`<section class="note-group"><h2>${date.slice(0,4)}년 ${fmt(date)}</h2>`}result+=savedNote(n)}
+ for(const n of items.slice(0,notesLimit)){if(date!==n.date){if(date)result+='</section>';date=n.date;result+=`<section class="note-group"><h2>${date.slice(0,4)}년 ${fmt(date)}</h2>`}result+=savedNote(n)}
  if(date)result+='</section>';
  if(!items.length)result+=`<div class="empty-notes"><p>${all.length?'찾는 노트가 없어요.':'아직 남긴 문장이 없어요.'}</p><p>${all.length?'다른 단어나 필터로 찾아보세요.':'읽기나 쓰기에서 남긴 글이 날짜별로 모여요.'}</p></div>`;
+ if(items.length>notesLimit)result+=`<button class="action secondary more-notes" data-more-notes>이전 노트 더 보기 <span>${items.length-notesLimit}개</span></button>`;
  $('#notes-results').innerHTML=result;
 }
-document.addEventListener('change',e=>{if(e.target.hasAttribute('data-notes-language')){notesLanguage=e.target.value;refreshNotes()}if(e.target.hasAttribute('data-notes-type')){notesType=e.target.value;refreshNotes()}});
+document.addEventListener('change',e=>{if(e.target.hasAttribute('data-notes-language')){notesLanguage=e.target.value;notesLimit=40;refreshNotes()}if(e.target.hasAttribute('data-notes-type')){notesType=e.target.value;notesLimit=40;refreshNotes()}});
 document.addEventListener('visibilitychange',()=>{lastReadingTick=performance.now()});
 
 const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -337,12 +339,13 @@ function changePerson(){
  person=person==='yeonho'?'junghyun':'yeonho';storage='study-files-v14:'+person+':';let saved={};
  try{localStorage.setItem('study-files-person',person);saved=JSON.parse(localStorage.getItem(storage+'data'))||{}}catch(e){}
  data=saved.de&&saved.en?saved:seed();if(!data.notes)data.notes={};
- notesQuery='';notesLanguage='all';notesType='all';card=0;revealed=false;showTranslation=false;peekSpeaking=false;peekWriting=false;selected=today;month=today.slice(0,7);commitView('home');remaining=duration;
+ notesQuery='';notesLanguage='all';notesType='all';notesLimit=40;card=0;revealed=false;showTranslation=false;peekSpeaking=false;peekWriting=false;selected=today;month=today.slice(0,7);commitView('home');remaining=duration;
 }
 function pause(){if(timer){remaining=Math.max(0,Math.ceil((deadline-Date.now())/1000));clearInterval(timer);timer=null}}
 function speak(which){if(!window.speechSynthesis){toast('이 브라우저는 읽어 주기를 지원하지 않습니다.');return}speechSynthesis.cancel();const t=text[language],u=new SpeechSynthesisUtterance(which==='card'?t.cards[card][1]:t.reading.join(' '));u.lang=t.lang;u.rate=.85;u.onerror=()=>toast('기기의 음성 설정을 확인해 주세요.');speechSynthesis.speak(u)}
 document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||b.disabled)return;
- if(b.dataset.accent){if(!accents.some(a=>a[0]===b.dataset.accent))return;data.preferences={...data.preferences,accent:b.dataset.accent};persist();applyAccent()}
+ if(b.hasAttribute('data-more-notes')){const offset=notesLimit;notesLimit+=40;refreshNotes();const first=$$('.saved-note')[offset]?.querySelector('button');first?.focus({preventScroll:true})}
+ else if(b.dataset.accent){if(!accents.some(a=>a[0]===b.dataset.accent))return;data.preferences={...data.preferences,accent:b.dataset.accent};persist();applyAccent()}
  else if(b.dataset.openNote){const n=allNotes().find(n=>n.id===b.dataset.openNote);if(!n)return;noteReturn=true;pause();remaining=duration;selected=n.date;month=n.date.slice(0,7);language=n.language;showTranslation=false;commitView(n.type);focusHeading()}
  else if(b.dataset.sticker){if(count()!==4||!stickerKinds.includes(b.dataset.sticker))return;if(!data.stickers)data.stickers={};data.stickers[language+':'+selected]=b.dataset.sticker;persist();render();stampDay()}
  else if(b.hasAttribute('data-peek'))peelPaper();
@@ -363,7 +366,7 @@ document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||
  else if(b.dataset.month)turnMonth(Number(b.dataset.month));
  else if(b.hasAttribute('data-today')){selected=today;month=today.slice(0,7);card=0;revealed=false;remaining=duration;render()}
 });
-document.addEventListener('input',e=>{if(e.target.hasAttribute('data-note-search')){notesQuery=e.target.value;refreshNotes();return}const type=e.target.dataset.note;if(type){data.notes[language+':'+selected+':'+type]=e.target.value;const ok=persist();e.target.nextElementSibling.textContent=ok?'이 브라우저에 저장됨':'저장 공간을 사용할 수 없습니다.';if(ok&&e.target.value.trim()&&!e.isComposing)markComplete(type)}});
+document.addEventListener('input',e=>{if(e.target.hasAttribute('data-note-search')){notesQuery=e.target.value;notesLimit=40;refreshNotes();return}const type=e.target.dataset.note;if(type){data.notes[language+':'+selected+':'+type]=e.target.value;const ok=persist();e.target.nextElementSibling.textContent=ok?'이 브라우저에 저장됨':'저장 공간을 사용할 수 없습니다.';if(ok&&e.target.value.trim()&&!e.isComposing)markComplete(type)}});
 document.addEventListener('compositionend',e=>{const type=e.target.dataset.note;if(type&&e.target.value.trim()&&persist())markComplete(type)});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&ribbonOpen){e.preventDefault();setRibbon(false,{keyboard:true})}});
 window.addEventListener('pagehide',()=>{navigationMoves.forEach(a=>a.cancel());ribbonMoves.forEach(a=>a.cancel());pause();if(window.speechSynthesis)speechSynthesis.cancel()});
