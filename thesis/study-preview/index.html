@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="ko" data-page="study-files-v21" data-theme="light">
-<!-- forma-web: skip 사용자 요청: 화면 양끝까지 닿는 여섯 폴더, 첫 화면에 열린 문장 카드, 두 번째 이미지의 블루·라벤더·차콜. 흰 배경과 기기별 글꼴, 저장 기록, 종이·리본 동작 유지. 이전 판 보존. -->
+<html lang="ko" data-page="study-files-v22" data-theme="light">
+<!-- forma-web: skip 사용자 요청: 앱 제목·상단 메뉴·하단 표기 제거. 마지막 노트 폴더를 화면 끝까지 연장, 언어별 날짜와 달력 스티커 진행률. 처음 고른 사용자 기억, 정현은 독일어만. 첨부 줄노트 형태를 CSS로 문장 카드에 적용. 이전 판과 저장 기록 보존. -->
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<title>한 장씩 · 공부 노트</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>공부 노트</title>
 <meta name="robots" content="noindex,nofollow">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#b49dc3">
 <style>
 @font-face{font-family:"Study Sans";src:url("./fonts/pretendard-variable.woff2") format("woff2");font-style:normal;font-weight:45 920;font-display:swap}
 @font-face{font-family:"Study Hangul";src:url("./fonts/pretendard-variable.woff2") format("woff2");font-style:normal;font-weight:45 920;font-display:swap;unicode-range:U+1100-11FF,U+3130-318F,U+A960-A97F,U+AC00-D7AF,U+D7B0-D7FF}
@@ -220,8 +220,52 @@ html,body{background:#fff}.back-sheet{background:#f5f5f7}.green-spine{color:var(
 @media(max-width:350px){.masthead{padding:0 16px}.folio-intro{padding-left:16px;padding-right:16px}.greeting-line h1{font-size:19px}.folder{padding-left:16px;padding-right:16px}.folder-title{font-size:15px}.folder-number{font-size:8px}.folder-tab{gap:7px}.folder-meta{font-size:9px}.folder-content{padding:10px 14px 46px}.folder-content .loose-paper{padding:18px 16px}.recall-question{font-size:21px}.folder-content .reading-line{font-size:15px}.folder-bookmark{right:14px}.daily-progress{gap:3px}.daily-progress b{font-size:9px}}
 @media print{.masthead,.folio-intro,.folder,.folder-bookmark,.edition{display:none}.file-folder{filter:none;margin:0}.folder-content{background:#fff;padding:0}.file-folder:not(.is-open){display:none}}
 
+/* The final folder fills the viewport and the browser's page backdrop. */
+:root{background:var(--companion);--card-stock:#f0f0f0;--card-rule:#5b91aa;--card-margin:#c16c63}
+html{min-height:100%;background:var(--companion)}
+body{min-height:100vh;min-height:100dvh;background-color:var(--companion);background-image:linear-gradient(to bottom,#fff 0 var(--tail-start,100vh),var(--companion) var(--tail-start,100vh) 100%);background-repeat:no-repeat}
+.shell{min-height:100vh;min-height:100svh;min-height:100dvh;display:flex;flex-direction:column;padding:0;max-width:720px}
+#screen{display:flex;flex:1;flex-direction:column;min-width:0}
+.folio-intro{flex:none;display:grid;grid-template-columns:minmax(0,1fr) 88px;gap:5px 14px;padding:calc(20px + env(safe-area-inset-top)) max(22px,env(safe-area-inset-right)) 30px max(22px,env(safe-area-inset-left));background:#fff}
+.greeting-line{grid-column:1/-1;min-height:44px;gap:10px;margin-bottom:2px}
+.greeting-line h1{font-size:21px;line-height:1.3;letter-spacing:-.045em;font-weight:450;min-width:0}
+.greeting-picker{font:inherit;letter-spacing:inherit;text-align:left;padding:0;min-height:44px}
+.study-language{margin-left:auto}.study-language select{max-width:106px;min-height:44px;padding:4px 19px 4px 5px;background:transparent;border:0;border-radius:0;color:#50505b;font:12px var(--sans)}
+.folio-date{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:8px;min-height:76px;margin:0;padding:0;text-align:left}
+.folio-date time{font:16px/1.35 var(--sans);letter-spacing:-.025em;color:var(--ink)}
+.date-weekday{font:10px/1.35 var(--mono);color:#60606a}.date-weekday span{padding-left:4px}
+.progress-holder{display:flex;align-items:center;justify-content:flex-end;min-width:0}
+.progress-sticker{position:relative;isolation:isolate;width:86px;height:74px;min-height:74px;padding:13px 10px 10px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;transform:rotate(-4deg);filter:drop-shadow(0 2px 1px #25283920);color:var(--ink)}
+.progress-sticker:before{content:"";position:absolute;inset:0;z-index:-2;background:var(--companion);clip-path:var(--stamp-cut)}
+.progress-sticker:after{content:"";position:absolute;inset:5px;z-index:-1;border:3px double #24242877;clip-path:var(--stamp-cut)}
+.progress-caption{font:8px/1 var(--mono);letter-spacing:.08em}.progress-value{display:flex;align-items:baseline;gap:5px;font:13px/1 var(--mono)}.progress-value b{font-size:31px;font-weight:400;letter-spacing:-.06em}
+.cabinet{flex:1;display:flex;flex-direction:column;min-height:0;padding:0}
+.file-folder{flex-shrink:0}.file-folder:last-child{flex:1;display:flex;flex-direction:column;min-height:calc(120px + env(safe-area-inset-bottom));filter:none}
+.file-folder:last-child:after{content:"";position:absolute;left:0;right:0;top:36px;bottom:0;background:var(--folder-color);z-index:-1}
+.file-folder:last-child>.folder{flex-shrink:0;filter:drop-shadow(0 -3px 4px #20233126)}
+.file-folder:last-child>.folder path{stroke:none}
+.file-folder:last-child>.folder-content{flex:1;padding-bottom:max(32px,env(safe-area-inset-bottom))}
+.folder-content{padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+.folder-content .recall-deck,.folder-content .recall-deck.recall-back{--rule-step:34px;background-color:var(--card-stock);background-image:linear-gradient(90deg,transparent 35px,var(--card-margin) 35px,var(--card-margin) 36px,transparent 36px),linear-gradient(var(--card-stock) 70px,transparent 70px),repeating-linear-gradient(to bottom,transparent 0,transparent 33px,var(--card-rule) 33px,var(--card-rule) 34px);background-size:100% 100%,100% 100%,100% 34px;background-position:0 0,0 0,0 37px;background-repeat:no-repeat,no-repeat,repeat;border-radius:7px;padding:24px 20px 22px 52px;min-height:242px;box-shadow:0 1px 1px #00000019,0 4px 0 #fafafa,0 5px 0 #00000020,0 8px 14px #22243a30}
+.recall-deck .card-count{min-height:24px;margin:0 0 22px;padding:0 20px 0 0;border:0;align-items:flex-start;gap:10px}
+.recall-deck .card-count .eyebrow{font-size:8px;line-height:1.5}.recall-deck .card-count>span{white-space:nowrap}
+.recall-deck .recall-question{font-size:21px;line-height:34px;min-height:68px;margin:0 0 16px;background:none}
+.recall-deck .action{min-height:44px;background:var(--card-stock);border:1px solid #00000022;padding:10px 11px;line-height:1.4}
+.recall-deck .answer{font-size:19px;line-height:34px;margin:0 0 14px}.recall-deck.recall-back .hint{font-size:11px;line-height:1.7;background:#f0f0f0ef;padding:5px 0}
+.recall-deck .paper-tools{background:var(--card-stock);margin-top:14px}.recall-deck .ratings button{background:var(--card-stock)}
+.profile-dialog{width:min(360px,calc(100vw - 40px));max-height:calc(100dvh - 40px);margin:auto;padding:26px 22px 20px;border:0;border-radius:5px;background:#fff;color:var(--ink);box-shadow:0 12px 60px #2023313d}
+.profile-dialog::backdrop{background:#b49dc3d9}.profile-dialog h2{font-size:22px;font-weight:450;letter-spacing:-.045em;margin:0 0 8px}.profile-dialog>p{font-size:12px;line-height:1.7;color:#63636b;margin:0 0 22px}
+.profile-choices{display:grid;gap:10px}.profile-choice{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:76px;padding:18px 17px;background:var(--accent);text-align:left;border-radius:3px}.profile-choice:last-child{background:var(--companion)}.profile-choice strong{font-size:23px;font-weight:450;letter-spacing:-.04em}.profile-choice span{font-size:11px}.profile-choice[aria-pressed=true]{outline:1px solid var(--ink);outline-offset:-5px}
+.profile-dialog [data-profile-cancel]{font-size:12px;padding:12px 0 0;min-height:44px;display:block;margin-left:auto}
+html[data-onboarding=true] .shell{visibility:hidden}
+@media(min-width:651px){.folio-intro{padding-top:28px;padding-bottom:34px}.greeting-line h1{font-size:24px}.folio-date time{font-size:19px}.folder-content{padding-left:32px;padding-right:32px}.recall-deck .recall-question{font-size:23px}}
+@media(max-width:350px){.folio-intro{padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right));grid-template-columns:minmax(0,1fr) 80px;gap:4px 8px}.greeting-line h1{font-size:19px}.study-language select{max-width:93px;font-size:11px}.folio-date time{font-size:15px}.progress-sticker{width:79px;height:70px;min-height:70px}.folder-content{padding-left:14px;padding-right:14px}.folder-content .recall-deck,.folder-content .recall-deck.recall-back{padding-left:46px;padding-right:16px;background-image:linear-gradient(90deg,transparent 30px,var(--card-margin) 30px,var(--card-margin) 31px,transparent 31px),linear-gradient(var(--card-stock) 70px,transparent 70px),repeating-linear-gradient(to bottom,transparent 0,transparent 33px,var(--card-rule) 33px,var(--card-rule) 34px)}.recall-deck .recall-question{font-size:20px}.recall-deck .answer{font-size:18px}}
+@media(prefers-reduced-motion:reduce){.progress-sticker{transform:none}}
+@media print{html,body{background:#fff}.shell,#screen,.cabinet,.file-folder:last-child{display:block;min-height:0}.profile-dialog{display:none}.file-folder:last-child:after{display:none}}
+
+html[data-person=junghyun] .notes-tools{grid-template-columns:1fr}
 </style></head>
-<body><div class="shell"><header class="masthead"><button class="wordmark" data-view="cards" aria-label="문장 카드로 돌아가기">한 장씩<span>LANGUAGE & SPACE</span></button><div class="header-controls"><button class="profile-switch" data-profile aria-label="현재 연호, 정현으로 바꾸기">연호 <span aria-hidden="true">↔</span></button><div class="languages" aria-label="학습 언어"><button data-language="de" aria-pressed="true">DE</button><button data-language="en" aria-pressed="false">EN</button></div></div></header><main id="screen"></main><footer class="edition"><span>LANGUAGE & SPACE / PAPER STUDY</span><span>V21 · 예시 교재</span><details class="appearance"><summary><span class="accent-dot" aria-hidden="true"></span>색 배치</summary><div class="appearance-panel"><p>블루와 라벤더의 자리를 골라 보세요.</p><div class="accent-options" aria-label="블루와 라벤더 배치 선택"></div><small></small></div></details></footer></div><div class="toast" role="status" aria-live="polite"></div>
+<body><div class="shell"><main id="screen"></main></div><dialog class="profile-dialog" id="profile-dialog" aria-labelledby="profile-title"><h2 id="profile-title">누구의 폴더를 열까요?</h2><p>처음 고른 이름을 이 기기에서 기억해요.</p><div class="profile-choices"><button class="profile-choice" data-choose-profile="yeonho"><strong>연호</strong><span>독일어 · 영어</span></button><button class="profile-choice" data-choose-profile="junghyun"><strong>정현</strong><span>독일어</span></button></div><button data-profile-cancel hidden>돌아가기</button></dialog><div class="toast" role="status" aria-live="polite"></div>
 <script>
 (()=>{'use strict';
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
@@ -235,15 +279,15 @@ const params=new URLSearchParams(location.search),allowed=['home','cards','readi
 let view=params.get('view')||document.documentElement.dataset.initial||'cards';if(!allowed.includes(view))view='cards';
 let language='de',selected=today,month=today.slice(0,7),revealed=false,card=0,showTranslation=false,ribbonOpen=params.has('ribbon')||document.documentElement.hasAttribute('data-ribbon'),duration=90,remaining=90,timer=null,deadline=0;
 const profiles={yeonho:{name:'연호',greeting:'연호야, 반가워!'},junghyun:{name:'정현',greeting:'정현아, 반가워!'}};
-let person='yeonho';try{const saved=localStorage.getItem('study-files-person');if(Object.hasOwn(profiles,saved))person=saved}catch(e){}
+let person='yeonho',needsProfileChoice=true;try{const saved=localStorage.getItem('study-files-person');if(Object.hasOwn(profiles,saved)){person=saved;needsProfileChoice=false}}catch(e){}
 let storage='study-files-v14:'+person+':';let stored={};try{stored=JSON.parse(localStorage.getItem(storage+'data'))||{}}catch(e){}
 function seed(){return {de:{},en:{},notes:{}}}
-let data=stored.de&&stored.en?stored:seed();if(!data.notes)data.notes={};
+let data=stored.de&&stored.en?stored:seed();if(!data.notes)data.notes={};language=person==='yeonho'&&data.preferences?.language==='en'?'en':'de';
 function persist(){try{localStorage.setItem(storage+'data',JSON.stringify(data));return true}catch(e){toast('저장 공간을 사용할 수 없습니다.');return false}}
 function state(day=selected){return data[language][day]||[false,false,false,false]}
 function count(day=selected){return state(day).filter(Boolean).length}
 function monthCount(){return Object.entries(data[language]).filter(([d,v])=>d.startsWith(month)&&v.every(Boolean)).length}
-function fmt(day=selected){return new Intl.DateTimeFormat('ko-KR',{month:'long',day:'numeric',weekday:'long'}).format(parse(day))}
+function fmt(day=selected){return new Intl.DateTimeFormat(language==='de'?'de-DE':'en-GB',{day:'numeric',month:'long',year:'numeric'}).format(parse(day))}
 function toast(s){$('.toast').textContent=s;clearTimeout(window.toastTimeout);window.toastTimeout=setTimeout(()=>$('.toast').textContent='',2600)}
 function folder(t,i){
  const active=view===t[0],done=i<4&&state()[i],tab=[14,168,62,192,20,148][i];
@@ -253,9 +297,51 @@ function folder(t,i){
 function home(){return ''}
 function cabinet(){
  const files=[...tasks,['calendar','쌓인 날들','한 장씩 쌓인 나의 시간','DAYS'],['notes','전체 노트','내가 남긴 문장 모아 보기','NOTES']];
- const weekday=new Intl.DateTimeFormat('ko-KR',{weekday:'long'}).format(parse(selected));
- return `<section class="folio-intro"><div class="greeting-line"><h1>${profiles[person].greeting}</h1><span class="daily-progress" aria-label="오늘 연습 4개 중 ${count()}개 완료">${state().map(done=>`<i class="${done?'filled':''}"></i>`).join('')}<b>${count()} / 4</b></span></div><button class="folio-date" data-view="calendar" aria-label="${fmt()}, 쌓인 날들 펼치기"><time datetime="${selected}">${selected.slice(0,4)}<span> / </span>${selected.slice(5).replace('-','.')}</time><span>${weekday}</span><span class="date-arrow" aria-hidden="true">↗</span></button></section><section class="cabinet" aria-label="학습과 기록, 여섯 폴더">${files.map((t,i)=>`<section class="file-folder ${view===t[0]?'is-open':''}" data-file="${t[0]}">${folder(t,i)}<div class="folder-content" id="file-${t[0]}" role="region" aria-labelledby="folder-${t[0]}" ${view===t[0]?'':'hidden'}>${view===t[0]?`<div class="folder-bookmark"><button class="punch" data-secret aria-label="숨은 문장 펼치기" aria-expanded="${ribbonOpen}" aria-controls="ribbon-stack"></button>${ribbons()}</div>`+({cards,reading,speaking,writing,calendar,notes}[view])():''}</div></section>`).join('')}</section>`;
+ return `${intro()}<section class="cabinet" aria-label="학습과 기록, 여섯 폴더">${files.map((t,i)=>`<section class="file-folder ${view===t[0]?'is-open':''}" data-file="${t[0]}">${folder(t,i)}<div class="folder-content" id="file-${t[0]}" role="region" aria-labelledby="folder-${t[0]}" ${view===t[0]?'':'hidden'}>${view===t[0]?`<div class="folder-bookmark"><button class="punch" data-secret aria-label="숨은 문장 펼치기" aria-expanded="${ribbonOpen}" aria-controls="ribbon-stack"></button>${ribbons()}</div>`+({cards,reading,speaking,writing,calendar,notes}[view])():''}</div></section>`).join('')}</section>`;
 }
+function progressSticker(){
+ return `<button class="progress-sticker stamp-${stickerFor(selected)}" data-view="calendar" aria-label="${fmt()}, 연습 4개 중 ${count()}개 완료. 쌓인 날들 펼치기"><span class="progress-caption">${language==='de'?'GELERNT':'STUDIED'}</span><span class="progress-value"><b>${count()}</b><span>/ 4</span></span></button>`;
+}
+function intro(){
+ const locale=language==='de'?'de-DE':'en-GB',weekday=new Intl.DateTimeFormat(locale,{weekday:'long'}).format(parse(selected));
+ return `<section class="folio-intro"><div class="greeting-line"><h1><button class="greeting-picker" data-profile aria-label="사용자 선택, 현재 ${profiles[person].name}">${profiles[person].greeting}</button></h1>${person==='yeonho'?`<label class="study-language"><span class="sr-only">학습 언어</span><select data-study-language aria-label="학습 언어"><option value="de" ${language==='de'?'selected':''}>Deutsch</option><option value="en" ${language==='en'?'selected':''}>English</option></select></label>`:''}</div><button class="folio-date" data-view="calendar" aria-label="${fmt()}, 쌓인 날들 펼치기"><time datetime="${selected}" lang="${language}">${fmt()}</time><span class="date-weekday" lang="${language}">${weekday}<span aria-hidden="true"> ↗</span></span></button><div class="progress-holder" aria-live="polite">${progressSticker()}</div></section>`;
+}
+function updatePageTail(){
+ const last=$('.file-folder[data-file="notes"]');if(!last)return;
+ const top=Math.max(0,scrollY+last.getBoundingClientRect().top+36);
+ document.body.style.setProperty('--tail-start',top+'px');
+}
+function openProfilePicker(){
+ const dialog=$('#profile-dialog');if(!dialog||navigationBusy)return;
+ pause();stopSpeech();if(view==='speaking')render();
+ dialog.querySelector('[data-profile-cancel]').hidden=needsProfileChoice;
+ dialog.querySelectorAll('[data-choose-profile]').forEach(b=>b.setAttribute('aria-pressed',String(!needsProfileChoice&&b.dataset.chooseProfile===person)));
+ if(!dialog.open)dialog.showModal();
+}
+function chooseProfile(next){
+ if(!Object.hasOwn(profiles,next))return;
+ pause();stopSpeech();person=next;storage='study-files-v14:'+person+':';let saved={};
+ try{localStorage.setItem('study-files-person',person);saved=JSON.parse(localStorage.getItem(storage+'data'))||{}}catch(e){}
+ data=saved.de&&saved.en?saved:seed();if(!data.notes)data.notes={};
+ language=person==='yeonho'&&data.preferences?.language==='en'?'en':'de';
+ needsProfileChoice=false;document.documentElement.dataset.onboarding='false';
+ notesQuery='';notesLanguage='all';notesType='all';notesLimit=40;card=0;revealed=false;showTranslation=false;peekSpeaking=false;peekWriting=false;selected=today;month=today.slice(0,7);noteReturn=false;remaining=duration;
+ $('#profile-dialog').close();commitView('cards');focusHeading();
+}
+function changeLanguage(next){
+ if(!['de','en'].includes(next)||person==='junghyun'&&next!=='de'||next===language)return;
+ stopSpeech();pause();remaining=duration;language=next;data.preferences={...data.preferences,language};persist();card=0;revealed=false;showTranslation=false;peekSpeaking=false;peekWriting=false;noteReturn=false;render();
+}
+function initQuietScreen(){
+ const dialog=$('#profile-dialog');
+ dialog.addEventListener('cancel',e=>{if(needsProfileChoice)e.preventDefault()});
+ dialog.addEventListener('click',e=>{if(e.target===dialog&&!needsProfileChoice){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close()}});
+ document.addEventListener('change',e=>{if(e.target.hasAttribute('data-study-language'))changeLanguage(e.target.value)});
+ if(typeof ResizeObserver==='function')new ResizeObserver(updatePageTail).observe($('#screen'));
+ window.addEventListener('resize',updatePageTail);
+ if(needsProfileChoice)openProfilePicker();
+}
+
 function scrollToFile(v){
  if(v==='home'||v==='cards'){window.scrollTo(0,0);return}
  const target=$('.file-folder[data-file="'+v+'"]');if(target)window.scrollTo(0,Math.max(0,scrollY+target.getBoundingClientRect().top-16));
@@ -280,7 +366,7 @@ const stickerKinds=['label','oval','ticket','tag'];
 function stickerFor(day){return data.stickers?.[language+':'+day]||stickerKinds[Number(day.slice(-2))%4]}
 function stampDay(){const stamp=$('.calendar-day[data-date="'+selected+'"]');if(stamp&&count()===4&&!reducedMotion.matches)stamp.animate([{transform:'translateY(-9px) scale(1.28) rotate(-10deg)',opacity:.2},{transform:'translateY(0) scale(.96) rotate(1deg)',opacity:1,offset:.7},{transform:'none',opacity:1}],{duration:340,easing:'ease-out'})}
 function stickerDrawer(){return `<div class="sticker-drawer"><p>${count()===4?'오늘 붙일 스티커를 골라 보세요.':'네 가지 연습을 마치면 스티커가 붙어요.'}</p><div class="sticker-choices" aria-label="날짜 스티커">${stickerKinds.map((kind,i)=>`<button class="sticker-choice stamp-${kind}" data-sticker="${kind}" aria-label="${['테두리 라벨','타원','티켓','꼬리표'][i]}" aria-pressed="${stickerFor(selected)===kind}" ${count()===4?'':'disabled'}>${selected.slice(-2)}</button>`).join('')}</div></div>`}
-function calendar(){const first=parse(month+'-01'),offset=(first.getDay()+6)%7,last=new Date(first.getFullYear(),first.getMonth()+1,0).getDate();let cells=['M','T','W','T','F','S','S'].map(w=>`<span class="weekday">${w}</span>`).join('');for(let i=0;i<offset;i++)cells+='<span></span>';for(let n=1;n<=last;n++){const d=month+'-'+String(n).padStart(2,'0'),c=count(d);cells+=`<button class="calendar-day ${c===4?'done stamped stamp-'+stickerFor(d):c?'partial':''}" data-date="${d}" aria-label="${fmt(d)}, ${c}개 완료" aria-pressed="${d===selected}">${n}</button>`}return `<section class="lesson">${heading('ARCHIVE','한 장씩 쌓인 날들.')}<div class="month-paper"><div class="month-control"><h2>${month.replace('-',' / ')}</h2><div><button data-month="-1" aria-label="이전 달">←</button><button data-today aria-label="오늘로 이동">·</button><button data-month="1" aria-label="다음 달">→</button></div></div><div class="month-grid">${cells}</div><p class="calendar-legend">스티커는 네 가지 완료 · 작은 점은 진행 중</p></div><div class="notes-entry"><button class="action secondary" data-view="notes">전체 노트 모아 보기 <span>↗</span></button></div><div class="daily-checks"><h3 class="day-label">${fmt()} <span class="mono">/ ${count()} OF 4</span></h3><p class="record-hint">학습하면 자동으로 체크돼요. 눌러서 고칠 수도 있어요.</p>${tasks.map((t,i)=>`<button class="check-task" data-complete="${i}" aria-pressed="${state()[i]}" ${selected>today?'disabled':''}><span>${t[1]}</span><span class="check-mark">${state()[i]?'✓':'○'}</span></button>`).join('')}</div>${dailyNotes()}${stickerDrawer()}<div class="lesson-actions"><button class="action" data-view="cards">이날 파일 펼치기 <span>↗</span></button></div></section>`}
+function calendar(){const first=parse(month+'-01'),offset=(first.getDay()+6)%7,last=new Date(first.getFullYear(),first.getMonth()+1,0).getDate();let cells=(language==='de'?['Mo','Di','Mi','Do','Fr','Sa','So']:['Mo','Tu','We','Th','Fr','Sa','Su']).map(w=>`<span class="weekday">${w}</span>`).join('');for(let i=0;i<offset;i++)cells+='<span></span>';for(let n=1;n<=last;n++){const d=month+'-'+String(n).padStart(2,'0'),c=count(d);cells+=`<button class="calendar-day ${c===4?'done stamped stamp-'+stickerFor(d):c?'partial':''}" data-date="${d}" aria-label="${fmt(d)}, ${c}개 완료" aria-pressed="${d===selected}">${n}</button>`}return `<section class="lesson">${heading('ARCHIVE','한 장씩 쌓인 날들.')}<div class="month-paper"><div class="month-control"><h2>${new Intl.DateTimeFormat(language==='de'?'de-DE':'en-GB',{month:'long',year:'numeric'}).format(first)}</h2><div><button data-month="-1" aria-label="이전 달">←</button><button data-today aria-label="오늘로 이동">·</button><button data-month="1" aria-label="다음 달">→</button></div></div><div class="month-grid">${cells}</div><p class="calendar-legend">스티커는 네 가지 완료 · 작은 점은 진행 중</p></div><div class="notes-entry"><button class="action secondary" data-view="notes">전체 노트 모아 보기 <span>↗</span></button></div><div class="daily-checks"><h3 class="day-label">${fmt()} <span class="mono">/ ${count()} OF 4</span></h3><p class="record-hint">학습하면 자동으로 체크돼요. 눌러서 고칠 수도 있어요.</p>${tasks.map((t,i)=>`<button class="check-task" data-complete="${i}" aria-pressed="${state()[i]}" ${selected>today?'disabled':''}><span>${t[1]}</span><span class="check-mark">${state()[i]?'✓':'○'}</span></button>`).join('')}</div>${dailyNotes()}${stickerDrawer()}<div class="lesson-actions"><button class="action" data-view="cards">이날 파일 펼치기 <span>↗</span></button></div></section>`}
 // Completion and notes keep the existing person-specific storage keys.
 const accents=[['mint','블루 중심','#8191c3'],['lilac','라벤더 중심','#b49dc3']];
 let notesQuery='',notesLanguage='all',notesType='all',notesLimit=40,noteReturn=false;
@@ -289,8 +375,8 @@ function applyAccent(){
  const rgb=chosen[2].slice(1).match(/../g).map(c=>parseInt(c,16));
  const tint=n=>'rgb('+rgb.map(c=>Math.round(c*n+255*(1-n))).join(',')+')';
  const style=document.documentElement.style;style.setProperty('--accent',chosen[2]);style.setProperty('--companion',other[2]);style.setProperty('--accent-soft',tint(.25));style.setProperty('--accent-line',chosen[2]);
- $('.accent-options').innerHTML=accents.map(a=>`<button class="accent-option" data-accent="${a[0]}" style="--choice:${a[2]};--other:${accents.find(b=>b[0]!==a[0])[2]}" aria-label="${a[1]}" aria-pressed="${a[0]===chosen[0]}">${a[1]}${a[0]===chosen[0]?' ✓':''}</button>`).join('');
- $('.appearance-panel small').textContent=profiles[person].name+'님의 배치로 기억해요.';
+
+ $('meta[name=theme-color]').content=other[2];document.documentElement.style.backgroundColor=other[2];
 }
 function activity(){if(!data.activity)data.activity={};const id=language+':'+selected;return data.activity[id]||(data.activity[id]={cards:[],readingSeconds:0,readingLines:[]})}
 function completionHint(id){
@@ -303,7 +389,7 @@ function complete(id){const done=state()[tasks.findIndex(t=>t[0]===id)];return `
 
 function refreshFolderBadges(){
  $$('.folder').forEach((b,i)=>{const done=i<4&&state()[i];b.dataset.done=String(done);const badge=b.querySelector('.folder-meta small');if(badge)badge.textContent=i<4?(done?'완료':'05 MIN'):i===4?String(monthCount()).padStart(2,'0')+' DAYS':String(allNotes().length).padStart(2,'0')+' NOTES'});
- const progress=$('.daily-progress');if(progress){progress.setAttribute('aria-label','오늘 연습 4개 중 '+count()+'개 완료');progress.innerHTML=state().map(done=>'<i class="'+(done?'filled':'')+'"></i>').join('')+'<b>'+count()+' / 4</b>'}
+ const progress=$('.progress-holder');if(progress)progress.innerHTML=progressSticker();
 }
 
 function refreshCompletion(id){const el=$('[data-status="'+id+'"]');if(el)el.outerHTML=complete(id)}
@@ -320,7 +406,7 @@ function recordCard(){
 let lastReadingTick=performance.now();
 setInterval(()=>{
  const now=performance.now(),elapsed=Math.min(.75,(now-lastReadingTick)/1000);lastReadingTick=now;
- if(view!=='reading'||selected>today||state()[1]||document.hidden||navigationBusy||ribbonOpen)return;
+ if(needsProfileChoice||$('#profile-dialog').open||view!=='reading'||selected>today||state()[1]||document.hidden||navigationBusy||ribbonOpen)return;
  const lines=$$('.reading-line');if(!lines.length)return;
  const a=activity();let visible=false;
  lines.forEach((line,i)=>{const r=line.getBoundingClientRect(),height=Math.max(0,Math.min(innerHeight,r.bottom)-Math.max(0,r.top));if(height>=r.height*.75){visible=true;if(!a.readingLines.includes(i))a.readingLines.push(i)}});
@@ -330,19 +416,19 @@ setInterval(()=>{
 function allNotes(){
  return Object.entries(data.notes).flatMap(([id,value])=>{
   const match=/^(de|en):(\d{4}-\d{2}-\d{2}):(reading|writing)$/.exec(id);
-  if(!match||typeof value!=='string'||!value.trim())return [];
+  if(!match||typeof value!=='string'||!value.trim())return [];if(person==='junghyun'&&match[1]!=='de')return [];
   return [{id,language:match[1],date:match[2],type:match[3],value}];
  }).sort((a,b)=>b.date.localeCompare(a.date)||a.language.localeCompare(b.language)||a.type.localeCompare(b.type));
 }
 function savedNote(n){return `<article class="saved-note" data-note-kind="${n.type}"><header><span>${n.type==='reading'?'간직한 표현':'나의 한 문장'}</span><span class="mono">${n.language.toUpperCase()}</span></header><p class="note-body">${esc(n.value)}</p><button data-open-note="${n.id}">이날의 ${n.type==='reading'?'읽기':'쓰기'}에서 이어 쓰기 ↗</button></article>`}
 function dailyNotes(){const items=allNotes().filter(n=>n.date===selected&&n.language===language);return `<section class="daily-notes" aria-label="이날의 노트"><h3>이날 남긴 노트</h3>${items.length?items.map(savedNote).join(''):'<p class="record-hint">아직 남긴 글이 없어요.</p>'}</section>`}
-function notes(){return `<section class="lesson notes-library"><div class="view-head"><button class="back" data-view="calendar">← 쌓인 날들</button><p class="eyebrow">ALL NOTES<br>${profiles[person].name}의 기록</p></div><h1 class="page-title">내가 남긴 모든 문장.</h1><p class="notes-intro">읽다가 적은 표현도, 직접 쓴 한 문장도.<br>여기에서 다시 찾아볼 수 있어요.</p><div class="notes-tools"><label class="notes-search"><span class="sr-only">노트 검색</span><input type="search" data-note-search aria-label="노트 검색" placeholder="기억나는 단어로 찾기" value="${esc(notesQuery)}"></label><label class="filter-label">언어<select data-notes-language aria-label="노트 언어"><option value="all">모든 언어</option><option value="de">독일어</option><option value="en">영어</option></select></label><label class="filter-label">종류<select data-notes-type aria-label="노트 종류"><option value="all">모든 노트</option><option value="reading">간직한 표현</option><option value="writing">나의 한 문장</option></select></label></div><div id="notes-results" aria-live="polite"></div><p class="record-hint">${profiles[person].name}님의 이 브라우저에 저장된 노트예요.</p></section>`}
+function notes(){return `<section class="lesson notes-library"><div class="view-head"><button class="back" data-view="calendar">← 쌓인 날들</button><p class="eyebrow">ALL NOTES<br>${profiles[person].name}의 기록</p></div><h1 class="page-title">내가 남긴 모든 문장.</h1><p class="notes-intro">읽다가 적은 표현도, 직접 쓴 한 문장도.<br>여기에서 다시 찾아볼 수 있어요.</p><div class="notes-tools"><label class="notes-search"><span class="sr-only">노트 검색</span><input type="search" data-note-search aria-label="노트 검색" placeholder="기억나는 단어로 찾기" value="${esc(notesQuery)}"></label><label class="filter-label" ${person==='junghyun'?'hidden':''}>언어<select data-notes-language aria-label="노트 언어"><option value="all">모든 언어</option><option value="de">독일어</option><option value="en">영어</option></select></label><label class="filter-label">종류<select data-notes-type aria-label="노트 종류"><option value="all">모든 노트</option><option value="reading">간직한 표현</option><option value="writing">나의 한 문장</option></select></label></div><div id="notes-results" aria-live="polite"></div><p class="record-hint">${profiles[person].name}님의 이 브라우저에 저장된 노트예요.</p></section>`}
 function refreshNotes(){
  if(view!=='notes')return;
  const all=allNotes(),q=notesQuery.trim().toLocaleLowerCase(),items=all.filter(n=>(notesLanguage==='all'||n.language===notesLanguage)&&(notesType==='all'||n.type===notesType)&&(!q||n.value.toLocaleLowerCase().includes(q)||n.date.includes(q)));
  $('[data-notes-language]').value=notesLanguage;$('[data-notes-type]').value=notesType;
  let result=`<p class="notes-total">${items.length}개의 노트 · 전체 ${all.length}개</p>`,date='';
- for(const n of items.slice(0,notesLimit)){if(date!==n.date){if(date)result+='</section>';date=n.date;result+=`<section class="note-group"><h2>${date.slice(0,4)}년 ${fmt(date)}</h2>`}result+=savedNote(n)}
+ for(const n of items.slice(0,notesLimit)){if(date!==n.date){if(date)result+='</section>';date=n.date;result+=`<section class="note-group"><h2>${fmt(date)}</h2>`}result+=savedNote(n)}
  if(date)result+='</section>';
  if(!items.length)result+=`<div class="empty-notes"><p>${all.length?'찾는 노트가 없어요.':'아직 남긴 문장이 없어요.'}</p><p>${all.length?'다른 단어나 필터로 찾아보세요.':'읽기나 쓰기에서 남긴 글이 날짜별로 모여요.'}</p></div>`;
  if(items.length>notesLimit)result+=`<button class="action secondary more-notes" data-more-notes>이전 노트 더 보기 <span>${items.length-notesLimit}개</span></button>`;
@@ -354,7 +440,7 @@ document.addEventListener('visibilitychange',()=>{lastReadingTick=performance.no
 const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
 let navigationBusy=false,navigationMoves=[],ribbonMoves=[],ribbonTurn=0;
 function motionClone(element){
- const clone=element.cloneNode(true),computed=getComputedStyle(element);for(const prop of ['--folder-color','--folder-ink'])clone.style.setProperty(prop,computed.getPropertyValue(prop));for(const prop of ['color','backgroundColor','backgroundImage','padding','fontSize','boxShadow'])clone.style[prop]=computed[prop];clone.removeAttribute('id');clone.setAttribute('aria-hidden','true');clone.inert=true;
+ const clone=element.cloneNode(true),computed=getComputedStyle(element);for(const prop of ['--folder-color','--folder-ink'])clone.style.setProperty(prop,computed.getPropertyValue(prop));for(const prop of ['color','backgroundColor','backgroundImage','padding','fontSize','boxShadow','borderRadius','display','flexDirection'])clone.style[prop]=computed[prop];if(element.id==='screen')clone.style.height=element.getBoundingClientRect().height+'px';clone.removeAttribute('id');clone.setAttribute('aria-hidden','true');clone.inert=true;
  clone.querySelectorAll('[id]').forEach(e=>e.removeAttribute('id'));
  clone.querySelectorAll('button,a,input,textarea,[tabindex]').forEach(e=>e.tabIndex=-1);
  return clone;
@@ -432,13 +518,8 @@ document.addEventListener('click',e=>{
 window.addEventListener('resize',()=>{if(navigationBusy)navigationMoves.forEach(a=>a.cancel())});
 reducedMotion.addEventListener('change',()=>{if(reducedMotion.matches){navigationMoves.forEach(a=>a.cancel());if($('#ribbon-stack'))setRibbon(ribbonOpen)}});
 
-function render(){const current=profiles[person],other=profiles[person==='yeonho'?'junghyun':'yeonho'];const picker=$('[data-profile]');picker.innerHTML=current.name+' <span aria-hidden="true">↔</span>';picker.setAttribute('aria-label','현재 '+current.name+', '+other.name+'으로 바꾸기');picker.title=other.name+'으로 바꾸기';ribbonTurn++;ribbonMoves.forEach(a=>a.cancel());ribbonMoves=[];document.documentElement.dataset.view=view;$$('[data-language]').forEach(b=>b.setAttribute('aria-pressed',language===b.dataset.language));$('#screen').innerHTML=cabinet();applyAccent();refreshNotes()}
-function changePerson(){
- person=person==='yeonho'?'junghyun':'yeonho';storage='study-files-v14:'+person+':';let saved={};
- try{localStorage.setItem('study-files-person',person);saved=JSON.parse(localStorage.getItem(storage+'data'))||{}}catch(e){}
- data=saved.de&&saved.en?saved:seed();if(!data.notes)data.notes={};
- notesQuery='';notesLanguage='all';notesType='all';notesLimit=40;card=0;revealed=false;showTranslation=false;peekSpeaking=false;peekWriting=false;selected=today;month=today.slice(0,7);commitView('cards');remaining=duration;
-}
+function render(){if(person==='junghyun')language='de';ribbonTurn++;ribbonMoves.forEach(a=>a.cancel());ribbonMoves=[];document.documentElement.dataset.view=view;document.documentElement.dataset.person=person;document.documentElement.dataset.onboarding=String(needsProfileChoice);document.title=profiles[person].name+'의 '+(language==='de'?'독일어':'영어')+' 노트';$('#screen').innerHTML=cabinet();applyAccent();refreshNotes();updatePageTail()}
+function changePerson(){openProfilePicker()}
 function pause(){if(timer){remaining=Math.max(0,Math.ceil((deadline-Date.now())/1000));clearInterval(timer);timer=null}}
 // Select an actual matching voice. Never hand a missing language to the default voice.
 const studySynth=window.speechSynthesis||null;
@@ -502,6 +583,8 @@ function speak(which){
 if(studySynth){availableVoices();studySynth.addEventListener('voiceschanged',()=>refreshWaitingVoice())}
 
 document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||b.disabled)return;
+ if(b.dataset.chooseProfile){chooseProfile(b.dataset.chooseProfile);return}
+ if(b.hasAttribute('data-profile-cancel')){$('#profile-dialog').close();$('.greeting-picker')?.focus();return}
  if(b.hasAttribute('data-more-notes')){const offset=notesLimit;notesLimit+=40;refreshNotes();const first=$$('.saved-note')[offset]?.querySelector('button');first?.focus({preventScroll:true})}
  else if(b.dataset.accent){if(!accents.some(a=>a[0]===b.dataset.accent))return;data.preferences={...data.preferences,accent:b.dataset.accent};persist();applyAccent()}
  else if(b.dataset.openNote){const n=allNotes().find(n=>n.id===b.dataset.openNote);if(!n)return;noteReturn=true;pause();remaining=duration;selected=n.date;month=n.date.slice(0,7);language=n.language;showTranslation=false;commitView(n.type);focusHeading()}
@@ -510,7 +593,7 @@ document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||
  else if(b.hasAttribute('data-card-turn'))turnCard(Number(b.dataset.cardTurn));
  else if(b.dataset.view)navigate(b.dataset.view,b);
  else if(b.hasAttribute('data-profile'))changePerson();
- else if(b.dataset.language){stopSpeech();pause();remaining=duration;language=b.dataset.language;card=0;revealed=false;showTranslation=false;peekSpeaking=false;peekWriting=false;render()}
+ else if(b.dataset.language)changeLanguage(b.dataset.language);
  else if(b.hasAttribute('data-secret'))setRibbon(!ribbonOpen,{keyboard:e.detail===0});
  else if(b.hasAttribute('data-translation'))peelPaper();
  else if(b.hasAttribute('data-reveal'))peelPaper();
@@ -663,13 +746,13 @@ document.addEventListener('pointerup',e=>{if(e.pointerType==='mouse')finishTouch
 document.addEventListener('pointercancel',e=>{if(e.pointerType==='mouse')finishTouch(e,true)});
 document.addEventListener('click',e=>{if(performance.now()<suppressClickUntil){e.preventDefault();e.stopImmediatePropagation()}},true);
 document.addEventListener('keydown',e=>{
- if(editable(e.target)||e.altKey||e.ctrlKey||e.metaKey||navigationBusy||ribbonOpen)return;
+ if(editable(e.target)||e.altKey||e.ctrlKey||e.metaKey||navigationBusy||ribbonOpen||$('#profile-dialog').open)return;
  if(e.key==='Escape'&&view!=='home'){e.preventDefault();putAway()}
  else if(view!=='notes'&&e.target.closest('#screen')&&['ArrowLeft','ArrowRight'].includes(e.key)){e.preventDefault();const d=e.key==='ArrowRight'?1:-1;if(view==='cards')turnCard(d);else if(view!=='home')nextFile(d)}
 });
 window.addEventListener('resize',stopDrag);
 window.addEventListener('pagehide',stopDrag);
 
-render();scrollToFile(view);
+render();scrollToFile(view);initQuietScreen();
 })();
 </script></body></html>
