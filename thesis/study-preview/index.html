@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko" data-page="study-files-v25" data-theme="light">
+<html lang="ko" data-page="study-files-v26" data-theme="light">
 <!-- forma-web: skip 사용자 요청: 세로로 폴더 접기·확대, 가로로 해당 폴더 카드만 이동. 여린 회색 도트 바탕. 여섯 폴더색·아이폰 기본 글꼴·메모·완료·음성·리본은 유지. -->
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
@@ -307,13 +307,33 @@ html[data-view=cards]{--folder-height:max(310px,calc(100dvh - 296px))}
 @media(max-width:350px){.folder-reader{padding-left:14px;padding-right:14px}.folio-pager{font-size:9px;gap:4px;margin-right:30px}.card-turns span{font-size:8px}}
 @media print{html,body{background:#fff}.folder-content,.file-folder:last-child>.folder-content{height:auto}.folder-reader{height:auto;overflow:visible;padding:0}.folio-pager{display:none}.folio-note[hidden]{display:block!important}}
 
+.lesson-theme{font-size:13px;line-height:1.6;color:var(--ticket-ink);margin:-8px 0 14px}.lesson-theme strong{color:var(--ink);font-weight:600;margin-right:8px}
+.recall-example{font-size:13px;line-height:1.6;color:var(--ticket-ink);margin:-12px 0 18px}
+.answer .plural{font-size:14px;color:var(--ticket-ink)}
+.example{font:15px/1.6 var(--mono);margin-top:10px}.example-ko{font-size:12px;line-height:1.6;color:var(--ticket-ink);margin-top:2px}
+.task-question{font-size:19px;line-height:1.5;min-height:0;margin-bottom:14px}
+.options{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:12px}.options button{padding:13px 14px;min-height:46px;background:var(--paper);font:15px/1.4 var(--mono);text-align:left}.options button.is-right{background:var(--accent-soft,#eaf3ee)}.options button.is-wrong{background:var(--rose)}.options button[disabled]{opacity:1}
+.layer-label{margin-top:24px}.reading-paper .layer-label:first-of-type{margin-top:18px}.summit{margin-top:4px}.credit{font-size:11px;line-height:1.6;color:var(--ticket-ink);margin-top:14px}.credit a{text-decoration:underline;color:inherit}
+.reading-quiz{margin-top:14px;display:grid;gap:12px}.quiz-item{background:var(--paper);padding:16px 18px 18px;box-shadow:0 1px 0 var(--line)}.quiz-prompt{font:16px/1.6 var(--mono);margin-top:6px}.quiz-item .hint{margin-top:10px}
+.rates{margin-top:18px}
+.situation{font-size:13px;line-height:1.7;margin-bottom:12px}.chunks{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}.chunks span{font:12px/1.4 var(--mono);padding:6px 9px;border:1px solid var(--line)}.week-write{margin-top:14px}
+.translation-slip .number{font-family:var(--mono)}
+.folio-note>.reading-quiz,.folio-note>.week-write{margin-top:0}.folio-note>.reading-paper .layer-label:first-of-type{margin-top:0}
 </style></head>
 <body><div class="shell"><main id="screen"></main></div><dialog class="profile-dialog" id="profile-dialog" aria-labelledby="profile-title"><h2 id="profile-title">누구의 폴더를 열까요?</h2><p>처음 고른 이름을 이 기기에서 기억해요.</p><div class="profile-choices"><button class="profile-choice" data-choose-profile="yeonho"><strong>연호</strong><span>독일어 · 영어</span></button><button class="profile-choice" data-choose-profile="junghyun"><strong>정현</strong><span>독일어</span></button></div><button data-profile-cancel hidden>돌아가기</button></dialog><div class="toast" role="status" aria-live="polite"></div>
 <script>
 (()=>{'use strict';
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
-const text={de:{lang:'de-DE',sentence:'Ein Raum verändert sich, wenn wir ihn benutzen.',translation:'공간은 우리가 사용할 때 달라집니다.',reading:['Ein Raum ist nicht nur eine Form.','Am Morgen fällt Licht durch das Fenster.','Am Abend sitzen wir zusammen und erzählen.'],readko:['공간은 단순한 형태만이 아닙니다.','아침에는 창문으로 빛이 들어옵니다.','저녁에는 함께 앉아 이야기를 나눕니다.'],title:'Ein Raum, ein Tag.',titleko:'하나의 공간, 하루의 시간',prompt:'Beschreibe einen Ort, an dem du dich wohlfühlst.',promptko:'편안함을 느끼는 장소를 설명해 보세요.',write:'Am Morgen … / Am Abend …',cards:[['나는 매일 독일어를 배웁니다.','Ich lerne jeden Tag Deutsch.','jeden Tag는 “매일”입니다. 동사 lerne가 두 번째 자리에 옵니다.'],['우리는 창가에 앉아 있습니다.','Wir sitzen am Fenster.','am Fenster는 “창가에”라는 장소 표현입니다.'],['공간은 우리가 사용할 때 달라집니다.','Ein Raum verändert sich, wenn wir ihn benutzen.','wenn으로 시작하는 절에서는 동사 benutzen이 맨 끝에 옵니다.']]},en:{lang:'en-GB',sentence:'A room takes shape through the way we inhabit it.',translation:'방은 우리가 그 안에서 살아가는 방식에 따라 형태를 얻습니다.',reading:['A room is more than a fixed arrangement of walls.','Its character emerges through use: a chair pulled towards the light, a table cleared for a conversation.','Architecture makes these moments possible without prescribing them.'],readko:['방은 벽을 고정된 방식으로 배치한 것 이상입니다.','빛을 향해 끌어 놓은 의자, 대화를 위해 비운 탁자처럼 쓰임 속에서 그 성격이 드러납니다.','건축은 이러한 순간을 미리 규정하지 않으면서 가능하게 합니다.'],title:'Room for everyday life.',titleko:'일상을 위한 여지',prompt:'What can architecture make possible without prescribing how people live?',promptko:'건축은 사람들의 생활을 규정하지 않으면서 무엇을 가능하게 할 수 있을까요?',write:'Architecture makes room for … without …',cards:[['다른 방향도 제안해도 될까요, 아니면 이미 합의된 건가요?','Could I suggest another direction, or have we already agreed on this one?','another direction은 하나의 대안을, have we already agreed는 지금까지 합의가 이루어졌는지를 묻습니다.'],['이 선택은 맥락을 존중하면서도 공간에 새로운 성격을 부여합니다.','This choice respects the context while giving the space a new character.','while + -ing로 두 행동이 함께 이루어진다는 관계를 간결하게 묶습니다.'],['공간은 사람이 사용할 여지를 남겨야 합니다.','A space should leave room for people to make it their own.','make it their own은 사용자가 자기 방식으로 공간을 받아들이고 바꾼다는 뜻입니다.']]}};
-const tasks=[['cards','문장 카드','표현을 기억에서 꺼내기','RECALL','var(--grey)',18],['reading','원문 읽기','공간과 일상을 읽는 세 문장','READ','var(--paper)',158],['speaking','소리 내기','90초, 60초, 45초로 말하기','SPEAK','var(--rose)',74],['writing','한 문장 남기기','오늘의 표현을 내 것으로','WRITE','var(--orange)',188]];
+const months={};let lessonLoading=null;const quizMap={};
+function lesson(){if(language!=='de')return null;const m=months[month];if(!m||!m.days)return null;const d=m.days[selected];if(!d)return null;return (person==='junghyun'&&d.junghyun)||d.base}
+function deck(){const L=lesson();if(!L)return [];const w=L.week||{phrases:[],tasks:[]};return [...L.cards.map(c=>({kind:'word',...c})),...L.tasks.map(t=>({kind:'task',...t})),...w.phrases.map(p=>({kind:'word',de:p.de,ko:p.ko,plural:'',exde:'',exko:'',note:'이번 주 표현',week:true})),...w.tasks.map(t=>({kind:'task',...t,week:true}))]}
+function need(){const L=lesson();return L?L.cards.length+L.tasks.length:0}
+function loadMonth(m){if(months[m]||lessonLoading===m)return;lessonLoading=m;fetch('content/'+m+'.json?v=26').then(r=>r.ok?r.json():{days:{}}).catch(()=>({days:{}})).then(j=>{months[m]=j;if(lessonLoading===m)lessonLoading=null;render()})}
+function emptyLesson(label,title){return `<section class="lesson">${heading(label,title)}<div class="loose-paper"><p class="eyebrow">${language==='en'?'ENGLISH':'DEUTSCH'}</p><p class="prompt">${language==='en'?'영어 교재는 다음 판에서 이어집니다.':lessonLoading?'교재를 불러오고 있어요.':'이 날의 교재는 없어요.'}</p><p class="hint">${language==='en'?'언어를 Deutsch로 바꾸면 10월과 11월 교재가 열립니다.':'10월 1일부터 11월 30일까지의 날짜를 골라 주세요.'}</p></div><div class="lesson-actions"><button class="action secondary" data-view="calendar">쌓인 날들 →</button></div></section>`}
+function speechText(which){const L=lesson();if(!L)return '';if(which==='card'){const c=deck()[card];if(!c)return '';return c.kind==='word'?c.de+(c.exde?'. '+c.exde:''):c.type==='cloze'?c.prompt.replace(/_+/,c.options[c.answer]):c.options[c.answer]}if(which.startsWith('ear'))return L.ear.text;return [...L.reading.layers.flatMap(l=>l.lines),...(L.reading.summit?L.reading.summit.lines:[])].join(' ')}
+function themeLine(L){return `<p class="lesson-theme"><strong>${esc(L.theme)}</strong>${esc(L.focus)}</p>`}
+function quizItem(t,id){quizMap[id]=t;const picked=(activity().quiz||{})[id];return `<div class="quiz-item" data-quiz-item="${id}"><p class="eyebrow">${t.type==='cloze'?'빈칸':'고르기'}</p><p class="quiz-prompt" lang="${t.type==='cloze'?'de':'ko'}">${esc(t.prompt)}</p><div class="options" role="group">${t.options.map((o,i)=>`<button data-quiz="${id}" data-option="${i}" class="${picked===undefined?'':i===t.answer?'is-right':i===picked?'is-wrong':''}" aria-pressed="${picked===i}" lang="de" ${picked===undefined?'':'disabled'}>${esc(o)}</button>`).join('')}</div>${picked===undefined?'':`<p class="hint">${picked===t.answer?'맞았어요.':'정답은 '+esc(t.options[t.answer])+'.'} ${esc(t.point||'')}</p>`}</div>`}
+const tasks=[['cards','문장 카드','오늘의 낱말과 문제','RECALL','var(--grey)',18],['reading','원문 읽기','쉬운 판에서 원문까지','READ','var(--paper)',158],['speaking','소리 내기','세 속도로 듣고 따라 말하기','SPEAK','var(--rose)',74],['writing','한 문장 남기기','오늘의 표현을 내 것으로','WRITE','var(--orange)',188]];
 const today=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Zurich',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
 const parse=s=>new Date(s+'T12:00:00'),key=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
 const shift=(s,n)=>{const d=parse(s);d.setDate(d.getDate()+n);return key(d)},esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -391,11 +411,11 @@ function ribbons(){return `<aside class="ribbon-popover" id="ribbon-stack" tabin
 function paperGrip(label,open=false){return `<button class="paper-peek" data-peek aria-label="${label}" aria-expanded="${open}"><span aria-hidden="true">↗</span></button>`}
 function heading(label,title){return `<div class="folder-inside-head"><span>${label} / ${selected.slice(5).replace('-','.')} · ${language.toUpperCase()}</span>${noteReturn?'<button data-view="notes">전체 노트로 ↗</button>':''}</div>`}
 function note(type,label,placeholder){const v=data.notes[language+':'+selected+':'+type]||'';return `<label class="note-label" for="${type}-note">${label}</label><textarea id="${type}-note" data-note="${type}" placeholder="${placeholder}">${esc(v)}</textarea><p class="save-status" aria-live="polite">${v?'이 브라우저에 저장됨':''}</p>`}
-function reading(){const t=text[language];return `<section class="lesson">${heading('02 / READ','방을 읽는 법.')}<article class="loose-paper reading-paper">${paperGrip(showTranslation?'해석 접기':'해석 펼치기',showTranslation)}<p class="eyebrow">READING NOTE / 학습용 창작문</p><h2 lang="${language}">${t.title}</h2>${t.reading.map((line,i)=>`<p class="reading-line"><span class="line-number">0${i+1}</span><span lang="${language}">${line}</span></p>`).join('')}<div class="paper-tools"><button data-speak="reading" aria-pressed="false">${language==='de'?'독일어':'영어'} 듣기 ↗</button><button data-translation aria-expanded="${showTranslation}" aria-controls="reading-translation">${showTranslation?'해석 접기':'해석 펼치기'} ${showTranslation?'−':'+'}</button></div></article><aside class="translation-slip" id="reading-translation" ${showTranslation?'':'hidden'}><p class="eyebrow">ON THE OTHER SIDE / 문장별 해석</p>${t.readko.map((line,i)=>`<p><span class="number">0${i+1}</span> &nbsp;${line}</p>`).join('')}</aside><div class="lesson-actions">${complete('reading')}<button class="action secondary" data-view="speaking">소리 내기 ↓</button></div><div class="note-paper">${note('reading','내가 간직할 표현','한 줄을 옮겨 적어 두세요.')}</div></section>`}
-function cards(){const c=text[language].cards[card];return `<section class="lesson">${heading('01 / RECALL','기억에서 꺼내기.')}<article class="loose-paper recall-deck ${revealed?'recall-back':''}"><div class="card-count"><p class="eyebrow" style="margin:0">${revealed?'꺼낸 표현':'한국어를 보고 먼저 말해 보세요.'}</p><span class="eyebrow">0${card+1} / 03</span></div>${paperGrip(revealed?'한국어로 뒤집기':'표현으로 뒤집기',revealed)}${revealed?`<p class="answer" lang="${language}">${c[1]}</p><p class="hint">${c[2]}</p><div class="paper-tools"><button data-speak="card" aria-pressed="false">${language==='de'?'독일어':'영어'} 듣기 ↗</button><button data-reveal aria-expanded="true">한국어 다시 보기 ↶</button></div><div class="ratings" aria-label="기억 정도"><button data-rate="다시">다시</button><button data-rate="기억">기억났어요</button><button data-rate="쉬움">쉬웠어요</button></div>`:`<p class="recall-question">${c[0]}</p><button class="action" data-reveal aria-expanded="false">눌러서 표현 보기 <span>↗</span></button>`}</article><div class="card-turns"><button data-card-turn="-1" ${card===0?'disabled':''}>← 앞 문장</button><span>좌우 카드 · 위아래 폴더</span><button data-card-turn="1" ${card===text[language].cards.length-1?'disabled':''}>다음 문장 →</button></div><div class="lesson-actions">${complete('cards')}<button class="action secondary" data-view="reading">원문 읽기 ↓</button></div></section>`}
+function reading(){const L=lesson();if(!L)return emptyLesson('02 / READ','원문을 읽는 법.');const R=L.reading;let n=0;const layerHtml=(title,lines)=>`<p class="eyebrow layer-label">${title}</p>${lines.map(line=>`<p class="reading-line"><span class="line-number">${String(++n).padStart(2,'0')}</span><span lang="de">${esc(line)}</span></p>`).join('')}`;const layers=R.layers.map(l=>layerHtml(l.level==='A1'?'쉬운 판 / A1':l.level.startsWith('원문')?esc(l.level):'중간 판 / '+esc(l.level),l.lines)).join('');const S=R.summit;const summit=S&&S.text?`<div class="summit">${layerHtml('원문 / '+esc(S.source.author)+', '+esc(S.source.title)+(S.source.year?' ('+esc(S.source.year)+')':''),S.lines)}${S.note?`<p class="hint">${esc(S.note)}</p>`:''}<p class="credit">${S.source.license==='public-domain'?'퍼블릭 도메인':S.source.license==='cc-by-sa-4.0'?'CC BY-SA 4.0':esc(S.source.license)}${S.swiss?' · 스위스 표기(ss) 원문 그대로':''}${S.source.url?` · <a href="${esc(S.source.url)}" target="_blank" rel="noopener">출처 ↗</a>`:''}</p></div>`:'';const gloss=R.layers.flatMap(l=>l.gloss||[]),quiz=R.layers.flatMap(l=>l.tasks||[]);return `<section class="lesson">${heading('02 / READ','원문을 읽는 법.')}${themeLine(L)}<article class="loose-paper reading-paper">${paperGrip(showTranslation?'풀이 접기':'풀이 펼치기',showTranslation)}<p class="eyebrow">READING STAIR / 쉬운 판에서 원문까지</p><h2 lang="ko">${esc(L.theme)}</h2>${layers}${summit}<div class="paper-tools"><button data-speak="reading" aria-pressed="false">독일어 듣기 ↗</button><button data-translation aria-expanded="${showTranslation}" aria-controls="reading-translation">${showTranslation?'풀이 접기':'풀이 펼치기'} ${showTranslation?'−':'+'}</button></div></article><aside class="translation-slip" id="reading-translation" ${showTranslation?'':'hidden'}><p class="eyebrow">ON THE OTHER SIDE / 낱말 풀이</p>${gloss.length?gloss.map(g=>`<p><span class="number" lang="de">${esc(g.de)}</span> &nbsp;${esc(g.ko)}</p>`).join(''):'<p>이 날은 풀이 없이 원문만 읽는다.</p>'}</aside>${quiz.length?`<div class="reading-quiz">${quiz.map((t,i)=>quizItem(t,'r'+i)).join('')}</div>`:''}<div class="lesson-actions">${complete('reading')}<button class="action secondary" data-view="speaking">소리 내기 →</button></div><div class="note-paper">${note('reading','내가 간직할 표현','한 줄을 옮겨 적어 두세요.')}</div></section>`}
+function cards(){const L=lesson();if(!L)return emptyLesson('01 / RECALL','기억에서 꺼내기.');const d=deck();if(!d.length)return emptyLesson('01 / RECALL','기억에서 꺼내기.');if(card>=d.length)card=0;const c=d[card],total=d.length,base=need();const counter=`<span class="eyebrow">${String(card+1).padStart(2,'0')} / ${String(total).padStart(2,'0')}${c.week?' · 주간':''}</span>`;let body;if(c.kind==='word'){body=revealed?`<p class="answer" lang="de">${esc(c.de)}${c.plural?`<span class="plural">, ${esc(c.plural)}</span>`:''}</p>${c.exde?`<p class="example" lang="de">${esc(c.exde)}</p><p class="example-ko">${esc(c.exko)}</p>`:''}${c.note?`<p class="hint">${esc(c.note)}</p>`:''}<div class="paper-tools"><button data-speak="card" aria-pressed="false">독일어 듣기 ↗</button><button data-reveal aria-expanded="true">한국어 다시 보기 ↶</button></div><div class="ratings" aria-label="기억 정도"><button data-rate="다시">다시</button><button data-rate="기억">기억났어요</button><button data-rate="쉬움">쉬웠어요</button></div>`:`<p class="recall-question">${esc(c.ko)}</p>${c.exko?`<p class="recall-example">${esc(c.exko)}</p>`:''}<button class="action" data-reveal aria-expanded="false">위로 젖혀 표현 보기 <span>↟</span></button>`}else{const picked=(activity().answers||{})[card];body=`<p class="eyebrow">${c.type==='cloze'?'빈칸 채우기':'고르기'}${c.from?' · '+esc(c.from.replace('day-',''))+'일째에서':''}</p><p class="recall-question task-question" lang="${c.type==='cloze'?'de':'ko'}">${esc(c.prompt)}</p><div class="options" role="group">${c.options.map((o,i)=>`<button data-option="${i}" class="${picked===undefined?'':i===c.answer?'is-right':i===picked?'is-wrong':''}" aria-pressed="${picked===i}" lang="de" ${picked===undefined?'':'disabled'}>${esc(o)}</button>`).join('')}</div>${picked===undefined?'':`<p class="hint">${picked===c.answer?'맞았어요.':'정답은 '+esc(c.options[c.answer])+'.'} ${esc(c.point||'')}</p><div class="paper-tools"><button data-speak="card" aria-pressed="false">독일어 듣기 ↗</button><button data-card-turn="1">다음 장 →</button></div>`}`}return `<section class="lesson">${heading('01 / RECALL','기억에서 꺼내기.')}${themeLine(L)}<article class="loose-paper recall-deck ${revealed&&c.kind==='word'?'recall-back':''}"><div class="card-count"><p class="eyebrow" style="margin:0">${c.kind==='task'?'답을 골라 보세요.':revealed?'꺼낸 표현':'한국어를 보고 먼저 말해 보세요.'}</p>${counter}</div>${c.kind==='word'?paperGrip(revealed?'한국어로 뒤집기':'표현으로 뒤집기',revealed):''}${body}</article><div class="card-turns"><button data-card-turn="-1">← ${card?'앞 장':'파일 넣기'}</button><span>${base<total&&card===base-1?'다음부터는 주간 복습':'옆으로 넘겨도 돼요'}</span><button data-card-turn="1">${card===total-1?'원문 읽기':'다음 장'} →</button></div><div class="lesson-actions">${complete('cards')}<button class="action secondary" data-view="reading">원문 읽기 →</button></div></section>`}
 function clock(){return String(Math.floor(remaining/60)).padStart(2,'0')+':'+String(remaining%60).padStart(2,'0')}
-function speaking(){const t=text[language];return `<section class="lesson">${heading('03 / SPEAK','입 밖으로 꺼내기.')}<div class="loose-paper">${paperGrip(peekSpeaking?'뜻 접기':'뜻 펼치기',peekSpeaking)}<p class="eyebrow">A SMALL QUESTION / 오늘의 질문</p><p class="prompt mono" lang="${language}">${t.prompt}</p><p class="prompt-translation" ${peekSpeaking?'':'hidden'}>${t.promptko}</p></div><div class="timer-paper"><p class="eyebrow">생각을 끝까지 말해 보세요.</p><p class="timer" data-clock>${clock()}</p><div class="durations" aria-label="연습 시간">${[90,60,45].map(n=>`<button data-duration="${n}" aria-pressed="${duration===n}">${n}초</button>`).join('')}</div><div class="lesson-actions"><button class="action" data-timer>${timer?'잠시 멈춤':'말하기 시작'} <span>${timer?'Ⅱ':'↗'}</span></button><button class="action secondary" data-reset>처음부터</button></div></div><div class="lesson-actions">${complete('speaking')}<button class="action secondary" data-view="writing">한 문장 남기기 ↓</button></div><p class="save-status">타이머로 연습합니다. 음성은 녹음하지 않습니다.</p></section>`}
-function writing(){const t=text[language];return `<section class="lesson">${heading('04 / WRITE','나의 한 문장.')}<div class="loose-paper writing-paper">${paperGrip(peekWriting?'참고 문장 접기':'참고 문장 펼치기',peekWriting)}<p class="eyebrow">LEAVE A LINE / ${fmt()}</p>${note('writing','오늘의 표현을 빌려 적어 보세요.',t.write)}</div><aside class="reference-note" ${peekWriting?'':'hidden'}><p class="eyebrow">다시 볼 표현</p><p lang="${language}">${t.sentence}</p><p>${t.translation}</p></aside><div class="lesson-actions">${complete('writing')}<button class="action secondary" data-view="calendar">쌓인 날들 ↓</button></div></section>`}
+function speaking(){const L=lesson();if(!L)return emptyLesson('03 / SPEAK','입 밖으로 꺼내기.');const E=L.ear,heard=activity().ear||[];return `<section class="lesson">${heading('03 / SPEAK','입 밖으로 꺼내기.')}${themeLine(L)}<div class="loose-paper">${paperGrip(peekSpeaking?'대본 접기':'대본 펼치기',peekSpeaking)}<p class="eyebrow">EAR / 세 속도로 듣고 따라 말하기</p><p class="prompt mono" lang="de" ${peekSpeaking?'':'hidden'}>${esc(E.text)}</p><p class="prompt-translation" ${peekSpeaking?'hidden':''}>먼저 대본 없이 듣고, 그다음 위로 젖혀 대본을 보며 따라 읽어 보세요.</p><div class="durations rates" aria-label="듣기 속도">${E.rates.map(r=>`<button data-speak="ear${r}" data-rate-speed="${r}" aria-pressed="${heard.includes(r)}">${r>=1?'보통':r>=0.9?'조금 느리게':'느리게'} ↗</button>`).join('')}</div></div><div class="timer-paper"><p class="eyebrow">대본을 덮고 같은 내용을 끝까지 말해 보세요.</p><p class="timer" data-clock>${clock()}</p><div class="durations" aria-label="연습 시간">${[90,60,45].map(n=>`<button data-duration="${n}" aria-pressed="${duration===n}">${n}초</button>`).join('')}</div><div class="lesson-actions"><button class="action" data-timer>${timer?'잠시 멈춤':'말하기 시작'} <span>${timer?'Ⅱ':'↗'}</span></button><button class="action secondary" data-reset>처음부터</button></div></div><div class="lesson-actions">${complete('speaking')}<button class="action secondary" data-view="writing">한 문장 남기기 →</button></div><p class="save-status">세 속도를 다 듣거나 타이머를 마치면 체크됩니다. 음성은 녹음하지 않습니다.</p></section>`}
+function writing(){const L=lesson();if(!L)return emptyLesson('04 / WRITE','나의 한 문장.');const H=L.hand,W=L.week&&L.week.write;return `<section class="lesson">${heading('04 / WRITE','나의 한 문장.')}${themeLine(L)}<div class="loose-paper writing-paper">${paperGrip(peekWriting?'본보기 접기':'본보기 펼치기',peekWriting)}<p class="eyebrow">LEAVE A LINE / ${fmt()}</p>${H.situation?`<p class="situation">${esc(H.situation)}</p>`:''}${note('writing',esc(H.prompt||'오늘의 표현을 빌려 적어 보세요.'),(H.chunks||[]).join(' / '))}${H.chunks&&H.chunks.length?`<div class="chunks" aria-label="쓸 조각">${H.chunks.map(ch=>`<span lang="de">${esc(ch)}</span>`).join('')}</div>`:''}</div><aside class="reference-note" ${peekWriting?'':'hidden'}><p class="eyebrow">본보기 문장</p><p lang="de">${esc(H.model)}</p></aside>${W?`<div class="loose-paper writing-paper week-write"><p class="eyebrow">WEEK / ${esc(L.week.title)}</p>${W.situation?`<p class="situation">${esc(W.situation)}</p>`:''}${note('weekwrite',esc(W.prompt),(W.chunks||[]).join(' / '))}<p class="hint" lang="de">${esc(W.model)}</p></div>`:''}<div class="lesson-actions">${complete('writing')}<button class="action secondary" data-view="home">파일 덮기 →</button></div></section>`}
 const stickerKinds=['label','oval','ticket','tag'];
 function stickerFor(day){return data.stickers?.[language+':'+day]||stickerKinds[Number(day.slice(-2))%4]}
 function stampDay(){const stamp=$('.calendar-day[data-date="'+selected+'"]');if(stamp&&count()===4&&!reducedMotion.matches)stamp.animate([{transform:'translateY(-9px) scale(1.28) rotate(-10deg)',opacity:.2},{transform:'translateY(0) scale(.96) rotate(1deg)',opacity:1,offset:.7},{transform:'none',opacity:1}],{duration:340,easing:'ease-out'})}
@@ -412,12 +432,12 @@ function applyAccent(){
 
  const desk='#f7f8f9';$('meta[name=theme-color]').content=desk;document.documentElement.style.backgroundColor=desk;
 }
-function activity(){if(!data.activity)data.activity={};const id=language+':'+selected;return data.activity[id]||(data.activity[id]={cards:[],readingSeconds:0,readingLines:[]})}
+function activity(){if(!data.activity)data.activity={};const id=language+':'+selected;const a=data.activity[id]||(data.activity[id]={cards:[],readingSeconds:0,readingLines:[]});if(!a.cards)a.cards=[];if(!a.readingLines)a.readingLines=[];return a}
 function completionHint(id){
  if(selected>today)return '아직 오지 않은 날이에요.';
  if(state()[tasks.findIndex(t=>t[0]===id)])return '캘린더에 기록했어요';
- if(id==='cards')return `표현 ${activity().cards.length} / ${text[language].cards.length} 확인하면 자동 체크`;
- return {reading:'끝까지 읽으면 자동 체크',speaking:'타이머를 마치면 자동 체크',writing:'글을 남기면 자동 체크'}[id];
+ if(id==='cards')return `장 ${activity().cards.filter(i=>i<need()).length} / ${need()} 확인하면 자동 체크`;
+ return {reading:'끝까지 읽으면 자동 체크',speaking:'세 속도를 듣거나 타이머를 마치면 자동 체크',writing:'글을 남기면 자동 체크'}[id];
 }
 function complete(id){const done=state()[tasks.findIndex(t=>t[0]===id)];return `<div class="auto-status ${done?'is-done':''}" data-status="${id}" role="status"><span class="status-dot" aria-hidden="true"></span><span>${completionHint(id)}</span></div>`}
 
@@ -435,7 +455,7 @@ function markComplete(id){
 }
 function recordCard(){
  if(selected>today)return;const a=activity();if(!a.cards.includes(card)){a.cards.push(card);persist()}
- if(a.cards.length>=text[language].cards.length)markComplete('cards');refreshCompletion('cards');
+ if(need()&&a.cards.filter(i=>i<need()).length>=need())markComplete('cards');refreshCompletion('cards');
 }
 let lastReadingTick=performance.now();
 setInterval(()=>{
@@ -502,7 +522,7 @@ document.addEventListener('click',e=>{
 window.addEventListener('resize',()=>{if(navigationBusy)navigationMoves.forEach(a=>a.cancel())});
 reducedMotion.addEventListener('change',()=>{if(reducedMotion.matches){navigationMoves.forEach(a=>a.cancel());if($('#ribbon-stack'))setRibbon(ribbonOpen)}});
 
-function render(){if(person==='junghyun')language='de';ribbonTurn++;ribbonMoves.forEach(a=>a.cancel());ribbonMoves=[];document.documentElement.dataset.view=view;document.documentElement.dataset.person=person;document.documentElement.dataset.onboarding=String(needsProfileChoice);document.title=profiles[person].name+'의 '+(language==='de'?'독일어':'영어')+' 노트';$('#screen').innerHTML=cabinet();applyAccent();mountFolioPages();refreshNotes();updatePageTail()}
+function render(){if(person==='junghyun')language='de';loadMonth(month);ribbonTurn++;ribbonMoves.forEach(a=>a.cancel());ribbonMoves=[];document.documentElement.dataset.view=view;document.documentElement.dataset.person=person;document.documentElement.dataset.onboarding=String(needsProfileChoice);document.title=profiles[person].name+'의 '+(language==='de'?'독일어':'영어')+' 노트';$('#screen').innerHTML=cabinet();applyAccent();mountFolioPages();refreshNotes();updatePageTail()}
 function changePerson(){openProfilePicker()}
 function pause(){if(timer){remaining=Math.max(0,Math.ceil((deadline-Date.now())/1000));clearInterval(timer);timer=null}}
 // Select an actual matching voice. Never hand a missing language to the default voice.
@@ -536,25 +556,25 @@ function stopSpeech(){
 function voiceWaitMatches(){return voiceWait&&voiceWait.language===language&&voiceWait.person===person&&voiceWait.view===view&&voiceWait.card===card&&voiceWait.selected===selected}
 function refreshWaitingVoice(final=false){
  const voices=availableVoices();if(!voiceWaitMatches())return;
- if(matchingVoice(voices,text[language].lang)){
+ if(matchingVoice(voices,language==='de'?'de-DE':'en-GB')){
   clearTimeout(voiceWaitTimer);voiceWait=null;speechMessage(speechLanguageName()+' 음성이 준비됐어요. 듣기를 다시 눌러 주세요.');
  }else if(final){speechMessage('이 브라우저에서 '+speechLanguageName()+' 음성을 찾지 못했어요. 기기에 해당 언어의 음성을 추가한 뒤 다시 눌러 주세요.')}
 }
-function speak(which){
+function speak(which,rate=.85){
  if(!studySynth||typeof window.SpeechSynthesisUtterance!=='function'){speechMessage('이 브라우저는 음성 읽기를 지원하지 않아요.');return}
  if(currentSpeech?.which===which){stopSpeech();speechMessage('읽기를 멈췄어요.');return}
- stopSpeech();const t=text[language],voice=matchingVoice(availableVoices(),t.lang);
+ stopSpeech();const voice=matchingVoice(availableVoices(),language==='de'?'de-DE':'en-GB');const spoken=speechText(which);if(!spoken){speechMessage('읽을 교재가 없어요.');return}
  if(!voice){
   voiceWait={language,person,view,card,selected};
   speechMessage(speechLanguageName()+' 음성을 확인하고 있어요. 잠시 후 다시 눌러 주세요.');
   voiceWaitTimer=setTimeout(()=>refreshWaitingVoice(true),1500);return;
  }
- const utterance=new SpeechSynthesisUtterance(which==='card'?t.cards[card][1]:t.reading.join(' '));
+ const utterance=new SpeechSynthesisUtterance(spoken);
  // The language and voice are assigned together before speak, inside the button gesture.
- utterance.voice=voice;utterance.lang=voice.lang.replace(/_/g,'-');utterance.rate=.85;utterance.pitch=1;utterance.volume=1;
+ utterance.voice=voice;utterance.lang=voice.lang.replace(/_/g,'-');utterance.rate=rate;utterance.pitch=1;utterance.volume=1;
  const session={utterance,which,language};currentSpeech=session;syncSpeechButtons();speechMessage(speechLanguageName()+' 음성을 준비하고 있어요.');
  utterance.onstart=()=>{if(currentSpeech!==session)return;clearTimeout(speechStartTimer);speechMessage(speechLanguageName()+'로 읽고 있어요.')};
- utterance.onend=()=>{if(currentSpeech!==session)return;clearTimeout(speechStartTimer);currentSpeech=null;syncSpeechButtons();speechMessage(speechLanguageName()+' 읽기를 마쳤어요.')};
+ utterance.onend=()=>{if(currentSpeech!==session)return;clearTimeout(speechStartTimer);currentSpeech=null;syncSpeechButtons();speechMessage(speechLanguageName()+' 읽기를 마쳤어요.');if(which.startsWith('ear')&&selected<=today){const a=activity();a.ear=a.ear||[];if(!a.ear.includes(rate))a.ear.push(rate);persist();if(a.ear.length>=3)markComplete('speaking');refreshCompletion('speaking');$$('[data-rate-speed]').forEach(b=>b.setAttribute('aria-pressed',String(a.ear.includes(Number(b.dataset.rateSpeed)))))}};
  utterance.onerror=e=>{
   if(currentSpeech!==session)return;clearTimeout(speechStartTimer);currentSpeech=null;syncSpeechButtons();
   if(['canceled','interrupted'].includes(e.error)){speechMessage('');return}
@@ -583,14 +603,16 @@ document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||
  else if(b.hasAttribute('data-translation'))peelPaper();
  else if(b.hasAttribute('data-reveal'))peelPaper();
  else if(b.dataset.rate){recordCard();turnCard(1)}
- else if(b.dataset.speak)speak(b.dataset.speak);
+ else if(b.dataset.speak)speak(b.dataset.speak,b.dataset.rateSpeed?Number(b.dataset.rateSpeed):.85);
+ else if(b.dataset.quiz){const id=b.dataset.quiz,t=quizMap[id];if(!t)return;const a=activity();a.quiz=a.quiz||{};if(a.quiz[id]!==undefined)return;a.quiz[id]=Number(b.dataset.option);persist();const el=b.closest('[data-quiz-item]');if(el)el.outerHTML=quizItem(t,id)}
+ else if(b.dataset.option!==undefined){const a=activity();a.answers=a.answers||{};if(a.answers[card]!==undefined)return;a.answers[card]=Number(b.dataset.option);persist();recordCard();render()}
  else if(b.hasAttribute('data-complete')){if(selected>today)return;const i=Number(b.dataset.complete),s=[...state()];s[i]=!s[i];data[language][selected]=s;if(!s[i]){const a=activity();if(i===0)a.cards=[];if(i===1){a.readingSeconds=0;a.readingLines=[]}}persist();render();if(view==='calendar')stampDay();$('[data-complete="'+i+'"]')?.focus()}
  else if(b.dataset.duration){pause();duration=Number(b.dataset.duration);remaining=duration;render()}
  else if(b.hasAttribute('data-timer')){if(timer){pause();render()}else{if(!remaining)remaining=duration;deadline=Date.now()+remaining*1000;timer=setInterval(()=>{remaining=Math.max(0,Math.ceil((deadline-Date.now())/1000));if($('[data-clock]'))$('[data-clock]').textContent=clock();if(!remaining){pause();markComplete('speaking');render()}},200);render()}}
  else if(b.hasAttribute('data-reset')){pause();remaining=duration;render()}
- else if(b.dataset.date){pause();remaining=duration;card=0;revealed=false;showTranslation=false;selected=b.dataset.date;month=selected.slice(0,7);render()}
+ else if(b.dataset.date){pause();remaining=duration;card=0;revealed=false;showTranslation=false;selected=b.dataset.date;month=selected.slice(0,7);folioPages.reading=folioPages.speaking=folioPages.writing=0;render()}
  else if(b.dataset.month)turnMonth(Number(b.dataset.month));
- else if(b.hasAttribute('data-today')){selected=today;month=today.slice(0,7);card=0;revealed=false;remaining=duration;render()}
+ else if(b.hasAttribute('data-today')){selected=today;month=today.slice(0,7);card=0;revealed=false;remaining=duration;folioPages.reading=folioPages.speaking=folioPages.writing=0;render()}
 });
 document.addEventListener('input',e=>{if(e.target.hasAttribute('data-note-search')){notesQuery=e.target.value;folioPages.notes=0;refreshNotes();return}const type=e.target.dataset.note;if(type){data.notes[language+':'+selected+':'+type]=e.target.value;const ok=persist();refreshFolderBadges();e.target.nextElementSibling.textContent=ok?'이 브라우저에 저장됨':'저장 공간을 사용할 수 없습니다.';if(ok&&e.target.value.trim()&&!e.isComposing)markComplete(type)}});
 document.addEventListener('compositionend',e=>{const type=e.target.dataset.note;if(type&&e.target.value.trim()&&persist())markComplete(type)});
@@ -706,22 +728,24 @@ window.addEventListener('resize',stopDrag);
 window.addEventListener('pagehide',stopDrag);
 
 const folioPages={reading:0,speaking:0,writing:0,calendar:0,notes:0};
-const folioTitles={reading:['원문','문장별 해석','간직할 표현'],speaking:['오늘의 질문','말하기 타이머'],writing:['나의 한 문장','다시 볼 표현'],calendar:['학습 달력','이날의 학습','이날의 노트']};
+const folioTitles={reading:['원문 계단','낱말 풀이','풀이 문제','간직할 표현'],speaking:['듣기 대본','말하기 타이머'],writing:['나의 한 문장','본보기 문장','이번 주 쓰기'],calendar:['학습 달력','이날의 학습','이날의 노트']};
 function resetFolioPages(){Object.keys(folioPages).forEach(k=>folioPages[k]=0)}
 function pageControls(index,total,title){return `<nav class="folio-pager" aria-label="이 폴더의 카드"><button data-folio-step="-1" aria-label="이전 카드" ${index<=0?'disabled':''}>←</button><span>${esc(title)}<b>${total?index+1:0} / ${total}</b></span><button data-folio-step="1" aria-label="다음 카드" ${index>=total-1?'disabled':''}>→</button></nav>`}
 function mountFolioPages(){
  const content=$('.file-folder.is-open>.folder-content');if(!content)return;
  const lesson=content.querySelector(':scope>.lesson');if(!lesson)return;
  const reader=document.createElement('div');reader.className='folder-reader';reader.dataset.folderScroll='';content.append(reader);reader.append(lesson);
- if(view==='cards'){reader.dataset.noteIndex=card;reader.dataset.noteTotal=text[language].cards.length;return}
+ if(view==='cards'){reader.dataset.noteIndex=card;reader.dataset.noteTotal=deck().length;return}
  if(view==='notes'){reader.dataset.noteIndex=folioPages.notes;return}
- const selectors={reading:[['.reading-paper'],['.translation-slip'],['.note-paper']],speaking:[['.loose-paper'],['.timer-paper',':scope>.save-status']],writing:[['.writing-paper'],['.reference-note']],calendar:[['.month-paper'],['.daily-checks','.sticker-drawer'],['.daily-notes','.notes-entry']]}[view];
- if(!selectors)return;
+ const allSelectors={reading:[['.reading-paper'],['.translation-slip'],['.reading-quiz'],['.note-paper']],speaking:[['.loose-paper'],['.timer-paper',':scope>.save-status']],writing:[['.writing-paper'],['.reference-note'],['.week-write']],calendar:[['.month-paper'],['.daily-checks','.sticker-drawer'],['.daily-notes','.notes-entry']]}[view];
+ if(!allSelectors)return;
+ const titles=[],selectors=allSelectors.filter((group,i)=>{const has=group.some(s=>lesson.querySelector(s));if(has)titles.push(folioTitles[view][i]);return has});if(!selectors.length)return;
+ const theme=lesson.querySelector('.lesson-theme');
  const stage=document.createElement('div');stage.className='folio-note-stage';
  const index=folioPages[view]=Math.max(0,Math.min(folioPages[view]||0,selectors.length-1));
  selectors.forEach((group,i)=>{const page=document.createElement('div');page.className='folio-note';page.dataset.notePage=i;page.hidden=i!==index;group.forEach(selector=>{const child=lesson.querySelector(selector);if(child){child.hidden=false;page.append(child)}});stage.append(page)});
- const head=lesson.querySelector('.folder-inside-head');if(head)head.after(stage);else lesson.prepend(stage);
- stage.insertAdjacentHTML('beforebegin',pageControls(index,selectors.length,folioTitles[view][index]));
+ const head=lesson.querySelector('.folder-inside-head');if(head)head.after(stage);else lesson.prepend(stage);if(theme&&head)head.after(theme);
+ stage.insertAdjacentHTML('beforebegin',pageControls(index,selectors.length,titles[index]));
  reader.dataset.noteIndex=index;reader.dataset.noteTotal=selectors.length;
 }
 function filteredFolioNotes(){const q=notesQuery.trim().toLocaleLowerCase();return allNotes().filter(n=>(notesLanguage==='all'||n.language===notesLanguage)&&(notesType==='all'||n.type===notesType)&&(!q||n.value.toLocaleLowerCase().includes(q)||n.date.includes(q)))}
@@ -736,7 +760,7 @@ function refreshNotes(){
 function folioBoundary(direction){const surface=$('.folio-note-stage')||$('.recall-deck');if(surface&&!reducedMotion.matches)surface.animate([{transform:'none'},{transform:`translateX(${-direction*12}px)`},{transform:'none'}],{duration:180});}
 function turnFolderNote(direction){
  if(view==='cards')return turnCard(direction);
- const total=view==='notes'?filteredFolioNotes().length:folioTitles[view]?.length||0,index=folioPages[view]||0,next=index+direction;
+ const total=view==='notes'?filteredFolioNotes().length:Number($('.folder-reader')?.dataset.noteTotal||0),index=folioPages[view]||0,next=index+direction;
  if(next<0||next>=total){folioBoundary(direction);return}
  return movePaper(()=>{folioPages[view]=next;render()},{direction,surface:'.folio-note-stage'});
 }
@@ -771,7 +795,7 @@ function nextFile(direction){
  const files=fileOrder.filter(v=>v!=='home'),at=files.indexOf(view),next=files[at+direction];if(at<0){return switchFolder('cards')}if(next)return switchFolder(next);
 }
 function turnCard(direction){
- const next=card+direction;if(next<0||next>=text[language].cards.length){folioBoundary(direction);return}
+ const next=card+direction;if(next<0){if(card===0&&direction<0)return switchFolder('home');folioBoundary(direction);return}if(next>=deck().length){if(deck().length)return switchFolder('reading');folioBoundary(direction);return}
  return movePaper(()=>{card=next;revealed=false;render()},{direction,surface:'.recall-deck'});
 }
 
