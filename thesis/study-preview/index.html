@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko" data-page="study-files-v27" data-theme="light">
+<html lang="ko" data-page="study-files-v28" data-theme="light">
 <!-- forma-web: skip 사용자 요청: 세로로 폴더 접기·확대, 가로로 해당 폴더 카드만 이동. 여린 회색 도트 바탕. 여섯 폴더색·아이폰 기본 글꼴·메모·완료·음성·리본은 유지. -->
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
@@ -328,7 +328,7 @@ const months={};let lessonLoading=null;const quizMap={};
 function lesson(){if(language!=='de')return null;const m=months[month];if(!m||!m.days)return null;const d=m.days[selected];if(!d)return null;return (person==='junghyun'&&d.junghyun)||d.base}
 function deck(){const L=lesson();if(!L)return [];const w=L.week||{phrases:[],tasks:[]};return [...L.cards.map(c=>({kind:'word',...c})),...L.tasks.map(t=>({kind:'task',...t})),...w.phrases.map(p=>({kind:'word',de:p.de,ko:p.ko,plural:'',exde:'',exko:'',note:'이번 주 표현',week:true})),...w.tasks.map(t=>({kind:'task',...t,week:true}))]}
 function need(){const L=lesson();return L?L.cards.length+L.tasks.length:0}
-function loadMonth(m){if(months[m]||lessonLoading===m)return;lessonLoading=m;fetch('content/'+m+'.json?v=27').then(r=>r.ok?r.json():{days:{}}).catch(()=>({days:{}})).then(j=>{months[m]=j;if(lessonLoading===m)lessonLoading=null;render()})}
+function loadMonth(m){if(months[m]||lessonLoading===m)return;lessonLoading=m;fetch('content/'+m+'.json?v=28').then(r=>r.ok?r.json():{days:{}}).catch(()=>({days:{}})).then(j=>{months[m]=j;if(lessonLoading===m)lessonLoading=null;render()})}
 function emptyLesson(label,title){return `<section class="lesson">${heading(label,title)}<div class="loose-paper"><p class="eyebrow">${language==='en'?'ENGLISH':'DEUTSCH'}</p><p class="prompt">${language==='en'?'영어 교재는 다음 판에서 이어집니다.':lessonLoading?'교재를 불러오고 있어요.':'이 날의 교재는 없어요.'}</p><p class="hint">${language==='en'?'언어를 Deutsch로 바꾸면 10월과 11월 교재가 열립니다.':'10월 1일부터 11월 30일까지의 날짜를 골라 주세요.'}</p></div><div class="lesson-actions"><button class="action secondary" data-view="calendar">쌓인 날들 →</button></div></section>`}
 function speechText(which){const L=lesson();if(!L)return '';if(which==='card'){const c=deck()[card];if(!c)return '';return c.kind==='word'?c.de+(c.exde?'. '+c.exde:''):c.type==='cloze'?c.prompt.replace(/_+/,c.options[c.answer]):c.options[c.answer]}if(which.startsWith('ear'))return L.ear.text;return [...L.reading.layers.flatMap(l=>l.lines),...(L.reading.summit?L.reading.summit.lines:[])].join(' ')}
 function themeLine(L){return `<p class="lesson-theme"><strong>${esc(L.theme)}</strong>${esc(L.focus)}</p>`}
@@ -531,10 +531,11 @@ let currentSpeech=null,voiceWait=null,voiceWaitTimer=null,speechStartTimer=null;
 const voiceLanguage=s=>String(s||'').trim().replace(/_/g,'-').toLowerCase();
 const speechLanguageName=()=>language==='de'?'독일어':'영어';
 function availableVoices(){try{return studySynth?[...studySynth.getVoices()]:[]}catch(e){return []}}
+function voiceQuality(v){const id=(String(v.voiceURI||'')+' '+String(v.name||'')).toLowerCase();if(/eloquence/.test(id))return -20;if(/premium|siri/.test(id))return 30;if(/enhanced|natural|neural|wavenet|online/.test(id))return 20;return 0}
 function matchingVoice(voices,locale){
  const target=voiceLanguage(locale),base=target.split('-')[0];
  return voices.filter(v=>voiceLanguage(v.lang).split('-')[0]===base).sort((a,b)=>{
-  const rank=v=>(voiceLanguage(v.lang)===target?100:0)+(v.localService?10:0)+(v.default?1:0);
+  const rank=v=>(voiceLanguage(v.lang)===target?100:0)+voiceQuality(v)+(v.localService?10:0)+(v.default?1:0);
   return rank(b)-rank(a);
  })[0]||null;
 }
