@@ -1,11 +1,15 @@
 <!doctype html>
-<html lang="ko" data-page="study-files-v23" data-theme="light">
-<!-- forma-web: skip 사용자 확정 색상: 밝은 민트 #D0FFE4와 베이비 핑크 #FFD0E0. 여섯 폴더를 두 색으로 교대 배치하고, 책갈피만 같은 참고의 진한 핑크 #FFA6C9. 기존 기록과 사용자 선택, 구조, 동작을 보존. -->
+<html lang="ko" data-page="study-files-v24" data-theme="light">
+<!-- forma-web: skip 사용자 요청: v21 검정·파랑·보라·연회색을 폴더에 복원하고, 민트·핑크는 더 옅은 파스텔로 조정. iPhone은 라틴 문자·숫자·한글 모두 기본 시스템 글꼴, Windows 한글과 기존 동작·기록 보존. -->
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
 <title>공부 노트</title>
+<script>
+// iPhone and iPad use the system font for every script, including old mono labels.
+if(/iPhone|iPad|iPod/i.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1))document.documentElement.dataset.nativeFont='ios';
+</script>
 <meta name="robots" content="noindex,nofollow">
-<meta name="theme-color" content="#ffd0e0">
+<meta name="theme-color" content="#b49dc3">
 <style>
 @font-face{font-family:"Study Sans";src:url("./fonts/pretendard-variable.woff2") format("woff2");font-style:normal;font-weight:45 920;font-display:swap}
 @font-face{font-family:"Study Hangul";src:url("./fonts/pretendard-variable.woff2") format("woff2");font-style:normal;font-weight:45 920;font-display:swap;unicode-range:U+1100-11FF,U+3130-318F,U+A960-A97F,U+AC00-D7AF,U+D7B0-D7FF}
@@ -175,7 +179,7 @@ html,body{background:#fff}.back-sheet{background:#f5f5f7}.green-spine{color:var(
 .accent-option:before{background:linear-gradient(90deg,var(--choice) 0 50%,var(--other) 50% 76%,var(--coral) 76%)}
 
 /* Six full-width folders share the same learning and archive surface. */
-:root{--mint:#d0ffe4;--lilac:#ffd0e0;--coral:#ffd0e0;--mint-detail:#a6ffc5;--pink-detail:#ffa6c9;--accent:var(--mint);--companion:var(--lilac);--ink:#242428;--line:#00000023;--desk:#fff;--paper:#fff}
+:root{--mint:#e3f5ec;--lilac:#f9e5ed;--coral:#f9e5ed;--folder-blue:#8191c3;--folder-purple:#b49dc3;--folder-grey:#eeeef2;--folder-black:#303034;--tail-color:var(--folder-purple);--mint-detail:#a6ffc5;--pink-detail:#efd0de;--accent:var(--mint);--companion:var(--lilac);--ink:#242428;--line:#00000023;--desk:#fff;--paper:#fff}
 .shell{max-width:720px;padding:0 0 24px}
 .masthead{height:60px;padding:0 22px;gap:10px}
 .wordmark{font-size:11px;font-weight:400;letter-spacing:-.025em}.wordmark span{font-size:8px;letter-spacing:.08em}
@@ -187,7 +191,7 @@ html,body{background:#fff}.back-sheet{background:#f5f5f7}.green-spine{color:var(
 .cabinet{position:relative;isolation:isolate;padding-bottom:12px}
 .file-folder{position:relative;margin-top:-33px;filter:drop-shadow(0 -3px 4px #20233126);--folder-color:var(--accent);--folder-ink:var(--ink)}
 .file-folder:first-child{margin-top:0}
-.file-folder[data-file=reading]{--folder-color:var(--companion)}.file-folder[data-file=speaking]{--folder-color:var(--accent)}.file-folder[data-file=writing]{--folder-color:var(--companion)}.file-folder[data-file=calendar]{--folder-color:var(--accent);--folder-ink:var(--ink)}.file-folder[data-file=notes]{--folder-color:var(--companion)}
+.file-folder[data-file=reading]{--folder-color:var(--folder-grey)}.file-folder[data-file=speaking]{--folder-color:var(--folder-blue)}.file-folder[data-file=writing]{--folder-color:var(--companion)}.file-folder[data-file=calendar]{--folder-color:var(--folder-black);--folder-ink:#fff}.file-folder[data-file=notes]{--folder-color:var(--folder-purple)}
 .folder,.folder:first-child{height:92px;margin:0;padding:42px 22px 16px;display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch;box-shadow:none!important;transform:none;color:var(--folder-ink);transition:none;isolation:isolate}
 .folder svg{filter:none!important}.folder path{fill:var(--folder-color)!important;stroke:#ffffff45;stroke-width:.65;vector-effect:non-scaling-stroke}
 .folder-tab{left:var(--tab);top:11px;display:flex;align-items:baseline;gap:10px;white-space:nowrap;font-family:var(--sans)}
@@ -200,7 +204,7 @@ html,body{background:#fff}.back-sheet{background:#f5f5f7}.green-spine{color:var(
 .folder-content:focus,.folio-intro h1:focus{outline:none}
 .folder-content>.lesson{position:relative;max-width:none;color:var(--ink);margin:0;padding:0;min-width:0}
 .folder-inside-head{display:flex;align-items:center;justify-content:space-between;gap:10px;font:9px var(--mono);margin:0 40px 14px 0;color:#56565e}.folder-inside-head button{font:11px var(--sans);padding:0}
-.file-folder[data-file=calendar] .folder-inside-head{color:var(--ink)}.file-folder[data-file=cards] .folder-inside-head{display:none}
+.file-folder[data-file=calendar] .folder-inside-head{color:#fff}.file-folder[data-file=cards] .folder-inside-head{display:none}
 .folder-content .loose-paper{box-shadow:0 1px 1px #00000019,0 5px 10px #20233125;padding:21px 20px}
 .folder-content .recall-deck{min-height:216px;box-shadow:0 1px 1px #00000020,0 4px 0 #f6f6f9,0 5px 0 #00000022,0 8px 14px #22243a30}
 .recall-deck .card-count{margin-bottom:16px;padding-bottom:12px}.recall-deck .card-count .eyebrow{font-size:9px;line-height:1.5}.recall-question{font-size:23px;min-height:72px;line-height:1.5;margin-bottom:18px;background:repeating-linear-gradient(to bottom,transparent 0,transparent 33px,#00000010 33px,#00000010 34px)}
@@ -211,9 +215,9 @@ html,body{background:#fff}.back-sheet{background:#f5f5f7}.green-spine{color:var(
 .folder-bookmark{position:absolute;right:18px;top:-62px;width:30px;height:64px;background:var(--pink-detail);border-top:1px solid #ffffff88;box-shadow:0 2px 3px #0000001a;z-index:12}.folder-bookmark:after{content:"";position:absolute;bottom:0;left:0;border-left:15px solid transparent;border-right:15px solid transparent;border-bottom:9px solid var(--folder-color);pointer-events:none}.folder-bookmark .punch{right:-7px;top:0}.punch:before{background:#fff}
 .folder-bookmark .ribbon-popover{left:auto;right:0;top:8px;width:min(360px,calc(100vw - 44px));clip-path:inset(-14px -6px -14px -12px);filter:drop-shadow(0 6px 6px #00000030)}.ribbon{margin-bottom:9px}.ribbon:nth-child(3){background:#eeeef2!important}
 .folder-content .page-title{font-size:25px;margin:0 0 18px}.notes-library>.view-head{display:none}.notes-library>.page-title{font-size:20px;margin:0 0 12px}.notes-intro{font-size:12px;line-height:1.65;margin:0 0 16px}.notes-library>.record-hint{color:#34343c}
-.folder-content .month-paper{box-shadow:0 4px 10px #00000030}.file-folder[data-file=calendar] .daily-notes h3,.file-folder[data-file=calendar] .daily-notes>.record-hint,.file-folder[data-file=calendar] .sticker-drawer>summary{color:var(--ink)}.file-folder[data-file=calendar] .auto-status{color:var(--ink)}.file-folder[data-file=calendar] .lesson-actions>.action{background:var(--accent)}
+.folder-content .month-paper{box-shadow:0 4px 10px #00000030}.file-folder[data-file=calendar] .daily-notes h3,.file-folder[data-file=calendar] .daily-notes>.record-hint,.file-folder[data-file=calendar] .sticker-drawer>summary{color:#fff}.file-folder[data-file=calendar] .auto-status{color:#fff}.file-folder[data-file=calendar] .lesson-actions>.action{background:var(--accent)}
 .translation-slip{margin-right:0}.reference-note{margin-right:0;background:#eeeef2}.folder-content .reading-line{font-size:16px}.folder-content .reading-paper{padding-right:15px;border-right-width:9px}.folder-content .note-paper{padding:18px}.folder-content .timer-paper{margin-top:14px}
-.edition{padding:0 22px;margin-top:12px;font-size:8px}.appearance-panel{right:0}.accent-dot{background:linear-gradient(90deg,var(--accent) 0 40%,var(--companion) 40% 75%,#d0ffe4 75%)}.accent-option:before{background:linear-gradient(90deg,var(--choice) 0 50%,var(--other) 50% 76%,#d0ffe4 76%)}
+.edition{padding:0 22px;margin-top:12px;font-size:8px}.appearance-panel{right:0}.accent-dot{background:linear-gradient(90deg,var(--accent) 0 40%,var(--companion) 40% 75%,#e3f5ec 75%)}.accent-option:before{background:linear-gradient(90deg,var(--choice) 0 50%,var(--other) 50% 76%,#e3f5ec 76%)}
 .saved-note[data-note-kind=writing]{border-left-color:var(--companion)}.writing-paper{border-left-color:var(--companion)}.stamp-tag{--stamp-color:var(--companion)}
 @media(hover:hover) and (pointer:fine){.folder:hover{transform:none}.folder:hover path{filter:brightness(1.025)}}
 @media(min-width:651px){.shell{padding-top:16px}.folio-intro{padding-top:16px;padding-bottom:36px}.greeting-line h1{font-size:25px}.folder-tab{top:12px}.folder-title{font-size:20px}.folder-content{padding:12px 32px 46px}.recall-deck{max-width:540px;margin:auto}.card-turns,.file-folder[data-file=cards] .lesson-actions{max-width:540px;margin-left:auto;margin-right:auto}.folder-bookmark{right:30px}}
@@ -221,9 +225,9 @@ html,body{background:#fff}.back-sheet{background:#f5f5f7}.green-spine{color:var(
 @media print{.masthead,.folio-intro,.folder,.folder-bookmark,.edition{display:none}.file-folder{filter:none;margin:0}.folder-content{background:#fff;padding:0}.file-folder:not(.is-open){display:none}}
 
 /* The final folder fills the viewport and the browser's page backdrop. */
-:root{background:var(--companion);--card-stock:#f0f0f0;--card-rule:#5b91aa;--card-margin:#c16c63}
-html{min-height:100%;background:var(--companion)}
-body{min-height:100vh;min-height:100dvh;background-color:var(--companion);background-image:linear-gradient(to bottom,#fff 0 var(--tail-start,100vh),var(--companion) var(--tail-start,100vh) 100%);background-repeat:no-repeat}
+:root{background:var(--tail-color);--card-stock:#f0f0f0;--card-rule:#5b91aa;--card-margin:#c16c63}
+html{min-height:100%;background:var(--tail-color)}
+body{min-height:100vh;min-height:100dvh;background-color:var(--tail-color);background-image:linear-gradient(to bottom,#fff 0 var(--tail-start,100vh),var(--tail-color) var(--tail-start,100vh) 100%);background-repeat:no-repeat}
 .shell{min-height:100vh;min-height:100svh;min-height:100dvh;display:flex;flex-direction:column;padding:0;max-width:720px}
 #screen{display:flex;flex:1;flex-direction:column;min-width:0}
 .folio-intro{flex:none;display:grid;grid-template-columns:minmax(0,1fr) 88px;gap:5px 14px;padding:calc(20px + env(safe-area-inset-top)) max(22px,env(safe-area-inset-right)) 30px max(22px,env(safe-area-inset-left));background:#fff}
@@ -254,7 +258,7 @@ body{min-height:100vh;min-height:100dvh;background-color:var(--companion);backgr
 .recall-deck .answer{font-size:19px;line-height:34px;margin:0 0 14px}.recall-deck.recall-back .hint{font-size:11px;line-height:1.7;background:#f0f0f0ef;padding:5px 0}
 .recall-deck .paper-tools{background:var(--card-stock);margin-top:14px}.recall-deck .ratings button{background:var(--card-stock)}
 .profile-dialog{width:min(360px,calc(100vw - 40px));max-height:calc(100dvh - 40px);margin:auto;padding:26px 22px 20px;border:0;border-radius:5px;background:#fff;color:var(--ink);box-shadow:0 12px 60px #2023313d}
-.profile-dialog::backdrop{background:#ffd0e0d9}.profile-dialog h2{font-size:22px;font-weight:450;letter-spacing:-.045em;margin:0 0 8px}.profile-dialog>p{font-size:12px;line-height:1.7;color:#63636b;margin:0 0 22px}
+.profile-dialog::backdrop{background:#f9e5edd9}.profile-dialog h2{font-size:22px;font-weight:450;letter-spacing:-.045em;margin:0 0 8px}.profile-dialog>p{font-size:12px;line-height:1.7;color:#63636b;margin:0 0 22px}
 .profile-choices{display:grid;gap:10px}.profile-choice{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:76px;padding:18px 17px;background:var(--accent);text-align:left;border-radius:3px}.profile-choice:last-child{background:var(--companion)}.profile-choice strong{font-size:23px;font-weight:450;letter-spacing:-.04em}.profile-choice span{font-size:11px}.profile-choice[aria-pressed=true]{outline:1px solid var(--ink);outline-offset:-5px}
 .profile-dialog [data-profile-cancel]{font-size:12px;padding:12px 0 0;min-height:44px;display:block;margin-left:auto}
 html[data-onboarding=true] .shell{visibility:hidden}
@@ -264,6 +268,11 @@ html[data-onboarding=true] .shell{visibility:hidden}
 @media print{html,body{background:#fff}.shell,#screen,.cabinet,.file-folder:last-child{display:block;min-height:0}.profile-dialog{display:none}.file-folder:last-child:after{display:none}}
 
 html[data-person=junghyun] .notes-tools{grid-template-columns:1fr}
+
+/* The iOS preference applies to text, numbers, inputs and inherited mono tokens. */
+html[data-native-font=ios]{--sans:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;--mono:var(--sans);font-family:var(--sans)}
+html[data-native-font=ios] :is(.reading-line,.loose-paper h2,.recall-deck .answer,.answer-slip .answer,.reference-note p:nth-child(2),.writing-paper textarea){letter-spacing:normal}
+html[data-native-font=ios] :is(.timer,.calendar-day,.progress-value,.folder-number){font-variant-numeric:tabular-nums}
 </style></head>
 <body><div class="shell"><main id="screen"></main></div><dialog class="profile-dialog" id="profile-dialog" aria-labelledby="profile-title"><h2 id="profile-title">누구의 폴더를 열까요?</h2><p>처음 고른 이름을 이 기기에서 기억해요.</p><div class="profile-choices"><button class="profile-choice" data-choose-profile="yeonho"><strong>연호</strong><span>독일어 · 영어</span></button><button class="profile-choice" data-choose-profile="junghyun"><strong>정현</strong><span>독일어</span></button></div><button data-profile-cancel hidden>돌아가기</button></dialog><div class="toast" role="status" aria-live="polite"></div>
 <script>
@@ -368,7 +377,7 @@ function stampDay(){const stamp=$('.calendar-day[data-date="'+selected+'"]');if(
 function stickerDrawer(){return `<div class="sticker-drawer"><p>${count()===4?'오늘 붙일 스티커를 골라 보세요.':'네 가지 연습을 마치면 스티커가 붙어요.'}</p><div class="sticker-choices" aria-label="날짜 스티커">${stickerKinds.map((kind,i)=>`<button class="sticker-choice stamp-${kind}" data-sticker="${kind}" aria-label="${['테두리 라벨','타원','티켓','꼬리표'][i]}" aria-pressed="${stickerFor(selected)===kind}" ${count()===4?'':'disabled'}>${selected.slice(-2)}</button>`).join('')}</div></div>`}
 function calendar(){const first=parse(month+'-01'),offset=(first.getDay()+6)%7,last=new Date(first.getFullYear(),first.getMonth()+1,0).getDate();let cells=(language==='de'?['Mo','Di','Mi','Do','Fr','Sa','So']:['Mo','Tu','We','Th','Fr','Sa','Su']).map(w=>`<span class="weekday">${w}</span>`).join('');for(let i=0;i<offset;i++)cells+='<span></span>';for(let n=1;n<=last;n++){const d=month+'-'+String(n).padStart(2,'0'),c=count(d);cells+=`<button class="calendar-day ${c===4?'done stamped stamp-'+stickerFor(d):c?'partial':''}" data-date="${d}" aria-label="${fmt(d)}, ${c}개 완료" aria-pressed="${d===selected}">${n}</button>`}return `<section class="lesson">${heading('ARCHIVE','한 장씩 쌓인 날들.')}<div class="month-paper"><div class="month-control"><h2>${new Intl.DateTimeFormat(language==='de'?'de-DE':'en-GB',{month:'long',year:'numeric'}).format(first)}</h2><div><button data-month="-1" aria-label="이전 달">←</button><button data-today aria-label="오늘로 이동">·</button><button data-month="1" aria-label="다음 달">→</button></div></div><div class="month-grid">${cells}</div><p class="calendar-legend">스티커는 네 가지 완료 · 작은 점은 진행 중</p></div><div class="notes-entry"><button class="action secondary" data-view="notes">전체 노트 모아 보기 <span>↗</span></button></div><div class="daily-checks"><h3 class="day-label">${fmt()} <span class="mono">/ ${count()} OF 4</span></h3><p class="record-hint">학습하면 자동으로 체크돼요. 눌러서 고칠 수도 있어요.</p>${tasks.map((t,i)=>`<button class="check-task" data-complete="${i}" aria-pressed="${state()[i]}" ${selected>today?'disabled':''}><span>${t[1]}</span><span class="check-mark">${state()[i]?'✓':'○'}</span></button>`).join('')}</div>${dailyNotes()}${stickerDrawer()}<div class="lesson-actions"><button class="action" data-view="cards">이날 파일 펼치기 <span>↗</span></button></div></section>`}
 // Completion and notes keep the existing person-specific storage keys.
-const accents=[['mint','밝은 민트','#d0ffe4'],['pink','베이비 핑크','#ffd0e0']];
+const accents=[['mint','파스텔 민트','#e3f5ec'],['pink','파스텔 핑크','#f9e5ed']];
 let notesQuery='',notesLanguage='all',notesType='all',notesLimit=40,noteReturn=false;
 function applyAccent(){
  const chosen=accents[0],other=accents[1]; // Keep the requested pair regardless of a legacy color preference.
@@ -376,7 +385,7 @@ function applyAccent(){
  const tint=n=>'rgb('+rgb.map(c=>Math.round(c*n+255*(1-n))).join(',')+')';
  const style=document.documentElement.style;style.setProperty('--accent',chosen[2]);style.setProperty('--companion',other[2]);style.setProperty('--accent-soft',tint(.25));style.setProperty('--accent-line',chosen[2]);
 
- $('meta[name=theme-color]').content=other[2];document.documentElement.style.backgroundColor=other[2];
+ const tail=getComputedStyle(document.documentElement).getPropertyValue('--tail-color').trim();$('meta[name=theme-color]').content=tail;document.documentElement.style.backgroundColor=tail;
 }
 function activity(){if(!data.activity)data.activity={};const id=language+':'+selected;return data.activity[id]||(data.activity[id]={cards:[],readingSeconds:0,readingLines:[]})}
 function completionHint(id){
