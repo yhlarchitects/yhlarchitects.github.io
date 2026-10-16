@@ -1,4 +1,4 @@
-const CACHE="turin-editorial-73e763bc27cc";
+const CACHE="turin-editorial-738d615aeca0";
 const BASE=self.registration.scope;
 self.addEventListener("install",e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll([BASE])).then(()=>self.skipWaiting())));
 self.addEventListener("activate",e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>(k.startsWith("torino-field-")||k.startsWith("turin-editorial-"))&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
