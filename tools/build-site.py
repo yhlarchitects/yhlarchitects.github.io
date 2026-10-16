@@ -124,3 +124,6 @@ if __name__ == '__main__':
     parser.add_argument('--output', type=Path, required=True)
     args = parser.parse_args()
     build(args.source, args.output)
+    import runpy
+    listing = runpy.run_path(str(args.source / "tools/build-link-list.py"))
+    listing["build_link_list"](args.output, args.source / "list/template.html")

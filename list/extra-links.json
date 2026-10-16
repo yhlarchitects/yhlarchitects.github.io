@@ -1,0 +1,16 @@
+[
+  {
+    "url": "https://yhla-workspace.yhl-sync.workers.dev/",
+    "title": "YHLA WORKSPACE",
+    "description": "공동 작업공간과 프로젝트 목록",
+    "group": "project",
+    "badge": "로그인"
+  },
+  {
+    "url": "https://yhla-workspace.yhl-sync.workers.dev/p/2625/desk",
+    "title": "용산 공영주차장 작업공간",
+    "description": "2625 · 자료, 일정, 작업과 보드 편집",
+    "group": "project",
+    "badge": "로그인"
+  }
+]
