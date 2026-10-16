@@ -1,11 +1,5 @@
-const CACHE="torino-field-0a6aa7a6440d";
+const CACHE="turin-editorial-bc04110f4e44";
 const BASE=self.registration.scope;
-self.addEventListener("install",event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll([BASE,BASE+"index.html"])).then(()=>self.skipWaiting())));
-self.addEventListener("activate",event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith("torino-field-")&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
-self.addEventListener("fetch",event=>{
- if(event.request.method!=="GET"||event.request.mode!=="navigate"||!event.request.url.startsWith(BASE))return;
- event.respondWith(fetch(event.request).then(response=>{
-  if(response.ok){const copy=response.clone();event.waitUntil(caches.open(CACHE).then(c=>c.put(BASE,copy)))}
-  return response;
- }).catch(()=>caches.match(BASE).then(r=>r||caches.match(BASE+"index.html"))));
-});
+self.addEventListener("install",e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll([BASE])).then(()=>self.skipWaiting())));
+self.addEventListener("activate",e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>(k.startsWith("torino-field-")||k.startsWith("turin-editorial-"))&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
+self.addEventListener("fetch",e=>{if(e.request.method!=="GET"||e.request.mode!=="navigate"||!e.request.url.startsWith(BASE))return;e.respondWith(fetch(e.request).then(r=>{if(r.ok){const copy=r.clone();e.waitUntil(caches.open(CACHE).then(c=>c.put(BASE,copy)))}return r}).catch(()=>caches.match(BASE)))});
