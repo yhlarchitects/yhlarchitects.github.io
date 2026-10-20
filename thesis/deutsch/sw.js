@@ -1,8 +1,9 @@
 // 서비스 워커: 앱 셸은 미리 받아 두고(보이면서 뒤에서 갱신), 콘텐츠는 네트워크 먼저·안 되면 저장본.
 // 앱 파일을 고치면 VERSION 을 올린다.
-const VERSION = "2026-10-14-8";
-const SHELL = "shell-" + VERSION;
-const CONTENT = "content-v1";
+const VERSION = "2026-10-20-1";
+const CACHE_PREFIX = "deutsch-" + new URL(self.registration.scope).pathname.replace(/[^a-z0-9]/gi,"-") + "-";
+const SHELL = CACHE_PREFIX + "shell-" + VERSION;
+const CONTENT = CACHE_PREFIX + "content-v1";
 const SHELL_FILES = [
   "./",
   "index.html",
@@ -20,6 +21,7 @@ const SHELL_FILES = [
   "js/rec.js",
   "js/diag.js",
   "js/sync.js",
+  "js/pilot.js",
   "vendor/ts-fsrs.js",
   "icons/icon.svg",
   "icons/icon-180.png",
@@ -34,7 +36,7 @@ self.addEventListener("install", (e) => {
 self.addEventListener("activate", (e) => {
   e.waitUntil(
     caches.keys()
-      .then((keys) => Promise.all(keys.filter((k) => k.startsWith("shell-") && k !== SHELL).map((k) => caches.delete(k))))
+      .then((keys) => Promise.all(keys.filter((k) => k.startsWith(CACHE_PREFIX + "shell-") && k !== SHELL).map((k) => caches.delete(k))))
       .then(() => self.clients.claim())
   );
 });
