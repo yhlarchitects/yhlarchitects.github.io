@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko" data-page="study-files-v30" data-theme="light">
+<html lang="ko" data-page="study-files-v31" data-theme="light">
 <!-- forma-web: skip 사용자 요청: 세로로 폴더 접기·확대, 가로로 해당 폴더 카드만 이동. 여린 회색 도트 바탕. 여섯 폴더색·아이폰 기본 글꼴·메모·완료·음성·리본은 유지. -->
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
@@ -353,9 +353,46 @@ html:not([data-view=home]) .cabinet{padding-bottom:56px}
 .map-node .ex{font:13px/1.6 var(--mono);letter-spacing:-.03em;margin:4px 0 0}
 .map-node .ex small{display:block;font-size:11px;line-height:1.5;font-family:inherit;color:var(--ticket-ink)}
 .sync-paper{background:#fff;padding:20px 20px 18px;box-shadow:0 1px 1px #00000019,0 5px 10px #20233125}.sync-paper .eyebrow{margin-bottom:14px}.sync-paper h2{font-size:22px;line-height:1.25;letter-spacing:-.04em;margin:0 0 12px}.sync-paper p{font-size:12px;line-height:1.7}.sync-paper .sync-code{font:20px/1.4 var(--mono);letter-spacing:.04em;margin:14px 0 6px;overflow-wrap:anywhere;user-select:all;-webkit-user-select:all}.sync-paper .sync-when{font-size:11px;color:#636366;margin-bottom:4px}.sync-paper input{width:100%;border:1px solid var(--line);border-radius:8px;background:#fff;padding:13px 14px;min-height:48px;color:var(--ink);font:16px var(--mono);margin:16px 0 0;text-transform:uppercase}.sync-paper .sync-actions{display:flex;gap:10px;margin-top:12px}.sync-paper .sync-actions .action{flex:1}.sync-paper .sync-note{font-size:11px;color:#636366;margin-top:12px;min-height:16px}.folio-note>.sync-paper{margin-top:0}.sync-paper .voice-guide{margin-top:26px;padding-top:18px;border-top:1px solid var(--line)}.sync-paper .voice-guide ol{margin:8px 0 0;padding-left:18px;font-size:12px;line-height:1.7}.sync-paper .voice-now{font-size:11px;color:#636366;margin-top:10px}
+
+/* Day one keeps the same folder paper, with only the next unopened tab visible. */
+html[data-flow=day1] .cabinet{display:block;flex:none;padding-bottom:24px}
+html[data-flow=day1] .file-folder{margin:0 0 8px;flex:none}
+html[data-flow=day1] .file-folder:last-child{display:block;min-height:0;flex:none}
+html[data-flow=day1] .file-folder:last-child:after{display:none}
+html[data-flow=day1] .file-folder>.folder-content,html[data-flow=day1] .file-folder:last-child>.folder-content{height:auto;min-height:0;flex:none}
+html[data-flow=day1] .is-open>.folder{height:76px;padding-top:45px;padding-bottom:10px}
+html[data-flow=day1] .is-open>.folder .folder-arrow{display:none}
+html[data-flow=day1] .folder-reader{height:auto;overflow:visible;overscroll-behavior-y:auto}
+html[data-flow=day1] .folder-reader>.lesson{min-height:0}
+html[data-flow=day1] .folder-reader .recall-deck{flex:none}
+html[data-flow=day1] .day1-summary{filter:none}
+.day1-summary-button{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:44px;padding:10px 20px;background:var(--folder-color);text-align:left;font-size:12px}
+.day1-summary-button>span:last-child{font-size:10px;line-height:1.5;text-align:right}
+.day1-next{filter:none!important;padding-top:4px}
+.day1-tab{display:flex;align-items:center;gap:10px;min-height:44px;max-width:100%;padding:11px 18px;background:var(--folder-color);clip-path:polygon(0 8px,8px 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%);text-align:left}
+.day1-tab .folder-title{font-size:14px}.day1-tab small{font-size:10px}
+.day1-flow-tools{padding:16px 20px}.day1-flow-tools .paper-tools{margin-top:10px}
+html[data-flow=day1] .pilot-listen{margin-bottom:20px}
+html[data-flow=day1] .structure-paper{margin-bottom:18px}
+html[data-flow=day1] .structure-rules{margin-bottom:14px}
+html[data-flow=day1] .lesson-actions{flex-wrap:wrap}
+html[data-flow=day1] .auto-status{width:100%}
+
+html[data-flow=day1] .structure-paper{padding:16px;margin-bottom:16px}
+html[data-flow=day1] .structure-paper h2{font-size:20px;line-height:1.3;margin-bottom:12px}
+html[data-flow=day1] .structure-paper .eyebrow{margin-bottom:10px}
+html[data-flow=day1] .structure-paper .paper-tools{margin-top:12px}
+html[data-flow=day1] .structure-rules{margin-bottom:12px}
+html[data-flow=day1] .structure-rules li+li{margin-top:8px}
+html[data-flow=day1] .skeleton{flex-wrap:nowrap;gap:4px;margin:8px 0 12px;overflow-x:auto}
+html[data-flow=day1] .skeleton .slot{min-width:0;padding:5px 4px;gap:3px}
+html[data-flow=day1] .skeleton .slot b{white-space:nowrap}
+html[data-flow=day1] .skeleton .slot span,html[data-flow=day1] .skeleton .slot small{overflow-wrap:anywhere;letter-spacing:0}
+
+@media print{.day1-tab,.day1-flow-tools,.day1-summary-button{display:none}}
 </style></head>
 <body><div class="shell"><main id="screen"></main></div><dialog class="profile-dialog" id="profile-dialog" aria-labelledby="profile-title"><h2 id="profile-title">누구의 폴더를 열까요?</h2><p>처음 고른 이름을 이 기기에서 기억해요.</p><div class="profile-choices"><button class="profile-choice" data-choose-profile="yeonho"><strong>연호</strong><span>독일어 · 영어</span></button><button class="profile-choice" data-choose-profile="junghyun"><strong>정현</strong><span>독일어</span></button></div><button data-profile-cancel hidden>돌아가기</button></dialog><div class="toast" role="status" aria-live="polite"></div>
-<script src="js/pilot.js?v=30"></script>
+<script src="js/pilot.js?v=31"></script>
 <script>
 (()=>{'use strict';
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
@@ -363,11 +400,11 @@ const months={};let lessonLoading=null;const quizMap={};
 function lesson(){if(language!=='de')return null;const m=months[month];if(!m||!m.days)return null;const d=m.days[selected];if(!d)return null;return (person==='junghyun'&&d.junghyun)||d.base}
 function deck(){const L=lesson();if(!L)return [];const w=L.week||{phrases:[],tasks:[]};return [...L.cards.map(c=>({kind:'word',...c})),...L.tasks.map(t=>({kind:'task',...t})),...w.phrases.map(p=>({kind:'word',de:p.de,ko:p.ko,plural:'',exde:'',exko:'',note:'이번 주 표현',week:true})),...w.tasks.map(t=>({kind:'task',...t,week:true}))]}
 function need(){const L=lesson();return L?L.cards.length+L.tasks.length:0}
-function loadMonth(m){if(months[m]||lessonLoading===m)return;lessonLoading=m;fetch('content/'+m+'.json?v=30').then(r=>r.ok?r.json():{days:{}}).catch(()=>({days:{}})).then(j=>{months[m]=j;if(lessonLoading===m)lessonLoading=null;if(view==='cards')pilotRecallStart();render()})}
+function loadMonth(m){if(months[m]||lessonLoading===m)return;lessonLoading=m;fetch('content/'+m+'.json?v=31').then(r=>r.ok?r.json():{days:{}}).catch(()=>({days:{}})).then(j=>{months[m]=j;if(lessonLoading===m)lessonLoading=null;if(view==='cards')pilotRecallStart();const resumed=day1RestorePosition();if(resumed)view=resumed;render();if(resumed)scrollToFile(resumed)})}
 function emptyLesson(label,title){return `<section class="lesson">${heading(label,title)}<div class="loose-paper"><p class="eyebrow">${language==='en'?'ENGLISH':'DEUTSCH'}</p><p class="prompt">${language==='en'?'영어 교재는 다음 판에서 이어집니다.':lessonLoading?'교재를 불러오고 있어요.':'이 날의 교재는 없어요.'}</p><p class="hint">${language==='en'?'언어를 Deutsch로 바꾸면 10월과 11월 교재가 열립니다.':'10월 1일부터 11월 30일까지의 날짜를 골라 주세요.'}</p></div><div class="lesson-actions"><button class="action secondary" data-view="calendar">쌓인 날들 →</button></div></section>`}
 function speechText(which){const L=lesson();if(!L)return '';if(which==='card'){const c=deck()[card];if(!c)return '';return c.kind==='word'?c.de+(c.exde?'. '+c.exde:''):c.type==='cloze'?c.prompt.replace(/_+/,c.options[c.answer]):c.options[c.answer]}if(which==='pilot-listen')return L.practice?.listen.text_de||'';if(which.startsWith('pilot-partner-'))return L.practice?.dialogue.turns[Number(which.slice(14))]?.partner_de||'';if(which.startsWith('ear'))return L.ear.text;return [...L.reading.layers.flatMap(l=>l.lines),...(L.reading.summit?L.reading.summit.lines:[])].join(' ')}
 let structureFolded=false,showMap=false,grammarMap=null,grammarMapLoading=false;
-function loadMap(){if(grammarMap||grammarMapLoading)return;grammarMapLoading=true;fetch('content/grammar-map.json?v=30').then(r=>r.ok?r.json():{nodes:[]}).catch(()=>({nodes:[]})).then(j=>{grammarMap=j;grammarMapLoading=false;render()})}
+function loadMap(){if(grammarMap||grammarMapLoading)return;grammarMapLoading=true;fetch('content/grammar-map.json?v=31').then(r=>r.ok?r.json():{nodes:[]}).catch(()=>({nodes:[]})).then(j=>{grammarMap=j;grammarMapLoading=false;render()})}
 function mapNode(n){const table=n.table?`<table>${n.table.map((row,i)=>`<tr>${row.map(c=>i===0?`<th>${esc(c)}</th>`:`<td lang="de">${esc(c)}</td>`).join('')}</tr>`).join('')}</table>`:'';const terms=n.terms?`<div class="terms">${n.terms.map(t=>`<p><span>${esc(t.ko)}</span><span>${esc(t.en||'')}</span><span>${esc(t.gloss||'')}</span></p>`).join('')}</div>`:'';const rules=(n.rules_ko||[]).length?`<ul>${n.rules_ko.map(r=>`<li>${esc(r)}</li>`).join('')}</ul>`:'';const en=n.english_ko?`<p class="hint">EN · ${esc(n.english_ko)}</p>`:'';const ex=(n.examples||[]).map(x=>`<p class="ex" lang="de">${esc(x.de)}<small lang="ko">${esc(x.ko)}${x.day?' · '+esc(String(x.day).replace('day-',''))+'일째':''}</small></p>`).join('');return `<div class="map-node" id="map-${esc(n.id)}"><h3>${esc(n.title_ko)}</h3>${terms}${table}${rules}${en}${ex}</div>`}
 function grammarMapHtml(){if(!showMap)return '';if(!grammarMap)return `<aside class="translation-slip grammar-map"><p class="eyebrow">STRUKTUR / 구조 지도</p><p class="hint">지도를 불러오는 중.</p></aside>`;const nodes=(grammarMap.nodes||[]).filter(n=>!n.month||n.month<=month);return `<aside class="translation-slip grammar-map" id="grammar-map"><p class="eyebrow">STRUKTUR / 구조 지도 · ${month.replace('-','.')}까지 ${nodes.length}마디</p>${nodes.map(mapNode).join('')||'<p class="hint">이 달에는 마디가 없다.</p>'}</aside>`}
 function structurePaper(L){const S=L.structure;if(!S)return '';const sk=S.skeleton&&S.skeleton.slots&&S.skeleton.slots.length?`<p class="eyebrow">SKELETT / 뼈대 문장</p><div class="skeleton" lang="de">${S.skeleton.slots.map(x=>`<div class="slot" data-role="${esc(x.role)}"><b>${esc(x.de)}</b><span lang="ko">${esc(x.role)}</span>${x.note?`<small lang="ko">${esc(x.note)}</small>`:''}</div>`).join('')}</div>`:'';const rules=(S.rules||[]).length?`<p class="eyebrow">REGEL / 규칙</p><ol class="structure-rules">${S.rules.map(r=>`<li>${esc(r)}</li>`).join('')}</ol>`:'';const en=S.english?`<p class="structure-english">${esc(S.english)}</p>`:'';const forms=(S.forms||[]).length?`<p class="eyebrow">FORMEN / 오늘 단어의 꼴</p><div class="structure-forms">${S.forms.map(f=>`<p><span lang="de">${esc(f.de)}</span><span>${esc(f.why)}</span></p>`).join('')}</div>`:'';const details=L.practice?`<details><summary>단어의 꼴과 영어 대조 더 보기</summary>${en}${forms}</details>`:en+forms;const body=S.mode==='example-first'?sk+rules+details:rules+sk+details;return `<article class="loose-paper structure-paper" data-folded="${structureFolded}"><p class="eyebrow">00 / STRUKTUR · 오늘의 뼈대${S.mode==='example-first'?' · 복습':''}</p><h2 lang="ko">${esc(S.title)}</h2><div class="structure-body">${body}<div class="paper-tools"><button data-map aria-expanded="${showMap}" aria-controls="grammar-map">${showMap?'구조 지도 접기':'구조 지도 ↗'}</button><button data-structure-fold>뼈대 접기</button></div></div>${structureFolded?`<div class="paper-tools"><button data-structure-fold>뼈대 펼치기 +</button></div>`:''}</article>${structureFolded?'':grammarMapHtml()}`}
@@ -392,17 +429,94 @@ let storage='study-files-v14:'+person+':';const initialRead=readPersonData(perso
 let data=initialRead.ok?initialRead.value:seed();language=person==='yeonho'&&data.preferences?.language==='en'?'en':'de';
 function persist(){if(storageReadBlocked){toast('기존 기록을 불러오지 못해 저장을 막았어요. 입력 내용을 복사한 뒤 다시 불러와 주세요.');return false}try{localStorage.setItem(storage+'data',JSON.stringify(data))}catch(e){toast('저장하지 못했어요. 저장 공간을 확인해 주세요.');return false}try{if(syncApi)syncApi.schedule()}catch(e){}return true}
 function state(day=selected){return data[language][day]||[false,false,false,false]}
-function count(day=selected){return state(day).filter(Boolean).length}
-function monthCount(){return Object.entries(data[language]).filter(([d,v])=>d.startsWith(month)&&v.every(Boolean)).length}
+function count(day=selected){return displayState(day).filter(Boolean).length}
+function monthCount(){const first=parse(month+'-01'),last=new Date(first.getFullYear(),first.getMonth()+1,0).getDate();let n=0;for(let day=1;day<=last;day++)if(count(month+'-'+String(day).padStart(2,'0'))===4)n++;return n}
 function fmt(day=selected){return new Intl.DateTimeFormat(language==='de'?'de-DE':'en-GB',{day:'numeric',month:'long',year:'numeric'}).format(parse(day))}
 function toast(s){$('.toast').textContent=s;clearTimeout(window.toastTimeout);window.toastTimeout=setTimeout(()=>$('.toast').textContent='',2600)}
 function folder(t,i){
- const active=view===t[0],done=i<4&&state()[i],tab=[14,168,62,192,20,148][i];
+ const active=view===t[0],done=i<4&&(day1Flow()?day1Done(t[0]):state()[i]),tab=[14,168,62,192,20,148][i];
  const meta=i<4?(done?'완료':lesson()?.practice?'연습':'05 MIN'):i===4?String(monthCount()).padStart(2,'0')+' DAYS':String(allNotes().length).padStart(2,'0')+' NOTES';
  return `<button class="folder" id="folder-${t[0]}" data-done="${done}" data-view="${t[0]}" aria-expanded="${active}" aria-controls="file-${t[0]}" style="--tab:${(tab+16)/4}%" aria-label="${t[1]} ${active?'접기':'펼치기'}"><svg viewBox="0 0 400 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 36 H${tab-8} Q${tab} 36 ${tab+5} 24 L${tab+11} 9 Q${tab+15} 1 ${tab+25} 1 H${tab+155} Q${tab+165} 1 ${tab+170} 12 L${tab+177} 27 Q${tab+183} 36 ${tab+194} 36 H400 V100 H0Z"/></svg><span class="folder-tab"><span class="folder-number">${String(i+1).padStart(2,'0')}</span><span class="folder-title">${t[1]}</span></span><span class="folder-meta"><span>${t[2]}</span><small>${meta}</small></span><span class="folder-arrow" aria-hidden="true">${active?'−':'+'}</span></button>`;
 }
 function home(){return ''}
+
+const day1Visits={};const day1PositionChecked=new Set();let day1FolderTransition=false;
+function day1Date(){return language==='de'&&selected==='2026-10-01'}
+function day1Flow(){return day1Date()&&['home','cards','reading','speaking','writing'].includes(view)}
+
+function day1SavePosition(){
+ if(!day1Flow()||!tasks.some(t=>t[0]===view)||!pilotConfig())return;
+ day1PositionChecked.add(person+':'+pilotId());const c=deck()[card],value=JSON.stringify({view,cardId:c?.id||null,card});
+ if(pilotValue('ui-position')!==value)pilotCommit('ui-position',value,{ui_only:true});
+}
+function day1RestorePosition(force=false){
+ if(!day1Date()||!pilotConfig())return null;
+ const key=person+':'+pilotId();if(!force&&day1PositionChecked.has(key))return null;day1PositionChecked.add(key);
+ if(params.has('view'))return allowed.includes(params.get('view'))?params.get('view'):'cards';
+ try{const saved=JSON.parse(pilotValue('ui-position','null'));if(!saved||!tasks.some(t=>t[0]===saved.view))return null;const d=deck(),byId=saved.cardId?d.findIndex(c=>c.id===saved.cardId):-1;card=byId>=0?byId:Math.max(0,Math.min(d.length-1,Math.trunc(Number(saved.card))||0));revealed=false;return saved.view}catch(e){return null}
+}
+function day1CaptureFocus(){
+ if(!day1Flow())return null;const el=document.activeElement;if(!el?.closest('#screen'))return null;
+ if(el.matches('textarea'))return {kind:'textarea',id:el.id,start:el.selectionStart,end:el.selectionEnd,direction:el.selectionDirection,activity:el.closest('.pilot-transfer,.pilot-write')?.classList.contains('pilot-transfer')?'transfer':'write'};
+ if(!el.matches('button'))return null;
+ return {kind:'button',attrs:[...el.attributes].filter(a=>a.name.startsWith('data-')).map(a=>[a.name,a.value]),id:el.id,activity:el.closest('.pilot-transfer,.pilot-write')?.classList.contains('pilot-transfer')?'transfer':el.closest('.pilot-write')?'write':null};
+}
+function day1RestoreFocus(saved){
+ if(!saved||!day1Flow())return;
+ let target=saved.kind==='textarea'?document.getElementById(saved.id):$$('#screen button').find(b=>saved.attrs.length?saved.attrs.every(([k,v])=>b.getAttribute(k)===v):saved.id&&b.id===saved.id);
+ if(target?.disabled)target=null;
+ if(!target&&saved.kind==='button'){
+  const attrs=Object.fromEntries(saved.attrs),action=attrs['data-pilot'];
+  if(action==='listen'){const b=$$('[data-pilot="listen"]').find(b=>b.dataset.question===attrs['data-question']);target=b?.closest('.quiz-item')?.querySelector('.hint')}
+  if(action==='turn')target=$$('[data-pilot="turn-model"]').find(b=>b.dataset.turn===attrs['data-turn']);
+ }
+ if(!target&&saved.activity)target=$('.pilot-'+saved.activity+' [data-pilot="model"]')||$('.pilot-'+saved.activity+' [data-pilot="revision"]');
+ if(!target)target=$('.recall-deck .card-count')||$('.file-folder.is-open [data-status]')||$('.file-folder.is-open .folder-inside-head');
+ if(!target||target.hidden)return;if(!target.matches('button,textarea'))target.tabIndex=-1;
+ target.focus({preventScroll:true});if(saved.kind==='textarea'&&target.matches('textarea'))target.setSelectionRange(saved.start,saved.end,saved.direction||'none');
+}
+
+function day1ReadQuestions(){return lesson()?.reading.layers.flatMap(l=>l.tasks||[])||[]}
+function day1ReadReady(){return day1ReadQuestions().every((q,i)=>activity().quiz?.['r'+i]!==undefined)}
+function pilotWriteReady(P=pilotConfig()){return P?.writing_mode==='single-transfer'&&day1Date()?!!pilotResult('first-transfer'):!!pilotResult('first-write')&&!!pilotResult('first-transfer')}
+function day1Evidence(){
+ const day=months['2026-10']?.days?.['2026-10-01'],L=person==='junghyun'&&day?.junghyun||day?.base,P=L?.practice;
+ if(!L||!P)return null;
+ const a=data.activity?.['de:2026-10-01']||{},id=StudyPilot.key('de','2026-10-01',P.course_id),result=f=>StudyPilot.read(data.practice,id,f),yes=f=>!!result(f)?.value;
+ const need=L.cards.length+L.tasks.length,questions=L.reading.layers.flatMap(l=>l.tasks||[]);
+ const cards=!!need&&(a.cards||[]).filter(i=>i<need).length>=need;
+ const reading=questions.every((q,i)=>a.quiz?.['r'+i]!==undefined)&&yes('self-reading');
+ const speaking=P.listen.checks.every((q,i)=>result('listen-'+i))&&P.dialogue.turns.every((t,i)=>yes('turn-'+i))&&yes('self-speaking');
+ const ready=P.writing_mode==='single-transfer'?!!result('first-transfer'):!!result('first-write')&&!!result('first-transfer');
+ return [cards,reading,speaking,ready&&yes('self-writing')];
+}
+function day1Done(id){return !!day1Evidence()?.[tasks.findIndex(t=>t[0]===id)]}
+function displayState(day=selected){return language==='de'&&day==='2026-10-01'?(day1Evidence()||[false,false,false,false]):state(day)}
+function day1Summary(id){
+ const P=pilotConfig();if(!P)return '교재를 불러오는 중';
+ const done=day1Done(id);
+ if(id==='cards')return `${Math.min(need(),activity().cards.filter(i=>i<need()).length)} / ${need()}장 확인${activity().revisit?.length?' · 다시 볼 카드 '+activity().revisit.length+'장':''}`;
+ if(id==='reading'){const total=day1ReadQuestions().length,answered=day1ReadQuestions().filter((q,i)=>activity().quiz?.['r'+i]!==undefined).length;return done?'본문과 답 확인 완료':`질문 ${answered} / ${total} · 읽기 확인 ${pilotValue('self-reading',false)?'완료':'남음'}`}
+ if(id==='speaking'){const heard=P.listen.checks.filter((q,i)=>pilotResult('listen-'+i)).length,said=P.dialogue.turns.filter((t,i)=>pilotResult('turn-'+i)).length;return done?'듣고 두 번 답하기 완료':`듣기 ${heard} / ${P.listen.checks.length} · 응답 ${said} / ${P.dialogue.turns.length}${heard===P.listen.checks.length&&said===P.dialogue.turns.length?' · 확인 남음':''}`}
+ return done?'내 문장과 기준 확인 완료':pilotWriteReady(P)?'내 문장 저장됨 · 기준 확인 남음':'새 상황에 내 문장 쓰기';
+}
+function day1Overall(){const done=tasks.filter(t=>day1Done(t[0])).length;return done===4?'오늘 네 가지 연습을 마쳤어요. 위의 요약을 누르면 다시 볼 수 있어요.':`${done} / 4개 연습 확인 · 다음 작은 탭을 누르면 이어집니다.`}
+function day1Header(t,i){
+ const html=folder(t,i);return html.replace('<button class="folder"','<div role="heading" aria-level="2" class="folder"').replace(' data-view="'+t[0]+'"','').replace(/ aria-expanded="[^"]*"/,'').replace(/ aria-controls="[^"]*"/,'').replace(/ aria-label="[^"]*"/,'').replace('</button>','</div>');
+}
+function day1Cabinet(){
+ const at=tasks.findIndex(t=>t[0]===view),visitKey=person+':'+language+':'+selected;
+ let reach=Math.max(day1Visits[visitKey]??-1,at);day1Visits[visitKey]=reach;
+ const folders=tasks.map((t,i)=>{
+  const active=i===at,visited=i<=reach,next=i===reach+1;
+  const header=active?day1Header(t,i):visited?`<button class="day1-summary-button" id="folder-${t[0]}" data-day1-open="${t[0]}" aria-expanded="false" aria-controls="file-${t[0]}"><span>${day1Done(t[0])?'✓ ':''}${t[1]}</span><span data-day1-summary="${t[0]}">${esc(day1Summary(t[0]))} ↗</span></button>`:`<button class="day1-tab" id="folder-${t[0]}" data-day1-open="${t[0]}" aria-expanded="false" aria-controls="file-${t[0]}" aria-label="다음 폴더, ${t[1]} 펼치기"><span class="folder-number">${String(i+1).padStart(2,'0')}</span><span class="folder-title">${t[1]}</span><small>펼치기 ↓</small></button>`;
+  return `<section class="file-folder ${active?'is-open':visited?'day1-summary':'day1-next'}" data-file="${t[0]}" ${active||visited||next?'':'hidden'}>${header}<div class="folder-content" id="file-${t[0]}" role="region" aria-labelledby="folder-${t[0]}" ${active?'':'hidden'}>${active?`<div class="folder-bookmark"><button class="punch" data-secret aria-label="숨은 문장 펼치기" aria-expanded="${ribbonOpen}" aria-controls="ribbon-stack"></button>${ribbons()}</div>`+({cards,reading,speaking,writing}[view])():''}</div></section>`;
+ }).join('');
+ return `${intro()}<section class="cabinet day1-cabinet" aria-label="오늘의 네 폴더">${folders}</section><div class="day1-flow-tools"><p class="hint" data-day1-overall>${esc(day1Overall())}</p><div class="paper-tools"><button data-view="calendar">쌓인 날들 ↗</button><button data-view="notes">전체 노트 ↗</button></div></div>`;
+}
+
 function cabinet(){
+ if(day1Flow())return day1Cabinet();
  const files=[...tasks,['calendar','쌓인 날들','한 장씩 쌓인 나의 시간','DAYS'],['notes','전체 노트','내가 남긴 문장 모아 보기','NOTES']];
  return `${intro()}<section class="cabinet" aria-label="학습과 기록, 여섯 폴더">${files.map((t,i)=>`<section class="file-folder ${view===t[0]?'is-open':''}" data-file="${t[0]}">${folder(t,i)}<div class="folder-content" id="file-${t[0]}" role="region" aria-labelledby="folder-${t[0]}" ${view===t[0]?'':'hidden'}>${view===t[0]?`<div class="folder-bookmark"><button class="punch" data-secret aria-label="숨은 문장 펼치기" aria-expanded="${ribbonOpen}" aria-controls="ribbon-stack"></button>${ribbons()}</div>`+({cards,reading,speaking,writing,calendar,notes}[view])():''}</div></section>`).join('')}</section>`;
 }
@@ -411,7 +525,7 @@ function progressSticker(){
 }
 function intro(){
  const locale=language==='de'?'de-DE':'en-GB',weekday=new Intl.DateTimeFormat(locale,{weekday:'long'}).format(parse(selected));
- return `<section class="folio-intro"><div class="greeting-line"><h1><button class="greeting-picker" data-profile aria-label="사용자 선택, 현재 ${profiles[person].name}">${profiles[person].greeting}</button></h1>${person==='yeonho'?`<label class="study-language"><span class="sr-only">학습 언어</span><select data-study-language aria-label="학습 언어"><option value="de" ${language==='de'?'selected':''}>Deutsch</option><option value="en" ${language==='en'?'selected':''}>English</option></select></label>`:''}</div><button class="folio-date" data-view="calendar" aria-label="${fmt()}, 쌓인 날들 펼치기"><time datetime="${selected}" lang="${language}">${fmt()}</time><span class="date-weekday" lang="${language}">${weekday}<span aria-hidden="true"> ↗</span></span></button><div class="progress-holder" aria-live="polite">${progressSticker()}</div><div class="paper-tools"><button data-pilot-start>새 7일 교재 시작 ↗</button><span class="hint">1~7일 · v30</span></div>${storageReadBlocked?`<aside class="loose-paper" role="alert"><p class="hint">${profiles[person].name}님의 기존 기록을 불러오지 못했습니다. 기존 기록을 보호하기 위해 새 입력은 저장하지 않습니다. 입력한 내용은 복사해 두세요.</p><div class="paper-tools"><button data-storage-retry>기존 기록 다시 불러오기 ↗</button></div></aside>`:''}</section>`;
+ return `<section class="folio-intro"><div class="greeting-line"><h1><button class="greeting-picker" data-profile aria-label="사용자 선택, 현재 ${profiles[person].name}">${profiles[person].greeting}</button></h1>${person==='yeonho'?`<label class="study-language"><span class="sr-only">학습 언어</span><select data-study-language aria-label="학습 언어"><option value="de" ${language==='de'?'selected':''}>Deutsch</option><option value="en" ${language==='en'?'selected':''}>English</option></select></label>`:''}</div><button class="folio-date" data-view="calendar" aria-label="${fmt()}, 쌓인 날들 펼치기"><time datetime="${selected}" lang="${language}">${fmt()}</time><span class="date-weekday" lang="${language}">${weekday}<span aria-hidden="true"> ↗</span></span></button><div class="progress-holder" aria-live="polite">${progressSticker()}</div>${day1Flow()?'':`<div class="paper-tools"><button data-pilot-start>새 7일 교재 시작 ↗</button><span class="hint">1~7일 · v31</span></div>`}${storageReadBlocked?`<aside class="loose-paper" role="alert"><p class="hint">${profiles[person].name}님의 기존 기록을 불러오지 못했습니다. 기존 기록을 보호하기 위해 새 입력은 저장하지 않습니다. 입력한 내용은 복사해 두세요.</p><div class="paper-tools"><button data-storage-retry>기존 기록 다시 불러오기 ↗</button></div></aside>`:''}</section>`;
 }
 function updatePageTail(){
  const last=$('.file-folder[data-file="notes"]');if(!last)return;
@@ -434,7 +548,7 @@ function chooseProfile(next){
  needsProfileChoice=false;document.documentElement.dataset.onboarding='false';
  notesQuery='';notesLanguage='all';notesType='all';notesLimit=40;card=0;revealed=false;showTranslation=false;peekSpeaking=false;peekWriting=false;selected=today;month=today.slice(0,7);noteReturn=false;remaining=duration;
  if(params.get('pilot')==='1'){selected='2026-10-'+String(Math.max(1,Math.min(7,Math.trunc(Number(params.get('day')))||1))).padStart(2,'0');month='2026-10';language='de'}
- $('#profile-dialog').close();commitView('cards');focusHeading();if(!storageReadBlocked&&!preferenceSaved)toast('이름 선택은 기억하지 못했지만 기존 학습 기록은 불러왔어요.');
+ $('#profile-dialog').close();const resumed=day1RestorePosition(true);commitView(resumed||'cards');focusHeading();if(!storageReadBlocked&&!preferenceSaved)toast('이름 선택은 기억하지 못했지만 기존 학습 기록은 불러왔어요.');
 }
 function changeLanguage(next){
  resetFolioPages();
@@ -457,7 +571,7 @@ function paperGrip(label,open=false){return `<button class="paper-peek" data-pee
 function heading(label,title){return `<div class="folder-inside-head"><span>${label} / ${selected.slice(5).replace('-','.')} · ${language.toUpperCase()}</span>${noteReturn?'<button data-view="notes">전체 노트로 ↗</button>':''}</div>`}
 function note(type,label,placeholder){const v=data.notes[language+':'+selected+':'+type]||'';return `<label class="note-label" for="${type}-note">${label}</label><textarea id="${type}-note" data-note="${type}" placeholder="${placeholder}">${esc(v)}</textarea><p class="save-status" aria-live="polite">${v?'이 브라우저에 저장됨':''}</p>`}
 function reading(){const L=lesson();if(L?.practice&&pilotNeedsReviewFirst())return pilotReviewGate(L,'02 / READ');if(!L)return emptyLesson('02 / READ','원문을 읽는 법.');const R=L.reading;let n=0;const layerHtml=(title,lines)=>`<p class="eyebrow layer-label">${title}</p>${lines.map(line=>`<p class="reading-line"><span class="line-number">${String(++n).padStart(2,'0')}</span><span lang="de">${esc(line)}</span></p>`).join('')}`;const layers=R.layers.map(l=>layerHtml(l.level==='A1'?'쉬운 판 / A1':l.level.startsWith('원문')?esc(l.level):'중간 판 / '+esc(l.level),l.lines)).join('');const S=R.summit;const summit=S&&S.text?`<div class="summit">${layerHtml('원문 / '+esc(S.source.author)+', '+esc(S.source.title)+(S.source.year?' ('+esc(S.source.year)+')':''),S.lines)}${S.note?`<p class="hint">${esc(S.note)}</p>`:''}<p class="credit">${S.source.license==='public-domain'?'퍼블릭 도메인':S.source.license==='cc-by-sa-4.0'?'CC BY-SA 4.0':esc(S.source.license)}${S.swiss?' · 스위스 표기(ss) 원문 그대로':''}${S.source.url?` · <a href="${esc(S.source.url)}" target="_blank" rel="noopener">출처 ↗</a>`:''}</p></div>`:'';const gloss=R.layers.flatMap(l=>l.gloss||[]),quiz=R.layers.flatMap(l=>l.tasks||[]);return `<section class="lesson">${heading('02 / READ','원문을 읽는 법.')}${themeLine(L)}<article class="loose-paper reading-paper">${paperGrip(showTranslation?'풀이 접기':'풀이 펼치기',showTranslation)}<p class="eyebrow">READING STAIR / 쉬운 판에서 원문까지</p><h2 lang="ko">${esc(L.theme)}</h2>${layers}${L.practice?`<details><summary>원문과 더 읽기 (선택)</summary>${(R.extraLayers||[]).map(l=>layerHtml(esc(l.level),l.lines)).join('')}${summit}</details>`:summit}<div class="paper-tools"><button data-speak="reading" aria-pressed="false">독일어 듣기 ↗</button><button data-translation aria-expanded="${showTranslation}" aria-controls="reading-translation">${showTranslation?'풀이 접기':'풀이 펼치기'} ${showTranslation?'−':'+'}</button></div></article><aside class="translation-slip" id="reading-translation" ${showTranslation?'':'hidden'}><p class="eyebrow">ON THE OTHER SIDE / 낱말 풀이</p>${gloss.length?gloss.map(g=>`<p><span class="number" lang="de">${esc(g.de)}</span> &nbsp;${esc(g.ko)}</p>`).join(''):'<p>이 날은 풀이 없이 원문만 읽는다.</p>'}</aside>${quiz.length?`<div class="reading-quiz">${quiz.map((t,i)=>quizItem(t,'r'+i)).join('')}</div>`:''}<div class="lesson-actions">${complete('reading')}<button class="action secondary" data-view="speaking">소리 내기 →</button></div><div class="note-paper">${note('reading','내가 간직할 표현','한 줄을 옮겨 적어 두세요.')}</div></section>`}
-function cards(){const L=lesson();if(L?.practice&&pilotNeedsReviewFirst())return pilotReviewGate(L,'01 / RECALL');if(!L)return emptyLesson('01 / RECALL','기억에서 꺼내기.');const d=deck();if(!d.length)return emptyLesson('01 / RECALL','기억에서 꺼내기.');if(card>=d.length)card=0;const c=d[card],total=d.length,base=need();const counter=`<span class="eyebrow">${String(card+1).padStart(2,'0')} / ${String(total).padStart(2,'0')}${c.week?' · 주간':''}</span>`;let body;if(c.kind==='word'){body=revealed?`<p class="answer" lang="de">${esc(c.de)}${c.plural?`<span class="plural">, ${esc(c.plural)}</span>`:''}</p>${c.exde?`<p class="example" lang="de">${esc(c.exde)}</p><p class="example-ko">${esc(c.exko)}</p>`:''}${c.note?`<p class="hint">${esc(c.note)}</p>`:''}<div class="paper-tools"><button data-speak="card" aria-pressed="false">독일어 듣기 ↗</button></div><div class="ratings" aria-label="기억 자기확인"><button data-rate="다시">다시 볼래요</button><button data-rate="기억">기억났어요</button><button data-rate="쉬움">쉬웠어요</button></div>`:`<p class="recall-question">${esc(c.ko)}</p>${c.exko?`<p class="recall-example">${esc(c.exko)}</p>`:''}<p class="flip-hint">카드를 누르면 뒤집혀요 ↻</p>`}else{const picked=(activity().answers||{})[card];body=`<p class="eyebrow">${c.type==='cloze'?'빈칸 채우기':'고르기'}${c.from?' · '+esc(c.from.replace('day-',''))+'일째에서':''}</p><p class="recall-question task-question" lang="${c.type==='cloze'?'de':'ko'}">${esc(c.prompt)}</p><div class="options" role="group">${c.options.map((o,i)=>`<button data-option="${i}" class="${picked===undefined?'':i===c.answer?'is-right':i===picked?'is-wrong':''}" aria-pressed="${picked===i}" lang="de" ${picked===undefined?'':'disabled'}>${esc(o)}</button>`).join('')}</div>${picked===undefined?'':`<p class="hint">${picked===c.answer?'맞았어요.':'정답은 '+esc(c.options[c.answer])+'.'} ${esc(c.point||'')}</p><div class="paper-tools"><button data-speak="card" aria-pressed="false">독일어 듣기 ↗</button><button data-card-turn="1">다음 장 →</button></div>`}`}return `<section class="lesson">${heading('01 / RECALL','기억에서 꺼내기.')}${themeLine(L)}${L.practice?.review_day?`<div class="loose-paper"><p class="hint">오늘은 일주일 점검입니다. 복습 전에 새 상황에서 먼저 써 보세요. 자료를 봤다면 함께 기록해 주세요.</p><div class="paper-tools"><button data-pilot="transfer-open">새 상황 먼저 시도하기 ↗</button></div></div>`:''}${structurePaper(L)}<article class="loose-paper recall-deck ${revealed&&c.kind==='word'?'recall-back':''}" data-kind="${c.kind}"><div class="card-count"><p class="eyebrow" style="margin:0">${c.kind==='task'?'답을 골라 보세요.':revealed?'꺼낸 표현':'한국어를 보고 먼저 말해 보세요.'}</p>${counter}</div>${c.kind==='word'?paperGrip(revealed?'한국어로 뒤집기':'표현으로 뒤집기',revealed):''}${body}</article>${L.extraCards?.length?`<details class="loose-paper"><summary>더 보고 싶은 낱말 ${L.extraCards.length}개 (선택)</summary>${L.extraCards.map(x=>`<p class="hint"><span lang="de">${esc(x.de)}</span> · ${esc(x.ko)}</p>`).join('')}</details>`:''}<p class="hint">기억 버튼은 자기확인입니다. ‘다시’로 고른 카드는 다음 진입 때 다시 보여요.</p><div class="card-turns"><button data-card-turn="-1">← ${card?'앞 장':'파일 넣기'}</button><span>${base<total&&card===base-1?'다음부터는 주간 복습':'옆으로 넘겨도 돼요'}</span><button data-card-turn="1">${card===total-1?'원문 읽기':'다음 장'} →</button></div><div class="lesson-actions">${complete('cards')}<button class="action secondary" data-view="reading">원문 읽기 →</button></div></section>`}
+function cards(){const L=lesson();if(L?.practice&&pilotNeedsReviewFirst())return pilotReviewGate(L,'01 / RECALL');if(!L)return emptyLesson('01 / RECALL','기억에서 꺼내기.');const d=deck();if(!d.length)return emptyLesson('01 / RECALL','기억에서 꺼내기.');if(card>=d.length)card=0;const c=d[card],total=d.length,base=need();const counter=`<span class="eyebrow">${String(card+1).padStart(2,'0')} / ${String(total).padStart(2,'0')}${c.week?' · 주간':''}</span>`;let body;if(c.kind==='word'){body=revealed?`<p class="answer" lang="de">${esc(c.de)}${c.plural?`<span class="plural">, ${esc(c.plural)}</span>`:''}</p>${c.exde?`<p class="example" lang="de">${esc(c.exde)}</p><p class="example-ko">${esc(c.exko)}</p>`:''}${c.note?`<p class="hint">${esc(c.note)}</p>`:''}<div class="paper-tools"><button data-speak="card" aria-pressed="false">독일어 듣기 ↗</button></div><div class="ratings" aria-label="기억 자기확인"><button data-rate="다시">다시 볼래요</button><button data-rate="기억">기억났어요</button><button data-rate="쉬움">쉬웠어요</button></div>`:`<p class="recall-question">${esc(c.ko)}</p>${c.exko?`<p class="recall-example">${esc(c.exko)}</p>`:''}<p class="flip-hint">카드를 누르면 뒤집혀요 ↻</p>`}else{const picked=(activity().answers||{})[card];body=`<p class="eyebrow">${c.type==='cloze'?'빈칸 채우기':'고르기'}${c.from?' · '+esc(c.from.replace('day-',''))+'일째에서':''}</p><p class="recall-question task-question" lang="${c.type==='cloze'?'de':'ko'}">${esc(c.prompt)}</p><div class="options" role="group">${c.options.map((o,i)=>`<button data-option="${i}" class="${picked===undefined?'':i===c.answer?'is-right':i===picked?'is-wrong':''}" aria-pressed="${picked===i}" lang="de" ${picked===undefined?'':'disabled'}>${esc(o)}</button>`).join('')}</div>${picked===undefined?'':`<p class="hint">${picked===c.answer?'맞았어요.':'정답은 '+esc(c.options[c.answer])+'.'} ${esc(c.point||'')}</p><div class="paper-tools"><button data-speak="card" aria-pressed="false">독일어 듣기 ↗</button><button data-card-turn="1">다음 장 →</button></div>`}`}return `<section class="lesson">${heading('01 / RECALL','기억에서 꺼내기.')}${themeLine(L)}${L.practice?.review_day?`<div class="loose-paper"><p class="hint">오늘은 일주일 점검입니다. 복습 전에 새 상황에서 먼저 써 보세요. 자료를 봤다면 함께 기록해 주세요.</p><div class="paper-tools"><button data-pilot="transfer-open">새 상황 먼저 시도하기 ↗</button></div></div>`:''}${structurePaper(L)}<article class="loose-paper recall-deck ${revealed&&c.kind==='word'?'recall-back':''}" data-kind="${c.kind}"><div class="card-count"><p class="eyebrow" style="margin:0">${c.kind==='task'?'답을 골라 보세요.':revealed?'꺼낸 표현':'한국어를 보고 먼저 말해 보세요.'}</p>${counter}</div>${c.kind==='word'?paperGrip(revealed?'한국어로 뒤집기':'표현으로 뒤집기',revealed):''}${body}</article>${L.extraCards?.length?`<details class="loose-paper"><summary>더 보고 싶은 낱말 ${L.extraCards.length}개 (선택)</summary>${L.extraCards.map(x=>`<p class="hint"><span lang="de">${esc(x.de)}</span> · ${esc(x.ko)}</p>`).join('')}</details>`:''}<p class="hint">기억 버튼은 자기확인입니다. ‘다시’로 고른 카드는 다음 진입 때 다시 보여요.</p><div class="card-turns"><button data-card-turn="-1" ${day1Flow()&&!card?'disabled':''}>← ${card?'앞 장':day1Flow()?'첫 장':'파일 넣기'}</button><span>${base<total&&card===base-1?'다음부터는 주간 복습':'옆으로 넘겨도 돼요'}</span><button data-card-turn="1" ${day1Flow()&&card===total-1?'disabled':''}>${card===total-1?(day1Flow()?'마지막 장':'원문 읽기'):'다음 장'} →</button></div><div class="lesson-actions">${complete('cards')}<button class="action secondary" data-view="reading">원문 읽기 →</button></div></section>`}
 
 function pilotConfig(){return lesson()?.practice||null}
 function pilotNeedsReviewFirst(){return pilotConfig()?.review_day&&!pilotResult('first-transfer')&&!pilotValue('review-before',false)}
@@ -481,15 +595,15 @@ function pilotSpeaking(L){
  const P=L.practice,done=pilotListenDone(P),textMode=pilotValue('listen-text',false),transcript=pilotValue('view-transcript',false)||textMode,ready=pilotValue('heard-listen',false)||textMode;
  const questions=P.listen.checks.map((q,i)=>{const r=pilotResult('listen-'+i),picked=r?.value;return `<div class="quiz-item"><p class="quiz-prompt">${esc(q.prompt_ko)}</p><div class="options" role="group" aria-label="듣기 질문 ${i+1}">${q.options.map((o,n)=>`<button data-pilot="listen" data-question="${i}" data-choice="${n}" aria-pressed="${picked===n}" class="${r?(n===q.answer?'is-right':picked===n?'is-wrong':''):''}" ${r||!ready?'disabled':''}>${esc(o)}</button>`).join('')}</div>${r?`<p class="hint">첫 답: ${esc(q.options[picked]||'')} · ${picked===q.answer?'맞았어요.':'정답: '+esc(q.options[q.answer])+'.'} ${esc(q.why_ko)}${r.assisted?' · 대본을 본 뒤 답했습니다.':''}</p>`:''}</div>`}).join('');
  const dialogue=P.dialogue.turns.map((t,i)=>{const unlocked=i===0||pilotResult('turn-'+(i-1)),attempt=pilotResult('turn-'+i),seen=pilotValue('model-turn-'+i,false);if(!unlocked)return `<p class="hint">첫 질문에 소리 내어 답한 뒤 다음 질문이 열립니다.</p>`;return `<article><p class="eyebrow">${i+1} / ${P.dialogue.turns.length} · ${esc(t.cue_ko)}</p><p class="prompt mono" lang="de">${esc(t.partner_de)}</p><div class="paper-tools"><button data-speak="pilot-partner-${i}">상대 질문 듣기 ↗</button></div><p class="hint">예시를 보기 전에 소리 내어 답해 보세요. 말한 사실은 본인이 확인합니다.</p><div class="paper-tools"><button data-pilot="turn" data-turn="${i}" ${attempt?'disabled':''}>${attempt?'첫 응답 시도 기록됨':'소리 내어 답했어요 ✓'}</button>${attempt?`<button data-pilot="turn-model" data-turn="${i}" aria-expanded="${seen}">${seen?'예시 확인 기록됨':'답한 뒤 예시 보기 +'}</button>`:''}</div>${seen?`<p class="prompt-translation" lang="de">${esc(t.model_de)}</p><p class="hint">예시를 본 기록이 남습니다. 다시 말해 보세요.</p><div class="paper-tools"><button data-pilot="retry-turn" data-turn="${i}">예시를 참고해 다시 말했어요 ✓</button></div>${pilotResult('retry-turn-'+i)?`<p class="hint">다시 말하기 ${pilotValue('retry-turn-'+i)}회 (자기확인)</p>`:''}`:''}</article>`}).join('');
- const allTurns=P.dialogue.turns.every((t,i)=>pilotResult('turn-'+i));
- return `<section class="lesson" data-pilot="true">${heading('03 / SPEAK','듣고 답하기.')}${themeLine(L)}<div class="loose-paper pilot-listen"><p class="eyebrow">먼저 대본 없이 듣기</p><p class="hint">${esc(P.listen.prompt_ko)}</p><p class="hint">${ready?(textMode?'글을 보고 하는 연습입니다. 자료 도움으로 기록해요.':'음성을 끝까지 들었어요. 이제 두 질문에 답해 보세요.'):'음성을 끝까지 들으면 질문이 열립니다.'}</p><div class="paper-tools"><button data-speak="pilot-listen">독일어 듣기 ↗</button><button data-speak="pilot-listen" data-rate-speed="0.8">느리게 듣기 ↗</button></div><div class="paper-tools"><button data-pilot="text-mode">음성을 쓸 수 없어요 · 글로 연습하기</button></div>${questions}<div class="paper-tools"><button data-pilot="transcript" aria-expanded="${transcript}" ${done?'':'disabled'}>${done?'첫 답 뒤 대본 보기 +':'두 질문에 먼저 답해 주세요'}</button></div>${transcript?`<p class="prompt-translation" lang="de">${esc(P.listen.text_de)}</p><p class="hint">대본을 본 기록이 남았습니다. 첫 답은 보존됩니다.</p>`:''}<p class="save-status" aria-live="polite" data-pilot-status></p></div><div class="loose-paper pilot-dialogue"><p class="eyebrow">대화 / 소리 내어 두 번 답하기</p><p class="hint">${esc(P.dialogue.situation_ko)}</p>${dialogue}${allTurns?pilotCriteria(P.dialogue.success_ko):''}<div class="lesson-actions"><button class="action" data-pilot="speak-done" ${allTurns?'':'disabled'}>두 번 답하고 기준을 확인했어요 ✓</button></div><p class="save-status">자기확인 기록입니다. 듣기 재생은 말하기 완료나 능력 등급이 아닙니다.</p></div><div class="lesson-actions">${complete('speaking')}<button class="action secondary" data-view="writing">한 문장 남기기 →</button></div></section>`;
+ const allTurns=P.dialogue.turns.every((t,i)=>pilotResult('turn-'+i)),speakReady=allTurns&&(!day1Date()||pilotListenDone(P));
+ return `<section class="lesson" data-pilot="true">${heading('03 / SPEAK','듣고 답하기.')}${themeLine(L)}<div class="loose-paper pilot-listen"><p class="eyebrow">먼저 대본 없이 듣기</p><p class="hint">${esc(P.listen.prompt_ko)}</p><p class="hint">${ready?(textMode?'글을 보고 하는 연습입니다. 자료 도움으로 기록해요.':'음성을 끝까지 들었어요. 이제 두 질문에 답해 보세요.'):'음성을 끝까지 들으면 질문이 열립니다.'}</p><div class="paper-tools"><button data-speak="pilot-listen">독일어 듣기 ↗</button><button data-speak="pilot-listen" data-rate-speed="0.8">느리게 듣기 ↗</button></div><div class="paper-tools"><button data-pilot="text-mode">음성을 쓸 수 없어요 · 글로 연습하기</button></div>${questions}<div class="paper-tools"><button data-pilot="transcript" aria-expanded="${transcript}" ${done?'':'disabled'}>${done?'첫 답 뒤 대본 보기 +':'두 질문에 먼저 답해 주세요'}</button></div>${transcript?`<p class="prompt-translation" lang="de">${esc(P.listen.text_de)}</p><p class="hint">대본을 본 기록이 남았습니다. 첫 답은 보존됩니다.</p>`:''}<p class="save-status" aria-live="polite" data-pilot-status></p></div><div class="loose-paper pilot-dialogue"><p class="eyebrow">대화 / 소리 내어 두 번 답하기</p><p class="hint">${esc(P.dialogue.situation_ko)}</p>${dialogue}${allTurns?pilotCriteria(P.dialogue.success_ko):''}<div class="lesson-actions"><button class="action" data-pilot="speak-done" ${speakReady?'':'disabled'}>두 번 답하고 기준을 확인했어요 ✓</button></div><p class="save-status">자기확인 기록입니다. 듣기 재생은 말하기 완료나 능력 등급이 아닙니다.</p></div><div class="lesson-actions">${complete('speaking')}<button class="action secondary" data-view="writing">한 문장 남기기 →</button></div></section>`;
 }
 function pilotWritingPart(P,type){
  if(type==='write'&&pilotNeedsReviewFirst())return `<div class="loose-paper writing-paper pilot-write">${pilotReviewNote()}</div>`;
- const item=type==='write'?P.write:P.transfer,first=pilotResult('first-'+type),seen=pilotValue('seen-model-'+type,false),revised=pilotResult('revision-'+type),draft=pilotValue('draft-'+type,first?.value||''),label=type==='write'?'오늘의 쓰기':'새 상황 점검';
+ const item=type==='write'?P.write:P.transfer,first=pilotResult('first-'+type),seen=pilotValue('seen-model-'+type,false),revised=pilotResult('revision-'+type),draft=pilotValue('draft-'+type,first?.value||''),label=type==='write'?'오늘의 쓰기':day1Date()&&P.writing_mode==='single-transfer'?'나의 한 문장':'새 상황 점검';
  return `<div class="loose-paper writing-paper pilot-${type}"><p class="eyebrow">${label}</p><p class="situation">${esc(item.prompt_ko)}</p>${type==='transfer'?'<p class="hint">앞에서 연습한 표현을 새 상황에 써 보세요. 먼저 도움 없이 시도해 주세요.</p>':''}${!first?`<label class="note-label" for="pilot-${type}">먼저 내 문장을 적어 보세요.</label><textarea id="pilot-${type}" data-pilot-input="draft-${type}" lang="de" placeholder="독일어로 적어 주세요.">${esc(draft)}</textarea><p class="save-status" aria-live="polite" data-pilot-status></p><label class="hint"><input type="checkbox" data-pilot-help> 이번 첫 답에 앞의 규칙·대본·사전 도움을 받았어요.</label><div class="lesson-actions"><button class="action" data-pilot="first" data-kind="${type}">첫 문장 저장하고 기준 보기 ↗</button></div>`:`<p class="note-label">첫 시도 (보존됨${first.assisted?' · 자료 도움 있음':' · 자료 도움 없음으로 자기확인'})</p><p class="note-body" lang="de">${esc(first.value)}</p>${pilotCriteria(item.success_ko)}<div class="paper-tools"><button data-pilot="model" data-kind="${type}" aria-expanded="${seen}">${seen?'예시 확인 기록됨':'첫 시도 뒤 예시 보기 +'}</button></div>${seen?`<p class="prompt-translation" lang="de">${esc(item.model_de)}</p><p class="hint">예시를 본 기록이 남습니다.</p>`:''}<label class="note-label" for="pilot-revision-${type}">기준과 대조한 수정본 (선택)</label><textarea id="pilot-revision-${type}" data-pilot-input="draft-revision-${type}" lang="de">${esc(pilotValue('draft-revision-'+type,revised?.value||''))}</textarea><p class="save-status" aria-live="polite" data-pilot-status>${revised?'수정본 저장됨 · 첫 시도는 그대로 보존됩니다.':''}</p><div class="paper-tools"><button data-pilot="revision" data-kind="${type}">수정본 따로 저장 ✓</button></div>`}</div>`;
 }
-function pilotWriting(L){const P=L.practice,all=pilotResult('first-write')&&pilotResult('first-transfer');return `<section class="lesson" data-pilot="true" data-review="${P.review_day===true}">${heading('04 / WRITE','내 문장과 새 상황.')}${themeLine(L)}${pilotWritingPart(P,'write')}${pilotWritingPart(P,'transfer')}<div class="lesson-actions"><button class="action" data-pilot="write-done" ${all?'':'disabled'}>두 첫 시도와 기준을 확인했어요 ✓</button><button class="action secondary" data-view="home">파일 덮기 →</button></div>${complete('writing')}<p class="hint">정답률이나 B1 등급을 자동 판정하지 않습니다. 첫 시도·도움 여부·수정본을 따로 남깁니다.</p></section>`}
+function pilotWriting(L){const P=L.practice;if(day1Date()&&P.writing_mode==='single-transfer'){const ready=pilotWriteReady(P);return `<section class="lesson" data-pilot="true">${heading('04 / WRITE','나의 한 문장.')}${themeLine(L)}${pilotWritingPart(P,'transfer')}<div class="lesson-actions"><button class="action" data-pilot="write-done" ${ready?'':'disabled'}>내 문장을 기준과 대조했어요 ✓</button></div>${complete('writing')}<p class="hint">첫 문장과 수정본은 따로 남습니다. 예시는 첫 문장을 저장한 뒤 볼 수 있어요.</p></section>`}const all=pilotResult('first-write')&&pilotResult('first-transfer');return `<section class="lesson" data-pilot="true" data-review="${P.review_day===true}">${heading('04 / WRITE','내 문장과 새 상황.')}${themeLine(L)}${pilotWritingPart(P,'write')}${pilotWritingPart(P,'transfer')}<div class="lesson-actions"><button class="action" data-pilot="write-done" ${all?'':'disabled'}>두 첫 시도와 기준을 확인했어요 ✓</button><button class="action secondary" data-view="home">파일 덮기 →</button></div>${complete('writing')}<p class="hint">정답률이나 B1 등급을 자동 판정하지 않습니다. 첫 시도·도움 여부·수정본을 따로 남깁니다.</p></section>`}
 function pilotAction(b){
  const P=pilotConfig();if(!P||selected>today)return;
  const action=b.dataset.pilot,type=b.dataset.kind;
@@ -504,8 +618,8 @@ function pilotAction(b){
  if(action==='first'&&['write','transfer'].includes(type)){const el=$('#pilot-'+type),value=el?.value.trim();if(!value){toast('먼저 내 문장을 적어 주세요.');el?.focus();return}const assisted=!!el.closest('.writing-paper').querySelector('[data-pilot-help]')?.checked||!!pilotValue('review-before',false);if(pilotCommit('first-'+type,value,{assisted,self_report:true}))render();return}
  if(action==='model'&&['write','transfer'].includes(type)){if(!pilotResult('first-'+type))return;if(pilotCommit('seen-model-'+type,true))render();return}
  if(action==='revision'&&['write','transfer'].includes(type)){if(!pilotResult('first-'+type))return;const el=$('#pilot-revision-'+type),value=el?.value.trim();if(!value){toast('수정한 문장을 적어 주세요.');el?.focus();return}if(pilotCommit('revision-'+type,value,{assisted:pilotValue('seen-model-'+type,false)})){render();toast('수정본을 따로 저장했어요.')}return}
- if(action==='speak-done'&&P.dialogue.turns.every((t,i)=>pilotResult('turn-'+i))){if(pilotCommit('self-speaking',true,{self_report:true}))markComplete('speaking');return}
- if(action==='write-done'&&pilotResult('first-write')&&pilotResult('first-transfer')){if(pilotCommit('self-writing',true,{self_report:true}))markComplete('writing');return}
+ if(action==='speak-done'&&P.dialogue.turns.every((t,i)=>pilotResult('turn-'+i))&&(!day1Date()||pilotListenDone(P))){if(pilotCommit('self-speaking',true,{self_report:true}))markComplete('speaking');return}
+ if(action==='write-done'&&pilotWriteReady(P)){if(pilotCommit('self-writing',true,{self_report:true}))markComplete('writing');return}
 }
 document.addEventListener('input',e=>{const field=e.target.dataset?.pilotInput;if(!field||!pilotConfig())return;const ok=pilotCommit(field,e.target.value),status=e.target.nextElementSibling;if(status?.matches('[data-pilot-status]'))status.textContent=ok?'입력 내용 저장됨':'저장하지 못했어요. 이 화면을 닫기 전에 내용을 복사해 주세요.'});
 
@@ -516,7 +630,7 @@ const stickerKinds=['label','oval','ticket','tag'];
 function stickerFor(day){return data.stickers?.[language+':'+day]||stickerKinds[Number(day.slice(-2))%4]}
 function stampDay(){const stamp=$('.calendar-day[data-date="'+selected+'"]');if(stamp&&count()===4&&!reducedMotion.matches)stamp.animate([{transform:'translateY(-9px) scale(1.28) rotate(-10deg)',opacity:.2},{transform:'translateY(0) scale(.96) rotate(1deg)',opacity:1,offset:.7},{transform:'none',opacity:1}],{duration:340,easing:'ease-out'})}
 function stickerDrawer(){return `<div class="sticker-drawer"><p>${count()===4?'오늘 붙일 스티커를 골라 보세요.':'네 가지 연습을 마치면 스티커가 붙어요.'}</p><div class="sticker-choices" aria-label="날짜 스티커">${stickerKinds.map((kind,i)=>`<button class="sticker-choice stamp-${kind}" data-sticker="${kind}" aria-label="${['테두리 라벨','타원','티켓','꼬리표'][i]}" aria-pressed="${stickerFor(selected)===kind}" ${count()===4?'':'disabled'}>${selected.slice(-2)}</button>`).join('')}</div></div>`}
-function calendar(){const first=parse(month+'-01'),offset=(first.getDay()+6)%7,last=new Date(first.getFullYear(),first.getMonth()+1,0).getDate();let cells=(language==='de'?['Mo','Di','Mi','Do','Fr','Sa','So']:['Mo','Tu','We','Th','Fr','Sa','Su']).map(w=>`<span class="weekday">${w}</span>`).join('');for(let i=0;i<offset;i++)cells+='<span></span>';for(let n=1;n<=last;n++){const d=month+'-'+String(n).padStart(2,'0'),c=count(d);cells+=`<button class="calendar-day ${c===4?'done stamped stamp-'+stickerFor(d):c?'partial':''}" data-date="${d}" aria-label="${fmt(d)}, ${c}개 완료" aria-pressed="${d===selected}">${n}</button>`}return `<section class="lesson">${heading('ARCHIVE','한 장씩 쌓인 날들.')}<div class="month-paper"><div class="month-control"><h2>${new Intl.DateTimeFormat(language==='de'?'de-DE':'en-GB',{month:'long',year:'numeric'}).format(first)}</h2><div><button data-month="-1" aria-label="이전 달">←</button><button data-today aria-label="오늘로 이동">·</button><button data-month="1" aria-label="다음 달">→</button></div></div><div class="month-grid">${cells}</div><p class="calendar-legend">스티커는 네 가지 활동 완료 · 작은 점은 진행 중 · 능력 등급이 아닙니다.</p></div><div class="notes-entry"><button class="action secondary" data-view="notes">전체 노트 모아 보기 <span>↗</span></button></div><div class="daily-checks"><h3 class="day-label">${fmt()} <span class="mono">/ ${count()} OF 4</span></h3><p class="record-hint">활동을 마친 기록입니다. 언어 능력 판정은 아니에요. 눌러서 고칠 수 있어요.</p>${tasks.map((t,i)=>`<button class="check-task" data-complete="${i}" aria-pressed="${state()[i]}" ${selected>today?'disabled':''}><span>${t[1]}</span><span class="check-mark">${state()[i]?'✓':'○'}</span></button>`).join('')}</div>${dailyNotes()}${stickerDrawer()}${syncPaper()}<div class="lesson-actions"><button class="action" data-view="cards">이날 파일 펼치기 <span>↗</span></button></div></section>`}
+function calendar(){const first=parse(month+'-01'),offset=(first.getDay()+6)%7,last=new Date(first.getFullYear(),first.getMonth()+1,0).getDate();let cells=(language==='de'?['Mo','Di','Mi','Do','Fr','Sa','So']:['Mo','Tu','We','Th','Fr','Sa','Su']).map(w=>`<span class="weekday">${w}</span>`).join('');for(let i=0;i<offset;i++)cells+='<span></span>';for(let n=1;n<=last;n++){const d=month+'-'+String(n).padStart(2,'0'),c=count(d);cells+=`<button class="calendar-day ${c===4?'done stamped stamp-'+stickerFor(d):c?'partial':''}" data-date="${d}" aria-label="${fmt(d)}, ${c}개 완료" aria-pressed="${d===selected}">${n}</button>`}return `<section class="lesson">${heading('ARCHIVE','한 장씩 쌓인 날들.')}<div class="month-paper"><div class="month-control"><h2>${new Intl.DateTimeFormat(language==='de'?'de-DE':'en-GB',{month:'long',year:'numeric'}).format(first)}</h2><div><button data-month="-1" aria-label="이전 달">←</button><button data-today aria-label="오늘로 이동">·</button><button data-month="1" aria-label="다음 달">→</button></div></div><div class="month-grid">${cells}</div><p class="calendar-legend">스티커는 네 가지 활동 완료 · 작은 점은 진행 중 · 능력 등급이 아닙니다.</p></div><div class="notes-entry"><button class="action secondary" data-view="notes">전체 노트 모아 보기 <span>↗</span></button></div><div class="daily-checks"><h3 class="day-label">${fmt()} <span class="mono">/ ${count()} OF 4</span></h3><p class="record-hint">${day1Date()?'실제 연습 기록으로 표시합니다. 눌러서 해당 폴더를 열 수 있어요.':'활동을 마친 기록입니다. 언어 능력 판정은 아니에요. 눌러서 고칠 수 있어요.'}</p>${tasks.map((t,i)=>`<button class="check-task" ${day1Date()?`data-view="${t[0]}"`:`data-complete="${i}"`} aria-pressed="${displayState()[i]}" ${selected>today?'disabled':''}><span>${t[1]}</span><span class="check-mark">${displayState()[i]?'✓':'○'}</span></button>`).join('')}</div>${dailyNotes()}${stickerDrawer()}${syncPaper()}<div class="lesson-actions"><button class="action" data-view="cards">이날 파일 펼치기 <span>↗</span></button></div></section>`}
 // Completion and notes keep the existing person-specific storage keys.
 const accents=[['mint','파스텔 민트','#e3f5ec'],['pink','파스텔 핑크','#f9e5ed']];
 let notesQuery='',notesLanguage='all',notesType='all',notesLimit=40,noteReturn=false;
@@ -530,33 +644,35 @@ function applyAccent(){
 }
 function activity(){if(!data.activity)data.activity={};const id=language+':'+selected;const a=data.activity[id]||(data.activity[id]={cards:[],readingSeconds:0,readingLines:[]});if(!a.cards)a.cards=[];if(!a.readingLines)a.readingLines=[];return a}
 function completionHint(id){
+ if(day1Flow())return day1Done(id)?'연습을 확인했어요':id==='reading'?'본문을 읽고 질문에 답한 뒤 확인해 주세요.':day1Summary(id);
  if(selected>today)return '아직 오지 않은 날이에요.';
  if(state()[tasks.findIndex(t=>t[0]===id)])return '캘린더에 기록했어요';
  if(id==='cards')return `장 ${activity().cards.filter(i=>i<need()).length} / ${need()} 확인하면 자동 체크`;
  return {reading:'끝까지 읽으면 자동 체크',speaking:'소리 내어 말한 뒤 직접 확인해 주세요',writing:'글을 남기면 자동 체크'}[id];
 }
-function complete(id){const done=state()[tasks.findIndex(t=>t[0]===id)];return `<div class="auto-status ${done?'is-done':''}" data-status="${id}" role="status"><span class="status-dot" aria-hidden="true"></span><span>${completionHint(id)}</span></div>`}
+function complete(id){const done=day1Flow()?day1Done(id):state()[tasks.findIndex(t=>t[0]===id)];return `<div class="auto-status ${done?'is-done':''}" data-status="${id}" role="status"><span class="status-dot" aria-hidden="true"></span><span>${completionHint(id)}</span></div>`}
 
 function refreshFolderBadges(){
+ if(day1Flow()){$$('[data-day1-summary]').forEach(el=>el.textContent=day1Summary(el.dataset.day1Summary)+' ↗');const overall=$('[data-day1-overall]');if(overall)overall.textContent=day1Overall();const active=$('.file-folder.is-open'),badge=active?.querySelector('.folder-meta small');if(badge)badge.textContent=day1Done(active.dataset.file)?'완료':'연습';const progress=$('.progress-holder');if(progress)progress.innerHTML=progressSticker();return}
  $$('.folder').forEach((b,i)=>{const done=i<4&&state()[i];b.dataset.done=String(done);const badge=b.querySelector('.folder-meta small');if(badge)badge.textContent=i<4?(done?'완료':lesson()?.practice?'연습':'05 MIN'):i===4?String(monthCount()).padStart(2,'0')+' DAYS':String(allNotes().length).padStart(2,'0')+' NOTES'});
  const progress=$('.progress-holder');if(progress)progress.innerHTML=progressSticker();
 }
 
 function refreshCompletion(id){const el=$('[data-status="'+id+'"]');if(el)el.outerHTML=complete(id)}
 function markComplete(id){
- if(selected>today)return;const i=tasks.findIndex(t=>t[0]===id);if(i<0||state()[i])return;
+ if(selected>today)return;const i=tasks.findIndex(t=>t[0]===id);if(i<0)return;if(state()[i]){refreshCompletion(id);refreshFolderBadges();return;}
  const previous=[...state()],next=[...previous];next[i]=true;data[language][selected]=next;
  if(!persist()){data[language][selected]=previous;refreshCompletion(id);return}
  refreshCompletion(id);refreshFolderBadges();toast(tasks[i][1]+' · 캘린더에 기록했어요.');
 }
 function recordCard(){
- if(selected>today)return;const a=activity();if(!a.cards.includes(card)){a.cards.push(card);persist()}
+ if(selected>today)return;const a=activity();if(!a.cards.includes(card)){a.cards.push(card);if(!persist()){a.cards.pop();refreshCompletion('cards');return}}
  if(need()&&a.cards.filter(i=>i<need()).length>=need())markComplete('cards');refreshCompletion('cards');
 }
 let lastReadingTick=performance.now();
 setInterval(()=>{
  const now=performance.now(),elapsed=Math.min(.75,(now-lastReadingTick)/1000);lastReadingTick=now;
- if(needsProfileChoice||$('#profile-dialog').open||view!=='reading'||selected>today||state()[1]||document.hidden||navigationBusy||ribbonOpen)return;
+ if(day1Flow()||needsProfileChoice||$('#profile-dialog').open||view!=='reading'||selected>today||state()[1]||document.hidden||navigationBusy||ribbonOpen)return;
  const lines=lesson()?.practice?$$('.reading-paper > .reading-line'):$$('.reading-line');if(!lines.length)return;
  const a=activity();let visible=false;
  const reader=$('.folder-reader')?.getBoundingClientRect();lines.forEach((line,i)=>{const r=line.getBoundingClientRect(),height=Math.max(0,Math.min(innerHeight,reader?.bottom??innerHeight,r.bottom)-Math.max(0,reader?.top??0,r.top));if(line.checkVisibility()&&r.height>0&&height>=r.height*.75){visible=true;if(!a.readingLines.includes(i))a.readingLines.push(i)}});
@@ -564,7 +680,7 @@ setInterval(()=>{
  if(a.readingSeconds>=12&&a.readingLines.length===lines.length)markComplete('reading');
 },500);
 function allNotes(){
- const pilotNotes=Object.entries(data.practice||{}).flatMap(([id,v])=>{const m=/^(de|en):(\d{4}-\d{2}-\d{2}):(.+)$/.exec(id);if(!m)return [];const r=v['revision-write']||v['first-write'];if(!r||typeof r.value!=='string'||!r.value.trim())return [];return [{id:'pilot:'+id,language:m[1],date:m[2],type:'writing',value:r.value,pilot:true}]});
+ const pilotNotes=Object.entries(data.practice||{}).flatMap(([id,v])=>{const m=/^(de|en):(\d{4}-\d{2}-\d{2}):(.+)$/.exec(id);if(!m)return [];const rows=[];const r=v['revision-write']||v['first-write'];if(r&&typeof r.value==='string'&&r.value.trim())rows.push({id:'pilot:'+id,language:m[1],date:m[2],type:'writing',value:r.value,pilot:true});const t=m[1]==='de'&&m[2]==='2026-10-01'&&(v['revision-transfer']||v['first-transfer']);if(t&&typeof t.value==='string'&&t.value.trim())rows.push({id:'pilot-transfer:'+id,language:m[1],date:m[2],type:'writing',value:t.value,pilot:true});return rows});
  return [...pilotNotes,...Object.entries(data.notes).flatMap(([id,value])=>{
   const match=/^(de|en):(\d{4}-\d{2}-\d{2}):(reading|writing)$/.exec(id);
   if(!match||typeof value!=='string'||!value.trim())return [];if(person==='junghyun'&&match[1]!=='de')return [];
@@ -619,7 +735,7 @@ document.addEventListener('click',e=>{
 window.addEventListener('resize',()=>{if(navigationBusy)navigationMoves.forEach(a=>a.cancel())});
 reducedMotion.addEventListener('change',()=>{if(reducedMotion.matches){navigationMoves.forEach(a=>a.cancel());if($('#ribbon-stack'))setRibbon(ribbonOpen)}});
 
-function render(){if(person==='junghyun')language='de';loadMonth(month);ribbonTurn++;ribbonMoves.forEach(a=>a.cancel());ribbonMoves=[];document.documentElement.dataset.view=view;document.documentElement.dataset.person=person;document.documentElement.dataset.onboarding=String(needsProfileChoice);document.title=profiles[person].name+'의 '+(language==='de'?'독일어':'영어')+' 노트';$('#screen').innerHTML=cabinet();applyAccent();mountFolioPages();refreshNotes();updatePageTail()}
+function render(){const keep=day1Flow()&&document.documentElement.dataset.flow==='day1'&&document.documentElement.dataset.view===view&&document.documentElement.dataset.person===person&&!day1FolderTransition,top=scrollY,focus=keep?day1CaptureFocus():null;if(person==='junghyun')language='de';loadMonth(month);ribbonTurn++;ribbonMoves.forEach(a=>a.cancel());ribbonMoves=[];document.documentElement.dataset.view=view;document.documentElement.dataset.flow=day1Flow()?'day1':'';document.documentElement.dataset.person=person;document.documentElement.dataset.onboarding=String(needsProfileChoice);document.title=profiles[person].name+'의 '+(language==='de'?'독일어':'영어')+' 노트';$('#screen').innerHTML=cabinet();applyAccent();mountFolioPages();refreshNotes();updatePageTail();if(keep){window.scrollTo(0,top);if(!navigationBusy)day1RestoreFocus(focus)}}
 function changePerson(){openProfilePicker()}
 function pause(){if(timer){remaining=Math.max(0,Math.ceil((deadline-Date.now())/1000));clearInterval(timer);timer=null}}
 // Select an actual matching voice. Never hand a missing language to the default voice.
@@ -685,6 +801,8 @@ function speak(which,rate=.85){
 if(studySynth){availableVoices();studySynth.addEventListener('voiceschanged',()=>refreshWaitingVoice())}
 
 document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||b.disabled)return;
+ if(b.hasAttribute('data-day1-open')){day1PositionChecked.add(person+':'+pilotId());switchFolder(b.dataset.day1Open);return}
+ if(b.hasAttribute('data-day1-read-done')){if(day1Flow()&&day1ReadReady()&&pilotCommit('self-reading',true,{self_report:true})){markComplete('reading');b.textContent='읽기 확인 완료 ✓'}return}
  if(b.hasAttribute('data-storage-retry')){const loaded=readPersonData(person);if(!loaded.ok){toast('아직 기존 기록을 불러올 수 없어요. 입력 내용을 복사해 두세요.');return}data=loaded.value;storageReadBlocked=false;card=0;revealed=false;render();toast('기존 기록을 불러왔어요. 이제 새 입력을 저장할 수 있어요.');return}
  if(b.hasAttribute('data-pilot-start')){pilotStart();return}
  if(b.hasAttribute('data-pilot')){pilotAction(b);return}
@@ -706,7 +824,7 @@ document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||
  else if(b.hasAttribute('data-reveal'))peelPaper();
  else if(b.dataset.rate){const a=activity();a.revisit=a.revisit||[];a.cardSelf=a.cardSelf||{};const cardId=deck()[card]?.id||String(card);a.cardSelf[cardId]={value:b.dataset.rate,at:new Date().toISOString()};a.revisit=b.dataset.rate==='다시'?syncUnion(a.revisit,[cardId]):a.revisit.filter(i=>i!==cardId&&i!==card);if(!persist())return;recordCard();turnCard(1)}
  else if(b.dataset.speak)speak(b.dataset.speak,b.dataset.rateSpeed?Number(b.dataset.rateSpeed):.85);
- else if(b.dataset.quiz){const id=b.dataset.quiz,t=quizMap[id];if(!t)return;const a=activity();a.quiz=a.quiz||{};if(a.quiz[id]!==undefined)return;a.quiz[id]=Number(b.dataset.option);persist();const el=b.closest('[data-quiz-item]');if(el)el.outerHTML=quizItem(t,id)}
+ else if(b.dataset.quiz){const id=b.dataset.quiz,t=quizMap[id];if(!t)return;const a=activity();a.quiz=a.quiz||{};if(a.quiz[id]!==undefined)return;a.quiz[id]=Number(b.dataset.option);if(!persist()){delete a.quiz[id];return}const focused=day1Flow()&&document.activeElement===b,el=b.closest('[data-quiz-item]');if(el)el.outerHTML=quizItem(t,id);if(focused){const feedback=$$('[data-quiz-item]').find(x=>x.dataset.quizItem===id)?.querySelector('.hint');if(feedback){feedback.tabIndex=-1;feedback.focus({preventScroll:true})}}if(day1Flow()){const done=$('[data-day1-read-done]');if(done)done.disabled=!day1ReadReady();refreshCompletion('reading');refreshFolderBadges()}}
  else if(b.dataset.option!==undefined){const a=activity();a.answers=a.answers||{};if(a.answers[card]!==undefined)return;a.answers[card]=Number(b.dataset.option);persist();recordCard();render()}
  else if(b.hasAttribute('data-complete')){if(selected>today)return;const i=Number(b.dataset.complete),s=[...state()];s[i]=!s[i];data[language][selected]=s;if(!s[i]){const a=activity();if(i===0)a.cards=[];if(i===1){a.readingSeconds=0;a.readingLines=[]}}persist();render();if(view==='calendar')stampDay();$('[data-complete="'+i+'"]')?.focus()}
  else if(b.dataset.duration){pause();duration=Number(b.dataset.duration);remaining=duration;render()}
@@ -765,7 +883,7 @@ document.addEventListener('click',async e=>{const b=e.target.closest('[data-sync
 document.addEventListener('input',e=>{const type=e.target.dataset?.note;if(type){if(!data.noteAt)data.noteAt={};data.noteAt[language+':'+selected+':'+type]=new Date().toISOString()}});
 window.studyFilesSync={get:syncGet,merge:syncMerge,changed:syncChanged,attach(api){syncApi=api;syncRedraw()}};
 document.addEventListener('click',e=>{if(view!=='cards'||navigationBusy)return;const deck=e.target.closest('.recall-deck');if(!deck||deck.dataset.kind!=='word'||e.target.closest('button,a,input,textarea,[data-peek]'))return;peelPaper()});
-document.addEventListener('input',e=>{if(e.target.hasAttribute('data-note-search')){notesQuery=e.target.value;folioPages.notes=0;refreshNotes();return}const type=e.target.dataset.note;if(type){data.notes[language+':'+selected+':'+type]=e.target.value;const ok=persist();refreshFolderBadges();e.target.nextElementSibling.textContent=ok?'이 브라우저에 저장됨':'저장 공간을 사용할 수 없습니다.';if(ok&&e.target.value.trim()&&!e.isComposing)markComplete(type)}});
+document.addEventListener('input',e=>{if(e.target.hasAttribute('data-note-search')){notesQuery=e.target.value;folioPages.notes=0;refreshNotes();return}const type=e.target.dataset.note;if(type){data.notes[language+':'+selected+':'+type]=e.target.value;const ok=persist();refreshFolderBadges();e.target.nextElementSibling.textContent=ok?'이 브라우저에 저장됨':'저장 공간을 사용할 수 없습니다.';if(ok&&e.target.value.trim()&&!e.isComposing&&!(day1Flow()&&type==='reading'))markComplete(type)}});
 document.addEventListener('compositionend',e=>{const type=e.target.dataset.note;if(type&&e.target.value.trim()&&persist())markComplete(type)});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&ribbonOpen){e.preventDefault();setRibbon(false,{keyboard:true})}});
 window.addEventListener('pagehide',()=>{navigationMoves.forEach(a=>a.cancel());ribbonMoves.forEach(a=>a.cancel());pause();stopSpeech()});
@@ -778,7 +896,7 @@ function stopDrag(){
  touchState=null;
 }
 async function movePaper(change,{direction=1,flip=false,surface='.lesson'}={}){
- if(navigationBusy)return;stopSpeech();
+ if(navigationBusy)return;stopSpeech();const day1Focus=day1CaptureFocus();
  if(reducedMotion.matches){change();return}
  navigationBusy=true;document.documentElement.dataset.moving='true';const shell=$('.shell');shell.inert=true;
  try{
@@ -792,12 +910,13 @@ async function movePaper(change,{direction=1,flip=false,surface='.lesson'}={}){
    const arrive=incoming.animate([{transform:flip?`perspective(1000px) rotate${surface==='.recall-deck'?'Y':'X'}(88deg)`:`translate3d(${direction*Math.min(innerWidth,700)*.72}px,0,0)`,opacity:0},{transform:'none',opacity:1}],{duration:flip?250:280,easing:'cubic-bezier(.18,.75,.25,1)',fill:'both'});
    navigationMoves=[arrive];await Promise.allSettled([arrive.finished]);arrive.cancel();
   }
- }finally{navigationMoves.forEach(a=>a.cancel());navigationMoves=[];navigationBusy=false;delete document.documentElement.dataset.moving;shell.inert=false;focusHeading()}
+ }finally{navigationMoves.forEach(a=>a.cancel());navigationMoves=[];navigationBusy=false;delete document.documentElement.dataset.moving;shell.inert=false;if(day1Focus)day1RestoreFocus(day1Focus);else focusHeading()}
 }
 function turnMonth(direction){
  return movePaper(()=>{const d=parse(month+'-01');d.setMonth(d.getMonth()+direction);month=key(d).slice(0,7);selected=month===today.slice(0,7)?today:month+'-01';card=0;revealed=false;remaining=duration;render()},{direction,surface:'.month-paper'});
 }
 function peelPaper(){
+ if(day1Flow()&&view==='reading'){showTranslation=!showTranslation;render();return}
  if(lesson()?.practice&&['speaking','writing'].includes(view))return;
  if(!['cards','reading','speaking','writing'].includes(view))return;
  if(view==='reading'||view==='writing'){const next=folioPages[view]===1?0:1;return movePaper(()=>{folioPages[view]=next;render()},{direction:next?1:-1,surface:'.folio-note-stage'})}
@@ -826,7 +945,7 @@ function moveTouch(x,y,event){
   if(Math.max(Math.abs(dx),Math.abs(dy))<9)return;
   if(Math.abs(dx)>Math.abs(dy)*1.3)g.axis='x';
   else if(Math.abs(dy)>Math.abs(dx)*1.3){
-   if(g.kind==='folio'&&g.target.closest('.folder-reader')&&(readerOverflows(g.reader)||readerCanScroll(g.reader,dy))){touchState=null;return}
+   if(day1Flow()||g.kind==='folio'&&g.target.closest('.folder-reader')&&(readerOverflows(g.reader)||readerCanScroll(g.reader,dy))){touchState=null;return}
    g.axis='y';
   }else return;
  }
@@ -850,6 +969,7 @@ document.addEventListener('wheel',e=>{
  if(wheelLocked){resetWheelAfterPause();e.preventDefault();return}
  if(editable(e.target)||!e.target.closest('.folder-reader,.folder')||ribbonOpen||$('#profile-dialog').open)return;
  if(e.ctrlKey){e.preventDefault();return}
+ if(day1Flow()&&Math.abs(e.deltaY)>=Math.abs(e.deltaX))return;
  const horizontal=Math.abs(e.deltaX)>Math.abs(e.deltaY)*1.3,delta=horizontal?e.deltaX:e.deltaY,axis=horizontal?'x':'y';
  if(!delta)return;
  resetWheelAfterPause();
@@ -873,6 +993,7 @@ document.addEventListener('pointercancel',e=>{if(e.pointerType==='mouse')finishT
 document.addEventListener('click',e=>{if(performance.now()<suppressClickUntil){e.preventDefault();e.stopImmediatePropagation()}},true);
 document.addEventListener('keydown',e=>{
  if(editable(e.target)||e.altKey||e.ctrlKey||e.metaKey||navigationBusy||ribbonOpen||$('#profile-dialog').open)return;
+ if(day1Flow()&&(e.key==='Escape'||['ArrowUp','ArrowDown'].includes(e.key)))return;
  if(e.key==='Escape'&&view!=='home'){e.preventDefault();switchFolder('home')}
  else if(e.target.closest('#screen')&&['ArrowLeft','ArrowRight'].includes(e.key)){e.preventDefault();if(view!=='home')turnFolderNote(e.key==='ArrowRight'?1:-1)}
  else if(e.target.closest('#screen')&&['ArrowUp','ArrowDown'].includes(e.key)){e.preventDefault();nextFile(e.key==='ArrowDown'?1:-1)}
@@ -888,6 +1009,7 @@ function mountFolioPages(){
  const content=$('.file-folder.is-open>.folder-content');if(!content)return;
  const lesson=content.querySelector(':scope>.lesson');if(!lesson)return;
  const reader=document.createElement('div');reader.className='folder-reader';reader.dataset.folderScroll='';content.append(reader);reader.append(lesson);
+ if(day1Flow()){reader.dataset.noteIndex=card;reader.dataset.noteTotal=view==='cards'?deck().length:1;lesson.querySelectorAll('.lesson-actions [data-view]').forEach(b=>b.remove());if(view==='reading'){const actions=lesson.querySelector('.lesson-actions');if(actions){const b=document.createElement('button');b.className='action secondary';b.dataset.day1ReadDone='';b.disabled=!day1ReadReady();b.textContent=day1Done('reading')?'읽기 확인 완료 ✓':'읽고 질문의 답을 확인했어요 ✓';actions.append(b)}}return}
  if(view==='cards'){reader.dataset.noteIndex=card;reader.dataset.noteTotal=deck().length;return}
  if(view==='notes'){reader.dataset.noteIndex=folioPages.notes;return}
  const pilot=lesson?.dataset.pilot==='true';
@@ -913,6 +1035,7 @@ function refreshNotes(){
 }
 function folioBoundary(direction){const surface=$('.folio-note-stage')||$('.recall-deck');if(surface&&!reducedMotion.matches)surface.animate([{transform:'none'},{transform:`translateX(${-direction*12}px)`},{transform:'none'}],{duration:180});}
 function turnFolderNote(direction){
+ if(day1Flow()&&view!=='cards')return;
  if(view==='cards')return turnCard(direction);
  const total=view==='notes'?filteredFolioNotes().length:Number($('.folder-reader')?.dataset.noteTotal||0),index=folioPages[view]||0,next=index+direction;
  if(next<0||next>=total){folioBoundary(direction);return}
@@ -924,9 +1047,9 @@ function scrollToFile(v){
 }
 async function switchFolder(v){
  if(navigationBusy||v===view||!allowed.includes(v))return;
- if(reducedMotion.matches){commitView(v);focusHeading();return}
+ if(reducedMotion.matches){day1FolderTransition=true;try{commitView(v);day1SavePosition();focusHeading()}finally{day1FolderTransition=false}return}
  const oldView=view,oldContent=$('.file-folder.is-open>.folder-content'),oldHeight=oldContent?.getBoundingClientRect().height||0,oldScroll=oldContent?.querySelector('.folder-reader')?.scrollTop||0,oldClone=oldContent?motionClone(oldContent):null;
- const startScroll=scrollY,shell=$('.shell');navigationBusy=true;shell.inert=true;document.documentElement.dataset.moving='true';let raf=0;
+ const startScroll=scrollY,shell=$('.shell');day1FolderTransition=true;navigationBusy=true;shell.inert=true;document.documentElement.dataset.moving='true';let raf=0;
  try{
   pause();stopSpeech();ribbonOpen=false;if(v==='cards')pilotRecallStart();if(v==='home'||v==='notes')noteReturn=false;view=v;render();
   const oldFolder=$('.file-folder[data-file="'+oldView+'"]'),incoming=$('.file-folder.is-open>.folder-content');
@@ -941,16 +1064,18 @@ async function switchFolder(v){
   const track=()=>{const t=Math.min(1,(performance.now()-started)/duration),ease=1-Math.pow(1-t,3);const target=v==='home'?0:Math.max(0,scrollY+$('.file-folder[data-file="'+v+'"]').getBoundingClientRect().top-8);window.scrollTo(0,startScroll+(target-startScroll)*ease);if(t<1)raf=requestAnimationFrame(track)};track();
   await Promise.allSettled(moves.map(a=>a.finished));
  }finally{
-  cancelAnimationFrame(raf);navigationMoves.forEach(a=>a.cancel());navigationMoves=[];render();scrollToFile(v);shell.inert=false;navigationBusy=false;delete document.documentElement.dataset.moving;focusHeading();
+  cancelAnimationFrame(raf);navigationMoves.forEach(a=>a.cancel());navigationMoves=[];render();scrollToFile(v);shell.inert=false;navigationBusy=false;day1FolderTransition=false;delete document.documentElement.dataset.moving;day1SavePosition();focusHeading();
  }
 }
 function navigate(v,source){if(navigationBusy)return;if(v===view){if(source?.matches('.folder'))return switchFolder('home');return}return switchFolder(v)}
 function nextFile(direction){
+ if(day1Flow())return;
  const files=fileOrder.filter(v=>v!=='home'),at=files.indexOf(view),next=files[at+direction];if(at<0){return switchFolder('cards')}if(next)return switchFolder(next);
 }
 function turnCard(direction){
+ if(day1Flow()&&(card+direction<0||card+direction>=deck().length)){folioBoundary(direction);if(direction>0)toast('다음 폴더는 아래의 작은 탭을 눌러 펼쳐 주세요.');return}
  const next=card+direction;if(next<0){if(card===0&&direction<0)return switchFolder('home');folioBoundary(direction);return}if(next>=deck().length){if(deck().length)return switchFolder('reading');folioBoundary(direction);return}
- return movePaper(()=>{card=next;revealed=false;render()},{direction,surface:'.recall-deck'});
+ return movePaper(()=>{card=next;revealed=false;render();day1SavePosition()},{direction,surface:'.recall-deck'});
 }
 
 if(params.get('pilot')==='1')language='de';
