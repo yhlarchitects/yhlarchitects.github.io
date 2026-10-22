@@ -1,6 +1,6 @@
 // 서비스 워커: 앱 셸은 미리 받아 두고(보이면서 뒤에서 갱신), 콘텐츠는 네트워크 먼저·안 되면 저장본.
 // 앱 파일을 고치면 VERSION 을 올린다.
-const VERSION = "2026-10-20-2";
+const VERSION = "2026-10-22-analytics";
 const CACHE_PREFIX = "deutsch-" + new URL(self.registration.scope).pathname.replace(/[^a-z0-9]/gi,"-") + "-";
 const SHELL = CACHE_PREFIX + "shell-" + VERSION;
 const CONTENT = CACHE_PREFIX + "content-v1";
@@ -76,12 +76,26 @@ async function shellStaleWhileRevalidate(req) {
   return res || Response.error();
 }
 
+// HTML must receive the current analytics preferences before any cached beacon runs.
+async function htmlNetworkFirst(req) {
+  const cache = await caches.open(SHELL);
+  const key = req.mode === "navigate" && !new URL(req.url).pathname.endsWith(".html") ? "index.html" : req;
+  try {
+    const res = await fetch(req, { cache: "no-cache" });
+    if (res.ok) await cache.put(key, res.clone());
+    return res;
+  } catch (_) {
+    return await cache.match(key, { ignoreSearch: true }) || Response.error();
+  }
+}
+
 self.addEventListener("fetch", (e) => {
   const req = e.request;
   if (req.method !== "GET") return;
   const url = new URL(req.url);
   if (url.origin !== self.location.origin) return;
   const path = url.pathname;
+  if (req.mode === "navigate" || path.endsWith(".html")) { e.respondWith(htmlNetworkFirst(req)); return; }
   if (path.startsWith(scopePath + "content/")) { e.respondWith(contentFirstNetwork(req, path)); return; }
   e.respondWith(shellStaleWhileRevalidate(req));
 });

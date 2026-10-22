@@ -96,20 +96,24 @@
 
   let touchStart = null;
   let suppressTouchClickUntil = 0;
-  const noZoom = event => event.preventDefault();
+  const analyticsTarget = target => Boolean(target?.closest?.('#yhla-analytics-preferences'));
+  const noZoom = event => { if (!analyticsTarget(event.target)) event.preventDefault(); };
   ['gesturestart', 'gesturechange', 'gestureend'].forEach(type => document.addEventListener(type, noZoom, { passive: false }));
   document.addEventListener('touchstart', event => {
+    if (analyticsTarget(event.target)) return;
     suppressTouchClickUntil = 0;
     const touch = event.touches.length === 1 ? event.touches[0] : null;
     touchStart = touch ? { id: touch.identifier, x: touch.clientX, y: touch.clientY, time: performance.now() } : null;
   }, { capture: true, passive: true });
   document.addEventListener('touchmove', event => {
+    if (analyticsTarget(event.target)) return;
     if (event.touches.length > 1) touchStart = null;
     // The full-screen canvas owns directional swipes, rather than page scroll.
     if (event.cancelable) event.preventDefault();
   }, { passive: false });
   document.addEventListener('touchcancel', () => { touchStart = null; }, { capture: true, passive: true });
   document.addEventListener('touchend', event => {
+    if (analyticsTarget(event.target)) { touchStart = null; return; }
     const start = touchStart;
     touchStart = null;
     if (!start || event.touches.length) return;
@@ -131,6 +135,7 @@
     // mobile WebKit does not always synthesize a click on plain backgrounds.
   }, { capture: true, passive: false });
   document.addEventListener('click', event => {
+    if (analyticsTarget(event.target)) return;
     const touchClick = event.pointerType === 'touch' || !event.pointerType;
     if (event.detail > 0 && touchClick && performance.now() < suppressTouchClickUntil) {
       suppressTouchClickUntil = 0;
@@ -267,6 +272,7 @@
   }
 
   function activateTarget(target) {
+    if (analyticsTarget(target)) return;
     if (target.closest?.('a[href]')) return;
     if (workspace && workspace.contains(target)) return;
     if (toggle.contains(target)) setOpened(!opened, contact);
@@ -277,6 +283,7 @@
   document.addEventListener('click', event => activateTarget(event.target));
   const navigationKeys = new Set(['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Enter', ' ', 'Spacebar']);
   document.addEventListener('keydown', event => {
+    if (analyticsTarget(event.target)) return;
     if (event.altKey || event.ctrlKey || event.metaKey || event.isComposing) return;
     if (event.key === 'Escape' && opened) {
       event.preventDefault();

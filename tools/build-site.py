@@ -11,6 +11,34 @@ from PIL import Image, ImageOps
 SUPPORTED = {'.jpg', '.jpeg', '.png', '.webp', '.avif'}
 OBJECTS = ['rose-petal', 'white-petal', 'blue-tulip-petal', 'silver-key', 'brass-key']
 
+def installAnalytics(source, output):
+    """Apply preferences before analytics on every published HTML page, including /list/."""
+    source, output = Path(source), Path(output)
+    scriptUrl = '/' + writeAsset((source / 'home' / 'analytics-bootstrap.js').read_bytes(),
+                                'analytics-bootstrap', '.js', output)
+    bootstrap = '<script src="' + scriptUrl + '" data-yhla-analytics></script>'
+    scriptTag = re.compile(r'<script\b(?P<attrs>[^>]*)>[\s\S]*?</script\s*>', re.I)
+    changed = []
+    for page in sorted(output.rglob('*.html')):
+        html = page.read_text(encoding='utf-8')
+        def removeBeacon(match):
+            attrs = match.group('attrs')
+            if ('static.cloudflareinsights.com/beacon.min.js' in attrs
+                    or 'data-yhla-analytics' in attrs):
+                return ''
+            return match.group(0)
+        html = scriptTag.sub(removeBeacon, html)
+        html = re.sub(r'<!--\s*(?:End\s+)?Cloudflare Web Analytics\s*-->', '', html, flags=re.I)
+        charset = re.search(r'<meta\b[^>]*\bcharset\s*=\s*["\']?utf-8["\']?[^>]*>', html, flags=re.I)
+        head = re.search(r'<head\b[^>]*>', html, flags=re.I)
+        if not head:
+            raise ValueError('Published HTML needs a head for analytics preferences: ' + str(page))
+        insertion = charset.end() if charset and charset.start() > head.start() else head.end()
+        html = html[:insertion] + '\n' + bootstrap + html[insertion:]
+        page.write_text(html, encoding='utf-8', newline='\n')
+        changed.append(page.relative_to(output).as_posix())
+    return {'script': scriptUrl, 'pages': changed}
+
 def writeAsset(data, stem, suffix, output):
     name = stem + '-' + sha256(data).hexdigest()[:16] + suffix
     target = output / 'assets' / name
@@ -127,3 +155,4 @@ if __name__ == '__main__':
     import runpy
     listing = runpy.run_path(str(args.source / "tools/build-link-list.py"))
     listing["build_link_list"](args.output, args.source / "list/template.html")
+    print(json.dumps({'analytics': installAnalytics(args.source, args.output)}, ensure_ascii=False))
