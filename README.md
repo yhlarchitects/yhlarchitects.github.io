@@ -20,4 +20,6 @@ Add an MP4 with audio to home/videos/ using a lowercase filename with hyphens. A
 
 Install tools/requirements.txt and run tools/build-site.py with --output and an empty destination. Pushing main runs the existing GitHub Pages workflow. Public files include the home page, required assets, CNAME, robots.txt, and the existing thesis and bangyeol pages.
 
+Analytics preferences run before any beacon on every published page, without a popup or settings button. Saved browser exclusions and `?analytics=off` continue to block both analytics services. Removing the controls does not grant consent: unique browser counting still requires a previously saved, unexpired opt-in. New browsers are not automatically opted in.
+
 The former collage source, photographs and compatibility assets remain available. Previously published immutable asset URLs are retained for cached pages. Prior home designs remain in Git history.

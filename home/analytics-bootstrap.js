@@ -1,4 +1,4 @@
-/* YHLA analytics preferences. Runs synchronously before any analytics beacon. */
+/* YHLA analytics preferences without visible controls. Runs before any analytics beacon. */
 (function () {
   'use strict';
   if (window.YHLAAnalytics) return;
@@ -20,7 +20,6 @@
   var sessionOK = available('sessionStorage');
   var sent = false;
   var cfStarted = false;
-  var ui, statusText, panel, details, choiceRow, closeButton;
   var excluded;
   var forgetting = [];
 
@@ -170,84 +169,15 @@
   if (blockedSignal) eraseVisitor();
   flushForget();
 
-  function choose(choice) {
-    var now = Date.now();
-    if (choice === 'decline') { eraseVisitor(); sent = false; }
-    var stored = write(CONSENT, {choice: choice, expiresAt: now + DAYS90});
-    if (choice === 'allow' && stored) collect();
-    render();
-    if (panel) panel.hidden = true;
-  }
-  function render() {
-    if (!ui) return;
-    var pref = preference();
-    var message = excluded ? 'Your visits are excluded on this browser.' :
-      blockedSignal ? 'Your browser privacy signal is respected. Analytics is off.' :
-      !localOK || !sessionOK ? 'Unique visitor counting is off because browser storage is unavailable.' :
-      pref && pref.choice === 'allow' ? 'Unique visitor counting is allowed on this browser.' :
-      pref && pref.choice === 'decline' ? 'Unique visitor counting is declined on this browser.' :
-      'Allow a random browser ID to count return visits for up to 90 days?';
-    statusText.textContent = message;
-    choiceRow.hidden = excluded || blockedSignal || !localOK || !sessionOK;
-    details.textContent = 'This optional ID measures browsers, not people. The site stores a random ID for up to 90 days and a session ID until 30 minutes of inactivity. We receive the page path and referring website, without query strings, and retain records for up to 90 days. Cloudflare processes and stores these statistics for YHLA. Decline or withdraw to delete your counting ID and request deletion of its records. A pending deletion ID is kept only until the request succeeds. Separate Cloudflare statistics use no cookies or visitor IDs. Exclusion and browser privacy signals stop both. Your choice stays in this browser. Questions: hello@yhlarchitects.com.';
-    closeButton.hidden = !pref && !excluded && !blockedSignal && localOK && sessionOK;
-    ui.settings.textContent = excluded ? 'Analytics excluded' : 'Privacy';
-  }
-  function openSettings() {
-    if (!ui) return;
-    render(); panel.hidden = false;
-    if (!choiceRow.hidden) panel.querySelector('#allow').focus();
-    else if (!closeButton.hidden) closeButton.focus();
-    else panel.querySelector('summary').focus();
-  }
-  function mount() {
-    if (ui || !document.body) return;
-    var host = document.createElement('div');
-    host.id = 'yhla-analytics-preferences';
-    // Existing public YHLA styling is preserved, with a small isolated preference control.
-    var shadow = host.attachShadow({mode: 'open'});
-    shadow.innerHTML = '<style>' +
-      ':host{all:initial;position:fixed;top:max(12px,env(safe-area-inset-top,0px));right:max(16px,env(safe-area-inset-right,0px));z-index:2147483647;font:12px/1.5 "Univers 55",Arial,sans-serif;color:#111;text-align:left}' +
-      '*{box-sizing:border-box}[hidden]{display:none!important}button{font:inherit;color:inherit;cursor:pointer;border-radius:0;touch-action:manipulation}' +
-      '#settings{display:block;margin-left:auto;background:#fff;border:1px solid #dcdcda;padding:4px 8px;min-height:30px}' +
-      '#panel{margin-top:6px;width:min(320px,calc(100vw - 32px));max-height:calc(100dvh - 80px);overflow:auto;background:#fff;border:1px solid #dcdcda;padding:14px}' +
-      'h2{font:400 15px/1.3 "Univers 55",Arial,sans-serif;margin:0 0 8px}p{margin:0 0 12px}#choices{display:flex;gap:8px}#choices button{flex:1;border:1px solid #111;background:#fff;padding:7px 12px;min-height:36px}' +
-      'details{margin-top:12px;font-size:11px}summary{cursor:pointer;text-decoration:underline;padding:2px 0}details p{margin-top:8px}#close{display:block;margin:12px 0 0 auto;border:0;background:#fff;text-decoration:underline;padding:2px 4px;min-height:30px}' +
-      'button:focus-visible,summary:focus-visible{outline:2px solid #111;outline-offset:3px}@media print{:host{display:none}}' +
-      '</style><button id="settings" type="button" aria-controls="panel" aria-expanded="false">Privacy</button>' +
-      '<section id="panel" role="region" aria-labelledby="privacy-title" hidden><h2 id="privacy-title">Visitor privacy</h2>' +
-      '<p id="state" role="status"></p><div id="choices"><button id="allow" type="button">Allow</button><button id="decline" type="button">Decline / withdraw</button></div>' +
-      '<details><summary>Privacy details</summary><p id="details"></p></details><button id="close" type="button">Close</button></section>';
-    document.body.appendChild(host);
-    panel = shadow.getElementById('panel'); statusText = shadow.getElementById('state');
-    details = shadow.getElementById('details'); choiceRow = shadow.getElementById('choices');
-    closeButton = shadow.getElementById('close');
-    ui = {settings: shadow.getElementById('settings')};
-    ui.settings.addEventListener('click', function () {
-      if (panel.hidden) { openSettings(); ui.settings.setAttribute('aria-expanded', 'true'); }
-      else { panel.hidden = true; ui.settings.setAttribute('aria-expanded', 'false'); }
-    });
-    shadow.getElementById('allow').addEventListener('click', function () { choose('allow'); ui.settings.setAttribute('aria-expanded', 'false'); });
-    shadow.getElementById('decline').addEventListener('click', function () { choose('decline'); ui.settings.setAttribute('aria-expanded', 'false'); });
-    closeButton.addEventListener('click', function () { panel.hidden = true; ui.settings.setAttribute('aria-expanded', 'false'); ui.settings.focus(); });
-    shadow.addEventListener('keydown', function (event) {
-      event.stopPropagation();
-      if (event.key === 'Escape') { panel.hidden = true; ui.settings.setAttribute('aria-expanded', 'false'); ui.settings.focus(); }
-    });
-    shadow.addEventListener('click', function (event) { event.stopPropagation(); });
-    render();
-    if (!excluded && !blockedSignal && localOK && sessionOK && !preference()) {
-      panel.hidden = false; ui.settings.setAttribute('aria-expanded', 'true');
-    }
-  }
-  window.YHLAAnalytics = {version: 1, openSettings: openSettings};
+  // Retain the existing API for callers without creating settings UI.
+  window.YHLAAnalytics = {version: 1, openSettings: function () {}};
   function refreshExclusion() {
     var current = isExcluded();
     if (current && !excluded) {
       excluded = true; eraseVisitor(); write(CONSENT, null);
       if (cfStarted) { location.reload(); return; }
     }
-    excluded = current; render();
+    excluded = current; preference();
   }
   window.addEventListener('focus', refreshExclusion);
   window.addEventListener('pageshow', refreshExclusion);
@@ -261,17 +191,16 @@
         eraseVisitor(); write(CONSENT, null);
         if (cfStarted) { location.reload(); return; }
       }
-      render();
+      preference();
     } else if (event.key === CONSENT) {
       var pref = preference();
       if (!pref || pref.choice !== 'allow') eraseVisitor(); else collect();
-      render();
+      preference();
     }
   });
   // Count one page load, even if the bootstrap was accidentally inserted twice.
-  startCloudflare(); collect();
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mount, {once: true});
-  else mount();
+  // Expired consent still deletes its old counting ID without opening a prompt.
+  preference(); startCloudflare(); collect();
   // Renew session activity only when the page is active, without sending extra events.
   var lastActivity = 0;
   function activity() {
