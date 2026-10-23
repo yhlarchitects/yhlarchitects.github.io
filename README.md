@@ -20,6 +20,6 @@ Add an MP4 with audio to home/videos/ using a lowercase filename with hyphens. A
 
 Install tools/requirements.txt and run tools/build-site.py with --output and an empty destination. Pushing main runs the existing GitHub Pages workflow. Public files include the home page, required assets, CNAME, robots.txt, and the existing thesis and bangyeol pages.
 
-Analytics preferences run before any beacon on every published page. Excluded browsers show no popup or settings button, and saved browser exclusions and `?analytics=off` continue to block both analytics services. Other visitors retain the privacy controls: basic Cloudflare statistics continue, and unique browser counting starts only after explicit consent. Visitors can decline or withdraw as before.
+Every published page uses cookie-free Cloudflare Web Analytics without a popup or settings button. Saved owner exclusions and `?analytics=off` stop its beacon before it loads; `?analytics=on` reverses that browser preference. The exclusion preference spans all paths and the www hostname. DNT/GPC signals are still respected. Other visitors contribute basic visits, page views, referrers, country and device statistics. Custom visitor IDs, session IDs and return-browser tracking are disabled. Legacy IDs and consent records are unused; existing historical statistics are not deleted.
 
 The former collage source, photographs and compatibility assets remain available. Previously published immutable asset URLs are retained for cached pages. Prior home designs remain in Git history.
