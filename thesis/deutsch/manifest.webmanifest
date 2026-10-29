@@ -1,18 +1,38 @@
 {
-  "name": "Deutsch 2628",
+  "name": "Deutsch",
   "short_name": "Deutsch",
-  "description": "연호·정현 독일어 하루 5분 블록",
+  "description": "연호·정현의 독일어와 연호의 영어 학습 노트",
   "lang": "ko",
-  "start_url": "./index.html#/today",
+  "start_url": "./index.html#home",
   "scope": "./",
   "display": "standalone",
   "orientation": "any",
-  "background_color": "#f7f8f9",
-  "theme_color": "#f7f8f9",
+  "background_color": "#efefeb",
+  "theme_color": "#efefeb",
   "icons": [
-    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
-    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml" }
-  ]
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "id": "./index.html"
 }
