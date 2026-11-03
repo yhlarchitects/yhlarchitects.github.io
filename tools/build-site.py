@@ -76,7 +76,7 @@ def buildCinema(source, output):
     (output / 'index.html').write_text(html, encoding='utf-8', newline='\n')
     for name in ('CNAME', 'robots.txt', '.nojekyll'):
         shutil.copy2(source / name, output / name)
-    for folder in ('thesis', 'bangyeol', 'writing', 'project'):
+    for folder in ('thesis', 'bangyeol', 'writing', 'project', 'competition'):
         if (source / folder).is_dir():
             shutil.copytree(source / folder, output / folder)
     print(json.dumps({'films': len(catalog), 'output': str(output)}, ensure_ascii=False))
@@ -140,7 +140,7 @@ def build(source, output):
     (output / 'photos.json').write_text(json.dumps(catalog, ensure_ascii=False, indent=2), encoding='utf-8', newline='\n')
     for name in ('CNAME', 'robots.txt', '.nojekyll'):
         shutil.copy2(source / name, output / name)
-    for folder in ('thesis', 'bangyeol', 'writing', 'project'):
+    for folder in ('thesis', 'bangyeol', 'writing', 'project', 'competition'):
         if (source / folder).is_dir():
             shutil.copytree(source / folder, output / folder)
     print(json.dumps({'photos': len(catalog), 'objects': len(OBJECTS), 'output': str(output)}, ensure_ascii=False))
