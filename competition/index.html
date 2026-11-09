@@ -472,17 +472,18 @@ body:not(.gantt-on) .gantt-band { display: none; }
 .gantt-rowgrip:hover::after, .gantt-band[data-boxing="row"] .gantt-rowgrip::after { content: ''; position: absolute; left: 0; right: 0; top: 2px; height: 3px; background: var(--rule-color); }
 .gantt-band[data-boxing="col"], .gantt-band[data-boxing="col"] * { cursor: col-resize !important; user-select: none; }
 .gantt-band[data-boxing="row"], .gantt-band[data-boxing="row"] * { cursor: row-resize !important; user-select: none; }
+.gantt-pin { position: sticky; left: var(--gantt-label); flex: none; width: 0; z-index: 4; }
+.gantt-pin span { position: absolute; left: 0; top: 0; bottom: 0; display: flex; align-items: center; padding: 0 6px 0 4px; background: var(--bg); font-size: var(--size-tiny); font-weight: 700; white-space: nowrap; pointer-events: none; }
 .gantt-axis-track { position: relative; flex: none; cursor: ew-resize; touch-action: pan-y; user-select: none; }
-.gantt-day { position: absolute; bottom: 2px; padding-left: 3px; font-size: var(--size-tiny); line-height: 1; white-space: nowrap; font-variant-numeric: tabular-nums; display: none; }
-.gantt-day.is-weekend { color: var(--muted); }
-.gantt-band[data-label="day"] .gantt-week, .gantt-band[data-label="none"] .gantt-week { display: none; }
+.gantt-day, .gantt-week, .gantt-anchor { position: absolute; top: 0; padding-left: 3px; font-size: var(--size-tiny); line-height: var(--header-b, 24px); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.gantt-day { display: none; }
+.gantt-day.is-weekend, .gantt-week { color: var(--muted); }
+.gantt-anchor, .gantt-day.is-anchor { font-weight: 700; color: var(--text); }
 .gantt-band[data-label="day"] .gantt-day { display: block; }
+.gantt-band[data-label="day"] .gantt-week, .gantt-band[data-label="day"] .gantt-anchor, .gantt-band[data-label="none"] .gantt-week { display: none; }
 /* 확대하면 하루 칸 나눔 선도 옅게 */
 .gantt-band[data-label="day"] .gantt-track { background-image: linear-gradient(to right, var(--soft) 0, var(--soft) var(--rule-width), transparent var(--rule-width)), linear-gradient(to right, var(--selected) 0, var(--selected) var(--rule-width), transparent var(--rule-width)); background-size: calc(var(--ppd, 12px) * 7) 100%, var(--ppd, 12px) 100%; background-position: calc(var(--ppd, 12px) * var(--wk-off, 0)) 0, 0 0; }
 .gantt-band[data-zooming="true"], .gantt-band[data-zooming="true"] * { cursor: ew-resize !important; user-select: none; }
-.gantt-month, .gantt-week { position: absolute; white-space: nowrap; font-size: var(--size-tiny); line-height: 1; font-variant-numeric: tabular-nums; }
-.gantt-month { top: 2px; padding-left: 4px; border-left: var(--rule-width) solid var(--rule-color); height: 10px; font-weight: 700; }
-.gantt-week { bottom: 2px; padding-left: 3px; color: var(--muted); }
 
 .gantt-row { display: flex; width: 100%; height: var(--gantt-row, 24px); min-height: var(--gantt-row, 24px); border-bottom: var(--rule-width) solid var(--soft); text-align: left; }
 .gantt-row:hover { background: var(--hover); }
@@ -490,6 +491,7 @@ body:not(.gantt-on) .gantt-band { display: none; }
 .gantt-label { position: sticky; left: 0; z-index: 3; flex: none; display: flex; align-items: center; justify-content: space-between; gap: 8px; width: var(--gantt-label); padding: 0 12px; background: var(--bg); border-right: var(--rule-width) solid var(--rule-color); font-size: var(--size-low); }
 .gantt-row:hover .gantt-label { background: var(--hover); }
 .gantt-row[aria-current="true"] .gantt-label { background: var(--selected); font-weight: 700; }
+.gantt-name, .gantt-left { line-height: 1.2; }
 .gantt-name { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .gantt-left { flex: none; color: var(--muted); font-size: var(--size-tiny); font-variant-numeric: tabular-nums; }
 .gantt-band[data-panning="true"], .gantt-band[data-panning="true"] * { cursor: grabbing !important; user-select: none; }
@@ -2021,13 +2023,16 @@ body:not(.gantt-on) .gantt-band { display: none; }
    2026-11-09 마스터 「막대는 왼쪽 셀 나눔 선에서 시작해 회색으로 쭉 이어지게. 확대하면 모든 날짜가 날짜 줄에 다 나와야」
    2026-11-09 마스터 「시간 지난 건 띄우지 말라. 표의 시간과 요일은 스위스 시간 기준, 한국 18시 마감은 바젤 시간으로 보여 주고
    오전 10시가 지나면 표에서 사라진다」: 모든 시각을 Europe/Zurich로 바꾸고, 타임라인은 오늘(바젤)부터 시작하며, 마감이 지난 줄은 빼고,
-   열어 둔 동안에도 30초마다 확인해 지나간 줄을 지운다. */
+   열어 둔 동안에도 30초마다 확인해 지나간 줄을 지운다.
+   2026-11-09 마스터 「최소 열 높이는 글자 상하에 아주 약간의 여백만 둔 값. 글씨가 셀보다 커져 가려지는 일 없게」: 글자 12px에 줄 높이 1.2(14.4px)를 두고 최소 줄 높이를 16px로 한다.
+   2026-11-09 마스터 「날짜 스케일을 바꿀 때와 가로로 이동할 때 셀별로 딱딱 칸마다 자석처럼 붙게」: 하루 폭은 단계(3~160px)로만 바뀌고 가로 위치는 하루 칸 경계에 붙는다.
+   2026-11-09 마스터 「가로로 이동하더라도 11.x일은 고정, 12.1로 넘어가면 12 고정」: 날짜 줄 왼쪽에 지금 맨 앞 날짜를 붙여 두고 일 숫자만 바뀐다(「11.n」, 넘으면 「12.1」). */
 (function () {
   'use strict';
   var band = document.getElementById('gantt-band'), toggle = document.getElementById('gantt-toggle');
   if (!band || !toggle || !window.radarReview) return;
   var scroll = band.querySelector('.gantt-scroll'), grip = band.querySelector('.gantt-grip');
-  var KEY = 'yhla-radar-gantt', DAY = 86400000, MIN_PPD = 2.5, MAX_PPD = 48, DEF_PPD = 12, MIN_H = 72, HEAD = 58, MIN_ROW = 18, MAX_ROW = 72, DEF_ROW = 24, MIN_LABEL = 88, DEF_LABEL = 168;
+  var KEY = 'yhla-radar-gantt', DAY = 86400000, MIN_PPD = 3, MAX_PPD = 160, LEVELS = [3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128, 160], DEF_PPD = 12, MIN_H = 72, HEAD = 58, MIN_ROW = 16, MAX_ROW = 96, DEF_ROW = 24, MIN_LABEL = 88, DEF_LABEL = 168;
   var saved = { on: true, h: 232, ppd: DEF_PPD, row: DEF_ROW, label: DEF_LABEL };
   try { var raw = JSON.parse(localStorage.getItem(KEY) || '{}'); if (typeof raw.on === 'boolean') saved.on = raw.on; if (raw.h > 0) saved.h = raw.h; if (raw.ppd >= MIN_PPD && raw.ppd <= MAX_PPD) saved.ppd = raw.ppd; if (raw.row >= MIN_ROW && raw.row <= MAX_ROW) saved.row = raw.row; if (raw.label >= MIN_LABEL && raw.label <= 640) saved.label = raw.label; } catch (e) {}
   function persist() { try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {} }
@@ -2092,8 +2097,19 @@ body:not(.gantt-on) .gantt-band { display: none; }
   function labelWidth() { return saved.label; }
   function applyBox() { band.style.setProperty('--gantt-label', saved.label + 'px'); band.style.setProperty('--gantt-row', saved.row + 'px'); }
   // 하루 폭을 바꾼다. 오늘이 화면에 있으면 오늘이 제자리에 남고, 다른 곳을 보고 있으면 anchorX(없으면 화면 가운데) 아래 날짜가 남는다.
+  // 하루 폭은 정해진 단계로만 움직이고, 가로 위치는 늘 하루 칸 경계에 붙는다(자석).
+  function levelOf(x) {
+    var best = LEVELS[0];
+    LEVELS.forEach(function (l) { if (Math.abs(Math.log(l / x)) < Math.abs(Math.log(best / x))) best = l; });
+    return best;
+  }
+  function snapLeft(x, ppd) {
+    var max = Math.max(0, scroll.scrollWidth - scroll.clientWidth);
+    return Math.max(0, Math.min(Math.round(x / ppd) * ppd, Math.floor(max / ppd) * ppd));
+  }
   function setPpd(next, anchorX) {
-    next = Math.max(MIN_PPD, Math.min(MAX_PPD, next));
+    next = levelOf(Math.max(MIN_PPD, Math.min(MAX_PPD, next)));
+    if (next === saved.ppd && band.style.getPropertyValue('--ppd')) return;
     var old = saved.ppd, labelW = labelWidth(), view = scroll.clientWidth;
     var todayX = labelW + (today - start) * old - scroll.scrollLeft;
     var ax = todayX >= labelW && todayX <= view ? todayX : (typeof anchorX === 'number' ? anchorX : labelW + (view - labelW) / 2);
@@ -2102,29 +2118,29 @@ body:not(.gantt-on) .gantt-band { display: none; }
     band.style.setProperty('--ppd', next + 'px');
     band.dataset.dense = next < 7 ? 'true' : 'false';
     band.dataset.label = next >= 22 ? 'day' : next >= 7 ? 'week' : 'none'; // 확대하면 날짜를 모두, 보통은 주 첫날만
-    scroll.scrollLeft = Math.max(0, labelW + day * next - ax);
+    scroll.scrollLeft = snapLeft(labelW + day * next - ax, next);
+    updatePin();
   }
   function render() {
     var rows = model.rows;
     var last = rows.length ? rows[rows.length - 1].end : today + 30;
     var total = Math.max(last, today) - start + 14, width = at(total);
     setPpd(saved.ppd);
-    var axis = '', i, k;
-    for (i = 0; i <= total; i++) {
-      var p = fromNum(start + i);
-      if (p.d === 1 || i === 0) {
-        axis += '<span class="gantt-month" style="left:' + at(i) + '">' + (p.m === 1 || i === 0 ? p.y + '.' : '') + p.m + '월</span>';
-      }
-    }
+    var axis = '', k;
+    // 달이 바뀌는 곳에 줄을 더하지 않고 날짜 글자 자체가 「12.1」「1.1」로 시작한다. 처음 칸은 「11.9」.
+    var anchors = [];
+    for (k = 0; k < total; k++) { var dd = fromNum(start + k); if (k === 0 || dd.d === 1) anchors.push(k); }
     var k0 = (1 - fromNum(start).w + 7) % 7; // 첫 월요일까지 며칠
     band.style.setProperty('--wk-off', k0);
+    function near(n) { return anchors.some(function (a) { return n - a >= -2 && n - a <= 3; }); }
+    anchors.forEach(function (n) { var q = fromNum(start + n); axis += '<span class="gantt-anchor" style="left:' + at(n) + '">' + q.m + '.' + q.d + '</span>'; });
     for (k = k0; k < total; k += 7) {
-      var q = fromNum(start + k);
-      axis += '<span class="gantt-week" style="left:' + at(k) + '">' + q.d + '</span>';
+      if (near(k)) continue;
+      axis += '<span class="gantt-week" style="left:' + at(k) + '">' + fromNum(start + k).d + '</span>';
     }
     for (k = 0; k < total; k++) {
-      var dd = fromNum(start + k);
-      axis += '<span class="gantt-day' + (dd.w === 0 || dd.w === 6 ? ' is-weekend' : '') + '" style="left:' + at(k) + '">' + dd.d + '</span>';
+      var dy = fromNum(start + k), first = k === 0 || dy.d === 1;
+      axis += '<span class="gantt-day' + (dy.w === 0 || dy.w === 6 ? ' is-weekend' : '') + (first ? ' is-anchor' : '') + '" style="left:' + at(k) + '">' + (first ? dy.m + '.' : '') + dy.d + '</span>';
     }
     var body = rows.map(function (r) {
       var left = r.end - today, x = at(r.at - start);
@@ -2135,11 +2151,19 @@ body:not(.gantt-on) .gantt-band { display: none; }
         + '<span class="gantt-track" style="width:' + width + '">' + bar + reg + '<span class="gantt-dot" data-est="' + (r.est ? 'true' : 'false') + '" style="left:' + x + '"></span><span class="gantt-date" style="left:' + x + '">' + label + '</span></span></button>';
     }).join('');
     scroll.innerHTML = '<div class="gantt-canvas" style="width:calc(var(--gantt-label) + ' + width + ')">'
-      + '<div class="gantt-axis"><div class="gantt-corner"><button type="button" class="gantt-now" data-gantt-today title="오늘로 이동 (공모 ' + rows.length + '건)">오늘</button><i class="gantt-colgrip" role="separator" aria-orientation="vertical" aria-label="공모 이름 열 폭 조절"></i></div><div class="gantt-axis-track" title="좌우로 끌면 오늘 기준 축척, 두 번 누르면 처음 축척" style="width:' + width + '">' + axis + '</div><i class="gantt-rowgrip" role="separator" aria-orientation="horizontal" aria-label="줄 높이 조절"></i></div>'
+      + '<div class="gantt-axis"><div class="gantt-corner"><button type="button" class="gantt-now" data-gantt-today title="오늘로 이동 (공모 ' + rows.length + '건)">오늘</button><i class="gantt-colgrip" role="separator" aria-orientation="vertical" aria-label="공모 이름 열 폭 조절"></i></div><div class="gantt-pin" aria-hidden="true"><span></span></div><div class="gantt-axis-track" title="좌우로 끌면 오늘 기준 축척, 두 번 누르면 처음 축척" style="width:' + width + '">' + axis + '</div><i class="gantt-rowgrip" role="separator" aria-orientation="horizontal" aria-label="줄 높이 조절"></i></div>'
       + (body || '<p class="gantt-empty">표시할 일정이 없습니다.</p>')
-      + '<span class="gantt-todaycol" style="left:calc(var(--gantt-label) + ' + at(today - start) + ');width:' + at(1) + '"></span>'
-      + '<span class="gantt-today" style="left:calc(var(--gantt-label) + ' + at(nowF - start) + ')"></span></div>';
+      + '<span class="gantt-todaycol" style="left:calc(var(--gantt-label) + ' + at(today - start) + ');width:' + at(1) + '"></span></div>';
     syncSelected();
+    updatePin();
+  }
+
+  // 가로로 옮기는 동안 왼쪽 끝에 지금 맨 앞에 있는 날짜(「11.9」「11.10」…「12.1」)를 붙여 두고, 하루 칸이 지날 때마다 일 숫자만 바뀐다.
+  function updatePin() {
+    var pin = scroll.querySelector('.gantt-pin span');
+    if (!pin) return;
+    var p = fromNum(start + Math.max(0, Math.floor((scroll.scrollLeft + 0.5) / saved.ppd))), text = p.m + '.' + p.d;
+    if (pin.textContent !== text) pin.textContent = text;
   }
 
   function syncSelected() {
@@ -2228,7 +2252,7 @@ body:not(.gantt-on) .gantt-band { display: none; }
       pan.active = panMoved = true;
       scroll.setPointerCapture(e.pointerId); band.dataset.panning = 'true';
     }
-    scroll.scrollLeft = pan.left - dx;
+    scroll.scrollLeft = snapLeft(pan.left - dx, saved.ppd);
   });
   function panFinish(e) {
     if (!pan || pan.id !== e.pointerId) return;
@@ -2345,13 +2369,20 @@ body:not(.gantt-on) .gantt-band { display: none; }
       scroll.scrollLeft = Math.max(0, sl - shift * saved.ppd); scroll.scrollTop = st;
     } else {
       nowF = nf;
-      var line = scroll.querySelector('.gantt-today');
-      if (line) line.style.left = 'calc(var(--gantt-label) + ' + at(nowF - start) + ')';
     }
   }
   setInterval(tick, 30000);
   document.addEventListener('visibilitychange', function () { if (!document.hidden) tick(); });
 
+  // 어떤 방법으로 옮겨도(휠·스크롤바·키보드·목록 선택) 멈추면 가장 가까운 하루 칸 경계로 붙는다.
+  var snapTimer = null;
+  function snapNow() {
+    if (zdrag || box || (pan && pan.active)) return;
+    var s = snapLeft(scroll.scrollLeft, saved.ppd);
+    if (Math.abs(s - scroll.scrollLeft) > 0.5) scroll.scrollLeft = s;
+    updatePin();
+  }
+  scroll.addEventListener('scroll', function () { updatePin(); clearTimeout(snapTimer); snapTimer = setTimeout(snapNow, 90); }, { passive: true });
   applyBox(); render(); apply(); showToday(false);
   window.radarGantt = { render: render, state: saved, rows: function () { return model.rows.slice(); } };
 })();
