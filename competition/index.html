@@ -2026,12 +2026,14 @@ body:not(.gantt-on) .gantt-band { display: none; }
    열어 둔 동안에도 30초마다 확인해 지나간 줄을 지운다.
    2026-11-09 마스터 「최소 열 높이는 글자 상하에 아주 약간의 여백만 둔 값. 글씨가 셀보다 커져 가려지는 일 없게」: 글자 12px에 줄 높이 1.2(14.4px)를 두고 최소 줄 높이를 16px로 한다.
    2026-11-09 마스터 「날짜 스케일을 바꿀 때와 가로로 이동할 때 셀별로 딱딱 칸마다 자석처럼 붙게」: 하루 폭은 단계(3~160px)로만 바뀌고 가로 위치는 하루 칸 경계에 붙는다.
-   2026-11-09 마스터 「가로로 이동하더라도 11.x일은 고정, 12.1로 넘어가면 12 고정」: 날짜 줄 왼쪽에 지금 맨 앞 날짜를 붙여 두고 일 숫자만 바뀐다(「11.n」, 넘으면 「12.1」). */
+   2026-11-09 마스터 「가로로 이동하더라도 11.x일은 고정, 12.1로 넘어가면 12 고정」: 날짜 줄 왼쪽에 지금 맨 앞 날짜를 붙여 두고 일 숫자만 바뀐다(「11.n」, 넘으면 「12.1」).
+   2026-11-10 마스터 「주제별로 눌렀을때 하단 바 스케쥴에 그 공모들만 보여지게」: 분류 탭이나 주제 드롭다운으로 목록을 좁히면 띠도 목록에 남은 공모만 그린다.
+   목록이 다시 그려질 때 분류·주제가 바뀌었으면 띠를 다시 만든다. 띠의 줄을 눌러도 분류·주제를 풀지 않는다. */
 (function () {
   'use strict';
   var band = document.getElementById('gantt-band'), toggle = document.getElementById('gantt-toggle');
   if (!band || !toggle || !window.radarReview) return;
-  var scroll = band.querySelector('.gantt-scroll'), grip = band.querySelector('.gantt-grip');
+  var scroll = band.querySelector('.gantt-scroll'), grip = band.querySelector('.gantt-grip'), listEl = document.getElementById('competition-list');
   var KEY = 'yhla-radar-gantt', DAY = 86400000, MIN_PPD = 3, MAX_PPD = 160, LEVELS = [3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128, 160], DEF_PPD = 12, MIN_H = 72, HEAD = 58, MIN_ROW = 16, MAX_ROW = 96, DEF_ROW = 24, MIN_LABEL = 88, DEF_LABEL = 168;
   var saved = { on: true, h: 232, ppd: DEF_PPD, row: DEF_ROW, label: DEF_LABEL };
   try { var raw = JSON.parse(localStorage.getItem(KEY) || '{}'); if (typeof raw.on === 'boolean') saved.on = raw.on; if (raw.h > 0) saved.h = raw.h; if (raw.ppd >= MIN_PPD && raw.ppd <= MAX_PPD) saved.ppd = raw.ppd; if (raw.row >= MIN_ROW && raw.row <= MAX_ROW) saved.row = raw.row; if (raw.label >= MIN_LABEL && raw.label <= 640) saved.label = raw.label; } catch (e) {}
@@ -2074,9 +2076,20 @@ body:not(.gantt-on) .gantt-band { display: none; }
     return m ? (function (d) { return { end: d, at: d + 0.5, est: true, time: '' }; })(dayNum((2000 + +m[1]) + '-' + two(+m[2]) + '-15')) : null;
   }
 
+  // 분류 탭·주제 드롭다운으로 좁힌 상태면 목록에 보이는 공모만 띠에 올린다.
+  function scopeKey() { var st = window.radarView || {}; return (st.filter || 'all') + '|' + (st.topic || 'all'); }
+  function scopeIds() {
+    if (!listEl || scopeKey() === 'all|all') return null;
+    var ids = {};
+    listEl.querySelectorAll('[data-entry]').forEach(function (b) { ids[b.dataset.entry] = true; });
+    return ids;
+  }
+  var builtKey = null;
   function build() {
-    var rows = [], undated = 0;
+    var rows = [], undated = 0, scope = scopeIds();
+    builtKey = scopeKey();
     window.radarReview.entries.forEach(function (r) {
+      if (scope && !scope[r.id]) return;
       var shut = r.closed || (!r.current && window.radarReview.expired(r, Date.now()));
       if (shut || r.hold) return;
       var found = endOf(r);
@@ -2152,7 +2165,7 @@ body:not(.gantt-on) .gantt-band { display: none; }
     }).join('');
     scroll.innerHTML = '<div class="gantt-canvas" style="width:calc(var(--gantt-label) + ' + width + ')">'
       + '<div class="gantt-axis"><div class="gantt-corner"><button type="button" class="gantt-now" data-gantt-today title="오늘로 이동 (공모 ' + rows.length + '건)">오늘</button><i class="gantt-colgrip" role="separator" aria-orientation="vertical" aria-label="공모 이름 열 폭 조절"></i></div><div class="gantt-pin" aria-hidden="true"><span></span></div><div class="gantt-axis-track" title="좌우로 끌면 오늘 기준 축척, 두 번 누르면 처음 축척" style="width:' + width + '">' + axis + '</div><i class="gantt-rowgrip" role="separator" aria-orientation="horizontal" aria-label="줄 높이 조절"></i></div>'
-      + (body || '<p class="gantt-empty">표시할 일정이 없습니다.</p>')
+      + (body || '<p class="gantt-empty">' + (builtKey === 'all|all' ? '표시할 일정이 없습니다.' : '고른 공모 중 남은 일정이 없습니다.') + '</p>')
       + '<span class="gantt-todaycol" style="left:calc(var(--gantt-label) + ' + at(today - start) + ');width:' + at(1) + '"></span></div>';
     syncSelected();
     updatePin();
@@ -2207,9 +2220,12 @@ body:not(.gantt-on) .gantt-band { display: none; }
     if (!b) return;
     var id = b.dataset.id, rv = window.radarReview, st = window.radarView;
     if (st.view !== 'radar') document.querySelector('.site-mark').click();
-    var row = rv.entries.filter(function (r) { return r.id === id; })[0];
-    if (st.topic !== 'all' && row && (row.topic || '기타') !== st.topic) st.topic = 'all';
-    rv.filterEntries('all');
+    var inList = listEl && listEl.querySelector('[data-entry="' + id.replace(/"/g, '') + '"]');
+    if (!inList) {
+      var row = rv.entries.filter(function (r) { return r.id === id; })[0];
+      if (st.topic !== 'all' && row && (row.topic || '기타') !== st.topic) st.topic = 'all';
+      rv.filterEntries('all');
+    }
     rv.selectEntry(id, true, true);
     requestAnimationFrame(function () { if (window.radarLayout) window.radarLayout.revealRow(id); syncSelected(); focusEntry(id, false, true); });
   });
@@ -2383,6 +2399,13 @@ body:not(.gantt-on) .gantt-band { display: none; }
     updatePin();
   }
   scroll.addEventListener('scroll', function () { updatePin(); clearTimeout(snapTimer); snapTimer = setTimeout(snapNow, 90); }, { passive: true });
+  // 목록이 다시 그려졌을 때 분류·주제가 바뀌었으면 띠를 다시 만들고 맨 위로 올린다. 가로 위치는 그대로 둔다.
+  if (listEl && window.MutationObserver) new MutationObserver(function () {
+    if (scopeKey() === builtKey) return;
+    var sl = scroll.scrollLeft;
+    model = build(); render();
+    scroll.scrollLeft = sl; scroll.scrollTop = 0;
+  }).observe(listEl, { childList: true });
   applyBox(); render(); apply(); showToday(false);
   window.radarGantt = { render: render, state: saved, rows: function () { return model.rows.slice(); } };
 })();
