@@ -17,6 +17,7 @@ OVERRIDES = {
     '/thesis/myeongdang/': ('명당', '대본 읽기', 'writing', '대본'),
     '/thesis/d364/': ('D-364', '대본 읽기', 'writing', '대본'),
     '/thesis/zhuangzi/': ('장자 강의 노트', '강의와 읽기 노트', 'writing', '읽기'),
+    '/via/': ('VIA', '공부하는 여행 · 토리노와 새해 네 도시', 'writing', '여행'),
     '/via/torino/': ('토리노, 세 가지 길', '토리노 여행의 세 가지 구성', 'writing', '여행'),
     '/via/torino/plan/': ('토리노 2박 3일', '2026.10.16~18 여행 계획', 'writing', '여행'),
     '/thesis/zurich/': ('취리히 건축 수첩', 'Open House Zürich 방문 수첩', 'writing', '답사'),
