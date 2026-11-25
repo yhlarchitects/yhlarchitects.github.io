@@ -17,8 +17,8 @@ OVERRIDES = {
     '/thesis/myeongdang/': ('명당', '대본 읽기', 'writing', '대본'),
     '/thesis/d364/': ('D-364', '대본 읽기', 'writing', '대본'),
     '/thesis/zhuangzi/': ('장자 강의 노트', '강의와 읽기 노트', 'writing', '읽기'),
-    '/thesis/torino/': ('토리노, 세 가지 길', '토리노 여행의 세 가지 구성', 'writing', '여행'),
-    '/thesis/torino/plan/': ('토리노 2박 3일', '2026.10.16~18 여행 계획', 'writing', '여행'),
+    '/via/torino/': ('토리노, 세 가지 길', '토리노 여행의 세 가지 구성', 'writing', '여행'),
+    '/via/torino/plan/': ('토리노 2박 3일', '2026.10.16~18 여행 계획', 'writing', '여행'),
     '/thesis/zurich/': ('취리히 건축 수첩', 'Open House Zürich 방문 수첩', 'writing', '답사'),
     '/thesis/zurich/20260926/': ('취리히 건축 수첩 · 9월 26일', 'Open House Zürich 방문 수첩', 'writing', '답사'),
     '/thesis/zurich/20260927/': ('취리히 건축 수첩 · 9월 27일', '취리히 건축 방문 수첩', 'writing', '답사'),
@@ -37,11 +37,14 @@ class PageInfo(HTMLParser):
         self.in_title = False
         self.title = ''
         self.description = ''
+        self.redirect = False
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
         if tag == 'title': self.in_title = True
         if tag == 'meta' and attrs.get('name', '').lower() == 'description':
             self.description = attrs.get('content', '')
+        if tag == 'meta' and attrs.get('http-equiv', '').lower() == 'refresh':
+            self.redirect = True
     def handle_endtag(self, tag):
         if tag == 'title': self.in_title = False
     def handle_data(self, data):
@@ -67,6 +70,8 @@ def build_link_list(output, template, extras=None):
             continue
         parser = PageInfo()
         parser.feed(path.read_text(encoding='utf-8-sig'))
+        if parser.redirect:
+            continue
         route = page_url(relative)
         title = plain(parser.title) or plain(relative.stem)
         description = plain(parser.description)
