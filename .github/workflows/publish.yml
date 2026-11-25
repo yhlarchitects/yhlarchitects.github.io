@@ -5,6 +5,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+  actions: read
   pages: write
   id-token: write
 concurrency:
@@ -29,6 +30,17 @@ jobs:
       - uses: actions/upload-pages-artifact@v4
         with:
           path: site-dist
+      - name: Wait for the uploaded site to be listed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          url="https://api.github.com/repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts?name=github-pages"
+          for i in $(seq 1 40); do
+            n=$(curl -s -H "Authorization: Bearer $GH_TOKEN" "$url" | python -c "import json,sys;print(json.load(sys.stdin).get('total_count',0))")
+            if [ "$n" -ge 1 ]; then echo "listed after $i checks"; sleep 10; exit 0; fi
+            sleep 3
+          done
+          echo "artifact not listed yet, trying deploy anyway"
       - name: Publish
         id: deployment
         uses: actions/deploy-pages@v4
